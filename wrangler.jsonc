@@ -4,6 +4,9 @@
   "compatibility_date": "2026-05-26",
   "compatibility_flags": ["nodejs_compat"],
   "main": "worker.ts",
+  // preserva os secrets definidos no dashboard (GITHUB_TOKEN, SAVE_KEY);
+  // sem isto, cada `wrangler deploy` do build do Git apaga-os.
+  "keep_vars": true,
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
