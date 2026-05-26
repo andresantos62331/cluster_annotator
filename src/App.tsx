@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { TransformWrapper, TransformComponent, type ReactZoomPanPinchRef } from "react-zoom-pan-pinch";
 import "./index.css";
 import { CONFIG_DEFS, loadConfig } from "./loader";
-import { exportCSV, exportJSON, loadGT, loadLabels, saveGT, saveLabels } from "./storage";
+import { exportCSV, exportJSON, loadGT, loadLabels, saveGT, saveLabels, saveToCloud, setCloudKey } from "./storage";
 import type { ConfigData, GroundTruth } from "./types";
 
 const IMAGES_PER_PAGE = 30;
@@ -25,6 +25,8 @@ export default function App() {
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [speciesPage, setSpeciesPage] = useState<Record<string, number>>({});
   const [speciesSelection, setSpeciesSelection] = useState<Set<string>>(new Set());
+  const [cloudSaving, setCloudSaving] = useState(false);
+  const [cloudStatus, setCloudStatus] = useState<string | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -45,6 +47,18 @@ export default function App() {
 
   useEffect(() => { saveGT(groundTruth); }, [groundTruth]);
   useEffect(() => { saveLabels(labels); }, [labels]);
+
+  // chave de acesso a cloud via link magico (?k=...): guarda e limpa o URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const k = params.get("k");
+    if (k) {
+      setCloudKey(k);
+      params.delete("k");
+      const qs = params.toString();
+      window.history.replaceState({}, "", window.location.pathname + (qs ? `?${qs}` : ""));
+    }
+  }, []);
 
   useEffect(() => {
     if (labelChoice && !labels.includes(labelChoice)) {
@@ -170,6 +184,14 @@ export default function App() {
     reader.readAsText(file);
     e.target.value = "";
   }, []);
+
+  const handleCloudSave = useCallback(async () => {
+    setCloudSaving(true);
+    setCloudStatus(null);
+    const r = await saveToCloud(groundTruth, labels, allFilenames);
+    setCloudSaving(false);
+    setCloudStatus(r.ok ? `Guardado na cloud ✓ (${r.count} anotações)` : `Erro: ${r.error}`);
+  }, [groundTruth, labels, allFilenames]);
 
   useEffect(() => {
     function handler(e: KeyboardEvent) {
@@ -313,8 +335,17 @@ export default function App() {
             style={{ display: "none" }}
             onChange={handleImport}
           />
+          <div className="btn-row" style={{ marginTop: 8 }}>
+            <button onClick={handleCloudSave} disabled={cloudSaving}>
+              {cloudSaving ? "A guardar..." : "Guardar na cloud"}
+            </button>
+          </div>
+          {cloudStatus && (
+            <div className="hint" style={{ marginTop: 6 }}>{cloudStatus}</div>
+          )}
           <div className="hint" style={{ marginTop: 8 }}>
-            Dados em localStorage. Exporta JSON para guardar fora do browser.
+            Dados em localStorage. "Guardar na cloud" envia tudo para o repositório;
+            Export JSON guarda uma cópia local.
           </div>
         </section>
       </aside>
