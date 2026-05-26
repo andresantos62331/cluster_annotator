@@ -9,7 +9,7 @@ const IMAGES_PER_PAGE = 30;
 
 export default function App() {
   const [config, setConfig] = useState<ConfigData | null>(null);
-  const [configId, setConfigId] = useState<string>(CONFIG_DEFS[0].id);
+  const [configId, setConfigId] = useState<string>("B_leaf_aggressive");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
