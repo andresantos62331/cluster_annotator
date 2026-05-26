@@ -1,5 +1,41 @@
 {
-  "exported_at": "2026-05-26T15:31:14.105Z",
-  "labels": [],
-  "ground_truth": {}
+  "exported_at": "2026-05-26T15:36:16.084Z",
+  "labels": [
+    "teste1"
+  ],
+  "ground_truth": {
+    "20251109_161938_planta_2.jpg": "teste1",
+    "20251109_162246_planta_12.jpg": "teste1",
+    "20251110_151432_planta_1.jpg": "teste1",
+    "20251110_151432_planta_2.jpg": "teste1",
+    "20251110_151432_planta_3.jpg": "teste1",
+    "20251110_151432_planta_4.jpg": "teste1",
+    "20251110_151432_planta_5.jpg": "teste1",
+    "20251110_151432_planta_6.jpg": "teste1",
+    "20251110_151432_planta_7.jpg": "teste1",
+    "20251110_152757_planta_0.jpg": "teste1",
+    "20251110_152757_planta_1.jpg": "teste1",
+    "20251110_152757_planta_2.jpg": "teste1",
+    "20251110_152757_planta_3.jpg": "teste1",
+    "20251110_152757_planta_4.jpg": "teste1",
+    "20251110_152757_planta_5.jpg": "teste1",
+    "20251110_152807_planta_0.jpg": "teste1",
+    "20251110_152901_planta_5.jpg": "teste1",
+    "20251110_152937_planta_0.jpg": "teste1",
+    "20251110_153005_planta_1.jpg": "teste1",
+    "20251110_153005_planta_2.jpg": "teste1",
+    "20251110_153005_planta_4.jpg": "teste1",
+    "20251110_153005_planta_7.jpg": "teste1",
+    "20251110_153005_planta_8.jpg": "teste1",
+    "20251110_153017_planta_3.jpg": "teste1",
+    "20251110_153041_planta_1.jpg": "teste1",
+    "20251110_153054_planta_6.jpg": "teste1",
+    "20251110_153123_planta_4.jpg": "teste1",
+    "20251110_153123_planta_5.jpg": "teste1",
+    "20251110_153123_planta_6.jpg": "teste1",
+    "20251110_153132_planta_2.jpg": "teste1",
+    "20251110_153146_planta_0.jpg": "teste1",
+    "20251110_153148_planta_0.jpg": "teste1",
+    "20251110_153148_planta_2.jpg": "teste1"
+  }
 }
