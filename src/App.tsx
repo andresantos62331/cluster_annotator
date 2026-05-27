@@ -2,7 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { TransformWrapper, TransformComponent, type ReactZoomPanPinchRef } from "react-zoom-pan-pinch";
 import "./index.css";
 import { CONFIG_DEFS, loadConfig } from "./loader";
-import { exportCSV, exportJSON, loadGT, loadLabels, saveGT, saveLabels, saveToCloud, setCloudKey } from "./storage";
+import { exportCSV, exportJSON, loadColorMap, loadGT, loadLabels, saveColorMap, saveGT, saveLabels, saveToCloud, setCloudKey } from "./storage";
+import { PALETTE, textOn } from "./colors";
 import type { ConfigData, GroundTruth } from "./types";
 
 const IMAGES_PER_PAGE = 30;
@@ -21,12 +22,13 @@ export default function App() {
   const [selection, setSelection] = useState<Set<string>>(new Set());
   const [activeTab, setActiveTab] = useState<"clusters" | "species">("clusters");
   const [labelChoice, setLabelChoice] = useState<string>("");
-  const [hideAnnotated, setHideAnnotated] = useState<boolean>(true);
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [speciesPage, setSpeciesPage] = useState<Record<string, number>>({});
   const [speciesSelection, setSpeciesSelection] = useState<Set<string>>(new Set());
   const [cloudSaving, setCloudSaving] = useState(false);
   const [cloudStatus, setCloudStatus] = useState<string | null>(null);
+  const [colorMap, setColorMap] = useState<Record<string, number>>(() => loadColorMap());
+  const [showAnnotated, setShowAnnotated] = useState<boolean>(true);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -47,6 +49,22 @@ export default function App() {
 
   useEffect(() => { saveGT(groundTruth); }, [groundTruth]);
   useEffect(() => { saveLabels(labels); }, [labels]);
+
+  // atribui uma cor estavel (proxima livre na PALETTE) a cada especie nova
+  useEffect(() => {
+    const cur = loadColorMap();
+    let changed = false;
+    for (const l of labels) {
+      if (!(l in cur)) {
+        cur[l] = Object.keys(cur).length % PALETTE.length;
+        changed = true;
+      }
+    }
+    if (changed) {
+      saveColorMap(cur);
+      setColorMap({ ...cur });
+    }
+  }, [labels]);
 
   // chave de acesso a cloud via link magico (?k=...): guarda e limpa o URL
   useEffect(() => {
@@ -79,14 +97,24 @@ export default function App() {
     return config.byCluster.get(currentClusterId) ?? [];
   }, [config, currentClusterId]);
 
-  const visibleFilenames = useMemo(() => {
-    if (!hideAnnotated) return clusterFilenames;
-    return clusterFilenames.filter((f) => !groundTruth[f]);
-  }, [clusterFilenames, hideAnnotated, groundTruth]);
+  const unannotatedInCluster = useMemo(
+    () => clusterFilenames.filter((f) => !groundTruth[f]),
+    [clusterFilenames, groundTruth],
+  );
 
-  const totalPages = Math.max(1, Math.ceil(visibleFilenames.length / IMAGES_PER_PAGE));
+  // anotadas deste cluster agrupadas por especie (ordenadas por contagem desc)
+  const annotatedGroups = useMemo(() => {
+    const by: Record<string, string[]> = {};
+    for (const f of clusterFilenames) {
+      const lb = groundTruth[f];
+      if (lb) (by[lb] ??= []).push(f);
+    }
+    return Object.entries(by).sort((a, b) => b[1].length - a[1].length);
+  }, [clusterFilenames, groundTruth]);
+
+  const totalPages = Math.max(1, Math.ceil(unannotatedInCluster.length / IMAGES_PER_PAGE));
   const effectivePage = Math.min(page, totalPages - 1);
-  const pageFiles = visibleFilenames.slice(
+  const pageFiles = unannotatedInCluster.slice(
     effectivePage * IMAGES_PER_PAGE,
     (effectivePage + 1) * IMAGES_PER_PAGE,
   );
@@ -155,12 +183,12 @@ export default function App() {
   const selectAllInCluster = useCallback(() => {
     setSelection((prev) => {
       const next = new Set(prev);
-      const allSel = visibleFilenames.every((f) => next.has(f));
-      if (allSel) for (const f of visibleFilenames) next.delete(f);
-      else for (const f of visibleFilenames) next.add(f);
+      const allSel = unannotatedInCluster.every((f) => next.has(f));
+      if (allSel) for (const f of unannotatedInCluster) next.delete(f);
+      else for (const f of unannotatedInCluster) next.add(f);
       return next;
     });
-  }, [visibleFilenames]);
+  }, [unannotatedInCluster]);
 
   const handleImport = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -226,6 +254,11 @@ export default function App() {
     return () => window.removeEventListener("keydown", handler);
   }, [activeTab, config, currentClusterId, totalPages, assignToSelection, lightbox]);
 
+  const colorOf = (label: string): string => {
+    const i = colorMap[label];
+    return i == null ? "#9ca3af" : PALETTE[i % PALETTE.length];
+  };
+
   if (loading || !config) {
     return (
       <div className="empty mono">
@@ -272,6 +305,7 @@ export default function App() {
               const count = Object.values(groundTruth).filter((v) => v === lbl).length;
               return (
                 <div className="species-row" key={lbl}>
+                  <span className="swatch" style={{ background: colorOf(lbl) }} />
                   <span
                     className="sp-name"
                     onClick={() => renameLabel(lbl)}
@@ -404,10 +438,10 @@ export default function App() {
                   ? "Desselecionar página"
                   : "Selecionar página"}
               </button>
-              <button onClick={selectAllInCluster} disabled={visibleFilenames.length === 0}>
-                {visibleFilenames.every((f) => selection.has(f)) && visibleFilenames.length > 0
-                  ? "Desselecionar cluster"
-                  : "Selecionar cluster"}
+              <button onClick={selectAllInCluster} disabled={unannotatedInCluster.length === 0}>
+                {unannotatedInCluster.every((f) => selection.has(f)) && unannotatedInCluster.length > 0
+                  ? "Desselecionar por classificar"
+                  : "Selecionar por classificar"}
               </button>
               <button onClick={() => setSelection(new Set())} disabled={selection.size === 0} title="Atalho: D">
                 Limpar [D]
@@ -415,43 +449,73 @@ export default function App() {
               <label style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 0, cursor: "pointer", fontSize: 11 }}>
                 <input
                   type="checkbox"
-                  checked={hideAnnotated}
-                  onChange={(e) => { setHideAnnotated(e.target.checked); setPage(0); }}
+                  checked={showAnnotated}
+                  onChange={(e) => setShowAnnotated(e.target.checked)}
                 />
-                Esconder anotadas
+                Mostrar anotadas
               </label>
               <div className="spacer" />
               <div className="count">{selection.size} selecionada(s)</div>
             </div>
 
-            {visibleFilenames.length === 0 && (
+            {/* Bloco: imagens ainda por classificar */}
+            <div className="group-header">
+              <span className="group-title">Por classificar</span>
+              <span className="group-count">{unannotatedInCluster.length}</span>
+            </div>
+            {unannotatedInCluster.length === 0 ? (
               <div className="empty">
                 {currentClusterCount === 0
                   ? "Cluster vazio."
                   : "✓ Todas as imagens deste cluster estão anotadas."}
               </div>
+            ) : (
+              <>
+                {totalPages > 1 && (
+                  <Pagination page={effectivePage} total={totalPages} onPage={setPage} />
+                )}
+                <div className="grid">
+                  {pageFiles.map((filename) => (
+                    <Card
+                      key={filename}
+                      filename={filename}
+                      selected={selection.has(filename)}
+                      label={undefined}
+                      color={undefined}
+                      onToggle={() => toggleSelect(filename)}
+                      onOpen={() => setLightbox(filename)}
+                    />
+                  ))}
+                </div>
+                {totalPages > 1 && (
+                  <Pagination page={effectivePage} total={totalPages} onPage={setPage} />
+                )}
+              </>
             )}
 
-            {totalPages > 1 && (
-              <Pagination page={effectivePage} total={totalPages} onPage={setPage} />
-            )}
-
-            <div className="grid">
-              {pageFiles.map((filename) => (
-                <Card
-                  key={filename}
-                  filename={filename}
-                  selected={selection.has(filename)}
-                  label={groundTruth[filename]}
-                  onToggle={() => toggleSelect(filename)}
-                  onOpen={() => setLightbox(filename)}
-                />
-              ))}
-            </div>
-
-            {totalPages > 1 && (
-              <Pagination page={effectivePage} total={totalPages} onPage={setPage} />
-            )}
+            {/* Blocos por especie (anotadas) — cada especie em nova linha, com cor */}
+            {showAnnotated && annotatedGroups.map(([sp, files]) => (
+              <div className="species-group" key={sp}>
+                <div className="group-header" style={{ borderLeftColor: colorOf(sp) }}>
+                  <span className="swatch" style={{ background: colorOf(sp) }} />
+                  <span className="group-title" style={{ color: colorOf(sp) }}>{sp}</span>
+                  <span className="group-count">{files.length}</span>
+                </div>
+                <div className="grid">
+                  {files.map((filename) => (
+                    <Card
+                      key={filename}
+                      filename={filename}
+                      selected={selection.has(filename)}
+                      label={sp}
+                      color={colorOf(sp)}
+                      onToggle={() => toggleSelect(filename)}
+                      onOpen={() => setLightbox(filename)}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
 
             <div className="hint" style={{ marginTop: 30, textAlign: "center" }}>
               atalhos: [A] atribuir · [D] limpar · [←/→] paginar · [J/K] cluster seguinte/anterior · [Esc] fechar lightbox
@@ -463,6 +527,7 @@ export default function App() {
           <SpeciesView
             labels={labels}
             groundTruth={groundTruth}
+            colorOf={colorOf}
             speciesPage={speciesPage}
             setSpeciesPage={setSpeciesPage}
             speciesSelection={speciesSelection}
@@ -513,19 +578,23 @@ function Card({
   filename,
   selected,
   label,
+  color,
   onToggle,
   onOpen,
 }: {
   filename: string;
   selected: boolean;
   label: string | undefined;
+  color: string | undefined;
   onToggle: () => void;
   onOpen: () => void;
 }) {
   const baseUrl = import.meta.env.BASE_URL || "/";
+  const style = label && color ? { borderColor: color } : undefined;
   return (
     <div
       className={`card ${selected ? "selected" : ""} ${label ? "labeled" : ""}`}
+      style={style}
       onClick={onToggle}
       title={filename}
     >
@@ -533,7 +602,15 @@ function Card({
       <div className="card-actions" onClick={(e) => e.stopPropagation()}>
         <button onClick={onOpen} title="Examinar">🔍</button>
       </div>
-      {label && <div className="label-pill" title={label}>{label}</div>}
+      {label && (
+        <div
+          className="label-pill"
+          title={label}
+          style={color ? { background: color, color: textOn(color) } : undefined}
+        >
+          {label}
+        </div>
+      )}
       <div className="stem">{filename.replace(".jpg", "").slice(-22)}</div>
     </div>
   );
@@ -628,6 +705,7 @@ function Lightbox({ filename, label, onClose }: { filename: string | null; label
 function SpeciesView({
   labels,
   groundTruth,
+  colorOf,
   speciesPage,
   setSpeciesPage,
   speciesSelection,
@@ -637,6 +715,7 @@ function SpeciesView({
 }: {
   labels: string[];
   groundTruth: GroundTruth;
+  colorOf: (label: string) => string;
   speciesPage: Record<string, number>;
   setSpeciesPage: React.Dispatch<React.SetStateAction<Record<string, number>>>;
   speciesSelection: Set<string>;
@@ -688,7 +767,10 @@ function SpeciesView({
         return (
           <div className="species-block" key={lbl}>
             <h3>
-              <span>🌿 {lbl}</span>
+              <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span className="swatch" style={{ background: colorOf(lbl) }} />
+                <span style={{ color: colorOf(lbl) }}>{lbl}</span>
+              </span>
               {files.length > 0 && (
                 <button onClick={() => {
                   setSpeciesSelection((prev) => {
@@ -714,6 +796,7 @@ function SpeciesView({
                 <div
                   key={f}
                   className={`card labeled ${speciesSelection.has(f) ? "selected" : ""}`}
+                  style={{ borderColor: colorOf(lbl) }}
                   onClick={() => {
                     setSpeciesSelection((prev) => {
                       const next = new Set(prev);

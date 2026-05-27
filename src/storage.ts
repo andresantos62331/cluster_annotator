@@ -3,6 +3,22 @@ import type { GroundTruth } from "./types";
 const GT_KEY = "tese3.ground_truth";
 const LABELS_KEY = "tese3.labels";
 const CLOUD_KEY = "tese3.cloud_key";
+const COLORS_KEY = "tese3.species_colors";
+
+// Mapa persistente especie -> indice na PALETTE. Mantem-se entre sessoes (e
+// nao se apaga ao remover uma especie) para a cor de cada especie ser fixa.
+export function loadColorMap(): Record<string, number> {
+  try {
+    const raw = localStorage.getItem(COLORS_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+export function saveColorMap(m: Record<string, number>): void {
+  localStorage.setItem(COLORS_KEY, JSON.stringify(m));
+}
 
 export function loadGT(): GroundTruth {
   try {
