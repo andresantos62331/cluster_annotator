@@ -3,7 +3,7 @@ import { TransformWrapper, TransformComponent, type ReactZoomPanPinchRef } from 
 import "./index.css";
 import { CONFIG_DEFS, loadConfig } from "./loader";
 import { exportCSV, exportJSON, loadColorMap, loadGT, loadLabels, saveColorMap, saveGT, saveLabels, saveToCloud, setCloudKey } from "./storage";
-import { PALETTE, textOn } from "./colors";
+import { PALETTE, textOn, tint } from "./colors";
 import type { ConfigData, GroundTruth } from "./types";
 
 const IMAGES_PER_PAGE = 30;
@@ -304,7 +304,11 @@ export default function App() {
             {labels.map((lbl) => {
               const count = Object.values(groundTruth).filter((v) => v === lbl).length;
               return (
-                <div className="species-row" key={lbl}>
+                <div
+                  className="species-row"
+                  key={lbl}
+                  style={{ background: tint(colorOf(lbl), 0.16), borderColor: tint(colorOf(lbl), 0.45) }}
+                >
                   <span className="swatch" style={{ background: colorOf(lbl) }} />
                   <span
                     className="sp-name"
@@ -496,7 +500,7 @@ export default function App() {
             {/* Blocos por especie (anotadas) — cada especie em nova linha, com cor */}
             {showAnnotated && annotatedGroups.map(([sp, files]) => (
               <div className="species-group" key={sp}>
-                <div className="group-header" style={{ borderLeftColor: colorOf(sp) }}>
+                <div className="group-header" style={{ borderLeftColor: colorOf(sp), background: tint(colorOf(sp), 0.1) }}>
                   <span className="swatch" style={{ background: colorOf(sp) }} />
                   <span className="group-title" style={{ color: colorOf(sp) }}>{sp}</span>
                   <span className="group-count">{files.length}</span>
@@ -599,6 +603,7 @@ function Card({
       title={filename}
     >
       <img loading="lazy" src={`${baseUrl}crops/${filename}`} alt={filename} />
+      {label && color && <div className="card-tint" style={{ background: tint(color, 0.22) }} />}
       <div className="card-actions" onClick={(e) => e.stopPropagation()}>
         <button onClick={onOpen} title="Examinar">🔍</button>
       </div>
@@ -807,6 +812,7 @@ function SpeciesView({
                   }}
                 >
                   <img loading="lazy" src={`${baseUrl}crops/${f}`} alt={f} />
+                  <div className="card-tint" style={{ background: tint(colorOf(lbl), 0.22) }} />
                   <div className="card-actions" onClick={(e) => e.stopPropagation()}>
                     <button onClick={() => onLightbox(f)} title="Examinar">🔍</button>
                   </div>
