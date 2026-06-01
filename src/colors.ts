@@ -19,6 +19,15 @@ export function textOn(hex: string): string {
   return lum > 150 ? "#000" : "#fff";
 }
 
+// Cor do badge de geracao do recluster do ruido (G1, G2, ...). G0 (inicial) nao tem badge.
+// Escurece com a geracao para dar nocao de "profundidade" do recluster. Tom ambar, distinto
+// das cores de especie (PALETTE) para nao se confundir.
+const GEN_COLORS = ["#fcd34d", "#f59e0b", "#d97706", "#b45309", "#92400e", "#78350f"];
+export function genColor(gen: number): string {
+  if (gen <= 0) return "";
+  return GEN_COLORS[Math.min(gen - 1, GEN_COLORS.length - 1)];
+}
+
 // Mesma cor em rgba com alpha — para os veus translucidos.
 export function tint(hex: string, alpha: number): string {
   const r = parseInt(hex.slice(1, 3), 16);

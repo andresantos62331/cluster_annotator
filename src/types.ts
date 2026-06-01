@@ -1,6 +1,8 @@
 export interface Assignment {
   filename: string;
   cluster_id: number;
+  // geracao do recluster do ruido: 0 = inicial (G0), 1 = G1, ... ; -1 = ruido final
+  origem?: number;
 }
 
 export interface ClusterMetrics {
@@ -11,11 +13,15 @@ export interface ClusterMetrics {
   separation: number | null;
   nearest_cluster: number | null;
   persistence: number | null;
+  // geracao que criou este cluster (0 = inicial). Alimenta o badge G1/G2/...
+  origem?: number;
 }
 
 export interface ConfigDef {
   id: string;
   label: string;
+  // parametros tecnicos (UMAP/HDBSCAN) — mostrados discretos, para Andre/orientadores
+  tech?: string;
   assignmentsUrl: string;
   metricsUrl: string;
 }

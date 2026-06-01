@@ -3,14 +3,14 @@ import { TransformWrapper, TransformComponent, type ReactZoomPanPinchRef } from 
 import "./index.css";
 import { CONFIG_DEFS, loadConfig } from "./loader";
 import { exportCSV, exportJSON, loadColorMap, loadGT, loadLabels, saveColorMap, saveGT, saveLabels, saveToCloud, setCloudKey } from "./storage";
-import { PALETTE, textOn, tint } from "./colors";
+import { PALETTE, textOn, tint, genColor } from "./colors";
 import type { ConfigData, GroundTruth } from "./types";
 
 const IMAGES_PER_PAGE = 30;
 
 export default function App() {
   const [config, setConfig] = useState<ConfigData | null>(null);
-  const [configId, setConfigId] = useState<string>("B_leaf_aggressive");
+  const [configId, setConfigId] = useState<string>("A_microscopio");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -281,6 +281,11 @@ export default function App() {
               <option key={c.id} value={c.id}>{c.label}</option>
             ))}
           </select>
+          {CONFIG_DEFS.find((d) => d.id === configId)?.tech && (
+            <div className="mono dim" style={{ fontSize: 10, marginTop: 4 }} title="parâmetros de clustering (UMAP · HDBSCAN)">
+              {CONFIG_DEFS.find((d) => d.id === configId)!.tech}
+            </div>
+          )}
           <div className="hint">
             {config.clusterIds.filter((c) => c !== -1).length} clusters · {config.byCluster.get(-1)?.length ?? 0} ruído
           </div>
@@ -336,6 +341,7 @@ export default function App() {
               const isNoise = cid === -1;
               const isActive = cid === currentClusterId;
               const isDone = files.length > 0 && annotated === files.length;
+              const gen = isNoise ? 0 : config.metrics.get(cid)?.origem ?? 0;
               return (
                 <div
                   key={cid}
@@ -347,7 +353,7 @@ export default function App() {
                   }}
                 >
                   <div className="cl-row">
-                    <span className="cl-name">{isNoise ? "ruído (-1)" : `c${cid}`} {isDone ? "✓" : ""}</span>
+                    <span className="cl-name">{isNoise ? "ruído (-1)" : `c${cid}`} <GenBadge gen={gen} /> {isDone ? "✓" : ""}</span>
                     <span className="cl-count">{annotated}/{files.length}</span>
                   </div>
                   <div className="cl-progress"><div style={{ width: `${pct}%` }} /></div>
@@ -403,6 +409,7 @@ export default function App() {
             <div className={`cluster-header ${currentClusterId === -1 ? "noise" : ""}`}>
               <h1>
                 {currentClusterId === -1 ? "Ruído (cluster -1)" : `Cluster ${currentClusterId}`}
+                {currentClusterId !== -1 && <GenBadge gen={currentMetrics?.origem ?? 0} />}
               </h1>
               <div className="stats">
                 <span>size <b>{currentClusterCount}</b></span>
@@ -544,6 +551,24 @@ export default function App() {
 
       <Lightbox filename={lightbox} label={lightbox ? groundTruth[lightbox] : undefined} onClose={() => setLightbox(null)} />
     </div>
+  );
+}
+
+// Badge de geracao do recluster do ruido (G1, G2, ...). G0/inicial nao mostra nada.
+function GenBadge({ gen }: { gen: number }) {
+  if (!gen || gen <= 0) return null;
+  const c = genColor(gen);
+  return (
+    <span
+      title={`gerado no recluster do ruído (geração ${gen})`}
+      style={{
+        display: "inline-block", marginLeft: 6, padding: "0 5px", borderRadius: 6,
+        fontSize: 9, fontWeight: 700, lineHeight: "15px", verticalAlign: "middle",
+        background: c, color: textOn(c),
+      }}
+    >
+      G{gen}
+    </span>
   );
 }
 
