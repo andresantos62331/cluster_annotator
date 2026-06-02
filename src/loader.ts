@@ -70,10 +70,17 @@ export async function loadConfig(def: ConfigDef): Promise<ConfigData> {
     byCluster.get(a.cluster_id)!.push(a.filename);
   }
 
-  // Ordem: clusters reais por size desc, depois noise (-1) por último
+  // Ordem: por geracao ascendente (G0 primeiro, depois G1, G2...), e por size desc
+  // dentro de cada geracao; noise (-1) sempre por último.
+  const genOf = (cid: number): number => metrics.get(cid)?.origem ?? 0;
   const clusterIds = Array.from(byCluster.keys())
     .filter((c) => c !== -1)
-    .sort((a, b) => (byCluster.get(b)!.length - byCluster.get(a)!.length));
+    .sort((a, b) => {
+      const ga = genOf(a);
+      const gb = genOf(b);
+      if (ga !== gb) return ga - gb;
+      return byCluster.get(b)!.length - byCluster.get(a)!.length;
+    });
   if (byCluster.has(-1)) clusterIds.push(-1);
 
   return {
