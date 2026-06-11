@@ -1,3 +1,5 @@
+// Parser CSV minimal — contrato preservado (os CSVs do pipeline não têm vírgulas
+// dentro de campos nem aspas; um split simples é suficiente e rápido).
 export function parseCSV(text: string): Record<string, string>[] {
   const lines = text.trim().split(/\r?\n/);
   if (lines.length === 0) return [];

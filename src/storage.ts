@@ -1,22 +1,35 @@
 import type { GroundTruth } from "./types";
+import { PALETTE } from "./colors";
 
+// CONTRATO: mesmas chaves de localStorage da app original (ground truth keyed por
+// filename, partilhado entre as 4 configs). Não renomear sem migração explícita.
 const GT_KEY = "tese3.ground_truth";
 const LABELS_KEY = "tese3.labels";
 const CLOUD_KEY = "tese3.cloud_key";
 const COLORS_KEY = "tese3.species_colors";
+// extra (não-contrato): timestamp do último envio para a cloud, para o indicador
+// de estado "local vs. cloud". Só informativo; ausência é tratada com segurança.
+const CLOUD_AT_KEY = "tese3.cloud_saved_at";
 
-// Mapa persistente especie -> indice na PALETTE. Mantem-se entre sessoes (e
-// nao se apaga ao remover uma especie) para a cor de cada especie ser fixa.
-export function loadColorMap(): Record<string, number> {
+// Mapa persistente espécie -> cor (hex). Mantém-se entre sessões (e não se apaga ao
+// remover uma espécie) para a cor de cada espécie ser fixa. A Dra pode personalizar
+// via color picker. Formato antigo (índice na PALETTE) é migrado ao carregar.
+export function loadColorMap(): Record<string, string> {
   try {
     const raw = localStorage.getItem(COLORS_KEY);
-    return raw ? JSON.parse(raw) : {};
+    if (!raw) return {};
+    const parsed = JSON.parse(raw) as Record<string, string | number>;
+    const out: Record<string, string> = {};
+    for (const [k, v] of Object.entries(parsed)) {
+      out[k] = typeof v === "number" ? PALETTE[v % PALETTE.length] ?? "#9ca3af" : v;
+    }
+    return out;
   } catch {
     return {};
   }
 }
 
-export function saveColorMap(m: Record<string, number>): void {
+export function saveColorMap(m: Record<string, string>): void {
   localStorage.setItem(COLORS_KEY, JSON.stringify(m));
 }
 
@@ -46,7 +59,7 @@ export function saveLabels(labels: string[]): void {
   localStorage.setItem(LABELS_KEY, JSON.stringify(labels));
 }
 
-// --- chave de acesso a cloud (vinda do link magico ?k=...) ---
+// --- chave de acesso à cloud (vinda do link mágico ?k=...) ---
 export function getCloudKey(): string {
   return localStorage.getItem(CLOUD_KEY) ?? "";
 }
@@ -55,7 +68,16 @@ export function setCloudKey(key: string): void {
   localStorage.setItem(CLOUD_KEY, key);
 }
 
-// --- serializadores (partilhados entre export local e cloud) ---
+export function getCloudSavedAt(): number | null {
+  const raw = localStorage.getItem(CLOUD_AT_KEY);
+  return raw ? Number(raw) : null;
+}
+
+export function setCloudSavedAt(ts: number): void {
+  localStorage.setItem(CLOUD_AT_KEY, String(ts));
+}
+
+// --- serializadores (CONTRATO de export — o investigador consome isto) ---
 export function buildJSON(gt: GroundTruth, labels: string[]): string {
   return JSON.stringify(
     { exported_at: new Date().toISOString(), labels, ground_truth: gt },
@@ -94,7 +116,11 @@ export async function saveToCloud(
   const count = Object.keys(gt).length;
   const key = getCloudKey();
   if (!key) {
-    return { ok: false, count, error: "sem chave de acesso — abre o link que recebeste (com ?k=...)" };
+    return {
+      ok: false,
+      count,
+      error: "sem chave de acesso — abre o link que recebeste (com ?k=...)",
+    };
   }
   try {
     const res = await fetch("/api/save", {

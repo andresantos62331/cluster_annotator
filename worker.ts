@@ -1,7 +1,7 @@
 // Cloudflare Worker: serve os assets estaticos e expoe POST /api/save, que
 // faz commit do ground truth (JSON + CSV) no GitHub, numa branch de dados.
 // O PAT do GitHub e a chave de acesso vivem como secrets do Worker — nunca
-// chegam ao browser. Ver HANDOFF.txt seccao 5 (DEPLOY).
+// chegam ao browser. Contrato preservado da app original.
 
 interface Env {
   ASSETS: { fetch: (req: Request) => Promise<Response> };

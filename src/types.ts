@@ -1,3 +1,5 @@
+// Contratos de dados — preservados da app original (ver FRONTEND_HANDOFF secção 3).
+
 export interface Assignment {
   filename: string;
   cluster_id: number;
@@ -20,10 +22,14 @@ export interface ClusterMetrics {
 export interface ConfigDef {
   id: string;
   label: string;
-  // parametros tecnicos (UMAP/HDBSCAN) — mostrados discretos, para Andre/orientadores
+  // nome curto da escala de zoom (Microscópio … Panorama)
+  short: string;
+  // parametros tecnicos (UMAP/HDBSCAN) — mostrados discretos, para o autor/orientadores
   tech?: string;
   assignmentsUrl: string;
   metricsUrl: string;
+  // mapa cluster_id -> filename mais perto do centroide (miniatura representativa)
+  repsUrl?: string;
 }
 
 export interface ConfigData {
@@ -33,20 +39,27 @@ export interface ConfigData {
   metrics: Map<number, ClusterMetrics>;
   clusterIds: number[];
   byCluster: Map<number, string[]>;
+  // representante (mais perto do centroide) por cluster; fallback no 1º membro
+  reps: Map<number, string>;
 }
 
 export type GroundTruth = Record<string, string>;
 
-export interface AppState {
-  configs: ConfigDef[];
-  currentConfigId: string;
-  currentClusterId: number | null;
-  page: number;
-  selection: Set<string>;
-  speciesSelection: Set<string>;
-  groundTruth: GroundTruth;
-  labels: string[];
-  activeTab: "clusters" | "species";
-  lightbox: { open: boolean; filename: string | null };
-  speciesPage: Record<string, number>;
+// Geometria de um crop dentro da sua imagem original (recuperada por template
+// matching — ver _build_crop_geometry.py). (x,y,w,h) = rect do crop no original
+// EXIBIDO (com EXIF aplicado, como o browser mostra); (iw,ih) = dimensões do
+// original exibido; rot = rotação CW (0/90/180/270) a aplicar ao recorte
+// masked/ (extraído em espaço raw) para o alinhar sobre o original.
+export interface CropGeo {
+  src: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  iw: number;
+  ih: number;
+  rot: number;
+  score: number;
 }
+
+export type CropGeometry = Record<string, CropGeo>;

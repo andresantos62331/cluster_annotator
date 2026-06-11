@@ -1,44 +1,41 @@
 import { parseCSV } from "./csv";
 import type { Assignment, ClusterMetrics, ConfigData, ConfigDef } from "./types";
 
-// Ordem granular -> agrupado (A = mais granular). Os CSVs ja incluem o recluster
-// iterativo do ruido (coluna origem = geracao). O tecnico (tech) fica discreto.
+// Decisão com os orientadores (2026-06-10): ficam só os dois métodos leaf — o que
+// melhor recupera ruído na iteração (handoff 7.2). A (Microscópio, mais granular) e
+// Padrão (mais agrupado), renumerada para B. Os ids/ficheiros internos mantêm-se
+// (A_microscopio, C_padrao) — só muda o rótulo visível. O técnico fica no tooltip.
 export const CONFIG_DEFS: ConfigDef[] = [
   {
     id: "A_microscopio",
     label: "A — Microscópio",
+    short: "Microscópio",
     tech: "leaf · mcs=5 ms=3 · nn=10 nc=10",
     assignmentsUrl: "configs/A_microscopio.csv",
     metricsUrl: "configs/A_microscopio_metrics.csv",
-  },
-  {
-    id: "B_detalhe",
-    label: "B — Detalhe",
-    tech: "eom · mcs=5 ms=3 · nn=15 nc=10",
-    assignmentsUrl: "configs/B_detalhe.csv",
-    metricsUrl: "configs/B_detalhe_metrics.csv",
+    repsUrl: "configs/A_microscopio_reps.json",
   },
   {
     id: "C_padrao",
-    label: "C — Padrão",
+    label: "B — Padrão",
+    short: "Padrão",
     tech: "leaf · mcs=8 ms=5 · nn=15 nc=20",
     assignmentsUrl: "configs/C_padrao.csv",
     metricsUrl: "configs/C_padrao_metrics.csv",
-  },
-  {
-    id: "D_panorama",
-    label: "D — Panorama",
-    tech: "eom · mcs=15 ms=5 · nn=50 nc=5",
-    assignmentsUrl: "configs/D_panorama.csv",
-    metricsUrl: "configs/D_panorama_metrics.csv",
+    repsUrl: "configs/C_padrao_reps.json",
   },
 ];
 
 export async function loadConfig(def: ConfigDef): Promise<ConfigData> {
   const baseUrl = import.meta.env.BASE_URL || "/";
-  const [assignmentsText, metricsText] = await Promise.all([
+  const [assignmentsText, metricsText, repsObj] = await Promise.all([
     fetch(`${baseUrl}${def.assignmentsUrl}`).then((r) => r.text()),
     fetch(`${baseUrl}${def.metricsUrl}`).then((r) => r.text()),
+    def.repsUrl
+      ? fetch(`${baseUrl}${def.repsUrl}`)
+          .then((r) => (r.ok ? r.json() : {}))
+          .catch(() => ({}))
+      : Promise.resolve({} as Record<string, string>),
   ]);
 
   const assignmentsRaw = parseCSV(assignmentsText);
@@ -70,8 +67,8 @@ export async function loadConfig(def: ConfigDef): Promise<ConfigData> {
     byCluster.get(a.cluster_id)!.push(a.filename);
   }
 
-  // Ordem: por geracao ascendente (G0 primeiro, depois G1, G2...), e por size desc
-  // dentro de cada geracao; noise (-1) sempre por último.
+  // Ordem (CONTRATO): por geração ascendente (G0 primeiro, depois G1, G2...), e
+  // por size desc dentro de cada geração; ruído (-1) sempre por último.
   const genOf = (cid: number): number => metrics.get(cid)?.origem ?? 0;
   const clusterIds = Array.from(byCluster.keys())
     .filter((c) => c !== -1)
@@ -83,6 +80,12 @@ export async function loadConfig(def: ConfigDef): Promise<ConfigData> {
     });
   if (byCluster.has(-1)) clusterIds.push(-1);
 
+  // representante por cluster (mais perto do centroide); chaves vêm como string
+  const reps = new Map<number, string>();
+  for (const [cid, fn] of Object.entries(repsObj as Record<string, string>)) {
+    reps.set(parseInt(cid, 10), fn);
+  }
+
   return {
     id: def.id,
     label: def.label,
@@ -90,5 +93,6 @@ export async function loadConfig(def: ConfigDef): Promise<ConfigData> {
     metrics,
     clusterIds,
     byCluster,
+    reps,
   };
 }
