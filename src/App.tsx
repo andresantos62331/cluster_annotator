@@ -24,10 +24,15 @@ import { Workspace } from "./ui/Workspace";
 import { SpeciesView } from "./ui/SpeciesView";
 import { Lightbox } from "./ui/Lightbox";
 import { ClusterHistory } from "./ui/ClusterHistory";
+import { HelpOverlay } from "./ui/HelpOverlay";
 
 const IMAGES_PER_PAGE = 30;
+const UNDO_MAX = 30;
 
-type Toast = { id: number; kind: "accent" | "leaf" | "danger"; node: ReactNode };
+type Toast = { id: number; kind: "accent" | "leaf" | "danger"; node: ReactNode; undoable?: boolean };
+
+// fotografia do estado anotável, tirada ANTES de cada mutação (para o Ctrl+Z)
+type Snapshot = { gt: GroundTruth; labels: string[]; colors: Record<string, string> };
 
 export default function App() {
   const [config, setConfig] = useState<ConfigData | null>(null);
@@ -58,14 +63,52 @@ export default function App() {
   const [cloudSavedAt, setCloudSavedAtState] = useState<number | null>(() => getCloudSavedAt());
   const [dirty, setDirty] = useState(false);
 
+  const [helpOpen, setHelpOpen] = useState(false);
+
   const [toasts, setToasts] = useState<Toast[]>([]);
   const toastId = useRef(0);
 
-  const pushToast = useCallback((kind: Toast["kind"], node: ReactNode) => {
+  // undoable=true: o toast ganha um botão "Desfazer" e dura mais
+  const pushToast = useCallback((kind: Toast["kind"], node: ReactNode, undoable = false) => {
     const id = ++toastId.current;
-    setToasts((t) => [...t, { id, kind, node }]);
-    setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), 2800);
+    setToasts((t) => [...t, { id, kind, node, undoable }]);
+    setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), undoable ? 5000 : 2800);
   }, []);
+
+  // ---- desfazer (Ctrl+Z) ----
+  const undoStack = useRef<Snapshot[]>([]);
+  const gtRef = useRef(groundTruth);
+  const labelsRef = useRef(labels);
+  const colorsRef = useRef(colorMap);
+  useEffect(() => { gtRef.current = groundTruth; }, [groundTruth]);
+  useEffect(() => { labelsRef.current = labels; }, [labels]);
+  useEffect(() => { colorsRef.current = colorMap; }, [colorMap]);
+
+  const snapshot = useCallback(() => {
+    undoStack.current.push({ gt: gtRef.current, labels: labelsRef.current, colors: colorsRef.current });
+    if (undoStack.current.length > UNDO_MAX) undoStack.current.shift();
+  }, []);
+
+  const undo = useCallback(() => {
+    const snap = undoStack.current.pop();
+    if (!snap) {
+      pushToast("danger", <span>Nada para desfazer.</span>);
+      return;
+    }
+    setGroundTruth(snap.gt);
+    setLabels(snap.labels);
+    setColorMap(snap.colors);
+    saveColorMap(snap.colors);
+    setSelection(new Set());
+    setSpeciesSelection(new Set());
+    pushToast(
+      "leaf",
+      <>
+        <span className="t-icon">↩</span>
+        <span>Última ação desfeita</span>
+      </>,
+    );
+  }, [pushToast]);
 
   // ---- carregar config (mantém o ground truth, que é partilhado) ----
   useEffect(() => {
@@ -204,13 +247,14 @@ export default function App() {
 
   const removeLabel = useCallback((name: string) => {
     if (!confirm(`Remover a espécie "${name}"?\n\nTodas as anotações com esta espécie serão limpas.`)) return;
+    snapshot();
     setLabels((prev) => prev.filter((l) => l !== name));
     setGroundTruth((prev) => {
       const next = { ...prev };
       for (const k of Object.keys(next)) if (next[k] === name) delete next[k];
       return next;
     });
-  }, []);
+  }, [snapshot]);
 
   const renameLabel = useCallback(
     (oldName: string) => {
@@ -220,6 +264,7 @@ export default function App() {
         alert("Já existe uma espécie com esse nome.");
         return;
       }
+      snapshot();
       setLabels((prev) => prev.map((l) => (l === oldName ? newName : l)));
       setGroundTruth((prev) => {
         const next = { ...prev };
@@ -236,13 +281,14 @@ export default function App() {
       });
       if (activeSpecies === oldName) setActiveSpecies(newName);
     },
-    [labels, activeSpecies],
+    [labels, activeSpecies, snapshot],
   );
 
   // atribui a selecção atual a uma espécie (usado por A e pelas teclas 1-9)
   const assignSpecies = useCallback(
     (label: string) => {
       if (!label || selection.size === 0) return;
+      snapshot();
       const n = selection.size;
       const sel = selection;
       // o cluster fica completo?
@@ -261,6 +307,7 @@ export default function App() {
             <b>{n}</b> {n === 1 ? "imagem" : "imagens"} → <b>{label}</b>
           </span>
         </>,
+        true,
       );
       if (remaining === 0 && currentClusterId !== -1) {
         setTimeout(
@@ -278,7 +325,7 @@ export default function App() {
         );
       }
     },
-    [selection, unannotatedInCluster, currentClusterId, colorOf, pushToast],
+    [selection, unannotatedInCluster, currentClusterId, colorOf, pushToast, snapshot],
   );
 
   const toggleSelect = useCallback((filename: string) => {
@@ -328,6 +375,7 @@ export default function App() {
   const retireSelection = useCallback(() => {
     const labeled = [...selection].filter((f) => groundTruth[f]);
     if (labeled.length === 0) return;
+    snapshot();
     setGroundTruth((prev) => {
       const next = { ...prev };
       for (const f of labeled) delete next[f];
@@ -342,8 +390,9 @@ export default function App() {
           Etiqueta retirada de <b>{labeled.length}</b> {labeled.length === 1 ? "imagem" : "imagens"}
         </span>
       </>,
+      true,
     );
-  }, [selection, groundTruth, pushToast]);
+  }, [selection, groundTruth, pushToast, snapshot]);
 
   const navCluster = useCallback(
     (dir: 1 | -1) => {
@@ -393,6 +442,7 @@ export default function App() {
       reader.onload = (ev) => {
         try {
           const data = JSON.parse(ev.target?.result as string);
+          snapshot(); // importar substitui tudo — tem de ser desfazível
           if (data.ground_truth && typeof data.ground_truth === "object") setGroundTruth(data.ground_truth);
           if (Array.isArray(data.labels)) setLabels(data.labels);
           pushToast(
@@ -411,7 +461,7 @@ export default function App() {
       };
       reader.readAsText(file);
     },
-    [pushToast],
+    [pushToast, snapshot],
   );
 
   const handleCloudSave = useCallback(async () => {
@@ -444,8 +494,24 @@ export default function App() {
         if (e.key === "Escape") setLightbox(null);
         return; // com o lightbox aberto, as setas alternam as vistas (geridas lá)
       }
+      if (helpOpen) {
+        if (e.key === "Escape" || e.key === "?") setHelpOpen(false);
+        return;
+      }
       const t = e.target as HTMLElement;
       if (t.tagName === "INPUT" || t.tagName === "SELECT" || t.tagName === "TEXTAREA") return;
+
+      // funcionam em qualquer separador
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
+        e.preventDefault();
+        undo();
+        return;
+      }
+      if (e.key === "?") {
+        setHelpOpen(true);
+        return;
+      }
+
       if (mode !== "clusters" || !config) return;
 
       if (e.key === "ArrowLeft") setPage((p) => Math.max(0, p - 1));
@@ -466,24 +532,27 @@ export default function App() {
     }
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [mode, config, lightbox, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection]);
+  }, [mode, config, lightbox, helpOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, undo]);
 
   // remover labels (vista Espécies)
   const removeSelectedLabels = useCallback(() => {
     const n = speciesSelection.size;
+    if (n === 0) return;
+    snapshot();
     setGroundTruth((prev) => {
       const next = { ...prev };
       for (const f of speciesSelection) delete next[f];
       return next;
     });
     setSpeciesSelection(new Set());
-    pushToast("danger", <span>Etiqueta removida de <b>{n}</b> {n === 1 ? "imagem" : "imagens"}</span>);
-  }, [speciesSelection, pushToast]);
+    pushToast("danger", <span>Etiqueta removida de <b>{n}</b> {n === 1 ? "imagem" : "imagens"}</span>, true);
+  }, [speciesSelection, pushToast, snapshot]);
 
   // reatribuir a selecção (vista Espécies) a outra espécie
   const reassignSpeciesSelection = useCallback(
     (label: string) => {
       if (!label || speciesSelection.size === 0) return;
+      snapshot();
       const n = speciesSelection.size;
       setGroundTruth((prev) => {
         const next = { ...prev };
@@ -499,9 +568,10 @@ export default function App() {
             <b>{n}</b> {n === 1 ? "imagem" : "imagens"} → <b>{label}</b>
           </span>
         </>,
+        true,
       );
     },
-    [speciesSelection, colorOf, pushToast],
+    [speciesSelection, colorOf, pushToast, snapshot],
   );
 
   if (loading || !config) {
@@ -540,6 +610,7 @@ export default function App() {
         onExportJSON={() => exportJSON(groundTruth, labels)}
         onExportCSV={() => exportCSV(groundTruth, allFilenames)}
         onImport={handleImport}
+        onHelp={() => setHelpOpen(true)}
       />
 
       <ClusterRail
@@ -651,10 +722,23 @@ export default function App() {
         onClose={() => setLightbox(null)}
       />
 
+      {helpOpen && <HelpOverlay onClose={() => setHelpOpen(false)} />}
+
       <div className="toaster">
         {toasts.map((t) => (
           <div key={t.id} className={`toast ${t.kind}`}>
             {t.node}
+            {t.undoable && (
+              <button
+                className="t-undo"
+                onClick={() => {
+                  setToasts((cur) => cur.filter((x) => x.id !== t.id));
+                  undo();
+                }}
+              >
+                Desfazer
+              </button>
+            )}
           </div>
         ))}
       </div>

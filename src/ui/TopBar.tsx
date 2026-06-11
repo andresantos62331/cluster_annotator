@@ -17,6 +17,7 @@ export function TopBar({
   onExportJSON,
   onExportCSV,
   onImport,
+  onHelp,
 }: {
   defs: ConfigDef[];
   configId: string;
@@ -31,6 +32,7 @@ export function TopBar({
   onExportJSON: () => void;
   onExportCSV: () => void;
   onImport: (f: File) => void;
+  onHelp: () => void;
 }) {
   const [techOpen, setTechOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -183,6 +185,10 @@ export function TopBar({
             }}
           />
         </div>
+
+        <button className="tech-btn help-btn" onClick={onHelp} title="Ajuda e atalhos (?)">
+          ?
+        </button>
       </div>
     </header>
   );
