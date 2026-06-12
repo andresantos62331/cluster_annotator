@@ -13,6 +13,7 @@ export const Card = memo(function Card({
   label,
   color,
   index = 0,
+  dimmed = false,
   sourceClusterId,
   onGoToCluster,
   onToggle,
@@ -23,6 +24,8 @@ export const Card = memo(function Card({
   label?: string;
   color?: string;
   index?: number;
+  // esbatido (ex.: hover no histograma realça só as imagens de um cluster)
+  dimmed?: boolean;
   sourceClusterId?: number;
   onGoToCluster?: () => void;
   onToggle: () => void;
@@ -31,7 +34,7 @@ export const Card = memo(function Card({
   const labeled = !!(label && color);
   return (
     <div
-      className={`card ${selected ? "selected" : ""} ${labeled ? "labeled" : ""}`}
+      className={`card ${selected ? "selected" : ""} ${labeled ? "labeled" : ""} ${dimmed ? "dimmed" : ""}`}
       style={{
         // escalona a entrada (cap a 24 para não atrasar páginas grandes)
         animationDelay: `${Math.min(index, 24) * 14}ms`,

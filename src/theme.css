@@ -918,6 +918,8 @@ body {
   padding: 8px 12px; border-radius: var(--r-md); /* faixa de cor via style inline */
   /* "ficha de herbário" sticky — fica visível enquanto se percorre a espécie */
   position: sticky; top: 56px; z-index: 6;
+  /* grossura UNIFORME: todas as fichas com a altura de um histograma de 3 barras */
+  min-height: 66px;
 }
 /* colapsar/expandir: a FAIXA inteira é o alvo de clique; a seta é só indicador */
 .svb-head-click { cursor: pointer; user-select: none; }
@@ -929,8 +931,13 @@ body {
 /* população no cabeçalho ("X imagens presentes em N clusters") */
 .svb-pop { font-size: 12px; font-weight: 400; color: var(--muted); white-space: nowrap; }
 
-/* histograma dos top 3 clusters da espécie (barrinhas clicáveis) */
-.svb-hist { display: flex; flex-direction: column; gap: 2px; width: 180px; flex-shrink: 0; }
+/* histograma dos top 3 clusters da espécie (barrinhas clicáveis; hover realça
+   na grelha as imagens desse cluster). Altura fixa = 3 barras, centrado quando
+   tem menos, para a grossura das fichas ser sempre igual. */
+.svb-hist {
+  display: flex; flex-direction: column; gap: 2px; width: 180px; flex-shrink: 0;
+  height: 50px; justify-content: center;
+}
 .svb-hist button {
   display: grid; grid-template-columns: 32px 1fr 26px; align-items: center; gap: 6px;
   padding: 1px 4px; background: transparent; border: 0; border-radius: 5px;
@@ -943,6 +950,10 @@ body {
 }
 .svb-hist .h-bar > span { display: block; height: 100%; border-radius: 4px; }
 .svb-hist .h-n { text-align: left; }
+
+/* cartões esbatidos durante o hover numa barra do histograma */
+.card { transition: opacity 0.28s var(--ease), filter 0.28s var(--ease); }
+.card.dimmed { opacity: 0.14; filter: saturate(0.4); }
 /* ferramentas da vista (ordenação + densidade) */
 .sv-tools { display: flex; align-items: center; gap: 9px; margin: 2px 0 16px; }
 .sv-tools .sv-tools-label { font-size: 11px; color: var(--faint); }

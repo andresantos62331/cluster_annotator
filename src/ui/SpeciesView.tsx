@@ -61,9 +61,23 @@ export function SpeciesView({
   onFocusHandled: () => void;
 }) {
   const blockRefs = useRef<Record<string, HTMLDivElement | null>>({});
-  const [sortBy, setSortBy] = useState<"alfabetica" | "tamanho">("alfabetica");
-  const [density, setDensity] = useState(0);
+  // preferências da vista persistidas entre sessões (localStorage, como o resto tese3.*)
+  const [sortBy, setSortBy] = useState<"alfabetica" | "tamanho">(() =>
+    localStorage.getItem("tese3.sv_sort") === "tamanho" ? "tamanho" : "alfabetica",
+  );
+  const [density, setDensity] = useState(() => {
+    const n = parseInt(localStorage.getItem("tese3.sv_density") ?? "0", 10);
+    return Number.isInteger(n) && n >= 0 && n < DENSITIES.length ? n : 0;
+  });
+  useEffect(() => {
+    localStorage.setItem("tese3.sv_sort", sortBy);
+  }, [sortBy]);
+  useEffect(() => {
+    localStorage.setItem("tese3.sv_density", String(density));
+  }, [density]);
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  // hover numa barra do histograma -> realça na grelha as imagens desse cluster
+  const [histHover, setHistHover] = useState<{ lbl: string; cid: number } | null>(null);
 
   // scroll até à espécie clicada no painel direito (e realça-a brevemente)
   useEffect(() => {
@@ -272,6 +286,8 @@ export function SpeciesView({
                         e.stopPropagation();
                         onOpenCluster(cid);
                       }}
+                      onMouseEnter={() => setHistHover({ lbl, cid })}
+                      onMouseLeave={() => setHistHover(null)}
                       title={`Ir para ${cid === -1 ? "o ruído" : `c${cid}`} (${n} ${n === 1 ? "imagem" : "imagens"})`}
                     >
                       <span className="h-label">{cid === -1 ? "✦" : `c${cid}`}</span>
@@ -311,6 +327,7 @@ export function SpeciesView({
                       index={i}
                       selected={selection.has(f)}
                       // sem moldura da cor da espécie: o bloco já a identifica
+                      dimmed={histHover?.lbl === lbl && clusterOf(f) !== histHover.cid}
                       sourceClusterId={clusterOf(f) ?? undefined}
                       onGoToCluster={() => onGoToCluster(f)}
                       onToggle={() =>

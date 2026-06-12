@@ -7,6 +7,10 @@ interface Env {
   ASSETS: { fetch: (req: Request) => Promise<Response> };
   GITHUB_TOKEN: string; // PAT fine-grained, Contents R/W no repo
   SAVE_KEY: string;     // chave partilhada (link magico ?k=...)
+  // topico ntfy.sh para notificar saves (OPCIONAL; runtime var no dashboard,
+  // nao no repo — o repo e' publico e o topico deve ser segredo). Sem ele,
+  // o save funciona na mesma, so nao notifica.
+  NTFY_TOPIC?: string;
 }
 
 const REPO = "andresantos62331/cluster_annotator";
@@ -50,9 +54,30 @@ async function handleSave(request: Request, env: Env): Promise<Response> {
   try {
     const commit = await putFile("ground_truth.json", body.json, message, env);
     await putFile("ground_truth.csv", body.csv, message, env);
+    await notifySave(body.count ?? 0, env); // nunca falha o save
     return json({ ok: true, count: body.count ?? 0, commit });
   } catch (e) {
     return json({ error: String(e) }, 502);
+  }
+}
+
+// notificacao push via ntfy.sh quando alguem guarda na cloud (best-effort:
+// qualquer erro e' engolido — a notificacao nunca pode estragar um save)
+async function notifySave(count: number, env: Env): Promise<void> {
+  if (!env.NTFY_TOPIC) return;
+  try {
+    const when = new Date().toLocaleString("pt-PT", { timeZone: "Europe/Lisbon" });
+    await fetch(`https://ntfy.sh/${env.NTFY_TOPIC}`, {
+      method: "POST",
+      headers: {
+        Title: "Herbario — progresso guardado",
+        Tags: "seedling",
+        Priority: "default",
+      },
+      body: `${count} anotacoes guardadas na cloud (${when})`,
+    });
+  } catch {
+    // best-effort
   }
 }
 
