@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { ClusterMetrics, GroundTruth } from "../types";
+import { LIXO } from "../colors";
 import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
@@ -26,7 +27,6 @@ export function Workspace({
   onOpenLightbox,
   onAssign,
   onSelectPage,
-  onSelectUnclassified,
   onToggleMany,
   onRetire,
   onClear,
@@ -53,7 +53,6 @@ export function Workspace({
   onOpenLightbox: (f: string) => void;
   onAssign: () => void;
   onSelectPage: () => void;
-  onSelectUnclassified: () => void;
   onToggleMany: (files: string[]) => void;
   onRetire: () => void;
   onClear: () => void;
@@ -66,6 +65,7 @@ export function Workspace({
   const bodyRef = useRef<HTMLDivElement>(null);
 
   // chegada via "Ir para cluster de origem": scroll até à imagem e realça-a
+  // com a COR DA ESPÉCIE dessa imagem (fallback: vermelhão de acento)
   useEffect(() => {
     if (!focusFile) return;
     const el = bodyRef.current?.querySelector(
@@ -73,9 +73,13 @@ export function Workspace({
     ) as HTMLElement | null;
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "center" });
-      const on = "0 0 0 4px rgba(255,106,61,1), 0 0 20px 4px rgba(255,106,61,0.8)";
-      const dim = "0 0 0 4px rgba(255,106,61,0.25), 0 0 10px 1px rgba(255,106,61,0.15)";
-      const off = "0 0 0 4px rgba(255,106,61,0), 0 0 0 0 rgba(255,106,61,0)";
+      const label = groundTruth[focusFile];
+      const hex = label ? colorOf(label) : "#ff6a3d";
+      const m = /^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(hex);
+      const rgb = m ? `${parseInt(m[1], 16)},${parseInt(m[2], 16)},${parseInt(m[3], 16)}` : "255,106,61";
+      const on = `0 0 0 4px rgba(${rgb},1), 0 0 20px 4px rgba(${rgb},0.8)`;
+      const dim = `0 0 0 4px rgba(${rgb},0.25), 0 0 10px 1px rgba(${rgb},0.15)`;
+      const off = `0 0 0 4px rgba(${rgb},0), 0 0 0 0 rgba(${rgb},0)`;
       el.animate(
         [
           { boxShadow: off, offset: 0 },
@@ -92,7 +96,7 @@ export function Workspace({
       );
     }
     onFocusHandled();
-  }, [focusFile, onFocusHandled]);
+  }, [focusFile, onFocusHandled, groundTruth, colorOf]);
 
   useEffect(() => {
     if (!ddOpen) return;
@@ -124,7 +128,6 @@ export function Workspace({
   }
 
   const pageAllSelected = pageFiles.length > 0 && pageFiles.every((f) => selection.has(f));
-  const allUnclassSelected = unannotated.length > 0 && unannotated.every((f) => selection.has(f));
   // quantas das selecionadas já têm etiqueta (alvo do "Retirar etiqueta")
   let labeledInSel = 0;
   for (const f of selection) if (groundTruth[f]) labeledInSel++;
@@ -185,7 +188,7 @@ export function Workspace({
           >
             {activeSpecies ? (
               <>
-                <SpeciesThumb file={thumbOf(activeSpecies)} color={colorOf(activeSpecies)} size={22} />
+                <SpeciesThumb file={thumbOf(activeSpecies)} size={22} />
                 <span className="as-name">{activeSpecies}</span>
               </>
             ) : (
@@ -204,11 +207,23 @@ export function Workspace({
                     setDdOpen(false);
                   }}
                 >
-                  <SpeciesThumb file={thumbOf(l)} color={colorOf(l)} size={20} />
+                  <SpeciesThumb file={thumbOf(l)} size={20} />
                   {l}
                   {i < 9 && <span className="dd-key">{i + 1}</span>}
                 </button>
               ))}
+              {/* categoria reservada, sempre disponível no fim */}
+              <div className="dd-sep" />
+              <button
+                onClick={() => {
+                  onSetActive(LIXO);
+                  setDdOpen(false);
+                }}
+              >
+                <SpeciesThumb file={thumbOf(LIXO)} size={20} />
+                <span style={{ color: colorOf(LIXO) }}>{LIXO}</span>
+                <span className="dd-key">0</span>
+              </button>
             </div>
           )}
         </div>
@@ -219,30 +234,8 @@ export function Workspace({
           disabled={!activeSpecies || selection.size === 0}
           title="Atribuir a espécie ativa (tecla A)"
         >
-          Atribuir a {selection.size} <span className="kbd">A</span>
+          Atribuir a {selection.size} selecionada{selection.size === 1 ? "" : "s"} <span className="kbd">A</span>
         </button>
-
-        {/* selecionar — toggles com estado (✓), não renomeiam para "Limpar" */}
-        <div className="select-tools" role="group" aria-label="Selecionar">
-          <button
-            className={`seltool ${allUnclassSelected ? "on" : ""}`}
-            onClick={onSelectUnclassified}
-            disabled={unannotated.length === 0}
-            title="Selecionar todas as imagens por classificar"
-          >
-            <span className="seltool-box">{allUnclassSelected ? "✓" : ""}</span>
-            Por classificar
-          </button>
-          <button
-            className={`seltool ${pageAllSelected ? "on" : ""}`}
-            onClick={onSelectPage}
-            disabled={pageFiles.length === 0}
-            title="Selecionar só esta página"
-          >
-            <span className="seltool-box">{pageAllSelected ? "✓" : ""}</span>
-            Página
-          </button>
-        </div>
 
         {/* acções sobre a selecção — só aparecem quando há selecção */}
         {labeledInSel > 0 && (
@@ -251,19 +244,17 @@ export function Workspace({
           </button>
         )}
         {selection.size > 0 && (
-          <button className="btn danger" onClick={onClear} title="Limpar selecção (tecla D)">
-            Limpar <span className="kbd">D</span>
+          <button className="btn" onClick={onClear} title="Desselecionar tudo (Esc ou D)">
+            Desselecionar <span className="kbd">Esc</span>
           </button>
         )}
 
+        <div className="spacer" />
         <label className="toggle">
           <input type="checkbox" checked={showAnnotated} onChange={(e) => onToggleShowAnnotated(e.target.checked)} />
           <span className="tk" />
           Mostrar anotadas
         </label>
-
-        <div className="spacer" />
-        <div className={`sel-count ${selection.size ? "has" : ""}`}>{selection.size} selecionada(s)</div>
       </div>
 
       {/* Por classificar */}
@@ -271,6 +262,17 @@ export function Workspace({
         <span className="sh-bar" />
         <span className="sh-title">Por classificar</span>
         <span className="sh-count mono">{unannotated.length}</span>
+        {pageFiles.length > 0 && (
+          <button
+            className={`svb-check sh-check ${pageAllSelected ? "on" : ""}`}
+            onClick={onSelectPage}
+            title={pageAllSelected ? "Desselecionar a página visível" : "Selecionar toda a página visível"}
+          >
+            <svg viewBox="0 0 24 24" width="13" height="13">
+              <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        )}
       </div>
 
       {unannotated.length === 0 ? (
@@ -283,7 +285,6 @@ export function Workspace({
         </div>
       ) : (
         <>
-          {totalPages > 1 && <Pagination page={effPage} total={totalPages} onPage={onPage} />}
           <div className="grid">
             {pageFiles.map((f, i) => (
               <Card

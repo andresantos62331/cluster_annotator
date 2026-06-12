@@ -50,16 +50,20 @@ export const Card = memo(function Card({
       </div>
 
       <div className="card-actions" onClick={(e) => e.stopPropagation()}>
-        {onGoToCluster && (
+        <button onClick={onOpen} title="Examinar em resolução real">⤢</button>
+      </div>
+
+      {/* canto inferior esquerdo, separado do expandir para não se confundirem */}
+      {onGoToCluster && (
+        <div className="card-locate" onClick={(e) => e.stopPropagation()}>
           <button
             onClick={onGoToCluster}
             title={sourceClusterId != null ? `Ir para cluster de origem (c${sourceClusterId})` : "Ir para cluster de origem"}
           >
             <IconLocate size={14} />
           </button>
-        )}
-        <button onClick={onOpen} title="Examinar em resolução real">⤢</button>
-      </div>
+        </div>
+      )}
     </div>
   );
 });

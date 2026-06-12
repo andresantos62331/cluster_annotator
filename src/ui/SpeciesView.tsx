@@ -1,15 +1,24 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { GroundTruth } from "../types";
+import { LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { Pagination } from "./bits";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { IconPencil, IconChevron, IconTrash } from "./icons";
 
-const IMAGES_PER_PAGE = 30;
+// densidade da grelha: lado mínimo do cartão + imagens por página
+const DENSITIES = [
+  { min: 150, perPage: 30, label: "cartões grandes" },
+  { min: 104, perPage: 60, label: "cartões médios" },
+  { min: 76, perPage: 120, label: "cartões pequenos" },
+] as const;
 
 // Vista invertida: um bloco por espécie com TODAS as imagens anotadas com ela
-// (em qualquer cluster), paginado. Permite selecionar em lote e remover labels.
+// (em qualquer cluster). Cabeçalho tipo "ficha de herbário" (faixa de cor,
+// contagem, nº de clusters de origem), sticky durante o scroll, colapsável e
+// com TOC lateral. Ordenação: alfabética ou por tamanho (sem drag & drop aqui —
+// reordenar à mão é no painel da direita, que manda nos atalhos 1-9).
 export function SpeciesView({
   labels,
   groundTruth,
@@ -27,6 +36,7 @@ export function SpeciesView({
   thumbOf,
   clusterOf,
   onGoToCluster,
+  onOpenCluster,
   focus,
   onFocusHandled,
 }: {
@@ -46,14 +56,24 @@ export function SpeciesView({
   thumbOf: (l: string) => string | null;
   clusterOf: (f: string) => number | null;
   onGoToCluster: (f: string) => void;
+  onOpenCluster: (cid: number) => void;
   focus: string | null;
   onFocusHandled: () => void;
 }) {
   const blockRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const [sortBy, setSortBy] = useState<"alfabetica" | "tamanho">("alfabetica");
+  const [density, setDensity] = useState(0);
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
 
   // scroll até à espécie clicada no painel direito (e realça-a brevemente)
   useEffect(() => {
     if (!focus) return;
+    setCollapsed((prev) => {
+      if (!prev.has(focus)) return prev;
+      const next = new Set(prev);
+      next.delete(focus); // expandir antes de focar
+      return next;
+    });
     const el = blockRefs.current[focus];
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -70,11 +90,22 @@ export function SpeciesView({
     return m;
   }, [groundTruth]);
 
-  if (labels.length === 0) {
+  // ordenação de display: alfabética (pt) ou por tamanho desc; Lixo fica no fim
+  const displayLabels = useMemo(() => {
+    const real = labels.filter((l) => l !== LIXO);
+    if (sortBy === "alfabetica") real.sort((a, b) => a.localeCompare(b, "pt"));
+    else real.sort((a, b) => (byLabel[b]?.length ?? 0) - (byLabel[a]?.length ?? 0));
+    return labels.includes(LIXO) ? [...real, LIXO] : real;
+  }, [labels, sortBy, byLabel]);
+
+  // o Lixo vem incluído em `labels` (último); só conta como conteúdo se tiver imagens
+  const isEmpty =
+    labels.filter((l) => l !== LIXO).length === 0 && (byLabel[LIXO]?.length ?? 0) === 0;
+
+  if (isEmpty) {
     return (
       <div className="work-body">
         <div className="empty-state">
-          <div className="es-icon">❧</div>
           <div className="es-title">Sem espécies</div>
           <div className="es-sub">Cria espécies no painel da direita para as auditares aqui.</div>
         </div>
@@ -82,30 +113,90 @@ export function SpeciesView({
     );
   }
 
+  const den = DENSITIES[density];
+  const tocLabels = displayLabels.filter((l) => l !== LIXO || (byLabel[LIXO]?.length ?? 0) > 0);
+
   return (
-    <div className="work-body">
+    <div className="work-body sv" style={{ ["--card-min" as string]: `${den.min}px` }}>
       {selection.size > 0 && (
         <div className="action-bar">
           <div className="sel-count has">{selection.size} selecionada(s)</div>
-          <ReassignMenu labels={labels} colorOf={colorOf} thumbOf={thumbOf} onPick={onReassign} />
+          <ReassignMenu labels={labels} thumbOf={thumbOf} onPick={onReassign} />
           <button className="btn warn" onClick={onRemoveLabels} title="As imagens voltam a 'por classificar'">
-            Remover etiqueta
+            Remover etiqueta <span className="kbd">R</span>
           </button>
           <div className="spacer" />
           <button className="btn" onClick={() => setSelection(new Set())}>
-            Limpar selecção
+            Desselecionar <span className="kbd">Esc</span>
           </button>
         </div>
       )}
 
-      {labels.map((lbl) => {
+      {/* ferramentas da vista: ordenação + densidade */}
+      <div className="sv-tools">
+        <span className="sv-tools-label">ordenar</span>
+        <div className="seg">
+          <button className={sortBy === "alfabetica" ? "on" : ""} onClick={() => setSortBy("alfabetica")} title="Por ordem alfabética">
+            A–Z
+          </button>
+          <button className={sortBy === "tamanho" ? "on" : ""} onClick={() => setSortBy("tamanho")} title="Mais imagens primeiro">
+            população
+          </button>
+        </div>
+        <span className="sv-tools-label">densidade</span>
+        <div className="seg">
+          {DENSITIES.map((d, i) => (
+            <button key={i} className={density === i ? "on" : ""} onClick={() => setDensity(i)} title={d.label}>
+              <span className="sv-den" style={{ width: 13 - i * 3.5, height: 13 - i * 3.5 }} />
+            </button>
+          ))}
+        </div>
+        <div className="spacer" />
+      </div>
+
+      {/* índice lateral: uma bolinha por espécie, clicável */}
+      {tocLabels.length > 1 && (
+        <div className="sv-toc" aria-label="Índice de espécies">
+          {tocLabels.map((lbl) => (
+            <button
+              key={lbl}
+              style={{ background: colorOf(lbl) }}
+              title={`${lbl} (${byLabel[lbl]?.length ?? 0})`}
+              onClick={() =>
+                blockRefs.current[lbl]?.scrollIntoView({ behavior: "smooth", block: "start" })
+              }
+            />
+          ))}
+        </div>
+      )}
+
+      {displayLabels.map((lbl) => {
+        const isLixo = lbl === LIXO;
         const files = byLabel[lbl] ?? [];
+        if (isLixo && files.length === 0) return null; // sem lixo, sem bloco
+        const isCollapsed = collapsed.has(lbl);
+        const totalPages = Math.max(1, Math.ceil(files.length / den.perPage));
         const page = speciesPage[lbl] ?? 0;
-        const totalPages = Math.max(1, Math.ceil(files.length / IMAGES_PER_PAGE));
         const effPage = Math.min(page, totalPages - 1);
-        const pageFiles = files.slice(effPage * IMAGES_PER_PAGE, (effPage + 1) * IMAGES_PER_PAGE);
+        const pageFiles = files.slice(effPage * den.perPage, (effPage + 1) * den.perPage);
         const allSel = files.length > 0 && files.every((f) => selection.has(f));
         const col = colorOf(lbl);
+        // população por cluster de origem (config atual) -> frase + top 3
+        const clusterCounts = new Map<number, number>();
+        for (const f of files) {
+          const c = clusterOf(f);
+          if (c != null) clusterCounts.set(c, (clusterCounts.get(c) ?? 0) + 1);
+        }
+        const nClusters = clusterCounts.size;
+        const top3 = [...clusterCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3);
+        const maxN = top3[0]?.[1] ?? 1;
+        const toggleFold = () =>
+          setCollapsed((prev) => {
+            const next = new Set(prev);
+            if (next.has(lbl)) next.delete(lbl);
+            else next.add(lbl);
+            return next;
+          });
 
         return (
           <div
@@ -115,51 +206,103 @@ export function SpeciesView({
               blockRefs.current[lbl] = el;
             }}
           >
-            <div className="svb-head">
+            {/* "ficha de herbário": faixa de cor, sticky; clicar na faixa colapsa/
+                expande (os controlos lá dentro travam a propagação) */}
+            <div
+              className="svb-head svb-head-click"
+              style={{ background: `linear-gradient(90deg, ${tint(col, 0.13)}, rgba(0,0,0,0) 75%), var(--bg)` }}
+              onClick={toggleFold}
+              title={isCollapsed ? "Expandir" : "Colapsar"}
+            >
+              <span className="svb-fold" aria-hidden>
+                {isCollapsed ? "▸" : "▾"}
+              </span>
               {files.length > 0 && (
                 <button
                   className={`svb-check ${allSel ? "on" : ""}`}
                   title={allSel ? "Desselecionar todas" : "Selecionar todas desta espécie"}
-                  onClick={() =>
+                  onClick={(e) => {
+                    e.stopPropagation();
                     setSelection((prev) => {
                       const next = new Set(prev);
                       if (allSel) for (const f of files) next.delete(f);
                       else for (const f of files) next.add(f);
                       return next;
-                    })
-                  }
+                    });
+                  }}
                 >
                   <svg viewBox="0 0 24 24" width="13" height="13">
                     <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
               )}
-              <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
+              {isLixo ? (
+                <span className="sw" style={{ background: col }} title="Categoria reservada — cor fixa" />
+              ) : (
+                <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
+              )}
               <h3>
                 <span className="svb-name" style={{ color: col }}>{lbl}</span>
-                <span className="svb-count" title="imagens anotadas com esta espécie">{files.length}</span>
-                <button className="svb-edit" onClick={() => onRename(lbl)} title="Renomear espécie">
-                  <IconPencil size={15} />
-                </button>
+                {files.length > 0 && (
+                  <span className="svb-pop" title="população desta espécie (clusters da config atual)">
+                    {files.length} {files.length === 1 ? "imagem presente" : "imagens presentes"} em{" "}
+                    {nClusters} {nClusters === 1 ? "cluster" : "clusters"}
+                  </span>
+                )}
+                {!isLixo && (
+                  <button
+                    className="svb-edit"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRename(lbl);
+                    }}
+                    title="Renomear espécie"
+                  >
+                    <IconPencil size={15} />
+                  </button>
+                )}
               </h3>
-              <button className="svb-trash" onClick={() => onRemove(lbl)} title="Remover esta espécie">
-                <IconTrash size={17} />
-              </button>
+              {/* histograma interativo: top 3 clusters com mais imagens desta espécie */}
+              {top3.length > 0 && (
+                <div className="svb-hist">
+                  {top3.map(([cid, n]) => (
+                    <button
+                      key={cid}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onOpenCluster(cid);
+                      }}
+                      title={`Ir para ${cid === -1 ? "o ruído" : `c${cid}`} (${n} ${n === 1 ? "imagem" : "imagens"})`}
+                    >
+                      <span className="h-label">{cid === -1 ? "✦" : `c${cid}`}</span>
+                      <span className="h-bar">
+                        <span style={{ width: `${(n / maxN) * 100}%`, background: tint(col, 0.65) }} />
+                      </span>
+                      <span className="h-n">{n}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+              {!isLixo && (
+                <button
+                  className="svb-trash"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onRemove(lbl);
+                  }}
+                  title="Remover esta espécie"
+                >
+                  <IconTrash size={17} />
+                </button>
+              )}
             </div>
 
-            {files.length === 0 ? (
+            {isCollapsed ? null : files.length === 0 ? (
               <div className="svb-meta" style={{ color: "var(--faint)" }}>
                 Ainda sem imagens.
               </div>
             ) : (
               <>
-                {totalPages > 1 && (
-                  <Pagination
-                    page={effPage}
-                    total={totalPages}
-                    onPage={(n) => setSpeciesPage((prev) => ({ ...prev, [lbl]: n }))}
-                  />
-                )}
                 <div className="grid">
                   {pageFiles.map((f, i) => (
                     <Card
@@ -167,8 +310,7 @@ export function SpeciesView({
                       filename={f}
                       index={i}
                       selected={selection.has(f)}
-                      label={lbl}
-                      color={col}
+                      // sem moldura da cor da espécie: o bloco já a identifica
                       sourceClusterId={clusterOf(f) ?? undefined}
                       onGoToCluster={() => onGoToCluster(f)}
                       onToggle={() =>
@@ -183,6 +325,13 @@ export function SpeciesView({
                     />
                   ))}
                 </div>
+                {totalPages > 1 && (
+                  <Pagination
+                    page={effPage}
+                    total={totalPages}
+                    onPage={(n) => setSpeciesPage((prev) => ({ ...prev, [lbl]: n }))}
+                  />
+                )}
               </>
             )}
           </div>
@@ -195,12 +344,10 @@ export function SpeciesView({
 // Dropdown para reatribuir a selecção a outra espécie (correção sem ir aos clusters).
 function ReassignMenu({
   labels,
-  colorOf,
   thumbOf,
   onPick,
 }: {
   labels: string[];
-  colorOf: (l: string) => string;
   thumbOf: (l: string) => string | null;
   onPick: (l: string) => void;
 }) {
@@ -232,7 +379,7 @@ function ReassignMenu({
                 setOpen(false);
               }}
             >
-              <SpeciesThumb file={thumbOf(l)} color={colorOf(l)} size={20} />
+              <SpeciesThumb file={thumbOf(l)} size={20} />
               {l}
             </button>
           ))}

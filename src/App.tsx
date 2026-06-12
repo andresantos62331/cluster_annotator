@@ -15,7 +15,7 @@ import {
   setCloudKey,
   setCloudSavedAt,
 } from "./storage";
-import { PALETTE } from "./colors";
+import { LIXO, LIXO_COLOR, PALETTE } from "./colors";
 import type { ConfigData, CropGeometry, GroundTruth } from "./types";
 import { TopBar } from "./ui/TopBar";
 import { ClusterRail } from "./ui/ClusterRail";
@@ -75,8 +75,9 @@ export default function App() {
     setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), undoable ? 5000 : 2800);
   }, []);
 
-  // ---- desfazer (Ctrl+Z) ----
+  // ---- desfazer (Ctrl+Z) / refazer (Ctrl+Shift+Z) ----
   const undoStack = useRef<Snapshot[]>([]);
+  const redoStack = useRef<Snapshot[]>([]);
   const gtRef = useRef(groundTruth);
   const labelsRef = useRef(labels);
   const colorsRef = useRef(colorMap);
@@ -84,9 +85,25 @@ export default function App() {
   useEffect(() => { labelsRef.current = labels; }, [labels]);
   useEffect(() => { colorsRef.current = colorMap; }, [colorMap]);
 
+  const captureState = useCallback(
+    (): Snapshot => ({ gt: gtRef.current, labels: labelsRef.current, colors: colorsRef.current }),
+    [],
+  );
+
+  // tirada ANTES de cada mutação; uma mutação nova invalida o "refazer"
   const snapshot = useCallback(() => {
-    undoStack.current.push({ gt: gtRef.current, labels: labelsRef.current, colors: colorsRef.current });
+    undoStack.current.push(captureState());
     if (undoStack.current.length > UNDO_MAX) undoStack.current.shift();
+    redoStack.current = [];
+  }, [captureState]);
+
+  const restore = useCallback((snap: Snapshot) => {
+    setGroundTruth(snap.gt);
+    setLabels(snap.labels);
+    setColorMap(snap.colors);
+    saveColorMap(snap.colors);
+    setSelection(new Set());
+    setSpeciesSelection(new Set());
   }, []);
 
   const undo = useCallback(() => {
@@ -95,12 +112,8 @@ export default function App() {
       pushToast("danger", <span>Nada para desfazer.</span>);
       return;
     }
-    setGroundTruth(snap.gt);
-    setLabels(snap.labels);
-    setColorMap(snap.colors);
-    saveColorMap(snap.colors);
-    setSelection(new Set());
-    setSpeciesSelection(new Set());
+    redoStack.current.push(captureState());
+    restore(snap);
     pushToast(
       "leaf",
       <>
@@ -108,7 +121,24 @@ export default function App() {
         <span>Última ação desfeita</span>
       </>,
     );
-  }, [pushToast]);
+  }, [pushToast, captureState, restore]);
+
+  const redo = useCallback(() => {
+    const snap = redoStack.current.pop();
+    if (!snap) {
+      pushToast("danger", <span>Nada para refazer.</span>);
+      return;
+    }
+    undoStack.current.push(captureState());
+    restore(snap);
+    pushToast(
+      "leaf",
+      <>
+        <span className="t-icon">↪</span>
+        <span>Ação refeita</span>
+      </>,
+    );
+  }, [pushToast, captureState, restore]);
 
   // ---- carregar config (mantém o ground truth, que é partilhado) ----
   useEffect(() => {
@@ -195,13 +225,16 @@ export default function App() {
     }
   }, []);
 
-  // mantém activeSpecies válido
+  // mantém activeSpecies válido (o Lixo é sempre válido, apesar de não estar em labels)
   useEffect(() => {
-    if (activeSpecies && !labels.includes(activeSpecies)) setActiveSpecies(labels[0] ?? "");
+    if (activeSpecies && activeSpecies !== LIXO && !labels.includes(activeSpecies)) setActiveSpecies(labels[0] ?? "");
     else if (!activeSpecies && labels.length > 0) setActiveSpecies(labels[0]);
   }, [labels, activeSpecies]);
 
-  const colorOf = useCallback((label: string): string => colorMap[label] ?? "#9ca3af", [colorMap]);
+  const colorOf = useCallback(
+    (label: string): string => (label === LIXO ? LIXO_COLOR : colorMap[label] ?? "#9ca3af"),
+    [colorMap],
+  );
 
   // ---- derivados ----
   const allFilenames = useMemo(() => config?.assignments.map((a) => a.filename) ?? [], [config]);
@@ -230,6 +263,16 @@ export default function App() {
     return config.byCluster.get(currentClusterId) ?? [];
   }, [config, currentClusterId]);
 
+  // lista em que o lightbox navega com ↑/↓: o cluster atual, ou as imagens da
+  // mesma espécie quando aberto a partir da tab de espécies
+  const lightboxList = useMemo(() => {
+    if (!lightbox) return [] as string[];
+    if (mode === "clusters") return clusterFilenames;
+    const lbl = groundTruth[lightbox];
+    if (!lbl) return [lightbox];
+    return Object.keys(groundTruth).filter((f) => groundTruth[f] === lbl).sort();
+  }, [lightbox, mode, clusterFilenames, groundTruth]);
+
   const unannotatedInCluster = useMemo(
     () => clusterFilenames.filter((f) => !groundTruth[f]),
     [clusterFilenames, groundTruth],
@@ -241,6 +284,10 @@ export default function App() {
   const addLabel = useCallback((name: string) => {
     const t = name.trim();
     if (!t) return;
+    if (t.toLowerCase() === LIXO.toLowerCase()) {
+      alert(`"${LIXO}" é a categoria reservada para crops inutilizáveis — já existe, fixa no fundo do painel.`);
+      return;
+    }
     setLabels((prev) => (prev.includes(t) ? prev : [...prev, t]));
     setActiveSpecies(t);
   }, []);
@@ -262,6 +309,10 @@ export default function App() {
       if (!newName || newName === oldName) return;
       if (labels.includes(newName)) {
         alert("Já existe uma espécie com esse nome.");
+        return;
+      }
+      if (newName.toLowerCase() === LIXO.toLowerCase()) {
+        alert(`"${LIXO}" é a categoria reservada para crops inutilizáveis.`);
         return;
       }
       snapshot();
@@ -349,16 +400,6 @@ export default function App() {
     });
   }, [page, totalPages, unannotatedInCluster]);
 
-  const selectUnclassified = useCallback(() => {
-    setSelection((prev) => {
-      const next = new Set(prev);
-      const all = unannotatedInCluster.every((f) => next.has(f));
-      if (all) for (const f of unannotatedInCluster) next.delete(f);
-      else for (const f of unannotatedInCluster) next.add(f);
-      return next;
-    });
-  }, [unannotatedInCluster]);
-
   // toggle de um conjunto arbitrário (usado pelo "selecionar" por grupo de espécie)
   const toggleMany = useCallback((files: string[]) => {
     setSelection((prev) => {
@@ -412,6 +453,20 @@ export default function App() {
     setPage(0);
     setSelection(new Set());
     setMode("clusters");
+  }, []);
+
+  // arrastar-e-largar (painel direito E blocos da tab Espécies): move `label`
+  // para a posição de `target` — a ordem é a mesma em todo o lado (atalhos 1-9 incl.)
+  const reorderLabel = useCallback((label: string, target: string) => {
+    setLabels((prev) => {
+      const i = prev.indexOf(label);
+      const j = prev.indexOf(target);
+      if (i < 0 || j < 0 || i === j) return prev;
+      const next = [...prev];
+      next.splice(i, 1);
+      next.splice(j, 0, label);
+      return next;
+    });
   }, []);
 
   // clicar numa espécie no painel direito → ir para a tab Espécies e focar nela
@@ -487,54 +542,7 @@ export default function App() {
     }
   }, [groundTruth, labels, allFilenames, pushToast]);
 
-  // ---- atalhos de teclado ----
-  useEffect(() => {
-    function handler(e: KeyboardEvent) {
-      if (lightbox) {
-        if (e.key === "Escape") setLightbox(null);
-        return; // com o lightbox aberto, as setas alternam as vistas (geridas lá)
-      }
-      if (helpOpen) {
-        if (e.key === "Escape" || e.key === "?") setHelpOpen(false);
-        return;
-      }
-      const t = e.target as HTMLElement;
-      if (t.tagName === "INPUT" || t.tagName === "SELECT" || t.tagName === "TEXTAREA") return;
-
-      // funcionam em qualquer separador
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
-        e.preventDefault();
-        undo();
-        return;
-      }
-      if (e.key === "?") {
-        setHelpOpen(true);
-        return;
-      }
-
-      if (mode !== "clusters" || !config) return;
-
-      if (e.key === "ArrowLeft") setPage((p) => Math.max(0, p - 1));
-      else if (e.key === "ArrowRight") setPage((p) => Math.min(totalPages - 1, p + 1));
-      else if (e.key === "a" || e.key === "A") assignSpecies(activeSpecies);
-      else if (e.key === "d" || e.key === "D") setSelection(new Set());
-      else if (e.key === "r" || e.key === "R") retireSelection();
-      else if (e.key === "j" || e.key === "J") navCluster(1);
-      else if (e.key === "k" || e.key === "K") navCluster(-1);
-      else if (/^[1-9]$/.test(e.key)) {
-        const idx = parseInt(e.key, 10) - 1;
-        if (idx < labels.length) {
-          const lbl = labels[idx];
-          if (selection.size > 0) assignSpecies(lbl);
-          else setActiveSpecies(lbl);
-        }
-      }
-    }
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [mode, config, lightbox, helpOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, undo]);
-
-  // remover labels (vista Espécies)
+  // remover labels (vista Espécies) — antes dos atalhos, que dependem dela
   const removeSelectedLabels = useCallback(() => {
     const n = speciesSelection.size;
     if (n === 0) return;
@@ -547,6 +555,87 @@ export default function App() {
     setSpeciesSelection(new Set());
     pushToast("danger", <span>Etiqueta removida de <b>{n}</b> {n === 1 ? "imagem" : "imagens"}</span>, true);
   }, [speciesSelection, pushToast, snapshot]);
+
+  // ---- atalhos de teclado ----
+  useEffect(() => {
+    function handler(e: KeyboardEvent) {
+      if (lightbox) {
+        // ↑/↓ alternam as vistas (geridas no Lightbox); aqui: navegar e selecionar
+        if (e.key === "Escape") setLightbox(null);
+        else if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+          e.preventDefault();
+          const i = lightboxList.indexOf(lightbox);
+          if (i >= 0 && lightboxList.length > 1) {
+            const step = e.key === "ArrowRight" ? 1 : -1;
+            setLightbox(lightboxList[(i + step + lightboxList.length) % lightboxList.length]);
+          }
+        } else if (e.key === "s" || e.key === "S") {
+          // seleciona/desseleciona a plântula em vista sem fechar o viewport
+          if (mode === "clusters") toggleSelect(lightbox);
+          else
+            setSpeciesSelection((prev) => {
+              const next = new Set(prev);
+              if (next.has(lightbox)) next.delete(lightbox);
+              else next.add(lightbox);
+              return next;
+            });
+        }
+        return;
+      }
+      if (helpOpen) {
+        if (e.key === "Escape" || e.key === "?") setHelpOpen(false);
+        return;
+      }
+      const t = e.target as HTMLElement;
+      if (t.tagName === "INPUT" || t.tagName === "SELECT" || t.tagName === "TEXTAREA") return;
+
+      // funcionam em qualquer separador
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
+        e.preventDefault();
+        if (e.shiftKey) redo();
+        else undo();
+        return;
+      }
+      if (e.key === "?") {
+        setHelpOpen(true);
+        return;
+      }
+      if (e.key === "Escape") {
+        // desseleciona tudo (em ambos os separadores)
+        setSelection(new Set());
+        setSpeciesSelection(new Set());
+        return;
+      }
+
+      if (mode === "species") {
+        if (e.key === "r" || e.key === "R") removeSelectedLabels();
+        return;
+      }
+      if (mode !== "clusters" || !config) return;
+
+      if (e.key === "ArrowLeft") setPage((p) => Math.max(0, p - 1));
+      else if (e.key === "ArrowRight") setPage((p) => Math.min(totalPages - 1, p + 1));
+      else if (e.key === "a" || e.key === "A") assignSpecies(activeSpecies);
+      else if (e.key === "d" || e.key === "D") setSelection(new Set());
+      else if (e.key === "r" || e.key === "R") retireSelection();
+      else if (e.key === "j" || e.key === "J") navCluster(1);
+      else if (e.key === "k" || e.key === "K") navCluster(-1);
+      else if (e.key === "0") {
+        // categoria Lixo: com selecção atribui logo; sem selecção fica ativa
+        if (selection.size > 0) assignSpecies(LIXO);
+        else setActiveSpecies(LIXO);
+      } else if (/^[1-9]$/.test(e.key)) {
+        const idx = parseInt(e.key, 10) - 1;
+        if (idx < labels.length) {
+          const lbl = labels[idx];
+          if (selection.size > 0) assignSpecies(lbl);
+          else setActiveSpecies(lbl);
+        }
+      }
+    }
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [mode, config, lightbox, lightboxList, helpOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, removeSelectedLabels, toggleSelect, undo, redo]);
 
   // reatribuir a selecção (vista Espécies) a outra espécie
   const reassignSpeciesSelection = useCallback(
@@ -577,10 +666,7 @@ export default function App() {
   if (loading || !config) {
     return (
       <div className="loading-screen">
-        <div className="ls-inner">
-          <div className="ls-leaf">❧</div>
-          {error ? `Erro: ${error}` : "A preparar o herbário…"}
-        </div>
+        <div className="ls-inner">{error ? `Erro: ${error}` : "A carregar…"}</div>
       </div>
     );
   }
@@ -630,11 +716,6 @@ export default function App() {
               Espécies
             </button>
           </div>
-          <div className="dim mono work-hint" style={{ fontSize: 11 }}>
-            {mode === "clusters"
-              ? "A atribuir · R retirar · D limpar · ←/→ páginas · J/K grupo · 1–9 espécie"
-              : ""}
-          </div>
           <div className="spacer" />
           {mode === "clusters" && (
             <ClusterHistory
@@ -668,7 +749,6 @@ export default function App() {
             onOpenLightbox={setLightbox}
             onAssign={() => assignSpecies(activeSpecies)}
             onSelectPage={selectPage}
-            onSelectUnclassified={selectUnclassified}
             onToggleMany={toggleMany}
             onRetire={retireSelection}
             onClear={() => setSelection(new Set())}
@@ -678,7 +758,7 @@ export default function App() {
           />
         ) : (
           <SpeciesView
-            labels={labels}
+            labels={[...labels, LIXO]}
             groundTruth={groundTruth}
             colorOf={colorOf}
             speciesPage={speciesPage}
@@ -694,6 +774,7 @@ export default function App() {
             thumbOf={thumbOf}
             clusterOf={(f) => fileToCluster.get(f) ?? null}
             onGoToCluster={goToSourceCluster}
+            onOpenCluster={selectCluster}
             focus={speciesFocus}
             onFocusHandled={() => setSpeciesFocus(null)}
           />
@@ -709,12 +790,16 @@ export default function App() {
         onGoToSpecies={goToSpecies}
         onAdd={addLabel}
         onRename={renameLabel}
+        onReorder={reorderLabel}
         onSetColor={setSpeciesColor}
       />
 
       <Lightbox
         filename={lightbox}
         geo={lightbox ? geometry[lightbox] ?? null : null}
+        selected={
+          lightbox ? (mode === "clusters" ? selection.has(lightbox) : speciesSelection.has(lightbox)) : false
+        }
         label={lightbox ? groundTruth[lightbox] : undefined}
         color={lightbox && groundTruth[lightbox] ? colorOf(groundTruth[lightbox]) : undefined}
         clusterId={lightbox ? fileToCluster.get(lightbox) : undefined}

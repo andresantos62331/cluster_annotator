@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 import type { GroundTruth } from "../types";
+import { LIXO, LIXO_COLOR } from "../colors";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
-import { IconPencil } from "./icons";
+import { IconPencil, IconTrash } from "./icons";
 
 export function SpeciesPanel({
   labels,
@@ -13,6 +14,7 @@ export function SpeciesPanel({
   onGoToSpecies,
   onAdd,
   onRename,
+  onReorder,
   onSetColor,
 }: {
   labels: string[];
@@ -23,9 +25,13 @@ export function SpeciesPanel({
   onGoToSpecies: (l: string) => void;
   onAdd: (name: string) => void;
   onRename: (l: string) => void;
+  onReorder: (label: string, target: string) => void;
   onSetColor: (l: string, hex: string) => void;
 }) {
   const [name, setName] = useState("");
+  // arrastar-e-largar para reordenar (a ordem reflete-se nos atalhos 1-9 e na auditoria)
+  const [dragging, setDragging] = useState<string | null>(null);
+  const [dragOver, setDragOver] = useState<string | null>(null);
 
   // contagem por espécie (uma passagem)
   const counts = useMemo(() => {
@@ -71,12 +77,34 @@ export function SpeciesPanel({
           return (
             <div
               key={lbl}
-              className={`sp-row ${lbl === activeSpecies ? "active" : ""}`}
+              className={`sp-row ${lbl === activeSpecies ? "active" : ""} ${dragging === lbl ? "dragging" : ""} ${
+                dragOver === lbl && dragging && dragging !== lbl ? "drag-over" : ""
+              }`}
+              draggable
+              onDragStart={(e) => {
+                setDragging(lbl);
+                e.dataTransfer.effectAllowed = "move";
+              }}
+              onDragOver={(e) => {
+                e.preventDefault();
+                setDragOver(lbl);
+              }}
+              onDragLeave={() => setDragOver((o) => (o === lbl ? null : o))}
+              onDrop={(e) => {
+                e.preventDefault();
+                if (dragging && dragging !== lbl) onReorder(dragging, lbl);
+                setDragging(null);
+                setDragOver(null);
+              }}
+              onDragEnd={() => {
+                setDragging(null);
+                setDragOver(null);
+              }}
               onClick={() => onGoToSpecies(lbl)}
-              title="Ver e auditar esta espécie"
+              title="Ver e auditar esta espécie · arrastar reordena"
             >
               <span className="sp-key">{i < 9 ? i + 1 : "·"}</span>
-              <SpeciesThumb file={thumbOf(lbl)} color={col} size={30} />
+              <SpeciesThumb file={thumbOf(lbl)} size={30} />
               <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
               <span className="sp-name">{lbl}</span>
               <button
@@ -95,9 +123,20 @@ export function SpeciesPanel({
         })}
       </div>
 
-      <div className="sp-foot">
-        <kbd>1</kbd>–<kbd>9</kbd> escolhem a espécie · com selecção, atribuem logo · <kbd>A</kbd> atribui a ativa
+      {/* categoria reservada — fixa, sem renomear/cor/remover */}
+      <div
+        className={`sp-lixo ${activeSpecies === LIXO ? "active" : ""}`}
+        onClick={() => onGoToSpecies(LIXO)}
+        title="Crops inutilizáveis (desfocados, fragmentos, não-plantas). Tecla 0 atribui a selecção."
+      >
+        <span className="sp-key">0</span>
+        <span className="sp-lixo-icon" style={{ color: LIXO_COLOR }}>
+          <IconTrash size={15} />
+        </span>
+        <span className="sp-name" style={{ color: LIXO_COLOR }}>{LIXO}</span>
+        <span className="sp-count mono">{counts[LIXO] ?? 0}</span>
       </div>
+
     </aside>
   );
 }

@@ -3,17 +3,16 @@ import { useRef, useState } from "react";
 const baseUrl = import.meta.env.BASE_URL || "/";
 const PREVIEW = 168; // lado do popover (imagem + moldura)
 
-// Miniatura representativa de uma espécie (1ª imagem anotada), com moldura da cor da
-// espécie. Como a miniatura inline é pequena, ao passar o rato mostra um POPOVER com
+// Miniatura representativa de uma espécie (1ª imagem anotada), moldura NEUTRA —
+// a cor da espécie é dada pelo SpeciesColorDot ao lado, não pela miniatura.
+// Como a miniatura inline é pequena, ao passar o rato mostra um POPOVER com
 // a imagem em grande (posição fixa, escapa ao clipping de listas/dropdowns).
 // Se a espécie ainda não tem imagens anotadas, não mostra nada.
 export function SpeciesThumb({
   file,
-  color,
   size = 26,
 }: {
   file: string | null;
-  color?: string;
   size?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -47,7 +46,7 @@ export function SpeciesThumb({
     <span
       ref={ref}
       className="sp-thumb"
-      style={{ width: size, height: size, borderColor: color }}
+      style={{ width: size, height: size }}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
     >

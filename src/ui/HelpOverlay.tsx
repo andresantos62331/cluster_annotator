@@ -41,6 +41,7 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
               <div><dt><kbd>R</kbd></dt><dd>retirar a etiqueta às selecionadas</dd></div>
               <div><dt><kbd>D</kbd></dt><dd>limpar a seleção</dd></div>
               <div><dt><kbd>1</kbd>–<kbd>9</kbd></dt><dd>escolher/atribuir a espécie n.º N</dd></div>
+              <div><dt><kbd>0</kbd></dt><dd>marcar como Lixo (crop inutilizável)</dd></div>
               <div><dt><kbd>J</kbd> / <kbd>K</kbd></dt><dd>grupo seguinte / anterior</dd></div>
               <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>mudar de página</dd></div>
             </dl>
@@ -48,7 +49,9 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
           <div className="hs-group">
             <h3>Vista em detalhe</h3>
             <dl>
-              <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>alternar Original / Caixa / Recorte</dd></div>
+              <div><dt><kbd>↑</kbd> / <kbd>↓</kbd></dt><dd>alternar Original / Caixa / Recorte</dd></div>
+              <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>plântula anterior / seguinte</dd></div>
+              <div><dt><kbd>S</kbd></dt><dd>selecionar a plântula em vista</dd></div>
               <div><dt>roda do rato</dt><dd>zoom (arrastar move)</dd></div>
               <div><dt>⌖ / ⟲</dt><dd>centrar na plântula / foto inteira</dd></div>
               <div><dt><kbd>Esc</kbd></dt><dd>fechar</dd></div>
@@ -58,6 +61,8 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
             <h3>Geral</h3>
             <dl>
               <div><dt><kbd>Ctrl</kbd>+<kbd>Z</kbd></dt><dd>desfazer a última anotação</dd></div>
+              <div><dt><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></dt><dd>refazer</dd></div>
+              <div><dt><kbd>Esc</kbd></dt><dd>limpar a seleção</dd></div>
               <div><dt><kbd>?</kbd></dt><dd>abrir esta ajuda</dd></div>
             </dl>
           </div>

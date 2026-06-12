@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { ConfigData, GroundTruth } from "../types";
 
 // Pilha horizontal dos grupos visitados (mais recente à esquerda). Todos clicáveis
@@ -27,13 +28,20 @@ export function ClusterHistory({
           const annotated = files.filter((f) => groundTruth[f]).length;
           const done = files.length > 0 && annotated === files.length;
           const active = cid === currentClusterId;
+          // preenchimento do chip = progresso de anotação do grupo (via --p no CSS)
+          const pct = files.length ? (annotated / files.length) * 100 : 0;
           return (
             <button
               key={cid}
               type="button"
               className={`hist-chip ${isNoise ? "noise" : ""} ${done ? "done" : ""} ${active ? "active" : ""}`}
+              style={{ "--p": `${pct.toFixed(1)}%` } as CSSProperties}
               onClick={() => onSelect(cid)}
-              title={isNoise ? "ruído" : `c${cid} — ${annotated}/${files.length} anotadas`}
+              title={
+                isNoise
+                  ? `ruído — ${annotated}/${files.length} anotadas (${Math.round(pct)}%)`
+                  : `c${cid} — ${annotated}/${files.length} anotadas (${Math.round(pct)}%)`
+              }
             >
               {isNoise ? "✦" : `c${cid}`}
               {done && !active && <span className="hc-check">✓</span>}

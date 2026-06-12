@@ -19,6 +19,7 @@ export function Lightbox({
   geo,
   label,
   color,
+  selected = false,
   clusterId,
   onGoToCluster,
   onClose,
@@ -27,6 +28,7 @@ export function Lightbox({
   geo?: CropGeo | null;
   label?: string;
   color?: string;
+  selected?: boolean;
   clusterId?: number;
   onGoToCluster?: () => void;
   onClose: () => void;
@@ -83,14 +85,15 @@ export function Lightbox({
     fitPlant();
   }, [filename, geo, fitPlant]);
 
-  // setas alternam a vista (só com geometria); o Esc é gerido no App
+  // ↑/↓ alternam a vista (só com geometria); ←/→ mudam de plântula (no App);
+  // o Esc é gerido no App
   useEffect(() => {
     if (!filename || !geo) return;
     const h = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
+      if (e.key === "ArrowDown") {
         e.preventDefault();
         setView((v) => ((v + 1) % 3) as View);
-      } else if (e.key === "ArrowLeft") {
+      } else if (e.key === "ArrowUp") {
         e.preventDefault();
         setView((v) => ((v + 2) % 3) as View);
       }
@@ -271,6 +274,7 @@ export function Lightbox({
       </div>
 
       <div className="info" onClick={(e) => e.stopPropagation()}>
+        {selected && <span className="li-sel">✓ selecionada</span>}
         {label && (
           <span style={{ color, fontWeight: 700, marginRight: 8 }}>● {label}</span>
         )}
@@ -284,7 +288,9 @@ export function Lightbox({
           </button>
         )}
         <span className="li-hint">
-          {geo ? "←/→ vistas · scroll = zoom · arrastar = mover · ⌖ = plântula" : "scroll = zoom · arrastar = mover · ⟲ = ajustar"}
+          {geo
+            ? "↑/↓ vistas · ←/→ plântula · S seleciona · scroll = zoom · ⌖ = plântula"
+            : "←/→ plântula · S seleciona · scroll = zoom · ⟲ = ajustar"}
         </span>
       </div>
     </div>

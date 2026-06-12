@@ -10,6 +10,13 @@ export const PALETTE: string[] = [
   "#90ee90", "#f0e68c", "#ff8c00", "#40e0d0", "#ee82ee", "#98fb98",
 ];
 
+// Categoria reservada para crops inutilizáveis (desfocados, fragmentos,
+// não-plantas) — fixa no fundo do painel Espécies, atalho 0. NÃO é uma espécie:
+// não entra em `labels`, não se renomeia nem muda de cor, mas ENTRA no
+// ground truth/export como etiqueta normal (transparência downstream).
+export const LIXO = "Lixo";
+export const LIXO_COLOR = "#8a8170"; // cinza quente, distinto da PALETTE
+
 // Cor de texto (preto/branco) com bom contraste sobre uma cor de fundo hex.
 export function textOn(hex: string): string {
   const r = parseInt(hex.slice(1, 3), 16);

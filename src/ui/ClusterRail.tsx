@@ -1,11 +1,50 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import type { ConfigData, GroundTruth } from "../types";
 import { GenBadge } from "./bits";
 import { IconSearch } from "./icons";
 
 const baseUrl = import.meta.env.BASE_URL || "/";
+const PREVIEW = 168; // lado do popover de pré-visualização (como no SpeciesThumb)
 
 type Mode = "todos" | "fazer" | "feitos";
+
+// Miniatura do grupo (representante mais perto do centroide) com pré-visualização
+// grande no hover — mesmo comportamento das miniaturas de espécie (popover com
+// posição fixa, à direita do rail, ~130ms de atraso).
+function RailThumb({ file }: { file: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const timer = useRef<number | undefined>(undefined);
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+
+  const show = () => {
+    const el = ref.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const gap = 10;
+    let left = r.right + gap;
+    if (left + PREVIEW > window.innerWidth - 8) left = r.left - PREVIEW - gap;
+    left = Math.max(8, left);
+    let top = r.top + r.height / 2 - PREVIEW / 2;
+    top = Math.max(8, Math.min(top, window.innerHeight - PREVIEW - 8));
+    setPos({ top, left });
+  };
+
+  return (
+    <span
+      ref={ref}
+      className="clu-thumb-wrap"
+      onMouseEnter={() => { timer.current = window.setTimeout(show, 130); }}
+      onMouseLeave={() => { window.clearTimeout(timer.current); setPos(null); }}
+    >
+      <img className="clu-thumb" loading="lazy" src={`${baseUrl}crops/${file}`} alt="" draggable={false} />
+      {pos && (
+        <span className="sp-preview" style={{ top: pos.top, left: pos.left }}>
+          <img src={`${baseUrl}crops/${file}`} alt="" draggable={false} />
+        </span>
+      )}
+    </span>
+  );
+}
 
 export function ClusterRail({
   config,
@@ -94,13 +133,7 @@ export function ClusterRail({
                 {isNoise ? (
                   <div className="clu-thumb">✦</div>
                 ) : (
-                  <img
-                    className="clu-thumb"
-                    loading="lazy"
-                    src={`${baseUrl}crops/${config.reps.get(it.cid) ?? it.files[0]}`}
-                    alt=""
-                    draggable={false}
-                  />
+                  <RailThumb file={config.reps.get(it.cid) ?? it.files[0]} />
                 )}
                 <div className="clu-body">
                   <div className="clu-line1">
@@ -112,7 +145,13 @@ export function ClusterRail({
                     </span>
                   </div>
                   <div className="clu-bar">
-                    <div style={{ width: `${pct}%` }} />
+                    {/* cor acompanha o progresso: branco a 0% -> verde a 100% */}
+                    <div
+                      style={{
+                        width: `${pct}%`,
+                        background: `color-mix(in srgb, var(--leaf) ${Math.round(pct)}%, #fff)`,
+                      }}
+                    />
                   </div>
                 </div>
               </div>
