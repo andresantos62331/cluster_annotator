@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-06-12T15:25:42.472Z",
+  "exported_at": "2026-06-12T15:26:09.444Z",
   "labels": [
     "especie1",
     "teste",
@@ -68,6 +68,9 @@
     "IMG_20220501_163514_planta_0.jpg": "papoila",
     "IMG_20220501_163539_planta_0.jpg": "papoila",
     "IMG_20220501_163539_planta_1.jpg": "papoila",
-    "IMG_20220501_163728_planta_0.jpg": "papoila"
+    "IMG_20220501_163728_planta_0.jpg": "papoila",
+    "20251110_151432_planta_2.jpg": "especie1",
+    "20251110_151432_planta_1.jpg": "especie1",
+    "20251109_162246_planta_12.jpg": "especie1"
   }
 }
