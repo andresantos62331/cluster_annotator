@@ -24,6 +24,26 @@ export default {
       if (request.method !== "POST") return json({ error: "method not allowed" }, 405);
       return handleSave(request, env);
     }
+    // DEBUG TEMPORARIO (2026-06-12): diagnostico do canal ntfy sem expor o
+    // topico. ?ntfy=1 dispara uma notificacao de teste. REMOVER depois.
+    if (url.pathname === "/api/ping") {
+      const out: Record<string, unknown> = { ok: true, hasTopic: !!env.NTFY_TOPIC };
+      if (url.searchParams.get("ntfy") === "1" && env.NTFY_TOPIC) {
+        try {
+          const r = await fetch(`https://ntfy.sh/${env.NTFY_TOPIC}`, {
+            method: "POST",
+            headers: { Title: "Herbario - teste do worker", Tags: "wrench" },
+            body: "Teste enviado pelo proprio Worker (diagnostico).",
+          });
+          out.sent = r.ok;
+          out.status = r.status;
+        } catch (e) {
+          out.sent = false;
+          out.err = String(e);
+        }
+      }
+      return json(out);
+    }
     // tudo o resto: assets estaticos (com fallback SPA via not_found_handling)
     return env.ASSETS.fetch(request);
   },
