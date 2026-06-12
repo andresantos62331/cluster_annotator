@@ -1223,7 +1223,31 @@ body {
   background: rgba(20, 16, 10, 0.7); padding: 8px 13px; border-radius: var(--r-md);
   border: 1px solid var(--line); max-width: 60%;
 }
-.lightbox .info .li-hint { font-family: var(--font-ui); color: var(--faint); font-size: 11px; margin-left: 10px; }
+/* "?" do viewport: popover com os atalhos (substitui o texto fixo na barra) */
+.lightbox .info .li-helpwrap { position: relative; display: inline-block; margin-left: 10px; }
+.lightbox .info .li-help {
+  width: 22px; height: 22px; border-radius: 50%;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  background: var(--panel-hi); border: 1px solid var(--line); color: var(--muted);
+  cursor: pointer; vertical-align: middle;
+}
+.lightbox .info .li-help:hover { color: var(--ink); border-color: var(--accent-line); }
+.lightbox .info .li-help-pop {
+  position: absolute; bottom: calc(100% + 12px); left: -8px; z-index: 20;
+  width: 252px; padding: 10px 12px;
+  background: var(--panel-2); border: 1px solid var(--line);
+  border-radius: var(--r-md); box-shadow: var(--shadow-pop);
+  display: grid; gap: 6px; animation: pop 0.14s var(--ease);
+}
+.lightbox .info .li-help-pop > div {
+  display: flex; align-items: baseline; gap: 8px;
+  font-family: var(--font-ui); font-size: 12px; color: var(--ink-dim);
+}
+.lightbox .info .li-help-pop kbd {
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--ink);
+  background: var(--panel-hi); border: 1px solid var(--line);
+  border-bottom-width: 2px; border-radius: 5px; padding: 0 5px;
+}
 .lightbox .info .li-sel {
   font-family: var(--font-ui); font-size: 11px; font-weight: 700;
   color: var(--accent-2); background: var(--accent-soft); border: 1px solid var(--accent-line);
@@ -1249,6 +1273,28 @@ body {
   animation: lb-pulse 1.1s ease-in-out infinite alternate;
 }
 @keyframes lb-pulse { from { opacity: 0.45; } to { opacity: 1; } }
+
+/* nuvem temporária a localizar a plântula (abre / tecla F / ⌖); vive no espaço
+   do canvas, escala com o zoom, e desaparece sozinha no fim da animação */
+.lb-flash {
+  position: absolute; pointer-events: none; border-radius: 50%;
+  transform: translate(-50%, -50%);
+  /* sem blend mode: sobre fotos claras o "screen" lavava a cor toda */
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 122, 70, 0.85),
+    rgba(255, 106, 61, 0.45) 52%,
+    transparent 74%
+  );
+  animation: lb-locate 1.7s ease-out forwards;
+}
+@keyframes lb-locate {
+  0% { opacity: 0; scale: 0.55; }
+  16% { opacity: 1; scale: 1.04; }
+  38% { opacity: 0.55; scale: 0.92; }
+  60% { opacity: 0.95; scale: 1; }
+  100% { opacity: 0; scale: 1.12; }
+}
 
 /* foco acessível */
 :focus-visible { outline: 2px solid var(--accent-line); outline-offset: 2px; }

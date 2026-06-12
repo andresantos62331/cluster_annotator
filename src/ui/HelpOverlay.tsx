@@ -52,6 +52,9 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
               <div><dt><kbd>↑</kbd> / <kbd>↓</kbd></dt><dd>alternar Original / Caixa / Recorte</dd></div>
               <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>plântula anterior / seguinte</dd></div>
               <div><dt><kbd>S</kbd></dt><dd>selecionar a plântula em vista</dd></div>
+              <div><dt><kbd>F</kbd></dt><dd>localizar a plântula (nuvem de realce)</dd></div>
+              <div><dt><kbd>Shift</kbd>+<kbd>F</kbd></dt><dd>centrar na plântula + localizar</dd></div>
+              <div><dt><kbd>C</kbd></dt><dd>ajustar a foto inteira</dd></div>
               <div><dt>roda do rato</dt><dd>zoom (arrastar move)</dd></div>
               <div><dt>⌖ / ⟲</dt><dd>centrar na plântula / foto inteira</dd></div>
               <div><dt><kbd>Esc</kbd></dt><dd>fechar</dd></div>

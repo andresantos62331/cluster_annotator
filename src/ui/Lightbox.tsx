@@ -36,54 +36,85 @@ export function Lightbox({
   const [view, setView] = useState<View>(0);
   const [dims, setDims] = useState<{ w: number; h: number } | null>(null); // fallback sem geo
   const [origLoaded, setOrigLoaded] = useState(false);
+  // contador que (re)dispara a animação de localizar a plântula (key remonta o elemento)
+  const [flash, setFlash] = useState(0);
+  // popover "?" com os atalhos do viewport (em vez de texto fixo na barra)
+  const [helpOpen, setHelpOpen] = useState(false);
   // limite de zoom-out: a foto inteira enquadrada (calculado por imagem ao abrir)
   const [minScale, setMinScale] = useState(0.1);
   const transformRef = useRef<ReactZoomPanPinchRef>(null);
   const wrapElRef = useRef<HTMLDivElement>(null);
 
+  // o canvas só aparece depois do transform inicial estar assente — evita o
+  // flash de milissegundos com a foto a scale 1 (um close-up irreconhecível)
+  const [ready, setReady] = useState(false);
+
   useEffect(() => {
     setDims(null);
     setView(0);
     setOrigLoaded(false);
+    setHelpOpen(false);
+    setReady(false);
   }, [filename]);
 
-  const setTransformTo = useCallback((cx: number, cy: number, scale: number) => {
+  // ms > 0 anima a viagem (easeOut), como o zoom in/out — nada de teletransporte
+  const setTransformTo = useCallback((cx: number, cy: number, scale: number, ms = 0) => {
     const wrap = wrapElRef.current;
     const inst = transformRef.current;
     if (!wrap || !inst) return;
     const W = wrap.clientWidth;
     const H = wrap.clientHeight;
     if (!W || !H) return;
-    inst.setTransform(W / 2 - scale * cx, H / 2 - scale * cy, scale, 0);
+    inst.setTransform(W / 2 - scale * cx, H / 2 - scale * cy, scale, ms, "easeOut");
   }, []);
 
   // enquadra a imagem inteira no viewport (e fixa esse scale como o mínimo)
   const fitAll = useCallback(
-    (natW: number, natH: number) => {
+    (natW: number, natH: number, ms = 0) => {
       const wrap = wrapElRef.current;
       if (!wrap || !natW || !natH) return;
       const fit = Math.min(wrap.clientWidth / natW, wrap.clientHeight / natH, 1);
       setMinScale(fit);
-      setTransformTo(natW / 2, natH / 2, fit);
+      setTransformTo(natW / 2, natH / 2, fit, ms);
     },
     [setTransformTo],
   );
 
   // centra na plântula: o rect do crop ocupa ~55% do viewport (sem ampliar >2.5×)
-  const fitPlant = useCallback(() => {
-    const wrap = wrapElRef.current;
-    if (!wrap || !geo) return;
-    const s = Math.min((0.55 * wrap.clientWidth) / geo.w, (0.55 * wrap.clientHeight) / geo.h, 2.5);
-    setTransformTo(geo.x + geo.w / 2, geo.y + geo.h / 2, s);
-  }, [geo, setTransformTo]);
+  const fitPlant = useCallback(
+    (ms = 0) => {
+      const wrap = wrapElRef.current;
+      if (!wrap || !geo) return;
+      const s = Math.min((0.55 * wrap.clientWidth) / geo.w, (0.55 * wrap.clientHeight) / geo.h, 2.5);
+      setTransformTo(geo.x + geo.w / 2, geo.y + geo.h / 2, s, ms);
+    },
+    [geo, setTransformTo],
+  );
 
-  // ao abrir com geometria conhecida, centra logo na plântula (não espera o load)
+  // ⌖ / Shift+F: viagem animada até à plântula + nuvem de realce à chegada
+  const focusPlant = useCallback(() => {
+    fitPlant(420);
+    window.setTimeout(() => setFlash((k) => k + 1), 320);
+  }, [fitPlant]);
+
+  // ao abrir (ou navegar ←/→): a foto aparece LOGO inteira (zoomed out, sem
+  // animação — o transform inicial é calculado abaixo no render) e de seguida
+  // faz o "Shift+F": viagem animada até à plântula + nuvem. O fitAll aos 60ms
+  // é cinto-e-suspensórios para o 1º open (wrap ainda não medido no render).
   useEffect(() => {
     if (!filename || !geo) return;
     const wrap = wrapElRef.current;
     if (wrap) setMinScale(Math.min(wrap.clientWidth / geo.iw, wrap.clientHeight / geo.ih, 1));
-    fitPlant();
-  }, [filename, geo, fitPlant]);
+    const t0 = window.setTimeout(() => {
+      fitAll(geo.iw, geo.ih);
+      setReady(true); // transform assente -> revelar o canvas
+    }, 60);
+    const t1 = window.setTimeout(() => focusPlant(), 520); // "Shift+F"
+    return () => {
+      window.clearTimeout(t0);
+      window.clearTimeout(t1);
+    };
+  }, [filename, geo, fitAll, focusPlant]);
 
   // ↑/↓ alternam a vista (só com geometria); ←/→ mudam de plântula (no App);
   // o Esc é gerido no App
@@ -96,24 +127,36 @@ export function Lightbox({
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
         setView((v) => ((v + 2) % 3) as View);
+      } else if (e.key === "f" || e.key === "F") {
+        // F = só o "ping" onde a plântula está; Shift+F = viagem animada + ping
+        if (e.shiftKey) focusPlant();
+        else setFlash((k) => k + 1);
+      } else if (e.key === "c" || e.key === "C") {
+        // ajustar a foto inteira (= botão ⟲), com animação
+        fitAll(geo.iw, geo.ih, 420);
       }
     };
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
-  }, [filename, geo]);
+  }, [filename, geo, focusPlant, fitAll]);
 
   if (!filename) return <div className="lightbox" />;
 
   const canvasW = geo ? geo.iw : (dims?.w ?? 0);
   const canvasH = geo ? geo.ih : (dims?.h ?? 0);
-  const mark = geo
-    ? {
-        cx: geo.x + geo.w / 2,
-        cy: geo.y + geo.h / 2,
-        r: Math.min(geo.w, geo.h) * 0.4,
-        sw: Math.max(2, Math.round(Math.min(geo.w, geo.h) * 0.009)),
-      }
-    : null;
+  const bboxStroke = geo ? Math.max(3, Math.round(Math.min(geo.w, geo.h) * 0.012)) : 3;
+
+  // transform INICIAL = foto inteira enquadrada, calculado já no render (a
+  // TransformWrapper é remontada por filename) — sem frame a scale 1
+  const wrapEl = wrapElRef.current;
+  let initScale = 1;
+  let initX = 0;
+  let initY = 0;
+  if (geo && wrapEl && wrapEl.clientWidth) {
+    initScale = Math.min(wrapEl.clientWidth / geo.iw, wrapEl.clientHeight / geo.ih, 1);
+    initX = (wrapEl.clientWidth - geo.iw * initScale) / 2;
+    initY = (wrapEl.clientHeight - geo.ih * initScale) / 2;
+  }
 
   return (
     <div className="lightbox open" onClick={onClose}>
@@ -135,9 +178,11 @@ export function Lightbox({
         <TransformWrapper
           key={filename}
           ref={transformRef}
-          minScale={minScale}
+          minScale={Math.min(minScale, initScale)} // nunca clampar o enquadramento inicial
           maxScale={20}
-          initialScale={1}
+          initialScale={initScale}
+          initialPositionX={initX}
+          initialPositionY={initY}
           wheel={{ step: 0.05 }}
           doubleClick={{ disabled: true }}
           panning={{ velocityDisabled: true }}
@@ -148,15 +193,26 @@ export function Lightbox({
               <div className="zoom-controls" onClick={(e) => e.stopPropagation()}>
                 <button onClick={() => zoomOut()} title="Afastar">−</button>
                 {geo && (
-                  <button onClick={fitPlant} title="Centrar na plântula">⌖</button>
+                  <button onClick={focusPlant} title="Centrar e localizar a plântula (Shift+F)">
+                    ⌖
+                  </button>
                 )}
-                <button onClick={() => canvasW && fitAll(canvasW, canvasH)} title="Ajustar a imagem inteira">⟲</button>
+                <button onClick={() => canvasW && fitAll(canvasW, canvasH, 420)} title="Ajustar a imagem inteira (C)">⟲</button>
                 <button onClick={() => zoomIn()} title="Aproximar">+</button>
               </div>
 
               <TransformComponent wrapperStyle={{ width: "100%", height: "100%" }}>
                 {geo ? (
-                  <div className="lb-canvas" style={{ width: geo.iw, height: geo.ih, position: "relative" }}>
+                  <div
+                    className="lb-canvas"
+                    style={{
+                      width: geo.iw,
+                      height: geo.ih,
+                      position: "relative",
+                      opacity: ready ? 1 : 0,
+                      transition: "opacity 0.18s ease-out",
+                    }}
+                  >
                     <img
                       src={`${baseUrl}originals/${geo.src}`}
                       alt={geo.src}
@@ -170,36 +226,21 @@ export function Lightbox({
                         visibility: view === 2 ? "hidden" : "visible",
                       }}
                     />
-                    {view === 0 && mark && (
-                      <svg
-                        width={geo.iw}
-                        height={geo.ih}
-                        viewBox={`0 0 ${geo.iw} ${geo.ih}`}
-                        style={{ position: "absolute", inset: 0, pointerEvents: "none" }}
-                      >
-                        {/* marcador do centro: círculo fino tracejado + ponto, com
-                            halo escuro subtil para contrastar em qualquer fundo */}
-                        <g fill="none" strokeLinecap="round">
-                          <circle
-                            cx={mark.cx}
-                            cy={mark.cy}
-                            r={mark.r}
-                            stroke="rgba(8,6,3,0.45)"
-                            strokeWidth={mark.sw * 2}
-                          />
-                          <circle
-                            cx={mark.cx}
-                            cy={mark.cy}
-                            r={mark.r}
-                            stroke="#ff6a3d"
-                            strokeWidth={mark.sw}
-                            strokeDasharray={`${mark.r * 0.22} ${mark.r * 0.14}`}
-                            opacity={0.95}
-                          />
-                          <circle cx={mark.cx} cy={mark.cy} r={mark.sw * 1.6} fill="rgba(8,6,3,0.45)" stroke="none" />
-                          <circle cx={mark.cx} cy={mark.cy} r={mark.sw * 1.1} fill="#ff6a3d" stroke="none" />
-                        </g>
-                      </svg>
+                    {/* "nuvem" temporária a realçar a zona da plântula — toca ao
+                        abrir e com F/⌖; vive no espaço do canvas, por isso aparece
+                        no sítio certo em qualquer zoom e desaparece sozinha */}
+                    {flash > 0 && (
+                      <div
+                        key={flash}
+                        className="lb-flash"
+                        onAnimationEnd={() => setFlash(0)}
+                        style={{
+                          left: geo.x + geo.w / 2,
+                          top: geo.y + geo.h / 2,
+                          width: geo.w * 1.6,
+                          height: geo.h * 1.6,
+                        }}
+                      />
                     )}
                     {view === 1 && (
                       <svg
@@ -221,7 +262,7 @@ export function Lightbox({
                           height={geo.h}
                           fill="none"
                           stroke="#ff6a3d"
-                          strokeWidth={mark ? mark.sw * 0.7 : 3}
+                          strokeWidth={bboxStroke}
                         />
                       </svg>
                     )}
@@ -287,10 +328,36 @@ export function Lightbox({
             Ir para cluster de origem (c{clusterId})
           </button>
         )}
-        <span className="li-hint">
-          {geo
-            ? "↑/↓ vistas · ←/→ plântula · S seleciona · scroll = zoom · ⌖ = plântula"
-            : "←/→ plântula · S seleciona · scroll = zoom · ⟲ = ajustar"}
+        <span className="li-helpwrap">
+          <button
+            className="li-help"
+            onClick={() => setHelpOpen((v) => !v)}
+            title="Atalhos do viewport"
+          >
+            ?
+          </button>
+          {helpOpen && (
+            <div className="li-help-pop">
+              {geo && (
+                <div><kbd>↑</kbd>/<kbd>↓</kbd><span>Original / Caixa / Recorte</span></div>
+              )}
+              <div><kbd>←</kbd>/<kbd>→</kbd><span>plântula anterior / seguinte</span></div>
+              <div><kbd>S</kbd><span>selecionar esta plântula</span></div>
+              {geo && (
+                <div><kbd>F</kbd><span>localizar (nuvem de realce)</span></div>
+              )}
+              {geo && (
+                <div><kbd>⇧F</kbd><span>centrar na plântula + localizar</span></div>
+              )}
+              <div><kbd>scroll</kbd><span>zoom · arrastar move</span></div>
+              {geo ? (
+                <div><kbd>C</kbd><span>ajustar a foto inteira (= ⟲)</span></div>
+              ) : (
+                <div><kbd>⟲</kbd><span>ajustar ao ecrã</span></div>
+              )}
+              <div><kbd>Esc</kbd><span>fechar</span></div>
+            </div>
+          )}
         </span>
       </div>
     </div>
