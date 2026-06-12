@@ -70,7 +70,9 @@ async function notifySave(count: number, env: Env): Promise<void> {
     await fetch(`https://ntfy.sh/${env.NTFY_TOPIC}`, {
       method: "POST",
       headers: {
-        Title: "Herbario — progresso guardado",
+        // ATENCAO: headers HTTP so aceitam ASCII — um travessao aqui faz o
+        // fetch lancar e a notificacao morrer em silencio (bug 2026-06-12)
+        Title: "Herbario - progresso guardado",
         Tags: "seedling",
         Priority: "default",
       },
