@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { ClusterMetrics, GroundTruth } from "../types";
-import { LIXO } from "../colors";
+import { LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
@@ -61,6 +61,8 @@ export function Workspace({
   onFocusHandled: () => void;
 }) {
   const [ddOpen, setDdOpen] = useState(false);
+  // fichas de espécie colapsadas (concordante com a tab Espécies)
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
   const ddRef = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
 
@@ -301,41 +303,75 @@ export function Workspace({
         </>
       )}
 
-      {/* Anotadas por espécie */}
+      {/* Anotadas por espécie — ficha "de herbário" sticky, concordante com a tab
+          Espécies (faixa de cor, colapsar ao clicar). Sem histograma: dentro de um
+          só cluster os "clusters de origem" não fazem sentido. */}
+      {showAnnotated && groups.length > 0 && (
+        <div className="section-head">
+          <span className="sh-bar" />
+          <span className="sh-title">Espécies presentes</span>
+          <span className="sh-count mono">{groups.length}</span>
+        </div>
+      )}
       {showAnnotated &&
         groups.map(([sp, files]) => {
           const groupAllSel = files.length > 0 && files.every((f) => selection.has(f));
+          const isCollapsed = collapsed.has(sp);
+          const col = colorOf(sp);
+          const toggleFold = () =>
+            setCollapsed((prev) => {
+              const next = new Set(prev);
+              if (next.has(sp)) next.delete(sp);
+              else next.add(sp);
+              return next;
+            });
           return (
-          <div className="species-group" key={sp}>
-            <div className="section-head">
-              <span className="sw" style={{ background: colorOf(sp) }} />
-              <span className="sh-title" style={{ color: colorOf(sp) }}>
-                {sp}
+          <div className="species-view-block species-group" key={sp}>
+            <div
+              className="svb-head svb-head-click"
+              style={{ background: `linear-gradient(90deg, ${tint(col, 0.13)}, rgba(0,0,0,0) 75%), var(--bg)` }}
+              onClick={toggleFold}
+              title={isCollapsed ? "Expandir" : "Colapsar"}
+            >
+              <span className="svb-fold" aria-hidden>
+                {isCollapsed ? "▸" : "▾"}
               </span>
               <button
-                className={`group-sel ${groupAllSel ? "on" : ""}`}
-                onClick={() => onToggleMany(files)}
-                title="Selecionar estas para reatribuir ou retirar etiqueta"
+                className={`svb-check ${groupAllSel ? "on" : ""}`}
+                title={groupAllSel ? "Desselecionar estas" : "Selecionar estas para reatribuir ou retirar etiqueta"}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onToggleMany(files);
+                }}
               >
-                <span className="seltool-box">{groupAllSel ? "✓" : ""}</span>
-                selecionar
+                <svg viewBox="0 0 24 24" width="13" height="13">
+                  <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </button>
-              <span className="sh-count mono">{files.length}</span>
+              <span className="sw" style={{ background: col }} />
+              <h3>
+                <span className="svb-name" style={{ color: col }}>{sp}</span>
+                <span className="svb-pop">
+                  {files.length} {files.length === 1 ? "imagem" : "imagens"}
+                </span>
+              </h3>
             </div>
-            <div className="grid">
-              {files.map((f, i) => (
-                <Card
-                  key={f}
-                  filename={f}
-                  index={i}
-                  selected={selection.has(f)}
-                  label={sp}
-                  color={colorOf(sp)}
-                  onToggle={() => onToggleSelect(f)}
-                  onOpen={() => onOpenLightbox(f)}
-                />
-              ))}
-            </div>
+            {!isCollapsed && (
+              <div className="grid">
+                {files.map((f, i) => (
+                  <Card
+                    key={f}
+                    filename={f}
+                    index={i}
+                    selected={selection.has(f)}
+                    label={sp}
+                    color={col}
+                    onToggle={() => onToggleSelect(f)}
+                    onOpen={() => onOpenLightbox(f)}
+                  />
+                ))}
+              </div>
+            )}
           </div>
           );
         })}

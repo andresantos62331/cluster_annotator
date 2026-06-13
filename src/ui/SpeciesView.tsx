@@ -33,6 +33,7 @@ export function SpeciesView({
   onRename,
   onRemove,
   onSetColor,
+  eppoOf,
   thumbOf,
   clusterOf,
   onGoToCluster,
@@ -53,6 +54,7 @@ export function SpeciesView({
   onRename: (l: string) => void;
   onRemove: (l: string) => void;
   onSetColor: (l: string, hex: string) => void;
+  eppoOf: (l: string) => string;
   thumbOf: (l: string) => string | null;
   clusterOf: (f: string) => number | null;
   onGoToCluster: (f: string) => void;
@@ -257,6 +259,11 @@ export function SpeciesView({
               )}
               <h3>
                 <span className="svb-name" style={{ color: col }}>{lbl}</span>
+                {!isLixo && eppoOf(lbl) && (
+                  <span className="eppo-chip has mono" title={`Código EPPO: ${eppoOf(lbl)}`}>
+                    {eppoOf(lbl)}
+                  </span>
+                )}
                 {files.length > 0 && (
                   <span className="svb-pop" title="população desta espécie (clusters da config atual)">
                     {files.length} {files.length === 1 ? "imagem presente" : "imagens presentes"} em{" "}
@@ -326,8 +333,10 @@ export function SpeciesView({
                       filename={f}
                       index={i}
                       selected={selection.has(f)}
-                      // sem moldura da cor da espécie: o bloco já a identifica
-                      dimmed={histHover?.lbl === lbl && clusterOf(f) !== histHover.cid}
+                      // sem moldura da cor da espécie: o bloco já a identifica.
+                      // hover numa barra do histograma LEVANTA as imagens desse cluster
+                      raised={histHover?.lbl === lbl && clusterOf(f) === histHover.cid}
+                      raiseColor={col}
                       sourceClusterId={clusterOf(f) ?? undefined}
                       onGoToCluster={() => onGoToCluster(f)}
                       onToggle={() =>

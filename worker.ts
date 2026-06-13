@@ -24,6 +24,10 @@ export default {
       if (request.method !== "POST") return json({ error: "method not allowed" }, 405);
       return handleSave(request, env);
     }
+    if (url.pathname === "/api/load") {
+      if (request.method !== "GET") return json({ error: "method not allowed" }, 405);
+      return handleLoad(url, env);
+    }
     // tudo o resto: assets estaticos (com fallback SPA via not_found_handling)
     return env.ASSETS.fetch(request);
   },
@@ -56,6 +60,31 @@ async function handleSave(request: Request, env: Env): Promise<Response> {
     await putFile("ground_truth.csv", body.csv, message, env);
     await notifySave(body.count ?? 0, env); // nunca falha o save
     return json({ ok: true, count: body.count ?? 0, commit });
+  } catch (e) {
+    return json({ error: String(e) }, 502);
+  }
+}
+
+// GET /api/load?k=KEY -> devolve o ground_truth.json atual da branch de dados,
+// para a app puxar o estado noutro dispositivo. Autenticado pela mesma SAVE_KEY.
+// { ok:true, json:<string|null> } (null = ainda nao existe na cloud).
+async function handleLoad(url: URL, env: Env): Promise<Response> {
+  const key = url.searchParams.get("k");
+  if (!env.SAVE_KEY || key !== env.SAVE_KEY) {
+    return json({ error: "unauthorized" }, 401);
+  }
+  const headers: Record<string, string> = {
+    Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+    Accept: "application/vnd.github+json",
+    "User-Agent": "cluster-annotator-worker",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+  try {
+    const res = await fetch(`${GH}/repos/${REPO}/contents/ground_truth.json?ref=${BRANCH}`, { headers });
+    if (res.status === 404) return json({ ok: true, json: null });
+    if (!res.ok) throw new Error(`GET: ${res.status} ${await res.text()}`);
+    const j = (await res.json()) as { content?: string };
+    return json({ ok: true, json: j.content ? decodeB64(j.content) : null });
   } catch (e) {
     return json({ error: String(e) }, 502);
   }
@@ -128,6 +157,14 @@ function b64(str: string): string {
   let bin = "";
   for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
   return btoa(bin);
+}
+
+// inverso de b64: a Contents API devolve base64 com quebras de linha
+function decodeB64(b64str: string): string {
+  const bin = atob(b64str.replace(/\n/g, ""));
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
 }
 
 function json(obj: unknown, status = 200): Response {

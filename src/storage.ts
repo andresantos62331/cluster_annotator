@@ -7,6 +7,9 @@ const GT_KEY = "tese3.ground_truth";
 const LABELS_KEY = "tese3.labels";
 const CLOUD_KEY = "tese3.cloud_key";
 const COLORS_KEY = "tese3.species_colors";
+// mapa espécie -> código EPPO. Auxiliar local (como as cores), MAS — ao contrário
+// das cores — ENTRA no export/cloud, porque é o output padronizado do trabalho.
+const EPPO_KEY = "tese3.species_eppo";
 // extra (não-contrato): timestamp do último envio para a cloud, para o indicador
 // de estado "local vs. cloud". Só informativo; ausência é tratada com segurança.
 const CLOUD_AT_KEY = "tese3.cloud_saved_at";
@@ -31,6 +34,20 @@ export function loadColorMap(): Record<string, string> {
 
 export function saveColorMap(m: Record<string, string>): void {
   localStorage.setItem(COLORS_KEY, JSON.stringify(m));
+}
+
+// mapa espécie -> código EPPO (ex.: { "Chenopodium album": "CHEAL" })
+export function loadEppoMap(): Record<string, string> {
+  try {
+    const raw = localStorage.getItem(EPPO_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+export function saveEppoMap(m: Record<string, string>): void {
+  localStorage.setItem(EPPO_KEY, JSON.stringify(m));
 }
 
 export function loadGT(): GroundTruth {
@@ -78,26 +95,40 @@ export function setCloudSavedAt(ts: number): void {
 }
 
 // --- serializadores (CONTRATO de export — o investigador consome isto) ---
-export function buildJSON(gt: GroundTruth, labels: string[]): string {
+// `eppo`: mapa espécie -> código EPPO. JSON ganha o mapa; CSV ganha a coluna
+// eppo_code (código da etiqueta de cada linha). Retrocompatível na importação.
+export function buildJSON(
+  gt: GroundTruth,
+  labels: string[],
+  eppo: Record<string, string> = {},
+): string {
   return JSON.stringify(
-    { exported_at: new Date().toISOString(), labels, ground_truth: gt },
+    { exported_at: new Date().toISOString(), labels, eppo, ground_truth: gt },
     null,
     2,
   );
 }
 
-export function buildCSV(gt: GroundTruth, allFilenames: string[]): string {
-  const header = "filename,label";
-  const rows = allFilenames.map((f) => `${f},${gt[f] ?? ""}`);
+export function buildCSV(
+  gt: GroundTruth,
+  allFilenames: string[],
+  eppo: Record<string, string> = {},
+): string {
+  const header = "filename,label,eppo_code";
+  const rows = allFilenames.map((f) => {
+    const lbl = gt[f] ?? "";
+    const code = lbl ? eppo[lbl] ?? "" : "";
+    return `${f},${lbl},${code}`;
+  });
   return [header, ...rows].join("\n");
 }
 
-export function exportJSON(gt: GroundTruth, labels: string[]): void {
-  download(buildJSON(gt, labels), "ground_truth.json", "application/json");
+export function exportJSON(gt: GroundTruth, labels: string[], eppo: Record<string, string> = {}): void {
+  download(buildJSON(gt, labels, eppo), "ground_truth.json", "application/json");
 }
 
-export function exportCSV(gt: GroundTruth, allFilenames: string[]): void {
-  download(buildCSV(gt, allFilenames), "ground_truth.csv", "text/csv");
+export function exportCSV(gt: GroundTruth, allFilenames: string[], eppo: Record<string, string> = {}): void {
+  download(buildCSV(gt, allFilenames, eppo), "ground_truth.csv", "text/csv");
 }
 
 // --- guardar na cloud: POST ao Worker -> commit no GitHub (branch data) ---
@@ -112,6 +143,7 @@ export async function saveToCloud(
   gt: GroundTruth,
   labels: string[],
   allFilenames: string[],
+  eppo: Record<string, string> = {},
 ): Promise<CloudResult> {
   const count = Object.keys(gt).length;
   const key = getCloudKey();
@@ -128,8 +160,8 @@ export async function saveToCloud(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         key,
-        json: buildJSON(gt, labels),
-        csv: buildCSV(gt, allFilenames),
+        json: buildJSON(gt, labels, eppo),
+        csv: buildCSV(gt, allFilenames, eppo),
         count,
       }),
     });
@@ -140,6 +172,26 @@ export async function saveToCloud(
     return { ok: true, count, commit: data.commit };
   } catch (e) {
     return { ok: false, count, error: String(e) };
+  }
+}
+
+// --- carregar da cloud: GET ao Worker -> ground_truth.json da branch data ---
+export interface CloudLoad {
+  ok: boolean;
+  json?: string | null; // conteúdo do ground_truth.json (null = ainda não existe)
+  error?: string;
+}
+
+export async function loadFromCloud(): Promise<CloudLoad> {
+  const key = getCloudKey();
+  if (!key) return { ok: false, error: "sem chave de acesso" };
+  try {
+    const res = await fetch(`/api/load?k=${encodeURIComponent(key)}`);
+    const data = (await res.json().catch(() => ({}))) as Partial<CloudLoad>;
+    if (!res.ok) return { ok: false, error: data.error || `HTTP ${res.status}` };
+    return { ok: true, json: data.json ?? null };
+  } catch (e) {
+    return { ok: false, error: String(e) };
   }
 }
 

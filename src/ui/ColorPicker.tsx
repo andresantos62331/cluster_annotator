@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { PALETTE } from "../colors";
 
 // ---- conversões de cor (sem dependências) ----
@@ -55,6 +56,7 @@ export function SpeciesColorDot({
   const [hexText, setHexText] = useState(color);
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
+  const popRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const svRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
@@ -87,7 +89,10 @@ export function SpeciesColorDot({
   useEffect(() => {
     if (!open) return;
     const h = (e: MouseEvent) => {
-      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) setOpen(false);
+      const t = e.target as Node;
+      // o popover vive num portal fora do wrap; conta com ambos para o "click fora"
+      if (wrapRef.current?.contains(t) || popRef.current?.contains(t)) return;
+      setOpen(false);
     };
     window.addEventListener("mousedown", h);
     return () => window.removeEventListener("mousedown", h);
@@ -128,8 +133,14 @@ export function SpeciesColorDot({
         title="Mudar a cor desta espécie"
         aria-label="Mudar a cor desta espécie"
       />
-      {open && pos && (
-        <div className="cpick-pop" role="dialog" style={{ top: pos.top, left: pos.left }}>
+      {open && pos && createPortal(
+        <div
+          ref={popRef}
+          className="cpick-pop"
+          role="dialog"
+          style={{ top: pos.top, left: pos.left }}
+          onClick={(e) => e.stopPropagation()}
+        >
           {/* área saturação / valor */}
           <div
             ref={svRef}
@@ -191,7 +202,8 @@ export function SpeciesColorDot({
               />
             ))}
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </div>
   );

@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ConfigData, GroundTruth } from "../types";
 import { GenBadge } from "./bits";
 import { IconSearch } from "./icons";
@@ -59,6 +59,7 @@ export function ClusterRail({
 }) {
   const [query, setQuery] = useState("");
   const [mode, setMode] = useState<Mode>("todos");
+  const activeRef = useRef<HTMLDivElement>(null);
 
   const items = useMemo(() => {
     const q = query.trim();
@@ -77,6 +78,26 @@ export function ClusterRail({
         return true;
       });
   }, [config, groundTruth, query, mode]);
+
+  // ao mudar de cluster (sobretudo via chip "vizinho", que pode apontar para um
+  // grupo fora do ecrã): se o destino não está na lista filtrada, repõe o filtro
+  // para o tornar visível
+  useEffect(() => {
+    if (currentClusterId == null) return;
+    const visible = config.clusterIds.includes(currentClusterId);
+    if (!visible) return;
+    const inList = items.some((it) => it.cid === currentClusterId);
+    if (!inList) {
+      setMode("todos");
+      setQuery("");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentClusterId]);
+
+  // traz o item ativo à vista no rail (corre também depois de repor o filtro)
+  useEffect(() => {
+    activeRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }, [currentClusterId, items]);
 
   const genLabel = (gen: number): string => {
     if (gen === -1) return "Ruído — não agrupado";
@@ -127,6 +148,7 @@ export function ClusterRail({
                 </div>
               )}
               <div
+                ref={it.cid === currentClusterId ? activeRef : undefined}
                 className={`clu ${isNoise ? "noise" : ""} ${it.cid === currentClusterId ? "active" : ""} ${it.done ? "done" : ""}`}
                 onClick={() => onSelect(it.cid)}
               >

@@ -6,15 +6,19 @@ import {
   getCloudKey,
   getCloudSavedAt,
   loadColorMap,
+  loadEppoMap,
+  loadFromCloud,
   loadGT,
   loadLabels,
   saveColorMap,
+  saveEppoMap,
   saveGT,
   saveLabels,
   saveToCloud,
   setCloudKey,
   setCloudSavedAt,
 } from "./storage";
+import { loadEppo, type EppoEntry } from "./eppo";
 import { LIXO, LIXO_COLOR, PALETTE } from "./colors";
 import type { ConfigData, CropGeometry, GroundTruth } from "./types";
 import { TopBar } from "./ui/TopBar";
@@ -32,7 +36,20 @@ const UNDO_MAX = 30;
 type Toast = { id: number; kind: "accent" | "leaf" | "danger"; node: ReactNode; undoable?: boolean };
 
 // fotografia do estado anotável, tirada ANTES de cada mutação (para o Ctrl+Z)
-type Snapshot = { gt: GroundTruth; labels: string[]; colors: Record<string, string> };
+type Snapshot = {
+  gt: GroundTruth;
+  labels: string[];
+  colors: Record<string, string>;
+  eppo: Record<string, string>;
+};
+
+// forma do ground_truth.json (export/cloud) — campos todos opcionais na leitura
+type CloudPayload = {
+  ground_truth?: GroundTruth;
+  labels?: string[];
+  eppo?: Record<string, string>;
+  exported_at?: string;
+};
 
 export default function App() {
   const [config, setConfig] = useState<ConfigData | null>(null);
@@ -43,6 +60,8 @@ export default function App() {
   const [groundTruth, setGroundTruth] = useState<GroundTruth>(() => loadGT());
   const [labels, setLabels] = useState<string[]>(() => loadLabels());
   const [colorMap, setColorMap] = useState<Record<string, string>>(() => loadColorMap());
+  const [eppoMap, setEppoMap] = useState<Record<string, string>>(() => loadEppoMap());
+  const [eppoVocab, setEppoVocab] = useState<EppoEntry[]>([]);
 
   const [mode, setMode] = useState<"clusters" | "species">("clusters");
   const [currentClusterId, setCurrentClusterId] = useState<number | null>(null);
@@ -62,6 +81,9 @@ export default function App() {
   const [cloudSaving, setCloudSaving] = useState(false);
   const [cloudSavedAt, setCloudSavedAtState] = useState<number | null>(() => getCloudSavedAt());
   const [dirty, setDirty] = useState(false);
+  // a cloud tem versão mais recente que a local (editada noutro dispositivo) —
+  // mostra um aviso com botão de carregar (não sobrepõe automaticamente)
+  const [cloudAhead, setCloudAhead] = useState<{ data: CloudPayload; at: number } | null>(null);
 
   const [helpOpen, setHelpOpen] = useState(false);
 
@@ -81,12 +103,19 @@ export default function App() {
   const gtRef = useRef(groundTruth);
   const labelsRef = useRef(labels);
   const colorsRef = useRef(colorMap);
+  const eppoRef = useRef(eppoMap);
   useEffect(() => { gtRef.current = groundTruth; }, [groundTruth]);
   useEffect(() => { labelsRef.current = labels; }, [labels]);
   useEffect(() => { colorsRef.current = colorMap; }, [colorMap]);
+  useEffect(() => { eppoRef.current = eppoMap; }, [eppoMap]);
 
   const captureState = useCallback(
-    (): Snapshot => ({ gt: gtRef.current, labels: labelsRef.current, colors: colorsRef.current }),
+    (): Snapshot => ({
+      gt: gtRef.current,
+      labels: labelsRef.current,
+      colors: colorsRef.current,
+      eppo: eppoRef.current,
+    }),
     [],
   );
 
@@ -102,6 +131,8 @@ export default function App() {
     setLabels(snap.labels);
     setColorMap(snap.colors);
     saveColorMap(snap.colors);
+    setEppoMap(snap.eppo);
+    saveEppoMap(snap.eppo);
     setSelection(new Set());
     setSpeciesSelection(new Set());
   }, []);
@@ -163,19 +194,29 @@ export default function App() {
     setVisited((prev) => [currentClusterId, ...prev.filter((c) => c !== currentClusterId)].slice(0, 6));
   }, [currentClusterId]);
 
+  // vocabulário EPPO (offline, curado) para o autocomplete ao criar/editar espécie
+  useEffect(() => { loadEppo().then(setEppoVocab); }, []);
+
   // ---- persistência local ----
   useEffect(() => { saveGT(groundTruth); }, [groundTruth]);
   useEffect(() => { saveLabels(labels); }, [labels]);
+  useEffect(() => { saveEppoMap(eppoMap); }, [eppoMap]);
 
-  // marca alterações por enviar para a cloud (ignora o 1º render)
+  // marca alterações por enviar para a cloud (ignora o 1º render). skipDirty é
+  // ligado por applyCloud: carregar da cloud NÃO conta como alteração por enviar.
   const firstChange = useRef(true);
+  const skipDirty = useRef(false);
   useEffect(() => {
     if (firstChange.current) {
       firstChange.current = false;
       return;
     }
+    if (skipDirty.current) {
+      skipDirty.current = false;
+      return;
+    }
     setDirty(true);
-  }, [groundTruth, labels]);
+  }, [groundTruth, labels, eppoMap]);
 
   // cor estável (próxima livre na PALETTE) para cada espécie nova
   useEffect(() => {
@@ -281,7 +322,8 @@ export default function App() {
   const totalPages = Math.max(1, Math.ceil(unannotatedInCluster.length / IMAGES_PER_PAGE));
 
   // ---- espécies ----
-  const addLabel = useCallback((name: string) => {
+  // `code` (opcional) vem do autocomplete EPPO; texto livre cria sem código
+  const addLabel = useCallback((name: string, code?: string) => {
     const t = name.trim();
     if (!t) return;
     if (t.toLowerCase() === LIXO.toLowerCase()) {
@@ -289,8 +331,20 @@ export default function App() {
       return;
     }
     setLabels((prev) => (prev.includes(t) ? prev : [...prev, t]));
+    if (code) setEppoMap((prev) => ({ ...prev, [t]: code }));
     setActiveSpecies(t);
   }, []);
+
+  // define/limpa o código EPPO de uma espécie (chip clicável no painel direito)
+  const setSpeciesEppo = useCallback((label: string, code: string) => {
+    snapshot();
+    setEppoMap((prev) => {
+      const next = { ...prev };
+      if (code) next[label] = code;
+      else delete next[label];
+      return next;
+    });
+  }, [snapshot]);
 
   const removeLabel = useCallback((name: string) => {
     if (!confirm(`Remover a espécie "${name}"?\n\nTodas as anotações com esta espécie serão limpas.`)) return;
@@ -328,6 +382,13 @@ export default function App() {
         const next = { ...prev, [newName]: prev[oldName] };
         delete next[oldName];
         saveColorMap(next);
+        return next;
+      });
+      // o código EPPO também segue o nome novo
+      setEppoMap((prev) => {
+        if (!(oldName in prev)) return prev;
+        const next = { ...prev, [newName]: prev[oldName] };
+        delete next[oldName];
         return next;
       });
       if (activeSpecies === oldName) setActiveSpecies(newName);
@@ -500,6 +561,8 @@ export default function App() {
           snapshot(); // importar substitui tudo — tem de ser desfazível
           if (data.ground_truth && typeof data.ground_truth === "object") setGroundTruth(data.ground_truth);
           if (Array.isArray(data.labels)) setLabels(data.labels);
+          // mapa EPPO é opcional (ficheiros antigos não o têm) — retrocompatível
+          if (data.eppo && typeof data.eppo === "object") setEppoMap(data.eppo);
           pushToast(
             "leaf",
             <>
@@ -519,28 +582,117 @@ export default function App() {
     [pushToast, snapshot],
   );
 
-  const handleCloudSave = useCallback(async () => {
-    setCloudSaving(true);
-    const r = await saveToCloud(groundTruth, labels, allFilenames);
-    setCloudSaving(false);
-    if (r.ok) {
-      const ts = Date.now();
-      setCloudSavedAt(ts);
-      setCloudSavedAtState(ts);
-      setDirty(false);
-      pushToast(
-        "leaf",
-        <>
-          <span className="t-icon">☁</span>
-          <span>
-            Guardado na cloud · <b>{r.count}</b> anotações
-          </span>
-        </>,
-      );
-    } else {
-      pushToast("danger", <span>{r.error}</span>);
+  // `silent` (autosave): sem toasts — o indicador synced/pending dá o feedback;
+  // só o save manual (botão) anuncia sucesso/erro.
+  const doCloudSave = useCallback(
+    async (silent: boolean) => {
+      setCloudSaving(true);
+      const r = await saveToCloud(groundTruth, labels, allFilenames, eppoMap);
+      setCloudSaving(false);
+      if (r.ok) {
+        const ts = Date.now();
+        setCloudSavedAt(ts);
+        setCloudSavedAtState(ts);
+        setDirty(false);
+        if (!silent)
+          pushToast(
+            "leaf",
+            <>
+              <span className="t-icon">☁</span>
+              <span>
+                Guardado na cloud · <b>{r.count}</b> anotações
+              </span>
+            </>,
+          );
+      } else if (!silent) {
+        pushToast("danger", <span>{r.error}</span>);
+      }
+    },
+    [groundTruth, labels, allFilenames, eppoMap, pushToast],
+  );
+
+  const handleCloudSave = useCallback(() => doCloudSave(false), [doCloudSave]);
+
+  // aplica um payload vindo da cloud ao estado local (desfazível; NÃO marca dirty,
+  // porque o estado passa a coincidir com a cloud). `at` = exported_at da cloud.
+  const applyCloud = useCallback((data: CloudPayload, at: number) => {
+    snapshot();
+    skipDirty.current = true;
+    if (data.ground_truth && typeof data.ground_truth === "object") setGroundTruth(data.ground_truth);
+    if (Array.isArray(data.labels)) setLabels(data.labels);
+    if (data.eppo && typeof data.eppo === "object") setEppoMap(data.eppo);
+    if (at) {
+      setCloudSavedAt(at);
+      setCloudSavedAtState(at);
     }
-  }, [groundTruth, labels, allFilenames, pushToast]);
+    setDirty(false);
+  }, [snapshot]);
+
+  // ---- arranque: puxar da cloud (uma vez) ----
+  // dispositivo novo (local vazio) -> carrega automaticamente; já com trabalho
+  // local -> só avisa se a cloud for mais recente (botão explícito, sem clobber).
+  const cloudPulled = useRef(false);
+  useEffect(() => {
+    if (cloudPulled.current || !hasCloudKey) return;
+    cloudPulled.current = true;
+    loadFromCloud().then((r) => {
+      if (!r.ok || !r.json) return;
+      let parsed: CloudPayload;
+      try {
+        parsed = JSON.parse(r.json) as CloudPayload;
+      } catch {
+        return;
+      }
+      const at = parsed.exported_at ? Date.parse(parsed.exported_at) || 0 : 0;
+      const localEmpty =
+        Object.keys(gtRef.current).length === 0 && labelsRef.current.length === 0;
+      if (localEmpty) {
+        applyCloud(parsed, at);
+        pushToast(
+          "leaf",
+          <>
+            <span className="t-icon">☁</span>
+            <span>
+              Carregado da cloud · <b>{Object.keys(parsed.ground_truth ?? {}).length}</b> anotações
+            </span>
+          </>,
+        );
+      } else if (at > (getCloudSavedAt() ?? 0)) {
+        setCloudAhead({ data: parsed, at });
+      }
+    });
+  }, [hasCloudKey, applyCloud, pushToast]);
+
+  // ---- autosave para a cloud (silencioso) ----
+  // refs com a versão mais recente, para os efeitos não dependerem dos handlers
+  const saveRef = useRef(doCloudSave);
+  const dirtyRef = useRef(dirty);
+  // enquanto o banner "cloud mais recente" está pendente, NÃO autosave — senão o
+  // estado local empurrava-se por cima da versão da cloud antes de o utilizador decidir
+  const blockAuto = useRef(false);
+  useEffect(() => { saveRef.current = doCloudSave; }, [doCloudSave]);
+  useEffect(() => { dirtyRef.current = dirty; }, [dirty]);
+  useEffect(() => { blockAuto.current = cloudAhead != null; }, [cloudAhead]);
+
+  // debounce: guarda 20s depois da ÚLTIMA alteração (coalesce rajadas de anotação).
+  // O efeito re-corre a cada mudança enquanto dirty, reiniciando o temporizador.
+  useEffect(() => {
+    if (!hasCloudKey || !dirty || cloudSaving || cloudAhead) return;
+    const t = setTimeout(() => saveRef.current(true), 20000);
+    return () => clearTimeout(t);
+  }, [hasCloudKey, dirty, cloudSaving, cloudAhead, groundTruth, labels, eppoMap]);
+
+  // flush imediato quando o separador é escondido/fechado (best-effort em fecho
+  // forçado; fiável ao trocar de separador/minimizar)
+  useEffect(() => {
+    const onHide = () => {
+      if (document.visibilityState === "hidden" && dirtyRef.current && hasCloudKey && !blockAuto.current) {
+        saveRef.current(true);
+      }
+    };
+    document.addEventListener("visibilitychange", onHide);
+    return () => document.removeEventListener("visibilitychange", onHide);
+  }, [hasCloudKey]);
 
   // remover labels (vista Espécies) — antes dos atalhos, que dependem dela
   const removeSelectedLabels = useCallback(() => {
@@ -693,11 +845,38 @@ export default function App() {
         cloudState={cloudState}
         cloudSaving={cloudSaving}
         onCloudSave={handleCloudSave}
-        onExportJSON={() => exportJSON(groundTruth, labels)}
-        onExportCSV={() => exportCSV(groundTruth, allFilenames)}
+        onExportJSON={() => exportJSON(groundTruth, labels, eppoMap)}
+        onExportCSV={() => exportCSV(groundTruth, allFilenames, eppoMap)}
         onImport={handleImport}
         onHelp={() => setHelpOpen(true)}
       />
+
+      {cloudAhead && (
+        <div className="cloud-banner">
+          <span className="t-icon">☁</span>
+          <span>
+            A cloud tem uma versão mais recente (
+            <b>{new Date(cloudAhead.at).toLocaleString("pt-PT")}</b>,{" "}
+            {Object.keys(cloudAhead.data.ground_truth ?? {}).length} anotações). Carregar
+            substitui o trabalho local não guardado.
+          </span>
+          <div className="cb-actions">
+            <button
+              className="btn"
+              onClick={() => {
+                applyCloud(cloudAhead.data, cloudAhead.at);
+                setCloudAhead(null);
+                pushToast("leaf", <span>Carregado da cloud.</span>);
+              }}
+            >
+              Carregar da cloud
+            </button>
+            <button className="cb-dismiss" onClick={() => setCloudAhead(null)} title="Manter o trabalho local">
+              Ignorar
+            </button>
+          </div>
+        </div>
+      )}
 
       <ClusterRail
         config={config}
@@ -771,6 +950,7 @@ export default function App() {
             onRename={renameLabel}
             onRemove={removeLabel}
             onSetColor={setSpeciesColor}
+            eppoOf={(l) => eppoMap[l] ?? ""}
             thumbOf={thumbOf}
             clusterOf={(f) => fileToCluster.get(f) ?? null}
             onGoToCluster={goToSourceCluster}
@@ -787,11 +967,14 @@ export default function App() {
         colorOf={colorOf}
         thumbOf={thumbOf}
         activeSpecies={activeSpecies}
+        eppoVocab={eppoVocab}
+        eppoOf={(l) => eppoMap[l] ?? ""}
         onGoToSpecies={goToSpecies}
         onAdd={addLabel}
         onRename={renameLabel}
         onReorder={reorderLabel}
         onSetColor={setSpeciesColor}
+        onSetEppo={setSpeciesEppo}
       />
 
       <Lightbox

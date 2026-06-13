@@ -1,8 +1,10 @@
 import { useMemo, useState } from "react";
 import type { GroundTruth } from "../types";
+import type { EppoEntry } from "../eppo";
 import { LIXO, LIXO_COLOR } from "../colors";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
+import { EppoCombobox, EppoChip } from "./EppoInput";
 import { IconPencil, IconTrash } from "./icons";
 
 export function SpeciesPanel({
@@ -11,24 +13,29 @@ export function SpeciesPanel({
   colorOf,
   thumbOf,
   activeSpecies,
+  eppoVocab,
+  eppoOf,
   onGoToSpecies,
   onAdd,
   onRename,
   onReorder,
   onSetColor,
+  onSetEppo,
 }: {
   labels: string[];
   groundTruth: GroundTruth;
   colorOf: (l: string) => string;
   thumbOf: (l: string) => string | null;
   activeSpecies: string;
+  eppoVocab: EppoEntry[];
+  eppoOf: (l: string) => string;
   onGoToSpecies: (l: string) => void;
-  onAdd: (name: string) => void;
+  onAdd: (name: string, code?: string) => void;
   onRename: (l: string) => void;
   onReorder: (label: string, target: string) => void;
   onSetColor: (l: string, hex: string) => void;
+  onSetEppo: (l: string, code: string) => void;
 }) {
-  const [name, setName] = useState("");
   // arrastar-e-largar para reordenar (a ordem reflete-se nos atalhos 1-9 e na auditoria)
   const [dragging, setDragging] = useState<string | null>(null);
   const [dragOver, setDragOver] = useState<string | null>(null);
@@ -47,21 +54,7 @@ export function SpeciesPanel({
           <h2>Espécies</h2>
           <span className="sp-n mono">{labels.length}</span>
         </div>
-        <div className="new-species">
-          <input
-            value={name}
-            placeholder="nova espécie — ex.: Amaranthus"
-            spellCheck={false}
-            onChange={(e) => setName(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                onAdd(name);
-                setName("");
-              }
-            }}
-          />
-          <button onClick={() => { onAdd(name); setName(""); }} title="Criar espécie">+</button>
-        </div>
+        <EppoCombobox vocab={eppoVocab} onCommit={onAdd} />
       </div>
 
       <div className="sp-list">
@@ -107,6 +100,7 @@ export function SpeciesPanel({
               <SpeciesThumb file={thumbOf(lbl)} size={30} />
               <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
               <span className="sp-name">{lbl}</span>
+              <EppoChip code={eppoOf(lbl)} vocab={eppoVocab} onSet={(code) => onSetEppo(lbl, code)} />
               <button
                 className="sp-edit"
                 onClick={(e) => {
