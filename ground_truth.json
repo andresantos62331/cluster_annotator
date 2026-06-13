@@ -1,10 +1,23 @@
 {
-  "exported_at": "2026-06-12T16:18:57.334Z",
+  "exported_at": "2026-06-13T18:44:28.835Z",
   "labels": [
     "especie1",
+    "fsdfsdfs",
     "teste",
-    "papoila"
+    "papoila",
+    "asdfsad",
+    "asdads",
+    "aaaa",
+    "sdafsdaf",
+    "dfsfs",
+    "sdfsdf",
+    "sdffs",
+    "fsdfs",
+    "fsdfsfsdfs",
+    "asdasd",
+    "wdawdsa"
   ],
+  "eppo": {},
   "ground_truth": {
     "20220417_153105_planta_6.jpg": "especie1",
     "20220417_154415_planta_13.jpg": "especie1",
@@ -78,6 +91,18 @@
     "20251110_151432_planta_7.jpg": "especie1",
     "20251110_151432_planta_4.jpg": "especie1",
     "20251110_151432_planta_3.jpg": "especie1",
-    "20251109_161938_planta_2.jpg": "especie1"
+    "20251109_161938_planta_2.jpg": "especie1",
+    "20251110_152757_planta_1.jpg": "especie1",
+    "20251110_152757_planta_2.jpg": "especie1",
+    "20251110_152757_planta_3.jpg": "especie1",
+    "20251110_152757_planta_4.jpg": "especie1",
+    "20251110_153005_planta_2.jpg": "especie1",
+    "20251110_153005_planta_1.jpg": "especie1",
+    "20251110_152937_planta_0.jpg": "especie1",
+    "20251110_152901_planta_5.jpg": "especie1",
+    "20251110_152757_planta_5.jpg": "especie1",
+    "20251110_152807_planta_0.jpg": "especie1",
+    "20251110_153054_planta_6.jpg": "especie1",
+    "20251110_153041_planta_1.jpg": "especie1"
   }
 }
