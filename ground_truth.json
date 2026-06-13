@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-06-13T18:44:28.835Z",
+  "exported_at": "2026-06-13T18:47:33.338Z",
   "labels": [
     "especie1",
     "fsdfsdfs",
@@ -15,9 +15,12 @@
     "fsdfs",
     "fsdfsfsdfs",
     "asdasd",
-    "wdawdsa"
+    "wdawdsa",
+    "Chenopodium album"
   ],
-  "eppo": {},
+  "eppo": {
+    "Chenopodium album": "CHEAL"
+  },
   "ground_truth": {
     "20220417_153105_planta_6.jpg": "especie1",
     "20220417_154415_planta_13.jpg": "especie1",
