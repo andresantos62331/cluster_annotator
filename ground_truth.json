@@ -1,9 +1,14 @@
 {
-  "exported_at": "2026-06-14T12:16:51.772Z",
-  "labels": [],
+  "exported_at": "2026-06-14T12:17:47.760Z",
+  "labels": [
+    "Amaranthus retroflexus"
+  ],
   "eppo": {
-    "Chenopodium album": "CHEAL"
+    "Chenopodium album": "CHEAL",
+    "Amaranthus retroflexus": "AMARE"
   },
-  "family": {},
+  "family": {
+    "Amaranthus retroflexus": "Amaranthaceae"
+  },
   "ground_truth": {}
 }
