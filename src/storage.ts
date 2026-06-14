@@ -50,6 +50,22 @@ export function saveEppoMap(m: Record<string, string>): void {
   localStorage.setItem(EPPO_KEY, JSON.stringify(m));
 }
 
+// mapa espécie -> família botânica. Override manual (para espécies sem código na
+// base curada); quando ausente, a família deriva do código via o vocabulário.
+const FAMILY_KEY = "tese3.species_family";
+export function loadFamilyMap(): Record<string, string> {
+  try {
+    const raw = localStorage.getItem(FAMILY_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+export function saveFamilyMap(m: Record<string, string>): void {
+  localStorage.setItem(FAMILY_KEY, JSON.stringify(m));
+}
+
 export function loadGT(): GroundTruth {
   try {
     const raw = localStorage.getItem(GT_KEY);
@@ -101,9 +117,10 @@ export function buildJSON(
   gt: GroundTruth,
   labels: string[],
   eppo: Record<string, string> = {},
+  family: Record<string, string> = {},
 ): string {
   return JSON.stringify(
-    { exported_at: new Date().toISOString(), labels, eppo, ground_truth: gt },
+    { exported_at: new Date().toISOString(), labels, eppo, family, ground_truth: gt },
     null,
     2,
   );
@@ -123,8 +140,13 @@ export function buildCSV(
   return [header, ...rows].join("\n");
 }
 
-export function exportJSON(gt: GroundTruth, labels: string[], eppo: Record<string, string> = {}): void {
-  download(buildJSON(gt, labels, eppo), "ground_truth.json", "application/json");
+export function exportJSON(
+  gt: GroundTruth,
+  labels: string[],
+  eppo: Record<string, string> = {},
+  family: Record<string, string> = {},
+): void {
+  download(buildJSON(gt, labels, eppo, family), "ground_truth.json", "application/json");
 }
 
 export function exportCSV(gt: GroundTruth, allFilenames: string[], eppo: Record<string, string> = {}): void {
@@ -144,6 +166,7 @@ export async function saveToCloud(
   labels: string[],
   allFilenames: string[],
   eppo: Record<string, string> = {},
+  family: Record<string, string> = {},
 ): Promise<CloudResult> {
   const count = Object.keys(gt).length;
   const key = getCloudKey();
@@ -160,7 +183,7 @@ export async function saveToCloud(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         key,
-        json: buildJSON(gt, labels, eppo),
+        json: buildJSON(gt, labels, eppo, family),
         csv: buildCSV(gt, allFilenames, eppo),
         count,
       }),

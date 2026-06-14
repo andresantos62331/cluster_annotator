@@ -97,6 +97,34 @@ export function Lightbox({
     window.setTimeout(() => setFlash((k) => k + 1), 320);
   }, [fitPlant]);
 
+  // Zoom da roda com PASSO FIXO por evento (10%), ancorado no cursor. O wheel da
+  // própria biblioteca escala o zoom pela magnitude do deltaY — ratos/trackpads
+  // reportam deltaY enorme e davam saltos absurdos mesmo com step baixo. Usamos
+  // só o SINAL do deltaY. Listener nativo (passive:false) para poder preventDefault.
+  useEffect(() => {
+    const wrap = wrapElRef.current;
+    if (!wrap) return;
+    const onWheel = (e: WheelEvent) => {
+      const inst = transformRef.current;
+      if (!inst) return;
+      e.preventDefault();
+      const st = inst.instance.state;
+      const scale = st.scale;
+      const factor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
+      const next = Math.min(20, Math.max(minScale, scale * factor));
+      if (next === scale) return;
+      const rect = wrap.getBoundingClientRect();
+      const cx = e.clientX - rect.left;
+      const cy = e.clientY - rect.top;
+      // mantém o ponto sob o cursor fixo ao mudar de escala
+      const nx = cx - ((cx - st.positionX) / scale) * next;
+      const ny = cy - ((cy - st.positionY) / scale) * next;
+      inst.setTransform(nx, ny, next, 0);
+    };
+    wrap.addEventListener("wheel", onWheel, { passive: false });
+    return () => wrap.removeEventListener("wheel", onWheel);
+  }, [minScale]);
+
   // ao abrir (ou navegar ←/→): a foto aparece LOGO inteira (zoomed out, sem
   // animação — o transform inicial é calculado abaixo no render) e de seguida
   // faz o "Shift+F": viagem animada até à plântula + nuvem. O fitAll aos 60ms
@@ -183,7 +211,7 @@ export function Lightbox({
           initialScale={initScale}
           initialPositionX={initX}
           initialPositionY={initY}
-          wheel={{ step: 0.05 }}
+          wheel={{ disabled: true }}
           doubleClick={{ disabled: true }}
           panning={{ velocityDisabled: true }}
           limitToBounds={false}

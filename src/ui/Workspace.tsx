@@ -4,6 +4,7 @@ import { LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
+import { IconTrash } from "./icons";
 
 const IMAGES_PER_PAGE = 30;
 
@@ -16,12 +17,14 @@ export function Workspace({
   page,
   onPage,
   selection,
+  flying,
   showAnnotated,
   onToggleShowAnnotated,
   labels,
   activeSpecies,
   colorOf,
   thumbOf,
+  eppoOf,
   onSetActive,
   onToggleSelect,
   onOpenLightbox,
@@ -42,12 +45,14 @@ export function Workspace({
   page: number;
   onPage: (n: number) => void;
   selection: Set<string>;
+  flying: Set<string>;
   showAnnotated: boolean;
   onToggleShowAnnotated: (v: boolean) => void;
   labels: string[];
   activeSpecies: string;
   colorOf: (l: string) => string;
   thumbOf: (l: string) => string | null;
+  eppoOf: (l: string) => string;
   onSetActive: (l: string) => void;
   onToggleSelect: (f: string) => void;
   onOpenLightbox: (f: string) => void;
@@ -118,16 +123,21 @@ export function Workspace({
   const effPage = Math.min(page, totalPages - 1);
   const pageFiles = unannotated.slice(effPage * IMAGES_PER_PAGE, (effPage + 1) * IMAGES_PER_PAGE);
 
-  // anotadas deste cluster agrupadas por espécie (contagem desc)
+  // anotadas deste cluster agrupadas por espécie (contagem desc). O Lixo NÃO é
+  // uma espécie — sai dos grupos e vai para uma secção própria (caixote) no fim.
   const groups: [string, string[]][] = [];
+  let lixoFiles: string[] = [];
   {
     const by: Record<string, string[]> = {};
     for (const f of clusterFilenames) {
       const lb = groundTruth[f];
       if (lb) (by[lb] ??= []).push(f);
     }
+    lixoFiles = by[LIXO] ?? [];
+    delete by[LIXO];
     groups.push(...Object.entries(by).sort((a, b) => b[1].length - a[1].length));
   }
+  const lixoAllSel = lixoFiles.length > 0 && lixoFiles.every((f) => selection.has(f));
 
   const pageAllSelected = pageFiles.length > 0 && pageFiles.every((f) => selection.has(f));
   // quantas das selecionadas já têm etiqueta (alvo do "Retirar etiqueta")
@@ -188,7 +198,14 @@ export function Workspace({
             onClick={() => setDdOpen((v) => !v)}
             title="Espécie a atribuir"
           >
-            {activeSpecies ? (
+            {activeSpecies === LIXO ? (
+              <>
+                <span className="sp-lixo-icon" style={{ color: "var(--danger)", display: "grid", placeItems: "center" }}>
+                  <IconTrash size={15} />
+                </span>
+                <span className="as-name" style={{ color: "var(--danger)" }}>{LIXO}</span>
+              </>
+            ) : activeSpecies ? (
               <>
                 <SpeciesThumb file={thumbOf(activeSpecies)} size={22} />
                 <span className="as-name">{activeSpecies}</span>
@@ -209,9 +226,12 @@ export function Workspace({
                     setDdOpen(false);
                   }}
                 >
-                  <SpeciesThumb file={thumbOf(l)} size={20} />
-                  {l}
-                  {i < 9 && <span className="dd-key">{i + 1}</span>}
+                  {/* tecla à esquerda, estilo kbd como no painel direito */}
+                  <span className="sp-key">{i < 9 ? i + 1 : "·"}</span>
+                  <SpeciesThumb file={thumbOf(l)} size={22} />
+                  <span className="dd-name">{l}</span>
+                  {eppoOf(l) && <span className="eppo-chip has mono">{eppoOf(l)}</span>}
+                  <span className="sw" style={{ background: colorOf(l) }} />
                 </button>
               ))}
               {/* categoria reservada, sempre disponível no fim */}
@@ -222,9 +242,11 @@ export function Workspace({
                   setDdOpen(false);
                 }}
               >
-                <SpeciesThumb file={thumbOf(LIXO)} size={20} />
-                <span style={{ color: colorOf(LIXO) }}>{LIXO}</span>
-                <span className="dd-key">0</span>
+                <span className="sp-key">0</span>
+                <span className="sp-lixo-icon" style={{ color: "var(--danger)", display: "grid", placeItems: "center" }}>
+                  <IconTrash size={15} />
+                </span>
+                <span className="dd-name" style={{ color: "var(--danger)" }}>{LIXO}</span>
               </button>
             </div>
           )}
@@ -294,6 +316,7 @@ export function Workspace({
                 filename={f}
                 index={i}
                 selected={selection.has(f)}
+                hidden={flying.has(f)}
                 onToggle={() => onToggleSelect(f)}
                 onOpen={() => onOpenLightbox(f)}
               />
@@ -309,7 +332,7 @@ export function Workspace({
       {showAnnotated && groups.length > 0 && (
         <div className="section-head">
           <span className="sh-bar" />
-          <span className="sh-title">Espécies presentes</span>
+          <span className="sh-title">Espécies presentes neste cluster</span>
           <span className="sh-count mono">{groups.length}</span>
         </div>
       )}
@@ -351,6 +374,11 @@ export function Workspace({
               <span className="sw" style={{ background: col }} />
               <h3>
                 <span className="svb-name" style={{ color: col }}>{sp}</span>
+                {eppoOf(sp) && (
+                  <span className="eppo-chip has mono" title={`Código EPPO: ${eppoOf(sp)}`}>
+                    {eppoOf(sp)}
+                  </span>
+                )}
                 <span className="svb-pop">
                   {files.length} {files.length === 1 ? "imagem" : "imagens"}
                 </span>
@@ -375,6 +403,40 @@ export function Workspace({
           </div>
           );
         })}
+
+      {/* Lixo — secção própria, NÃO é uma espécie: caixote distinto no fim */}
+      {showAnnotated && lixoFiles.length > 0 && (
+        <div className="lixo-bin">
+          <div className="lixo-head">
+            <button
+              className={`svb-check ${lixoAllSel ? "on" : ""}`}
+              title={lixoAllSel ? "Desselecionar" : "Selecionar tudo no lixo"}
+              onClick={() => onToggleMany(lixoFiles)}
+            >
+              <svg viewBox="0 0 24 24" width="13" height="13">
+                <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <span className="lixo-mark"><IconTrash size={18} /></span>
+            <span className="lixo-title">{LIXO}</span>
+            <span className="lixo-note">
+              {lixoFiles.length} {lixoFiles.length === 1 ? "crop inutilizável" : "crops inutilizáveis"}
+            </span>
+          </div>
+          <div className="grid">
+            {lixoFiles.map((f, i) => (
+              <Card
+                key={f}
+                filename={f}
+                index={i}
+                selected={selection.has(f)}
+                onToggle={() => onToggleSelect(f)}
+                onOpen={() => onOpenLightbox(f)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

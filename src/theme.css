@@ -255,7 +255,20 @@ body {
 .topbar .spacer { flex: 1; }
 
 /* medidor de progresso global */
-.global-meter { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.global-meter {
+  display: flex; align-items: center; gap: 14px; flex-shrink: 0;
+  max-width: 360px; overflow: hidden;
+  transition: opacity 0.3s var(--ease), max-width 0.4s var(--ease), margin 0.4s var(--ease), transform 0.3s var(--ease);
+}
+/* na tab Coleção desaparece suavemente (info já está no resumo); margens
+   negativas comem o gap do flex para a barra fechar sem deixar buraco */
+.global-meter.is-hidden {
+  opacity: 0; max-width: 0;
+  margin-left: -22px; margin-right: -22px; pointer-events: none;
+}
+/* conteúdo não reflui ao apertar (só é clipado) — evita o glitch no fim */
+.global-meter .gm-figures { flex-shrink: 0; white-space: nowrap; }
+.global-meter .gm-ring { flex-shrink: 0; }
 .global-meter .gm-figures { text-align: right; }
 .global-meter .gm-count {
   font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--ink);
@@ -673,10 +686,11 @@ body {
   cursor: pointer; font-family: var(--font-ui); font-size: 13px; color: var(--ink-dim);
 }
 .sp-dropdown button:hover { background: var(--panel-hi); color: var(--ink); }
-.sp-dropdown button .sw { width: 12px; height: 12px; border-radius: 4px; flex-shrink: 0; }
-.sp-dropdown button .dd-key {
-  margin-left: auto; font-family: var(--font-mono); font-size: 10px; color: var(--faint);
+.sp-dropdown button .sw { width: 13px; height: 13px; border-radius: 4px; flex-shrink: 0; }
+.sp-dropdown button .dd-name {
+  flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+.sp-dropdown button .eppo-chip { flex-shrink: 0; }
 .sp-dropdown .dd-empty { padding: 10px; color: var(--muted); font-size: 12px; text-align: center; }
 
 /* dropdown "Reatribuir a…" na barra de acções da página Espécies */
@@ -863,6 +877,35 @@ body {
 }
 .new-species button:hover { background: var(--accent-2); }
 
+/* criação centralizada: botão + formulário (nome / código / família) */
+.add-species-btn {
+  width: 100%; padding: 9px 12px; border-radius: var(--r-md); cursor: pointer;
+  background: var(--accent); color: #fff; border: 0;
+  font-family: var(--font-ui); font-size: 13px; font-weight: 600;
+}
+.add-species-btn:hover { background: var(--accent-2); }
+.add-species {
+  display: flex; flex-direction: column; gap: 9px;
+  padding: 12px; border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--panel-2); animation: cpick-in 0.12s var(--ease);
+}
+.add-species .as-field { display: flex; flex-direction: column; gap: 4px; }
+.add-species .as-field > label { font-size: 11px; color: var(--faint); }
+.add-species input {
+  width: 100%; box-sizing: border-box; background: var(--bg);
+  border: 1px solid var(--line); border-radius: var(--r-sm);
+  padding: 7px 9px; font-family: var(--font-ui); font-size: 13px; color: var(--ink); outline: none;
+}
+.add-species input:focus { border-color: var(--accent-line); }
+.add-species .as-search { position: relative; }
+.add-species .as-search .eppo-pop-list {
+  position: absolute; top: calc(100% + 2px); left: 0; right: 0; z-index: 5;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--r-sm);
+  box-shadow: var(--shadow-pop); max-height: 184px; overflow-y: auto; padding: 4px;
+}
+.add-species .as-actions { display: flex; gap: 8px; margin-top: 2px; }
+.add-species .as-actions .btn { flex: 1; justify-content: center; }
+
 /* --- EPPO: combobox de criação + chip de código editável --- */
 .eppo-combo { position: relative; }
 .eppo-dd {
@@ -906,13 +949,21 @@ h3 > .eppo-chip { cursor: default; }
   background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--r-md);
   box-shadow: var(--shadow-pop); padding: 8px; animation: cpick-in 0.12s var(--ease);
 }
-.eppo-pop > input {
+.eppo-pop input {
   width: 100%; box-sizing: border-box; background: var(--bg);
   border: 1px solid var(--line); border-radius: var(--r-sm);
   padding: 7px 9px; font-family: var(--font-ui); font-size: 12px; color: var(--ink); outline: none;
 }
-.eppo-pop > input:focus { border-color: var(--accent-line); }
-.eppo-pop-list { max-height: 200px; overflow-y: auto; margin-top: 6px; }
+.eppo-pop input:focus { border-color: var(--accent-line); }
+.eppo-pop-h { font-size: 11px; color: var(--faint); margin: 9px 0 4px; }
+.eppo-pop-h:first-child { margin-top: 0; }
+/* campo de código = também a pesquisa; sugestões num dropdown ancorado por baixo */
+.eppo-code-field { position: relative; }
+.eppo-code-field .eppo-pop-list {
+  position: absolute; top: calc(100% + 2px); left: 0; right: 0; z-index: 5;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--r-sm);
+  box-shadow: var(--shadow-pop); max-height: 184px; overflow-y: auto; padding: 4px;
+}
 .eppo-pop-list button {
   width: 100%; display: flex; align-items: baseline; gap: 8px;
   background: transparent; border: 0; padding: 6px 7px; border-radius: var(--r-sm);
@@ -920,6 +971,11 @@ h3 > .eppo-chip { cursor: default; }
 }
 .eppo-pop-list button:hover, .eppo-pop-list button.on { background: var(--panel-hi); color: var(--ink); }
 .eppo-pop-empty { padding: 10px; color: var(--muted); font-size: 12px; text-align: center; }
+.eppo-pop-save {
+  width: 100%; margin-top: 10px; padding: 7px; border-radius: var(--r-sm); border: 0;
+  background: var(--accent); color: #fff; cursor: pointer; font-size: 12px; font-weight: 600;
+}
+.eppo-pop-save:hover { background: var(--accent-2); }
 .eppo-pop-clear {
   width: 100%; margin-top: 6px; padding: 6px; border-radius: var(--r-sm);
   border: 1px solid var(--line); background: var(--panel); color: var(--muted);
@@ -951,7 +1007,13 @@ h3 > .eppo-chip { cursor: default; }
 .sp-row.dragging { opacity: 0.35; }
 .sp-row.drag-over { box-shadow: inset 0 2px 0 var(--accent); }
 .sp-swatch { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; box-shadow: 0 0 0 1px rgba(0,0,0,0.3) inset; }
-.sp-name { flex: 1; font-size: 13px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* coluna nome + código EPPO empilhados */
+.sp-id { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; align-items: flex-start; }
+.sp-id .eppo-chip-wrap { max-width: 100%; }
+.sp-name {
+  max-width: 100%; font-size: 13px; font-weight: 600; color: var(--ink);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .sp-count { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 /* lápis de renomear — só no hover da linha */
 .sp-edit {
@@ -977,6 +1039,122 @@ h3 > .eppo-chip { cursor: default; }
 .sp-lixo.active { background: var(--panel-hi); }
 .sp-lixo .sp-lixo-icon { display: grid; place-items: center; }
 .sp-lixo .sp-name { font-weight: 600; }
+
+/* =================== PARTÍCULAS de atribuição ========================== */
+.particle-layer { position: fixed; inset: 0; pointer-events: none; z-index: 9500; overflow: hidden; }
+/* mote = clone da imagem que encolhe e voa até à espécie (movimento uniforme) */
+.mote {
+  position: absolute; top: 0; left: 0; display: block; transform-origin: top left;
+  border-radius: 8px; background-color: #000; background-size: cover; background-position: center;
+  will-change: transform, opacity;
+}
+/* pulse na linha da espécie quando as partículas chegam (cor via --pulse) */
+.sp-row.species-arrived, .sp-lixo.species-arrived { animation: sp-arrive 0.72s var(--ease); }
+@keyframes sp-arrive {
+  0% { box-shadow: 0 0 0 0 transparent; }
+  28% {
+    box-shadow: 0 0 0 2px var(--pulse), 0 0 18px 3px var(--pulse);
+    background: color-mix(in srgb, var(--pulse) 20%, transparent);
+  }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* =================== COLEÇÃO (resumo no topo da tab) ==================== */
+.coll-overview { margin: 4px 0 20px; }
+.coll-overview.empty {
+  display: flex; align-items: center; gap: 18px;
+  padding: 22px; border: 1px solid var(--line-soft); border-radius: var(--r-md);
+  background: var(--panel);
+}
+.co-empty-sub { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 4px 0 0; max-width: 540px; }
+.co-title { font-family: var(--font-display); font-size: 22px; margin: 0; color: var(--ink); }
+
+.co-hero {
+  display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+  padding: 18px 22px; border: 1px solid var(--line-soft); border-radius: var(--r-md);
+  background: linear-gradient(180deg, var(--panel), var(--bg));
+}
+.co-hero-ring { flex-shrink: 0; display: grid; place-items: center; }
+.co-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+.co-stat { display: flex; flex-direction: column; gap: 3px; }
+.co-stat-n { font-size: 26px; font-weight: 700; color: var(--ink); line-height: 1; }
+.co-stat-l { font-size: 12px; color: var(--muted); }
+
+.co-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+@media (max-width: 1180px) { .co-grid { grid-template-columns: 1fr; } }
+.co-card {
+  border: 1px solid var(--line-soft); border-radius: var(--r-md);
+  background: var(--panel); padding: 14px 16px; min-width: 0;
+}
+.co-card-title {
+  font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--ink); margin: 0 0 12px;
+}
+
+/* barras por espécie */
+.co-bars { display: flex; flex-direction: column; gap: 6px; }
+.co-bar-row {
+  display: grid; grid-template-columns: 178px 1fr 34px; align-items: center; gap: 10px;
+  background: transparent; border: 0; padding: 2px 0; cursor: pointer; text-align: left;
+}
+.co-bar-name { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.co-bar-track { height: 9px; border-radius: 5px; background: rgba(255, 255, 255, 0.05); overflow: hidden; }
+.co-bar-fill { display: block; height: 100%; border-radius: 5px; transition: width 0.3s var(--ease); }
+.co-bar-row:hover .co-bar-fill { filter: brightness(1.15); }
+.co-bar-n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-align: right; }
+.co-more { margin-top: 9px; font-size: 11px; color: var(--faint); }
+
+/* donut por família */
+.co-donut-wrap { display: flex; align-items: center; gap: 18px; }
+.co-donut { flex-shrink: 0; }
+.co-donut-c1 { text-anchor: middle; font-family: var(--font-mono); font-size: 20px; font-weight: 700; fill: var(--ink); }
+.co-donut-c2 { text-anchor: middle; font-size: 10px; fill: var(--muted); }
+.co-legend {
+  list-style: none; margin: 0; padding: 0; flex: 1; min-width: 0;
+  display: flex; flex-direction: column; gap: 5px; max-height: 152px; overflow-y: auto;
+}
+.co-legend li { display: grid; grid-template-columns: 12px 1fr auto; align-items: center; gap: 8px; }
+.co-leg-sw { width: 11px; height: 11px; border-radius: 3px; }
+.co-leg-name { font-size: 12px; color: var(--ink-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.co-leg-n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+
+.co-species-head { margin-top: 24px; }
+
+/* divisor de família botânica (a família engloba as espécies abaixo) */
+.fam-divider {
+  display: flex; align-items: baseline; gap: 10px; margin: 22px 0 8px;
+}
+.fam-divider .fam-name {
+  font-family: var(--font-display); font-weight: 600; font-size: 15px; color: var(--ink-dim);
+  font-style: italic; flex-shrink: 0;
+}
+.fam-divider .fam-meta { font-size: 11px; color: var(--muted); flex-shrink: 0; }
+.fam-divider .fam-line { flex: 1; height: 1px; background: var(--line-soft); }
+
+/* Lixo = CAIXOTE distinto (Coleção e dentro do cluster) — não parece espécie:
+   borda tracejada vermelha, fundo com leve tom de perigo, miniaturas esbatidas */
+.svb-lixo-block, .lixo-bin {
+  margin-top: 30px;
+  border: 1px dashed color-mix(in srgb, var(--danger) 45%, var(--line));
+  background: color-mix(in srgb, var(--danger) 6%, transparent);
+  border-radius: var(--r-md);
+  padding: 6px 14px 14px;
+}
+/* na Coleção, o cabeçalho do Lixo deixa de ser a faixa de herbário sticky */
+.svb-lixo-block .svb-head {
+  position: static; background: transparent; min-height: 0; padding: 10px 2px; margin-bottom: 2px;
+}
+.svb-lixo-mark { display: grid; place-items: center; width: 22px; height: 22px; flex-shrink: 0; }
+.svb-lixo-note { font-size: 12px; color: var(--muted); font-style: italic; }
+/* cabeçalho do caixote dentro do cluster (Workspace) */
+.lixo-head { display: flex; align-items: center; gap: 10px; padding: 8px 2px 12px; }
+.lixo-head .lixo-mark { display: grid; place-items: center; color: var(--danger); flex-shrink: 0; }
+.lixo-head .lixo-title { font-family: var(--font-display); font-weight: 600; font-size: 16px; color: var(--danger); }
+.lixo-head .lixo-note { font-size: 12px; color: var(--muted); font-style: italic; }
+/* cartões do lixo esbatidos/dessaturados (descartados); normais no hover */
+.svb-lixo-block .grid .card, .lixo-bin .grid .card { opacity: 0.6; }
+.svb-lixo-block .grid .card:hover, .lixo-bin .grid .card:hover { opacity: 1; }
+.svb-lixo-block .grid .card img, .lixo-bin .grid .card img { filter: grayscale(0.45) brightness(0.8); }
+.svb-lixo-block .grid .card:hover img, .lixo-bin .grid .card:hover img { filter: none; }
 
 .sp-foot {
   padding: 11px 14px; border-top: 1px solid var(--line-soft);

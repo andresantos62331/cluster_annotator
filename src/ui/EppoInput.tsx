@@ -98,41 +98,51 @@ export function EppoCombobox({
   );
 }
 
-// Chip do código EPPO de uma espécie já criada. Clicar abre um popover (posição
-// fixa, escapa ao clipping da lista com scroll) para procurar/definir/limpar.
+// Mini-editor de taxonomia de uma espécie: chip com o código EPPO; ao clicar abre
+// um popover (posição fixa) para PROCURAR na base curada (preenche código+família)
+// OU definir MANUALMENTE código e família (para espécies fora da base). Limpar
+// remove ambos. Posição fixa escapa ao clipping da lista com scroll.
 export function EppoChip({
   code,
+  family,
   vocab,
   onSet,
 }: {
   code: string;
+  family: string;
   vocab: EppoEntry[];
-  onSet: (code: string) => void;
+  onSet: (code: string, family: string) => void;
 }) {
   const [open, setOpen] = useState(false);
-  const [q, setQ] = useState("");
+  const [codeField, setCodeField] = useState("");
+  const [famField, setFamField] = useState("");
+  const [showSug, setShowSug] = useState(false);
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
   const wrapRef = useRef<HTMLSpanElement>(null);
   const popRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
-  const matches = useMemo(() => searchEppo(vocab, q, 8), [vocab, q]);
+  // o campo de código É a pesquisa: procura por código OU nome na base
+  const matches = useMemo(() => searchEppo(vocab, codeField, 6), [vocab, codeField]);
 
+  // ao abrir: posiciona e sincroniza os campos com os valores atuais
   useEffect(() => {
     if (!open) {
       setPos(null);
       return;
     }
+    setCodeField(code);
+    setFamField(family);
+    setShowSug(false);
     const el = triggerRef.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
-    const W = 240, H = 280, gap = 6;
+    const W = 252, H = 300, gap = 6;
     let left = Math.min(r.left, window.innerWidth - W - 8);
     left = Math.max(8, left);
     let top = r.bottom + gap;
     if (top + H > window.innerHeight - 8) top = Math.max(8, r.top - H - gap);
     setPos({ top, left });
-    setQ("");
-  }, [open]);
+  }, [open, code, family]);
 
   useEffect(() => {
     if (!open) return;
@@ -145,6 +155,28 @@ export function EppoChip({
     return () => window.removeEventListener("mousedown", h);
   }, [open]);
 
+  // escrever no campo de código: procura na base; se bater EXATO num código,
+  // preenche a família automaticamente. Senão, escreve-se a família à mão.
+  const onCodeChange = (v: string) => {
+    setCodeField(v);
+    setShowSug(true);
+    const exact = vocab.find((e) => e.code.toLowerCase() === v.trim().toLowerCase());
+    if (exact) setFamField(exact.family ?? "");
+  };
+  const pick = (e: EppoEntry) => {
+    setCodeField(e.code);
+    setFamField(e.family ?? "");
+    setShowSug(false);
+  };
+  const save = () => {
+    onSet(codeField.trim().toUpperCase(), famField.trim());
+    setOpen(false);
+  };
+  const clearAll = () => {
+    onSet("", "");
+    setOpen(false);
+  };
+
   return (
     <span className="eppo-chip-wrap" ref={wrapRef} onClick={(e) => e.stopPropagation()}>
       <button
@@ -152,7 +184,7 @@ export function EppoChip({
         type="button"
         className={`eppo-chip ${code ? "has" : "empty"} mono`}
         onClick={() => setOpen((o) => !o)}
-        title={code ? `Código EPPO: ${code} — clicar para mudar` : "Atribuir código EPPO"}
+        title={code ? `EPPO ${code}${family ? ` · ${family}` : ""} — clicar para editar` : "Atribuir código EPPO / família"}
       >
         {code || "+ código"}
       </button>
@@ -164,45 +196,183 @@ export function EppoChip({
           style={{ top: pos.top, left: pos.left }}
           onClick={(e) => e.stopPropagation()}
         >
-          <input
-            autoFocus
-            value={q}
-            placeholder="procurar nome ou código…"
-            spellCheck={false}
-            onChange={(e) => setQ(e.target.value)}
-          />
-          <div className="eppo-pop-list">
-            {matches.length === 0 && <div className="eppo-pop-empty">Sem correspondências.</div>}
-            {matches.map((e) => (
-              <button
-                key={e.code}
-                type="button"
-                className={e.code === code ? "on" : ""}
-                onClick={() => {
-                  onSet(e.code);
-                  setOpen(false);
-                }}
-              >
-                <span className="eppo-code mono">{e.code}</span>
-                <span className="eppo-name">{e.name}</span>
-              </button>
-            ))}
+          <div className="eppo-pop-h">código EPPO</div>
+          <div className="eppo-code-field">
+            <input
+              autoFocus
+              className="mono"
+              value={codeField}
+              placeholder="ex.: CHEAL (ou procurar por nome)"
+              spellCheck={false}
+              onChange={(e) => onCodeChange(e.target.value)}
+              onFocus={() => setShowSug(true)}
+            />
+            {showSug && codeField.trim() && matches.length > 0 && (
+              <div className="eppo-pop-list">
+                {matches.map((e) => (
+                  <button key={e.code} type="button" onClick={() => pick(e)}>
+                    <span className="eppo-code mono">{e.code}</span>
+                    <span className="eppo-name">{e.name}</span>
+                    {e.family && <span className="eppo-common">{e.family}</span>}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
-          {code && (
-            <button
-              type="button"
-              className="eppo-pop-clear"
-              onClick={() => {
-                onSet("");
-                setOpen(false);
-              }}
-            >
-              Limpar código
+          <div className="eppo-pop-h">família</div>
+          <input
+            value={famField}
+            placeholder="ex.: Amaranthaceae"
+            spellCheck={false}
+            onChange={(e) => setFamField(e.target.value)}
+          />
+          <button className="eppo-pop-save" type="button" onClick={save}>
+            Guardar
+          </button>
+          {(code || family) && (
+            <button type="button" className="eppo-pop-clear" onClick={clearAll}>
+              Limpar código e família
             </button>
           )}
         </div>,
         document.body,
       )}
     </span>
+  );
+}
+
+// Criação CENTRALIZADA de espécie: um botão "Adicionar espécie" abre um formulário
+// com Nome, Código EPPO e Família. Mesma lógica: pesquisa na base por nome/código
+// (escolher preenche os três), código exato autocompleta a família, e o que não
+// existir escreve-se à mão. Nome é obrigatório; código/família opcionais.
+export function AddSpecies({
+  vocab,
+  onAdd,
+}: {
+  vocab: EppoEntry[];
+  onAdd: (name: string, code: string, family: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [code, setCode] = useState("");
+  const [family, setFamily] = useState("");
+  const [showSug, setShowSug] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const matches = useMemo(() => searchEppo(vocab, name, 6), [vocab, name]);
+
+  const reset = () => {
+    setName("");
+    setCode("");
+    setFamily("");
+    setShowSug(false);
+  };
+  const close = () => {
+    setOpen(false);
+    reset();
+  };
+
+  useEffect(() => {
+    if (!open) return;
+    const h = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) close();
+    };
+    window.addEventListener("mousedown", h);
+    return () => window.removeEventListener("mousedown", h);
+  }, [open]);
+
+  const pick = (e: EppoEntry) => {
+    setName(e.name);
+    setCode(e.code);
+    setFamily(e.family ?? "");
+    setShowSug(false);
+  };
+  const onNameChange = (v: string) => {
+    setName(v);
+    setShowSug(true);
+    const exact = vocab.find((e) => e.name.toLowerCase() === v.trim().toLowerCase());
+    if (exact) {
+      setCode(exact.code);
+      setFamily(exact.family ?? "");
+    }
+  };
+  const onCodeChange = (v: string) => {
+    setCode(v);
+    const exact = vocab.find((e) => e.code.toLowerCase() === v.trim().toLowerCase());
+    if (exact) {
+      setFamily(exact.family ?? "");
+      if (!name.trim()) setName(exact.name);
+    }
+  };
+  const submit = () => {
+    const t = name.trim();
+    if (!t) return;
+    onAdd(t, code.trim().toUpperCase(), family.trim());
+    close();
+  };
+
+  if (!open) {
+    return (
+      <button className="add-species-btn" onClick={() => setOpen(true)}>
+        + Adicionar espécie
+      </button>
+    );
+  }
+
+  return (
+    <div className="add-species" ref={ref}>
+      <div className="as-field">
+        <label>Nome</label>
+        <div className="as-search">
+          <input
+            autoFocus
+            value={name}
+            placeholder="nome científico ou comum…"
+            spellCheck={false}
+            onChange={(e) => onNameChange(e.target.value)}
+            onFocus={() => setShowSug(true)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") submit();
+              else if (e.key === "Escape") close();
+            }}
+          />
+          {showSug && name.trim() && matches.length > 0 && (
+            <div className="eppo-pop-list">
+              {matches.map((e) => (
+                <button key={e.code} type="button" onClick={() => pick(e)}>
+                  <span className="eppo-code mono">{e.code}</span>
+                  <span className="eppo-name">{e.name}</span>
+                  {e.family && <span className="eppo-common">{e.family}</span>}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="as-field">
+        <label>Código EPPO</label>
+        <input
+          className="mono"
+          value={code}
+          placeholder="ex.: CHEAL (opcional)"
+          spellCheck={false}
+          onChange={(e) => onCodeChange(e.target.value)}
+        />
+      </div>
+      <div className="as-field">
+        <label>Família</label>
+        <input
+          value={family}
+          placeholder="ex.: Amaranthaceae (opcional)"
+          spellCheck={false}
+          onChange={(e) => setFamily(e.target.value)}
+        />
+      </div>
+      <div className="as-actions">
+        <button className="btn" onClick={close}>Cancelar</button>
+        <button className="btn assign" onClick={submit} disabled={!name.trim()}>
+          Adicionar
+        </button>
+      </div>
+    </div>
   );
 }

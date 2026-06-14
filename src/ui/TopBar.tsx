@@ -11,6 +11,7 @@ export function TopBar({
   nNoise,
   totalAnnotated,
   totalAll,
+  hideMeter,
   cloudState,
   cloudSaving,
   onCloudSave,
@@ -26,6 +27,8 @@ export function TopBar({
   nNoise: number;
   totalAnnotated: number;
   totalAll: number;
+  // esconde o medidor global (na tab Coleção a info já está no resumo)
+  hideMeter: boolean;
   cloudState: "synced" | "pending" | "none";
   cloudSaving: boolean;
   onCloudSave: () => void;
@@ -124,7 +127,7 @@ export function TopBar({
 
       <div className="spacer" />
 
-      <div className="global-meter">
+      <div className={`global-meter ${hideMeter ? "is-hidden" : ""}`} aria-hidden={hideMeter}>
         <div className="gm-figures">
           <div className="gm-pct">
             <b>{pct.toFixed(2)}</b><span className="gm-pct-sign">%</span>

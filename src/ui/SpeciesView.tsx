@@ -1,11 +1,15 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import type { GroundTruth } from "../types";
 import { LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { Pagination } from "./bits";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
+import { CollectionOverview } from "./CollectionOverview";
 import { IconPencil, IconChevron, IconTrash } from "./icons";
+
+// rótulo para espécies sem código EPPO (logo, sem família conhecida)
+const SEM_FAMILIA = "Sem família";
 
 // densidade da grelha: lado mínimo do cartão + imagens por página
 const DENSITIES = [
@@ -34,6 +38,8 @@ export function SpeciesView({
   onRemove,
   onSetColor,
   eppoOf,
+  familyOf,
+  totalAll,
   thumbOf,
   clusterOf,
   onGoToCluster,
@@ -55,6 +61,8 @@ export function SpeciesView({
   onRemove: (l: string) => void;
   onSetColor: (l: string, hex: string) => void;
   eppoOf: (l: string) => string;
+  familyOf: (l: string) => string;
+  totalAll: number;
   thumbOf: (l: string) => string | null;
   clusterOf: (f: string) => number | null;
   onGoToCluster: (f: string) => void;
@@ -106,13 +114,46 @@ export function SpeciesView({
     return m;
   }, [groundTruth]);
 
-  // ordenação de display: alfabética (pt) ou por tamanho desc; Lixo fica no fim
+  // ordenação de display: espécies AGRUPADAS POR FAMÍLIA botânica (a família
+  // engloba espécies). Dentro da família e entre famílias segue o sortBy
+  // (alfabético ou por população). "Sem família" (sem código EPPO) fica no fim,
+  // e o Lixo sempre no fim de tudo.
+  const famOf = (l: string) => familyOf(l) || SEM_FAMILIA;
   const displayLabels = useMemo(() => {
     const real = labels.filter((l) => l !== LIXO);
     if (sortBy === "alfabetica") real.sort((a, b) => a.localeCompare(b, "pt"));
     else real.sort((a, b) => (byLabel[b]?.length ?? 0) - (byLabel[a]?.length ?? 0));
-    return labels.includes(LIXO) ? [...real, LIXO] : real;
-  }, [labels, sortBy, byLabel]);
+
+    const famImages = new Map<string, number>();
+    for (const l of real) {
+      const f = familyOf(l) || SEM_FAMILIA;
+      famImages.set(f, (famImages.get(f) ?? 0) + (byLabel[l]?.length ?? 0));
+    }
+    const famNames = [...famImages.keys()].sort((a, b) => {
+      const aNo = a === SEM_FAMILIA, bNo = b === SEM_FAMILIA;
+      if (aNo !== bNo) return aNo ? 1 : -1; // "Sem família" por último
+      if (sortBy === "alfabetica") return a.localeCompare(b, "pt");
+      return (famImages.get(b) ?? 0) - (famImages.get(a) ?? 0);
+    });
+    const rank = new Map(famNames.map((n, i) => [n, i] as const));
+    const idx = new Map(real.map((l, i) => [l, i] as const));
+    const ordered = [...real].sort((a, b) => {
+      const ra = rank.get(familyOf(a) || SEM_FAMILIA)!;
+      const rb = rank.get(familyOf(b) || SEM_FAMILIA)!;
+      return ra !== rb ? ra - rb : idx.get(a)! - idx.get(b)!;
+    });
+    return labels.includes(LIXO) ? [...ordered, LIXO] : ordered;
+  }, [labels, sortBy, byLabel, familyOf]);
+
+  // nº de espécies por família (para o cabeçalho de cada família)
+  const famSpeciesCount = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const l of labels) if (l !== LIXO) {
+      const f = familyOf(l) || SEM_FAMILIA;
+      m.set(f, (m.get(f) ?? 0) + 1);
+    }
+    return m;
+  }, [labels, familyOf]);
 
   // o Lixo vem incluído em `labels` (último); só conta como conteúdo se tiver imagens
   const isEmpty =
@@ -130,10 +171,31 @@ export function SpeciesView({
   }
 
   const den = DENSITIES[density];
-  const tocLabels = displayLabels.filter((l) => l !== LIXO || (byLabel[LIXO]?.length ?? 0) > 0);
+  // o índice lateral e a contagem "Espécies" são só de espécies — o Lixo fica de fora
+  const tocLabels = displayLabels.filter((l) => l !== LIXO);
 
   return (
     <div className="work-body sv" style={{ ["--card-min" as string]: `${den.min}px` }}>
+      {/* resumo da Coleção — panorama antes das fichas por espécie */}
+      <CollectionOverview
+        labels={labels}
+        groundTruth={groundTruth}
+        colorOf={colorOf}
+        familyOf={familyOf}
+        totalAll={totalAll}
+        onPick={(lbl) => {
+          setCollapsed((prev) => {
+            if (!prev.has(lbl)) return prev;
+            const n = new Set(prev);
+            n.delete(lbl);
+            return n;
+          });
+          requestAnimationFrame(() =>
+            blockRefs.current[lbl]?.scrollIntoView({ behavior: "smooth", block: "start" }),
+          );
+        }}
+      />
+
       {selection.size > 0 && (
         <div className="action-bar">
           <div className="sel-count has">{selection.size} selecionada(s)</div>
@@ -148,18 +210,24 @@ export function SpeciesView({
         </div>
       )}
 
+      <div className="section-head co-species-head">
+        <span className="sh-bar" />
+        <span className="sh-title">Espécies</span>
+        <span className="sh-count mono">{tocLabels.length}</span>
+      </div>
+
       {/* ferramentas da vista: ordenação + densidade */}
       <div className="sv-tools">
-        <span className="sv-tools-label">ordenar</span>
+        <span className="sv-tools-label">Ordenar</span>
         <div className="seg">
           <button className={sortBy === "alfabetica" ? "on" : ""} onClick={() => setSortBy("alfabetica")} title="Por ordem alfabética">
             A–Z
           </button>
           <button className={sortBy === "tamanho" ? "on" : ""} onClick={() => setSortBy("tamanho")} title="Mais imagens primeiro">
-            população
+            População
           </button>
         </div>
-        <span className="sv-tools-label">densidade</span>
+        <span className="sv-tools-label">Densidade</span>
         <div className="seg">
           {DENSITIES.map((d, i) => (
             <button key={i} className={density === i ? "on" : ""} onClick={() => setDensity(i)} title={d.label}>
@@ -186,10 +254,13 @@ export function SpeciesView({
         </div>
       )}
 
-      {displayLabels.map((lbl) => {
+      {displayLabels.map((lbl, i) => {
         const isLixo = lbl === LIXO;
         const files = byLabel[lbl] ?? [];
         if (isLixo && files.length === 0) return null; // sem lixo, sem bloco
+        // cabeçalho de família: aparece quando a família muda (espécies só)
+        const fam = isLixo ? "" : famOf(lbl);
+        const showFamHeader = !isLixo && (i === 0 || famOf(displayLabels[i - 1]) !== fam);
         const isCollapsed = collapsed.has(lbl);
         const totalPages = Math.max(1, Math.ceil(files.length / den.perPage));
         const page = speciesPage[lbl] ?? 0;
@@ -215,9 +286,18 @@ export function SpeciesView({
           });
 
         return (
+          <Fragment key={lbl}>
+            {showFamHeader && (
+              <div className="fam-divider">
+                <span className="fam-name">{fam}</span>
+                <span className="fam-meta mono">
+                  {famSpeciesCount.get(fam) ?? 0} {(famSpeciesCount.get(fam) ?? 0) === 1 ? "espécie" : "espécies"}
+                </span>
+                <span className="fam-line" />
+              </div>
+            )}
           <div
-            className="species-view-block"
-            key={lbl}
+            className={`species-view-block ${isLixo ? "svb-lixo-block" : ""}`}
             ref={(el) => {
               blockRefs.current[lbl] = el;
             }}
@@ -226,7 +306,7 @@ export function SpeciesView({
                 expande (os controlos lá dentro travam a propagação) */}
             <div
               className="svb-head svb-head-click"
-              style={{ background: `linear-gradient(90deg, ${tint(col, 0.13)}, rgba(0,0,0,0) 75%), var(--bg)` }}
+              style={isLixo ? undefined : { background: `linear-gradient(90deg, ${tint(col, 0.13)}, rgba(0,0,0,0) 75%), var(--bg)` }}
               onClick={toggleFold}
               title={isCollapsed ? "Expandir" : "Colapsar"}
             >
@@ -253,38 +333,46 @@ export function SpeciesView({
                 </button>
               )}
               {isLixo ? (
-                <span className="sw" style={{ background: col }} title="Categoria reservada — cor fixa" />
+                <span className="svb-lixo-mark" style={{ color: "var(--danger)" }} title="Categoria reservada — não é uma espécie">
+                  <IconTrash size={17} />
+                </span>
               ) : (
                 <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
               )}
               <h3>
-                <span className="svb-name" style={{ color: col }}>{lbl}</span>
-                {!isLixo && eppoOf(lbl) && (
-                  <span className="eppo-chip has mono" title={`Código EPPO: ${eppoOf(lbl)}`}>
-                    {eppoOf(lbl)}
+                <span className="svb-name" style={{ color: isLixo ? "var(--danger)" : col }}>{lbl}</span>
+                {isLixo ? (
+                  <span className="svb-lixo-note">
+                    categoria reservada{files.length > 0 ? ` · ${files.length}` : ""}
                   </span>
-                )}
-                {files.length > 0 && (
-                  <span className="svb-pop" title="população desta espécie (clusters da config atual)">
-                    {files.length} {files.length === 1 ? "imagem presente" : "imagens presentes"} em{" "}
-                    {nClusters} {nClusters === 1 ? "cluster" : "clusters"}
-                  </span>
-                )}
-                {!isLixo && (
-                  <button
-                    className="svb-edit"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onRename(lbl);
-                    }}
-                    title="Renomear espécie"
-                  >
-                    <IconPencil size={15} />
-                  </button>
+                ) : (
+                  <>
+                    {eppoOf(lbl) && (
+                      <span className="eppo-chip has mono" title={`Código EPPO: ${eppoOf(lbl)}`}>
+                        {eppoOf(lbl)}
+                      </span>
+                    )}
+                    {files.length > 0 && (
+                      <span className="svb-pop" title="população desta espécie (clusters da config atual)">
+                        {files.length} {files.length === 1 ? "imagem presente" : "imagens presentes"} em{" "}
+                        {nClusters} {nClusters === 1 ? "cluster" : "clusters"}
+                      </span>
+                    )}
+                    <button
+                      className="svb-edit"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onRename(lbl);
+                      }}
+                      title="Renomear espécie"
+                    >
+                      <IconPencil size={15} />
+                    </button>
+                  </>
                 )}
               </h3>
               {/* histograma interativo: top 3 clusters com mais imagens desta espécie */}
-              {top3.length > 0 && (
+              {!isLixo && top3.length > 0 && (
                 <div className="svb-hist">
                   {top3.map(([cid, n]) => (
                     <button
@@ -361,6 +449,7 @@ export function SpeciesView({
               </>
             )}
           </div>
+          </Fragment>
         );
       })}
     </div>

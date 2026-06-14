@@ -1,51 +1,43 @@
-import { useMemo, useState } from "react";
-import type { GroundTruth } from "../types";
+import { useState } from "react";
 import type { EppoEntry } from "../eppo";
-import { LIXO, LIXO_COLOR } from "../colors";
+import { LIXO } from "../colors";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
-import { EppoCombobox, EppoChip } from "./EppoInput";
+import { AddSpecies, EppoChip } from "./EppoInput";
 import { IconPencil, IconTrash } from "./icons";
 
 export function SpeciesPanel({
   labels,
-  groundTruth,
   colorOf,
   thumbOf,
   activeSpecies,
   eppoVocab,
   eppoOf,
+  familyOf,
   onGoToSpecies,
   onAdd,
   onRename,
   onReorder,
   onSetColor,
-  onSetEppo,
+  onSetTaxon,
 }: {
   labels: string[];
-  groundTruth: GroundTruth;
   colorOf: (l: string) => string;
   thumbOf: (l: string) => string | null;
   activeSpecies: string;
   eppoVocab: EppoEntry[];
   eppoOf: (l: string) => string;
+  familyOf: (l: string) => string;
   onGoToSpecies: (l: string) => void;
-  onAdd: (name: string, code?: string) => void;
+  onAdd: (name: string, code?: string, family?: string) => void;
   onRename: (l: string) => void;
   onReorder: (label: string, target: string) => void;
   onSetColor: (l: string, hex: string) => void;
-  onSetEppo: (l: string, code: string) => void;
+  onSetTaxon: (l: string, code: string, family: string) => void;
 }) {
   // arrastar-e-largar para reordenar (a ordem reflete-se nos atalhos 1-9 e na auditoria)
   const [dragging, setDragging] = useState<string | null>(null);
   const [dragOver, setDragOver] = useState<string | null>(null);
-
-  // contagem por espécie (uma passagem)
-  const counts = useMemo(() => {
-    const c: Record<string, number> = {};
-    for (const v of Object.values(groundTruth)) c[v] = (c[v] ?? 0) + 1;
-    return c;
-  }, [groundTruth]);
 
   return (
     <aside className="species-panel">
@@ -54,7 +46,7 @@ export function SpeciesPanel({
           <h2>Espécies</h2>
           <span className="sp-n mono">{labels.length}</span>
         </div>
-        <EppoCombobox vocab={eppoVocab} onCommit={onAdd} />
+        <AddSpecies vocab={eppoVocab} onAdd={onAdd} />
       </div>
 
       <div className="sp-list">
@@ -70,6 +62,7 @@ export function SpeciesPanel({
           return (
             <div
               key={lbl}
+              data-species={lbl}
               className={`sp-row ${lbl === activeSpecies ? "active" : ""} ${dragging === lbl ? "dragging" : ""} ${
                 dragOver === lbl && dragging && dragging !== lbl ? "drag-over" : ""
               }`}
@@ -98,9 +91,16 @@ export function SpeciesPanel({
             >
               <span className="sp-key">{i < 9 ? i + 1 : "·"}</span>
               <SpeciesThumb file={thumbOf(lbl)} size={30} />
-              <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
-              <span className="sp-name">{lbl}</span>
-              <EppoChip code={eppoOf(lbl)} vocab={eppoVocab} onSet={(code) => onSetEppo(lbl, code)} />
+              {/* nome completo numa linha; código EPPO por baixo, mais pequeno */}
+              <div className="sp-id">
+                <span className="sp-name">{lbl}</span>
+                <EppoChip
+                  code={eppoOf(lbl)}
+                  family={familyOf(lbl)}
+                  vocab={eppoVocab}
+                  onSet={(code, family) => onSetTaxon(lbl, code, family)}
+                />
+              </div>
               <button
                 className="sp-edit"
                 onClick={(e) => {
@@ -111,7 +111,8 @@ export function SpeciesPanel({
               >
                 <IconPencil size={13} />
               </button>
-              <span className="sp-count mono">{counts[lbl] ?? 0}</span>
+              {/* cor à direita (swatch alinhado na margem) */}
+              <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
             </div>
           );
         })}
@@ -119,16 +120,16 @@ export function SpeciesPanel({
 
       {/* categoria reservada — fixa, sem renomear/cor/remover */}
       <div
+        data-species={LIXO}
         className={`sp-lixo ${activeSpecies === LIXO ? "active" : ""}`}
         onClick={() => onGoToSpecies(LIXO)}
         title="Crops inutilizáveis (desfocados, fragmentos, não-plantas). Tecla 0 atribui a selecção."
       >
         <span className="sp-key">0</span>
-        <span className="sp-lixo-icon" style={{ color: LIXO_COLOR }}>
+        <span className="sp-lixo-icon" style={{ color: "var(--danger)" }}>
           <IconTrash size={15} />
         </span>
-        <span className="sp-name" style={{ color: LIXO_COLOR }}>{LIXO}</span>
-        <span className="sp-count mono">{counts[LIXO] ?? 0}</span>
+        <span className="sp-name" style={{ color: "var(--danger)" }}>{LIXO}</span>
       </div>
 
     </aside>

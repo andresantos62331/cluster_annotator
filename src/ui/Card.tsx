@@ -15,6 +15,7 @@ export const Card = memo(function Card({
   index = 0,
   raised = false,
   raiseColor,
+  hidden = false,
   sourceClusterId,
   onGoToCluster,
   onToggle,
@@ -28,6 +29,8 @@ export const Card = memo(function Card({
   // levantado (ex.: hover no histograma destaca as imagens desse cluster)
   raised?: boolean;
   raiseColor?: string;
+  // escondido mas mantendo o espaço (cartão a "voar" para a espécie atribuída)
+  hidden?: boolean;
   sourceClusterId?: number;
   onGoToCluster?: () => void;
   onToggle: () => void;
@@ -42,6 +45,7 @@ export const Card = memo(function Card({
         animationDelay: `${Math.min(index, 24) * 14}ms`,
         ...(labeled ? ({ ["--lbl" as string]: color }) : {}),
         ...(raised && raiseColor ? ({ ["--raise" as string]: raiseColor }) : {}),
+        ...(hidden ? { visibility: "hidden" as const } : {}),
       }}
       onClick={onToggle}
       title={filename}

@@ -71,6 +71,25 @@ no browser. Estes formatos são contratos: o pipeline a montante produz-os e o
 investigador consome o output. Mudar formatos implica mudar scripts Python e o
 Worker — possível, mas tem de ser combinado, não assumido.
 
+> **Actualização 2026-06-14 (taxonomia EPPO + sync).** O modelo cresceu; o que
+> mudou face ao descrito abaixo:
+> - **Códigos EPPO + família por espécie.** Vocabulário offline curado em
+>   `/<base>/eppo.json` (`[{code,name,family,common_pt}]`). localStorage ganhou
+>   `tese3.species_eppo` (`{label→code}`) e `tese3.species_family` (`{label→family}`,
+>   override; senão a família deriva do código via o vocabulário). São auxílio +
+>   output: **entram** no export/cloud (ao contrário das cores).
+> - **Export.** CSV passou a `filename,label,eppo_code`. JSON ganhou os mapas
+>   `eppo` e `family` (além de `labels` e `ground_truth`). Import lê-os (ausência
+>   = retrocompatível).
+> - **Cloud bidirecional.** Além do `POST /api/save`, há `GET /api/load?k=<KEY>`
+>   (mesma SAVE_KEY) que devolve o `ground_truth.json` da branch `data`. No arranque
+>   a app puxa (auto se local vazio; senão banner). Há **autosave** (debounce 20s +
+>   flush ao esconder o separador).
+> - **Tabs.** A tab central deixou de se chamar "Espécies" e passou a **"Coleção"**
+>   (resumo/dashboard + fichas agrupadas por família); o painel direito continua
+>   "Espécies". O **Lixo** é uma categoria reservada (entra no ground truth como
+>   etiqueta "Lixo") mas apresenta-se como caixote distinto, nunca como espécie.
+
 ### 3.1 Imagens (servidas como assets estáticos)
 - `/<base>/crops/<filename>` — **thumbnail 224×224** (letterbox). ~27 MB, 3504
   ficheiros. Usado nas grelhas (cards).

@@ -32,17 +32,22 @@ export function Ring({
   stroke = 4,
   color = "var(--accent)",
   showLabel = true,
+  decimals,
 }: {
   pct: number;
   size?: number;
   stroke?: number;
   color?: string;
   showLabel?: boolean;
+  // se definido, o rótulo mostra a percentagem com N casas decimais + "%"
+  decimals?: number;
 }) {
   const r = (size - stroke) / 2;
   const c = 2 * Math.PI * r;
   const off = c * (1 - Math.max(0, Math.min(1, pct / 100)));
   const done = pct >= 100;
+  const labelText = done ? "✓" : decimals != null ? `${pct.toFixed(decimals)}%` : `${Math.round(pct)}`;
+  const labelFactor = decimals != null ? 0.2 : 0.26;
   return (
     <div className="ring" style={{ width: size, height: size }}>
       <svg width={size} height={size}>
@@ -61,8 +66,8 @@ export function Ring({
         />
       </svg>
       {showLabel && (
-        <span className="ring-label" style={{ fontSize: size * 0.26, color: done ? "var(--leaf)" : "var(--ink)" }}>
-          {done ? "✓" : Math.round(pct)}
+        <span className="ring-label" style={{ fontSize: size * labelFactor, color: done ? "var(--leaf)" : "var(--ink)" }}>
+          {labelText}
         </span>
       )}
     </div>
