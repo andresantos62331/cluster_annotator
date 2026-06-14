@@ -1,26 +1,17 @@
 {
-  "exported_at": "2026-06-13T18:52:31.831Z",
+  "exported_at": "2026-06-14T02:25:56.924Z",
   "labels": [
     "especie1",
     "fsdfsdfs",
     "teste",
     "papoila",
-    "asdfsad",
-    "asdads",
     "aaaa",
-    "sdafsdaf",
-    "dfsfs",
-    "sdfsdf",
-    "sdffs",
-    "fsdfs",
-    "fsdfsfsdfs",
-    "asdasd",
-    "wdawdsa",
     "Chenopodium album"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL"
   },
+  "family": {},
   "ground_truth": {
     "20220417_153105_planta_6.jpg": "especie1",
     "20220417_154415_planta_13.jpg": "especie1",
