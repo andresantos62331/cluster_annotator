@@ -1513,9 +1513,9 @@ filename,label,eppo_code
 20251110_151432_planta_2.jpg,Cyperus rotundus,CYPRO
 20251110_151432_planta_3.jpg,Amaranthus retroflexus,AMARE
 20251110_151432_planta_4.jpg,Amaranthus retroflexus,AMARE
-20251110_151432_planta_5.jpg,Echinochloa crus-galli,ECHCG
-20251110_151432_planta_6.jpg,Echinochloa crus-galli,ECHCG
-20251110_151432_planta_7.jpg,Echinochloa crus-galli,ECHCG
+20251110_151432_planta_5.jpg,,
+20251110_151432_planta_6.jpg,,
+20251110_151432_planta_7.jpg,,
 20251110_151432_planta_8.jpg,,
 20251110_151450_planta_0.jpg,,
 20251110_151502_planta_0.jpg,,
@@ -2163,7 +2163,7 @@ filename,label,eppo_code
 20251110_152751_planta_6.jpg,,
 20251110_152751_planta_7.jpg,,
 20251110_152751_planta_8.jpg,,
-20251110_152757_planta_0.jpg,Echinochloa crus-galli,ECHCG
+20251110_152757_planta_0.jpg,,
 20251110_152757_planta_1.jpg,Amaranthus retroflexus,AMARE
 20251110_152757_planta_2.jpg,,
 20251110_152757_planta_3.jpg,,
@@ -2947,8 +2947,8 @@ IMG_20220501_165727_planta_0.jpg,,
 IMG_20220501_165749_planta_0.jpg,,
 IMG_20220501_165756_planta_0.jpg,,
 IMG_20220501_165800_planta_0.jpg,,
-IMG_20220501_165804_planta_0.jpg,Echinochloa crus-galli,ECHCG
-IMG_20220501_165807_planta_0.jpg,Echinochloa crus-galli,ECHCG
+IMG_20220501_165804_planta_0.jpg,,
+IMG_20220501_165807_planta_0.jpg,,
 IMG_20220501_165818_planta_0.jpg,,
 IMG_20220501_165821_planta_0.jpg,,
 IMG_20220501_165823_planta_0.jpg,,
