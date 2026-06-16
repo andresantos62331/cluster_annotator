@@ -1,12 +1,12 @@
 {
-  "exported_at": "2026-06-16T15:46:48.302Z",
+  "exported_at": "2026-06-16T16:19:38.581Z",
   "labels": [
+    "Malva sylvestris",
     "Amaranthus retroflexus",
     "Cyperus rotundus",
-    "Echinochloa crus-galli",
     "Ambrosia artemisiifolia",
-    "Malva sylvestris",
-    "Polygonum aviculare"
+    "Polygonum aviculare",
+    "Echinochloa crus-galli"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -18,12 +18,8 @@
     "Polygonum aviculare": "POLAV"
   },
   "family": {
-    "Amaranthus retroflexus": "Amaranthaceae",
-    "Cyperus rotundus": "Cyperaceae",
-    "Echinochloa crus-galli": "Poaceae",
-    "Ambrosia artemisiifolia": "Asteraceae",
-    "Malva sylvestris": "Malvaceae",
-    "Polygonum aviculare": "Polygonaceae"
+    "Capsella bursa-pastoris": "Brassicaceae",
+    "Datura stramonium": "Solanaceae"
   },
   "ground_truth": {
     "20251110_151432_planta_1.jpg": "Cyperus rotundus",
