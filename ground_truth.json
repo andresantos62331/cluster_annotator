@@ -1,17 +1,20 @@
 {
-  "exported_at": "2026-06-16T13:48:39.055Z",
+  "exported_at": "2026-06-16T13:49:45.273Z",
   "labels": [
     "Amaranthus retroflexus",
-    "Cyperus rotundus"
+    "Cyperus rotundus",
+    "Echinochloa crus-galli"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
     "Amaranthus retroflexus": "AMARE",
-    "Cyperus rotundus": "CYPRO"
+    "Cyperus rotundus": "CYPRO",
+    "Echinochloa crus-galli": "ECHCG"
   },
   "family": {
     "Amaranthus retroflexus": "Amaranthaceae",
-    "Cyperus rotundus": "Cyperaceae"
+    "Cyperus rotundus": "Cyperaceae",
+    "Echinochloa crus-galli": "Poaceae"
   },
   "ground_truth": {
     "20251109_161938_planta_2.jpg": "Cyperus rotundus",
@@ -20,6 +23,10 @@
     "20251110_151432_planta_2.jpg": "Cyperus rotundus",
     "20251110_151432_planta_4.jpg": "Amaranthus retroflexus",
     "20251110_151432_planta_3.jpg": "Amaranthus retroflexus",
-    "20251110_152757_planta_1.jpg": "Amaranthus retroflexus"
+    "20251110_152757_planta_1.jpg": "Amaranthus retroflexus",
+    "20251110_151432_planta_5.jpg": "Echinochloa crus-galli",
+    "20251110_151432_planta_6.jpg": "Echinochloa crus-galli",
+    "20251110_151432_planta_7.jpg": "Echinochloa crus-galli",
+    "20251110_152757_planta_0.jpg": "Echinochloa crus-galli"
   }
 }
