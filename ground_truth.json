@@ -1,11 +1,12 @@
 {
-  "exported_at": "2026-06-16T15:41:30.641Z",
+  "exported_at": "2026-06-16T15:46:48.302Z",
   "labels": [
     "Amaranthus retroflexus",
     "Cyperus rotundus",
     "Echinochloa crus-galli",
     "Ambrosia artemisiifolia",
-    "Malva sylvestris"
+    "Malva sylvestris",
+    "Polygonum aviculare"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -13,14 +14,16 @@
     "Cyperus rotundus": "CYPRO",
     "Echinochloa crus-galli": "ECHCG",
     "Ambrosia artemisiifolia": "AMBEL",
-    "Malva sylvestris": "MALSI"
+    "Malva sylvestris": "MALSI",
+    "Polygonum aviculare": "POLAV"
   },
   "family": {
     "Amaranthus retroflexus": "Amaranthaceae",
     "Cyperus rotundus": "Cyperaceae",
     "Echinochloa crus-galli": "Poaceae",
     "Ambrosia artemisiifolia": "Asteraceae",
-    "Malva sylvestris": "Malvaceae"
+    "Malva sylvestris": "Malvaceae",
+    "Polygonum aviculare": "Polygonaceae"
   },
   "ground_truth": {
     "20251110_151432_planta_1.jpg": "Cyperus rotundus",
@@ -124,6 +127,16 @@
     "20251110_153547_planta_1.jpg": "Malva sylvestris",
     "20251110_153555_planta_0.jpg": "Malva sylvestris",
     "20251110_153557_planta_0.jpg": "Malva sylvestris",
-    "20251110_154040_planta_0.jpg": "Malva sylvestris"
+    "20251110_154040_planta_0.jpg": "Malva sylvestris",
+    "20220417_154420_planta_16.jpg": "Polygonum aviculare",
+    "20220417_154843_planta_2.jpg": "Polygonum aviculare",
+    "20220417_162347_planta_6.jpg": "Polygonum aviculare",
+    "20220417_161445_planta_0.jpg": "Polygonum aviculare",
+    "20220417_155157_planta_0.jpg": "Polygonum aviculare",
+    "20220417_162913_planta_1.jpg": "Polygonum aviculare",
+    "20220417_155228_planta_4.jpg": "Polygonum aviculare",
+    "20220417_163057_planta_6.jpg": "Polygonum aviculare",
+    "20220417_155541_planta_5.jpg": "Polygonum aviculare",
+    "20220417_163308_planta_1.jpg": "Polygonum aviculare"
   }
 }
