@@ -1,14 +1,25 @@
 {
-  "exported_at": "2026-06-14T12:19:08.741Z",
+  "exported_at": "2026-06-16T13:48:39.055Z",
   "labels": [
-    "Amaranthus retroflexus"
+    "Amaranthus retroflexus",
+    "Cyperus rotundus"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
-    "Amaranthus retroflexus": "AMARE"
+    "Amaranthus retroflexus": "AMARE",
+    "Cyperus rotundus": "CYPRO"
   },
   "family": {
-    "Amaranthus retroflexus": "Amaranthaceae"
+    "Amaranthus retroflexus": "Amaranthaceae",
+    "Cyperus rotundus": "Cyperaceae"
   },
-  "ground_truth": {}
+  "ground_truth": {
+    "20251109_161938_planta_2.jpg": "Cyperus rotundus",
+    "20251109_162246_planta_12.jpg": "Cyperus rotundus",
+    "20251110_151432_planta_1.jpg": "Cyperus rotundus",
+    "20251110_151432_planta_2.jpg": "Cyperus rotundus",
+    "20251110_151432_planta_4.jpg": "Amaranthus retroflexus",
+    "20251110_151432_planta_3.jpg": "Amaranthus retroflexus",
+    "20251110_152757_planta_1.jpg": "Amaranthus retroflexus"
+  }
 }
