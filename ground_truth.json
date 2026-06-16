@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-06-16T13:50:06.985Z",
+  "exported_at": "2026-06-16T13:50:37.356Z",
   "labels": [
     "Amaranthus retroflexus",
     "Cyperus rotundus",
@@ -17,8 +17,6 @@
     "Echinochloa crus-galli": "Poaceae"
   },
   "ground_truth": {
-    "20251109_161938_planta_2.jpg": "Cyperus rotundus",
-    "20251109_162246_planta_12.jpg": "Cyperus rotundus",
     "20251110_151432_planta_1.jpg": "Cyperus rotundus",
     "20251110_151432_planta_2.jpg": "Cyperus rotundus",
     "20251110_151432_planta_4.jpg": "Amaranthus retroflexus",
