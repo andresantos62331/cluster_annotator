@@ -1,9 +1,9 @@
 {
-  "exported_at": "2026-06-16T16:19:38.581Z",
+  "exported_at": "2026-06-30T15:48:15.032Z",
   "labels": [
     "Malva sylvestris",
-    "Amaranthus retroflexus",
     "Cyperus rotundus",
+    "Amaranthus retroflexus",
     "Ambrosia artemisiifolia",
     "Polygonum aviculare",
     "Echinochloa crus-galli"
@@ -18,8 +18,12 @@
     "Polygonum aviculare": "POLAV"
   },
   "family": {
-    "Capsella bursa-pastoris": "Brassicaceae",
-    "Datura stramonium": "Solanaceae"
+    "Amaranthus retroflexus": "Amaranthaceae",
+    "Cyperus rotundus": "Cyperaceae",
+    "Echinochloa crus-galli": "Poaceae",
+    "Ambrosia artemisiifolia": "Asteraceae",
+    "Malva sylvestris": "Malvaceae",
+    "Polygonum aviculare": "Polygonaceae"
   },
   "ground_truth": {
     "20251110_151432_planta_1.jpg": "Cyperus rotundus",
