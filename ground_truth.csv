@@ -40,9 +40,9 @@ filename,label,eppo_code
 20220417_141619_planta_4.jpg,,
 20220417_141619_planta_5.jpg,,
 20220417_141619_planta_6.jpg,,
-20220417_141751_planta_1.jpg,Echinochloa crus-galli,ECHCG
+20220417_141751_planta_1.jpg,,
 20220417_141751_planta_10.jpg,,
-20220417_141751_planta_12.jpg,Echinochloa crus-galli,ECHCG
+20220417_141751_planta_12.jpg,,
 20220417_141751_planta_13.jpg,,
 20220417_141751_planta_14.jpg,,
 20220417_141751_planta_15.jpg,,
@@ -51,7 +51,7 @@ filename,label,eppo_code
 20220417_141751_planta_4.jpg,,
 20220417_141837_planta_0.jpg,,
 20220417_141837_planta_1.jpg,,
-20220417_141837_planta_3.jpg,Echinochloa crus-galli,ECHCG
+20220417_141837_planta_3.jpg,,
 20220417_141837_planta_4.jpg,,
 20220417_141837_planta_5.jpg,,
 20220417_141837_planta_6.jpg,,
@@ -68,7 +68,7 @@ filename,label,eppo_code
 20220417_152137_planta_0.jpg,,
 20220417_152144_planta_1.jpg,,
 20220417_152204_planta_0.jpg,,
-20220417_152204_planta_1.jpg,Ambrosia artemisiifolia,AMBEL
+20220417_152204_planta_1.jpg,,
 20220417_152204_planta_2.jpg,,
 20220417_152217_planta_1.jpg,,
 20220417_152227_planta_2.jpg,,
@@ -237,7 +237,7 @@ filename,label,eppo_code
 20220417_153024_planta_1.jpg,,
 20220417_153035_planta_0.jpg,,
 20220417_153105_planta_0.jpg,,
-20220417_153105_planta_1.jpg,Echinochloa crus-galli,ECHCG
+20220417_153105_planta_1.jpg,,
 20220417_153105_planta_5.jpg,,
 20220417_153105_planta_6.jpg,,
 20220417_153123_planta_0.jpg,,
@@ -271,8 +271,8 @@ filename,label,eppo_code
 20220417_153805_planta_1.jpg,,
 20220417_153805_planta_10.jpg,,
 20220417_153805_planta_4.jpg,,
-20220417_153805_planta_5.jpg,Echinochloa crus-galli,ECHCG
-20220417_153805_planta_6.jpg,Echinochloa crus-galli,ECHCG
+20220417_153805_planta_5.jpg,,
+20220417_153805_planta_6.jpg,,
 20220417_153805_planta_7.jpg,,
 20220417_153805_planta_8.jpg,,
 20220417_153805_planta_9.jpg,,
@@ -310,7 +310,7 @@ filename,label,eppo_code
 20220417_154420_planta_12.jpg,,
 20220417_154420_planta_14.jpg,,
 20220417_154420_planta_15.jpg,,
-20220417_154420_planta_16.jpg,Polygonum aviculare,POLAV
+20220417_154420_planta_16.jpg,,
 20220417_154420_planta_2.jpg,,
 20220417_154420_planta_3.jpg,,
 20220417_154420_planta_4.jpg,,
@@ -394,7 +394,7 @@ filename,label,eppo_code
 20220417_154841_planta_1.jpg,,
 20220417_154843_planta_0.jpg,,
 20220417_154843_planta_1.jpg,,
-20220417_154843_planta_2.jpg,Polygonum aviculare,POLAV
+20220417_154843_planta_2.jpg,,
 20220417_154846_planta_0.jpg,,
 20220417_154849_planta_0.jpg,,
 20220417_154849_planta_1.jpg,Lixo,
@@ -449,7 +449,7 @@ filename,label,eppo_code
 20220417_155137_planta_1.jpg,,
 20220417_155147_planta_0.jpg,,
 20220417_155152_planta_0.jpg,,
-20220417_155157_planta_0.jpg,Polygonum aviculare,POLAV
+20220417_155157_planta_0.jpg,,
 20220417_155200_planta_0.jpg,,
 20220417_155200_planta_1.jpg,,
 20220417_155200_planta_3.jpg,,
@@ -461,13 +461,13 @@ filename,label,eppo_code
 20220417_155228_planta_0.jpg,,
 20220417_155228_planta_1.jpg,,
 20220417_155228_planta_3.jpg,,
-20220417_155228_planta_4.jpg,Polygonum aviculare,POLAV
+20220417_155228_planta_4.jpg,,
 20220417_155228_planta_5.jpg,,
 20220417_155541_planta_1.jpg,,
 20220417_155541_planta_2.jpg,,
 20220417_155541_planta_3.jpg,,
 20220417_155541_planta_4.jpg,,
-20220417_155541_planta_5.jpg,Polygonum aviculare,POLAV
+20220417_155541_planta_5.jpg,,
 20220417_155541_planta_6.jpg,,
 20220417_155541_planta_7.jpg,,
 20220417_155543_planta_1.jpg,,
@@ -737,7 +737,7 @@ filename,label,eppo_code
 20220417_161307_planta_5.jpg,,
 20220417_161307_planta_6.jpg,,
 20220417_161417_planta_0.jpg,,
-20220417_161445_planta_0.jpg,Polygonum aviculare,POLAV
+20220417_161445_planta_0.jpg,,
 20220417_161658_planta_0.jpg,,
 20220417_161702_planta_0.jpg,,
 20220417_161716_planta_0.jpg,,
@@ -844,7 +844,7 @@ filename,label,eppo_code
 20220417_162347_planta_0.jpg,,
 20220417_162347_planta_3.jpg,,
 20220417_162347_planta_4.jpg,,
-20220417_162347_planta_6.jpg,Polygonum aviculare,POLAV
+20220417_162347_planta_6.jpg,,
 20220417_162347_planta_9.jpg,,
 20220417_162355_planta_0.jpg,,
 20220417_162355_planta_1.jpg,,
@@ -879,7 +879,7 @@ filename,label,eppo_code
 20220417_162643_planta_3.jpg,,
 20220417_162643_planta_4.jpg,,
 20220417_162713_planta_2.jpg,,
-20220417_162719_planta_1.jpg,Echinochloa crus-galli,ECHCG
+20220417_162719_planta_1.jpg,,
 20220417_162719_planta_5.jpg,,
 20220417_162730_planta_0.jpg,,
 20220417_162730_planta_1.jpg,,
@@ -915,7 +915,7 @@ filename,label,eppo_code
 20220417_162904_planta_2.jpg,,
 20220417_162904_planta_3.jpg,,
 20220417_162904_planta_4.jpg,,
-20220417_162913_planta_1.jpg,Polygonum aviculare,POLAV
+20220417_162913_planta_1.jpg,,
 20220417_162925_planta_0.jpg,,
 20220417_162925_planta_4.jpg,,
 20220417_162925_planta_5.jpg,,
@@ -924,9 +924,9 @@ filename,label,eppo_code
 20220417_162934_planta_1.jpg,,
 20220417_162934_planta_3.jpg,,
 20220417_162934_planta_4.jpg,,
-20220417_162934_planta_5.jpg,Echinochloa crus-galli,ECHCG
+20220417_162934_planta_5.jpg,,
 20220417_162934_planta_6.jpg,,
-20220417_162943_planta_0.jpg,Echinochloa crus-galli,ECHCG
+20220417_162943_planta_0.jpg,,
 20220417_162946_planta_1.jpg,,
 20220417_163000_planta_1.jpg,,
 20220417_163000_planta_2.jpg,,
@@ -938,13 +938,13 @@ filename,label,eppo_code
 20220417_163001_planta_3.jpg,,
 20220417_163005_planta_0.jpg,,
 20220417_163005_planta_1.jpg,,
-20220417_163013_planta_0.jpg,Echinochloa crus-galli,ECHCG
+20220417_163013_planta_0.jpg,,
 20220417_163050_planta_0.jpg,,
 20220417_163050_planta_3.jpg,,
 20220417_163057_planta_2.jpg,,
 20220417_163057_planta_3.jpg,,
-20220417_163057_planta_5.jpg,Echinochloa crus-galli,ECHCG
-20220417_163057_planta_6.jpg,Polygonum aviculare,POLAV
+20220417_163057_planta_5.jpg,,
+20220417_163057_planta_6.jpg,,
 20220417_163121_planta_1.jpg,,
 20220417_163121_planta_5.jpg,,
 20220417_163121_planta_6.jpg,,
@@ -959,7 +959,7 @@ filename,label,eppo_code
 20220417_163243_planta_5.jpg,,
 20220417_163303_planta_6.jpg,,
 20220417_163308_planta_0.jpg,,
-20220417_163308_planta_1.jpg,Polygonum aviculare,POLAV
+20220417_163308_planta_1.jpg,,
 20220417_163312_planta_3.jpg,,
 20220417_163323_planta_0.jpg,,
 20220417_163323_planta_1.jpg,,
@@ -1083,18 +1083,18 @@ filename,label,eppo_code
 20220425_155027_planta_4.jpg,,
 20220425_155043_planta_10.jpg,,
 20220425_155043_planta_2.jpg,,
-20220425_155043_planta_3.jpg,Echinochloa crus-galli,ECHCG
+20220425_155043_planta_3.jpg,,
 20220425_155043_planta_6.jpg,,
 20220425_155043_planta_7.jpg,,
-20220425_155043_planta_8.jpg,Echinochloa crus-galli,ECHCG
+20220425_155043_planta_8.jpg,,
 20220425_155046_planta_11.jpg,,
 20220425_155046_planta_4.jpg,,
-20220425_155046_planta_6.jpg,Echinochloa crus-galli,ECHCG
+20220425_155046_planta_6.jpg,,
 20220425_155046_planta_8.jpg,,
-20220425_155046_planta_9.jpg,Echinochloa crus-galli,ECHCG
+20220425_155046_planta_9.jpg,,
 20220425_155116_planta_0.jpg,,
 20220425_155116_planta_1.jpg,,
-20220425_155116_planta_2.jpg,Echinochloa crus-galli,ECHCG
+20220425_155116_planta_2.jpg,,
 20220425_155151_planta_0.jpg,,
 20220425_155151_planta_1.jpg,,
 20220425_155151_planta_2.jpg,,
@@ -1120,9 +1120,9 @@ filename,label,eppo_code
 20220425_155703_planta_0.jpg,,
 20220425_155854_planta_0.jpg,,
 20220425_155948_planta_0.jpg,,
-20220425_155948_planta_1.jpg,Echinochloa crus-galli,ECHCG
+20220425_155948_planta_1.jpg,,
 20220425_155959_planta_0.jpg,,
-20220425_160027_planta_1.jpg,Echinochloa crus-galli,ECHCG
+20220425_160027_planta_1.jpg,,
 20220425_160121_planta_0.jpg,,
 20220425_160121_planta_1.jpg,,
 20220425_160121_planta_2.jpg,,
@@ -1134,8 +1134,8 @@ filename,label,eppo_code
 20220425_160423_planta_0.jpg,,
 20220425_160431_planta_0.jpg,,
 20220425_160446_planta_0.jpg,,
-20220425_160506_planta_3.jpg,Echinochloa crus-galli,ECHCG
-20220425_160514_planta_1.jpg,Echinochloa crus-galli,ECHCG
+20220425_160506_planta_3.jpg,,
+20220425_160514_planta_1.jpg,,
 20220425_160528_planta_0.jpg,,
 20220425_160528_planta_2.jpg,,
 20220425_160549_planta_0.jpg,,
@@ -1143,13 +1143,13 @@ filename,label,eppo_code
 20220425_160741_planta_0.jpg,,
 20220425_160757_planta_0.jpg,,
 20220425_160812_planta_0.jpg,,
-20220425_161041_planta_0.jpg,Echinochloa crus-galli,ECHCG
+20220425_161041_planta_0.jpg,,
 20220425_161041_planta_2.jpg,,
 20220425_161041_planta_4.jpg,,
-20220425_161050_planta_1.jpg,Echinochloa crus-galli,ECHCG
+20220425_161050_planta_1.jpg,,
 20220425_161050_planta_3.jpg,,
 20220425_161050_planta_5.jpg,,
-20220425_161155_planta_0.jpg,Echinochloa crus-galli,ECHCG
+20220425_161155_planta_0.jpg,,
 20220425_161155_planta_1.jpg,,
 20220425_161220_planta_0.jpg,,
 20220425_161250_planta_0.jpg,,
@@ -1182,7 +1182,7 @@ filename,label,eppo_code
 20220425_162041_planta_0.jpg,,
 20220425_162104_planta_0.jpg,,
 20220425_162130_planta_0.jpg,,
-20220425_162130_planta_2.jpg,Echinochloa crus-galli,ECHCG
+20220425_162130_planta_2.jpg,,
 20220425_162137_planta_0.jpg,,
 20220425_162144_planta_1.jpg,,
 20220425_162220_planta_0.jpg,,
@@ -1194,7 +1194,7 @@ filename,label,eppo_code
 20220425_162512_planta_0.jpg,,
 20220425_162512_planta_1.jpg,,
 20220425_162532_planta_1.jpg,,
-20220425_162623_planta_0.jpg,Ambrosia artemisiifolia,AMBEL
+20220425_162623_planta_0.jpg,,
 20220425_162630_planta_0.jpg,,
 20220425_162706_planta_0.jpg,,
 20220425_162733_planta_0.jpg,,
@@ -1226,7 +1226,7 @@ filename,label,eppo_code
 20220425_162912_planta_4.jpg,,
 20220425_162912_planta_6.jpg,,
 20220425_162942_planta_1.jpg,,
-20220425_162942_planta_3.jpg,Echinochloa crus-galli,ECHCG
+20220425_162942_planta_3.jpg,,
 20220425_162942_planta_4.jpg,,
 20220425_162942_planta_5.jpg,,
 20220425_162942_planta_6.jpg,,
@@ -1240,12 +1240,12 @@ filename,label,eppo_code
 20220425_163143_planta_2.jpg,,
 20220425_163143_planta_3.jpg,,
 20220425_163143_planta_6.jpg,,
-20220425_163253_planta_0.jpg,Echinochloa crus-galli,ECHCG
+20220425_163253_planta_0.jpg,,
 20220425_163253_planta_2.jpg,,
 20220425_163306_planta_0.jpg,,
-20220425_163306_planta_1.jpg,Echinochloa crus-galli,ECHCG
+20220425_163306_planta_1.jpg,,
 20220425_163306_planta_2.jpg,,
-20220425_163306_planta_3.jpg,Echinochloa crus-galli,ECHCG
+20220425_163306_planta_3.jpg,,
 20220425_163306_planta_4.jpg,,
 20220425_163330_planta_2.jpg,,
 20220425_163330_planta_3.jpg,,
@@ -1284,7 +1284,7 @@ filename,label,eppo_code
 20220425_164314_planta_1.jpg,,
 20220425_164314_planta_2.jpg,,
 20220425_164314_planta_3.jpg,,
-20220425_164314_planta_4.jpg,Echinochloa crus-galli,ECHCG
+20220425_164314_planta_4.jpg,,
 20220425_164314_planta_5.jpg,,
 20220425_164314_planta_6.jpg,,
 20220425_164325_planta_0.jpg,,
@@ -1346,7 +1346,7 @@ filename,label,eppo_code
 20251109_160958_planta_0.jpg,,
 20251109_161024_planta_0.jpg,,
 20251109_161912_planta_0.jpg,,
-20251109_161933_planta_0.jpg,Malva sylvestris,MALSI
+20251109_161933_planta_0.jpg,,
 20251109_161938_planta_0.jpg,,
 20251109_161938_planta_1.jpg,,
 20251109_161938_planta_2.jpg,,
@@ -1382,7 +1382,7 @@ filename,label,eppo_code
 20251109_162233_planta_19.jpg,,
 20251109_162233_planta_2.jpg,,
 20251109_162233_planta_20.jpg,,
-20251109_162233_planta_21.jpg,Malva sylvestris,MALSI
+20251109_162233_planta_21.jpg,,
 20251109_162233_planta_3.jpg,,
 20251109_162233_planta_4.jpg,,
 20251109_162233_planta_5.jpg,,
@@ -1405,7 +1405,7 @@ filename,label,eppo_code
 20251109_162246_planta_19.jpg,,
 20251109_162246_planta_2.jpg,,
 20251109_162246_planta_3.jpg,,
-20251109_162246_planta_4.jpg,Malva sylvestris,MALSI
+20251109_162246_planta_4.jpg,,
 20251109_162246_planta_5.jpg,,
 20251109_162246_planta_7.jpg,,
 20251109_162246_planta_8.jpg,,
@@ -1419,7 +1419,7 @@ filename,label,eppo_code
 20251109_162304_planta_3.jpg,,
 20251109_162304_planta_4.jpg,,
 20251109_162306_planta_0.jpg,,
-20251109_162306_planta_1.jpg,Malva sylvestris,MALSI
+20251109_162306_planta_1.jpg,,
 20251109_162306_planta_2.jpg,,
 20251109_162306_planta_3.jpg,,
 20251109_162306_planta_4.jpg,,
@@ -1477,7 +1477,7 @@ filename,label,eppo_code
 20251109_162455_planta_19.jpg,,
 20251109_162455_planta_2.jpg,,
 20251109_162455_planta_20.jpg,,
-20251109_162455_planta_21.jpg,Malva sylvestris,MALSI
+20251109_162455_planta_21.jpg,,
 20251109_162455_planta_22.jpg,,
 20251109_162455_planta_23.jpg,,
 20251109_162455_planta_24.jpg,,
@@ -1509,10 +1509,10 @@ filename,label,eppo_code
 20251110_151403_planta_9.jpg,,
 20251110_151408_planta_0.jpg,,
 20251110_151432_planta_0.jpg,,
-20251110_151432_planta_1.jpg,Cyperus rotundus,CYPRO
-20251110_151432_planta_2.jpg,Cyperus rotundus,CYPRO
-20251110_151432_planta_3.jpg,Amaranthus retroflexus,AMARE
-20251110_151432_planta_4.jpg,Amaranthus retroflexus,AMARE
+20251110_151432_planta_1.jpg,,
+20251110_151432_planta_2.jpg,,
+20251110_151432_planta_3.jpg,,
+20251110_151432_planta_4.jpg,,
 20251110_151432_planta_5.jpg,,
 20251110_151432_planta_6.jpg,,
 20251110_151432_planta_7.jpg,,
@@ -1521,7 +1521,7 @@ filename,label,eppo_code
 20251110_151502_planta_0.jpg,,
 20251110_151502_planta_1.jpg,,
 20251110_151502_planta_2.jpg,,
-20251110_151509_planta_0.jpg,Malva sylvestris,MALSI
+20251110_151509_planta_0.jpg,,
 20251110_151509_planta_1.jpg,,
 20251110_151514_planta_0.jpg,,
 20251110_151514_planta_1.jpg,,
@@ -1534,9 +1534,9 @@ filename,label,eppo_code
 20251110_151528_planta_0.jpg,,
 20251110_151528_planta_1.jpg,,
 20251110_151528_planta_2.jpg,,
-20251110_151528_planta_3.jpg,Malva sylvestris,MALSI
+20251110_151528_planta_3.jpg,,
 20251110_151528_planta_4.jpg,,
-20251110_151532_planta_0.jpg,Malva sylvestris,MALSI
+20251110_151532_planta_0.jpg,,
 20251110_151532_planta_1.jpg,,
 20251110_151532_planta_2.jpg,,
 20251110_151532_planta_3.jpg,,
@@ -1599,12 +1599,12 @@ filename,label,eppo_code
 20251110_151636_planta_0.jpg,,
 20251110_151636_planta_1.jpg,,
 20251110_151636_planta_2.jpg,,
-20251110_151636_planta_3.jpg,Malva sylvestris,MALSI
+20251110_151636_planta_3.jpg,,
 20251110_151639_planta_0.jpg,,
 20251110_151639_planta_1.jpg,,
 20251110_151639_planta_2.jpg,,
 20251110_151639_planta_3.jpg,,
-20251110_151639_planta_4.jpg,Malva sylvestris,MALSI
+20251110_151639_planta_4.jpg,,
 20251110_151641_planta_0.jpg,,
 20251110_151641_planta_1.jpg,,
 20251110_151641_planta_2.jpg,,
@@ -1645,7 +1645,7 @@ filename,label,eppo_code
 20251110_151655_planta_6.jpg,,
 20251110_151655_planta_7.jpg,,
 20251110_151655_planta_8.jpg,,
-20251110_151655_planta_9.jpg,Malva sylvestris,MALSI
+20251110_151655_planta_9.jpg,,
 20251110_151657_planta_0.jpg,,
 20251110_151657_planta_1.jpg,,
 20251110_151657_planta_2.jpg,,
@@ -1709,12 +1709,12 @@ filename,label,eppo_code
 20251110_151726_planta_0.jpg,,
 20251110_151726_planta_1.jpg,,
 20251110_151726_planta_2.jpg,,
-20251110_151726_planta_3.jpg,Malva sylvestris,MALSI
+20251110_151726_planta_3.jpg,,
 20251110_151726_planta_4.jpg,,
 20251110_151726_planta_5.jpg,,
 20251110_151726_planta_6.jpg,,
 20251110_151728_planta_0.jpg,,
-20251110_151728_planta_1.jpg,Malva sylvestris,MALSI
+20251110_151728_planta_1.jpg,,
 20251110_151728_planta_2.jpg,,
 20251110_151728_planta_3.jpg,,
 20251110_151728_planta_4.jpg,,
@@ -1740,15 +1740,15 @@ filename,label,eppo_code
 20251110_151746_planta_2.jpg,,
 20251110_151746_planta_3.jpg,,
 20251110_151746_planta_4.jpg,,
-20251110_151746_planta_5.jpg,Malva sylvestris,MALSI
+20251110_151746_planta_5.jpg,,
 20251110_151746_planta_6.jpg,,
 20251110_151746_planta_7.jpg,,
 20251110_151746_planta_8.jpg,,
 20251110_151746_planta_9.jpg,,
-20251110_151749_planta_0.jpg,Malva sylvestris,MALSI
+20251110_151749_planta_0.jpg,,
 20251110_151749_planta_1.jpg,,
 20251110_151749_planta_10.jpg,,
-20251110_151749_planta_11.jpg,Malva sylvestris,MALSI
+20251110_151749_planta_11.jpg,,
 20251110_151749_planta_12.jpg,,
 20251110_151749_planta_2.jpg,,
 20251110_151749_planta_4.jpg,,
@@ -1786,7 +1786,7 @@ filename,label,eppo_code
 20251110_151832_planta_2.jpg,,
 20251110_151837_planta_0.jpg,,
 20251110_151837_planta_1.jpg,,
-20251110_151837_planta_2.jpg,Malva sylvestris,MALSI
+20251110_151837_planta_2.jpg,,
 20251110_151837_planta_3.jpg,,
 20251110_151837_planta_4.jpg,,
 20251110_151837_planta_5.jpg,,
@@ -1798,7 +1798,7 @@ filename,label,eppo_code
 20251110_151858_planta_1.jpg,,
 20251110_151858_planta_2.jpg,,
 20251110_151858_planta_4.jpg,,
-20251110_151900_planta_0.jpg,Malva sylvestris,MALSI
+20251110_151900_planta_0.jpg,,
 20251110_151905_planta_0.jpg,,
 20251110_151905_planta_1.jpg,,
 20251110_151905_planta_2.jpg,,
@@ -1908,7 +1908,7 @@ filename,label,eppo_code
 20251110_152151_planta_6.jpg,,
 20251110_152151_planta_7.jpg,,
 20251110_152151_planta_8.jpg,,
-20251110_152155_planta_0.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152155_planta_0.jpg,,
 20251110_152155_planta_1.jpg,,
 20251110_152155_planta_2.jpg,,
 20251110_152200_planta_0.jpg,,
@@ -1922,7 +1922,7 @@ filename,label,eppo_code
 20251110_152204_planta_4.jpg,,
 20251110_152206_planta_1.jpg,,
 20251110_152210_planta_0.jpg,,
-20251110_152210_planta_1.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152210_planta_1.jpg,,
 20251110_152210_planta_2.jpg,,
 20251110_152214_planta_1.jpg,,
 20251110_152214_planta_2.jpg,,
@@ -1930,26 +1930,26 @@ filename,label,eppo_code
 20251110_152214_planta_4.jpg,,
 20251110_152216_planta_0.jpg,,
 20251110_152216_planta_1.jpg,,
-20251110_152216_planta_2.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152216_planta_2.jpg,,
 20251110_152216_planta_3.jpg,,
 20251110_152219_planta_0.jpg,,
 20251110_152219_planta_1.jpg,,
 20251110_152219_planta_2.jpg,,
 20251110_152221_planta_0.jpg,,
 20251110_152221_planta_1.jpg,,
-20251110_152221_planta_2.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152221_planta_2.jpg,,
 20251110_152221_planta_3.jpg,,
 20251110_152221_planta_4.jpg,,
-20251110_152222_planta_0.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152222_planta_0.jpg,,
 20251110_152222_planta_1.jpg,,
-20251110_152224_planta_0.jpg,Ambrosia artemisiifolia,AMBEL
-20251110_152224_planta_1.jpg,Ambrosia artemisiifolia,AMBEL
-20251110_152224_planta_2.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152224_planta_0.jpg,,
+20251110_152224_planta_1.jpg,,
+20251110_152224_planta_2.jpg,,
 20251110_152226_planta_0.jpg,,
 20251110_152226_planta_1.jpg,,
 20251110_152226_planta_2.jpg,,
 20251110_152226_planta_3.jpg,,
-20251110_152231_planta_0.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152231_planta_0.jpg,,
 20251110_152234_planta_0.jpg,,
 20251110_152234_planta_1.jpg,,
 20251110_152239_planta_0.jpg,,
@@ -1975,28 +1975,28 @@ filename,label,eppo_code
 20251110_152254_planta_4.jpg,,
 20251110_152254_planta_5.jpg,,
 20251110_152254_planta_6.jpg,,
-20251110_152258_planta_1.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152258_planta_1.jpg,,
 20251110_152304_planta_0.jpg,,
 20251110_152304_planta_1.jpg,,
 20251110_152304_planta_2.jpg,,
-20251110_152304_planta_3.jpg,Ambrosia artemisiifolia,AMBEL
-20251110_152304_planta_4.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152304_planta_3.jpg,,
+20251110_152304_planta_4.jpg,,
 20251110_152309_planta_0.jpg,,
 20251110_152312_planta_1.jpg,,
 20251110_152312_planta_2.jpg,,
 20251110_152316_planta_0.jpg,,
 20251110_152316_planta_10.jpg,,
-20251110_152316_planta_4.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152316_planta_4.jpg,,
 20251110_152316_planta_5.jpg,,
 20251110_152316_planta_6.jpg,,
 20251110_152316_planta_7.jpg,,
 20251110_152316_planta_8.jpg,,
 20251110_152316_planta_9.jpg,,
-20251110_152318_planta_0.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152318_planta_0.jpg,,
 20251110_152318_planta_2.jpg,,
 20251110_152318_planta_4.jpg,,
 20251110_152318_planta_5.jpg,,
-20251110_152318_planta_6.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152318_planta_6.jpg,,
 20251110_152327_planta_1.jpg,,
 20251110_152327_planta_2.jpg,,
 20251110_152327_planta_4.jpg,,
@@ -2011,7 +2011,7 @@ filename,label,eppo_code
 20251110_152330_planta_8.jpg,,
 20251110_152330_planta_9.jpg,,
 20251110_152334_planta_1.jpg,,
-20251110_152334_planta_2.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152334_planta_2.jpg,,
 20251110_152334_planta_3.jpg,,
 20251110_152334_planta_4.jpg,,
 20251110_152338_planta_1.jpg,,
@@ -2025,7 +2025,7 @@ filename,label,eppo_code
 20251110_152344_planta_2.jpg,,
 20251110_152344_planta_3.jpg,,
 20251110_152350_planta_0.jpg,,
-20251110_152350_planta_1.jpg,Malva sylvestris,MALSI
+20251110_152350_planta_1.jpg,,
 20251110_152350_planta_2.jpg,,
 20251110_152350_planta_3.jpg,,
 20251110_152350_planta_4.jpg,,
@@ -2040,8 +2040,8 @@ filename,label,eppo_code
 20251110_152408_planta_1.jpg,,
 20251110_152408_planta_2.jpg,,
 20251110_152408_planta_3.jpg,,
-20251110_152408_planta_4.jpg,Ambrosia artemisiifolia,AMBEL
-20251110_152409_planta_1.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152408_planta_4.jpg,,
+20251110_152409_planta_1.jpg,,
 20251110_152409_planta_2.jpg,,
 20251110_152417_planta_0.jpg,,
 20251110_152417_planta_2.jpg,,
@@ -2089,14 +2089,14 @@ filename,label,eppo_code
 20251110_152508_planta_1.jpg,,
 20251110_152508_planta_2.jpg,,
 20251110_152508_planta_3.jpg,,
-20251110_152508_planta_5.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152508_planta_5.jpg,,
 20251110_152508_planta_6.jpg,,
 20251110_152508_planta_7.jpg,,
 20251110_152512_planta_0.jpg,,
 20251110_152512_planta_1.jpg,,
 20251110_152512_planta_10.jpg,,
 20251110_152512_planta_12.jpg,,
-20251110_152512_planta_2.jpg,Malva sylvestris,MALSI
+20251110_152512_planta_2.jpg,,
 20251110_152512_planta_3.jpg,,
 20251110_152512_planta_4.jpg,,
 20251110_152512_planta_5.jpg,,
@@ -2112,11 +2112,11 @@ filename,label,eppo_code
 20251110_152559_planta_0.jpg,,
 20251110_152559_planta_1.jpg,,
 20251110_152559_planta_2.jpg,,
-20251110_152559_planta_3.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152559_planta_3.jpg,,
 20251110_152559_planta_4.jpg,,
 20251110_152601_planta_0.jpg,,
 20251110_152601_planta_1.jpg,,
-20251110_152607_planta_0.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152607_planta_0.jpg,,
 20251110_152607_planta_2.jpg,,
 20251110_152607_planta_3.jpg,,
 20251110_152620_planta_0.jpg,,
@@ -2164,7 +2164,7 @@ filename,label,eppo_code
 20251110_152751_planta_7.jpg,,
 20251110_152751_planta_8.jpg,,
 20251110_152757_planta_0.jpg,,
-20251110_152757_planta_1.jpg,Amaranthus retroflexus,AMARE
+20251110_152757_planta_1.jpg,,
 20251110_152757_planta_2.jpg,,
 20251110_152757_planta_3.jpg,,
 20251110_152757_planta_4.jpg,,
@@ -2183,8 +2183,8 @@ filename,label,eppo_code
 20251110_152825_planta_1.jpg,,
 20251110_152825_planta_2.jpg,,
 20251110_152828_planta_0.jpg,,
-20251110_152828_planta_1.jpg,Ambrosia artemisiifolia,AMBEL
-20251110_152828_planta_2.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152828_planta_1.jpg,,
+20251110_152828_planta_2.jpg,,
 20251110_152831_planta_0.jpg,,
 20251110_152831_planta_1.jpg,,
 20251110_152831_planta_2.jpg,,
@@ -2259,7 +2259,7 @@ filename,label,eppo_code
 20251110_152908_planta_1.jpg,,
 20251110_152908_planta_2.jpg,,
 20251110_152918_planta_0.jpg,,
-20251110_152918_planta_1.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_152918_planta_1.jpg,,
 20251110_152922_planta_0.jpg,,
 20251110_152926_planta_1.jpg,,
 20251110_152926_planta_2.jpg,,
@@ -2285,10 +2285,10 @@ filename,label,eppo_code
 20251110_153005_planta_2.jpg,,
 20251110_153005_planta_4.jpg,,
 20251110_153005_planta_5.jpg,,
-20251110_153005_planta_6.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_153005_planta_6.jpg,,
 20251110_153005_planta_7.jpg,,
 20251110_153005_planta_8.jpg,,
-20251110_153005_planta_9.jpg,Malva sylvestris,MALSI
+20251110_153005_planta_9.jpg,,
 20251110_153017_planta_0.jpg,,
 20251110_153017_planta_2.jpg,,
 20251110_153017_planta_3.jpg,,
@@ -2346,7 +2346,7 @@ filename,label,eppo_code
 20251110_153146_planta_0.jpg,,
 20251110_153146_planta_1.jpg,,
 20251110_153148_planta_0.jpg,,
-20251110_153148_planta_1.jpg,Malva sylvestris,MALSI
+20251110_153148_planta_1.jpg,,
 20251110_153148_planta_2.jpg,,
 20251110_153153_planta_0.jpg,,
 20251110_153153_planta_1.jpg,,
@@ -2365,7 +2365,7 @@ filename,label,eppo_code
 20251110_153204_planta_11.jpg,,
 20251110_153204_planta_12.jpg,,
 20251110_153204_planta_13.jpg,,
-20251110_153204_planta_14.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_153204_planta_14.jpg,,
 20251110_153204_planta_15.jpg,,
 20251110_153204_planta_16.jpg,,
 20251110_153204_planta_2.jpg,,
@@ -2430,11 +2430,11 @@ filename,label,eppo_code
 20251110_153257_planta_1.jpg,,
 20251110_153257_planta_2.jpg,,
 20251110_153257_planta_3.jpg,,
-20251110_153257_planta_4.jpg,Malva sylvestris,MALSI
+20251110_153257_planta_4.jpg,,
 20251110_153302_planta_0.jpg,,
 20251110_153302_planta_1.jpg,,
-20251110_153302_planta_2.jpg,Malva sylvestris,MALSI
-20251110_153302_planta_3.jpg,Malva sylvestris,MALSI
+20251110_153302_planta_2.jpg,,
+20251110_153302_planta_3.jpg,,
 20251110_153305_planta_0.jpg,,
 20251110_153305_planta_1.jpg,,
 20251110_153305_planta_10.jpg,,
@@ -2570,7 +2570,7 @@ filename,label,eppo_code
 20251110_153335_planta_4.jpg,,
 20251110_153335_planta_5.jpg,,
 20251110_153335_planta_6.jpg,,
-20251110_153335_planta_7.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_153335_planta_7.jpg,,
 20251110_153335_planta_8.jpg,,
 20251110_153337_planta_1.jpg,,
 20251110_153337_planta_11.jpg,,
@@ -2630,7 +2630,7 @@ filename,label,eppo_code
 20251110_153404_planta_5.jpg,,
 20251110_153404_planta_6.jpg,,
 20251110_153404_planta_7.jpg,,
-20251110_153404_planta_8.jpg,Ambrosia artemisiifolia,AMBEL
+20251110_153404_planta_8.jpg,,
 20251110_153404_planta_9.jpg,,
 20251110_153416_planta_0.jpg,,
 20251110_153416_planta_1.jpg,,
@@ -2673,7 +2673,7 @@ filename,label,eppo_code
 20251110_153435_planta_2.jpg,,
 20251110_153435_planta_3.jpg,,
 20251110_153435_planta_4.jpg,,
-20251110_153443_planta_0.jpg,Malva sylvestris,MALSI
+20251110_153443_planta_0.jpg,,
 20251110_153443_planta_1.jpg,,
 20251110_153453_planta_0.jpg,,
 20251110_153453_planta_1.jpg,,
@@ -2727,10 +2727,10 @@ filename,label,eppo_code
 20251110_153535_planta_3.jpg,,
 20251110_153535_planta_4.jpg,,
 20251110_153547_planta_0.jpg,,
-20251110_153547_planta_1.jpg,Malva sylvestris,MALSI
+20251110_153547_planta_1.jpg,,
 20251110_153552_planta_0.jpg,,
-20251110_153555_planta_0.jpg,Malva sylvestris,MALSI
-20251110_153557_planta_0.jpg,Malva sylvestris,MALSI
+20251110_153555_planta_0.jpg,,
+20251110_153557_planta_0.jpg,,
 20251110_153557_planta_1.jpg,,
 20251110_153612_planta_0.jpg,,
 20251110_153612_planta_1.jpg,,
@@ -2748,7 +2748,7 @@ filename,label,eppo_code
 20251110_154029_planta_0.jpg,,
 20251110_154029_planta_1.jpg,,
 20251110_154029_planta_2.jpg,,
-20251110_154040_planta_0.jpg,Malva sylvestris,MALSI
+20251110_154040_planta_0.jpg,,
 IMG_20220501_154431_planta_1.jpg,,
 IMG_20220501_154431_planta_2.jpg,,
 IMG_20220501_154519_planta_2.jpg,,
@@ -3012,7 +3012,7 @@ JPEG_V2_E2_2022-04-17_14_53_442066300861893419035_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_0.jpg,,
-JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_1.jpg,Echinochloa crus-galli,ECHCG
+JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_217419482026510393858_planta_0.jpg,,
@@ -3025,7 +3025,7 @@ JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_1.jpg,,
-JPEG_V2_E2_2022-04-17_15_00_184172506183479493585_planta_0.jpg,Echinochloa crus-galli,ECHCG
+JPEG_V2_E2_2022-04-17_15_00_184172506183479493585_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_2.jpg,,
@@ -3270,7 +3270,7 @@ PHOTO-2026-05-20-09-48-42 (6)_planta_23.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_24.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_25.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_3.jpg,,
-PHOTO-2026-05-20-09-48-42 (6)_planta_4.jpg,Amaranthus retroflexus,AMARE
+PHOTO-2026-05-20-09-48-42 (6)_planta_4.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_5.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_6.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_7.jpg,,
@@ -3342,7 +3342,7 @@ PHOTO-2026-05-20-09-48-43 (10)_planta_6.jpg,,
 PHOTO-2026-05-20-09-48-43 (10)_planta_7.jpg,,
 PHOTO-2026-05-20-09-48-43 (10)_planta_8.jpg,,
 PHOTO-2026-05-20-09-48-43 (10)_planta_9.jpg,,
-PHOTO-2026-05-20-09-48-43 (11)_planta_0.jpg,Amaranthus retroflexus,AMARE
+PHOTO-2026-05-20-09-48-43 (11)_planta_0.jpg,,
 PHOTO-2026-05-20-09-48-43 (11)_planta_1.jpg,,
 PHOTO-2026-05-20-09-48-43 (11)_planta_10.jpg,,
 PHOTO-2026-05-20-09-48-43 (11)_planta_11.jpg,,
@@ -3370,7 +3370,7 @@ PHOTO-2026-05-20-09-48-43 (12)_planta_1.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_10.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_11.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_12.jpg,,
-PHOTO-2026-05-20-09-48-43 (12)_planta_13.jpg,Amaranthus retroflexus,AMARE
+PHOTO-2026-05-20-09-48-43 (12)_planta_13.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_14.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_15.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_16.jpg,,
@@ -3415,7 +3415,7 @@ PHOTO-2026-05-20-09-48-43 (5)_planta_3.jpg,,
 PHOTO-2026-05-20-09-48-43 (5)_planta_4.jpg,,
 PHOTO-2026-05-20-09-48-43 (5)_planta_5.jpg,,
 PHOTO-2026-05-20-09-48-43 (5)_planta_6.jpg,,
-PHOTO-2026-05-20-09-48-43 (5)_planta_7.jpg,Amaranthus retroflexus,AMARE
+PHOTO-2026-05-20-09-48-43 (5)_planta_7.jpg,,
 PHOTO-2026-05-20-09-48-43 (5)_planta_8.jpg,,
 PHOTO-2026-05-20-09-48-43 (5)_planta_9.jpg,,
 PHOTO-2026-05-20-09-48-43 (6)_planta_0.jpg,,
