@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-04T00:00:33.675Z",
+  "exported_at": "2026-07-04T00:01:08.021Z",
   "labels": [],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -18,8 +18,5 @@
     "Malva sylvestris": "Malvaceae",
     "Polygonum aviculare": "Polygonaceae"
   },
-  "ground_truth": {
-    "20220417_154739_planta_1.jpg": "Lixo",
-    "20220417_154849_planta_1.jpg": "Lixo"
-  }
+  "ground_truth": {}
 }
