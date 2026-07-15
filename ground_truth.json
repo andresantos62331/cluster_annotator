@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-15T09:14:39.600Z",
+  "exported_at": "2026-07-15T09:15:59.088Z",
   "labels": [
     "Portulaca oleracea"
   ],
@@ -23,9 +23,6 @@
     "Portulaca oleracea": "Portulacaceae"
   },
   "ground_truth": {
-    "20251109_161938_planta_2.jpg": "Portulaca oleracea",
-    "20251110_151432_planta_6.jpg": "Portulaca oleracea",
-    "20251110_151432_planta_7.jpg": "Portulaca oleracea",
-    "20251110_151432_planta_1.jpg": "Portulaca oleracea"
+    "20251109_162246_planta_12.jpg": "Lixo"
   }
 }
