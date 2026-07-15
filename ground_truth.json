@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-15T09:03:19.199Z",
+  "exported_at": "2026-07-15T09:03:45.903Z",
   "labels": [
     "Amaranthus retroflexus"
   ],
@@ -20,9 +20,5 @@
     "Malva sylvestris": "Malvaceae",
     "Polygonum aviculare": "Polygonaceae"
   },
-  "ground_truth": {
-    "20251109_161938_planta_2.jpg": "Amaranthus retroflexus",
-    "20251109_162246_planta_12.jpg": "Amaranthus retroflexus",
-    "20251110_151432_planta_1.jpg": "Amaranthus retroflexus"
-  }
+  "ground_truth": {}
 }
