@@ -1,6 +1,8 @@
 {
-  "exported_at": "2026-07-04T00:01:08.021Z",
-  "labels": [],
+  "exported_at": "2026-07-15T09:03:19.199Z",
+  "labels": [
+    "Amaranthus retroflexus"
+  ],
   "eppo": {
     "Chenopodium album": "CHEAL",
     "Amaranthus retroflexus": "AMARE",
@@ -18,5 +20,9 @@
     "Malva sylvestris": "Malvaceae",
     "Polygonum aviculare": "Polygonaceae"
   },
-  "ground_truth": {}
+  "ground_truth": {
+    "20251109_161938_planta_2.jpg": "Amaranthus retroflexus",
+    "20251109_162246_planta_12.jpg": "Amaranthus retroflexus",
+    "20251110_151432_planta_1.jpg": "Amaranthus retroflexus"
+  }
 }
