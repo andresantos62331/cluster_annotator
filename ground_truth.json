@@ -1,10 +1,11 @@
 {
-  "exported_at": "2026-07-15T09:55:14.985Z",
+  "exported_at": "2026-07-15T09:58:50.895Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
     "Chenopodium album",
-    "Digitaria sanguinalis"
+    "Digitaria sanguinalis",
+    "Malva sylvestris"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -19,7 +20,8 @@
     "Digitaria sanguinalis": "DIGSA"
   },
   "family": {
-    "Digitaria sanguinalis": "Poaceae"
+    "Digitaria sanguinalis": "Poaceae",
+    "Malva sylvestris": "Malvaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -55,6 +57,8 @@
     "20251110_151544_planta_6.jpg": "Lixo",
     "20251110_152043_planta_3.jpg": "Lixo",
     "20251110_152247_planta_10.jpg": "Lixo",
-    "20251110_152247_planta_8.jpg": "Lixo"
+    "20251110_152247_planta_8.jpg": "Lixo",
+    "20251110_151858_planta_2.jpg": "Malva sylvestris",
+    "20251110_151858_planta_4.jpg": "Malva sylvestris"
   }
 }
