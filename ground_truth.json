@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-15T09:11:26.148Z",
+  "exported_at": "2026-07-15T09:14:39.600Z",
   "labels": [
     "Portulaca oleracea"
   ],
@@ -22,5 +22,10 @@
     "Polygonum aviculare": "Polygonaceae",
     "Portulaca oleracea": "Portulacaceae"
   },
-  "ground_truth": {}
+  "ground_truth": {
+    "20251109_161938_planta_2.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_6.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_7.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_1.jpg": "Portulaca oleracea"
+  }
 }
