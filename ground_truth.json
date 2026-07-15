@@ -1,12 +1,13 @@
 {
-  "exported_at": "2026-07-15T10:09:32.115Z",
+  "exported_at": "2026-07-15T10:15:22.207Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
     "Chenopodium album",
     "Digitaria sanguinalis",
     "Malva sylvestris",
-    "Urtica urens"
+    "Urtica urens",
+    "Solanum nigrum"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -19,11 +20,13 @@
     "Portulaca oleracea": "POROL",
     "Spergula Arvensis": "SPRAR",
     "Digitaria sanguinalis": "DIGSA",
-    "Urtica urens": "URTUR"
+    "Urtica urens": "URTUR",
+    "Solanum nigrum": "SOLNI"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
-    "Malva sylvestris": "Malvaceae"
+    "Malva sylvestris": "Malvaceae",
+    "Solanum nigrum": "Solanaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -112,6 +115,18 @@
     "IMG_20220501_154548_planta_1.jpg": "Chenopodium album",
     "IMG_20220501_154557_planta_1.jpg": "Chenopodium album",
     "IMG_20220501_154558_planta_0.jpg": "Chenopodium album",
-    "IMG_20220501_154559_planta_2.jpg": "Chenopodium album"
+    "IMG_20220501_154559_planta_2.jpg": "Chenopodium album",
+    "20220417_141610_planta_7.jpg": "Lixo",
+    "20251110_151614_planta_0.jpg": "Lixo",
+    "20251110_151614_planta_3.jpg": "Lixo",
+    "20251110_151645_planta_10.jpg": "Lixo",
+    "20251110_151645_planta_5.jpg": "Lixo",
+    "20251110_151943_planta_2.jpg": "Lixo",
+    "20251110_152751_planta_7.jpg": "Lixo",
+    "20251110_153337_planta_14.jpg": "Lixo",
+    "20251110_153337_planta_23.jpg": "Lixo",
+    "20251110_153337_planta_7.jpg": "Lixo",
+    "20251110_153404_planta_11.jpg": "Lixo",
+    "20251110_153024_planta_0.jpg": "Solanum nigrum"
   }
 }
