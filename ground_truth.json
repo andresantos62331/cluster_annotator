@@ -1,8 +1,9 @@
 {
-  "exported_at": "2026-07-15T09:23:38.077Z",
+  "exported_at": "2026-07-15T09:29:02.726Z",
   "labels": [
     "Portulaca oleracea",
-    "Spergula Arvensis"
+    "Spergula Arvensis",
+    "Chenopodium album"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -23,9 +24,14 @@
     "Malva sylvestris": "Malvaceae",
     "Polygonum aviculare": "Polygonaceae",
     "Portulaca oleracea": "Portulacaceae",
-    "Spergula Arvensis": "Caryophyllaceae"
+    "Spergula Arvensis": "Caryophyllaceae",
+    "Chenopodium album": "Amaranthaceae"
   },
   "ground_truth": {
-    "20251109_162246_planta_12.jpg": "Lixo"
+    "20251109_162246_planta_12.jpg": "Lixo",
+    "20220417_141751_planta_1.jpg": "Spergula Arvensis",
+    "20220417_141751_planta_12.jpg": "Spergula Arvensis",
+    "20220417_141837_planta_3.jpg": "Spergula Arvensis",
+    "20220425_164524_planta_1.jpg": "Chenopodium album"
   }
 }
