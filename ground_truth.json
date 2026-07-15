@@ -1,6 +1,8 @@
 {
-  "exported_at": "2026-07-15T09:08:03.858Z",
-  "labels": [],
+  "exported_at": "2026-07-15T09:11:26.148Z",
+  "labels": [
+    "Portulaca oleracea"
+  ],
   "eppo": {
     "Chenopodium album": "CHEAL",
     "Amaranthus retroflexus": "AMARE",
@@ -8,7 +10,8 @@
     "Echinochloa crus-galli": "ECHCG",
     "Ambrosia artemisiifolia": "AMBEL",
     "Malva sylvestris": "MALSI",
-    "Polygonum aviculare": "POLAV"
+    "Polygonum aviculare": "POLAV",
+    "Portulaca oleracea": "POROL"
   },
   "family": {
     "Amaranthus retroflexus": "Amaranthaceae",
@@ -16,7 +19,8 @@
     "Echinochloa crus-galli": "Poaceae",
     "Ambrosia artemisiifolia": "Asteraceae",
     "Malva sylvestris": "Malvaceae",
-    "Polygonum aviculare": "Polygonaceae"
+    "Polygonum aviculare": "Polygonaceae",
+    "Portulaca oleracea": "Portulacaceae"
   },
   "ground_truth": {}
 }
