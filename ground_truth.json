@@ -1,9 +1,10 @@
 {
-  "exported_at": "2026-07-15T09:29:02.726Z",
+  "exported_at": "2026-07-15T09:34:52.155Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
-    "Chenopodium album"
+    "Chenopodium album",
+    "Digitaria sanguinalis"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -14,18 +15,11 @@
     "Malva sylvestris": "MALSI",
     "Polygonum aviculare": "POLAV",
     "Portulaca oleracea": "POROL",
-    "Spergula Arvensis": "SPRAR"
+    "Spergula Arvensis": "SPRAR",
+    "Digitaria sanguinalis": "DIGSA"
   },
   "family": {
-    "Amaranthus retroflexus": "Amaranthaceae",
-    "Cyperus rotundus": "Cyperaceae",
-    "Echinochloa crus-galli": "Poaceae",
-    "Ambrosia artemisiifolia": "Asteraceae",
-    "Malva sylvestris": "Malvaceae",
-    "Polygonum aviculare": "Polygonaceae",
-    "Portulaca oleracea": "Portulacaceae",
-    "Spergula Arvensis": "Caryophyllaceae",
-    "Chenopodium album": "Amaranthaceae"
+    "Digitaria sanguinalis": "Poaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
