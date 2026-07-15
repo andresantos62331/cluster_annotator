@@ -1,7 +1,8 @@
 {
-  "exported_at": "2026-07-15T09:15:59.088Z",
+  "exported_at": "2026-07-15T09:23:38.077Z",
   "labels": [
-    "Portulaca oleracea"
+    "Portulaca oleracea",
+    "Spergula Arvensis"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -11,7 +12,8 @@
     "Ambrosia artemisiifolia": "AMBEL",
     "Malva sylvestris": "MALSI",
     "Polygonum aviculare": "POLAV",
-    "Portulaca oleracea": "POROL"
+    "Portulaca oleracea": "POROL",
+    "Spergula Arvensis": "SPRAR"
   },
   "family": {
     "Amaranthus retroflexus": "Amaranthaceae",
@@ -20,7 +22,8 @@
     "Ambrosia artemisiifolia": "Asteraceae",
     "Malva sylvestris": "Malvaceae",
     "Polygonum aviculare": "Polygonaceae",
-    "Portulaca oleracea": "Portulacaceae"
+    "Portulaca oleracea": "Portulacaceae",
+    "Spergula Arvensis": "Caryophyllaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo"
