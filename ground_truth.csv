@@ -40,9 +40,9 @@ filename,label,eppo_code
 20220417_141619_planta_4.jpg,,
 20220417_141619_planta_5.jpg,,
 20220417_141619_planta_6.jpg,,
-20220417_141751_planta_1.jpg,,
+20220417_141751_planta_1.jpg,Spergula Arvensis,SPRAR
 20220417_141751_planta_10.jpg,,
-20220417_141751_planta_12.jpg,,
+20220417_141751_planta_12.jpg,Spergula Arvensis,SPRAR
 20220417_141751_planta_13.jpg,,
 20220417_141751_planta_14.jpg,,
 20220417_141751_planta_15.jpg,,
@@ -51,7 +51,7 @@ filename,label,eppo_code
 20220417_141751_planta_4.jpg,,
 20220417_141837_planta_0.jpg,,
 20220417_141837_planta_1.jpg,,
-20220417_141837_planta_3.jpg,,
+20220417_141837_planta_3.jpg,Spergula Arvensis,SPRAR
 20220417_141837_planta_4.jpg,,
 20220417_141837_planta_5.jpg,,
 20220417_141837_planta_6.jpg,,
@@ -1313,7 +1313,7 @@ filename,label,eppo_code
 20220425_164511_planta_4.jpg,,
 20220425_164511_planta_5.jpg,,
 20220425_164511_planta_6.jpg,,
-20220425_164524_planta_1.jpg,,
+20220425_164524_planta_1.jpg,Chenopodium album,CHEAL
 20220425_164524_planta_4.jpg,,
 20220425_164524_planta_5.jpg,,
 20220425_164534_planta_0.jpg,,
