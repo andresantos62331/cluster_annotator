@@ -1654,7 +1654,7 @@ filename,label,eppo_code
 20251110_151657_planta_5.jpg,,
 20251110_151657_planta_6.jpg,,
 20251110_151701_planta_0.jpg,,
-20251110_151701_planta_1.jpg,,
+20251110_151701_planta_1.jpg,Erodium moschatum,
 20251110_151701_planta_2.jpg,,
 20251110_151701_planta_3.jpg,,
 20251110_151701_planta_4.jpg,Erodium moschatum,
@@ -1712,7 +1712,7 @@ filename,label,eppo_code
 20251110_151726_planta_3.jpg,Sonchus oleraceus,SONOL
 20251110_151726_planta_4.jpg,,
 20251110_151726_planta_5.jpg,,
-20251110_151726_planta_6.jpg,,
+20251110_151726_planta_6.jpg,Erodium moschatum,
 20251110_151728_planta_0.jpg,Urtica urens,URTUR
 20251110_151728_planta_1.jpg,,
 20251110_151728_planta_2.jpg,Urtica urens,URTUR
@@ -1730,7 +1730,7 @@ filename,label,eppo_code
 20251110_151746_planta_1.jpg,Urtica urens,URTUR
 20251110_151746_planta_10.jpg,,
 20251110_151746_planta_11.jpg,,
-20251110_151746_planta_12.jpg,,
+20251110_151746_planta_12.jpg,Erodium moschatum,
 20251110_151746_planta_13.jpg,,
 20251110_151746_planta_14.jpg,,
 20251110_151746_planta_16.jpg,,
@@ -1933,7 +1933,7 @@ filename,label,eppo_code
 20251110_152216_planta_2.jpg,Erodium moschatum,
 20251110_152216_planta_3.jpg,,
 20251110_152219_planta_0.jpg,,
-20251110_152219_planta_1.jpg,,
+20251110_152219_planta_1.jpg,Erodium moschatum,
 20251110_152219_planta_2.jpg,,
 20251110_152221_planta_0.jpg,,
 20251110_152221_planta_1.jpg,Erodium moschatum,
@@ -1948,7 +1948,7 @@ filename,label,eppo_code
 20251110_152226_planta_0.jpg,Erodium moschatum,
 20251110_152226_planta_1.jpg,,
 20251110_152226_planta_2.jpg,,
-20251110_152226_planta_3.jpg,,
+20251110_152226_planta_3.jpg,Erodium moschatum,
 20251110_152231_planta_0.jpg,Erodium moschatum,
 20251110_152234_planta_0.jpg,Erodium moschatum,
 20251110_152234_planta_1.jpg,Erodium moschatum,
@@ -2254,7 +2254,7 @@ filename,label,eppo_code
 20251110_152905_planta_1.jpg,,
 20251110_152905_planta_2.jpg,,
 20251110_152905_planta_3.jpg,,
-20251110_152905_planta_4.jpg,,
+20251110_152905_planta_4.jpg,Erodium moschatum,
 20251110_152908_planta_0.jpg,Erodium moschatum,
 20251110_152908_planta_1.jpg,,
 20251110_152908_planta_2.jpg,,
@@ -2393,7 +2393,7 @@ filename,label,eppo_code
 20251110_153235_planta_5.jpg,,
 20251110_153235_planta_6.jpg,,
 20251110_153235_planta_7.jpg,,
-20251110_153235_planta_8.jpg,,
+20251110_153235_planta_8.jpg,Erodium moschatum,
 20251110_153242_planta_0.jpg,,
 20251110_153242_planta_1.jpg,Erodium moschatum,
 20251110_153242_planta_2.jpg,,
@@ -2790,29 +2790,29 @@ IMG_20220501_155941_planta_0.jpg,,
 IMG_20220501_155945_planta_0.jpg,,
 IMG_20220501_160041_planta_0.jpg,Digitaria sanguinalis,DIGSA
 IMG_20220501_160420_planta_1.jpg,,
-IMG_20220501_160420_planta_2.jpg,,
+IMG_20220501_160420_planta_2.jpg,Chenopodium album,CHEAL
 IMG_20220501_160420_planta_3.jpg,,
 IMG_20220501_160420_planta_4.jpg,,
 IMG_20220501_160423_planta_1.jpg,,
-IMG_20220501_160423_planta_2.jpg,,
-IMG_20220501_160423_planta_3.jpg,,
-IMG_20220501_160433_planta_0.jpg,,
+IMG_20220501_160423_planta_2.jpg,Chenopodium album,CHEAL
+IMG_20220501_160423_planta_3.jpg,Chenopodium album,CHEAL
+IMG_20220501_160433_planta_0.jpg,Chenopodium album,CHEAL
 IMG_20220501_160433_planta_2.jpg,Chenopodium album,CHEAL
 IMG_20220501_160517_planta_0.jpg,,
-IMG_20220501_160517_planta_2.jpg,,
+IMG_20220501_160517_planta_2.jpg,Chenopodium album,CHEAL
 IMG_20220501_160525_planta_0.jpg,,
-IMG_20220501_160525_planta_1.jpg,,
+IMG_20220501_160525_planta_1.jpg,Chenopodium album,CHEAL
 IMG_20220501_160525_planta_2.jpg,,
-IMG_20220501_160525_planta_3.jpg,,
+IMG_20220501_160525_planta_3.jpg,Chenopodium album,CHEAL
 IMG_20220501_160534_planta_0.jpg,,
-IMG_20220501_160607_planta_0.jpg,,
+IMG_20220501_160607_planta_0.jpg,Chenopodium album,CHEAL
 IMG_20220501_160607_planta_2.jpg,,
 IMG_20220501_160607_planta_3.jpg,,
-IMG_20220501_160607_planta_6.jpg,,
+IMG_20220501_160607_planta_6.jpg,Chenopodium album,CHEAL
 IMG_20220501_160611_planta_1.jpg,,
 IMG_20220501_160611_planta_2.jpg,,
 IMG_20220501_160611_planta_3.jpg,,
-IMG_20220501_160611_planta_4.jpg,,
+IMG_20220501_160611_planta_4.jpg,Chenopodium album,CHEAL
 IMG_20220501_160736_planta_0.jpg,,
 IMG_20220501_160742_planta_0.jpg,,
 IMG_20220501_161238_planta_1.jpg,,
