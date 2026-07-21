@@ -62,16 +62,16 @@ filename,label,eppo_code
 20220417_152120_planta_0.jpg,,
 20220417_152120_planta_1.jpg,,
 20220417_152120_planta_2.jpg,,
-20220417_152124_planta_0.jpg,,
-20220417_152126_planta_1.jpg,,
+20220417_152124_planta_0.jpg,Chenopodium album,CHEAL
+20220417_152126_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152130_planta_1.jpg,,
-20220417_152137_planta_0.jpg,,
+20220417_152137_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152144_planta_1.jpg,,
 20220417_152204_planta_0.jpg,,
 20220417_152204_planta_1.jpg,Fumaria muralis,FUMMU
-20220417_152204_planta_2.jpg,,
+20220417_152204_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152217_planta_1.jpg,,
-20220417_152227_planta_2.jpg,,
+20220417_152227_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152241_planta_1.jpg,,
 20220417_152241_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152241_planta_3.jpg,Chenopodium album,CHEAL
@@ -91,12 +91,12 @@ filename,label,eppo_code
 20220417_152330_planta_3.jpg,,
 20220417_152334_planta_0.jpg,,
 20220417_152334_planta_3.jpg,Chenopodium album,CHEAL
-20220417_152334_planta_4.jpg,,
+20220417_152334_planta_4.jpg,Chenopodium album,CHEAL
 20220417_152334_planta_5.jpg,,
 20220417_152352_planta_0.jpg,,
-20220417_152352_planta_1.jpg,,
+20220417_152352_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152352_planta_4.jpg,,
-20220417_152352_planta_5.jpg,,
+20220417_152352_planta_5.jpg,Chenopodium album,CHEAL
 20220417_152402_planta_1.jpg,,
 20220417_152434_planta_1.jpg,,
 20220417_152434_planta_10.jpg,Chenopodium album,CHEAL
@@ -106,7 +106,7 @@ filename,label,eppo_code
 20220417_152434_planta_7.jpg,Chenopodium album,CHEAL
 20220417_152434_planta_8.jpg,Chenopodium album,CHEAL
 20220417_152434_planta_9.jpg,,
-20220417_152445_planta_0.jpg,,
+20220417_152445_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152530_planta_0.jpg,,
 20220417_152530_planta_1.jpg,,
 20220417_152530_planta_10.jpg,,
@@ -124,7 +124,7 @@ filename,label,eppo_code
 20220417_152530_planta_7.jpg,,
 20220417_152530_planta_9.jpg,,
 20220417_152540_planta_10.jpg,,
-20220417_152540_planta_2.jpg,,
+20220417_152540_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152540_planta_3.jpg,,
 20220417_152540_planta_4.jpg,,
 20220417_152540_planta_5.jpg,,
@@ -212,7 +212,7 @@ filename,label,eppo_code
 20220417_152840_planta_9.jpg,Chenopodium album,CHEAL
 20220417_152845_planta_0.jpg,,
 20220417_152845_planta_1.jpg,,
-20220417_152845_planta_11.jpg,,
+20220417_152845_planta_11.jpg,Chenopodium album,CHEAL
 20220417_152845_planta_12.jpg,,
 20220417_152845_planta_13.jpg,,
 20220417_152845_planta_14.jpg,,
@@ -224,14 +224,14 @@ filename,label,eppo_code
 20220417_152845_planta_8.jpg,,
 20220417_152845_planta_9.jpg,,
 20220417_152858_planta_0.jpg,,
-20220417_152858_planta_2.jpg,,
+20220417_152858_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152858_planta_3.jpg,,
-20220417_152858_planta_5.jpg,,
-20220417_152905_planta_0.jpg,,
+20220417_152858_planta_5.jpg,Chenopodium album,CHEAL
+20220417_152905_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152905_planta_2.jpg,,
 20220417_152905_planta_3.jpg,,
 20220417_152905_planta_4.jpg,Chenopodium album,CHEAL
-20220417_152916_planta_0.jpg,,
+20220417_152916_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152916_planta_1.jpg,,
 20220417_153024_planta_0.jpg,,
 20220417_153024_planta_1.jpg,,
@@ -571,7 +571,7 @@ filename,label,eppo_code
 20220417_160057_planta_0.jpg,,
 20220417_160102_planta_1.jpg,,
 20220417_160105_planta_1.jpg,,
-20220417_160105_planta_2.jpg,,
+20220417_160105_planta_2.jpg,Chenopodium album,CHEAL
 20220417_160105_planta_3.jpg,,
 20220417_160105_planta_4.jpg,,
 20220417_160110_planta_0.jpg,,
@@ -718,7 +718,7 @@ filename,label,eppo_code
 20220417_161125_planta_0.jpg,,
 20220417_161125_planta_1.jpg,,
 20220417_161135_planta_1.jpg,,
-20220417_161139_planta_0.jpg,,
+20220417_161139_planta_0.jpg,Chenopodium album,CHEAL
 20220417_161149_planta_0.jpg,,
 20220417_161149_planta_1.jpg,,
 20220417_161155_planta_0.jpg,,
@@ -1004,7 +1004,7 @@ filename,label,eppo_code
 20220425_153938_planta_3.jpg,,
 20220425_153938_planta_4.jpg,,
 20220425_153938_planta_5.jpg,,
-20220425_154004_planta_0.jpg,,
+20220425_154004_planta_0.jpg,Chenopodium album,CHEAL
 20220425_154004_planta_1.jpg,,
 20220425_154004_planta_2.jpg,Chenopodium album,CHEAL
 20220425_154004_planta_3.jpg,,
@@ -1323,12 +1323,12 @@ filename,label,eppo_code
 20220425_164534_planta_5.jpg,Chenopodium album,CHEAL
 20220425_164534_planta_6.jpg,,
 20220425_164542_planta_0.jpg,,
-20220425_164542_planta_1.jpg,,
+20220425_164542_planta_1.jpg,Chenopodium album,CHEAL
 20220425_164542_planta_2.jpg,Chenopodium album,CHEAL
 20220425_164542_planta_3.jpg,,
 20220425_164542_planta_4.jpg,Portulaca oleracea,POROL
 20220425_164553_planta_0.jpg,,
-20220425_164553_planta_1.jpg,,
+20220425_164553_planta_1.jpg,Chenopodium album,CHEAL
 20220425_164632_planta_0.jpg,,
 20220425_164632_planta_1.jpg,,
 20220425_164632_planta_2.jpg,,
@@ -1950,7 +1950,7 @@ filename,label,eppo_code
 20251110_152226_planta_2.jpg,,
 20251110_152226_planta_3.jpg,,
 20251110_152231_planta_0.jpg,Erodium moschatum,
-20251110_152234_planta_0.jpg,,
+20251110_152234_planta_0.jpg,Erodium moschatum,
 20251110_152234_planta_1.jpg,Erodium moschatum,
 20251110_152239_planta_0.jpg,,
 20251110_152239_planta_1.jpg,,
@@ -2052,13 +2052,13 @@ filename,label,eppo_code
 20251110_152425_planta_4.jpg,,
 20251110_152425_planta_5.jpg,,
 20251110_152432_planta_0.jpg,,
-20251110_152432_planta_1.jpg,,
+20251110_152432_planta_1.jpg,Erodium moschatum,
 20251110_152432_planta_10.jpg,,
 20251110_152432_planta_11.jpg,,
 20251110_152432_planta_12.jpg,,
 20251110_152432_planta_13.jpg,,
 20251110_152432_planta_15.jpg,,
-20251110_152432_planta_2.jpg,,
+20251110_152432_planta_2.jpg,Erodium moschatum,
 20251110_152432_planta_3.jpg,,
 20251110_152432_planta_4.jpg,,
 20251110_152432_planta_5.jpg,,
@@ -2133,13 +2133,13 @@ filename,label,eppo_code
 20251110_152628_planta_3.jpg,,
 20251110_152645_planta_0.jpg,,
 20251110_152645_planta_1.jpg,,
-20251110_152656_planta_1.jpg,,
+20251110_152656_planta_1.jpg,Erodium moschatum,
 20251110_152656_planta_2.jpg,,
 20251110_152656_planta_3.jpg,,
 20251110_152656_planta_4.jpg,,
 20251110_152656_planta_5.jpg,,
 20251110_152710_planta_0.jpg,,
-20251110_152710_planta_1.jpg,,
+20251110_152710_planta_1.jpg,Erodium moschatum,
 20251110_152710_planta_2.jpg,,
 20251110_152710_planta_3.jpg,,
 20251110_152710_planta_4.jpg,,
@@ -2192,7 +2192,7 @@ filename,label,eppo_code
 20251110_152834_planta_2.jpg,,
 20251110_152834_planta_3.jpg,,
 20251110_152834_planta_4.jpg,,
-20251110_152834_planta_5.jpg,,
+20251110_152834_planta_5.jpg,Erodium moschatum,
 20251110_152834_planta_6.jpg,,
 20251110_152834_planta_7.jpg,,
 20251110_152834_planta_8.jpg,,
@@ -2244,7 +2244,7 @@ filename,label,eppo_code
 20251110_152857_planta_7.jpg,Erodium moschatum,
 20251110_152857_planta_8.jpg,,
 20251110_152857_planta_9.jpg,,
-20251110_152901_planta_0.jpg,,
+20251110_152901_planta_0.jpg,Erodium moschatum,
 20251110_152901_planta_1.jpg,Erodium moschatum,
 20251110_152901_planta_2.jpg,,
 20251110_152901_planta_3.jpg,,
@@ -2399,7 +2399,7 @@ filename,label,eppo_code
 20251110_153242_planta_2.jpg,,
 20251110_153242_planta_3.jpg,,
 20251110_153242_planta_4.jpg,,
-20251110_153242_planta_5.jpg,,
+20251110_153242_planta_5.jpg,Erodium moschatum,
 20251110_153242_planta_6.jpg,,
 20251110_153242_planta_7.jpg,,
 20251110_153242_planta_8.jpg,,
@@ -2563,7 +2563,7 @@ filename,label,eppo_code
 20251110_153327_planta_2.jpg,,
 20251110_153333_planta_0.jpg,,
 20251110_153333_planta_1.jpg,,
-20251110_153335_planta_0.jpg,,
+20251110_153335_planta_0.jpg,Erodium moschatum,
 20251110_153335_planta_1.jpg,,
 20251110_153335_planta_2.jpg,,
 20251110_153335_planta_3.jpg,,
@@ -2670,7 +2670,7 @@ filename,label,eppo_code
 20251110_153431_planta_2.jpg,,
 20251110_153435_planta_0.jpg,,
 20251110_153435_planta_1.jpg,Erodium moschatum,
-20251110_153435_planta_2.jpg,,
+20251110_153435_planta_2.jpg,Erodium moschatum,
 20251110_153435_planta_3.jpg,,
 20251110_153435_planta_4.jpg,Erodium moschatum,
 20251110_153443_planta_0.jpg,,
@@ -2699,7 +2699,7 @@ filename,label,eppo_code
 20251110_153503_planta_6.jpg,,
 20251110_153503_planta_8.jpg,,
 20251110_153506_planta_0.jpg,,
-20251110_153506_planta_1.jpg,,
+20251110_153506_planta_1.jpg,Erodium moschatum,
 20251110_153506_planta_2.jpg,,
 20251110_153506_planta_3.jpg,,
 20251110_153506_planta_4.jpg,,
@@ -3007,7 +3007,7 @@ JPEG_V2_E2_2022-04-17_14_50_122504638103110864191_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_4.jpg,,
-JPEG_V2_E2_2022-04-17_14_52_396757956528889991251_planta_0.jpg,,
+JPEG_V2_E2_2022-04-17_14_52_396757956528889991251_planta_0.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_14_53_442066300861893419035_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_1.jpg,,
@@ -3022,7 +3022,7 @@ JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_2.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_0.jpg,,
-JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_1.jpg,,
+JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_1.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_184172506183479493585_planta_0.jpg,,
@@ -3104,7 +3104,7 @@ JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_8.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_9.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_258335272712890131690_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_258335272712890131690_planta_2.jpg,,
-JPEG_V2_E2_2022-04-17_15_11_258335272712890131690_planta_3.jpg,,
+JPEG_V2_E2_2022-04-17_15_11_258335272712890131690_planta_3.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_10.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_12.jpg,Chenopodium album,CHEAL
@@ -3116,7 +3116,7 @@ JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_19.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_2.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_4.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_5.jpg,,
-JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_6.jpg,,
+JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_6.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_8.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_9.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_12_381826318015154971570_planta_0.jpg,Chenopodium album,CHEAL
@@ -3132,7 +3132,7 @@ JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_2.jpg,Chenopodium album,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_5.jpg,Chenopodium album,CHEAL
-JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_7.jpg,,
+JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_7.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_9.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_14_224071973522240993721_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_14_224071973522240993721_planta_4.jpg,,
@@ -3147,12 +3147,12 @@ JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_7.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_8.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_9.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_0.jpg,,
-JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_1.jpg,,
+JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_1.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_16_172937527891404556517_planta_2.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_0.jpg,,
-JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_10.jpg,,
+JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_10.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_11.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_2.jpg,,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_3.jpg,,
