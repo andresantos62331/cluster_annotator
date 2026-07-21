@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T21:02:34.590Z",
+  "exported_at": "2026-07-21T21:08:18.451Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -9,7 +9,8 @@
     "Urtica urens",
     "Solanum nigrum",
     "Erodium moschatum",
-    "Sonchus oleraceus"
+    "Sonchus oleraceus",
+    "Fumaria muralis"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -24,7 +25,8 @@
     "Digitaria sanguinalis": "DIGSA",
     "Urtica urens": "URTUR",
     "Solanum nigrum": "SOLNI",
-    "Sonchus oleraceus": "SONOL"
+    "Sonchus oleraceus": "SONOL",
+    "Fumaria muralis": "FUMMU"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae"
@@ -145,7 +147,7 @@
     "20220425_154037_planta_8.jpg": "Chenopodium album",
     "20220425_154534_planta_1.jpg": "Chenopodium album",
     "20220425_154653_planta_11.jpg": "Chenopodium album",
-    "20220417_152204_planta_1.jpg": "Erodium moschatum",
+    "20220417_152204_planta_1.jpg": "Fumaria muralis",
     "20251110_152155_planta_0.jpg": "Erodium moschatum",
     "20251110_152210_planta_1.jpg": "Erodium moschatum",
     "20251110_152216_planta_2.jpg": "Erodium moschatum",
