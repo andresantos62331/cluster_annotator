@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T13:37:57.454Z",
+  "exported_at": "2026-07-21T20:58:05.235Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -7,7 +7,8 @@
     "Digitaria sanguinalis",
     "Malva sylvestris",
     "Urtica urens",
-    "Solanum nigrum"
+    "Solanum nigrum",
+    "Erodium moschatum"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -23,17 +24,7 @@
     "Urtica urens": "URTUR",
     "Solanum nigrum": "SOLNI"
   },
-  "family": {
-    "Amaranthus retroflexus": "Amaranthaceae",
-    "Cyperus rotundus": "Cyperaceae",
-    "Echinochloa crus-galli": "Poaceae",
-    "Ambrosia artemisiifolia": "Asteraceae",
-    "Malva sylvestris": "Malvaceae",
-    "Polygonum aviculare": "Polygonaceae",
-    "Portulaca oleracea": "Portulacaceae",
-    "Spergula Arvensis": "Caryophyllaceae",
-    "Chenopodium album": "Amaranthaceae"
-  },
+  "family": {},
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
     "20220417_141751_planta_1.jpg": "Spergula Arvensis",
@@ -149,6 +140,33 @@
     "IMG_20220501_160433_planta_2.jpg": "Chenopodium album",
     "20220425_154037_planta_8.jpg": "Chenopodium album",
     "20220425_154534_planta_1.jpg": "Chenopodium album",
-    "20220425_154653_planta_11.jpg": "Chenopodium album"
+    "20220425_154653_planta_11.jpg": "Chenopodium album",
+    "20220417_152204_planta_1.jpg": "Erodium moschatum",
+    "20251110_152155_planta_0.jpg": "Erodium moschatum",
+    "20251110_152210_planta_1.jpg": "Erodium moschatum",
+    "20251110_152216_planta_2.jpg": "Erodium moschatum",
+    "20251110_152221_planta_2.jpg": "Erodium moschatum",
+    "20251110_152222_planta_0.jpg": "Erodium moschatum",
+    "20251110_152224_planta_0.jpg": "Erodium moschatum",
+    "20251110_152224_planta_1.jpg": "Erodium moschatum",
+    "20251110_152224_planta_2.jpg": "Erodium moschatum",
+    "20251110_152231_planta_0.jpg": "Erodium moschatum",
+    "20251110_152258_planta_1.jpg": "Erodium moschatum",
+    "20251110_152304_planta_3.jpg": "Erodium moschatum",
+    "20251110_152304_planta_4.jpg": "Erodium moschatum",
+    "20251110_152316_planta_4.jpg": "Erodium moschatum",
+    "20251110_152318_planta_0.jpg": "Erodium moschatum",
+    "20251110_152318_planta_6.jpg": "Erodium moschatum",
+    "20251110_152334_planta_2.jpg": "Erodium moschatum",
+    "20251110_152408_planta_4.jpg": "Erodium moschatum",
+    "20251110_152409_planta_1.jpg": "Erodium moschatum",
+    "20251110_152508_planta_5.jpg": "Erodium moschatum",
+    "20251110_152559_planta_3.jpg": "Erodium moschatum",
+    "20251110_152828_planta_1.jpg": "Erodium moschatum",
+    "20251110_153335_planta_7.jpg": "Erodium moschatum",
+    "20251110_153404_planta_8.jpg": "Erodium moschatum",
+    "20251110_152607_planta_0.jpg": "Erodium moschatum",
+    "20251110_152828_planta_2.jpg": "Erodium moschatum",
+    "20251110_153204_planta_14.jpg": "Erodium moschatum"
   }
 }
