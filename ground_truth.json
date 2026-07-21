@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-15T10:22:22.929Z",
+  "exported_at": "2026-07-21T13:37:51.063Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -24,9 +24,15 @@
     "Solanum nigrum": "SOLNI"
   },
   "family": {
-    "Digitaria sanguinalis": "Poaceae",
+    "Amaranthus retroflexus": "Amaranthaceae",
+    "Cyperus rotundus": "Cyperaceae",
+    "Echinochloa crus-galli": "Poaceae",
+    "Ambrosia artemisiifolia": "Asteraceae",
     "Malva sylvestris": "Malvaceae",
-    "Solanum nigrum": "Solanaceae"
+    "Polygonum aviculare": "Polygonaceae",
+    "Portulaca oleracea": "Portulacaceae",
+    "Spergula Arvensis": "Caryophyllaceae",
+    "Chenopodium album": "Amaranthaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -143,6 +149,7 @@
     "IMG_20220501_160433_planta_2.jpg": "Chenopodium album",
     "20220425_154037_planta_8.jpg": "Chenopodium album",
     "20220425_154534_planta_1.jpg": "Chenopodium album",
-    "20220425_154653_planta_11.jpg": "Chenopodium album"
+    "20220425_154653_planta_11.jpg": "Chenopodium album",
+    "20251109_161938_planta_2.jpg": "Portulaca oleracea"
   }
 }
