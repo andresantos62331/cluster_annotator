@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T21:01:17.516Z",
+  "exported_at": "2026-07-21T21:02:21.266Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -8,7 +8,8 @@
     "Malva sylvestris",
     "Urtica urens",
     "Solanum nigrum",
-    "Erodium moschatum"
+    "Erodium moschatum",
+    "Sonchus oleraceus"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -22,9 +23,12 @@
     "Spergula Arvensis": "SPRAR",
     "Digitaria sanguinalis": "DIGSA",
     "Urtica urens": "URTUR",
-    "Solanum nigrum": "SOLNI"
+    "Solanum nigrum": "SOLNI",
+    "Sonchus oleraceus": "SONOL"
   },
-  "family": {},
+  "family": {
+    "Sonchus oleraceus": "Asteraceae"
+  },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
     "20220417_141751_planta_1.jpg": "Spergula Arvensis",
@@ -168,6 +172,7 @@
     "20251110_152607_planta_0.jpg": "Erodium moschatum",
     "20251110_152828_planta_2.jpg": "Erodium moschatum",
     "20251110_153204_planta_14.jpg": "Erodium moschatum",
-    "20251110_152918_planta_1.jpg": "Erodium moschatum"
+    "20251110_152918_planta_1.jpg": "Erodium moschatum",
+    "20251110_153005_planta_6.jpg": "Sonchus oleraceus"
   }
 }
