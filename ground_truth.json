@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T21:38:21.763Z",
+  "exported_at": "2026-07-21T21:39:34.797Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -13,7 +13,8 @@
     "Fumaria muralis",
     "amaranthus retroflexus",
     "Papaver rhoeas",
-    "Chenopodium opolifolium"
+    "Chenopodium opolifolium",
+    "Polygonum aviculare"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -37,7 +38,8 @@
   "family": {
     "Sonchus oleraceus": "Asteraceae",
     "amaranthus retroflexus": "Amaranthaceae",
-    "Papaver rhoeas": "Papaveraceae"
+    "Papaver rhoeas": "Papaveraceae",
+    "Polygonum aviculare": "Polygonaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -493,6 +495,15 @@
     "PHOTO-2026-05-20-09-48-42 (10)_planta_13.jpg": "Chenopodium album",
     "PHOTO-2026-05-20-09-48-42 (2)_planta_14.jpg": "Chenopodium album",
     "PHOTO-2026-05-20-09-48-43 (7)_planta_10.jpg": "Chenopodium album",
-    "PHOTO-2026-05-20-09-48-43 (8)_planta_0.jpg": "Chenopodium album"
+    "PHOTO-2026-05-20-09-48-43 (8)_planta_0.jpg": "Chenopodium album",
+    "20220417_154544_planta_7.jpg": "Polygonum aviculare",
+    "20220417_154556_planta_2.jpg": "Polygonum aviculare",
+    "20220417_154804_planta_1.jpg": "Polygonum aviculare",
+    "20220417_154923_planta_1.jpg": "Polygonum aviculare",
+    "20220417_162126_planta_0.jpg": "Polygonum aviculare",
+    "20220417_162047_planta_7.jpg": "Polygonum aviculare",
+    "20220417_162022_planta_6.jpg": "Polygonum aviculare",
+    "20220417_162022_planta_2.jpg": "Polygonum aviculare",
+    "20220417_162305_planta_5.jpg": "Polygonum aviculare"
   }
 }
