@@ -1029,7 +1029,7 @@ filename,label,eppo_code
 20220425_154127_planta_1.jpg,,
 20220425_154151_planta_0.jpg,,
 20220425_154151_planta_1.jpg,Portulaca oleracea,POROL
-20220425_154151_planta_2.jpg,,
+20220425_154151_planta_2.jpg,Portulaca oleracea,POROL
 20220425_154200_planta_1.jpg,amaranthus retroflexus,AMARE
 20220425_154200_planta_2.jpg,amaranthus retroflexus,AMARE
 20220425_154200_planta_3.jpg,,
@@ -1050,8 +1050,8 @@ filename,label,eppo_code
 20220425_154534_planta_1.jpg,Chenopodium album,CHEAL
 20220425_154534_planta_2.jpg,,
 20220425_154534_planta_3.jpg,,
-20220425_154534_planta_4.jpg,,
-20220425_154534_planta_5.jpg,,
+20220425_154534_planta_4.jpg,Portulaca oleracea,POROL
+20220425_154534_planta_5.jpg,Portulaca oleracea,POROL
 20220425_154653_planta_0.jpg,,
 20220425_154653_planta_1.jpg,,
 20220425_154653_planta_10.jpg,,
@@ -1326,7 +1326,7 @@ filename,label,eppo_code
 20220425_164542_planta_1.jpg,,
 20220425_164542_planta_2.jpg,Chenopodium album,CHEAL
 20220425_164542_planta_3.jpg,,
-20220425_164542_planta_4.jpg,,
+20220425_164542_planta_4.jpg,Portulaca oleracea,POROL
 20220425_164553_planta_0.jpg,,
 20220425_164553_planta_1.jpg,,
 20220425_164632_planta_0.jpg,,
@@ -1802,13 +1802,13 @@ filename,label,eppo_code
 20251110_151905_planta_0.jpg,Urtica urens,URTUR
 20251110_151905_planta_1.jpg,Urtica urens,URTUR
 20251110_151905_planta_2.jpg,,
-20251110_151905_planta_3.jpg,,
+20251110_151905_planta_3.jpg,Malva sylvestris,MALSI
 20251110_151913_planta_0.jpg,,
 20251110_151924_planta_0.jpg,Lixo,
 20251110_151930_planta_0.jpg,,
 20251110_151933_planta_0.jpg,,
 20251110_151933_planta_1.jpg,,
-20251110_151933_planta_2.jpg,,
+20251110_151933_planta_2.jpg,Malva sylvestris,MALSI
 20251110_151934_planta_0.jpg,,
 20251110_151941_planta_0.jpg,,
 20251110_151941_planta_1.jpg,,
@@ -1820,10 +1820,10 @@ filename,label,eppo_code
 20251110_151945_planta_0.jpg,,
 20251110_151950_planta_1.jpg,,
 20251110_151950_planta_2.jpg,,
-20251110_151950_planta_3.jpg,,
-20251110_151950_planta_4.jpg,,
+20251110_151950_planta_3.jpg,Malva sylvestris,MALSI
+20251110_151950_planta_4.jpg,Malva sylvestris,MALSI
 20251110_151950_planta_5.jpg,,
-20251110_151950_planta_6.jpg,,
+20251110_151950_planta_6.jpg,Malva sylvestris,MALSI
 20251110_151952_planta_0.jpg,,
 20251110_151952_planta_1.jpg,,
 20251110_151952_planta_2.jpg,,
@@ -1846,12 +1846,12 @@ filename,label,eppo_code
 20251110_152023_planta_1.jpg,,
 20251110_152025_planta_0.jpg,,
 20251110_152025_planta_1.jpg,,
-20251110_152025_planta_2.jpg,,
+20251110_152025_planta_2.jpg,Malva sylvestris,MALSI
 20251110_152028_planta_0.jpg,,
 20251110_152032_planta_0.jpg,Urtica urens,URTUR
 20251110_152032_planta_1.jpg,,
 20251110_152032_planta_2.jpg,,
-20251110_152032_planta_3.jpg,,
+20251110_152032_planta_3.jpg,Malva sylvestris,MALSI
 20251110_152043_planta_0.jpg,,
 20251110_152043_planta_1.jpg,,
 20251110_152043_planta_2.jpg,,
@@ -1974,7 +1974,7 @@ filename,label,eppo_code
 20251110_152254_planta_3.jpg,,
 20251110_152254_planta_4.jpg,,
 20251110_152254_planta_5.jpg,,
-20251110_152254_planta_6.jpg,,
+20251110_152254_planta_6.jpg,Malva sylvestris,MALSI
 20251110_152258_planta_1.jpg,Erodium moschatum,
 20251110_152304_planta_0.jpg,,
 20251110_152304_planta_1.jpg,,
@@ -1995,7 +1995,7 @@ filename,label,eppo_code
 20251110_152318_planta_0.jpg,Erodium moschatum,
 20251110_152318_planta_2.jpg,,
 20251110_152318_planta_4.jpg,,
-20251110_152318_planta_5.jpg,,
+20251110_152318_planta_5.jpg,Portulaca oleracea,POROL
 20251110_152318_planta_6.jpg,Erodium moschatum,
 20251110_152327_planta_1.jpg,,
 20251110_152327_planta_2.jpg,,
@@ -2092,7 +2092,7 @@ filename,label,eppo_code
 20251110_152508_planta_5.jpg,Erodium moschatum,
 20251110_152508_planta_6.jpg,,
 20251110_152508_planta_7.jpg,,
-20251110_152512_planta_0.jpg,,
+20251110_152512_planta_0.jpg,Portulaca oleracea,POROL
 20251110_152512_planta_1.jpg,,
 20251110_152512_planta_10.jpg,,
 20251110_152512_planta_12.jpg,,
@@ -2170,7 +2170,7 @@ filename,label,eppo_code
 20251110_152757_planta_4.jpg,,
 20251110_152757_planta_5.jpg,,
 20251110_152757_planta_6.jpg,,
-20251110_152802_planta_0.jpg,,
+20251110_152802_planta_0.jpg,Malva sylvestris,MALSI
 20251110_152807_planta_0.jpg,,
 20251110_152807_planta_1.jpg,,
 20251110_152817_planta_0.jpg,,
@@ -2180,7 +2180,7 @@ filename,label,eppo_code
 20251110_152822_planta_0.jpg,,
 20251110_152822_planta_1.jpg,Erodium moschatum,
 20251110_152822_planta_2.jpg,,
-20251110_152825_planta_1.jpg,,
+20251110_152825_planta_1.jpg,Malva sylvestris,MALSI
 20251110_152825_planta_2.jpg,,
 20251110_152828_planta_0.jpg,,
 20251110_152828_planta_1.jpg,Erodium moschatum,
@@ -2375,7 +2375,7 @@ filename,label,eppo_code
 20251110_153204_planta_7.jpg,,
 20251110_153204_planta_8.jpg,,
 20251110_153204_planta_9.jpg,,
-20251110_153208_planta_1.jpg,,
+20251110_153208_planta_1.jpg,Malva sylvestris,MALSI
 20251110_153208_planta_2.jpg,,
 20251110_153218_planta_0.jpg,,
 20251110_153218_planta_2.jpg,,
