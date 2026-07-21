@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T21:23:48.808Z",
+  "exported_at": "2026-07-21T21:28:06.246Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -10,7 +10,8 @@
     "Solanum nigrum",
     "Erodium moschatum",
     "Sonchus oleraceus",
-    "Fumaria muralis"
+    "Fumaria muralis",
+    "amaranthus retroflexus"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -26,10 +27,12 @@
     "Urtica urens": "URTUR",
     "Solanum nigrum": "SOLNI",
     "Sonchus oleraceus": "SONOL",
-    "Fumaria muralis": "FUMMU"
+    "Fumaria muralis": "FUMMU",
+    "amaranthus retroflexus": "AMARE"
   },
   "family": {
-    "Sonchus oleraceus": "Asteraceae"
+    "Sonchus oleraceus": "Asteraceae",
+    "amaranthus retroflexus": "Amaranthaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -353,6 +356,19 @@
     "JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_2.jpg": "Chenopodium album",
     "JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_8.jpg": "Chenopodium album",
     "PHOTO-2026-05-20-09-48-42_planta_3.jpg": "Lixo",
-    "PHOTO-2026-05-20-09-48-43 (9)_planta_1.jpg": "Lixo"
+    "PHOTO-2026-05-20-09-48-43 (9)_planta_1.jpg": "Lixo",
+    "20220425_153707_planta_1.jpg": "amaranthus retroflexus",
+    "20220425_154037_planta_0.jpg": "amaranthus retroflexus",
+    "20220425_154037_planta_1.jpg": "amaranthus retroflexus",
+    "20220425_154037_planta_4.jpg": "amaranthus retroflexus",
+    "20220425_154037_planta_6.jpg": "amaranthus retroflexus",
+    "20220425_154653_planta_21.jpg": "amaranthus retroflexus",
+    "20220425_154653_planta_20.jpg": "amaranthus retroflexus",
+    "20220425_154653_planta_15.jpg": "amaranthus retroflexus",
+    "20220425_154200_planta_2.jpg": "amaranthus retroflexus",
+    "20220425_154200_planta_1.jpg": "amaranthus retroflexus",
+    "20220425_154653_planta_4.jpg": "amaranthus retroflexus",
+    "20220425_164314_planta_5.jpg": "amaranthus retroflexus",
+    "20220425_164325_planta_7.jpg": "amaranthus retroflexus"
   }
 }
