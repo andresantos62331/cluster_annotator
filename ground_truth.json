@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T21:36:36.225Z",
+  "exported_at": "2026-07-21T21:37:53.832Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -12,7 +12,8 @@
     "Sonchus oleraceus",
     "Fumaria muralis",
     "amaranthus retroflexus",
-    "Papaver rhoeas"
+    "Papaver rhoeas",
+    "Chenopodium opolifolium"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -30,7 +31,8 @@
     "Sonchus oleraceus": "SONOL",
     "Fumaria muralis": "FUMMU",
     "amaranthus retroflexus": "AMARE",
-    "Papaver rhoeas": "PAPRH"
+    "Papaver rhoeas": "PAPRH",
+    "Chenopodium opolifolium": "CHEOP"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -484,6 +486,9 @@
     "IMG_20220501_160525_planta_3.jpg": "Chenopodium album",
     "IMG_20220501_160607_planta_0.jpg": "Chenopodium album",
     "IMG_20220501_160607_planta_6.jpg": "Chenopodium album",
-    "IMG_20220501_160611_planta_4.jpg": "Chenopodium album"
+    "IMG_20220501_160611_planta_4.jpg": "Chenopodium album",
+    "PHOTO-2026-05-20-09-48-42 (2)_planta_7.jpg": "Chenopodium opolifolium",
+    "PHOTO-2026-05-20-09-48-44 (4)_planta_1.jpg": "Chenopodium opolifolium",
+    "PHOTO-2026-05-20-09-48-44 (9)_planta_1.jpg": "Chenopodium opolifolium"
   }
 }
