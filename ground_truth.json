@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T21:39:34.797Z",
+  "exported_at": "2026-07-21T21:40:27.035Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -14,7 +14,8 @@
     "amaranthus retroflexus",
     "Papaver rhoeas",
     "Chenopodium opolifolium",
-    "Polygonum aviculare"
+    "Polygonum aviculare",
+    "Datura stramonium"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -33,13 +34,15 @@
     "Fumaria muralis": "FUMMU",
     "amaranthus retroflexus": "AMARE",
     "Papaver rhoeas": "PAPRH",
-    "Chenopodium opolifolium": "CHEOP"
+    "Chenopodium opolifolium": "CHEOP",
+    "Datura stramonium": "DATST"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
     "amaranthus retroflexus": "Amaranthaceae",
     "Papaver rhoeas": "Papaveraceae",
-    "Polygonum aviculare": "Polygonaceae"
+    "Polygonum aviculare": "Polygonaceae",
+    "Datura stramonium": "Solanaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -504,6 +507,11 @@
     "20220417_162047_planta_7.jpg": "Polygonum aviculare",
     "20220417_162022_planta_6.jpg": "Polygonum aviculare",
     "20220417_162022_planta_2.jpg": "Polygonum aviculare",
-    "20220417_162305_planta_5.jpg": "Polygonum aviculare"
+    "20220417_162305_planta_5.jpg": "Polygonum aviculare",
+    "20220417_162755_planta_3.jpg": "Datura stramonium",
+    "PHOTO-2026-05-20-09-48-43 (10)_planta_8.jpg": "Datura stramonium",
+    "PHOTO-2026-05-20-09-48-42 (6)_planta_10.jpg": "Datura stramonium",
+    "PHOTO-2026-05-20-09-48-43 (2)_planta_11.jpg": "Datura stramonium",
+    "20220417_162853_planta_2.jpg": "Datura stramonium"
   }
 }
