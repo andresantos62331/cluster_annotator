@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T21:31:40.387Z",
+  "exported_at": "2026-07-21T21:32:16.196Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -11,7 +11,8 @@
     "Erodium moschatum",
     "Sonchus oleraceus",
     "Fumaria muralis",
-    "amaranthus retroflexus"
+    "amaranthus retroflexus",
+    "Papaver rhoeas"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -28,11 +29,13 @@
     "Solanum nigrum": "SOLNI",
     "Sonchus oleraceus": "SONOL",
     "Fumaria muralis": "FUMMU",
-    "amaranthus retroflexus": "AMARE"
+    "amaranthus retroflexus": "AMARE",
+    "Papaver rhoeas": "PAPRH"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
-    "amaranthus retroflexus": "Amaranthaceae"
+    "amaranthus retroflexus": "Amaranthaceae",
+    "Papaver rhoeas": "Papaveraceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -451,6 +454,19 @@
     "20251110_153348_planta_0.jpg": "Erodium moschatum",
     "20251110_153404_planta_2.jpg": "Erodium moschatum",
     "20251110_153419_planta_0.jpg": "Erodium moschatum",
-    "20251110_153426_planta_4.jpg": "Erodium moschatum"
+    "20251110_153426_planta_4.jpg": "Erodium moschatum",
+    "IMG_20220501_172129_planta_1.jpg": "Papaver rhoeas",
+    "IMG_20220501_172142_planta_1.jpg": "Papaver rhoeas",
+    "IMG_20220501_172155_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172202_planta_1.jpg": "Papaver rhoeas",
+    "IMG_20220501_172416_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172413_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172403_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172211_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172205_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172419_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172423_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172435_planta_0.jpg": "Papaver rhoeas",
+    "IMG_20220501_172442_planta_0.jpg": "Papaver rhoeas"
   }
 }
