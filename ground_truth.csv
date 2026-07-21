@@ -1465,7 +1465,7 @@ filename,label,eppo_code
 20251109_162452_planta_9.jpg,,
 20251109_162455_planta_0.jpg,,
 20251109_162455_planta_1.jpg,,
-20251109_162455_planta_10.jpg,,
+20251109_162455_planta_10.jpg,Urtica urens,URTUR
 20251109_162455_planta_11.jpg,,
 20251109_162455_planta_12.jpg,,
 20251109_162455_planta_13.jpg,,
@@ -1661,7 +1661,7 @@ filename,label,eppo_code
 20251110_151701_planta_5.jpg,,
 20251110_151703_planta_0.jpg,,
 20251110_151703_planta_1.jpg,,
-20251110_151703_planta_2.jpg,,
+20251110_151703_planta_2.jpg,Urtica urens,URTUR
 20251110_151703_planta_3.jpg,,
 20251110_151703_planta_4.jpg,,
 20251110_151703_planta_5.jpg,,
@@ -1718,7 +1718,7 @@ filename,label,eppo_code
 20251110_151728_planta_2.jpg,,
 20251110_151728_planta_3.jpg,,
 20251110_151728_planta_4.jpg,,
-20251110_151732_planta_0.jpg,,
+20251110_151732_planta_0.jpg,Urtica urens,URTUR
 20251110_151732_planta_1.jpg,,
 20251110_151732_planta_2.jpg,,
 20251110_151732_planta_4.jpg,,
@@ -1727,7 +1727,7 @@ filename,label,eppo_code
 20251110_151735_planta_2.jpg,,
 20251110_151740_planta_10.jpg,,
 20251110_151746_planta_0.jpg,,
-20251110_151746_planta_1.jpg,,
+20251110_151746_planta_1.jpg,Urtica urens,URTUR
 20251110_151746_planta_10.jpg,,
 20251110_151746_planta_11.jpg,,
 20251110_151746_planta_12.jpg,,
@@ -1757,9 +1757,9 @@ filename,label,eppo_code
 20251110_151749_planta_7.jpg,,
 20251110_151749_planta_8.jpg,,
 20251110_151755_planta_0.jpg,,
-20251110_151757_planta_0.jpg,,
+20251110_151757_planta_0.jpg,Urtica urens,URTUR
 20251110_151757_planta_2.jpg,,
-20251110_151802_planta_0.jpg,,
+20251110_151802_planta_0.jpg,Urtica urens,URTUR
 20251110_151802_planta_1.jpg,,
 20251110_151802_planta_2.jpg,,
 20251110_151806_planta_0.jpg,,
@@ -1771,12 +1771,12 @@ filename,label,eppo_code
 20251110_151809_planta_4.jpg,,
 20251110_151809_planta_6.jpg,,
 20251110_151809_planta_7.jpg,,
-20251110_151815_planta_0.jpg,,
+20251110_151815_planta_0.jpg,Urtica urens,URTUR
 20251110_151815_planta_1.jpg,,
 20251110_151815_planta_2.jpg,,
-20251110_151815_planta_3.jpg,,
+20251110_151815_planta_3.jpg,Urtica urens,URTUR
 20251110_151815_planta_4.jpg,Lixo,
-20251110_151815_planta_5.jpg,,
+20251110_151815_planta_5.jpg,Urtica urens,URTUR
 20251110_151826_planta_0.jpg,,
 20251110_151826_planta_1.jpg,,
 20251110_151826_planta_2.jpg,,
@@ -1784,15 +1784,15 @@ filename,label,eppo_code
 20251110_151832_planta_0.jpg,,
 20251110_151832_planta_1.jpg,,
 20251110_151832_planta_2.jpg,,
-20251110_151837_planta_0.jpg,,
-20251110_151837_planta_1.jpg,,
+20251110_151837_planta_0.jpg,Urtica urens,URTUR
+20251110_151837_planta_1.jpg,Urtica urens,URTUR
 20251110_151837_planta_2.jpg,,
 20251110_151837_planta_3.jpg,,
 20251110_151837_planta_4.jpg,,
-20251110_151837_planta_5.jpg,,
+20251110_151837_planta_5.jpg,Urtica urens,URTUR
 20251110_151840_planta_0.jpg,,
 20251110_151840_planta_1.jpg,,
-20251110_151845_planta_0.jpg,,
+20251110_151845_planta_0.jpg,Urtica urens,URTUR
 20251110_151845_planta_1.jpg,,
 20251110_151858_planta_0.jpg,,
 20251110_151858_planta_1.jpg,,
@@ -2601,7 +2601,7 @@ filename,label,eppo_code
 20251110_153348_planta_7.jpg,Erodium moschatum,
 20251110_153348_planta_8.jpg,,
 20251110_153353_planta_0.jpg,,
-20251110_153353_planta_1.jpg,,
+20251110_153353_planta_1.jpg,Erodium moschatum,
 20251110_153353_planta_10.jpg,,
 20251110_153353_planta_11.jpg,,
 20251110_153353_planta_12.jpg,,
