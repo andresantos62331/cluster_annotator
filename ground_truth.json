@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-22T13:40:10.069Z",
+  "exported_at": "2026-07-22T13:40:42.595Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -11,7 +11,7 @@
     "Malva sylvestris",
     "Solanum nigrum",
     "Sonchus oleraceus",
-    "Fumaria muralis",
+    "Fumaria officinalis",
     "Papaver rhoeas",
     "Chenopodium opolifolium",
     "Polygonum aviculare",
@@ -34,14 +34,14 @@
     "Urtica urens": "URTUR",
     "Solanum nigrum": "SOLNI",
     "Sonchus oleraceus": "SONOL",
-    "Fumaria muralis": "FUMMU",
     "Papaver rhoeas": "PAPRH",
     "Chenopodium opolifolium": "CHEOP",
     "Datura stramonium": "DATST",
     "Galinsoga parviflora": "GASPA",
     "Ranunculus arvensis": "RANAR",
     "Tribulus terrestris": "TRITE",
-    "Tribolus terresrtris": "TRITE"
+    "Tribolus terresrtris": "TRITE",
+    "Fumaria officinalis": "FUMMU"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
@@ -164,7 +164,7 @@
     "20220425_154037_planta_8.jpg": "Chenopodium album",
     "20220425_154534_planta_1.jpg": "Chenopodium album",
     "20220425_154653_planta_11.jpg": "Chenopodium album",
-    "20220417_152204_planta_1.jpg": "Fumaria muralis",
+    "20220417_152204_planta_1.jpg": "Fumaria officinalis",
     "20251110_152155_planta_0.jpg": "Erodium moschatum",
     "20251110_152210_planta_1.jpg": "Erodium moschatum",
     "20251110_152216_planta_2.jpg": "Erodium moschatum",
