@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-21T21:40:47.815Z",
+  "exported_at": "2026-07-22T09:36:36.070Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -38,11 +38,9 @@
     "Datura stramonium": "DATST"
   },
   "family": {
-    "Sonchus oleraceus": "Asteraceae",
-    "amaranthus retroflexus": "Amaranthaceae",
-    "Papaver rhoeas": "Papaveraceae",
-    "Polygonum aviculare": "Polygonaceae",
-    "Datura stramonium": "Solanaceae"
+    "Digitaria sanguinalis": "Poaceae",
+    "Malva sylvestris": "Malvaceae",
+    "Solanum nigrum": "Solanaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -514,6 +512,38 @@
     "PHOTO-2026-05-20-09-48-43 (2)_planta_11.jpg": "Datura stramonium",
     "20220417_162853_planta_2.jpg": "Datura stramonium",
     "PHOTO-2026-05-20-09-48-42 (6)_planta_3.jpg": "Sonchus oleraceus",
-    "20251109_160631_planta_5.jpg": "Sonchus oleraceus"
+    "20251109_160631_planta_5.jpg": "Sonchus oleraceus",
+    "20251109_161938_planta_2.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_1.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_2.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_3.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_4.jpg": "Portulaca oleracea",
+    "20251110_152757_planta_1.jpg": "Portulaca oleracea",
+    "20251110_152757_planta_0.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_7.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_6.jpg": "Portulaca oleracea",
+    "20251110_151432_planta_5.jpg": "Portulaca oleracea",
+    "20251110_152757_planta_2.jpg": "Portulaca oleracea",
+    "20251110_152757_planta_4.jpg": "Portulaca oleracea",
+    "20251110_152757_planta_3.jpg": "Portulaca oleracea",
+    "20251110_152757_planta_5.jpg": "Portulaca oleracea",
+    "20251110_152807_planta_0.jpg": "Portulaca oleracea",
+    "20251110_152901_planta_5.jpg": "Portulaca oleracea",
+    "20251110_152937_planta_0.jpg": "Portulaca oleracea",
+    "20251110_153005_planta_1.jpg": "Portulaca oleracea",
+    "20251110_153005_planta_2.jpg": "Portulaca oleracea",
+    "20251110_153005_planta_4.jpg": "Portulaca oleracea",
+    "20251110_153005_planta_7.jpg": "Portulaca oleracea",
+    "20251110_153005_planta_8.jpg": "Portulaca oleracea",
+    "20251110_153017_planta_3.jpg": "Portulaca oleracea",
+    "20251110_153041_planta_1.jpg": "Portulaca oleracea",
+    "20251110_153054_planta_6.jpg": "Portulaca oleracea",
+    "20251110_153123_planta_4.jpg": "Portulaca oleracea",
+    "20251110_153123_planta_5.jpg": "Portulaca oleracea",
+    "20251110_153123_planta_6.jpg": "Portulaca oleracea",
+    "20251110_153132_planta_2.jpg": "Portulaca oleracea",
+    "20251110_153146_planta_0.jpg": "Portulaca oleracea",
+    "20251110_153148_planta_0.jpg": "Portulaca oleracea",
+    "20251110_153148_planta_2.jpg": "Portulaca oleracea"
   }
 }
