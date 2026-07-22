@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-22T13:13:50.585Z",
+  "exported_at": "2026-07-22T13:14:59.778Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -41,7 +41,8 @@
     "Datura stramonium": "DATST",
     "Galinsoga parviflora": "GASPA",
     "Ranunculus arvensis": "RANAR",
-    "Tribulus terrestris": "TRITE"
+    "Tribulus terrestris": "TRITE",
+    "Tribolus terresrtris": "TRITE"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
