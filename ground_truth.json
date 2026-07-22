@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-22T11:49:59.106Z",
+  "exported_at": "2026-07-22T11:53:30.231Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -15,7 +15,8 @@
     "Papaver rhoeas",
     "Chenopodium opolifolium",
     "Polygonum aviculare",
-    "Datura stramonium"
+    "Datura stramonium",
+    "Galinsoga parviflora"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -35,7 +36,8 @@
     "amaranthus retroflexus": "AMARE",
     "Papaver rhoeas": "PAPRH",
     "Chenopodium opolifolium": "CHEOP",
-    "Datura stramonium": "DATST"
+    "Datura stramonium": "DATST",
+    "Galinsoga parviflora": "GASPA"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
