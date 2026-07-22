@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-22T11:54:13.968Z",
+  "exported_at": "2026-07-22T11:56:37.834Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -16,7 +16,8 @@
     "Chenopodium opolifolium",
     "Polygonum aviculare",
     "Datura stramonium",
-    "Galinsoga parviflora"
+    "Galinsoga parviflora",
+    "Ranunculus arvensis"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -37,7 +38,8 @@
     "Papaver rhoeas": "PAPRH",
     "Chenopodium opolifolium": "CHEOP",
     "Datura stramonium": "DATST",
-    "Galinsoga parviflora": "GASPA"
+    "Galinsoga parviflora": "GASPA",
+    "Ranunculus arvensis": "RANAR"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
@@ -656,6 +658,10 @@
     "PHOTO-2026-05-20-09-48-43 (11)_planta_13.jpg": "Lixo",
     "PHOTO-2026-05-20-09-48-43 (5)_planta_3.jpg": "Lixo",
     "PHOTO-2026-05-20-09-48-43 (9)_planta_4.jpg": "Lixo",
-    "PHOTO-2026-05-20-09-48-43_planta_11.jpg": "Lixo"
+    "PHOTO-2026-05-20-09-48-43_planta_11.jpg": "Lixo",
+    "20220417_162050_planta_5.jpg": "Ranunculus arvensis",
+    "20220417_162118_planta_0.jpg": "Ranunculus arvensis",
+    "20220417_162220_planta_6.jpg": "Ranunculus arvensis",
+    "20220417_162106_planta_5.jpg": "Ranunculus arvensis"
   }
 }
