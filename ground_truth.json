@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-22T13:40:42.595Z",
+  "exported_at": "2026-07-22T13:42:20.745Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -18,7 +18,8 @@
     "Datura stramonium",
     "Galinsoga parviflora",
     "Ranunculus arvensis",
-    "Tribulus terrestris"
+    "Tribulus terrestris",
+    "Oxalis pes-caprae"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -41,7 +42,8 @@
     "Ranunculus arvensis": "RANAR",
     "Tribulus terrestris": "TRITE",
     "Tribolus terresrtris": "TRITE",
-    "Fumaria officinalis": "FUMMU"
+    "Fumaria officinalis": "FUMMU",
+    "Oxalis pes-caprae": "OXAPC"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
