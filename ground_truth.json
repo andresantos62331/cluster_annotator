@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-22T11:57:26.500Z",
+  "exported_at": "2026-07-22T11:58:30.786Z",
   "labels": [
     "Portulaca oleracea",
     "Spergula Arvensis",
@@ -18,7 +18,8 @@
     "Datura stramonium",
     "Galinsoga parviflora",
     "Ranunculus arvensis",
-    "Tribolus terresrtris"
+    "Tribolus terresrtris",
+    "Tribulus terrestris"
   ],
   "eppo": {
     "Chenopodium album": "CHEAL",
@@ -40,7 +41,8 @@
     "Chenopodium opolifolium": "CHEOP",
     "Datura stramonium": "DATST",
     "Galinsoga parviflora": "GASPA",
-    "Ranunculus arvensis": "RANAR"
+    "Ranunculus arvensis": "RANAR",
+    "Tribulus terrestris": "TRITE"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
@@ -663,6 +665,24 @@
     "20220417_162050_planta_5.jpg": "Ranunculus arvensis",
     "20220417_162118_planta_0.jpg": "Ranunculus arvensis",
     "20220417_162220_planta_6.jpg": "Ranunculus arvensis",
-    "20220417_162106_planta_5.jpg": "Ranunculus arvensis"
+    "20220417_162106_planta_5.jpg": "Ranunculus arvensis",
+    "IMG_20220501_165717_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165727_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165749_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165800_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165804_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165807_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165818_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165821_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165823_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165826_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165828_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165832_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165835_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165838_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165842_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165849_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165910_planta_0.jpg": "Tribulus terrestris",
+    "IMG_20220501_165918_planta_0.jpg": "Tribulus terrestris"
   }
 }
