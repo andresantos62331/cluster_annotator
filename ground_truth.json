@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T18:20:11.182Z",
+  "exported_at": "2026-07-23T18:26:40.585Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -22,7 +22,8 @@
     "Oxalis pes-caprae",
     "Stellaria media",
     "Urtica membranacea",
-    "Senecio vulgaris"
+    "Senecio vulgaris",
+    "Diplotaxis catholica"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -50,7 +51,8 @@
     "Portulaca oleracea": "POROL",
     "Stellaria media": "STEME",
     "Urtica membranacea": "URTDU",
-    "Senecio vulgaris": "SENVU"
+    "Senecio vulgaris": "SENVU",
+    "Diplotaxis catholica": "DIPCA"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -60,7 +62,8 @@
     "Datura stramonium": "Solanaceae",
     "Stellaria media": "Caryophyllaceae",
     "Urtica membranacea": "Urticaceae",
-    "Senecio vulgaris": "Asteraceae"
+    "Senecio vulgaris": "Asteraceae",
+    "Diplotaxis catholica": "Brassicaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -870,6 +873,12 @@
     "IMG_20220501_163539_planta_0.jpg": "Senecio vulgaris",
     "IMG_20220501_163457_planta_1.jpg": "Senecio vulgaris",
     "20220417_155659_planta_1.jpg": "Lixo",
-    "IMG_20220501_163432_planta_0.jpg": "Lixo"
+    "IMG_20220501_163432_planta_0.jpg": "Lixo",
+    "20220417_161256_planta_0.jpg": "Diplotaxis catholica",
+    "IMG_20220501_162526_planta_0.jpg": "Diplotaxis catholica",
+    "20220417_160343_planta_0.jpg": "Diplotaxis catholica",
+    "20220417_160228_planta_0.jpg": "Diplotaxis catholica",
+    "20220417_162355_planta_0.jpg": "Diplotaxis catholica",
+    "20220417_160249_planta_0.jpg": "Diplotaxis catholica"
   }
 }
