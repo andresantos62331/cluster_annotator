@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T15:04:02.239Z",
+  "exported_at": "2026-07-23T16:13:24.767Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -33,7 +33,6 @@
     "Chenopodium album": "CHEAL",
     "Erodium moschatum": "EROMO",
     "Urtica urens": "URTUR",
-    "Portulaca oleracea": "POROL",
     "Oxalis pes-caprae": "OXAPC",
     "Tribulus terrestris": "TRBTE",
     "Ranunculus arvensis": "RANAR",
@@ -44,7 +43,8 @@
     "Papaver rhoeas": "PAPRH",
     "Solanum nigrum": "SOLNI",
     "Digitaria sanguinalis": "DIGSA",
-    "Amaranthus retroflexus": "AMARE"
+    "Amaranthus retroflexus": "AMARE",
+    "Portulaca oleracea": "POROL"
   },
   "family": {
     "Cyperus rotundus": "Cyperaceae",
@@ -55,7 +55,6 @@
     "Chenopodium album": "Amaranthaceae",
     "Erodium moschatum": "Geraniaceae",
     "Urtica urens": "Urticaceae",
-    "Portulaca oleracea": "Portulacaceae",
     "Oxalis pes-caprae": "Oxalidaceae",
     "Tribulus terrestris": "Zygophyllaceae",
     "Ranunculus arvensis": "Ranunculaceae",
@@ -66,7 +65,8 @@
     "Papaver rhoeas": "Papaveraceae",
     "Solanum nigrum": "Solanaceae",
     "Digitaria sanguinalis": "Poaceae",
-    "Amaranthus retroflexus": "Amaranthaceae"
+    "Amaranthus retroflexus": "Amaranthaceae",
+    "Portulaca oleracea": "Portulacaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
