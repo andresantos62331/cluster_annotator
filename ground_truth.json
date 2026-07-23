@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T20:10:17.761Z",
+  "exported_at": "2026-07-23T20:20:09.668Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -27,7 +27,8 @@
     "Echinochloa crus-galli",
     "Lamium purpureum",
     "Veronica arvensis",
-    "Picris echioides"
+    "Picris echioides",
+    "Convolvulus aravensis"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -59,7 +60,8 @@
     "Diplotaxis catholica": "DIPCA",
     "Lamium purpureum": "LAMPU",
     "Veronica arvensis": "VERAR",
-    "Picris echioides": "PICEC"
+    "Picris echioides": "PICEC",
+    "Convolvulus aravensis": "CONAR"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -73,7 +75,8 @@
     "Diplotaxis catholica": "Brassicaceae",
     "Echinochloa crus-galli": "Poaceae",
     "Lamium purpureum": "Lamiaceae",
-    "Veronica arvensis": "Plantaginaceae"
+    "Veronica arvensis": "Plantaginaceae",
+    "Convolvulus aravensis": "Convolvulaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1078,6 +1081,10 @@
     "20251110_151345_planta_3.jpg": "Sonchus oleraceus",
     "20251110_153703_planta_5.jpg": "Sonchus oleraceus",
     "20251110_151639_planta_0.jpg": "Lamium purpureum",
-    "20251110_153323_planta_20.jpg": "Lamium purpureum"
+    "20251110_153323_planta_20.jpg": "Lamium purpureum",
+    "20251110_151706_planta_8.jpg": "Convolvulus aravensis",
+    "20251110_152048_planta_0.jpg": "Convolvulus aravensis",
+    "20251110_152106_planta_3.jpg": "Convolvulus aravensis",
+    "20251110_152200_planta_3.jpg": "Convolvulus aravensis"
   }
 }
