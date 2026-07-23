@@ -569,7 +569,7 @@ filename,label,eppo_code
 20220417_160050_planta_0.jpg,,
 20220417_160054_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_160057_planta_0.jpg,Lixo,
-20220417_160102_planta_1.jpg,,
+20220417_160102_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_160105_planta_1.jpg,,
 20220417_160105_planta_2.jpg,Chenopodium album,CHEAL
 20220417_160105_planta_3.jpg,Lamium purpureum,LAMPU
@@ -669,7 +669,7 @@ filename,label,eppo_code
 20220417_160731_planta_0.jpg,,
 20220417_160738_planta_0.jpg,,
 20220417_160738_planta_1.jpg,,
-20220417_160738_planta_2.jpg,,
+20220417_160738_planta_2.jpg,Convolvulus aravensis,CONAR
 20220417_160738_planta_3.jpg,,
 20220417_160744_planta_0.jpg,,
 20220417_160746_planta_0.jpg,,
@@ -701,16 +701,16 @@ filename,label,eppo_code
 20220417_161013_planta_1.jpg,,
 20220417_161015_planta_0.jpg,,
 20220417_161018_planta_1.jpg,,
-20220417_161021_planta_0.jpg,,
+20220417_161021_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_161027_planta_0.jpg,,
 20220417_161032_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_161036_planta_0.jpg,,
-20220417_161043_planta_1.jpg,,
+20220417_161043_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_161043_planta_2.jpg,,
 20220417_161043_planta_3.jpg,Lamium purpureum,LAMPU
 20220417_161043_planta_4.jpg,,
 20220417_161048_planta_1.jpg,,
-20220417_161054_planta_0.jpg,,
+20220417_161054_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_161101_planta_0.jpg,,
 20220417_161105_planta_0.jpg,,
 20220417_161115_planta_0.jpg,,
@@ -2114,7 +2114,7 @@ filename,label,eppo_code
 20251110_152559_planta_2.jpg,,
 20251110_152559_planta_3.jpg,Erodium moschatum,EROMO
 20251110_152559_planta_4.jpg,,
-20251110_152601_planta_0.jpg,,
+20251110_152601_planta_0.jpg,Convolvulus aravensis,CONAR
 20251110_152601_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152607_planta_0.jpg,Erodium moschatum,EROMO
 20251110_152607_planta_2.jpg,,
