@@ -818,7 +818,7 @@ filename,label,eppo_code
 20220417_162218_planta_3.jpg,,
 20220417_162218_planta_4.jpg,Lixo,
 20220417_162218_planta_5.jpg,Urtica urens,URTUR
-20220417_162220_planta_1.jpg,,
+20220417_162220_planta_1.jpg,Chenopodium opulifolium,CHEOP
 20220417_162220_planta_2.jpg,,
 20220417_162220_planta_3.jpg,Solanum nigrum,SOLNI
 20220417_162220_planta_4.jpg,Solanum nigrum,SOLNI
@@ -937,7 +937,7 @@ filename,label,eppo_code
 20220417_163001_planta_2.jpg,Lixo,
 20220417_163001_planta_3.jpg,,
 20220417_163005_planta_0.jpg,Veronica arvensis,VERAR
-20220417_163005_planta_1.jpg,,
+20220417_163005_planta_1.jpg,Chenopodium opulifolium,CHEOP
 20220417_163013_planta_0.jpg,,
 20220417_163050_planta_0.jpg,Lixo,
 20220417_163050_planta_3.jpg,,
@@ -3069,7 +3069,7 @@ JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_5.jpg,,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_6.jpg,Urtica urens,URTUR
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_7.jpg,,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_8.jpg,Lixo,
-JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_9.jpg,,
+JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_9.jpg,Chenopodium opulifolium,CHEOP
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_0.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_1.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_10.jpg,Urtica urens,URTUR
@@ -3148,7 +3148,7 @@ JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_8.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_9.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_0.jpg,Polygonum aviculare,POLAV
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_1.jpg,Chenopodium album,CHEAL
-JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_3.jpg,,
+JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_3.jpg,Chenopodium opulifolium,CHEOP
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_4.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_15_16_172937527891404556517_planta_2.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_0.jpg,Stellaria media,STEME
@@ -3417,11 +3417,11 @@ PHOTO-2026-05-20-09-48-43 (5)_planta_5.jpg,,
 PHOTO-2026-05-20-09-48-43 (5)_planta_6.jpg,Galinsoga parviflora,GASPA
 PHOTO-2026-05-20-09-48-43 (5)_planta_7.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-43 (5)_planta_8.jpg,Galinsoga parviflora,GASPA
-PHOTO-2026-05-20-09-48-43 (5)_planta_9.jpg,,
+PHOTO-2026-05-20-09-48-43 (5)_planta_9.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (6)_planta_0.jpg,,
 PHOTO-2026-05-20-09-48-43 (6)_planta_1.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (6)_planta_10.jpg,Galinsoga parviflora,GASPA
-PHOTO-2026-05-20-09-48-43 (6)_planta_11.jpg,,
+PHOTO-2026-05-20-09-48-43 (6)_planta_11.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (6)_planta_12.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (6)_planta_13.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-43 (6)_planta_14.jpg,,
