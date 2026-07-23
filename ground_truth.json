@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T19:36:07.455Z",
+  "exported_at": "2026-07-23T19:39:39.246Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -24,7 +24,8 @@
     "Urtica membranacea",
     "Senecio vulgaris",
     "Diplotaxis catholica",
-    "Echinochloa crus-galli"
+    "Echinochloa crus-galli",
+    "Lamium purpureum"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -53,7 +54,8 @@
     "Stellaria media": "STEME",
     "Urtica membranacea": "URTDU",
     "Senecio vulgaris": "SENVU",
-    "Diplotaxis catholica": "DIPCA"
+    "Diplotaxis catholica": "DIPCA",
+    "Lamium purpureum": "LAMPU"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -65,7 +67,8 @@
     "Urtica membranacea": "Urticaceae",
     "Senecio vulgaris": "Asteraceae",
     "Diplotaxis catholica": "Brassicaceae",
-    "Echinochloa crus-galli": "Poaceae"
+    "Echinochloa crus-galli": "Poaceae",
+    "Lamium purpureum": "Lamiaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1030,6 +1033,9 @@
     "20251110_151549_planta_0.jpg": "Lixo",
     "20220425_160121_planta_0.jpg": "Lixo",
     "20220425_155541_planta_16.jpg": "Amaranthus retroflexus",
-    "20251110_151709_planta_1.jpg": "Lixo"
+    "20251110_151709_planta_1.jpg": "Lixo",
+    "20220417_160708_planta_0.jpg": "Lamium purpureum",
+    "20220417_161032_planta_1.jpg": "Lamium purpureum",
+    "20220417_161043_planta_3.jpg": "Lamium purpureum"
   }
 }
