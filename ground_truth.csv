@@ -583,7 +583,7 @@ filename,label,eppo_code
 20220417_160134_planta_0.jpg,,
 20220417_160144_planta_0.jpg,,
 20220417_160144_planta_1.jpg,,
-20220417_160144_planta_2.jpg,,
+20220417_160144_planta_2.jpg,Lixo,
 20220417_160147_planta_1.jpg,,
 20220417_160147_planta_2.jpg,,
 20220417_160153_planta_0.jpg,,
@@ -704,7 +704,7 @@ filename,label,eppo_code
 20220417_161021_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_161027_planta_0.jpg,,
 20220417_161032_planta_1.jpg,Lamium purpureum,LAMPU
-20220417_161036_planta_0.jpg,,
+20220417_161036_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_161043_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_161043_planta_2.jpg,,
 20220417_161043_planta_3.jpg,Lamium purpureum,LAMPU
@@ -1125,7 +1125,7 @@ filename,label,eppo_code
 20220425_160027_planta_1.jpg,,
 20220425_160121_planta_0.jpg,Lixo,
 20220425_160121_planta_1.jpg,,
-20220425_160121_planta_2.jpg,,
+20220425_160121_planta_2.jpg,Lixo,
 20220425_160147_planta_1.jpg,,
 20220425_160147_planta_2.jpg,,
 20220425_160207_planta_0.jpg,,
@@ -1315,7 +1315,7 @@ filename,label,eppo_code
 20220425_164511_planta_6.jpg,Lixo,
 20220425_164524_planta_1.jpg,Chenopodium album,CHEAL
 20220425_164524_planta_4.jpg,Chenopodium album,CHEAL
-20220425_164524_planta_5.jpg,,
+20220425_164524_planta_5.jpg,Lamium purpureum,LAMPU
 20220425_164534_planta_0.jpg,Chenopodium album,CHEAL
 20220425_164534_planta_1.jpg,,
 20220425_164534_planta_3.jpg,,
@@ -1653,7 +1653,7 @@ filename,label,eppo_code
 20251110_151657_planta_4.jpg,,
 20251110_151657_planta_5.jpg,,
 20251110_151657_planta_6.jpg,Lixo,
-20251110_151701_planta_0.jpg,,
+20251110_151701_planta_0.jpg,Lixo,
 20251110_151701_planta_1.jpg,Erodium moschatum,EROMO
 20251110_151701_planta_2.jpg,,
 20251110_151701_planta_3.jpg,,
@@ -1755,7 +1755,7 @@ filename,label,eppo_code
 20251110_151749_planta_5.jpg,Lixo,
 20251110_151749_planta_6.jpg,,
 20251110_151749_planta_7.jpg,,
-20251110_151749_planta_8.jpg,,
+20251110_151749_planta_8.jpg,Lixo,
 20251110_151755_planta_0.jpg,,
 20251110_151757_planta_0.jpg,Urtica urens,URTUR
 20251110_151757_planta_2.jpg,,
@@ -2262,12 +2262,12 @@ filename,label,eppo_code
 20251110_152918_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152922_planta_0.jpg,Erodium moschatum,EROMO
 20251110_152926_planta_1.jpg,,
-20251110_152926_planta_2.jpg,,
+20251110_152926_planta_2.jpg,Lixo,
 20251110_152926_planta_6.jpg,,
 20251110_152926_planta_8.jpg,,
 20251110_152926_planta_9.jpg,,
 20251110_152928_planta_2.jpg,,
-20251110_152932_planta_0.jpg,,
+20251110_152932_planta_0.jpg,Lixo,
 20251110_152932_planta_1.jpg,,
 20251110_152932_planta_2.jpg,,
 20251110_152937_planta_0.jpg,Portulaca oleracea,POROL
@@ -2663,10 +2663,10 @@ filename,label,eppo_code
 20251110_153424_planta_5.jpg,,
 20251110_153424_planta_6.jpg,,
 20251110_153426_planta_0.jpg,,
-20251110_153426_planta_2.jpg,,
+20251110_153426_planta_2.jpg,Lixo,
 20251110_153426_planta_3.jpg,Lixo,
 20251110_153426_planta_4.jpg,Erodium moschatum,EROMO
-20251110_153431_planta_1.jpg,,
+20251110_153431_planta_1.jpg,Lixo,
 20251110_153431_planta_2.jpg,,
 20251110_153435_planta_0.jpg,,
 20251110_153435_planta_1.jpg,Erodium moschatum,EROMO
@@ -2704,13 +2704,13 @@ filename,label,eppo_code
 20251110_153506_planta_3.jpg,,
 20251110_153506_planta_4.jpg,,
 20251110_153510_planta_0.jpg,,
-20251110_153510_planta_1.jpg,,
+20251110_153510_planta_1.jpg,Lixo,
 20251110_153510_planta_2.jpg,,
 20251110_153510_planta_3.jpg,Lixo,
-20251110_153510_planta_4.jpg,,
+20251110_153510_planta_4.jpg,Lixo,
 20251110_153510_planta_5.jpg,,
 20251110_153510_planta_6.jpg,,
-20251110_153510_planta_8.jpg,,
+20251110_153510_planta_8.jpg,Lixo,
 20251110_153513_planta_0.jpg,,
 20251110_153513_planta_1.jpg,,
 20251110_153513_planta_2.jpg,,
