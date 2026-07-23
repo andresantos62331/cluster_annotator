@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T20:56:54.835Z",
+  "exported_at": "2026-07-23T20:59:43.722Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -29,7 +29,8 @@
     "Veronica arvensis",
     "Picris echioides",
     "Convolvulus aravensis",
-    "Conyza bonariensis"
+    "Conyza bonariensis",
+    "Chamaemelum mixtum"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -63,7 +64,8 @@
     "Veronica arvensis": "VERAR",
     "Picris echioides": "PICEC",
     "Convolvulus aravensis": "CONAR",
-    "Conyza bonariensis": "ERIBO"
+    "Conyza bonariensis": "ERIBO",
+    "Chamaemelum mixtum": "ANTMI"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -1244,6 +1246,16 @@
     "20220417_152540_planta_7.jpg": "Stellaria media",
     "20220417_153559_planta_1.jpg": "Stellaria media",
     "20220417_155834_planta_2.jpg": "Stellaria media",
-    "JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_1.jpg": "Stellaria media"
+    "JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_1.jpg": "Stellaria media",
+    "20220417_153123_planta_0.jpg": "Chamaemelum mixtum",
+    "20220417_153851_planta_5.jpg": "Chamaemelum mixtum",
+    "20220417_153853_planta_4.jpg": "Chamaemelum mixtum",
+    "20220417_153853_planta_5.jpg": "Chamaemelum mixtum",
+    "20220417_154018_planta_4.jpg": "Chamaemelum mixtum",
+    "20220417_162557_planta_1.jpg": "Chamaemelum mixtum",
+    "20220417_162753_planta_3.jpg": "Chamaemelum mixtum",
+    "20220417_162755_planta_2.jpg": "Chamaemelum mixtum",
+    "20220417_162853_planta_1.jpg": "Chamaemelum mixtum",
+    "20220417_154656_planta_1.jpg": "Lixo"
   }
 }
