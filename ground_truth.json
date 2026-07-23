@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T21:11:41.553Z",
+  "exported_at": "2026-07-23T21:14:07.417Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -32,7 +32,7 @@
     "Conyza bonariensis",
     "Chamaemelum mixtum",
     "Sonchus asper",
-    "raphanus raphanistrum"
+    "Raphanus raphanistrum"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -69,7 +69,7 @@
     "Conyza bonariensis": "ERIBO",
     "Chamaemelum mixtum": "ANTMI",
     "Sonchus asper": "SONAS",
-    "raphanus raphanistrum": "RAPRA"
+    "Raphanus raphanistrum": "RAPRA"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -87,7 +87,7 @@
     "Convolvulus aravensis": "Convolvulaceae",
     "Conyza bonariensis": "Asteraceae",
     "Sonchus asper": "Asteraceae",
-    "raphanus raphanistrum": "Brassicaceae"
+    "Raphanus raphanistrum": "Brassicaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1413,6 +1413,27 @@
     "20220417_152829_planta_1.jpg": "Chenopodium album",
     "20220417_152858_planta_3.jpg": "Chenopodium album",
     "JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_7.jpg": "Chenopodium album",
-    "JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_19.jpg": "Chenopodium album"
+    "JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_19.jpg": "Chenopodium album",
+    "20220417_153105_planta_6.jpg": "Raphanus raphanistrum",
+    "20220417_154415_planta_13.jpg": "Conyza bonariensis",
+    "20220417_154415_planta_5.jpg": "Conyza bonariensis",
+    "20220417_154415_planta_6.jpg": "Conyza bonariensis",
+    "20220417_154415_planta_7.jpg": "Conyza bonariensis",
+    "20220417_154420_planta_11.jpg": "Conyza bonariensis",
+    "20220417_154949_planta_2.jpg": "Conyza bonariensis",
+    "20220417_153526_planta_1.jpg": "Urtica urens",
+    "20220417_153805_planta_4.jpg": "Urtica urens",
+    "20220417_154420_planta_14.jpg": "Urtica urens",
+    "20220417_162047_planta_1.jpg": "Urtica urens",
+    "20220417_162106_planta_6.jpg": "Urtica urens",
+    "JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_2.jpg": "Urtica urens",
+    "JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_10.jpg": "Urtica urens",
+    "20220417_153533_planta_3.jpg": "Lixo",
+    "20220417_155548_planta_1.jpg": "Lixo",
+    "20220417_155602_planta_0.jpg": "Lixo",
+    "JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_4.jpg": "Lixo",
+    "JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_0.jpg": "Lixo",
+    "JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_0.jpg": "Lixo",
+    "JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_3.jpg": "Chenopodium album"
   }
 }
