@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T18:42:55.357Z",
+  "exported_at": "2026-07-23T18:43:39.414Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -23,7 +23,8 @@
     "Stellaria media",
     "Urtica membranacea",
     "Senecio vulgaris",
-    "Diplotaxis catholica"
+    "Diplotaxis catholica",
+    "Echinochloa crus-galli"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -63,7 +64,8 @@
     "Stellaria media": "Caryophyllaceae",
     "Urtica membranacea": "Urticaceae",
     "Senecio vulgaris": "Asteraceae",
-    "Diplotaxis catholica": "Brassicaceae"
+    "Diplotaxis catholica": "Brassicaceae",
+    "Echinochloa crus-galli": "Poaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -948,6 +950,7 @@
     "20220417_154614_planta_1.jpg": "Polygonum aviculare",
     "20220417_154706_planta_1.jpg": "Polygonum aviculare",
     "20220417_154911_planta_0.jpg": "Polygonum aviculare",
-    "20220417_154915_planta_2.jpg": "Polygonum aviculare"
+    "20220417_154915_planta_2.jpg": "Polygonum aviculare",
+    "20220417_163312_planta_3.jpg": "Echinochloa crus-galli"
   }
 }
