@@ -317,7 +317,7 @@ filename,label,eppo_code
 20220417_154420_planta_5.jpg,,
 20220417_154420_planta_6.jpg,,
 20220417_154420_planta_8.jpg,,
-20220417_154427_planta_0.jpg,,
+20220417_154427_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_154446_planta_0.jpg,,
 20220417_154446_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154446_planta_3.jpg,Lixo,
@@ -333,14 +333,14 @@ filename,label,eppo_code
 20220417_154541_planta_5.jpg,,
 20220417_154544_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_154544_planta_3.jpg,Polygonum aviculare,POLAV
-20220417_154544_planta_4.jpg,,
+20220417_154544_planta_4.jpg,Polygonum aviculare,POLAV
 20220417_154544_planta_5.jpg,,
 20220417_154544_planta_6.jpg,,
 20220417_154544_planta_7.jpg,Polygonum aviculare,POLAV
 20220417_154547_planta_0.jpg,,
 20220417_154547_planta_1.jpg,,
 20220417_154547_planta_2.jpg,,
-20220417_154547_planta_3.jpg,,
+20220417_154547_planta_3.jpg,Polygonum aviculare,POLAV
 20220417_154547_planta_4.jpg,,
 20220417_154547_planta_5.jpg,,
 20220417_154547_planta_6.jpg,,
@@ -355,7 +355,7 @@ filename,label,eppo_code
 20220417_154605_planta_0.jpg,,
 20220417_154605_planta_1.jpg,Diplotaxis catholica,DIPCA
 20220417_154605_planta_2.jpg,,
-20220417_154614_planta_0.jpg,,
+20220417_154614_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154614_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154614_planta_2.jpg,Diplotaxis catholica,DIPCA
 20220417_154616_planta_0.jpg,,
@@ -371,14 +371,14 @@ filename,label,eppo_code
 20220417_154706_planta_0.jpg,,
 20220417_154706_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154706_planta_2.jpg,,
-20220417_154706_planta_3.jpg,,
+20220417_154706_planta_3.jpg,Conyza bonariensis,ERIBO
 20220417_154710_planta_0.jpg,,
-20220417_154710_planta_1.jpg,,
+20220417_154710_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154720_planta_0.jpg,,
 20220417_154720_planta_2.jpg,,
 20220417_154728_planta_1.jpg,,
 20220417_154728_planta_2.jpg,Lixo,
-20220417_154734_planta_0.jpg,,
+20220417_154734_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_154736_planta_0.jpg,Lixo,
 20220417_154736_planta_1.jpg,,
 20220417_154739_planta_0.jpg,,
@@ -423,7 +423,7 @@ filename,label,eppo_code
 20220417_154949_planta_4.jpg,Lamium purpureum,LAMPU
 20220417_154957_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154957_planta_1.jpg,,
-20220417_155015_planta_0.jpg,,
+20220417_155015_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_155015_planta_1.jpg,,
 20220417_155015_planta_2.jpg,,
 20220417_155019_planta_1.jpg,,
@@ -468,7 +468,7 @@ filename,label,eppo_code
 20220417_155541_planta_3.jpg,,
 20220417_155541_planta_4.jpg,,
 20220417_155541_planta_5.jpg,,
-20220417_155541_planta_6.jpg,,
+20220417_155541_planta_6.jpg,Conyza bonariensis,ERIBO
 20220417_155541_planta_7.jpg,,
 20220417_155543_planta_1.jpg,,
 20220417_155543_planta_3.jpg,,
@@ -509,7 +509,7 @@ filename,label,eppo_code
 20220417_155637_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_155637_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_155637_planta_2.jpg,,
-20220417_155637_planta_3.jpg,,
+20220417_155637_planta_3.jpg,Polygonum aviculare,POLAV
 20220417_155652_planta_1.jpg,,
 20220417_155657_planta_1.jpg,,
 20220417_155659_planta_0.jpg,,
@@ -521,16 +521,16 @@ filename,label,eppo_code
 20220417_155706_planta_4.jpg,,
 20220417_155706_planta_5.jpg,,
 20220417_155706_planta_6.jpg,,
-20220417_155723_planta_0.jpg,,
+20220417_155723_planta_0.jpg,Lixo,
 20220417_155723_planta_1.jpg,,
 20220417_155730_planta_0.jpg,,
 20220417_155735_planta_0.jpg,,
 20220417_155742_planta_0.jpg,,
 20220417_155801_planta_0.jpg,Conyza bonariensis,ERIBO
-20220417_155806_planta_0.jpg,,
+20220417_155806_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_155806_planta_1.jpg,Lixo,
 20220417_155806_planta_3.jpg,,
-20220417_155818_planta_0.jpg,,
+20220417_155818_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_155818_planta_1.jpg,Urtica urens,URTUR
 20220417_155818_planta_2.jpg,,
 20220417_155818_planta_3.jpg,,
@@ -1410,7 +1410,7 @@ filename,label,eppo_code
 20251109_162246_planta_7.jpg,,
 20251109_162246_planta_8.jpg,Lixo,
 20251109_162246_planta_9.jpg,Lixo,
-20251109_162248_planta_0.jpg,,
+20251109_162248_planta_0.jpg,Chenopodium album,CHEAL
 20251109_162302_planta_0.jpg,Lixo,
 20251109_162302_planta_1.jpg,Lixo,
 20251109_162302_planta_2.jpg,Sonchus oleraceus,SONOL
@@ -1494,7 +1494,7 @@ filename,label,eppo_code
 20251110_151345_planta_1.jpg,,
 20251110_151345_planta_2.jpg,,
 20251110_151345_planta_3.jpg,Sonchus oleraceus,SONOL
-20251110_151403_planta_0.jpg,,
+20251110_151403_planta_0.jpg,Portulaca oleracea,POROL
 20251110_151403_planta_1.jpg,,
 20251110_151403_planta_10.jpg,,
 20251110_151403_planta_11.jpg,,
@@ -1594,7 +1594,7 @@ filename,label,eppo_code
 20251110_151629_planta_6.jpg,Sonchus oleraceus,SONOL
 20251110_151629_planta_7.jpg,,
 20251110_151633_planta_0.jpg,,
-20251110_151633_planta_1.jpg,,
+20251110_151633_planta_1.jpg,Portulaca oleracea,POROL
 20251110_151633_planta_2.jpg,Lixo,
 20251110_151636_planta_0.jpg,,
 20251110_151636_planta_1.jpg,,
@@ -1915,12 +1915,12 @@ filename,label,eppo_code
 20251110_152200_planta_3.jpg,Convolvulus aravensis,CONAR
 20251110_152201_planta_0.jpg,,
 20251110_152201_planta_1.jpg,,
-20251110_152204_planta_0.jpg,,
+20251110_152204_planta_0.jpg,Portulaca oleracea,POROL
 20251110_152204_planta_1.jpg,,
 20251110_152204_planta_2.jpg,Lixo,
 20251110_152204_planta_3.jpg,Lixo,
 20251110_152204_planta_4.jpg,,
-20251110_152206_planta_1.jpg,,
+20251110_152206_planta_1.jpg,Portulaca oleracea,POROL
 20251110_152210_planta_0.jpg,,
 20251110_152210_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152210_planta_2.jpg,,
@@ -2732,7 +2732,7 @@ filename,label,eppo_code
 20251110_153555_planta_0.jpg,,
 20251110_153557_planta_0.jpg,,
 20251110_153557_planta_1.jpg,,
-20251110_153612_planta_0.jpg,,
+20251110_153612_planta_0.jpg,Lixo,
 20251110_153612_planta_1.jpg,,
 20251110_153636_planta_0.jpg,,
 20251110_153636_planta_1.jpg,Portulaca oleracea,POROL
@@ -3276,7 +3276,7 @@ PHOTO-2026-05-20-09-48-42 (6)_planta_6.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (6)_planta_7.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (6)_planta_8.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (6)_planta_9.jpg,,
-PHOTO-2026-05-20-09-48-42 (7)_planta_0.jpg,,
+PHOTO-2026-05-20-09-48-42 (7)_planta_0.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (7)_planta_1.jpg,,
 PHOTO-2026-05-20-09-48-42 (7)_planta_10.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (7)_planta_12.jpg,,
@@ -3299,7 +3299,7 @@ PHOTO-2026-05-20-09-48-42 (8)_planta_14.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (8)_planta_16.jpg,,
 PHOTO-2026-05-20-09-48-42 (8)_planta_17.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (8)_planta_18.jpg,,
-PHOTO-2026-05-20-09-48-42 (8)_planta_19.jpg,,
+PHOTO-2026-05-20-09-48-42 (8)_planta_19.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (8)_planta_2.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (8)_planta_20.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (8)_planta_21.jpg,Urtica urens,URTUR
@@ -3352,7 +3352,7 @@ PHOTO-2026-05-20-09-48-43 (11)_planta_14.jpg,,
 PHOTO-2026-05-20-09-48-43 (11)_planta_15.jpg,,
 PHOTO-2026-05-20-09-48-43 (11)_planta_17.jpg,Portulaca oleracea,POROL
 PHOTO-2026-05-20-09-48-43 (11)_planta_18.jpg,Portulaca oleracea,POROL
-PHOTO-2026-05-20-09-48-43 (11)_planta_19.jpg,,
+PHOTO-2026-05-20-09-48-43 (11)_planta_19.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (11)_planta_2.jpg,Portulaca oleracea,POROL
 PHOTO-2026-05-20-09-48-43 (11)_planta_20.jpg,,
 PHOTO-2026-05-20-09-48-43 (11)_planta_21.jpg,,
@@ -3474,14 +3474,14 @@ PHOTO-2026-05-20-09-48-43 (9)_planta_6.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (9)_planta_7.jpg,,
 PHOTO-2026-05-20-09-48-43 (9)_planta_8.jpg,,
 PHOTO-2026-05-20-09-48-43 (9)_planta_9.jpg,Urtica urens,URTUR
-PHOTO-2026-05-20-09-48-43_planta_0.jpg,,
+PHOTO-2026-05-20-09-48-43_planta_0.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43_planta_1.jpg,,
 PHOTO-2026-05-20-09-48-43_planta_10.jpg,,
 PHOTO-2026-05-20-09-48-43_planta_11.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43_planta_12.jpg,,
 PHOTO-2026-05-20-09-48-43_planta_2.jpg,,
 PHOTO-2026-05-20-09-48-43_planta_3.jpg,,
-PHOTO-2026-05-20-09-48-43_planta_4.jpg,,
+PHOTO-2026-05-20-09-48-43_planta_4.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43_planta_5.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43_planta_6.jpg,,
 PHOTO-2026-05-20-09-48-43_planta_7.jpg,,
