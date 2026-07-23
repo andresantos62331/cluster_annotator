@@ -883,9 +883,9 @@ filename,label,eppo_code
 20220417_162719_planta_5.jpg,,
 20220417_162730_planta_0.jpg,,
 20220417_162730_planta_1.jpg,Urtica urens,URTUR
-20220417_162744_planta_1.jpg,,
+20220417_162744_planta_1.jpg,Veronica arvensis,VERAR
 20220417_162746_planta_2.jpg,,
-20220417_162746_planta_3.jpg,,
+20220417_162746_planta_3.jpg,Veronica arvensis,VERAR
 20220417_162753_planta_0.jpg,Lixo,
 20220417_162753_planta_3.jpg,,
 20220417_162753_planta_4.jpg,,
@@ -897,9 +897,9 @@ filename,label,eppo_code
 20220417_162807_planta_3.jpg,Datura stramonium,DATST
 20220417_162826_planta_1.jpg,,
 20220417_162826_planta_2.jpg,Lixo,
-20220417_162826_planta_3.jpg,,
+20220417_162826_planta_3.jpg,Veronica arvensis,VERAR
 20220417_162826_planta_5.jpg,,
-20220417_162826_planta_6.jpg,,
+20220417_162826_planta_6.jpg,Veronica arvensis,VERAR
 20220417_162833_planta_3.jpg,,
 20220417_162833_planta_5.jpg,Datura stramonium,DATST
 20220417_162833_planta_6.jpg,,
@@ -916,8 +916,8 @@ filename,label,eppo_code
 20220417_162904_planta_3.jpg,,
 20220417_162904_planta_4.jpg,,
 20220417_162913_planta_1.jpg,,
-20220417_162925_planta_0.jpg,,
-20220417_162925_planta_4.jpg,,
+20220417_162925_planta_0.jpg,Veronica arvensis,VERAR
+20220417_162925_planta_4.jpg,Veronica arvensis,VERAR
 20220417_162925_planta_5.jpg,,
 20220417_162925_planta_6.jpg,,
 20220417_162925_planta_7.jpg,,
@@ -925,9 +925,9 @@ filename,label,eppo_code
 20220417_162934_planta_3.jpg,Urtica urens,URTUR
 20220417_162934_planta_4.jpg,Urtica urens,URTUR
 20220417_162934_planta_5.jpg,,
-20220417_162934_planta_6.jpg,,
+20220417_162934_planta_6.jpg,Veronica arvensis,VERAR
 20220417_162943_planta_0.jpg,,
-20220417_162946_planta_1.jpg,,
+20220417_162946_planta_1.jpg,Veronica arvensis,VERAR
 20220417_163000_planta_1.jpg,,
 20220417_163000_planta_2.jpg,,
 20220417_163000_planta_3.jpg,Lixo,
@@ -936,7 +936,7 @@ filename,label,eppo_code
 20220417_163001_planta_1.jpg,,
 20220417_163001_planta_2.jpg,Lixo,
 20220417_163001_planta_3.jpg,,
-20220417_163005_planta_0.jpg,,
+20220417_163005_planta_0.jpg,Veronica arvensis,VERAR
 20220417_163005_planta_1.jpg,,
 20220417_163013_planta_0.jpg,,
 20220417_163050_planta_0.jpg,,
@@ -1151,7 +1151,7 @@ filename,label,eppo_code
 20220425_161050_planta_5.jpg,,
 20220425_161155_planta_0.jpg,,
 20220425_161155_planta_1.jpg,,
-20220425_161220_planta_0.jpg,,
+20220425_161220_planta_0.jpg,Veronica arvensis,VERAR
 20220425_161250_planta_0.jpg,,
 20220425_161321_planta_0.jpg,,
 20220425_161339_planta_1.jpg,,
@@ -1183,7 +1183,7 @@ filename,label,eppo_code
 20220425_162104_planta_0.jpg,,
 20220425_162130_planta_0.jpg,,
 20220425_162130_planta_2.jpg,,
-20220425_162137_planta_0.jpg,,
+20220425_162137_planta_0.jpg,Veronica arvensis,VERAR
 20220425_162144_planta_1.jpg,,
 20220425_162220_planta_0.jpg,,
 20220425_162225_planta_0.jpg,,
@@ -3003,7 +3003,7 @@ IMG_20220501_172419_planta_0.jpg,Papaver rhoeas,PAPRH
 IMG_20220501_172423_planta_0.jpg,Papaver rhoeas,PAPRH
 IMG_20220501_172435_planta_0.jpg,Papaver rhoeas,PAPRH
 IMG_20220501_172442_planta_0.jpg,Papaver rhoeas,PAPRH
-JPEG_V2_E2_2022-04-17_14_50_122504638103110864191_planta_0.jpg,,
+JPEG_V2_E2_2022-04-17_14_50_122504638103110864191_planta_0.jpg,Veronica arvensis,VERAR
 JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_4.jpg,,
