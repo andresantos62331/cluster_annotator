@@ -257,7 +257,7 @@ filename,label,eppo_code
 20220417_153533_planta_3.jpg,Lixo,
 20220417_153533_planta_4.jpg,Lixo,
 20220417_153533_planta_5.jpg,,
-20220417_153554_planta_0.jpg,,
+20220417_153554_planta_0.jpg,Papaver rhoeas,PAPRH
 20220417_153557_planta_0.jpg,Urtica urens,URTUR
 20220417_153557_planta_1.jpg,,
 20220417_153557_planta_2.jpg,Lixo,
@@ -332,7 +332,7 @@ filename,label,eppo_code
 20220417_154541_planta_2.jpg,Lixo,
 20220417_154541_planta_5.jpg,,
 20220417_154544_planta_2.jpg,Polygonum aviculare,POLAV
-20220417_154544_planta_3.jpg,,
+20220417_154544_planta_3.jpg,Polygonum aviculare,POLAV
 20220417_154544_planta_4.jpg,,
 20220417_154544_planta_5.jpg,,
 20220417_154544_planta_6.jpg,,
@@ -350,7 +350,7 @@ filename,label,eppo_code
 20220417_154556_planta_3.jpg,,
 20220417_154556_planta_4.jpg,Polygonum aviculare,POLAV
 20220417_154556_planta_5.jpg,Lamium purpureum,LAMPU
-20220417_154556_planta_6.jpg,,
+20220417_154556_planta_6.jpg,Papaver rhoeas,PAPRH
 20220417_154556_planta_7.jpg,,
 20220417_154605_planta_0.jpg,,
 20220417_154605_planta_1.jpg,Diplotaxis catholica,DIPCA
@@ -401,7 +401,7 @@ filename,label,eppo_code
 20220417_154858_planta_0.jpg,,
 20220417_154911_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154911_planta_1.jpg,,
-20220417_154911_planta_2.jpg,,
+20220417_154911_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_154915_planta_0.jpg,,
 20220417_154915_planta_1.jpg,,
 20220417_154915_planta_2.jpg,Polygonum aviculare,POLAV
@@ -446,7 +446,7 @@ filename,label,eppo_code
 20220417_155133_planta_2.jpg,,
 20220417_155133_planta_3.jpg,,
 20220417_155137_planta_0.jpg,Polygonum aviculare,POLAV
-20220417_155137_planta_1.jpg,,
+20220417_155137_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220417_155147_planta_0.jpg,,
 20220417_155152_planta_0.jpg,,
 20220417_155157_planta_0.jpg,,
@@ -495,7 +495,7 @@ filename,label,eppo_code
 20220417_155618_planta_1.jpg,,
 20220417_155618_planta_2.jpg,Chenopodium album,CHEAL
 20220417_155618_planta_3.jpg,,
-20220417_155618_planta_4.jpg,,
+20220417_155618_planta_4.jpg,Lixo,
 20220417_155631_planta_0.jpg,Urtica urens,URTUR
 20220417_155631_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_155631_planta_10.jpg,,
@@ -526,7 +526,7 @@ filename,label,eppo_code
 20220417_155730_planta_0.jpg,,
 20220417_155735_planta_0.jpg,,
 20220417_155742_planta_0.jpg,,
-20220417_155801_planta_0.jpg,,
+20220417_155801_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_155806_planta_0.jpg,,
 20220417_155806_planta_1.jpg,Lixo,
 20220417_155806_planta_3.jpg,,
@@ -559,11 +559,11 @@ filename,label,eppo_code
 20220417_155959_planta_0.jpg,,
 20220417_160002_planta_0.jpg,,
 20220417_160012_planta_0.jpg,,
-20220417_160018_planta_0.jpg,,
+20220417_160018_planta_0.jpg,Papaver rhoeas,PAPRH
 20220417_160025_planta_0.jpg,,
 20220417_160029_planta_0.jpg,,
 20220417_160032_planta_1.jpg,,
-20220417_160043_planta_0.jpg,,
+20220417_160043_planta_0.jpg,Papaver rhoeas,PAPRH
 20220417_160043_planta_1.jpg,,
 20220417_160046_planta_0.jpg,,
 20220417_160050_planta_0.jpg,,
@@ -585,7 +585,7 @@ filename,label,eppo_code
 20220417_160144_planta_1.jpg,,
 20220417_160144_planta_2.jpg,Lixo,
 20220417_160147_planta_1.jpg,,
-20220417_160147_planta_2.jpg,,
+20220417_160147_planta_2.jpg,Papaver rhoeas,PAPRH
 20220417_160153_planta_0.jpg,,
 20220417_160153_planta_1.jpg,,
 20220417_160153_planta_2.jpg,,
@@ -642,7 +642,7 @@ filename,label,eppo_code
 20220417_160443_planta_1.jpg,,
 20220417_160453_planta_0.jpg,,
 20220417_160453_planta_1.jpg,Diplotaxis catholica,DIPCA
-20220417_160454_planta_1.jpg,,
+20220417_160454_planta_1.jpg,Papaver rhoeas,PAPRH
 20220417_160456_planta_0.jpg,,
 20220417_160459_planta_0.jpg,,
 20220417_160501_planta_0.jpg,,
@@ -681,7 +681,7 @@ filename,label,eppo_code
 20220417_160817_planta_0.jpg,,
 20220417_160824_planta_0.jpg,,
 20220417_160826_planta_0.jpg,Lamium purpureum,LAMPU
-20220417_160828_planta_1.jpg,,
+20220417_160828_planta_1.jpg,Chenopodium album,CHEAL
 20220417_160835_planta_0.jpg,,
 20220417_160835_planta_1.jpg,,
 20220417_160835_planta_3.jpg,,
@@ -716,7 +716,7 @@ filename,label,eppo_code
 20220417_161115_planta_0.jpg,,
 20220417_161115_planta_1.jpg,Urtica urens,URTUR
 20220417_161125_planta_0.jpg,Stellaria media,STEME
-20220417_161125_planta_1.jpg,,
+20220417_161125_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_161135_planta_1.jpg,,
 20220417_161139_planta_0.jpg,Chenopodium album,CHEAL
 20220417_161149_planta_0.jpg,,
@@ -749,8 +749,8 @@ filename,label,eppo_code
 20220417_162022_planta_1.jpg,,
 20220417_162022_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_162022_planta_6.jpg,Polygonum aviculare,POLAV
-20220417_162022_planta_7.jpg,,
-20220417_162025_planta_2.jpg,,
+20220417_162022_planta_7.jpg,Chenopodium album,CHEAL
+20220417_162025_planta_2.jpg,Chenopodium album,CHEAL
 20220417_162044_planta_0.jpg,,
 20220417_162044_planta_1.jpg,,
 20220417_162044_planta_10.jpg,Lixo,
@@ -758,11 +758,11 @@ filename,label,eppo_code
 20220417_162044_planta_4.jpg,,
 20220417_162044_planta_5.jpg,,
 20220417_162044_planta_6.jpg,Lixo,
-20220417_162044_planta_7.jpg,,
+20220417_162044_planta_7.jpg,Polygonum aviculare,POLAV
 20220417_162044_planta_9.jpg,,
 20220417_162047_planta_1.jpg,Urtica urens,URTUR
 20220417_162047_planta_10.jpg,,
-20220417_162047_planta_2.jpg,,
+20220417_162047_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_162047_planta_3.jpg,,
 20220417_162047_planta_5.jpg,Lixo,
 20220417_162047_planta_6.jpg,,
@@ -876,7 +876,7 @@ filename,label,eppo_code
 20220417_162628_planta_4.jpg,,
 20220417_162643_planta_0.jpg,,
 20220417_162643_planta_1.jpg,,
-20220417_162643_planta_3.jpg,,
+20220417_162643_planta_3.jpg,Papaver rhoeas,PAPRH
 20220417_162643_planta_4.jpg,,
 20220417_162713_planta_2.jpg,,
 20220417_162719_planta_1.jpg,,
@@ -964,7 +964,7 @@ filename,label,eppo_code
 20220417_163323_planta_0.jpg,,
 20220417_163323_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_163323_planta_2.jpg,,
-20220417_163323_planta_3.jpg,,
+20220417_163323_planta_3.jpg,Polygonum aviculare,POLAV
 20220417_163323_planta_5.jpg,,
 20220417_163350_planta_0.jpg,,
 20220417_163400_planta_0.jpg,Lixo,
@@ -997,7 +997,7 @@ filename,label,eppo_code
 20220425_153843_planta_0.jpg,,
 20220425_153858_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_153858_planta_1.jpg,Amaranthus retroflexus,AMARE
-20220425_153925_planta_0.jpg,,
+20220425_153925_planta_0.jpg,Chenopodium album,CHEAL
 20220425_153938_planta_0.jpg,Lixo,
 20220425_153938_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_153938_planta_2.jpg,Amaranthus retroflexus,AMARE
@@ -1011,10 +1011,10 @@ filename,label,eppo_code
 20220425_154004_planta_4.jpg,,
 20220425_154037_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_154037_planta_1.jpg,Amaranthus retroflexus,AMARE
-20220425_154037_planta_2.jpg,,
+20220425_154037_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_154037_planta_3.jpg,,
 20220425_154037_planta_4.jpg,Amaranthus retroflexus,AMARE
-20220425_154037_planta_5.jpg,,
+20220425_154037_planta_5.jpg,Amaranthus retroflexus,AMARE
 20220425_154037_planta_6.jpg,Amaranthus retroflexus,AMARE
 20220425_154037_planta_7.jpg,,
 20220425_154037_planta_8.jpg,Chenopodium album,CHEAL
@@ -1026,19 +1026,19 @@ filename,label,eppo_code
 20220425_154108_planta_5.jpg,,
 20220425_154108_planta_6.jpg,,
 20220425_154127_planta_0.jpg,,
-20220425_154127_planta_1.jpg,,
+20220425_154127_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_154151_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_154151_planta_1.jpg,Portulaca oleracea,POROL
 20220425_154151_planta_2.jpg,Portulaca oleracea,POROL
 20220425_154200_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_154200_planta_2.jpg,Amaranthus retroflexus,AMARE
-20220425_154200_planta_3.jpg,,
+20220425_154200_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_154200_planta_4.jpg,,
 20220425_154228_planta_0.jpg,,
 20220425_154249_planta_0.jpg,,
 20220425_154249_planta_1.jpg,Chenopodium album,CHEAL
 20220425_154341_planta_1.jpg,Amaranthus retroflexus,AMARE
-20220425_154349_planta_0.jpg,,
+20220425_154349_planta_0.jpg,Chenopodium album,CHEAL
 20220425_154349_planta_1.jpg,,
 20220425_154349_planta_3.jpg,,
 20220425_154349_planta_5.jpg,,
@@ -1066,10 +1066,10 @@ filename,label,eppo_code
 20220425_154653_planta_2.jpg,,
 20220425_154653_planta_20.jpg,Amaranthus retroflexus,AMARE
 20220425_154653_planta_21.jpg,Amaranthus retroflexus,AMARE
-20220425_154653_planta_3.jpg,,
+20220425_154653_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_154653_planta_4.jpg,Amaranthus retroflexus,AMARE
 20220425_154653_planta_5.jpg,,
-20220425_154653_planta_6.jpg,,
+20220425_154653_planta_6.jpg,Chenopodium album,CHEAL
 20220425_154653_planta_7.jpg,,
 20220425_154653_planta_8.jpg,Portulaca oleracea,POROL
 20220425_154835_planta_0.jpg,Lixo,
@@ -1108,7 +1108,7 @@ filename,label,eppo_code
 20220425_155541_planta_3.jpg,,
 20220425_155541_planta_4.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_6.jpg,,
-20220425_155541_planta_7.jpg,,
+20220425_155541_planta_7.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_8.jpg,Chenopodium album,CHEAL
 20220425_155541_planta_9.jpg,Lixo,
 20220425_155617_planta_0.jpg,,
@@ -1153,7 +1153,7 @@ filename,label,eppo_code
 20220425_161155_planta_1.jpg,,
 20220425_161220_planta_0.jpg,Veronica arvensis,VERAR
 20220425_161250_planta_0.jpg,,
-20220425_161321_planta_0.jpg,,
+20220425_161321_planta_0.jpg,Chenopodium album,CHEAL
 20220425_161339_planta_1.jpg,,
 20220425_161430_planta_0.jpg,,
 20220425_161505_planta_1.jpg,,
@@ -1298,7 +1298,7 @@ filename,label,eppo_code
 20220425_164325_planta_7.jpg,Amaranthus retroflexus,AMARE
 20220425_164325_planta_8.jpg,,
 20220425_164357_planta_0.jpg,Polygonum aviculare,POLAV
-20220425_164357_planta_1.jpg,,
+20220425_164357_planta_1.jpg,Polygonum aviculare,POLAV
 20220425_164357_planta_2.jpg,,
 20220425_164357_planta_3.jpg,,
 20220425_164357_planta_4.jpg,,
@@ -3115,7 +3115,7 @@ JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_18.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_19.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_2.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_4.jpg,Chenopodium album,CHEAL
-JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_5.jpg,,
+JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_5.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_6.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_8.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_9.jpg,Chenopodium album,CHEAL
@@ -3158,7 +3158,7 @@ JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_2.jpg,,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_3.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_6.jpg,Lixo,
-JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_7.jpg,,
+JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_7.jpg,Polygonum aviculare,POLAV
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_8.jpg,,
 JPEG_V2_E2_2022-04-17_15_16_446534616847419291915_planta_1.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_15_16_565153743992895968107_planta_0.jpg,,
