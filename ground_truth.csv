@@ -78,7 +78,7 @@ filename,label,eppo_code
 20220417_152241_planta_4.jpg,,
 20220417_152259_planta_1.jpg,,
 20220417_152259_planta_2.jpg,Chenopodium album,CHEAL
-20220417_152259_planta_3.jpg,,
+20220417_152259_planta_3.jpg,Stellaria media,STEME
 20220417_152259_planta_4.jpg,,
 20220417_152259_planta_5.jpg,,
 20220417_152315_planta_0.jpg,Chenopodium album,CHEAL
@@ -92,10 +92,10 @@ filename,label,eppo_code
 20220417_152334_planta_0.jpg,,
 20220417_152334_planta_3.jpg,Chenopodium album,CHEAL
 20220417_152334_planta_4.jpg,Chenopodium album,CHEAL
-20220417_152334_planta_5.jpg,,
+20220417_152334_planta_5.jpg,Stellaria media,STEME
 20220417_152352_planta_0.jpg,,
 20220417_152352_planta_1.jpg,Chenopodium album,CHEAL
-20220417_152352_planta_4.jpg,,
+20220417_152352_planta_4.jpg,Stellaria media,STEME
 20220417_152352_planta_5.jpg,Chenopodium album,CHEAL
 20220417_152402_planta_1.jpg,,
 20220417_152434_planta_1.jpg,,
@@ -715,7 +715,7 @@ filename,label,eppo_code
 20220417_161105_planta_0.jpg,,
 20220417_161115_planta_0.jpg,,
 20220417_161115_planta_1.jpg,Urtica urens,URTUR
-20220417_161125_planta_0.jpg,,
+20220417_161125_planta_0.jpg,Stellaria media,STEME
 20220417_161125_planta_1.jpg,,
 20220417_161135_planta_1.jpg,,
 20220417_161139_planta_0.jpg,Chenopodium album,CHEAL
@@ -730,7 +730,7 @@ filename,label,eppo_code
 20220417_161256_planta_0.jpg,,
 20220417_161302_planta_0.jpg,,
 20220417_161307_planta_0.jpg,,
-20220417_161307_planta_1.jpg,,
+20220417_161307_planta_1.jpg,Stellaria media,STEME
 20220417_161307_planta_2.jpg,,
 20220417_161307_planta_3.jpg,,
 20220417_161307_planta_4.jpg,,
@@ -3017,7 +3017,7 @@ JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_217419482026510393858_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_371128508627594800854_planta_3.jpg,,
-JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_0.jpg,,
+JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_0.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_2.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_3.jpg,,
@@ -3122,7 +3122,7 @@ JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_9.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_12_381826318015154971570_planta_0.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_12_381826318015154971570_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_1.jpg,,
-JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_3.jpg,,
+JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_3.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_5.jpg,,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_10.jpg,,
