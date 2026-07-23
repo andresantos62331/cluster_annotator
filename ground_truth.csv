@@ -319,7 +319,7 @@ filename,label,eppo_code
 20220417_154420_planta_8.jpg,,
 20220417_154427_planta_0.jpg,,
 20220417_154446_planta_0.jpg,,
-20220417_154446_planta_1.jpg,,
+20220417_154446_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154446_planta_3.jpg,Lixo,
 20220417_154446_planta_4.jpg,,
 20220417_154501_planta_0.jpg,,
@@ -327,11 +327,11 @@ filename,label,eppo_code
 20220417_154512_planta_0.jpg,,
 20220417_154512_planta_1.jpg,,
 20220417_154512_planta_2.jpg,,
-20220417_154534_planta_3.jpg,,
+20220417_154534_planta_3.jpg,Polygonum aviculare,POLAV
 20220417_154541_planta_1.jpg,,
 20220417_154541_planta_2.jpg,Lixo,
 20220417_154541_planta_5.jpg,,
-20220417_154544_planta_2.jpg,,
+20220417_154544_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_154544_planta_3.jpg,,
 20220417_154544_planta_4.jpg,,
 20220417_154544_planta_5.jpg,,
@@ -366,7 +366,7 @@ filename,label,eppo_code
 20220417_154644_planta_2.jpg,,
 20220417_154649_planta_1.jpg,,
 20220417_154649_planta_3.jpg,,
-20220417_154656_planta_0.jpg,,
+20220417_154656_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154656_planta_1.jpg,,
 20220417_154706_planta_0.jpg,,
 20220417_154706_planta_1.jpg,Polygonum aviculare,POLAV
@@ -421,7 +421,7 @@ filename,label,eppo_code
 20220417_154949_planta_2.jpg,,
 20220417_154949_planta_3.jpg,,
 20220417_154949_planta_4.jpg,Lamium purpureum,LAMPU
-20220417_154957_planta_0.jpg,,
+20220417_154957_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154957_planta_1.jpg,,
 20220417_155015_planta_0.jpg,,
 20220417_155015_planta_1.jpg,,
@@ -506,7 +506,7 @@ filename,label,eppo_code
 20220417_155631_planta_7.jpg,,
 20220417_155631_planta_8.jpg,,
 20220417_155631_planta_9.jpg,,
-20220417_155637_planta_0.jpg,,
+20220417_155637_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_155637_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_155637_planta_2.jpg,,
 20220417_155637_planta_3.jpg,,
@@ -776,7 +776,7 @@ filename,label,eppo_code
 20220417_162050_planta_5.jpg,Ranunculus arvensis,RANAR
 20220417_162050_planta_6.jpg,,
 20220417_162050_planta_7.jpg,Lixo,
-20220417_162050_planta_8.jpg,,
+20220417_162050_planta_8.jpg,Polygonum aviculare,POLAV
 20220417_162050_planta_9.jpg,,
 20220417_162106_planta_0.jpg,,
 20220417_162106_planta_1.jpg,,
@@ -1297,7 +1297,7 @@ filename,label,eppo_code
 20220425_164325_planta_6.jpg,,
 20220425_164325_planta_7.jpg,Amaranthus retroflexus,AMARE
 20220425_164325_planta_8.jpg,,
-20220425_164357_planta_0.jpg,,
+20220425_164357_planta_0.jpg,Polygonum aviculare,POLAV
 20220425_164357_planta_1.jpg,,
 20220425_164357_planta_2.jpg,,
 20220425_164357_planta_3.jpg,,
@@ -3146,7 +3146,7 @@ JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_5.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_7.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_8.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_9.jpg,Chenopodium album,CHEAL
-JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_0.jpg,,
+JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_0.jpg,Polygonum aviculare,POLAV
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_1.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_4.jpg,Stellaria media,STEME
