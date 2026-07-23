@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T21:10:43.594Z",
+  "exported_at": "2026-07-23T21:11:41.553Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -31,7 +31,8 @@
     "Convolvulus aravensis",
     "Conyza bonariensis",
     "Chamaemelum mixtum",
-    "Sonchus asper"
+    "Sonchus asper",
+    "raphanus raphanistrum"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -67,7 +68,8 @@
     "Convolvulus aravensis": "CONAR",
     "Conyza bonariensis": "ERIBO",
     "Chamaemelum mixtum": "ANTMI",
-    "Sonchus asper": "SONAS"
+    "Sonchus asper": "SONAS",
+    "raphanus raphanistrum": "RAPRA"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -84,7 +86,8 @@
     "Veronica arvensis": "Plantaginaceae",
     "Convolvulus aravensis": "Convolvulaceae",
     "Conyza bonariensis": "Asteraceae",
-    "Sonchus asper": "Asteraceae"
+    "Sonchus asper": "Asteraceae",
+    "raphanus raphanistrum": "Brassicaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1407,6 +1410,9 @@
     "20220417_152725_planta_0.jpg": "Chenopodium album",
     "20220417_152752_planta_1.jpg": "Chenopodium album",
     "20220417_152823_planta_9.jpg": "Chenopodium album",
-    "20220417_152829_planta_1.jpg": "Chenopodium album"
+    "20220417_152829_planta_1.jpg": "Chenopodium album",
+    "20220417_152858_planta_3.jpg": "Chenopodium album",
+    "JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_7.jpg": "Chenopodium album",
+    "JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_19.jpg": "Chenopodium album"
   }
 }
