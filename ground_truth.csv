@@ -1824,7 +1824,7 @@ filename,label,eppo_code
 20251110_151950_planta_4.jpg,Malva sylvestris,MALSI
 20251110_151950_planta_5.jpg,,
 20251110_151950_planta_6.jpg,Malva sylvestris,MALSI
-20251110_151952_planta_0.jpg,,
+20251110_151952_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_151952_planta_1.jpg,,
 20251110_151952_planta_2.jpg,,
 20251110_151952_planta_4.jpg,,
@@ -1838,7 +1838,7 @@ filename,label,eppo_code
 20251110_152004_planta_2.jpg,,
 20251110_152009_planta_0.jpg,,
 20251110_152009_planta_1.jpg,,
-20251110_152009_planta_2.jpg,,
+20251110_152009_planta_2.jpg,Sonchus oleraceus,SONOL
 20251110_152014_planta_0.jpg,,
 20251110_152014_planta_1.jpg,,
 20251110_152019_planta_0.jpg,,
@@ -1876,7 +1876,7 @@ filename,label,eppo_code
 20251110_152116_planta_1.jpg,Lixo,
 20251110_152116_planta_2.jpg,,
 20251110_152116_planta_3.jpg,,
-20251110_152116_planta_4.jpg,,
+20251110_152116_planta_4.jpg,Sonchus oleraceus,SONOL
 20251110_152118_planta_0.jpg,,
 20251110_152118_planta_1.jpg,,
 20251110_152118_planta_2.jpg,Sonchus oleraceus,SONOL
@@ -1890,7 +1890,7 @@ filename,label,eppo_code
 20251110_152131_planta_0.jpg,,
 20251110_152136_planta_0.jpg,,
 20251110_152136_planta_1.jpg,Urtica urens,URTUR
-20251110_152136_planta_2.jpg,,
+20251110_152136_planta_2.jpg,Sonchus oleraceus,SONOL
 20251110_152146_planta_0.jpg,Urtica urens,URTUR
 20251110_152146_planta_1.jpg,Urtica urens,URTUR
 20251110_152146_planta_3.jpg,Urtica urens,URTUR
@@ -1914,7 +1914,7 @@ filename,label,eppo_code
 20251110_152200_planta_0.jpg,,
 20251110_152200_planta_3.jpg,Convolvulus aravensis,CONAR
 20251110_152201_planta_0.jpg,,
-20251110_152201_planta_1.jpg,,
+20251110_152201_planta_1.jpg,Sonchus oleraceus,SONOL
 20251110_152204_planta_0.jpg,Portulaca oleracea,POROL
 20251110_152204_planta_1.jpg,,
 20251110_152204_planta_2.jpg,Lixo,
@@ -3168,7 +3168,7 @@ JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_11.jpg,,
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_12.jpg,,
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_14.jpg,,
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_2.jpg,Lixo,
-JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_5.jpg,,
+JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_5.jpg,Sonchus oleraceus,SONOL
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_6.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_7.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_8.jpg,Chenopodium album,CHEAL
