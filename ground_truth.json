@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T18:13:13.138Z",
+  "exported_at": "2026-07-23T18:19:38.406Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -21,7 +21,8 @@
     "Tribulus terrestris",
     "Oxalis pes-caprae",
     "Stellaria media",
-    "Urtica membranacea"
+    "Urtica membranacea",
+    "Senecio vulgaris"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -48,7 +49,8 @@
     "Amaranthus retroflexus": "AMARE",
     "Portulaca oleracea": "POROL",
     "Stellaria media": "STEME",
-    "Urtica membranacea": "URTDU"
+    "Urtica membranacea": "URTDU",
+    "Senecio vulgaris": "SENVU"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -57,7 +59,8 @@
     "Polygonum aviculare": "Polygonaceae",
     "Datura stramonium": "Solanaceae",
     "Stellaria media": "Caryophyllaceae",
-    "Urtica membranacea": "Urticaceae"
+    "Urtica membranacea": "Urticaceae",
+    "Senecio vulgaris": "Asteraceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
