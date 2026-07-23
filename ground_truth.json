@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T14:59:19.491Z",
+  "exported_at": "2026-07-23T15:04:02.239Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -22,13 +22,10 @@
     "Oxalis pes-caprae"
   ],
   "eppo": {
-    "Amaranthus retroflexus": "AMARE",
     "Cyperus rotundus": "CYPRO",
     "Echinochloa crus-galli": "ECHCG",
     "Ambrosia artemisiifolia": "AMBEL",
     "Malva sylvestris": "MALSI",
-    "Digitaria sanguinalis": "DIGSA",
-    "Solanum nigrum": "SOLNI",
     "Sonchus oleraceus": "SONOL",
     "Tribolus terresrtris": "TRITE",
     "Fumaria officinalis": "FUMMU",
@@ -44,10 +41,12 @@
     "Datura stramonium": "DATST",
     "Polygonum aviculare": "POLAV",
     "Chenopodium opulifolium": "CHEOP",
-    "Papaver rhoeas": "PAPRH"
+    "Papaver rhoeas": "PAPRH",
+    "Solanum nigrum": "SOLNI",
+    "Digitaria sanguinalis": "DIGSA",
+    "Amaranthus retroflexus": "AMARE"
   },
   "family": {
-    "Amaranthus retroflexus": "Amaranthaceae",
     "Cyperus rotundus": "Cyperaceae",
     "Echinochloa crus-galli": "Poaceae",
     "Ambrosia artemisiifolia": "Asteraceae",
@@ -64,7 +63,10 @@
     "Datura stramonium": "Solanaceae",
     "Polygonum aviculare": "Polygonaceae",
     "Chenopodium opulifolium": "Amaranthaceae",
-    "Papaver rhoeas": "Papaveraceae"
+    "Papaver rhoeas": "Papaveraceae",
+    "Solanum nigrum": "Solanaceae",
+    "Digitaria sanguinalis": "Poaceae",
+    "Amaranthus retroflexus": "Amaranthaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
