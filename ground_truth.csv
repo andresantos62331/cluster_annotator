@@ -793,7 +793,7 @@ filename,label,eppo_code
 20220417_162106_planta_8.jpg,,
 20220417_162106_planta_9.jpg,Lixo,
 20220417_162110_planta_0.jpg,,
-20220417_162111_planta_1.jpg,,
+20220417_162111_planta_1.jpg,Sonchus asper,SONAS
 20220417_162118_planta_0.jpg,Ranunculus arvensis,RANAR
 20220417_162118_planta_1.jpg,,
 20220417_162118_planta_2.jpg,,
@@ -811,7 +811,7 @@ filename,label,eppo_code
 20220417_162158_planta_5.jpg,,
 20220417_162158_planta_7.jpg,,
 20220417_162213_planta_1.jpg,,
-20220417_162215_planta_1.jpg,,
+20220417_162215_planta_1.jpg,Sonchus asper,SONAS
 20220417_162215_planta_2.jpg,,
 20220417_162218_planta_1.jpg,,
 20220417_162218_planta_2.jpg,,
@@ -1176,7 +1176,7 @@ filename,label,eppo_code
 20220425_161823_planta_3.jpg,,
 20220425_161823_planta_4.jpg,,
 20220425_161908_planta_0.jpg,,
-20220425_161917_planta_1.jpg,,
+20220425_161917_planta_1.jpg,Sonchus asper,SONAS
 20220425_161956_planta_0.jpg,Urtica membranacea,URTDU
 20220425_161956_planta_1.jpg,,
 20220425_162041_planta_0.jpg,,
