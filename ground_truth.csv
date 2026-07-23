@@ -61,7 +61,7 @@ filename,label,eppo_code
 20220417_141912_planta_0.jpg,,
 20220417_152120_planta_0.jpg,,
 20220417_152120_planta_1.jpg,,
-20220417_152120_planta_2.jpg,,
+20220417_152120_planta_2.jpg,Lixo,
 20220417_152124_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152126_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152130_planta_1.jpg,,
@@ -89,7 +89,7 @@ filename,label,eppo_code
 20220417_152315_planta_5.jpg,,
 20220417_152315_planta_9.jpg,,
 20220417_152330_planta_3.jpg,,
-20220417_152334_planta_0.jpg,,
+20220417_152334_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152334_planta_3.jpg,Chenopodium album,CHEAL
 20220417_152334_planta_4.jpg,Chenopodium album,CHEAL
 20220417_152334_planta_5.jpg,Stellaria media,STEME
@@ -114,10 +114,10 @@ filename,label,eppo_code
 20220417_152530_planta_12.jpg,,
 20220417_152530_planta_13.jpg,,
 20220417_152530_planta_14.jpg,Lixo,
-20220417_152530_planta_15.jpg,,
+20220417_152530_planta_15.jpg,Lixo,
 20220417_152530_planta_16.jpg,,
 20220417_152530_planta_2.jpg,Lixo,
-20220417_152530_planta_3.jpg,,
+20220417_152530_planta_3.jpg,Lixo,
 20220417_152530_planta_4.jpg,Lixo,
 20220417_152530_planta_5.jpg,,
 20220417_152530_planta_6.jpg,Lixo,
@@ -201,7 +201,7 @@ filename,label,eppo_code
 20220417_152840_planta_12.jpg,Chenopodium album,CHEAL
 20220417_152840_planta_14.jpg,Chenopodium album,CHEAL
 20220417_152840_planta_15.jpg,,
-20220417_152840_planta_17.jpg,,
+20220417_152840_planta_17.jpg,Chenopodium album,CHEAL
 20220417_152840_planta_19.jpg,Chenopodium album,CHEAL
 20220417_152840_planta_20.jpg,Chenopodium album,CHEAL
 20220417_152840_planta_22.jpg,Chenopodium album,CHEAL
@@ -213,7 +213,7 @@ filename,label,eppo_code
 20220417_152845_planta_0.jpg,,
 20220417_152845_planta_1.jpg,,
 20220417_152845_planta_11.jpg,Chenopodium album,CHEAL
-20220417_152845_planta_12.jpg,,
+20220417_152845_planta_12.jpg,Chenopodium album,CHEAL
 20220417_152845_planta_13.jpg,,
 20220417_152845_planta_14.jpg,,
 20220417_152845_planta_15.jpg,,
@@ -223,7 +223,7 @@ filename,label,eppo_code
 20220417_152845_planta_5.jpg,Chenopodium album,CHEAL
 20220417_152845_planta_8.jpg,,
 20220417_152845_planta_9.jpg,,
-20220417_152858_planta_0.jpg,,
+20220417_152858_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152858_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152858_planta_3.jpg,,
 20220417_152858_planta_5.jpg,Chenopodium album,CHEAL
@@ -243,7 +243,7 @@ filename,label,eppo_code
 20220417_153123_planta_0.jpg,Chamaemelum mixtum,ANTMI
 20220417_153137_planta_0.jpg,Urtica urens,URTUR
 20220417_153142_planta_0.jpg,,
-20220417_153151_planta_0.jpg,,
+20220417_153151_planta_0.jpg,Sonchus oleraceus,SONOL
 20220417_153244_planta_1.jpg,,
 20220417_153309_planta_0.jpg,,
 20220417_153309_planta_1.jpg,,
@@ -321,7 +321,7 @@ filename,label,eppo_code
 20220417_154446_planta_0.jpg,,
 20220417_154446_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154446_planta_3.jpg,Lixo,
-20220417_154446_planta_4.jpg,,
+20220417_154446_planta_4.jpg,Lixo,
 20220417_154501_planta_0.jpg,,
 20220417_154507_planta_0.jpg,,
 20220417_154512_planta_0.jpg,,
@@ -476,7 +476,7 @@ filename,label,eppo_code
 20220417_155543_planta_5.jpg,,
 20220417_155543_planta_6.jpg,,
 20220417_155543_planta_7.jpg,,
-20220417_155548_planta_0.jpg,,
+20220417_155548_planta_0.jpg,Lixo,
 20220417_155548_planta_1.jpg,,
 20220417_155548_planta_2.jpg,,
 20220417_155548_planta_4.jpg,,
@@ -720,7 +720,7 @@ filename,label,eppo_code
 20220417_161135_planta_1.jpg,,
 20220417_161139_planta_0.jpg,Chenopodium album,CHEAL
 20220417_161149_planta_0.jpg,,
-20220417_161149_planta_1.jpg,,
+20220417_161149_planta_1.jpg,Chenopodium album,CHEAL
 20220417_161155_planta_0.jpg,,
 20220417_161155_planta_1.jpg,,
 20220417_161204_planta_0.jpg,,
@@ -816,7 +816,7 @@ filename,label,eppo_code
 20220417_162218_planta_1.jpg,,
 20220417_162218_planta_2.jpg,,
 20220417_162218_planta_3.jpg,,
-20220417_162218_planta_4.jpg,,
+20220417_162218_planta_4.jpg,Lixo,
 20220417_162218_planta_5.jpg,,
 20220417_162220_planta_1.jpg,,
 20220417_162220_planta_2.jpg,,
@@ -939,7 +939,7 @@ filename,label,eppo_code
 20220417_163005_planta_0.jpg,Veronica arvensis,VERAR
 20220417_163005_planta_1.jpg,,
 20220417_163013_planta_0.jpg,,
-20220417_163050_planta_0.jpg,,
+20220417_163050_planta_0.jpg,Lixo,
 20220417_163050_planta_3.jpg,,
 20220417_163057_planta_2.jpg,,
 20220417_163057_planta_3.jpg,,
@@ -976,7 +976,7 @@ filename,label,eppo_code
 20220425_153324_planta_0.jpg,Portulaca oleracea,POROL
 20220425_153324_planta_2.jpg,,
 20220425_153349_planta_0.jpg,,
-20220425_153445_planta_0.jpg,,
+20220425_153445_planta_0.jpg,Chenopodium album,CHEAL
 20220425_153445_planta_1.jpg,Chenopodium album,CHEAL
 20220425_153456_planta_0.jpg,,
 20220425_153456_planta_1.jpg,,
@@ -999,7 +999,7 @@ filename,label,eppo_code
 20220425_153858_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_153925_planta_0.jpg,,
 20220425_153938_planta_0.jpg,Lixo,
-20220425_153938_planta_1.jpg,,
+20220425_153938_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_153938_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_153938_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_153938_planta_4.jpg,Amaranthus retroflexus,AMARE
@@ -1019,7 +1019,7 @@ filename,label,eppo_code
 20220425_154037_planta_7.jpg,,
 20220425_154037_planta_8.jpg,Chenopodium album,CHEAL
 20220425_154037_planta_9.jpg,,
-20220425_154108_planta_1.jpg,,
+20220425_154108_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_154108_planta_2.jpg,Chenopodium album,CHEAL
 20220425_154108_planta_3.jpg,,
 20220425_154108_planta_4.jpg,,
@@ -1196,7 +1196,7 @@ filename,label,eppo_code
 20220425_162532_planta_1.jpg,Conyza bonariensis,ERIBO
 20220425_162623_planta_0.jpg,,
 20220425_162630_planta_0.jpg,,
-20220425_162706_planta_0.jpg,,
+20220425_162706_planta_0.jpg,Lixo,
 20220425_162733_planta_0.jpg,,
 20220425_162743_planta_0.jpg,,
 20220425_162830_planta_0.jpg,,
@@ -3020,10 +3020,10 @@ JPEG_V2_E2_2022-04-17_14_58_371128508627594800854_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_0.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_2.jpg,,
-JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_3.jpg,,
+JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_3.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_1.jpg,Chenopodium album,CHEAL
-JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_0.jpg,,
+JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_0.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_184172506183479493585_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_0.jpg,,
@@ -3032,18 +3032,18 @@ JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_2.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_01_153151686551423867765_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_01_449115713110950570601_planta_0.jpg,,
-JPEG_V2_E2_2022-04-17_15_03_11407436386605646383_planta_0.jpg,,
+JPEG_V2_E2_2022-04-17_15_03_11407436386605646383_planta_0.jpg,Sonchus oleraceus,SONOL
 JPEG_V2_E2_2022-04-17_15_03_361668909907542053532_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_05_142956869952048958502_planta_0.jpg,Lamium purpureum,LAMPU
 JPEG_V2_E2_2022-04-17_15_05_367381504713831249107_planta_0.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_2.jpg,,
-JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_3.jpg,,
+JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_3.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_07_287454493324412044073_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_10.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_2.jpg,,
-JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_3.jpg,,
+JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_3.jpg,Sonchus oleraceus,SONOL
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_5.jpg,Lamium purpureum,LAMPU
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_6.jpg,Lamium purpureum,LAMPU
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_7.jpg,,
@@ -3055,7 +3055,7 @@ JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_2.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_5.jpg,Lixo,
-JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_7.jpg,,
+JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_7.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_8.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_9.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_09_213153740461693207130_planta_1.jpg,,
