@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T14:58:42.831Z",
+  "exported_at": "2026-07-23T14:59:19.491Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -13,7 +13,7 @@
     "Sonchus oleraceus",
     "Fumaria officinalis",
     "Papaver rhoeas",
-    "Chenopodium opolifolium",
+    "Chenopodium opulifolium",
     "Polygonum aviculare",
     "Datura stramonium",
     "Galinsoga parviflora",
@@ -30,8 +30,6 @@
     "Digitaria sanguinalis": "DIGSA",
     "Solanum nigrum": "SOLNI",
     "Sonchus oleraceus": "SONOL",
-    "Papaver rhoeas": "PAPRH",
-    "Chenopodium opolifolium": "CHEOP",
     "Tribolus terresrtris": "TRITE",
     "Fumaria officinalis": "FUMMU",
     "Spergula arvensis": "SPRAR",
@@ -44,7 +42,9 @@
     "Ranunculus arvensis": "RANAR",
     "Galinsoga parviflora": "GASPA",
     "Datura stramonium": "DATST",
-    "Polygonum aviculare": "POLAV"
+    "Polygonum aviculare": "POLAV",
+    "Chenopodium opulifolium": "CHEOP",
+    "Papaver rhoeas": "PAPRH"
   },
   "family": {
     "Amaranthus retroflexus": "Amaranthaceae",
@@ -62,7 +62,9 @@
     "Ranunculus arvensis": "Ranunculaceae",
     "Galinsoga parviflora": "Asteraceae",
     "Datura stramonium": "Solanaceae",
-    "Polygonum aviculare": "Polygonaceae"
+    "Polygonum aviculare": "Polygonaceae",
+    "Chenopodium opulifolium": "Amaranthaceae",
+    "Papaver rhoeas": "Papaveraceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -512,9 +514,9 @@
     "IMG_20220501_160607_planta_0.jpg": "Chenopodium album",
     "IMG_20220501_160607_planta_6.jpg": "Chenopodium album",
     "IMG_20220501_160611_planta_4.jpg": "Chenopodium album",
-    "PHOTO-2026-05-20-09-48-42 (2)_planta_7.jpg": "Chenopodium opolifolium",
-    "PHOTO-2026-05-20-09-48-44 (4)_planta_1.jpg": "Chenopodium opolifolium",
-    "PHOTO-2026-05-20-09-48-44 (9)_planta_1.jpg": "Chenopodium opolifolium",
+    "PHOTO-2026-05-20-09-48-42 (2)_planta_7.jpg": "Chenopodium opulifolium",
+    "PHOTO-2026-05-20-09-48-44 (4)_planta_1.jpg": "Chenopodium opulifolium",
+    "PHOTO-2026-05-20-09-48-44 (9)_planta_1.jpg": "Chenopodium opulifolium",
     "PHOTO-2026-05-20-09-48-42 (10)_planta_13.jpg": "Chenopodium album",
     "PHOTO-2026-05-20-09-48-42 (2)_planta_14.jpg": "Chenopodium album",
     "PHOTO-2026-05-20-09-48-43 (7)_planta_10.jpg": "Chenopodium album",
