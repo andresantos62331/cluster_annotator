@@ -66,7 +66,7 @@ filename,label,eppo_code
 20220417_152126_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152130_planta_1.jpg,,
 20220417_152137_planta_0.jpg,Chenopodium album,CHEAL
-20220417_152144_planta_1.jpg,,
+20220417_152144_planta_1.jpg,Stellaria media,STEME
 20220417_152204_planta_0.jpg,,
 20220417_152204_planta_1.jpg,Fumaria officinalis,FUMMU
 20220417_152204_planta_2.jpg,Chenopodium album,CHEAL
@@ -540,7 +540,7 @@ filename,label,eppo_code
 20220417_155834_planta_1.jpg,,
 20220417_155834_planta_2.jpg,,
 20220417_155834_planta_3.jpg,,
-20220417_155840_planta_0.jpg,,
+20220417_155840_planta_0.jpg,Stellaria media,STEME
 20220417_155840_planta_1.jpg,,
 20220417_155847_planta_0.jpg,,
 20220417_155901_planta_1.jpg,,
@@ -594,12 +594,12 @@ filename,label,eppo_code
 20220417_160201_planta_4.jpg,Lamium purpureum,LAMPU
 20220417_160201_planta_5.jpg,,
 20220417_160208_planta_0.jpg,Lixo,
-20220417_160208_planta_1.jpg,,
+20220417_160208_planta_1.jpg,Stellaria media,STEME
 20220417_160208_planta_2.jpg,Chenopodium album,CHEAL
 20220417_160214_planta_0.jpg,,
 20220417_160223_planta_1.jpg,,
 20220417_160228_planta_0.jpg,Diplotaxis catholica,DIPCA
-20220417_160235_planta_0.jpg,,
+20220417_160235_planta_0.jpg,Stellaria media,STEME
 20220417_160243_planta_0.jpg,,
 20220417_160244_planta_1.jpg,,
 20220417_160249_planta_0.jpg,Diplotaxis catholica,DIPCA
@@ -670,9 +670,9 @@ filename,label,eppo_code
 20220417_160738_planta_0.jpg,,
 20220417_160738_planta_1.jpg,,
 20220417_160738_planta_2.jpg,Convolvulus aravensis,CONAR
-20220417_160738_planta_3.jpg,,
+20220417_160738_planta_3.jpg,Stellaria media,STEME
 20220417_160744_planta_0.jpg,,
-20220417_160746_planta_0.jpg,,
+20220417_160746_planta_0.jpg,Stellaria media,STEME
 20220417_160749_planta_0.jpg,,
 20220417_160757_planta_0.jpg,,
 20220417_160802_planta_1.jpg,,
@@ -691,11 +691,11 @@ filename,label,eppo_code
 20220417_160906_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_160916_planta_0.jpg,,
 20220417_160918_planta_0.jpg,,
-20220417_160922_planta_0.jpg,,
+20220417_160922_planta_0.jpg,Stellaria media,STEME
 20220417_160922_planta_2.jpg,,
 20220417_160932_planta_0.jpg,,
 20220417_160949_planta_0.jpg,Lamium purpureum,LAMPU
-20220417_160954_planta_1.jpg,,
+20220417_160954_planta_1.jpg,Stellaria media,STEME
 20220417_161000_planta_0.jpg,,
 20220417_161000_planta_1.jpg,Lixo,
 20220417_161013_planta_1.jpg,,
@@ -3160,7 +3160,7 @@ JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_6.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_7.jpg,,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_8.jpg,,
-JPEG_V2_E2_2022-04-17_15_16_446534616847419291915_planta_1.jpg,,
+JPEG_V2_E2_2022-04-17_15_16_446534616847419291915_planta_1.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_15_16_565153743992895968107_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_0.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_1.jpg,Stellaria media,STEME
