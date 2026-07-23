@@ -107,22 +107,22 @@ filename,label,eppo_code
 20220417_152434_planta_8.jpg,Chenopodium album,CHEAL
 20220417_152434_planta_9.jpg,,
 20220417_152445_planta_0.jpg,Chenopodium album,CHEAL
-20220417_152530_planta_0.jpg,,
+20220417_152530_planta_0.jpg,Lixo,
 20220417_152530_planta_1.jpg,,
 20220417_152530_planta_10.jpg,,
 20220417_152530_planta_11.jpg,,
 20220417_152530_planta_12.jpg,,
 20220417_152530_planta_13.jpg,,
-20220417_152530_planta_14.jpg,,
+20220417_152530_planta_14.jpg,Lixo,
 20220417_152530_planta_15.jpg,,
 20220417_152530_planta_16.jpg,,
-20220417_152530_planta_2.jpg,,
+20220417_152530_planta_2.jpg,Lixo,
 20220417_152530_planta_3.jpg,,
-20220417_152530_planta_4.jpg,,
+20220417_152530_planta_4.jpg,Lixo,
 20220417_152530_planta_5.jpg,,
-20220417_152530_planta_6.jpg,,
-20220417_152530_planta_7.jpg,,
-20220417_152530_planta_9.jpg,,
+20220417_152530_planta_6.jpg,Lixo,
+20220417_152530_planta_7.jpg,Lixo,
+20220417_152530_planta_9.jpg,Lixo,
 20220417_152540_planta_10.jpg,,
 20220417_152540_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152540_planta_3.jpg,,
@@ -157,7 +157,7 @@ filename,label,eppo_code
 20220417_152744_planta_10.jpg,,
 20220417_152744_planta_11.jpg,,
 20220417_152744_planta_13.jpg,,
-20220417_152744_planta_3.jpg,,
+20220417_152744_planta_3.jpg,Lixo,
 20220417_152744_planta_5.jpg,,
 20220417_152744_planta_6.jpg,,
 20220417_152744_planta_7.jpg,,
@@ -171,7 +171,7 @@ filename,label,eppo_code
 20220417_152807_planta_0.jpg,,
 20220417_152807_planta_1.jpg,,
 20220417_152807_planta_11.jpg,,
-20220417_152807_planta_12.jpg,,
+20220417_152807_planta_12.jpg,Lixo,
 20220417_152807_planta_15.jpg,,
 20220417_152807_planta_3.jpg,Chenopodium album,CHEAL
 20220417_152807_planta_4.jpg,Chenopodium album,CHEAL
@@ -1072,7 +1072,7 @@ filename,label,eppo_code
 20220425_154653_planta_6.jpg,,
 20220425_154653_planta_7.jpg,,
 20220425_154653_planta_8.jpg,Portulaca oleracea,POROL
-20220425_154835_planta_0.jpg,,
+20220425_154835_planta_0.jpg,Lixo,
 20220425_154835_planta_3.jpg,,
 20220425_154850_planta_1.jpg,Chenopodium album,CHEAL
 20220425_154850_planta_2.jpg,,
@@ -1203,7 +1203,7 @@ filename,label,eppo_code
 20220425_162830_planta_1.jpg,,
 20220425_162854_planta_0.jpg,,
 20220425_162854_planta_1.jpg,Portulaca oleracea,POROL
-20220425_162854_planta_3.jpg,,
+20220425_162854_planta_3.jpg,Lixo,
 20220425_162854_planta_4.jpg,Portulaca oleracea,POROL
 20220425_162854_planta_5.jpg,Portulaca oleracea,POROL
 20220425_162854_planta_6.jpg,Portulaca oleracea,POROL
@@ -2772,7 +2772,7 @@ IMG_20220501_155559_planta_0.jpg,Digitaria sanguinalis,DIGSA
 IMG_20220501_155559_planta_2.jpg,,
 IMG_20220501_155604_planta_0.jpg,,
 IMG_20220501_155604_planta_1.jpg,Digitaria sanguinalis,DIGSA
-IMG_20220501_155604_planta_2.jpg,,
+IMG_20220501_155604_planta_2.jpg,Lixo,
 IMG_20220501_155612_planta_1.jpg,Digitaria sanguinalis,DIGSA
 IMG_20220501_155612_planta_2.jpg,Digitaria sanguinalis,DIGSA
 IMG_20220501_155617_planta_2.jpg,Digitaria sanguinalis,DIGSA
@@ -3057,7 +3057,7 @@ JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_5.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_7.jpg,,
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_8.jpg,,
-JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_9.jpg,,
+JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_9.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_09_213153740461693207130_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_09_213153740461693207130_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_09_213153740461693207130_planta_4.jpg,,
@@ -3089,13 +3089,13 @@ JPEG_V2_E2_2022-04-17_15_10_516634138168975204289_planta_1.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_10_516634138168975204289_planta_2.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_1.jpg,,
-JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_11.jpg,,
+JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_11.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_12.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_13.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_14.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_16.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_2.jpg,Chenopodium album,CHEAL
-JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_3.jpg,,
+JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_3.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_5.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_6.jpg,Lixo,
