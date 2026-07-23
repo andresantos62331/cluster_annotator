@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T19:45:10.297Z",
+  "exported_at": "2026-07-23T19:46:32.126Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -25,7 +25,8 @@
     "Senecio vulgaris",
     "Diplotaxis catholica",
     "Echinochloa crus-galli",
-    "Lamium purpureum"
+    "Lamium purpureum",
+    "Veronica arvensis"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -55,7 +56,8 @@
     "Urtica membranacea": "URTDU",
     "Senecio vulgaris": "SENVU",
     "Diplotaxis catholica": "DIPCA",
-    "Lamium purpureum": "LAMPU"
+    "Lamium purpureum": "LAMPU",
+    "Veronica arvensis": "VERAR"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -68,7 +70,8 @@
     "Senecio vulgaris": "Asteraceae",
     "Diplotaxis catholica": "Brassicaceae",
     "Echinochloa crus-galli": "Poaceae",
-    "Lamium purpureum": "Lamiaceae"
+    "Lamium purpureum": "Lamiaceae",
+    "Veronica arvensis": "Plantaginaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
