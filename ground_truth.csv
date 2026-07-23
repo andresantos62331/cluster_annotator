@@ -697,7 +697,7 @@ filename,label,eppo_code
 20220417_160949_planta_0.jpg,,
 20220417_160954_planta_1.jpg,,
 20220417_161000_planta_0.jpg,,
-20220417_161000_planta_1.jpg,,
+20220417_161000_planta_1.jpg,Lixo,
 20220417_161013_planta_1.jpg,,
 20220417_161015_planta_0.jpg,,
 20220417_161018_planta_1.jpg,,
@@ -757,7 +757,7 @@ filename,label,eppo_code
 20220417_162044_planta_3.jpg,,
 20220417_162044_planta_4.jpg,,
 20220417_162044_planta_5.jpg,,
-20220417_162044_planta_6.jpg,,
+20220417_162044_planta_6.jpg,Lixo,
 20220417_162044_planta_7.jpg,,
 20220417_162044_planta_9.jpg,,
 20220417_162047_planta_1.jpg,,
@@ -770,7 +770,7 @@ filename,label,eppo_code
 20220417_162047_planta_8.jpg,,
 20220417_162047_planta_9.jpg,,
 20220417_162050_planta_0.jpg,,
-20220417_162050_planta_1.jpg,,
+20220417_162050_planta_1.jpg,Lixo,
 20220417_162050_planta_3.jpg,,
 20220417_162050_planta_4.jpg,,
 20220417_162050_planta_5.jpg,Ranunculus arvensis,RANAR
@@ -782,9 +782,9 @@ filename,label,eppo_code
 20220417_162106_planta_1.jpg,,
 20220417_162106_planta_10.jpg,,
 20220417_162106_planta_11.jpg,Chenopodium album,CHEAL
-20220417_162106_planta_12.jpg,,
+20220417_162106_planta_12.jpg,Lixo,
 20220417_162106_planta_13.jpg,,
-20220417_162106_planta_2.jpg,,
+20220417_162106_planta_2.jpg,Lixo,
 20220417_162106_planta_3.jpg,,
 20220417_162106_planta_4.jpg,,
 20220417_162106_planta_5.jpg,Ranunculus arvensis,RANAR
@@ -800,8 +800,8 @@ filename,label,eppo_code
 20220417_162118_planta_3.jpg,,
 20220417_162126_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_162126_planta_1.jpg,Urtica urens,URTUR
-20220417_162126_planta_2.jpg,,
-20220417_162126_planta_3.jpg,,
+20220417_162126_planta_2.jpg,Lixo,
+20220417_162126_planta_3.jpg,Lixo,
 20220417_162126_planta_5.jpg,,
 20220417_162153_planta_0.jpg,,
 20220417_162153_planta_1.jpg,Urtica urens,URTUR
@@ -968,7 +968,7 @@ filename,label,eppo_code
 20220417_163323_planta_5.jpg,,
 20220417_163350_planta_0.jpg,,
 20220417_163400_planta_0.jpg,Lixo,
-20220417_163400_planta_3.jpg,,
+20220417_163400_planta_3.jpg,Lixo,
 20220417_163400_planta_4.jpg,,
 20220417_163400_planta_5.jpg,,
 20220417_163400_planta_6.jpg,,
