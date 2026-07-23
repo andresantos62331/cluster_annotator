@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-22T13:46:31.673Z",
+  "exported_at": "2026-07-23T14:57:16.875Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -43,12 +43,20 @@
     "Tribulus terrestris": "TRITE",
     "Tribolus terresrtris": "TRITE",
     "Fumaria officinalis": "FUMMU",
-    "Oxalis pes-caprae": "OXAPC"
+    "Oxalis pes-caprae": "OXAPC",
+    "Erodium moschatum": "EROMO"
   },
   "family": {
-    "Digitaria sanguinalis": "Poaceae",
+    "Amaranthus retroflexus": "Amaranthaceae",
+    "Cyperus rotundus": "Cyperaceae",
+    "Echinochloa crus-galli": "Poaceae",
+    "Ambrosia artemisiifolia": "Asteraceae",
     "Malva sylvestris": "Malvaceae",
-    "Solanum nigrum": "Solanaceae"
+    "Polygonum aviculare": "Polygonaceae",
+    "Portulaca oleracea": "Portulacaceae",
+    "Spergula Arvensis": "Caryophyllaceae",
+    "Chenopodium album": "Amaranthaceae",
+    "Erodium moschatum": "Geraniaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
