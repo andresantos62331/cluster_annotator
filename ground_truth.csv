@@ -129,7 +129,7 @@ filename,label,eppo_code
 20220417_152540_planta_4.jpg,,
 20220417_152540_planta_5.jpg,,
 20220417_152540_planta_6.jpg,,
-20220417_152540_planta_7.jpg,,
+20220417_152540_planta_7.jpg,Stellaria media,STEME
 20220417_152558_planta_0.jpg,,
 20220417_152614_planta_2.jpg,Lixo,
 20220417_152614_planta_3.jpg,,
@@ -261,7 +261,7 @@ filename,label,eppo_code
 20220417_153557_planta_0.jpg,Urtica urens,URTUR
 20220417_153557_planta_1.jpg,,
 20220417_153557_planta_2.jpg,Lixo,
-20220417_153559_planta_1.jpg,,
+20220417_153559_planta_1.jpg,Stellaria media,STEME
 20220417_153614_planta_0.jpg,,
 20220417_153622_planta_0.jpg,,
 20220417_153635_planta_1.jpg,,
@@ -538,7 +538,7 @@ filename,label,eppo_code
 20220417_155823_planta_0.jpg,,
 20220417_155827_planta_0.jpg,,
 20220417_155834_planta_1.jpg,,
-20220417_155834_planta_2.jpg,,
+20220417_155834_planta_2.jpg,Stellaria media,STEME
 20220417_155834_planta_3.jpg,,
 20220417_155840_planta_0.jpg,Stellaria media,STEME
 20220417_155840_planta_1.jpg,,
@@ -929,11 +929,11 @@ filename,label,eppo_code
 20220417_162943_planta_0.jpg,,
 20220417_162946_planta_1.jpg,Veronica arvensis,VERAR
 20220417_163000_planta_1.jpg,,
-20220417_163000_planta_2.jpg,,
+20220417_163000_planta_2.jpg,Stellaria media,STEME
 20220417_163000_planta_3.jpg,Lixo,
 20220417_163000_planta_4.jpg,,
 20220417_163001_planta_0.jpg,,
-20220417_163001_planta_1.jpg,,
+20220417_163001_planta_1.jpg,Stellaria media,STEME
 20220417_163001_planta_2.jpg,Lixo,
 20220417_163001_planta_3.jpg,,
 20220417_163005_planta_0.jpg,Veronica arvensis,VERAR
@@ -3121,7 +3121,7 @@ JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_8.jpg,,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_9.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_12_381826318015154971570_planta_0.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_12_381826318015154971570_planta_1.jpg,,
-JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_1.jpg,,
+JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_1.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_3.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_5.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_0.jpg,,
