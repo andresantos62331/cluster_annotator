@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T18:01:08.607Z",
+  "exported_at": "2026-07-23T18:04:47.457Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -19,7 +19,8 @@
     "Galinsoga parviflora",
     "Ranunculus arvensis",
     "Tribulus terrestris",
-    "Oxalis pes-caprae"
+    "Oxalis pes-caprae",
+    "Stellaria media"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -44,14 +45,16 @@
     "Solanum nigrum": "SOLNI",
     "Digitaria sanguinalis": "DIGSA",
     "Amaranthus retroflexus": "AMARE",
-    "Portulaca oleracea": "POROL"
+    "Portulaca oleracea": "POROL",
+    "Stellaria media": "STEME"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
     "amaranthus retroflexus": "Amaranthaceae",
     "Papaver rhoeas": "Papaveraceae",
     "Polygonum aviculare": "Polygonaceae",
-    "Datura stramonium": "Solanaceae"
+    "Datura stramonium": "Solanaceae",
+    "Stellaria media": "Caryophyllaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -802,6 +805,13 @@
     "20251110_152512_planta_10.jpg": "Lixo",
     "20251110_153252_planta_2.jpg": "Lixo",
     "20251110_153252_planta_7.jpg": "Lixo",
-    "20251110_153400_planta_5.jpg": "Lixo"
+    "20251110_153400_planta_5.jpg": "Lixo",
+    "20220417_152259_planta_3.jpg": "Stellaria media",
+    "20220417_152334_planta_5.jpg": "Stellaria media",
+    "20220417_152352_planta_4.jpg": "Stellaria media",
+    "20220417_161125_planta_0.jpg": "Stellaria media",
+    "20220417_161307_planta_1.jpg": "Stellaria media",
+    "JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_0.jpg": "Stellaria media",
+    "JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_3.jpg": "Stellaria media"
   }
 }
