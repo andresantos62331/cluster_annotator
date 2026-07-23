@@ -245,7 +245,7 @@ filename,label,eppo_code
 20220417_153142_planta_0.jpg,,
 20220417_153151_planta_0.jpg,Sonchus oleraceus,SONOL
 20220417_153244_planta_1.jpg,,
-20220417_153309_planta_0.jpg,,
+20220417_153309_planta_0.jpg,Urtica urens,URTUR
 20220417_153309_planta_1.jpg,,
 20220417_153405_planta_0.jpg,,
 20220417_153411_planta_0.jpg,,
@@ -264,7 +264,7 @@ filename,label,eppo_code
 20220417_153559_planta_1.jpg,Stellaria media,STEME
 20220417_153614_planta_0.jpg,,
 20220417_153622_planta_0.jpg,,
-20220417_153635_planta_1.jpg,,
+20220417_153635_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_153706_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_153740_planta_1.jpg,,
 20220417_153805_planta_0.jpg,Urtica urens,URTUR
@@ -751,7 +751,7 @@ filename,label,eppo_code
 20220417_162022_planta_6.jpg,Polygonum aviculare,POLAV
 20220417_162022_planta_7.jpg,Chenopodium album,CHEAL
 20220417_162025_planta_2.jpg,Chenopodium album,CHEAL
-20220417_162044_planta_0.jpg,,
+20220417_162044_planta_0.jpg,Solanum nigrum,SOLNI
 20220417_162044_planta_1.jpg,,
 20220417_162044_planta_10.jpg,Lixo,
 20220417_162044_planta_3.jpg,,
@@ -769,7 +769,7 @@ filename,label,eppo_code
 20220417_162047_planta_7.jpg,Polygonum aviculare,POLAV
 20220417_162047_planta_8.jpg,,
 20220417_162047_planta_9.jpg,,
-20220417_162050_planta_0.jpg,,
+20220417_162050_planta_0.jpg,Solanum nigrum,SOLNI
 20220417_162050_planta_1.jpg,Lixo,
 20220417_162050_planta_3.jpg,,
 20220417_162050_planta_4.jpg,,
@@ -836,7 +836,7 @@ filename,label,eppo_code
 20220417_162256_planta_0.jpg,,
 20220417_162256_planta_2.jpg,Urtica urens,URTUR
 20220417_162256_planta_3.jpg,Urtica urens,URTUR
-20220417_162256_planta_4.jpg,,
+20220417_162256_planta_4.jpg,Solanum nigrum,SOLNI
 20220417_162305_planta_2.jpg,Lixo,
 20220417_162305_planta_4.jpg,,
 20220417_162305_planta_5.jpg,Polygonum aviculare,POLAV
@@ -850,7 +850,7 @@ filename,label,eppo_code
 20220417_162355_planta_1.jpg,,
 20220417_162359_planta_0.jpg,,
 20220417_162405_planta_0.jpg,,
-20220417_162412_planta_1.jpg,,
+20220417_162412_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_162412_planta_2.jpg,,
 20220417_162505_planta_0.jpg,,
 20220417_162508_planta_0.jpg,,
@@ -893,7 +893,7 @@ filename,label,eppo_code
 20220417_162755_planta_2.jpg,Chamaemelum mixtum,ANTMI
 20220417_162755_planta_3.jpg,Datura stramonium,DATST
 20220417_162807_planta_0.jpg,,
-20220417_162807_planta_1.jpg,,
+20220417_162807_planta_1.jpg,Urtica urens,URTUR
 20220417_162807_planta_3.jpg,Datura stramonium,DATST
 20220417_162826_planta_1.jpg,,
 20220417_162826_planta_2.jpg,Lixo,
@@ -949,7 +949,7 @@ filename,label,eppo_code
 20220417_163121_planta_5.jpg,Urtica urens,URTUR
 20220417_163121_planta_6.jpg,,
 20220417_163218_planta_1.jpg,,
-20220417_163218_planta_5.jpg,,
+20220417_163218_planta_5.jpg,Solanum nigrum,SOLNI
 20220417_163218_planta_6.jpg,,
 20220417_163218_planta_7.jpg,,
 20220417_163223_planta_0.jpg,,
@@ -1128,15 +1128,15 @@ filename,label,eppo_code
 20220425_160121_planta_2.jpg,Lixo,
 20220425_160147_planta_1.jpg,,
 20220425_160147_planta_2.jpg,Amaranthus retroflexus,AMARE
-20220425_160207_planta_0.jpg,,
+20220425_160207_planta_0.jpg,Urtica urens,URTUR
 20220425_160207_planta_1.jpg,,
-20220425_160322_planta_0.jpg,,
+20220425_160322_planta_0.jpg,Urtica urens,URTUR
 20220425_160423_planta_0.jpg,,
 20220425_160431_planta_0.jpg,Conyza bonariensis,ERIBO
 20220425_160446_planta_0.jpg,,
 20220425_160506_planta_3.jpg,,
 20220425_160514_planta_1.jpg,,
-20220425_160528_planta_0.jpg,,
+20220425_160528_planta_0.jpg,Urtica urens,URTUR
 20220425_160528_planta_2.jpg,,
 20220425_160549_planta_0.jpg,,
 20220425_160716_planta_0.jpg,Urtica urens,URTUR
@@ -1225,7 +1225,7 @@ filename,label,eppo_code
 20220425_162912_planta_2.jpg,Portulaca oleracea,POROL
 20220425_162912_planta_4.jpg,Portulaca oleracea,POROL
 20220425_162912_planta_6.jpg,Portulaca oleracea,POROL
-20220425_162942_planta_1.jpg,,
+20220425_162942_planta_1.jpg,Urtica urens,URTUR
 20220425_162942_planta_3.jpg,,
 20220425_162942_planta_4.jpg,Portulaca oleracea,POROL
 20220425_162942_planta_5.jpg,Amaranthus retroflexus,AMARE
