@@ -128,7 +128,7 @@ filename,label,eppo_code
 20220417_152540_planta_3.jpg,Lixo,
 20220417_152540_planta_4.jpg,,
 20220417_152540_planta_5.jpg,,
-20220417_152540_planta_6.jpg,,
+20220417_152540_planta_6.jpg,Chenopodium album,CHEAL
 20220417_152540_planta_7.jpg,Stellaria media,STEME
 20220417_152558_planta_0.jpg,,
 20220417_152614_planta_2.jpg,Lixo,
@@ -136,14 +136,14 @@ filename,label,eppo_code
 20220417_152614_planta_4.jpg,,
 20220417_152614_planta_5.jpg,,
 20220417_152614_planta_7.jpg,,
-20220417_152614_planta_9.jpg,,
+20220417_152614_planta_9.jpg,Urtica urens,URTUR
 20220417_152626_planta_0.jpg,,
 20220417_152626_planta_1.jpg,,
 20220417_152626_planta_2.jpg,,
 20220417_152715_planta_0.jpg,,
 20220417_152715_planta_1.jpg,,
 20220417_152715_planta_10.jpg,Lixo,
-20220417_152715_planta_11.jpg,,
+20220417_152715_planta_11.jpg,Chenopodium album,CHEAL
 20220417_152715_planta_12.jpg,,
 20220417_152715_planta_13.jpg,Chenopodium album,CHEAL
 20220417_152715_planta_2.jpg,,
@@ -151,7 +151,7 @@ filename,label,eppo_code
 20220417_152715_planta_6.jpg,Chenopodium album,CHEAL
 20220417_152715_planta_7.jpg,,
 20220417_152715_planta_9.jpg,Chenopodium album,CHEAL
-20220417_152725_planta_0.jpg,,
+20220417_152725_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152725_planta_1.jpg,,
 20220417_152725_planta_2.jpg,,
 20220417_152744_planta_10.jpg,Lixo,
@@ -163,7 +163,7 @@ filename,label,eppo_code
 20220417_152744_planta_7.jpg,,
 20220417_152744_planta_8.jpg,,
 20220417_152744_planta_9.jpg,,
-20220417_152752_planta_1.jpg,,
+20220417_152752_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152752_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152752_planta_4.jpg,,
 20220417_152752_planta_5.jpg,Lixo,
@@ -187,8 +187,8 @@ filename,label,eppo_code
 20220417_152823_planta_5.jpg,,
 20220417_152823_planta_6.jpg,Lixo,
 20220417_152823_planta_7.jpg,,
-20220417_152823_planta_9.jpg,,
-20220417_152829_planta_1.jpg,,
+20220417_152823_planta_9.jpg,Chenopodium album,CHEAL
+20220417_152829_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152829_planta_10.jpg,Chenopodium album,CHEAL
 20220417_152829_planta_13.jpg,Chenopodium album,CHEAL
 20220417_152829_planta_15.jpg,,
@@ -207,7 +207,7 @@ filename,label,eppo_code
 20220417_152840_planta_22.jpg,Chenopodium album,CHEAL
 20220417_152840_planta_3.jpg,Chenopodium album,CHEAL
 20220417_152840_planta_5.jpg,Chenopodium album,CHEAL
-20220417_152840_planta_6.jpg,,
+20220417_152840_planta_6.jpg,Urtica urens,URTUR
 20220417_152840_planta_7.jpg,,
 20220417_152840_planta_9.jpg,Chenopodium album,CHEAL
 20220417_152845_planta_0.jpg,,
@@ -436,7 +436,7 @@ filename,label,eppo_code
 20220417_155052_planta_1.jpg,Lixo,
 20220417_155052_planta_2.jpg,,
 20220417_155052_planta_3.jpg,,
-20220417_155059_planta_1.jpg,,
+20220417_155059_planta_1.jpg,Urtica urens,URTUR
 20220417_155059_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_155103_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_155103_planta_1.jpg,,
@@ -809,7 +809,7 @@ filename,label,eppo_code
 20220417_162158_planta_2.jpg,,
 20220417_162158_planta_4.jpg,,
 20220417_162158_planta_5.jpg,,
-20220417_162158_planta_7.jpg,,
+20220417_162158_planta_7.jpg,Chenopodium album,CHEAL
 20220417_162213_planta_1.jpg,Sonchus asper,SONAS
 20220417_162215_planta_1.jpg,Sonchus asper,SONAS
 20220417_162215_planta_2.jpg,,
@@ -817,7 +817,7 @@ filename,label,eppo_code
 20220417_162218_planta_2.jpg,,
 20220417_162218_planta_3.jpg,,
 20220417_162218_planta_4.jpg,Lixo,
-20220417_162218_planta_5.jpg,,
+20220417_162218_planta_5.jpg,Urtica urens,URTUR
 20220417_162220_planta_1.jpg,,
 20220417_162220_planta_2.jpg,,
 20220417_162220_planta_3.jpg,Solanum nigrum,SOLNI
@@ -987,7 +987,7 @@ filename,label,eppo_code
 20220425_153705_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_153705_planta_2.jpg,,
 20220425_153705_planta_3.jpg,,
-20220425_153707_planta_0.jpg,,
+20220425_153707_planta_0.jpg,Chenopodium album,CHEAL
 20220425_153707_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_153707_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_153707_planta_4.jpg,,
@@ -1261,7 +1261,7 @@ filename,label,eppo_code
 20220425_164235_planta_1.jpg,,
 20220425_164235_planta_2.jpg,,
 20220425_164235_planta_3.jpg,,
-20220425_164235_planta_4.jpg,,
+20220425_164235_planta_4.jpg,Chenopodium album,CHEAL
 20220425_164235_planta_6.jpg,Chenopodium album,CHEAL
 20220425_164235_planta_7.jpg,,
 20220425_164235_planta_9.jpg,,
@@ -3019,7 +3019,7 @@ JPEG_V2_E2_2022-04-17_14_58_217419482026510393858_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_371128508627594800854_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_0.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_1.jpg,,
-JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_2.jpg,,
+JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_2.jpg,Urtica urens,URTUR
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_3.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_1.jpg,Chenopodium album,CHEAL
@@ -3066,7 +3066,7 @@ JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_0.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_2.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_5.jpg,,
-JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_6.jpg,,
+JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_6.jpg,Urtica urens,URTUR
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_7.jpg,,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_8.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_9.jpg,,
@@ -3143,7 +3143,7 @@ JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_10.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_4.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_5.jpg,,
-JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_7.jpg,,
+JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_7.jpg,Urtica urens,URTUR
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_8.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_9.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_15_576386943569487511811_planta_0.jpg,Polygonum aviculare,POLAV
