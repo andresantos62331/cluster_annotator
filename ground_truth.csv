@@ -125,7 +125,7 @@ filename,label,eppo_code
 20220417_152530_planta_9.jpg,Lixo,
 20220417_152540_planta_10.jpg,,
 20220417_152540_planta_2.jpg,Chenopodium album,CHEAL
-20220417_152540_planta_3.jpg,,
+20220417_152540_planta_3.jpg,Lixo,
 20220417_152540_planta_4.jpg,,
 20220417_152540_planta_5.jpg,,
 20220417_152540_planta_6.jpg,,
@@ -142,7 +142,7 @@ filename,label,eppo_code
 20220417_152626_planta_2.jpg,,
 20220417_152715_planta_0.jpg,,
 20220417_152715_planta_1.jpg,,
-20220417_152715_planta_10.jpg,,
+20220417_152715_planta_10.jpg,Lixo,
 20220417_152715_planta_11.jpg,,
 20220417_152715_planta_12.jpg,,
 20220417_152715_planta_13.jpg,Chenopodium album,CHEAL
@@ -395,7 +395,7 @@ filename,label,eppo_code
 20220417_154843_planta_0.jpg,,
 20220417_154843_planta_1.jpg,,
 20220417_154843_planta_2.jpg,,
-20220417_154846_planta_0.jpg,,
+20220417_154846_planta_0.jpg,Lixo,
 20220417_154849_planta_0.jpg,,
 20220417_154849_planta_1.jpg,,
 20220417_154858_planta_0.jpg,,
@@ -454,7 +454,7 @@ filename,label,eppo_code
 20220417_155200_planta_1.jpg,,
 20220417_155200_planta_3.jpg,,
 20220417_155200_planta_4.jpg,,
-20220417_155209_planta_0.jpg,,
+20220417_155209_planta_0.jpg,Lixo,
 20220417_155213_planta_0.jpg,,
 20220417_155216_planta_0.jpg,Lixo,
 20220417_155223_planta_0.jpg,,
@@ -482,7 +482,7 @@ filename,label,eppo_code
 20220417_155548_planta_4.jpg,,
 20220417_155548_planta_5.jpg,,
 20220417_155548_planta_6.jpg,,
-20220417_155548_planta_7.jpg,,
+20220417_155548_planta_7.jpg,Lixo,
 20220417_155548_planta_8.jpg,,
 20220417_155556_planta_0.jpg,,
 20220417_155556_planta_1.jpg,,
@@ -528,7 +528,7 @@ filename,label,eppo_code
 20220417_155742_planta_0.jpg,,
 20220417_155801_planta_0.jpg,,
 20220417_155806_planta_0.jpg,,
-20220417_155806_planta_1.jpg,,
+20220417_155806_planta_1.jpg,Lixo,
 20220417_155806_planta_3.jpg,,
 20220417_155818_planta_0.jpg,,
 20220417_155818_planta_1.jpg,Urtica urens,URTUR
@@ -549,7 +549,7 @@ filename,label,eppo_code
 20220417_155933_planta_0.jpg,,
 20220417_155936_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_155943_planta_0.jpg,,
-20220417_155943_planta_1.jpg,,
+20220417_155943_planta_1.jpg,Lixo,
 20220417_155943_planta_2.jpg,,
 20220417_155950_planta_0.jpg,,
 20220417_155955_planta_0.jpg,,
@@ -568,7 +568,7 @@ filename,label,eppo_code
 20220417_160046_planta_0.jpg,,
 20220417_160050_planta_0.jpg,,
 20220417_160054_planta_0.jpg,Lamium purpureum,LAMPU
-20220417_160057_planta_0.jpg,,
+20220417_160057_planta_0.jpg,Lixo,
 20220417_160102_planta_1.jpg,,
 20220417_160105_planta_1.jpg,,
 20220417_160105_planta_2.jpg,Chenopodium album,CHEAL
@@ -676,7 +676,7 @@ filename,label,eppo_code
 20220417_160749_planta_0.jpg,,
 20220417_160757_planta_0.jpg,,
 20220417_160802_planta_1.jpg,,
-20220417_160807_planta_0.jpg,,
+20220417_160807_planta_0.jpg,Lixo,
 20220417_160807_planta_1.jpg,,
 20220417_160817_planta_0.jpg,,
 20220417_160824_planta_0.jpg,,
@@ -3493,13 +3493,13 @@ PHOTO-2026-05-20-09-48-44 (4)_planta_2.jpg,,
 PHOTO-2026-05-20-09-48-44 (4)_planta_4.jpg,,
 PHOTO-2026-05-20-09-48-44 (4)_planta_6.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-44 (4)_planta_7.jpg,,
-PHOTO-2026-05-20-09-48-44 (4)_planta_8.jpg,,
+PHOTO-2026-05-20-09-48-44 (4)_planta_8.jpg,Lixo,
 PHOTO-2026-05-20-09-48-44 (4)_planta_9.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-44 (9)_planta_1.jpg,Chenopodium opulifolium,CHEOP
 PHOTO-2026-05-20-09-48-44 (9)_planta_2.jpg,,
 PHOTO-2026-05-20-09-48-44 (9)_planta_4.jpg,,
 PHOTO-2026-05-20-09-48-44 (9)_planta_6.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-44 (9)_planta_7.jpg,,
-PHOTO-2026-05-20-09-48-44 (9)_planta_8.jpg,,
+PHOTO-2026-05-20-09-48-44 (9)_planta_8.jpg,Lixo,
 PHOTO-2026-05-20-09-48-44 (9)_planta_9.jpg,Amaranthus retroflexus,AMARE
 clutter_planta_0.jpg,,
