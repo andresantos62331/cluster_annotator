@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { searchEppo, type EppoEntry } from "../eppo";
+import { checkEppo, searchEppo, type EppoEntry } from "../eppo";
+import { IconPencil } from "./icons";
 
 // Combobox para criar uma espécie: escreve nome científico, nome comum ou código
 // EPPO -> sugestões do vocabulário curado. Escolher uma fixa nome + código; texto
@@ -98,31 +99,71 @@ export function EppoCombobox({
   );
 }
 
-// Mini-editor de taxonomia de uma espécie: chip com o código EPPO; ao clicar abre
-// um popover (posição fixa) para PROCURAR na base curada (preenche código+família)
-// OU definir MANUALMENTE código e família (para espécies fora da base). Limpar
-// remove ambos. Posição fixa escapa ao clipping da lista com scroll.
+// Chip do código EPPO — SÓ LEITURA. A edição (nome + código + família) está toda
+// centralizada no lápis (TaxonEditor); o chip apenas mostra o código e assinala,
+// com um tom âmbar discreto, quando o código pertence a outra espécie da base.
 export function EppoChip({
+  code,
+  label,
+  vocab,
+}: {
+  code: string;
+  label: string; // nome da espécie — para confrontar com o código
+  vocab: EppoEntry[];
+}) {
+  const check = useMemo(() => checkEppo(vocab, code, label), [vocab, code, label]);
+  if (!code) return <span className="eppo-chip none mono">sem código</span>;
+  return (
+    <span
+      className={`eppo-chip has ${check?.kind === "mismatch" ? "warn" : ""} mono`}
+      title={
+        check?.kind === "mismatch"
+          ? `${code} é o código de ${check.entry.name}, não de ${label} — corrigir no lápis`
+          : `Código EPPO ${code}`
+      }
+    >
+      {code}
+    </span>
+  );
+}
+
+// Editor ÚNICO de uma espécie, aberto pelo lápis: nome, código EPPO e família no
+// mesmo sítio (antes o nome era um prompt() e o resto vivia no chip). O campo do
+// código é também a pesquisa na base curada — escolher uma sugestão preenche
+// código + família; o nome nunca é sobreposto (é a chave das anotações).
+// Posição fixa para escapar ao clipping das listas com scroll.
+export function TaxonEditor({
+  label,
   code,
   family,
   vocab,
-  onSet,
+  className = "sp-edit",
+  size = 13,
+  onSave,
 }: {
+  label: string;
   code: string;
   family: string;
   vocab: EppoEntry[];
-  onSet: (code: string, family: string) => void;
+  className?: string;
+  size?: number;
+  onSave: (name: string, code: string, family: string) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const [nameField, setNameField] = useState("");
   const [codeField, setCodeField] = useState("");
   const [famField, setFamField] = useState("");
   const [showSug, setShowSug] = useState(false);
+  const [showNameSug, setShowNameSug] = useState(false);
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
   const wrapRef = useRef<HTMLSpanElement>(null);
   const popRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
-  // o campo de código É a pesquisa: procura por código OU nome na base
-  const matches = useMemo(() => searchEppo(vocab, codeField, 6), [vocab, codeField]);
+  const matches = useMemo(() => searchEppo(vocab, codeField, 10), [vocab, codeField]);
+  // o campo do NOME pesquisa a base tal como na criação de espécie
+  const nameMatches = useMemo(() => searchEppo(vocab, nameField, 10), [vocab, nameField]);
+  // o aviso segue o que está a ser escrito (nome E código), não o valor gravado
+  const draftCheck = useMemo(() => checkEppo(vocab, codeField, nameField), [vocab, codeField, nameField]);
 
   // ao abrir: posiciona e sincroniza os campos com os valores atuais
   useEffect(() => {
@@ -130,19 +171,21 @@ export function EppoChip({
       setPos(null);
       return;
     }
+    setNameField(label);
     setCodeField(code);
     setFamField(family);
     setShowSug(false);
+    setShowNameSug(false);
     const el = triggerRef.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
-    const W = 252, H = 300, gap = 6;
+    const W = 252, H = 360, gap = 6;
     let left = Math.min(r.left, window.innerWidth - W - 8);
     left = Math.max(8, left);
     let top = r.bottom + gap;
-    if (top + H > window.innerHeight - 8) top = Math.max(8, r.top - H - gap);
+    if (top + H > window.innerHeight - 8) top = Math.max(8, window.innerHeight - H - 8);
     setPos({ top, left });
-  }, [open, code, family]);
+  }, [open, label, code, family]);
 
   useEffect(() => {
     if (!open) return;
@@ -168,12 +211,21 @@ export function EppoChip({
     setFamField(e.family ?? "");
     setShowSug(false);
   };
+  // escolher pelo NOME (lista de sugestões ou nome sublinhado no aviso): adota a
+  // espécie inteira da base — nome, código e família de uma vez
+  const adopt = (e: EppoEntry) => {
+    setNameField(e.name);
+    setCodeField(e.code);
+    setFamField(e.family ?? "");
+    setShowNameSug(false);
+    setShowSug(false);
+  };
   const save = () => {
-    onSet(codeField.trim().toUpperCase(), famField.trim());
+    onSave(nameField.trim(), codeField.trim().toUpperCase(), famField.trim());
     setOpen(false);
   };
-  const clearAll = () => {
-    onSet("", "");
+  const clearTaxon = () => {
+    onSave(nameField.trim(), "", "");
     setOpen(false);
   };
 
@@ -182,11 +234,11 @@ export function EppoChip({
       <button
         ref={triggerRef}
         type="button"
-        className={`eppo-chip ${code ? "has" : "empty"} mono`}
+        className={className}
         onClick={() => setOpen((o) => !o)}
-        title={code ? `EPPO ${code}${family ? ` · ${family}` : ""} — clicar para editar` : "Atribuir código EPPO / família"}
+        title="Editar espécie — nome, código EPPO e família"
       >
-        {code || "+ código"}
+        <IconPencil size={size} />
       </button>
       {open && pos && createPortal(
         <div
@@ -196,10 +248,39 @@ export function EppoChip({
           style={{ top: pos.top, left: pos.left }}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="eppo-pop-h">código EPPO</div>
+          <div className="eppo-pop-h">nome da espécie</div>
+          {/* pesquisa na base, como na criação de espécie: escolher preenche os três campos */}
           <div className="eppo-code-field">
             <input
               autoFocus
+              value={nameField}
+              placeholder="ex.: Chenopodium album (procura na base)"
+              spellCheck={false}
+              onChange={(e) => {
+                setNameField(e.target.value);
+                setShowNameSug(true);
+              }}
+              onFocus={() => setShowNameSug(true)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") save();
+                else if (e.key === "Escape") setShowNameSug(false);
+              }}
+            />
+            {showNameSug && nameField.trim() && nameMatches.length > 0 && (
+              <div className="eppo-pop-list">
+                {nameMatches.map((e) => (
+                  <button key={e.code} type="button" onClick={() => adopt(e)}>
+                    <span className="eppo-code mono">{e.code}</span>
+                    <span className="eppo-name">{e.name}</span>
+                    {e.common_pt && <span className="eppo-common">{e.common_pt}</span>}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="eppo-pop-h">código EPPO</div>
+          <div className="eppo-code-field">
+            <input
               className="mono"
               value={codeField}
               placeholder="ex.: CHEAL (ou procurar por nome)"
@@ -219,18 +300,35 @@ export function EppoChip({
               </div>
             )}
           </div>
+          {/* rede contra códigos escritos à mão */}
+          {draftCheck?.kind === "mismatch" && (
+            <div className="eppo-note warn">
+              <b>{draftCheck.entry.code}</b> é o código de{" "}
+              {/* clicar adota a espécie da base: nome, código e família */}
+              <button
+                type="button"
+                className="eppo-adopt"
+                onClick={() => adopt(draftCheck.entry)}
+                title={`Passar a espécie a ${draftCheck.entry.name}${draftCheck.entry.family ? ` (${draftCheck.entry.family})` : ""}`}
+              >
+                {draftCheck.entry.name}
+              </button>
+              .
+            </div>
+          )}
           <div className="eppo-pop-h">família</div>
           <input
             value={famField}
             placeholder="ex.: Amaranthaceae"
             spellCheck={false}
             onChange={(e) => setFamField(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && save()}
           />
           <button className="eppo-pop-save" type="button" onClick={save}>
             Guardar
           </button>
           {(code || family) && (
-            <button type="button" className="eppo-pop-clear" onClick={clearAll}>
+            <button type="button" className="eppo-pop-clear" onClick={clearTaxon}>
               Limpar código e família
             </button>
           )}
@@ -258,7 +356,7 @@ export function AddSpecies({
   const [family, setFamily] = useState("");
   const [showSug, setShowSug] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const matches = useMemo(() => searchEppo(vocab, name, 6), [vocab, name]);
+  const matches = useMemo(() => searchEppo(vocab, name, 10), [vocab, name]);
 
   const reset = () => {
     setName("");

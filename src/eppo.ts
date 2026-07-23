@@ -23,6 +23,33 @@ export async function loadEppo(): Promise<EppoEntry[]> {
   return cache;
 }
 
+// normaliza um nome científico para comparação (maiúsculas, espaços a mais)
+const norm = (s: string): string => s.trim().toLowerCase().replace(/\s+/g, " ");
+
+// Coerência entre o NOME da espécie e o CÓDIGO que lhe está atribuído. Serve de
+// rede para códigos escritos à mão: "Fumaria officinalis" com FUMMU (= Fumaria
+// muralis) é um engano silencioso que só se apanha assim.
+//  - "ok": o código existe na base e é mesmo o desta espécie
+//  - "mismatch": o código existe na base MAS é de outra espécie (erro provável);
+//    `suggestion` traz o código certo quando o nome da espécie está na base
+//  - "unknown": código fora da base curada — legítimo (a base não é exaustiva),
+//    apenas não confirmável
+export type EppoCheck =
+  | { kind: "ok"; entry: EppoEntry }
+  | { kind: "mismatch"; entry: EppoEntry; suggestion?: EppoEntry }
+  | { kind: "unknown" }
+  | null;
+
+export function checkEppo(entries: EppoEntry[], code: string, label: string): EppoCheck {
+  const c = code.trim().toUpperCase();
+  if (!c) return null;
+  const entry = entries.find((e) => e.code.toUpperCase() === c);
+  if (!entry) return { kind: "unknown" };
+  if (norm(entry.name) === norm(label)) return { kind: "ok", entry };
+  const suggestion = entries.find((e) => norm(e.name) === norm(label));
+  return { kind: "mismatch", entry, suggestion };
+}
+
 // pesquisa tolerante por código, nome científico ou nome comum (pt). Devolve as
 // melhores correspondências ordenadas (prefixo > contém), limitado a `limit`.
 export function searchEppo(entries: EppoEntry[], q: string, limit = 8): EppoEntry[] {

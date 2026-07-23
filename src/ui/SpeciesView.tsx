@@ -6,7 +6,9 @@ import { Pagination } from "./bits";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { CollectionOverview } from "./CollectionOverview";
-import { IconPencil, IconChevron, IconTrash } from "./icons";
+import { EppoChip, TaxonEditor } from "./EppoInput";
+import type { EppoEntry } from "../eppo";
+import { IconChevron, IconTrash } from "./icons";
 
 // rótulo para espécies sem código EPPO (logo, sem família conhecida)
 const SEM_FAMILIA = "Sem família";
@@ -34,11 +36,12 @@ export function SpeciesView({
   onRemoveLabels,
   onReassign,
   onOpenLightbox,
-  onRename,
+  onEditSpecies,
   onRemove,
   onSetColor,
   eppoOf,
   familyOf,
+  eppoVocab,
   totalAll,
   thumbOf,
   clusterOf,
@@ -56,12 +59,13 @@ export function SpeciesView({
   setSelection: React.Dispatch<React.SetStateAction<Set<string>>>;
   onRemoveLabels: () => void;
   onReassign: (label: string) => void;
-  onOpenLightbox: (f: string) => void;
-  onRename: (l: string) => void;
+  onOpenLightbox: (f: string, scope: string[]) => void;
+  onEditSpecies: (oldName: string, name: string, code: string, family: string) => void;
   onRemove: (l: string) => void;
   onSetColor: (l: string, hex: string) => void;
   eppoOf: (l: string) => string;
   familyOf: (l: string) => string;
+  eppoVocab: EppoEntry[];
   totalAll: number;
   thumbOf: (l: string) => string | null;
   clusterOf: (f: string) => number | null;
@@ -347,27 +351,23 @@ export function SpeciesView({
                   </span>
                 ) : (
                   <>
-                    {eppoOf(lbl) && (
-                      <span className="eppo-chip has mono" title={`Código EPPO: ${eppoOf(lbl)}`}>
-                        {eppoOf(lbl)}
-                      </span>
-                    )}
+                    {/* chip só-leitura; a edição está no lápis, como no painel direito */}
+                    <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
                     {files.length > 0 && (
                       <span className="svb-pop" title="população desta espécie (clusters da config atual)">
                         {files.length} {files.length === 1 ? "imagem presente" : "imagens presentes"} em{" "}
                         {nClusters} {nClusters === 1 ? "cluster" : "clusters"}
                       </span>
                     )}
-                    <button
+                    <TaxonEditor
+                      label={lbl}
+                      code={eppoOf(lbl)}
+                      family={familyOf(lbl)}
+                      vocab={eppoVocab}
                       className="svb-edit"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onRename(lbl);
-                      }}
-                      title="Renomear espécie"
-                    >
-                      <IconPencil size={15} />
-                    </button>
+                      size={15}
+                      onSave={(name, code, family) => onEditSpecies(lbl, name, code, family)}
+                    />
                   </>
                 )}
               </h3>
@@ -435,7 +435,7 @@ export function SpeciesView({
                           return next;
                         })
                       }
-                      onOpen={() => onOpenLightbox(f)}
+                      onOpen={() => onOpenLightbox(f, files)}
                     />
                   ))}
                 </div>
@@ -486,7 +486,8 @@ function ReassignMenu({
       {open && (
         <div className="sp-dropdown reassign-dd">
           {labels.length === 0 && <div className="dd-empty">Sem espécies.</div>}
-          {labels.map((l) => (
+          {/* ordem alfabética, como no dropdown de atribuição */}
+          {[...labels].sort((a, b) => a.localeCompare(b, "pt")).map((l) => (
             <button
               key={l}
               onClick={() => {

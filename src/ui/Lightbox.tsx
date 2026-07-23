@@ -19,7 +19,9 @@ export function Lightbox({
   geo,
   label,
   color,
+  eppoCode,
   selected = false,
+  onToggleSelect,
   clusterId,
   onGoToCluster,
   onClose,
@@ -28,7 +30,9 @@ export function Lightbox({
   geo?: CropGeo | null;
   label?: string;
   color?: string;
+  eppoCode?: string;
   selected?: boolean;
+  onToggleSelect?: () => void;
   clusterId?: number;
   onGoToCluster?: () => void;
   onClose: () => void;
@@ -188,9 +192,35 @@ export function Lightbox({
 
   return (
     <div className="lightbox open" onClick={onClose}>
-      <button className="close" onClick={onClose} title="Fechar (Esc)">
-        ×
-      </button>
+      {/* controlos da janela, juntos no canto: ajuda e fechar */}
+      <div className="lb-corner" onClick={(e) => e.stopPropagation()}>
+        <span className="li-helpwrap">
+          <button className="li-help" onClick={() => setHelpOpen((v) => !v)} title="Atalhos do viewport">
+            ?
+          </button>
+          {helpOpen && (
+            <div className="li-help-pop">
+              {geo && (
+                <div><kbd>↑</kbd>/<kbd>↓</kbd><span>alternar original, caixa e recorte</span></div>
+              )}
+              <div><kbd>←</kbd>/<kbd>→</kbd><span>plântula anterior / seguinte da secção</span></div>
+              <div><kbd>S</kbd><span>selecionar esta plântula</span></div>
+              {geo && <div><kbd>F</kbd><span>localizar a plântula na foto</span></div>}
+              {geo && <div><kbd>⇧F</kbd><span>centrar na plântula e localizar</span></div>}
+              <div><kbd>roda</kbd><span>ampliar · arrastar move a foto</span></div>
+              {geo ? (
+                <div><kbd>C</kbd><span>voltar à foto inteira (= ⟲)</span></div>
+              ) : (
+                <div><kbd>⟲</kbd><span>voltar à foto inteira</span></div>
+              )}
+              <div><kbd>Esc</kbd><span>fechar</span></div>
+            </div>
+          )}
+        </span>
+        <button className="close" onClick={onClose} title="Fechar (Esc)">
+          ×
+        </button>
+      </div>
 
       {geo && (
         <div className="lb-views seg" onClick={(e) => e.stopPropagation()}>
@@ -342,51 +372,46 @@ export function Lightbox({
         )}
       </div>
 
+      {/* Ficha da plântula: o que interessa ao olho (espécie) em cima e grande;
+          os metadados técnicos em baixo, esbatidos. */}
       <div className="info" onClick={(e) => e.stopPropagation()}>
-        {selected && <span className="li-sel">✓ selecionada</span>}
-        {label && (
-          <span style={{ color, fontWeight: 700, marginRight: 8 }}>● {label}</span>
-        )}
-        {filename}
-        {geo
-          ? ` · ${geo.src} · crop ${geo.w}×${geo.h} px`
-          : dims && ` · ${dims.w}×${dims.h} px`}
-        {clusterId != null && clusterId !== -1 && onGoToCluster && (
-          <button className="li-cluster" onClick={onGoToCluster} title="Ir para o cluster de origem">
-            Ir para cluster de origem (c{clusterId})
-          </button>
-        )}
-        <span className="li-helpwrap">
-          <button
-            className="li-help"
-            onClick={() => setHelpOpen((v) => !v)}
-            title="Atalhos do viewport"
-          >
-            ?
-          </button>
-          {helpOpen && (
-            <div className="li-help-pop">
-              {geo && (
-                <div><kbd>↑</kbd>/<kbd>↓</kbd><span>Original / Caixa / Recorte</span></div>
-              )}
-              <div><kbd>←</kbd>/<kbd>→</kbd><span>plântula anterior / seguinte</span></div>
-              <div><kbd>S</kbd><span>selecionar esta plântula</span></div>
-              {geo && (
-                <div><kbd>F</kbd><span>localizar (nuvem de realce)</span></div>
-              )}
-              {geo && (
-                <div><kbd>⇧F</kbd><span>centrar na plântula + localizar</span></div>
-              )}
-              <div><kbd>scroll</kbd><span>zoom · arrastar move</span></div>
-              {geo ? (
-                <div><kbd>C</kbd><span>ajustar a foto inteira (= ⟲)</span></div>
-              ) : (
-                <div><kbd>⟲</kbd><span>ajustar ao ecrã</span></div>
-              )}
-              <div><kbd>Esc</kbd><span>fechar</span></div>
-            </div>
+        <div className="li-line1">
+          {/* mesma caixa de seleção que se usa fora do viewport */}
+          {onToggleSelect && (
+            <button
+              className={`svb-check ${selected ? "on" : ""}`}
+              onClick={onToggleSelect}
+              title={selected ? "Desselecionar esta plântula (S)" : "Selecionar esta plântula (S)"}
+              aria-pressed={selected}
+            >
+              <svg viewBox="0 0 24 24" width="13" height="13">
+                <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
           )}
-        </span>
+          {label ? (
+            <>
+              <span className="li-dot" style={{ background: color }} />
+              <span className="li-species">{label}</span>
+              {eppoCode && <span className="li-eppo mono">{eppoCode}</span>}
+            </>
+          ) : (
+            <span className="li-todo">Por classificar</span>
+          )}
+        </div>
+        <div className="li-line2 mono">
+          <span className="li-file" title={geo ? `${filename} · original ${geo.src}` : filename}>
+            {filename}
+          </span>
+          <span className="li-dim">
+            {geo ? `${geo.w}×${geo.h} px` : dims ? `${dims.w}×${dims.h} px` : ""}
+          </span>
+          {clusterId != null && clusterId !== -1 && onGoToCluster && (
+            <button className="li-cluster" onClick={onGoToCluster} title="Ir para o grupo de origem">
+              c{clusterId} ↗
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -78,6 +78,11 @@ export default function App() {
   const [speciesSelection, setSpeciesSelection] = useState<Set<string>>(new Set());
   const [activeSpecies, setActiveSpecies] = useState("");
   const [lightbox, setLightbox] = useState<string | null>(null);
+  // secção de onde o viewport foi aberto ("Por classificar", um grupo de espécie,
+  // o Lixo, uma ficha da Coleção). É ela que define a ordem do ←/→ — abrir a
+  // partir de "Por classificar" NÃO deve passar pelas já etiquetadas. Captura-se
+  // no momento da abertura para a lista não fugir por baixo dos pés ao anotar.
+  const [lightboxScope, setLightboxScope] = useState<string[] | null>(null);
   const [speciesPage, setSpeciesPage] = useState<Record<string, number>>({});
   const [showAnnotated, setShowAnnotated] = useState(true);
   const [visited, setVisited] = useState<number[]>([]);
@@ -340,15 +345,23 @@ export default function App() {
     return config.byCluster.get(currentClusterId) ?? [];
   }, [config, currentClusterId]);
 
-  // lista em que o lightbox navega com ↑/↓: o cluster atual, ou as imagens da
-  // mesma espécie quando aberto a partir da tab de espécies
+  // lista em que o lightbox navega com ←/→: a secção de onde foi aberto. Sem
+  // secção (aberturas antigas/indirectas) cai no cluster atual ou nas imagens da
+  // mesma espécie, como antes.
   const lightboxList = useMemo(() => {
     if (!lightbox) return [] as string[];
+    if (lightboxScope && lightboxScope.includes(lightbox)) return lightboxScope;
     if (mode === "clusters") return clusterFilenames;
     const lbl = groundTruth[lightbox];
     if (!lbl) return [lightbox];
     return Object.keys(groundTruth).filter((f) => groundTruth[f] === lbl).sort();
-  }, [lightbox, mode, clusterFilenames, groundTruth]);
+  }, [lightbox, lightboxScope, mode, clusterFilenames, groundTruth]);
+
+  // abrir o viewport a partir de uma secção concreta (a lista fica congelada)
+  const openLightbox = useCallback((f: string, scope?: string[]) => {
+    setLightboxScope(scope ? [...scope] : null);
+    setLightbox(f);
+  }, []);
 
   const unannotatedInCluster = useMemo(
     () => clusterFilenames.filter((f) => !groundTruth[f]),
@@ -372,24 +385,6 @@ export default function App() {
     setActiveSpecies(t);
   }, []);
 
-  // define/limpa o código EPPO e a família de uma espécie (editor do painel direito).
-  // Permite valores MANUAIS (espécies fora da base curada): código + família livres.
-  const setSpeciesTaxon = useCallback((label: string, code: string, family: string) => {
-    snapshot();
-    setEppoMap((prev) => {
-      const next = { ...prev };
-      if (code) next[label] = code;
-      else delete next[label];
-      return next;
-    });
-    setFamilyMap((prev) => {
-      const next = { ...prev };
-      if (family) next[label] = family;
-      else delete next[label];
-      return next;
-    });
-  }, [snapshot]);
-
   const removeLabel = useCallback((name: string) => {
     if (!confirm(`Remover a espécie "${name}"?\n\nTodas as anotações com esta espécie serão limpas.`)) return;
     snapshot();
@@ -401,19 +396,39 @@ export default function App() {
     });
   }, [snapshot]);
 
-  const renameLabel = useCallback(
-    (oldName: string) => {
-      const newName = prompt(`Renomear "${oldName}" para:`, oldName)?.trim();
-      if (!newName || newName === oldName) return;
-      if (labels.includes(newName)) {
-        alert("Já existe uma espécie com esse nome.");
-        return;
-      }
-      if (newName.toLowerCase() === LIXO.toLowerCase()) {
-        alert(`"${LIXO}" é a categoria reservada para crops inutilizáveis.`);
-        return;
+  // Edição CENTRALIZADA de uma espécie (lápis): nome + código EPPO + família de uma
+  // só vez. Um único snapshot -> um Ctrl+Z desfaz a edição toda. O nome é a chave
+  // das anotações, por isso mudá-lo arrasta ground truth, cor, código e família.
+  const editSpecies = useCallback(
+    (oldName: string, proposed: string, code: string, family: string) => {
+      const newName = proposed.trim();
+      if (!newName) return;
+      if (newName !== oldName) {
+        if (labels.includes(newName)) {
+          alert("Já existe uma espécie com esse nome.");
+          return;
+        }
+        if (newName.toLowerCase() === LIXO.toLowerCase()) {
+          alert(`"${LIXO}" é a categoria reservada para crops inutilizáveis.`);
+          return;
+        }
       }
       snapshot();
+      setEppoMap((prev) => {
+        const next = { ...prev };
+        delete next[oldName];
+        if (code) next[newName] = code;
+        else delete next[newName];
+        return next;
+      });
+      setFamilyMap((prev) => {
+        const next = { ...prev };
+        delete next[oldName];
+        if (family) next[newName] = family;
+        else delete next[newName];
+        return next;
+      });
+      if (newName === oldName) return;
       setLabels((prev) => prev.map((l) => (l === oldName ? newName : l)));
       setGroundTruth((prev) => {
         const next = { ...prev };
@@ -428,19 +443,7 @@ export default function App() {
         saveColorMap(next);
         return next;
       });
-      // o código EPPO e a família também seguem o nome novo
-      setEppoMap((prev) => {
-        if (!(oldName in prev)) return prev;
-        const next = { ...prev, [newName]: prev[oldName] };
-        delete next[oldName];
-        return next;
-      });
-      setFamilyMap((prev) => {
-        if (!(oldName in prev)) return prev;
-        const next = { ...prev, [newName]: prev[oldName] };
-        delete next[oldName];
-        return next;
-      });
+      // (código EPPO e família já foram gravados no nome novo acima)
       if (activeSpecies === oldName) setActiveSpecies(newName);
     },
     [labels, activeSpecies, snapshot],
@@ -778,6 +781,20 @@ export default function App() {
     pushToast("danger", <span>Etiqueta removida de <b>{n}</b> {n === 1 ? "imagem" : "imagens"}</span>, true);
   }, [speciesSelection, pushToast, snapshot]);
 
+  // seleciona/desseleciona a plântula em vista no viewport (tecla S e a caixa de
+  // seleção da ficha) — o alvo depende do separador em que estamos
+  const toggleLightboxSelect = useCallback(() => {
+    if (!lightbox) return;
+    if (mode === "clusters") toggleSelect(lightbox);
+    else
+      setSpeciesSelection((prev) => {
+        const next = new Set(prev);
+        if (next.has(lightbox)) next.delete(lightbox);
+        else next.add(lightbox);
+        return next;
+      });
+  }, [lightbox, mode, toggleSelect]);
+
   // ---- atalhos de teclado ----
   useEffect(() => {
     function handler(e: KeyboardEvent) {
@@ -793,14 +810,7 @@ export default function App() {
           }
         } else if (e.key === "s" || e.key === "S") {
           // seleciona/desseleciona a plântula em vista sem fechar o viewport
-          if (mode === "clusters") toggleSelect(lightbox);
-          else
-            setSpeciesSelection((prev) => {
-              const next = new Set(prev);
-              if (next.has(lightbox)) next.delete(lightbox);
-              else next.add(lightbox);
-              return next;
-            });
+          toggleLightboxSelect();
         }
         return;
       }
@@ -860,7 +870,7 @@ export default function App() {
     }
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [mode, config, lightbox, lightboxList, helpOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, removeSelectedLabels, toggleSelect, undo, redo]);
+  }, [mode, config, lightbox, lightboxList, helpOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, removeSelectedLabels, toggleLightboxSelect, undo, redo]);
 
   // reatribuir a selecção (vista Espécies) a outra espécie
   const reassignSpeciesSelection = useCallback(
@@ -1008,7 +1018,7 @@ export default function App() {
             eppoOf={(l) => eppoMap[l] ?? ""}
             onSetActive={setActiveSpecies}
             onToggleSelect={toggleSelect}
-            onOpenLightbox={setLightbox}
+            onOpenLightbox={openLightbox}
             onAssign={() => assignSpecies(activeSpecies)}
             onSelectPage={selectPage}
             onToggleMany={toggleMany}
@@ -1029,12 +1039,13 @@ export default function App() {
             setSelection={setSpeciesSelection}
             onRemoveLabels={removeSelectedLabels}
             onReassign={reassignSpeciesSelection}
-            onOpenLightbox={setLightbox}
-            onRename={renameLabel}
+            onOpenLightbox={openLightbox}
+            onEditSpecies={editSpecies}
             onRemove={removeLabel}
             onSetColor={setSpeciesColor}
             eppoOf={(l) => eppoMap[l] ?? ""}
             familyOf={familyOf}
+            eppoVocab={eppoVocab}
             totalAll={allFilenames.length}
             thumbOf={thumbOf}
             clusterOf={(f) => fileToCluster.get(f) ?? null}
@@ -1056,10 +1067,9 @@ export default function App() {
         familyOf={familyOf}
         onGoToSpecies={goToSpecies}
         onAdd={addLabel}
-        onRename={renameLabel}
+        onEditSpecies={editSpecies}
         onReorder={reorderLabel}
         onSetColor={setSpeciesColor}
-        onSetTaxon={setSpeciesTaxon}
       />
 
       <Lightbox
@@ -1070,6 +1080,8 @@ export default function App() {
         }
         label={lightbox ? groundTruth[lightbox] : undefined}
         color={lightbox && groundTruth[lightbox] ? colorOf(groundTruth[lightbox]) : undefined}
+        eppoCode={lightbox && groundTruth[lightbox] ? eppoMap[groundTruth[lightbox]] : undefined}
+        onToggleSelect={toggleLightboxSelect}
         clusterId={lightbox ? fileToCluster.get(lightbox) : undefined}
         onGoToCluster={lightbox ? () => goToSourceCluster(lightbox) : undefined}
         onClose={() => setLightbox(null)}

@@ -12,24 +12,38 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
         <h2>Como anotar</h2>
         <ol className="help-steps">
           <li>
-            <b>Escolhe um grupo</b> na lista à esquerda. As imagens do grupo são
-            parecidas entre si — normalmente a mesma espécie.
+            <b>Escolhe um grupo</b> na lista da esquerda. As imagens de cada grupo
+            são parecidas entre si — em regra, a mesma espécie. A lista mostra
+            apenas o que falta fazer; os grupos já concluídos ficam recolhidos na
+            gaveta <b>«Concluídos»</b>, no fundo dessa lista.
           </li>
           <li>
-            <b>Seleciona as plântulas</b> clicando nelas (ou «Selecionar página») e
-            atribui-as à espécie ativa com <kbd>A</kbd> ou o botão «Atribuir».
-            Para criar uma espécie nova usa o painel à direita.
+            <b>Seleciona as plântulas</b> que são da mesma espécie (clica em cada
+            uma, ou usa o visto no cabeçalho para marcar a página inteira) e
+            atribui-as com <kbd>A</kbd>, com o botão «Atribuir» ou com a tecla da
+            espécie. Espécies novas criam-se no painel da direita.
           </li>
           <li>
-            <b>Audita na página Espécies</b>: clica numa espécie no painel direito
-            para veres todas as imagens dela e corrigires as que não pertencem
-            («Mover para» ou «Remover etiqueta»).
+            <b>Confere na Coleção</b>: o separador do meio reúne, para cada
+            espécie, todas as imagens que lhe atribuíste, venham do grupo que
+            vierem. É aqui que se apanham enganos — corrige-os com «Mover para»
+            ou «Remover etiqueta».
           </li>
         </ol>
 
         <div className="help-note">
-          Em caso de dúvida numa plântula, expande-a (⤢) — vês a foto original e,
-          com <kbd>←</kbd>/<kbd>→</kbd>, a caixa e o recorte em alta definição.
+          O <b>painel das espécies</b>, à direita, está recolhido e abre quando lhe
+          passas o rato por cima. Os números a laranja são as teclas de atribuição;
+          arrastar uma espécie muda a ordem — e, com ela, as teclas. O lápis abre a
+          ficha da espécie: nome, código EPPO e família, com pesquisa na base.
+        </div>
+
+        <div className="help-note">
+          Em caso de dúvida numa plântula, abre-a em detalhe (⤢). Com{" "}
+          <kbd>↑</kbd>/<kbd>↓</kbd> alternas entre a foto original, a caixa e o
+          recorte em alta definição; com <kbd>←</kbd>/<kbd>→</kbd> percorres as
+          plântulas <b>da secção onde estavas</b> — se abriste em «Por
+          classificar», só passas pelas que faltam.
         </div>
 
         <h2>Atalhos</h2>
@@ -40,7 +54,7 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
               <div><dt><kbd>A</kbd></dt><dd>atribuir a seleção à espécie ativa</dd></div>
               <div><dt><kbd>R</kbd></dt><dd>retirar a etiqueta às selecionadas</dd></div>
               <div><dt><kbd>D</kbd></dt><dd>limpar a seleção</dd></div>
-              <div><dt><kbd>1</kbd>–<kbd>9</kbd></dt><dd>escolher/atribuir a espécie n.º N</dd></div>
+              <div><dt><kbd>1</kbd>–<kbd>9</kbd></dt><dd>atribuir a seleção à espécie n.º N (ordem do painel direito)</dd></div>
               <div><dt><kbd>0</kbd></dt><dd>marcar como Lixo (crop inutilizável)</dd></div>
               <div><dt><kbd>J</kbd> / <kbd>K</kbd></dt><dd>grupo seguinte / anterior</dd></div>
               <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>mudar de página</dd></div>
@@ -50,7 +64,7 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
             <h3>Vista em detalhe</h3>
             <dl>
               <div><dt><kbd>↑</kbd> / <kbd>↓</kbd></dt><dd>alternar Original / Caixa / Recorte</dd></div>
-              <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>plântula anterior / seguinte</dd></div>
+              <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>plântula anterior / seguinte da secção</dd></div>
               <div><dt><kbd>S</kbd></dt><dd>selecionar a plântula em vista</dd></div>
               <div><dt><kbd>F</kbd></dt><dd>localizar a plântula (nuvem de realce)</dd></div>
               <div><dt><kbd>Shift</kbd>+<kbd>F</kbd></dt><dd>centrar na plântula + localizar</dd></div>
@@ -63,7 +77,7 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
           <div className="hs-group">
             <h3>Geral</h3>
             <dl>
-              <div><dt><kbd>Ctrl</kbd>+<kbd>Z</kbd></dt><dd>desfazer a última anotação</dd></div>
+              <div><dt><kbd>Ctrl</kbd>+<kbd>Z</kbd></dt><dd>desfazer a última ação</dd></div>
               <div><dt><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></dt><dd>refazer</dd></div>
               <div><dt><kbd>Esc</kbd></dt><dd>limpar a seleção</dd></div>
               <div><dt><kbd>?</kbd></dt><dd>abrir esta ajuda</dd></div>
@@ -72,8 +86,10 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="help-note">
-          As anotações ficam guardadas <b>neste browser</b> ao instante. No fim da
-          sessão carrega em <b>«Guardar na cloud»</b> para enviar uma cópia segura.
+          O trabalho fica guardado <b>neste browser</b> à medida que anotas e segue
+          sozinho para a cloud pouco depois de parares. O ponto ao lado de{" "}
+          <b>«Guardar na cloud»</b> diz como está: verde, está tudo enviado; se
+          quiseres enviar já, carrega no botão.
         </div>
       </div>
     </div>

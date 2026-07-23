@@ -6,8 +6,6 @@ import { IconSearch } from "./icons";
 const baseUrl = import.meta.env.BASE_URL || "/";
 const PREVIEW = 168; // lado do popover de pré-visualização (como no SpeciesThumb)
 
-type Mode = "todos" | "fazer" | "feitos";
-
 // Miniatura do grupo (representante mais perto do centroide) com pré-visualização
 // grande no hover — mesmo comportamento das miniaturas de espécie (popover com
 // posição fixa, à direita do rail, ~130ms de atraso).
@@ -58,7 +56,8 @@ export function ClusterRail({
   onSelect: (cid: number) => void;
 }) {
   const [query, setQuery] = useState("");
-  const [mode, setMode] = useState<Mode>("todos");
+  // gaveta dos concluídos — fixa no fundo do rail, fechada por omissão
+  const [doneOpen, setDoneOpen] = useState(false);
   const activeRef = useRef<HTMLDivElement>(null);
 
   const items = useMemo(() => {
@@ -73,24 +72,18 @@ export function ClusterRail({
       })
       .filter((it) => {
         if (q && !(it.cid === -1 ? "ruido -1 ruído" : `c${it.cid} ${it.cid}`).includes(q)) return false;
-        if (mode === "fazer" && it.done) return false;
-        if (mode === "feitos" && !it.done) return false;
         return true;
       });
-  }, [config, groundTruth, query, mode]);
+  }, [config, groundTruth, query]);
 
   // ao mudar de cluster (sobretudo via chip "vizinho", que pode apontar para um
-  // grupo fora do ecrã): se o destino não está na lista filtrada, repõe o filtro
-  // para o tornar visível
+  // grupo escondido pela pesquisa): limpa a pesquisa para o tornar visível
   useEffect(() => {
     if (currentClusterId == null) return;
     const visible = config.clusterIds.includes(currentClusterId);
     if (!visible) return;
     const inList = items.some((it) => it.cid === currentClusterId);
-    if (!inList) {
-      setMode("todos");
-      setQuery("");
-    }
+    if (!inList) setQuery("");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentClusterId]);
 
@@ -105,14 +98,73 @@ export function ClusterRail({
     return `Geração ${gen} · recuperado do ruído`;
   };
 
+  // a lista de cima é SÓ o que falta fazer (por geração); os concluídos vivem na
+  // gaveta fixa do fundo
+  const pending = items.filter((it) => !it.done);
+  const doneItems = items.filter((it) => it.done);
+
+  // chegar a um grupo já concluído (chip "vizinho", J/K, histograma) abre a gaveta
+  useEffect(() => {
+    if (currentClusterId == null) return;
+    if (doneItems.some((it) => it.cid === currentClusterId)) setDoneOpen(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentClusterId, items]);
+
   let lastGen: number | null = null;
+
+  const renderItem = (it: (typeof items)[number], divider: boolean) => {
+    const pct = it.total ? (it.annotated / it.total) * 100 : 0;
+    const isNoise = it.cid === -1;
+    return (
+      <div key={it.cid}>
+        {divider && (
+          <div className="gen-divider">
+            <span className="gd-text">{genLabel(it.gen)}</span>
+            <span className="gd-line" />
+          </div>
+        )}
+        <div
+          ref={it.cid === currentClusterId ? activeRef : undefined}
+          className={`clu ${isNoise ? "noise" : ""} ${it.cid === currentClusterId ? "active" : ""} ${it.done ? "done" : ""}`}
+          onClick={() => onSelect(it.cid)}
+        >
+          {isNoise ? (
+            <div className="clu-thumb">✦</div>
+          ) : (
+            <RailThumb file={config.reps.get(it.cid) ?? it.files[0]} />
+          )}
+          <div className="clu-body">
+            <div className="clu-line1">
+              <span className="clu-name">{isNoise ? "ruído" : `c${it.cid}`}</span>
+              {!isNoise && it.gen > 0 && <GenBadge gen={it.gen} />}
+              {it.done && <span className="clu-check">✓</span>}
+              <span className="clu-count">
+                {it.annotated}/{it.total}
+              </span>
+            </div>
+            <div className="clu-bar">
+              {/* cor acompanha o progresso: branco a 0% -> verde a 100% */}
+              <div
+                style={{
+                  width: `${pct}%`,
+                  background: `color-mix(in srgb, var(--leaf) ${Math.round(pct)}%, #fff)`,
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <aside className="rail">
       <div className="rail-head">
         <div className="rh-title">
           <h2>Grupos</h2>
-          <span className="rh-n mono">{items.length}</span>
+          {/* a contagem do topo é o que FALTA — os concluídos têm a sua própria */}
+          <span className="rh-n mono">{pending.length}</span>
+          <span className="rh-sub">por fazer</span>
         </div>
         <div className="search">
           <IconSearch />
@@ -123,64 +175,40 @@ export function ClusterRail({
             spellCheck={false}
           />
         </div>
-        <div className="filter-seg">
-          {(["todos", "fazer", "feitos"] as Mode[]).map((m) => (
-            <button key={m} className={mode === m ? "on" : ""} onClick={() => setMode(m)}>
-              {m === "todos" ? "Todos" : m === "fazer" ? "Por fazer" : "Concluídos"}
-            </button>
-          ))}
-        </div>
       </div>
 
       <div className="rail-list">
         {items.length === 0 && <div className="rail-empty">Nenhum grupo corresponde.</div>}
-        {items.map((it) => {
-          const pct = it.total ? (it.annotated / it.total) * 100 : 0;
-          const isNoise = it.cid === -1;
-          const showDivider = it.gen !== lastGen;
+        {pending.map((it) => {
+          const divider = it.gen !== lastGen;
           lastGen = it.gen;
-          return (
-            <div key={it.cid}>
-              {showDivider && (
-                <div className="gen-divider">
-                  <span className="gd-text">{genLabel(it.gen)}</span>
-                  <span className="gd-line" />
-                </div>
-              )}
-              <div
-                ref={it.cid === currentClusterId ? activeRef : undefined}
-                className={`clu ${isNoise ? "noise" : ""} ${it.cid === currentClusterId ? "active" : ""} ${it.done ? "done" : ""}`}
-                onClick={() => onSelect(it.cid)}
-              >
-                {isNoise ? (
-                  <div className="clu-thumb">✦</div>
-                ) : (
-                  <RailThumb file={config.reps.get(it.cid) ?? it.files[0]} />
-                )}
-                <div className="clu-body">
-                  <div className="clu-line1">
-                    <span className="clu-name">{isNoise ? "ruído" : `c${it.cid}`}</span>
-                    {!isNoise && it.gen > 0 && <GenBadge gen={it.gen} />}
-                    {it.done && <span className="clu-check">✓</span>}
-                    <span className="clu-count">
-                      {it.annotated}/{it.total}
-                    </span>
-                  </div>
-                  <div className="clu-bar">
-                    {/* cor acompanha o progresso: branco a 0% -> verde a 100% */}
-                    <div
-                      style={{
-                        width: `${pct}%`,
-                        background: `color-mix(in srgb, var(--leaf) ${Math.round(pct)}%, #fff)`,
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
+          return renderItem(it, divider);
         })}
+        {pending.length === 0 && doneItems.length > 0 && (
+          <div className="rail-allgone">
+            <span className="ra-mark">✓</span>
+            Não há grupos por fazer nesta configuração.
+          </div>
+        )}
       </div>
+
+      {/* concluídos — gaveta FIXA no fundo do rail: está sempre à mão, sem ser
+          preciso descer a lista toda. Fechada por omissão; abre para cima. */}
+      {doneItems.length > 0 && (
+        <div className={`done-drawer ${doneOpen ? "open" : ""}`}>
+          {doneOpen && (
+            <div className="done-list">
+              {doneItems.map((it) => renderItem(it, false))}
+            </div>
+          )}
+          <button className="done-head" onClick={() => setDoneOpen((v) => !v)}>
+            <span className="dh-fold" aria-hidden>{doneOpen ? "▾" : "▴"}</span>
+            <span className="dh-check">✓</span>
+            <span className="dh-title">Concluídos</span>
+            <span className="dh-n mono">{doneItems.length}</span>
+          </button>
+        </div>
+      )}
     </aside>
   );
 }

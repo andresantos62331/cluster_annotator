@@ -55,7 +55,8 @@ export function Workspace({
   eppoOf: (l: string) => string;
   onSetActive: (l: string) => void;
   onToggleSelect: (f: string) => void;
-  onOpenLightbox: (f: string) => void;
+  // segundo argumento = secção de onde se abriu; define a ordem do ←/→ no viewport
+  onOpenLightbox: (f: string, scope: string[]) => void;
   onAssign: () => void;
   onSelectPage: () => void;
   onToggleMany: (files: string[]) => void;
@@ -218,7 +219,11 @@ export function Workspace({
           {ddOpen && (
             <div className="sp-dropdown">
               {labels.length === 0 && <div className="dd-empty">Cria espécies no painel da direita.</div>}
-              {labels.map((l, i) => (
+              {/* ordem ALFABÉTICA — procura-se pelo nome. SEM as teclas 1-9: aqui a
+                  ordem já não é a delas (essa é a do painel direito, onde ficam). */}
+              {[...labels]
+                .sort((a, b) => a.localeCompare(b, "pt"))
+                .map((l) => (
                 <button
                   key={l}
                   onClick={() => {
@@ -226,8 +231,6 @@ export function Workspace({
                     setDdOpen(false);
                   }}
                 >
-                  {/* tecla à esquerda, estilo kbd como no painel direito */}
-                  <span className="sp-key">{i < 9 ? i + 1 : "·"}</span>
                   <SpeciesThumb file={thumbOf(l)} size={22} />
                   <span className="dd-name">{l}</span>
                   {eppoOf(l) && <span className="eppo-chip has mono">{eppoOf(l)}</span>}
@@ -242,7 +245,6 @@ export function Workspace({
                   setDdOpen(false);
                 }}
               >
-                <span className="sp-key">0</span>
                 <span className="sp-lixo-icon" style={{ color: "var(--danger)", display: "grid", placeItems: "center" }}>
                   <IconTrash size={15} />
                 </span>
@@ -318,7 +320,8 @@ export function Workspace({
                 selected={selection.has(f)}
                 hidden={flying.has(f)}
                 onToggle={() => onToggleSelect(f)}
-                onOpen={() => onOpenLightbox(f)}
+                // ←/→ percorre TODAS as por classificar (atravessa páginas), não o cluster inteiro
+                onOpen={() => onOpenLightbox(f, unannotated)}
               />
             ))}
           </div>
@@ -395,7 +398,7 @@ export function Workspace({
                     label={sp}
                     color={col}
                     onToggle={() => onToggleSelect(f)}
-                    onOpen={() => onOpenLightbox(f)}
+                    onOpen={() => onOpenLightbox(f, files)}
                   />
                 ))}
               </div>
@@ -431,7 +434,7 @@ export function Workspace({
                 index={i}
                 selected={selection.has(f)}
                 onToggle={() => onToggleSelect(f)}
-                onOpen={() => onOpenLightbox(f)}
+                onOpen={() => onOpenLightbox(f, lixoFiles)}
               />
             ))}
           </div>

@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { EppoEntry } from "../eppo";
 import { LIXO } from "../colors";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
-import { AddSpecies, EppoChip } from "./EppoInput";
-import { IconPencil, IconTrash } from "./icons";
+import { AddSpecies, EppoChip, TaxonEditor } from "./EppoInput";
+import { IconTrash } from "./icons";
 
 export function SpeciesPanel({
   labels,
@@ -16,10 +16,9 @@ export function SpeciesPanel({
   familyOf,
   onGoToSpecies,
   onAdd,
-  onRename,
+  onEditSpecies,
   onReorder,
   onSetColor,
-  onSetTaxon,
 }: {
   labels: string[];
   colorOf: (l: string) => string;
@@ -30,17 +29,51 @@ export function SpeciesPanel({
   familyOf: (l: string) => string;
   onGoToSpecies: (l: string) => void;
   onAdd: (name: string, code?: string, family?: string) => void;
-  onRename: (l: string) => void;
+  onEditSpecies: (oldName: string, name: string, code: string, family: string) => void;
   onReorder: (label: string, target: string) => void;
   onSetColor: (l: string, hex: string) => void;
-  onSetTaxon: (l: string, code: string, family: string) => void;
 }) {
   // arrastar-e-largar para reordenar (a ordem reflete-se nos atalhos 1-9 e na auditoria)
   const [dragging, setDragging] = useState<string | null>(null);
   const [dragOver, setDragOver] = useState<string | null>(null);
 
+  // painel minimizado por omissão: expande ao passar o rato, volta a minimizar
+  // quando o rato sai. NÃO minimiza enquanto houver um popover aberto (editor
+  // EPPO, seletor de cor — vivem fora do painel) nem com o formulário de
+  // "adicionar espécie" aberto, senão fechava-se debaixo dos dedos.
+  const [expanded, setExpanded] = useState(false);
+  const panelRef = useRef<HTMLElement>(null);
+  const guard = useRef<number | undefined>(undefined);
+
+  const busy = () =>
+    !!document.querySelector(".eppo-pop, .cpick-pop") ||
+    !!panelRef.current?.querySelector(".add-species");
+
+  const cancelCollapse = () => {
+    window.clearInterval(guard.current);
+    guard.current = undefined;
+  };
+  const onEnter = () => {
+    cancelCollapse();
+    setExpanded(true);
+  };
+  const onLeave = () => {
+    cancelCollapse();
+    guard.current = window.setInterval(() => {
+      if (busy()) return;
+      cancelCollapse();
+      setExpanded(false);
+    }, 240);
+  };
+  useEffect(() => cancelCollapse, []);
+
   return (
-    <aside className="species-panel">
+    <aside
+      ref={panelRef}
+      className={`species-panel ${expanded ? "" : "collapsed"}`}
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
+    >
       <div className="sp-head">
         <div className="sp-h-title">
           <h2>Espécies</h2>
@@ -87,32 +120,32 @@ export function SpeciesPanel({
                 setDragOver(null);
               }}
               onClick={() => onGoToSpecies(lbl)}
-              title="Ver e auditar esta espécie · arrastar reordena"
+              title={expanded ? "Ver e auditar esta espécie · arrastar reordena" : lbl}
             >
               <span className="sp-key">{i < 9 ? i + 1 : "·"}</span>
-              <SpeciesThumb file={thumbOf(lbl)} size={30} />
-              {/* nome completo numa linha; código EPPO por baixo, mais pequeno */}
-              <div className="sp-id">
-                <span className="sp-name">{lbl}</span>
-                <EppoChip
-                  code={eppoOf(lbl)}
-                  family={familyOf(lbl)}
-                  vocab={eppoVocab}
-                  onSet={(code, family) => onSetTaxon(lbl, code, family)}
-                />
-              </div>
-              <button
-                className="sp-edit"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onRename(lbl);
-                }}
-                title="Renomear espécie"
-              >
-                <IconPencil size={13} />
-              </button>
-              {/* cor à direita (swatch alinhado na margem) */}
-              <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
+              {/* minimizado: só a tecla e o código EPPO (nome só no tooltip) */}
+              {!expanded ? (
+                <span className={`sp-mini-code ${eppoOf(lbl) ? "" : "none"}`}>{eppoOf(lbl) || "—"}</span>
+              ) : (
+                <>
+                  <SpeciesThumb file={thumbOf(lbl)} size={30} />
+                  {/* nome completo numa linha; código EPPO por baixo, mais pequeno */}
+                  <div className="sp-id">
+                    <span className="sp-name">{lbl}</span>
+                    <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
+                  </div>
+                  {/* lápis = editor ÚNICO: nome + código + família */}
+                  <TaxonEditor
+                    label={lbl}
+                    code={eppoOf(lbl)}
+                    family={familyOf(lbl)}
+                    vocab={eppoVocab}
+                    onSave={(name, code, family) => onEditSpecies(lbl, name, code, family)}
+                  />
+                  {/* cor à direita (swatch alinhado na margem) */}
+                  <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
+                </>
+              )}
             </div>
           );
         })}
@@ -129,7 +162,7 @@ export function SpeciesPanel({
         <span className="sp-lixo-icon" style={{ color: "var(--danger)" }}>
           <IconTrash size={15} />
         </span>
-        <span className="sp-name" style={{ color: "var(--danger)" }}>{LIXO}</span>
+        {expanded && <span className="sp-name" style={{ color: "var(--danger)" }}>{LIXO}</span>}
       </div>
 
     </aside>

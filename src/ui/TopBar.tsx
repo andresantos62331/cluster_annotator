@@ -170,8 +170,9 @@ export function TopBar({
               </button>
               <div className="mc-sep" />
               <div className="mc-note">
-                Tudo fica em <b>localStorage</b> ao instante. "Guardar na cloud" envia
-                uma cópia para o repositório; exportar guarda no disco.
+                O trabalho fica guardado <b>neste browser</b> à medida que anotas.
+                «Guardar na cloud» envia uma cópia para o repositório; exportar grava
+                um ficheiro no computador.
               </div>
             </div>
           )}
