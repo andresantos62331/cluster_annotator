@@ -433,7 +433,7 @@ filename,label,eppo_code
 20220417_155035_planta_0.jpg,,
 20220417_155035_planta_1.jpg,,
 20220417_155052_planta_0.jpg,,
-20220417_155052_planta_1.jpg,,
+20220417_155052_planta_1.jpg,Lixo,
 20220417_155052_planta_2.jpg,,
 20220417_155052_planta_3.jpg,,
 20220417_155059_planta_1.jpg,,
@@ -1520,13 +1520,13 @@ filename,label,eppo_code
 20251110_151450_planta_0.jpg,,
 20251110_151502_planta_0.jpg,,
 20251110_151502_planta_1.jpg,Diplotaxis catholica,DIPCA
-20251110_151502_planta_2.jpg,,
+20251110_151502_planta_2.jpg,Lixo,
 20251110_151509_planta_0.jpg,,
 20251110_151509_planta_1.jpg,,
 20251110_151514_planta_0.jpg,,
 20251110_151514_planta_1.jpg,,
 20251110_151514_planta_3.jpg,Diplotaxis catholica,DIPCA
-20251110_151514_planta_4.jpg,,
+20251110_151514_planta_4.jpg,Lixo,
 20251110_151519_planta_0.jpg,Urtica urens,URTUR
 20251110_151519_planta_1.jpg,,
 20251110_151519_planta_3.jpg,Urtica urens,URTUR
@@ -1557,7 +1557,7 @@ filename,label,eppo_code
 20251110_151544_planta_5.jpg,,
 20251110_151544_planta_6.jpg,Lixo,
 20251110_151546_planta_0.jpg,,
-20251110_151549_planta_0.jpg,,
+20251110_151549_planta_0.jpg,Lixo,
 20251110_151552_planta_0.jpg,,
 20251110_151554_planta_0.jpg,Lixo,
 20251110_151554_planta_1.jpg,,
@@ -1747,7 +1747,7 @@ filename,label,eppo_code
 20251110_151746_planta_9.jpg,Urtica urens,URTUR
 20251110_151749_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_151749_planta_1.jpg,,
-20251110_151749_planta_10.jpg,,
+20251110_151749_planta_10.jpg,Lixo,
 20251110_151749_planta_11.jpg,,
 20251110_151749_planta_12.jpg,,
 20251110_151749_planta_2.jpg,,
@@ -2685,12 +2685,12 @@ filename,label,eppo_code
 20251110_153457_planta_2.jpg,,
 20251110_153457_planta_3.jpg,,
 20251110_153457_planta_4.jpg,,
-20251110_153457_planta_5.jpg,,
+20251110_153457_planta_5.jpg,Lixo,
 20251110_153457_planta_6.jpg,,
 20251110_153457_planta_7.jpg,,
 20251110_153457_planta_8.jpg,,
 20251110_153457_planta_9.jpg,Lixo,
-20251110_153503_planta_0.jpg,,
+20251110_153503_planta_0.jpg,Lixo,
 20251110_153503_planta_1.jpg,,
 20251110_153503_planta_2.jpg,,
 20251110_153503_planta_3.jpg,,
