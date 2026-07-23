@@ -1777,7 +1777,7 @@ filename,label,eppo_code
 20251110_151815_planta_3.jpg,Urtica urens,URTUR
 20251110_151815_planta_4.jpg,Lixo,
 20251110_151815_planta_5.jpg,Urtica urens,URTUR
-20251110_151826_planta_0.jpg,,
+20251110_151826_planta_0.jpg,Portulaca oleracea,POROL
 20251110_151826_planta_1.jpg,,
 20251110_151826_planta_2.jpg,,
 20251110_151826_planta_3.jpg,,
@@ -2107,7 +2107,7 @@ filename,label,eppo_code
 20251110_152518_planta_0.jpg,,
 20251110_152518_planta_2.jpg,,
 20251110_152535_planta_0.jpg,Lixo,
-20251110_152553_planta_0.jpg,,
+20251110_152553_planta_0.jpg,Portulaca oleracea,POROL
 20251110_152553_planta_2.jpg,,
 20251110_152559_planta_0.jpg,,
 20251110_152559_planta_1.jpg,,
@@ -2172,7 +2172,7 @@ filename,label,eppo_code
 20251110_152757_planta_6.jpg,Portulaca oleracea,POROL
 20251110_152802_planta_0.jpg,Malva sylvestris,MALSI
 20251110_152807_planta_0.jpg,Portulaca oleracea,POROL
-20251110_152807_planta_1.jpg,,
+20251110_152807_planta_1.jpg,Portulaca oleracea,POROL
 20251110_152817_planta_0.jpg,,
 20251110_152817_planta_3.jpg,,
 20251110_152821_planta_0.jpg,,
@@ -2197,7 +2197,7 @@ filename,label,eppo_code
 20251110_152834_planta_7.jpg,,
 20251110_152834_planta_8.jpg,,
 20251110_152836_planta_0.jpg,,
-20251110_152836_planta_1.jpg,,
+20251110_152836_planta_1.jpg,Portulaca oleracea,POROL
 20251110_152836_planta_2.jpg,,
 20251110_152836_planta_3.jpg,Lixo,
 20251110_152850_planta_0.jpg,Erodium moschatum,EROMO
@@ -2300,7 +2300,7 @@ filename,label,eppo_code
 20251110_153033_planta_2.jpg,,
 20251110_153041_planta_1.jpg,Portulaca oleracea,POROL
 20251110_153041_planta_2.jpg,,
-20251110_153041_planta_3.jpg,,
+20251110_153041_planta_3.jpg,Portulaca oleracea,POROL
 20251110_153054_planta_1.jpg,,
 20251110_153054_planta_3.jpg,,
 20251110_153054_planta_4.jpg,,
@@ -2338,9 +2338,9 @@ filename,label,eppo_code
 20251110_153126_planta_2.jpg,,
 20251110_153129_planta_1.jpg,,
 20251110_153132_planta_0.jpg,,
-20251110_153132_planta_1.jpg,,
+20251110_153132_planta_1.jpg,Portulaca oleracea,POROL
 20251110_153132_planta_2.jpg,Portulaca oleracea,POROL
-20251110_153132_planta_3.jpg,,
+20251110_153132_planta_3.jpg,Portulaca oleracea,POROL
 20251110_153136_planta_0.jpg,,
 20251110_153136_planta_1.jpg,Erodium moschatum,EROMO
 20251110_153146_planta_0.jpg,Portulaca oleracea,POROL
@@ -2825,13 +2825,13 @@ IMG_20220501_161327_planta_1.jpg,Urtica urens,URTUR
 IMG_20220501_161327_planta_2.jpg,,
 IMG_20220501_161327_planta_3.jpg,Urtica urens,URTUR
 IMG_20220501_161329_planta_0.jpg,Urtica urens,URTUR
-IMG_20220501_161728_planta_0.jpg,,
-IMG_20220501_161732_planta_0.jpg,,
-IMG_20220501_161737_planta_0.jpg,,
-IMG_20220501_161742_planta_0.jpg,,
-IMG_20220501_161750_planta_0.jpg,,
+IMG_20220501_161728_planta_0.jpg,Urtica urens,URTUR
+IMG_20220501_161732_planta_0.jpg,Urtica urens,URTUR
+IMG_20220501_161737_planta_0.jpg,Urtica urens,URTUR
+IMG_20220501_161742_planta_0.jpg,Urtica urens,URTUR
+IMG_20220501_161750_planta_0.jpg,Urtica urens,URTUR
 IMG_20220501_161808_planta_0.jpg,,
-IMG_20220501_161813_planta_0.jpg,,
+IMG_20220501_161813_planta_0.jpg,Urtica urens,URTUR
 IMG_20220501_162207_planta_0.jpg,,
 IMG_20220501_162207_planta_1.jpg,Lixo,
 IMG_20220501_162207_planta_2.jpg,,
@@ -3192,7 +3192,7 @@ PHOTO-2026-05-20-09-48-42 (1)_planta_5.jpg,,
 PHOTO-2026-05-20-09-48-42 (1)_planta_6.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (1)_planta_8.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (1)_planta_9.jpg,Urtica urens,URTUR
-PHOTO-2026-05-20-09-48-42 (10)_planta_0.jpg,,
+PHOTO-2026-05-20-09-48-42 (10)_planta_0.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (10)_planta_10.jpg,,
 PHOTO-2026-05-20-09-48-42 (10)_planta_11.jpg,,
 PHOTO-2026-05-20-09-48-42 (10)_planta_12.jpg,,
@@ -3225,7 +3225,7 @@ PHOTO-2026-05-20-09-48-42 (3)_planta_2.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (3)_planta_3.jpg,,
 PHOTO-2026-05-20-09-48-42 (3)_planta_4.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (3)_planta_6.jpg,Urtica urens,URTUR
-PHOTO-2026-05-20-09-48-42 (3)_planta_7.jpg,,
+PHOTO-2026-05-20-09-48-42 (3)_planta_7.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (3)_planta_8.jpg,Portulaca oleracea,POROL
 PHOTO-2026-05-20-09-48-42 (4)_planta_0.jpg,,
 PHOTO-2026-05-20-09-48-42 (4)_planta_1.jpg,Lixo,
@@ -3253,14 +3253,14 @@ PHOTO-2026-05-20-09-48-42 (4)_planta_31.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (4)_planta_32.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (4)_planta_5.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (4)_planta_6.jpg,Urtica urens,URTUR
-PHOTO-2026-05-20-09-48-42 (4)_planta_8.jpg,,
+PHOTO-2026-05-20-09-48-42 (4)_planta_8.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (4)_planta_9.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_1.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_10.jpg,Datura stramonium,DATST
 PHOTO-2026-05-20-09-48-42 (6)_planta_11.jpg,Datura stramonium,DATST
 PHOTO-2026-05-20-09-48-42 (6)_planta_12.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_13.jpg,Lixo,
-PHOTO-2026-05-20-09-48-42 (6)_planta_14.jpg,,
+PHOTO-2026-05-20-09-48-42 (6)_planta_14.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (6)_planta_16.jpg,Portulaca oleracea,POROL
 PHOTO-2026-05-20-09-48-42 (6)_planta_17.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (6)_planta_18.jpg,Urtica urens,URTUR
