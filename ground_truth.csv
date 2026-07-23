@@ -578,7 +578,7 @@ filename,label,eppo_code
 20220417_160113_planta_0.jpg,,
 20220417_160118_planta_0.jpg,,
 20220417_160118_planta_1.jpg,Conyza bonariensis,ERIBO
-20220417_160118_planta_2.jpg,,
+20220417_160118_planta_2.jpg,Conyza bonariensis,ERIBO
 20220417_160122_planta_0.jpg,,
 20220417_160134_planta_0.jpg,,
 20220417_160144_planta_0.jpg,,
@@ -713,7 +713,7 @@ filename,label,eppo_code
 20220417_161054_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_161101_planta_0.jpg,,
 20220417_161105_planta_0.jpg,,
-20220417_161115_planta_0.jpg,,
+20220417_161115_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_161115_planta_1.jpg,Urtica urens,URTUR
 20220417_161125_planta_0.jpg,Stellaria media,STEME
 20220417_161125_planta_1.jpg,Conyza bonariensis,ERIBO
@@ -754,7 +754,7 @@ filename,label,eppo_code
 20220417_162044_planta_0.jpg,Solanum nigrum,SOLNI
 20220417_162044_planta_1.jpg,,
 20220417_162044_planta_10.jpg,Lixo,
-20220417_162044_planta_3.jpg,,
+20220417_162044_planta_3.jpg,Ranunculus arvensis,RANAR
 20220417_162044_planta_4.jpg,,
 20220417_162044_planta_5.jpg,,
 20220417_162044_planta_6.jpg,Lixo,
@@ -771,21 +771,21 @@ filename,label,eppo_code
 20220417_162047_planta_9.jpg,,
 20220417_162050_planta_0.jpg,Solanum nigrum,SOLNI
 20220417_162050_planta_1.jpg,Lixo,
-20220417_162050_planta_3.jpg,,
+20220417_162050_planta_3.jpg,Ranunculus arvensis,RANAR
 20220417_162050_planta_4.jpg,,
 20220417_162050_planta_5.jpg,Ranunculus arvensis,RANAR
-20220417_162050_planta_6.jpg,,
+20220417_162050_planta_6.jpg,Ranunculus arvensis,RANAR
 20220417_162050_planta_7.jpg,Lixo,
 20220417_162050_planta_8.jpg,Polygonum aviculare,POLAV
 20220417_162050_planta_9.jpg,,
 20220417_162106_planta_0.jpg,,
 20220417_162106_planta_1.jpg,,
-20220417_162106_planta_10.jpg,,
+20220417_162106_planta_10.jpg,Ranunculus arvensis,RANAR
 20220417_162106_planta_11.jpg,Chenopodium album,CHEAL
 20220417_162106_planta_12.jpg,Lixo,
 20220417_162106_planta_13.jpg,,
 20220417_162106_planta_2.jpg,Lixo,
-20220417_162106_planta_3.jpg,,
+20220417_162106_planta_3.jpg,Ranunculus arvensis,RANAR
 20220417_162106_planta_4.jpg,,
 20220417_162106_planta_5.jpg,Ranunculus arvensis,RANAR
 20220417_162106_planta_6.jpg,Urtica urens,URTUR
@@ -822,7 +822,7 @@ filename,label,eppo_code
 20220417_162220_planta_2.jpg,,
 20220417_162220_planta_3.jpg,Solanum nigrum,SOLNI
 20220417_162220_planta_4.jpg,Solanum nigrum,SOLNI
-20220417_162220_planta_6.jpg,,
+20220417_162220_planta_6.jpg,Ranunculus arvensis,RANAR
 20220417_162220_planta_7.jpg,,
 20220417_162223_planta_2.jpg,,
 20220417_162223_planta_3.jpg,,
@@ -840,7 +840,7 @@ filename,label,eppo_code
 20220417_162305_planta_2.jpg,Lixo,
 20220417_162305_planta_4.jpg,,
 20220417_162305_planta_5.jpg,Polygonum aviculare,POLAV
-20220417_162310_planta_1.jpg,,
+20220417_162310_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_162347_planta_0.jpg,Lixo,
 20220417_162347_planta_3.jpg,,
 20220417_162347_planta_4.jpg,Urtica urens,URTUR
