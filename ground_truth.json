@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-23T20:24:44.427Z",
+  "exported_at": "2026-07-23T20:25:48.385Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -28,7 +28,8 @@
     "Lamium purpureum",
     "Veronica arvensis",
     "Picris echioides",
-    "Convolvulus aravensis"
+    "Convolvulus aravensis",
+    "Conyza bonariensis"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -61,7 +62,8 @@
     "Lamium purpureum": "LAMPU",
     "Veronica arvensis": "VERAR",
     "Picris echioides": "PICEC",
-    "Convolvulus aravensis": "CONAR"
+    "Convolvulus aravensis": "CONAR",
+    "Conyza bonariensis": "ERIBO"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -76,7 +78,8 @@
     "Echinochloa crus-galli": "Poaceae",
     "Lamium purpureum": "Lamiaceae",
     "Veronica arvensis": "Plantaginaceae",
-    "Convolvulus aravensis": "Convolvulaceae"
+    "Convolvulus aravensis": "Convolvulaceae",
+    "Conyza bonariensis": "Asteraceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1117,6 +1120,10 @@
     "20220417_160807_planta_0.jpg": "Lixo",
     "20220417_160057_planta_0.jpg": "Lixo",
     "20220417_155943_planta_1.jpg": "Lixo",
-    "20220417_163400_planta_4.jpg": "Lixo"
+    "20220417_163400_planta_4.jpg": "Lixo",
+    "20220417_154934_planta_0.jpg": "Conyza bonariensis",
+    "20220417_154940_planta_1.jpg": "Conyza bonariensis",
+    "20220417_160251_planta_3.jpg": "Conyza bonariensis",
+    "20220417_160257_planta_3.jpg": "Conyza bonariensis"
   }
 }
