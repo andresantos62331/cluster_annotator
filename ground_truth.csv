@@ -896,7 +896,7 @@ filename,label,eppo_code
 20220417_162807_planta_1.jpg,,
 20220417_162807_planta_3.jpg,Datura stramonium,DATST
 20220417_162826_planta_1.jpg,,
-20220417_162826_planta_2.jpg,,
+20220417_162826_planta_2.jpg,Lixo,
 20220417_162826_planta_3.jpg,,
 20220417_162826_planta_5.jpg,,
 20220417_162826_planta_6.jpg,,
@@ -910,7 +910,7 @@ filename,label,eppo_code
 20220417_162902_planta_0.jpg,,
 20220417_162902_planta_2.jpg,,
 20220417_162902_planta_3.jpg,,
-20220417_162902_planta_5.jpg,,
+20220417_162902_planta_5.jpg,Lixo,
 20220417_162902_planta_6.jpg,,
 20220417_162904_planta_2.jpg,,
 20220417_162904_planta_3.jpg,,
@@ -967,7 +967,7 @@ filename,label,eppo_code
 20220417_163323_planta_3.jpg,,
 20220417_163323_planta_5.jpg,,
 20220417_163350_planta_0.jpg,,
-20220417_163400_planta_0.jpg,,
+20220417_163400_planta_0.jpg,Lixo,
 20220417_163400_planta_3.jpg,,
 20220417_163400_planta_4.jpg,,
 20220417_163400_planta_5.jpg,,
@@ -1401,7 +1401,7 @@ filename,label,eppo_code
 20251109_162246_planta_15.jpg,,
 20251109_162246_planta_16.jpg,,
 20251109_162246_planta_17.jpg,,
-20251109_162246_planta_18.jpg,,
+20251109_162246_planta_18.jpg,Lixo,
 20251109_162246_planta_19.jpg,,
 20251109_162246_planta_2.jpg,,
 20251109_162246_planta_3.jpg,,
@@ -1409,7 +1409,7 @@ filename,label,eppo_code
 20251109_162246_planta_5.jpg,,
 20251109_162246_planta_7.jpg,,
 20251109_162246_planta_8.jpg,Lixo,
-20251109_162246_planta_9.jpg,,
+20251109_162246_planta_9.jpg,Lixo,
 20251109_162248_planta_0.jpg,,
 20251109_162302_planta_0.jpg,Lixo,
 20251109_162302_planta_1.jpg,Lixo,
@@ -1418,7 +1418,7 @@ filename,label,eppo_code
 20251109_162304_planta_1.jpg,,
 20251109_162304_planta_3.jpg,,
 20251109_162304_planta_4.jpg,,
-20251109_162306_planta_0.jpg,,
+20251109_162306_planta_0.jpg,Lixo,
 20251109_162306_planta_1.jpg,,
 20251109_162306_planta_2.jpg,,
 20251109_162306_planta_3.jpg,,
@@ -1795,7 +1795,7 @@ filename,label,eppo_code
 20251110_151845_planta_0.jpg,Urtica urens,URTUR
 20251110_151845_planta_1.jpg,,
 20251110_151858_planta_0.jpg,,
-20251110_151858_planta_1.jpg,,
+20251110_151858_planta_1.jpg,Lixo,
 20251110_151858_planta_2.jpg,Malva sylvestris,MALSI
 20251110_151858_planta_4.jpg,Malva sylvestris,MALSI
 20251110_151900_planta_0.jpg,,
@@ -1963,13 +1963,13 @@ filename,label,eppo_code
 20251110_152247_planta_2.jpg,,
 20251110_152247_planta_3.jpg,,
 20251110_152247_planta_4.jpg,,
-20251110_152247_planta_5.jpg,,
+20251110_152247_planta_5.jpg,Lixo,
 20251110_152247_planta_6.jpg,,
 20251110_152247_planta_7.jpg,,
 20251110_152247_planta_8.jpg,Lixo,
 20251110_152247_planta_9.jpg,,
 20251110_152254_planta_0.jpg,,
-20251110_152254_planta_1.jpg,,
+20251110_152254_planta_1.jpg,Lixo,
 20251110_152254_planta_2.jpg,,
 20251110_152254_planta_3.jpg,Lixo,
 20251110_152254_planta_4.jpg,,
@@ -1982,7 +1982,7 @@ filename,label,eppo_code
 20251110_152304_planta_3.jpg,Erodium moschatum,EROMO
 20251110_152304_planta_4.jpg,Erodium moschatum,EROMO
 20251110_152309_planta_0.jpg,,
-20251110_152312_planta_1.jpg,,
+20251110_152312_planta_1.jpg,Lixo,
 20251110_152312_planta_2.jpg,Urtica urens,URTUR
 20251110_152316_planta_0.jpg,,
 20251110_152316_planta_10.jpg,,
@@ -1993,7 +1993,7 @@ filename,label,eppo_code
 20251110_152316_planta_8.jpg,,
 20251110_152316_planta_9.jpg,,
 20251110_152318_planta_0.jpg,Erodium moschatum,EROMO
-20251110_152318_planta_2.jpg,,
+20251110_152318_planta_2.jpg,Lixo,
 20251110_152318_planta_4.jpg,,
 20251110_152318_planta_5.jpg,Portulaca oleracea,POROL
 20251110_152318_planta_6.jpg,Erodium moschatum,EROMO
@@ -2012,7 +2012,7 @@ filename,label,eppo_code
 20251110_152330_planta_9.jpg,,
 20251110_152334_planta_1.jpg,,
 20251110_152334_planta_2.jpg,Erodium moschatum,EROMO
-20251110_152334_planta_3.jpg,,
+20251110_152334_planta_3.jpg,Lixo,
 20251110_152334_planta_4.jpg,,
 20251110_152338_planta_1.jpg,,
 20251110_152338_planta_2.jpg,,
