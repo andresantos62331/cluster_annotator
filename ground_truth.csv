@@ -240,7 +240,7 @@ filename,label,eppo_code
 20220417_153105_planta_1.jpg,,
 20220417_153105_planta_5.jpg,,
 20220417_153105_planta_6.jpg,,
-20220417_153123_planta_0.jpg,,
+20220417_153123_planta_0.jpg,Chamaemelum mixtum,ANTMI
 20220417_153137_planta_0.jpg,Urtica urens,URTUR
 20220417_153142_planta_0.jpg,,
 20220417_153151_planta_0.jpg,,
@@ -280,18 +280,18 @@ filename,label,eppo_code
 20220417_153825_planta_1.jpg,,
 20220417_153851_planta_2.jpg,Chenopodium album,CHEAL
 20220417_153851_planta_4.jpg,,
-20220417_153851_planta_5.jpg,,
+20220417_153851_planta_5.jpg,Chamaemelum mixtum,ANTMI
 20220417_153853_planta_0.jpg,,
 20220417_153853_planta_3.jpg,,
-20220417_153853_planta_4.jpg,,
-20220417_153853_planta_5.jpg,,
+20220417_153853_planta_4.jpg,Chamaemelum mixtum,ANTMI
+20220417_153853_planta_5.jpg,Chamaemelum mixtum,ANTMI
 20220417_153944_planta_0.jpg,,
 20220417_153944_planta_1.jpg,,
 20220417_154002_planta_0.jpg,,
 20220417_154018_planta_0.jpg,,
 20220417_154018_planta_1.jpg,,
 20220417_154018_planta_2.jpg,,
-20220417_154018_planta_4.jpg,,
+20220417_154018_planta_4.jpg,Chamaemelum mixtum,ANTMI
 20220417_154018_planta_5.jpg,,
 20220417_154415_planta_0.jpg,Urtica urens,URTUR
 20220417_154415_planta_1.jpg,,
@@ -367,7 +367,7 @@ filename,label,eppo_code
 20220417_154649_planta_1.jpg,,
 20220417_154649_planta_3.jpg,,
 20220417_154656_planta_0.jpg,Polygonum aviculare,POLAV
-20220417_154656_planta_1.jpg,,
+20220417_154656_planta_1.jpg,Lixo,
 20220417_154706_planta_0.jpg,,
 20220417_154706_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154706_planta_2.jpg,,
@@ -862,7 +862,7 @@ filename,label,eppo_code
 20220417_162549_planta_0.jpg,,
 20220417_162549_planta_1.jpg,,
 20220417_162551_planta_0.jpg,,
-20220417_162557_planta_1.jpg,,
+20220417_162557_planta_1.jpg,Chamaemelum mixtum,ANTMI
 20220417_162557_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_162559_planta_1.jpg,Urtica urens,URTUR
 20220417_162559_planta_3.jpg,Urtica urens,URTUR
@@ -887,10 +887,10 @@ filename,label,eppo_code
 20220417_162746_planta_2.jpg,,
 20220417_162746_planta_3.jpg,Veronica arvensis,VERAR
 20220417_162753_planta_0.jpg,Lixo,
-20220417_162753_planta_3.jpg,,
+20220417_162753_planta_3.jpg,Chamaemelum mixtum,ANTMI
 20220417_162753_planta_4.jpg,,
 20220417_162753_planta_5.jpg,Datura stramonium,DATST
-20220417_162755_planta_2.jpg,,
+20220417_162755_planta_2.jpg,Chamaemelum mixtum,ANTMI
 20220417_162755_planta_3.jpg,Datura stramonium,DATST
 20220417_162807_planta_0.jpg,,
 20220417_162807_planta_1.jpg,,
@@ -904,7 +904,7 @@ filename,label,eppo_code
 20220417_162833_planta_5.jpg,Datura stramonium,DATST
 20220417_162833_planta_6.jpg,,
 20220417_162853_planta_0.jpg,,
-20220417_162853_planta_1.jpg,,
+20220417_162853_planta_1.jpg,Chamaemelum mixtum,ANTMI
 20220417_162853_planta_2.jpg,Datura stramonium,DATST
 20220417_162853_planta_3.jpg,,
 20220417_162902_planta_0.jpg,,
