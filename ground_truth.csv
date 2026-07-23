@@ -159,15 +159,15 @@ filename,label,eppo_code
 20220417_152744_planta_13.jpg,,
 20220417_152744_planta_3.jpg,Lixo,
 20220417_152744_planta_5.jpg,Lixo,
-20220417_152744_planta_6.jpg,,
-20220417_152744_planta_7.jpg,,
+20220417_152744_planta_6.jpg,Chenopodium album,CHEAL
+20220417_152744_planta_7.jpg,Chenopodium album,CHEAL
 20220417_152744_planta_8.jpg,,
 20220417_152744_planta_9.jpg,,
 20220417_152752_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152752_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152752_planta_4.jpg,,
 20220417_152752_planta_5.jpg,Lixo,
-20220417_152752_planta_7.jpg,,
+20220417_152752_planta_7.jpg,Chenopodium album,CHEAL
 20220417_152807_planta_0.jpg,,
 20220417_152807_planta_1.jpg,,
 20220417_152807_planta_11.jpg,,
@@ -175,7 +175,7 @@ filename,label,eppo_code
 20220417_152807_planta_15.jpg,,
 20220417_152807_planta_3.jpg,Chenopodium album,CHEAL
 20220417_152807_planta_4.jpg,Chenopodium album,CHEAL
-20220417_152807_planta_5.jpg,,
+20220417_152807_planta_5.jpg,Chenopodium album,CHEAL
 20220417_152807_planta_8.jpg,,
 20220417_152823_planta_0.jpg,,
 20220417_152823_planta_10.jpg,,
@@ -364,7 +364,7 @@ filename,label,eppo_code
 20220417_154633_planta_1.jpg,,
 20220417_154644_planta_1.jpg,,
 20220417_154644_planta_2.jpg,,
-20220417_154649_planta_1.jpg,,
+20220417_154649_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_154649_planta_3.jpg,,
 20220417_154656_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154656_planta_1.jpg,Lixo,
@@ -422,7 +422,7 @@ filename,label,eppo_code
 20220417_154949_planta_3.jpg,,
 20220417_154949_planta_4.jpg,Lamium purpureum,LAMPU
 20220417_154957_planta_0.jpg,Polygonum aviculare,POLAV
-20220417_154957_planta_1.jpg,,
+20220417_154957_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_155015_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_155015_planta_1.jpg,,
 20220417_155015_planta_2.jpg,,
@@ -453,7 +453,7 @@ filename,label,eppo_code
 20220417_155200_planta_0.jpg,,
 20220417_155200_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_155200_planta_3.jpg,,
-20220417_155200_planta_4.jpg,,
+20220417_155200_planta_4.jpg,Conyza bonariensis,ERIBO
 20220417_155209_planta_0.jpg,Lixo,
 20220417_155213_planta_0.jpg,,
 20220417_155216_planta_0.jpg,Lixo,
@@ -511,7 +511,7 @@ filename,label,eppo_code
 20220417_155637_planta_2.jpg,,
 20220417_155637_planta_3.jpg,Polygonum aviculare,POLAV
 20220417_155652_planta_1.jpg,,
-20220417_155657_planta_1.jpg,,
+20220417_155657_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_155659_planta_0.jpg,,
 20220417_155659_planta_1.jpg,Lixo,
 20220417_155706_planta_0.jpg,Lixo,
@@ -626,7 +626,7 @@ filename,label,eppo_code
 20220417_160406_planta_0.jpg,,
 20220417_160410_planta_0.jpg,,
 20220417_160410_planta_1.jpg,,
-20220417_160414_planta_0.jpg,,
+20220417_160414_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_160414_planta_1.jpg,,
 20220417_160420_planta_0.jpg,,
 20220417_160420_planta_1.jpg,,
@@ -3082,7 +3082,7 @@ JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_7.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_8.jpg,,
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_9.jpg,,
 JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_1.jpg,,
-JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_3.jpg,,
+JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_3.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_6.jpg,,
 JPEG_V2_E2_2022-04-17_15_10_516634138168975204289_planta_1.jpg,Chenopodium album,CHEAL
@@ -3222,7 +3222,7 @@ PHOTO-2026-05-20-09-48-42 (2)_planta_9.jpg,,
 PHOTO-2026-05-20-09-48-42 (3)_planta_0.jpg,Lamium purpureum,LAMPU
 PHOTO-2026-05-20-09-48-42 (3)_planta_1.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (3)_planta_2.jpg,Lixo,
-PHOTO-2026-05-20-09-48-42 (3)_planta_3.jpg,,
+PHOTO-2026-05-20-09-48-42 (3)_planta_3.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-42 (3)_planta_4.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (3)_planta_6.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (3)_planta_7.jpg,Digitaria sanguinalis,DIGSA
@@ -3288,7 +3288,7 @@ PHOTO-2026-05-20-09-48-42 (7)_planta_17.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (7)_planta_18.jpg,,
 PHOTO-2026-05-20-09-48-42 (7)_planta_2.jpg,,
 PHOTO-2026-05-20-09-48-42 (7)_planta_3.jpg,,
-PHOTO-2026-05-20-09-48-42 (7)_planta_4.jpg,,
+PHOTO-2026-05-20-09-48-42 (7)_planta_4.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-42 (7)_planta_6.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (7)_planta_8.jpg,,
 PHOTO-2026-05-20-09-48-42 (8)_planta_1.jpg,Urtica urens,URTUR
@@ -3296,7 +3296,7 @@ PHOTO-2026-05-20-09-48-42 (8)_planta_10.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (8)_planta_11.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (8)_planta_13.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (8)_planta_14.jpg,Urtica urens,URTUR
-PHOTO-2026-05-20-09-48-42 (8)_planta_16.jpg,,
+PHOTO-2026-05-20-09-48-42 (8)_planta_16.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-42 (8)_planta_17.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (8)_planta_18.jpg,,
 PHOTO-2026-05-20-09-48-42 (8)_planta_19.jpg,Lixo,
@@ -3367,7 +3367,7 @@ PHOTO-2026-05-20-09-48-43 (11)_planta_7.jpg,,
 PHOTO-2026-05-20-09-48-43 (11)_planta_9.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (12)_planta_0.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_1.jpg,,
-PHOTO-2026-05-20-09-48-43 (12)_planta_10.jpg,,
+PHOTO-2026-05-20-09-48-43 (12)_planta_10.jpg,Echinochloa crus-galli,ECHCG
 PHOTO-2026-05-20-09-48-43 (12)_planta_11.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_12.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_13.jpg,Urtica urens,URTUR
@@ -3454,7 +3454,7 @@ PHOTO-2026-05-20-09-48-43 (7)_planta_24.jpg,,
 PHOTO-2026-05-20-09-48-43 (7)_planta_25.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-43 (7)_planta_26.jpg,,
 PHOTO-2026-05-20-09-48-43 (7)_planta_3.jpg,Galinsoga parviflora,GASPA
-PHOTO-2026-05-20-09-48-43 (7)_planta_4.jpg,,
+PHOTO-2026-05-20-09-48-43 (7)_planta_4.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-43 (7)_planta_5.jpg,,
 PHOTO-2026-05-20-09-48-43 (7)_planta_6.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (7)_planta_7.jpg,,
@@ -3466,7 +3466,7 @@ PHOTO-2026-05-20-09-48-43 (8)_planta_2.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-43 (9)_planta_0.jpg,,
 PHOTO-2026-05-20-09-48-43 (9)_planta_1.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (9)_planta_10.jpg,Digitaria sanguinalis,DIGSA
-PHOTO-2026-05-20-09-48-43 (9)_planta_2.jpg,,
+PHOTO-2026-05-20-09-48-43 (9)_planta_2.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-43 (9)_planta_3.jpg,,
 PHOTO-2026-05-20-09-48-43 (9)_planta_4.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (9)_planta_5.jpg,Urtica urens,URTUR
@@ -3486,7 +3486,7 @@ PHOTO-2026-05-20-09-48-43_planta_5.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43_planta_6.jpg,,
 PHOTO-2026-05-20-09-48-43_planta_7.jpg,,
 PHOTO-2026-05-20-09-48-43_planta_8.jpg,Galinsoga parviflora,GASPA
-PHOTO-2026-05-20-09-48-43_planta_9.jpg,,
+PHOTO-2026-05-20-09-48-43_planta_9.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-44 (1)_planta_0.jpg,,
 PHOTO-2026-05-20-09-48-44 (4)_planta_1.jpg,Chenopodium opulifolium,CHEOP
 PHOTO-2026-05-20-09-48-44 (4)_planta_2.jpg,,
