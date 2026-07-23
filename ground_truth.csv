@@ -390,7 +390,7 @@ filename,label,eppo_code
 20220417_154808_planta_0.jpg,,
 20220417_154820_planta_0.jpg,Urtica urens,URTUR
 20220417_154820_planta_1.jpg,,
-20220417_154841_planta_0.jpg,,
+20220417_154841_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_154841_planta_1.jpg,,
 20220417_154843_planta_0.jpg,,
 20220417_154843_planta_1.jpg,,
@@ -450,7 +450,7 @@ filename,label,eppo_code
 20220417_155147_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_155152_planta_0.jpg,,
 20220417_155157_planta_0.jpg,,
-20220417_155200_planta_0.jpg,,
+20220417_155200_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_155200_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_155200_planta_3.jpg,,
 20220417_155200_planta_4.jpg,Conyza bonariensis,ERIBO
@@ -458,9 +458,9 @@ filename,label,eppo_code
 20220417_155213_planta_0.jpg,,
 20220417_155216_planta_0.jpg,Lixo,
 20220417_155223_planta_0.jpg,,
-20220417_155228_planta_0.jpg,,
+20220417_155228_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_155228_planta_1.jpg,,
-20220417_155228_planta_3.jpg,,
+20220417_155228_planta_3.jpg,Conyza bonariensis,ERIBO
 20220417_155228_planta_4.jpg,,
 20220417_155228_planta_5.jpg,,
 20220417_155541_planta_1.jpg,,
@@ -491,7 +491,7 @@ filename,label,eppo_code
 20220417_155604_planta_0.jpg,,
 20220417_155604_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_155604_planta_3.jpg,Lamium purpureum,LAMPU
-20220417_155606_planta_0.jpg,,
+20220417_155606_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_155618_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_155618_planta_2.jpg,Chenopodium album,CHEAL
 20220417_155618_planta_3.jpg,,
@@ -616,14 +616,14 @@ filename,label,eppo_code
 20220417_160343_planta_1.jpg,,
 20220417_160348_planta_2.jpg,,
 20220417_160348_planta_4.jpg,,
-20220417_160348_planta_6.jpg,,
+20220417_160348_planta_6.jpg,Conyza bonariensis,ERIBO
 20220417_160348_planta_7.jpg,,
 20220417_160351_planta_0.jpg,,
 20220417_160359_planta_0.jpg,,
 20220417_160359_planta_1.jpg,,
 20220417_160401_planta_1.jpg,,
-20220417_160403_planta_0.jpg,,
-20220417_160406_planta_0.jpg,,
+20220417_160403_planta_0.jpg,Conyza bonariensis,ERIBO
+20220417_160406_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_160410_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_160410_planta_1.jpg,,
 20220417_160414_planta_0.jpg,Conyza bonariensis,ERIBO
@@ -662,7 +662,7 @@ filename,label,eppo_code
 20220417_160704_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_160708_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_160713_planta_0.jpg,,
-20220417_160716_planta_0.jpg,,
+20220417_160716_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_160716_planta_1.jpg,,
 20220417_160716_planta_2.jpg,,
 20220417_160726_planta_0.jpg,,
@@ -671,7 +671,7 @@ filename,label,eppo_code
 20220417_160738_planta_1.jpg,,
 20220417_160738_planta_2.jpg,Convolvulus aravensis,CONAR
 20220417_160738_planta_3.jpg,Stellaria media,STEME
-20220417_160744_planta_0.jpg,,
+20220417_160744_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_160746_planta_0.jpg,Stellaria media,STEME
 20220417_160749_planta_0.jpg,,
 20220417_160757_planta_0.jpg,,
