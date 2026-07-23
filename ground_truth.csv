@@ -1522,7 +1522,7 @@ filename,label,eppo_code
 20251110_151502_planta_1.jpg,Diplotaxis catholica,DIPCA
 20251110_151502_planta_2.jpg,Lixo,
 20251110_151509_planta_0.jpg,,
-20251110_151509_planta_1.jpg,,
+20251110_151509_planta_1.jpg,Erodium moschatum,EROMO
 20251110_151514_planta_0.jpg,,
 20251110_151514_planta_1.jpg,,
 20251110_151514_planta_3.jpg,Diplotaxis catholica,DIPCA
@@ -1573,7 +1573,7 @@ filename,label,eppo_code
 20251110_151614_planta_4.jpg,,
 20251110_151617_planta_0.jpg,,
 20251110_151617_planta_1.jpg,,
-20251110_151617_planta_2.jpg,,
+20251110_151617_planta_2.jpg,Erodium moschatum,EROMO
 20251110_151617_planta_3.jpg,,
 20251110_151617_planta_4.jpg,,
 20251110_151617_planta_5.jpg,,
@@ -1629,7 +1629,7 @@ filename,label,eppo_code
 20251110_151648_planta_3.jpg,,
 20251110_151648_planta_4.jpg,Lixo,
 20251110_151648_planta_5.jpg,Lixo,
-20251110_151648_planta_6.jpg,,
+20251110_151648_planta_6.jpg,Urtica urens,URTUR
 20251110_151648_planta_7.jpg,,
 20251110_151652_planta_0.jpg,Erodium moschatum,EROMO
 20251110_151652_planta_1.jpg,,
@@ -1675,7 +1675,7 @@ filename,label,eppo_code
 20251110_151706_planta_3.jpg,Erodium moschatum,EROMO
 20251110_151706_planta_4.jpg,,
 20251110_151706_planta_5.jpg,,
-20251110_151706_planta_6.jpg,,
+20251110_151706_planta_6.jpg,Urtica urens,URTUR
 20251110_151706_planta_7.jpg,Urtica urens,URTUR
 20251110_151706_planta_8.jpg,Convolvulus aravensis,CONAR
 20251110_151706_planta_9.jpg,,
@@ -1693,9 +1693,9 @@ filename,label,eppo_code
 20251110_151709_planta_8.jpg,,
 20251110_151709_planta_9.jpg,Erodium moschatum,EROMO
 20251110_151714_planta_0.jpg,Lixo,
-20251110_151714_planta_2.jpg,,
+20251110_151714_planta_2.jpg,Erodium moschatum,EROMO
 20251110_151718_planta_0.jpg,,
-20251110_151718_planta_1.jpg,,
+20251110_151718_planta_1.jpg,Urtica urens,URTUR
 20251110_151718_planta_2.jpg,,
 20251110_151718_planta_3.jpg,Lixo,
 20251110_151718_planta_4.jpg,,
@@ -1762,7 +1762,7 @@ filename,label,eppo_code
 20251110_151802_planta_0.jpg,Urtica urens,URTUR
 20251110_151802_planta_1.jpg,Urtica urens,URTUR
 20251110_151802_planta_2.jpg,,
-20251110_151806_planta_0.jpg,,
+20251110_151806_planta_0.jpg,Urtica urens,URTUR
 20251110_151806_planta_1.jpg,,
 20251110_151806_planta_2.jpg,,
 20251110_151809_planta_1.jpg,,
@@ -1780,7 +1780,7 @@ filename,label,eppo_code
 20251110_151826_planta_0.jpg,Portulaca oleracea,POROL
 20251110_151826_planta_1.jpg,,
 20251110_151826_planta_2.jpg,,
-20251110_151826_planta_3.jpg,,
+20251110_151826_planta_3.jpg,Urtica urens,URTUR
 20251110_151832_planta_0.jpg,,
 20251110_151832_planta_1.jpg,,
 20251110_151832_planta_2.jpg,,
@@ -2129,7 +2129,7 @@ filename,label,eppo_code
 20251110_152620_planta_8.jpg,Convolvulus aravensis,CONAR
 20251110_152628_planta_0.jpg,,
 20251110_152628_planta_1.jpg,,
-20251110_152628_planta_2.jpg,,
+20251110_152628_planta_2.jpg,Erodium moschatum,EROMO
 20251110_152628_planta_3.jpg,Lixo,
 20251110_152645_planta_0.jpg,Erodium moschatum,EROMO
 20251110_152645_planta_1.jpg,,
@@ -2691,7 +2691,7 @@ filename,label,eppo_code
 20251110_153457_planta_8.jpg,,
 20251110_153457_planta_9.jpg,Lixo,
 20251110_153503_planta_0.jpg,Lixo,
-20251110_153503_planta_1.jpg,,
+20251110_153503_planta_1.jpg,Erodium moschatum,EROMO
 20251110_153503_planta_2.jpg,Erodium moschatum,EROMO
 20251110_153503_planta_3.jpg,,
 20251110_153503_planta_4.jpg,,
