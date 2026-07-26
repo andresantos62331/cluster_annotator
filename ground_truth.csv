@@ -275,7 +275,7 @@ filename,label,eppo_code
 20220417_153805_planta_6.jpg,Cynodon dactylon,CYNDA
 20220417_153805_planta_7.jpg,,
 20220417_153805_planta_8.jpg,,
-20220417_153805_planta_9.jpg,,
+20220417_153805_planta_9.jpg,Portulaca oleracea,POROL
 20220417_153825_planta_0.jpg,,
 20220417_153825_planta_1.jpg,,
 20220417_153851_planta_2.jpg,Chenopodium album,CHEAL
@@ -1154,7 +1154,7 @@ filename,label,eppo_code
 20220425_161220_planta_0.jpg,Veronica arvensis,VERAR
 20220425_161250_planta_0.jpg,,
 20220425_161321_planta_0.jpg,Chenopodium album,CHEAL
-20220425_161339_planta_1.jpg,,
+20220425_161339_planta_1.jpg,Portulaca oleracea,POROL
 20220425_161430_planta_0.jpg,,
 20220425_161505_planta_1.jpg,Veronica arvensis,VERAR
 20220425_161505_planta_2.jpg,Lamium purpureum,LAMPU
@@ -1162,19 +1162,19 @@ filename,label,eppo_code
 20220425_161541_planta_0.jpg,Veronica arvensis,VERAR
 20220425_161541_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_161606_planta_0.jpg,Veronica arvensis,VERAR
-20220425_161636_planta_0.jpg,,
+20220425_161636_planta_0.jpg,Portulaca oleracea,POROL
 20220425_161636_planta_1.jpg,,
 20220425_161700_planta_0.jpg,,
 20220425_161719_planta_0.jpg,Chenopodium album,CHEAL
-20220425_161719_planta_1.jpg,,
-20220425_161723_planta_0.jpg,,
-20220425_161737_planta_0.jpg,,
+20220425_161719_planta_1.jpg,Portulaca oleracea,POROL
+20220425_161723_planta_0.jpg,Portulaca oleracea,POROL
+20220425_161737_planta_0.jpg,Portulaca oleracea,POROL
 20220425_161746_planta_0.jpg,Urtica urens,URTUR
 20220425_161805_planta_0.jpg,Portulaca oleracea,POROL
-20220425_161823_planta_1.jpg,,
-20220425_161823_planta_2.jpg,,
+20220425_161823_planta_1.jpg,Portulaca oleracea,POROL
+20220425_161823_planta_2.jpg,Portulaca oleracea,POROL
 20220425_161823_planta_3.jpg,,
-20220425_161823_planta_4.jpg,,
+20220425_161823_planta_4.jpg,Portulaca oleracea,POROL
 20220425_161908_planta_0.jpg,,
 20220425_161917_planta_1.jpg,Sonchus asper,SONAS
 20220425_161956_planta_0.jpg,Urtica membranacea,URTDU
@@ -3031,7 +3031,7 @@ JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_1.jpg,Portulaca olerace
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_2.jpg,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_3.jpg,,
 JPEG_V2_E2_2022-04-17_15_01_153151686551423867765_planta_0.jpg,,
-JPEG_V2_E2_2022-04-17_15_01_449115713110950570601_planta_0.jpg,,
+JPEG_V2_E2_2022-04-17_15_01_449115713110950570601_planta_0.jpg,Portulaca oleracea,POROL
 JPEG_V2_E2_2022-04-17_15_03_11407436386605646383_planta_0.jpg,Sonchus oleraceus,SONOL
 JPEG_V2_E2_2022-04-17_15_03_361668909907542053532_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_05_142956869952048958502_planta_0.jpg,Lamium purpureum,LAMPU
