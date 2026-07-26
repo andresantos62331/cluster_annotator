@@ -848,7 +848,7 @@ filename,label,eppo_code
 20220417_162347_planta_9.jpg,Lixo,
 20220417_162355_planta_0.jpg,Diplotaxis catholica,DIPCA
 20220417_162355_planta_1.jpg,,
-20220417_162359_planta_0.jpg,,
+20220417_162359_planta_0.jpg,Ranunculus arvensis,RANAR
 20220417_162405_planta_0.jpg,Chamaemelum mixtum,ANTMI
 20220417_162412_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_162412_planta_2.jpg,,
@@ -2315,7 +2315,7 @@ filename,label,eppo_code
 20251110_153117_planta_1.jpg,,
 20251110_153117_planta_2.jpg,,
 20251110_153117_planta_3.jpg,,
-20251110_153117_planta_4.jpg,,
+20251110_153117_planta_4.jpg,Veronica arvensis,VERAR
 20251110_153117_planta_5.jpg,,
 20251110_153117_planta_6.jpg,,
 20251110_153117_planta_7.jpg,,
@@ -2471,7 +2471,7 @@ filename,label,eppo_code
 20251110_153311_planta_7.jpg,,
 20251110_153311_planta_8.jpg,,
 20251110_153311_planta_9.jpg,,
-20251110_153313_planta_0.jpg,,
+20251110_153313_planta_0.jpg,Veronica arvensis,VERAR
 20251110_153313_planta_1.jpg,,
 20251110_153313_planta_2.jpg,Veronica arvensis,VERAR
 20251110_153313_planta_3.jpg,,
@@ -2531,11 +2531,11 @@ filename,label,eppo_code
 20251110_153323_planta_19.jpg,,
 20251110_153323_planta_2.jpg,,
 20251110_153323_planta_20.jpg,Lamium purpureum,LAMPU
-20251110_153323_planta_21.jpg,,
+20251110_153323_planta_21.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_22.jpg,,
 20251110_153323_planta_23.jpg,,
 20251110_153323_planta_24.jpg,,
-20251110_153323_planta_25.jpg,,
+20251110_153323_planta_25.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_26.jpg,,
 20251110_153323_planta_27.jpg,,
 20251110_153323_planta_28.jpg,,
@@ -2543,7 +2543,7 @@ filename,label,eppo_code
 20251110_153323_planta_3.jpg,,
 20251110_153323_planta_30.jpg,,
 20251110_153323_planta_31.jpg,,
-20251110_153323_planta_32.jpg,,
+20251110_153323_planta_32.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_33.jpg,Lixo,
 20251110_153323_planta_34.jpg,Lixo,
 20251110_153323_planta_35.jpg,,
@@ -2989,13 +2989,13 @@ IMG_20220501_172202_planta_1.jpg,Papaver rhoeas,PAPRH
 IMG_20220501_172205_planta_0.jpg,Papaver rhoeas,PAPRH
 IMG_20220501_172211_planta_0.jpg,Papaver rhoeas,PAPRH
 IMG_20220501_172229_planta_1.jpg,Digitaria sanguinalis,DIGSA
-IMG_20220501_172229_planta_2.jpg,,
+IMG_20220501_172229_planta_2.jpg,Ranunculus arvensis,RANAR
 IMG_20220501_172229_planta_3.jpg,,
-IMG_20220501_172235_planta_0.jpg,,
-IMG_20220501_172318_planta_1.jpg,,
-IMG_20220501_172321_planta_0.jpg,,
-IMG_20220501_172333_planta_0.jpg,,
-IMG_20220501_172335_planta_0.jpg,,
+IMG_20220501_172235_planta_0.jpg,Ranunculus arvensis,RANAR
+IMG_20220501_172318_planta_1.jpg,Ranunculus arvensis,RANAR
+IMG_20220501_172321_planta_0.jpg,Ranunculus arvensis,RANAR
+IMG_20220501_172333_planta_0.jpg,Ranunculus arvensis,RANAR
+IMG_20220501_172335_planta_0.jpg,Ranunculus arvensis,RANAR
 IMG_20220501_172403_planta_0.jpg,Papaver rhoeas,PAPRH
 IMG_20220501_172413_planta_0.jpg,Papaver rhoeas,PAPRH
 IMG_20220501_172416_planta_0.jpg,Papaver rhoeas,PAPRH
