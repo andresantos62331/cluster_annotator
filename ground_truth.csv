@@ -1533,7 +1533,7 @@ filename,label,eppo_code
 20251110_151519_planta_4.jpg,,
 20251110_151528_planta_0.jpg,,
 20251110_151528_planta_1.jpg,Solanum nigrum,SOLNI
-20251110_151528_planta_2.jpg,,
+20251110_151528_planta_2.jpg,Lixo,
 20251110_151528_planta_3.jpg,,
 20251110_151528_planta_4.jpg,Urtica urens,URTUR
 20251110_151532_planta_0.jpg,Portulaca oleracea,POROL
@@ -1624,7 +1624,7 @@ filename,label,eppo_code
 20251110_151645_planta_7.jpg,,
 20251110_151645_planta_8.jpg,Lixo,
 20251110_151645_planta_9.jpg,,
-20251110_151648_planta_0.jpg,,
+20251110_151648_planta_0.jpg,Lamium purpureum,LAMPU
 20251110_151648_planta_2.jpg,,
 20251110_151648_planta_3.jpg,Veronica arvensis,VERAR
 20251110_151648_planta_4.jpg,Lixo,
@@ -1729,7 +1729,7 @@ filename,label,eppo_code
 20251110_151746_planta_0.jpg,,
 20251110_151746_planta_1.jpg,Urtica urens,URTUR
 20251110_151746_planta_10.jpg,,
-20251110_151746_planta_11.jpg,,
+20251110_151746_planta_11.jpg,Lamium purpureum,LAMPU
 20251110_151746_planta_12.jpg,Erodium moschatum,EROMO
 20251110_151746_planta_13.jpg,Erodium moschatum,EROMO
 20251110_151746_planta_14.jpg,,
@@ -1833,7 +1833,7 @@ filename,label,eppo_code
 20251110_152002_planta_0.jpg,Urtica urens,URTUR
 20251110_152002_planta_1.jpg,,
 20251110_152002_planta_2.jpg,Urtica urens,URTUR
-20251110_152004_planta_0.jpg,,
+20251110_152004_planta_0.jpg,Lamium purpureum,LAMPU
 20251110_152004_planta_1.jpg,Urtica urens,URTUR
 20251110_152004_planta_2.jpg,,
 20251110_152009_planta_0.jpg,,
@@ -2448,7 +2448,7 @@ filename,label,eppo_code
 20251110_153305_planta_18.jpg,,
 20251110_153305_planta_19.jpg,,
 20251110_153305_planta_2.jpg,Veronica arvensis,VERAR
-20251110_153305_planta_21.jpg,,
+20251110_153305_planta_21.jpg,Lamium purpureum,LAMPU
 20251110_153305_planta_22.jpg,Veronica arvensis,VERAR
 20251110_153305_planta_23.jpg,,
 20251110_153305_planta_24.jpg,Lixo,
@@ -2467,7 +2467,7 @@ filename,label,eppo_code
 20251110_153311_planta_3.jpg,,
 20251110_153311_planta_4.jpg,Veronica arvensis,VERAR
 20251110_153311_planta_5.jpg,,
-20251110_153311_planta_6.jpg,,
+20251110_153311_planta_6.jpg,Lamium purpureum,LAMPU
 20251110_153311_planta_7.jpg,,
 20251110_153311_planta_8.jpg,,
 20251110_153311_planta_9.jpg,,
