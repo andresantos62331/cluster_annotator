@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-26T10:33:00.172Z",
+  "exported_at": "2026-07-26T10:35:25.574Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -35,7 +35,8 @@
     "Raphanus raphanistrum",
     "Cynodon dactylon",
     "Stellaria media",
-    "Capsella rubella"
+    "Capsella rubella",
+    "Xanthium strumarium"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -75,7 +76,8 @@
     "Euphorbia helioscopia": "STEME",
     "Cynodon dactylon": "CYNDA",
     "Stellaria media": "STEME",
-    "Capsella rubella": "CAPRU"
+    "Capsella rubella": "CAPRU",
+    "Xanthium strumarium": "XANST"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -96,7 +98,8 @@
     "Euphorbia helioscopia": "Caryophyllaceae",
     "Cynodon dactylon": "Poaceae",
     "Stellaria media": "Caryophyllaceae",
-    "Capsella rubella": "Brassicaceae"
+    "Capsella rubella": "Brassicaceae",
+    "Xanthium strumarium": "Asteraceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1978,6 +1981,9 @@
     "20220417_155157_planta_0.jpg": "Capsella rubella",
     "20220417_155228_planta_4.jpg": "Capsella rubella",
     "20220417_155548_planta_8.jpg": "Capsella rubella",
-    "20220417_162347_planta_6.jpg": "Capsella rubella"
+    "20220417_162347_planta_6.jpg": "Capsella rubella",
+    "20220417_162628_planta_3.jpg": "Xanthium strumarium",
+    "20220417_162902_planta_2.jpg": "Xanthium strumarium",
+    "20220417_162904_planta_4.jpg": "Xanthium strumarium"
   }
 }
