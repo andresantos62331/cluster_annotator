@@ -859,7 +859,7 @@ filename,label,eppo_code
 20220417_162517_planta_0.jpg,,
 20220417_162526_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220417_162531_planta_0.jpg,,
-20220417_162549_planta_0.jpg,,
+20220417_162549_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220417_162549_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_162551_planta_0.jpg,Solanum nigrum,SOLNI
 20220417_162557_planta_1.jpg,Chamaemelum mixtum,ANTMI
@@ -880,7 +880,7 @@ filename,label,eppo_code
 20220417_162643_planta_4.jpg,,
 20220417_162713_planta_2.jpg,,
 20220417_162719_planta_1.jpg,Cynodon dactylon,CYNDA
-20220417_162719_planta_5.jpg,,
+20220417_162719_planta_5.jpg,Amaranthus retroflexus,AMARE
 20220417_162730_planta_0.jpg,,
 20220417_162730_planta_1.jpg,Urtica urens,URTUR
 20220417_162744_planta_1.jpg,Veronica arvensis,VERAR
@@ -948,20 +948,20 @@ filename,label,eppo_code
 20220417_163121_planta_1.jpg,,
 20220417_163121_planta_5.jpg,Urtica urens,URTUR
 20220417_163121_planta_6.jpg,,
-20220417_163218_planta_1.jpg,,
+20220417_163218_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220417_163218_planta_5.jpg,Solanum nigrum,SOLNI
 20220417_163218_planta_6.jpg,,
 20220417_163218_planta_7.jpg,Digitaria sanguinalis,DIGSA
 20220417_163223_planta_0.jpg,,
 20220417_163223_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_163223_planta_2.jpg,,
-20220417_163243_planta_4.jpg,,
+20220417_163243_planta_4.jpg,Amaranthus retroflexus,AMARE
 20220417_163243_planta_5.jpg,Amaranthus retroflexus,AMARE
 20220417_163303_planta_6.jpg,Solanum nigrum,SOLNI
 20220417_163308_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220417_163308_planta_1.jpg,,
 20220417_163312_planta_3.jpg,Echinochloa crus-galli,ECHCG
-20220417_163323_planta_0.jpg,,
+20220417_163323_planta_0.jpg,Lixo,
 20220417_163323_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_163323_planta_2.jpg,,
 20220417_163323_planta_3.jpg,Polygonum aviculare,POLAV
@@ -971,7 +971,7 @@ filename,label,eppo_code
 20220417_163400_planta_3.jpg,Lixo,
 20220417_163400_planta_4.jpg,Lixo,
 20220417_163400_planta_5.jpg,,
-20220417_163400_planta_6.jpg,,
+20220417_163400_planta_6.jpg,Amaranthus retroflexus,AMARE
 20220417_163414_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_153324_planta_0.jpg,Portulaca oleracea,POROL
 20220425_153324_planta_2.jpg,,
@@ -985,14 +985,14 @@ filename,label,eppo_code
 20220425_153628_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_153628_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_153705_planta_0.jpg,Amaranthus retroflexus,AMARE
-20220425_153705_planta_2.jpg,,
+20220425_153705_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_153705_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_153707_planta_0.jpg,Chenopodium album,CHEAL
 20220425_153707_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_153707_planta_3.jpg,Amaranthus retroflexus,AMARE
-20220425_153707_planta_4.jpg,,
+20220425_153707_planta_4.jpg,Amaranthus retroflexus,AMARE
 20220425_153743_planta_0.jpg,Amaranthus retroflexus,AMARE
-20220425_153831_planta_0.jpg,,
+20220425_153831_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_153831_planta_1.jpg,,
 20220425_153843_planta_0.jpg,,
 20220425_153858_planta_0.jpg,Amaranthus retroflexus,AMARE
@@ -1025,7 +1025,7 @@ filename,label,eppo_code
 20220425_154108_planta_4.jpg,,
 20220425_154108_planta_5.jpg,,
 20220425_154108_planta_6.jpg,,
-20220425_154127_planta_0.jpg,,
+20220425_154127_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_154127_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_154151_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_154151_planta_1.jpg,Portulaca oleracea,POROL
@@ -1033,7 +1033,7 @@ filename,label,eppo_code
 20220425_154200_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_154200_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_154200_planta_3.jpg,Amaranthus retroflexus,AMARE
-20220425_154200_planta_4.jpg,,
+20220425_154200_planta_4.jpg,Amaranthus retroflexus,AMARE
 20220425_154228_planta_0.jpg,,
 20220425_154249_planta_0.jpg,,
 20220425_154249_planta_1.jpg,Chenopodium album,CHEAL
@@ -1044,7 +1044,7 @@ filename,label,eppo_code
 20220425_154349_planta_5.jpg,,
 20220425_154349_planta_6.jpg,,
 20220425_154443_planta_0.jpg,,
-20220425_154443_planta_1.jpg,,
+20220425_154443_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_154443_planta_2.jpg,Portulaca oleracea,POROL
 20220425_154520_planta_0.jpg,,
 20220425_154534_planta_1.jpg,Chenopodium album,CHEAL
@@ -1075,9 +1075,9 @@ filename,label,eppo_code
 20220425_154835_planta_0.jpg,Lixo,
 20220425_154835_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_154850_planta_1.jpg,Chenopodium album,CHEAL
-20220425_154850_planta_2.jpg,,
+20220425_154850_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_154850_planta_4.jpg,,
-20220425_155014_planta_0.jpg,,
+20220425_155014_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_155027_planta_0.jpg,,
 20220425_155027_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_155027_planta_4.jpg,,
@@ -1095,17 +1095,17 @@ filename,label,eppo_code
 20220425_155116_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_155116_planta_1.jpg,,
 20220425_155116_planta_2.jpg,,
-20220425_155151_planta_0.jpg,,
+20220425_155151_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_155151_planta_1.jpg,Amaranthus retroflexus,AMARE
-20220425_155151_planta_2.jpg,,
+20220425_155151_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_0.jpg,Chenopodium album,CHEAL
 20220425_155541_planta_1.jpg,,
 20220425_155541_planta_10.jpg,,
-20220425_155541_planta_12.jpg,,
+20220425_155541_planta_12.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_14.jpg,,
 20220425_155541_planta_15.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_16.jpg,Amaranthus retroflexus,AMARE
-20220425_155541_planta_3.jpg,,
+20220425_155541_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_4.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_6.jpg,,
 20220425_155541_planta_7.jpg,Amaranthus retroflexus,AMARE
@@ -1126,7 +1126,7 @@ filename,label,eppo_code
 20220425_160121_planta_0.jpg,Lixo,
 20220425_160121_planta_1.jpg,,
 20220425_160121_planta_2.jpg,Lixo,
-20220425_160147_planta_1.jpg,,
+20220425_160147_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_160147_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_160207_planta_0.jpg,Urtica urens,URTUR
 20220425_160207_planta_1.jpg,Cynodon dactylon,CYNDA
@@ -1142,7 +1142,7 @@ filename,label,eppo_code
 20220425_160716_planta_0.jpg,Urtica urens,URTUR
 20220425_160741_planta_0.jpg,,
 20220425_160757_planta_0.jpg,,
-20220425_160812_planta_0.jpg,,
+20220425_160812_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_161041_planta_0.jpg,Cynodon dactylon,CYNDA
 20220425_161041_planta_2.jpg,Diplotaxis catholica,DIPCA
 20220425_161041_planta_4.jpg,Amaranthus retroflexus,AMARE
@@ -1179,7 +1179,7 @@ filename,label,eppo_code
 20220425_161917_planta_1.jpg,Sonchus asper,SONAS
 20220425_161956_planta_0.jpg,Urtica membranacea,URTDU
 20220425_161956_planta_1.jpg,,
-20220425_162041_planta_0.jpg,,
+20220425_162041_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_162104_planta_0.jpg,Veronica arvensis,VERAR
 20220425_162130_planta_0.jpg,Veronica arvensis,VERAR
 20220425_162130_planta_2.jpg,Cynodon dactylon,CYNDA
@@ -1200,7 +1200,7 @@ filename,label,eppo_code
 20220425_162733_planta_0.jpg,,
 20220425_162743_planta_0.jpg,,
 20220425_162830_planta_0.jpg,Lixo,
-20220425_162830_planta_1.jpg,,
+20220425_162830_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_162854_planta_0.jpg,,
 20220425_162854_planta_1.jpg,Portulaca oleracea,POROL
 20220425_162854_planta_3.jpg,Lixo,
@@ -1242,15 +1242,15 @@ filename,label,eppo_code
 20220425_163143_planta_6.jpg,,
 20220425_163253_planta_0.jpg,,
 20220425_163253_planta_2.jpg,,
-20220425_163306_planta_0.jpg,,
+20220425_163306_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_163306_planta_1.jpg,Cynodon dactylon,CYNDA
 20220425_163306_planta_2.jpg,Cynodon dactylon,CYNDA
 20220425_163306_planta_3.jpg,Cynodon dactylon,CYNDA
 20220425_163306_planta_4.jpg,Sonchus oleraceus,SONOL
 20220425_163330_planta_2.jpg,Amaranthus retroflexus,AMARE
-20220425_163330_planta_3.jpg,,
+20220425_163330_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_163338_planta_2.jpg,Amaranthus retroflexus,AMARE
-20220425_163338_planta_3.jpg,,
+20220425_163338_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220425_164218_planta_1.jpg,,
 20220425_164218_planta_3.jpg,Datura stramonium,DATST
 20220425_164218_planta_5.jpg,,
@@ -1289,11 +1289,11 @@ filename,label,eppo_code
 20220425_164314_planta_6.jpg,Chenopodium album,CHEAL
 20220425_164325_planta_0.jpg,,
 20220425_164325_planta_10.jpg,,
-20220425_164325_planta_11.jpg,,
+20220425_164325_planta_11.jpg,Amaranthus retroflexus,AMARE
 20220425_164325_planta_12.jpg,,
 20220425_164325_planta_2.jpg,,
 20220425_164325_planta_4.jpg,,
-20220425_164325_planta_5.jpg,,
+20220425_164325_planta_5.jpg,Amaranthus retroflexus,AMARE
 20220425_164325_planta_6.jpg,,
 20220425_164325_planta_7.jpg,Amaranthus retroflexus,AMARE
 20220425_164325_planta_8.jpg,,
@@ -3010,7 +3010,7 @@ JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_14_52_396757956528889991251_planta_0.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_14_53_442066300861893419035_planta_1.jpg,Lamium purpureum,LAMPU
 JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_0.jpg,Lixo,
-JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_1.jpg,,
+JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_1.jpg,Amaranthus retroflexus,AMARE
 JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_0.jpg,,
@@ -3210,7 +3210,7 @@ PHOTO-2026-05-20-09-48-42 (2)_planta_10.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-42 (2)_planta_11.jpg,,
 PHOTO-2026-05-20-09-48-42 (2)_planta_13.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (2)_planta_14.jpg,Chenopodium album,CHEAL
-PHOTO-2026-05-20-09-48-42 (2)_planta_15.jpg,,
+PHOTO-2026-05-20-09-48-42 (2)_planta_15.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (2)_planta_16.jpg,Chenopodium album,CHEAL
 PHOTO-2026-05-20-09-48-42 (2)_planta_17.jpg,,
 PHOTO-2026-05-20-09-48-42 (2)_planta_2.jpg,Lixo,
@@ -3407,7 +3407,7 @@ PHOTO-2026-05-20-09-48-43 (2)_planta_7.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (2)_planta_8.jpg,Galinsoga parviflora,GASPA
 PHOTO-2026-05-20-09-48-43 (2)_planta_9.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (5)_planta_0.jpg,Lixo,
-PHOTO-2026-05-20-09-48-43 (5)_planta_10.jpg,,
+PHOTO-2026-05-20-09-48-43 (5)_planta_10.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (5)_planta_11.jpg,,
 PHOTO-2026-05-20-09-48-43 (5)_planta_13.jpg,,
 PHOTO-2026-05-20-09-48-43 (5)_planta_14.jpg,,
