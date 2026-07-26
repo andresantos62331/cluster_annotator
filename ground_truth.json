@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-26T10:31:41.735Z",
+  "exported_at": "2026-07-26T10:33:00.172Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -34,7 +34,8 @@
     "Sonchus asper",
     "Raphanus raphanistrum",
     "Cynodon dactylon",
-    "Stellaria media"
+    "Stellaria media",
+    "Capsella rubella"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -73,7 +74,8 @@
     "Raphanus raphanistrum": "RAPRA",
     "Euphorbia helioscopia": "STEME",
     "Cynodon dactylon": "CYNDA",
-    "Stellaria media": "STEME"
+    "Stellaria media": "STEME",
+    "Capsella rubella": "CAPRU"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -93,7 +95,8 @@
     "Raphanus raphanistrum": "Brassicaceae",
     "Euphorbia helioscopia": "Caryophyllaceae",
     "Cynodon dactylon": "Poaceae",
-    "Stellaria media": "Caryophyllaceae"
+    "Stellaria media": "Caryophyllaceae",
+    "Capsella rubella": "Brassicaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1970,6 +1973,11 @@
     "20251109_162306_planta_4.jpg": "Lixo",
     "20251110_151941_planta_1.jpg": "Lixo",
     "20220417_154420_planta_16.jpg": "Lixo",
-    "20220417_155541_planta_5.jpg": "Lixo"
+    "20220417_155541_planta_5.jpg": "Lixo",
+    "20220417_154843_planta_2.jpg": "Capsella rubella",
+    "20220417_155157_planta_0.jpg": "Capsella rubella",
+    "20220417_155228_planta_4.jpg": "Capsella rubella",
+    "20220417_155548_planta_8.jpg": "Capsella rubella",
+    "20220417_162347_planta_6.jpg": "Capsella rubella"
   }
 }
