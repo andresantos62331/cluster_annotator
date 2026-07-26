@@ -2310,7 +2310,7 @@ filename,label,eppo_code
 20251110_153105_planta_2.jpg,,
 20251110_153105_planta_3.jpg,Portulaca oleracea,POROL
 20251110_153105_planta_4.jpg,Veronica arvensis,VERAR
-20251110_153108_planta_0.jpg,,
+20251110_153108_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_153117_planta_0.jpg,,
 20251110_153117_planta_1.jpg,,
 20251110_153117_planta_2.jpg,Veronica arvensis,VERAR
@@ -2376,7 +2376,7 @@ filename,label,eppo_code
 20251110_153204_planta_8.jpg,,
 20251110_153204_planta_9.jpg,,
 20251110_153208_planta_1.jpg,Malva sylvestris,MALSI
-20251110_153208_planta_2.jpg,,
+20251110_153208_planta_2.jpg,Convolvulus aravensis,CONAR
 20251110_153218_planta_0.jpg,,
 20251110_153218_planta_2.jpg,,
 20251110_153218_planta_3.jpg,Lixo,
@@ -2466,7 +2466,7 @@ filename,label,eppo_code
 20251110_153311_planta_2.jpg,Lixo,
 20251110_153311_planta_3.jpg,,
 20251110_153311_planta_4.jpg,Veronica arvensis,VERAR
-20251110_153311_planta_5.jpg,,
+20251110_153311_planta_5.jpg,Lixo,
 20251110_153311_planta_6.jpg,Lamium purpureum,LAMPU
 20251110_153311_planta_7.jpg,,
 20251110_153311_planta_8.jpg,,
@@ -2731,9 +2731,9 @@ filename,label,eppo_code
 20251110_153552_planta_0.jpg,,
 20251110_153555_planta_0.jpg,Solanum nigrum,SOLNI
 20251110_153557_planta_0.jpg,Lixo,
-20251110_153557_planta_1.jpg,,
+20251110_153557_planta_1.jpg,Convolvulus aravensis,CONAR
 20251110_153612_planta_0.jpg,Lixo,
-20251110_153612_planta_1.jpg,,
+20251110_153612_planta_1.jpg,Convolvulus aravensis,CONAR
 20251110_153636_planta_0.jpg,,
 20251110_153636_planta_1.jpg,Portulaca oleracea,POROL
 20251110_153644_planta_0.jpg,,
