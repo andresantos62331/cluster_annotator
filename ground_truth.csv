@@ -2158,7 +2158,7 @@ filename,label,eppo_code
 20251110_152751_planta_1.jpg,,
 20251110_152751_planta_2.jpg,,
 20251110_152751_planta_3.jpg,Lixo,
-20251110_152751_planta_4.jpg,,
+20251110_152751_planta_4.jpg,Veronica arvensis,VERAR
 20251110_152751_planta_5.jpg,,
 20251110_152751_planta_6.jpg,,
 20251110_152751_planta_7.jpg,Lixo,
@@ -2396,7 +2396,7 @@ filename,label,eppo_code
 20251110_153235_planta_8.jpg,Erodium moschatum,EROMO
 20251110_153242_planta_0.jpg,Erodium moschatum,EROMO
 20251110_153242_planta_1.jpg,Erodium moschatum,EROMO
-20251110_153242_planta_2.jpg,,
+20251110_153242_planta_2.jpg,Veronica arvensis,VERAR
 20251110_153242_planta_3.jpg,Erodium moschatum,EROMO
 20251110_153242_planta_4.jpg,Diplotaxis catholica,DIPCA
 20251110_153242_planta_5.jpg,Erodium moschatum,EROMO
@@ -2435,19 +2435,19 @@ filename,label,eppo_code
 20251110_153302_planta_1.jpg,,
 20251110_153302_planta_2.jpg,Lamium purpureum,LAMPU
 20251110_153302_planta_3.jpg,Lixo,
-20251110_153305_planta_0.jpg,,
+20251110_153305_planta_0.jpg,Veronica arvensis,VERAR
 20251110_153305_planta_1.jpg,,
 20251110_153305_planta_10.jpg,Veronica arvensis,VERAR
 20251110_153305_planta_11.jpg,,
-20251110_153305_planta_12.jpg,,
+20251110_153305_planta_12.jpg,Veronica arvensis,VERAR
 20251110_153305_planta_13.jpg,,
-20251110_153305_planta_14.jpg,,
+20251110_153305_planta_14.jpg,Veronica arvensis,VERAR
 20251110_153305_planta_15.jpg,Lixo,
 20251110_153305_planta_16.jpg,,
 20251110_153305_planta_17.jpg,,
 20251110_153305_planta_18.jpg,,
 20251110_153305_planta_19.jpg,,
-20251110_153305_planta_2.jpg,,
+20251110_153305_planta_2.jpg,Veronica arvensis,VERAR
 20251110_153305_planta_21.jpg,,
 20251110_153305_planta_22.jpg,Veronica arvensis,VERAR
 20251110_153305_planta_23.jpg,,
@@ -2458,7 +2458,7 @@ filename,label,eppo_code
 20251110_153305_planta_5.jpg,Veronica arvensis,VERAR
 20251110_153305_planta_6.jpg,,
 20251110_153305_planta_7.jpg,,
-20251110_153305_planta_8.jpg,,
+20251110_153305_planta_8.jpg,Lixo,
 20251110_153305_planta_9.jpg,Veronica arvensis,VERAR
 20251110_153311_planta_0.jpg,,
 20251110_153311_planta_1.jpg,Lixo,
@@ -2485,13 +2485,13 @@ filename,label,eppo_code
 20251110_153317_planta_3.jpg,,
 20251110_153317_planta_4.jpg,,
 20251110_153317_planta_5.jpg,,
-20251110_153317_planta_6.jpg,,
+20251110_153317_planta_6.jpg,Veronica arvensis,VERAR
 20251110_153317_planta_7.jpg,,
 20251110_153317_planta_8.jpg,,
-20251110_153317_planta_9.jpg,,
+20251110_153317_planta_9.jpg,Veronica arvensis,VERAR
 20251110_153322_planta_0.jpg,,
 20251110_153322_planta_1.jpg,,
-20251110_153322_planta_10.jpg,,
+20251110_153322_planta_10.jpg,Veronica arvensis,VERAR
 20251110_153322_planta_11.jpg,,
 20251110_153322_planta_12.jpg,,
 20251110_153322_planta_13.jpg,,
@@ -2521,7 +2521,7 @@ filename,label,eppo_code
 20251110_153323_planta_1.jpg,,
 20251110_153323_planta_10.jpg,,
 20251110_153323_planta_11.jpg,,
-20251110_153323_planta_12.jpg,,
+20251110_153323_planta_12.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_13.jpg,,
 20251110_153323_planta_14.jpg,,
 20251110_153323_planta_15.jpg,,
@@ -2546,7 +2546,7 @@ filename,label,eppo_code
 20251110_153323_planta_32.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_33.jpg,Lixo,
 20251110_153323_planta_34.jpg,Lixo,
-20251110_153323_planta_35.jpg,,
+20251110_153323_planta_35.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_36.jpg,,
 20251110_153323_planta_37.jpg,,
 20251110_153323_planta_38.jpg,,
@@ -2643,16 +2643,16 @@ filename,label,eppo_code
 20251110_153416_planta_9.jpg,,
 20251110_153419_planta_0.jpg,Erodium moschatum,EROMO
 20251110_153419_planta_1.jpg,,
-20251110_153419_planta_2.jpg,,
+20251110_153419_planta_2.jpg,Veronica arvensis,VERAR
 20251110_153419_planta_3.jpg,,
 20251110_153419_planta_4.jpg,,
-20251110_153419_planta_5.jpg,,
+20251110_153419_planta_5.jpg,Veronica arvensis,VERAR
 20251110_153419_planta_6.jpg,,
 20251110_153422_planta_0.jpg,,
 20251110_153422_planta_1.jpg,,
 20251110_153422_planta_2.jpg,,
 20251110_153422_planta_3.jpg,,
-20251110_153422_planta_4.jpg,,
+20251110_153422_planta_4.jpg,Veronica arvensis,VERAR
 20251110_153422_planta_5.jpg,Erodium moschatum,EROMO
 20251110_153422_planta_6.jpg,Erodium moschatum,EROMO
 20251110_153424_planta_0.jpg,Erodium moschatum,EROMO
