@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-26T09:13:59.739Z",
+  "exported_at": "2026-07-26T09:15:36.176Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -33,7 +33,8 @@
     "Chamaemelum mixtum",
     "Sonchus asper",
     "Raphanus raphanistrum",
-    "Cynodon dactylon"
+    "Cynodon dactylon",
+    "Stellaria media"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -71,7 +72,8 @@
     "Sonchus asper": "SONAS",
     "Raphanus raphanistrum": "RAPRA",
     "Euphorbia helioscopia": "STEME",
-    "Cynodon dactylon": "CYNDA"
+    "Cynodon dactylon": "CYNDA",
+    "Stellaria media": "STEME"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -90,7 +92,8 @@
     "Sonchus asper": "Asteraceae",
     "Raphanus raphanistrum": "Brassicaceae",
     "Euphorbia helioscopia": "Caryophyllaceae",
-    "Cynodon dactylon": "Poaceae"
+    "Cynodon dactylon": "Poaceae",
+    "Stellaria media": "Caryophyllaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1853,6 +1856,7 @@
     "20251110_153443_planta_0.jpg": "Malva sylvestris",
     "20251110_153547_planta_1.jpg": "Solanum nigrum",
     "20251110_153555_planta_0.jpg": "Solanum nigrum",
-    "20251110_153557_planta_0.jpg": "Lixo"
+    "20251110_153557_planta_0.jpg": "Lixo",
+    "20251109_162455_planta_17.jpg": "Stellaria media"
   }
 }
