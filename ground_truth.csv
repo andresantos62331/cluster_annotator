@@ -504,7 +504,7 @@ filename,label,eppo_code
 20220417_155631_planta_5.jpg,,
 20220417_155631_planta_6.jpg,,
 20220417_155631_planta_7.jpg,Lamium purpureum,LAMPU
-20220417_155631_planta_8.jpg,,
+20220417_155631_planta_8.jpg,Polygonum aviculare,POLAV
 20220417_155631_planta_9.jpg,Senecio vulgaris,SENVU
 20220417_155637_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_155637_planta_1.jpg,Polygonum aviculare,POLAV
@@ -545,7 +545,7 @@ filename,label,eppo_code
 20220417_155847_planta_0.jpg,,
 20220417_155901_planta_1.jpg,,
 20220417_155901_planta_2.jpg,,
-20220417_155927_planta_0.jpg,,
+20220417_155927_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_155933_planta_0.jpg,,
 20220417_155936_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_155943_planta_0.jpg,,
@@ -579,7 +579,7 @@ filename,label,eppo_code
 20220417_160118_planta_0.jpg,,
 20220417_160118_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_160118_planta_2.jpg,Conyza bonariensis,ERIBO
-20220417_160122_planta_0.jpg,,
+20220417_160122_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_160134_planta_0.jpg,,
 20220417_160144_planta_0.jpg,,
 20220417_160144_planta_1.jpg,,
@@ -628,7 +628,7 @@ filename,label,eppo_code
 20220417_160410_planta_1.jpg,,
 20220417_160414_planta_0.jpg,Conyza bonariensis,ERIBO
 20220417_160414_planta_1.jpg,,
-20220417_160420_planta_0.jpg,,
+20220417_160420_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_160420_planta_1.jpg,Portulaca oleracea,POROL
 20220417_160422_planta_0.jpg,Diplotaxis catholica,DIPCA
 20220417_160434_planta_0.jpg,Lixo,
@@ -668,7 +668,7 @@ filename,label,eppo_code
 20220417_160726_planta_0.jpg,,
 20220417_160731_planta_0.jpg,,
 20220417_160738_planta_0.jpg,,
-20220417_160738_planta_1.jpg,,
+20220417_160738_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_160738_planta_2.jpg,Convolvulus aravensis,CONAR
 20220417_160738_planta_3.jpg,Euphorbia helioscopia,STEME
 20220417_160744_planta_0.jpg,Conyza bonariensis,ERIBO
@@ -717,11 +717,11 @@ filename,label,eppo_code
 20220417_161115_planta_1.jpg,Urtica urens,URTUR
 20220417_161125_planta_0.jpg,Euphorbia helioscopia,STEME
 20220417_161125_planta_1.jpg,Conyza bonariensis,ERIBO
-20220417_161135_planta_1.jpg,,
+20220417_161135_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_161139_planta_0.jpg,Chenopodium album,CHEAL
 20220417_161149_planta_0.jpg,,
 20220417_161149_planta_1.jpg,Chenopodium album,CHEAL
-20220417_161155_planta_0.jpg,,
+20220417_161155_planta_0.jpg,Lixo,
 20220417_161155_planta_1.jpg,,
 20220417_161204_planta_0.jpg,,
 20220417_161204_planta_1.jpg,Lamium purpureum,LAMPU
@@ -746,7 +746,7 @@ filename,label,eppo_code
 20220417_162003_planta_0.jpg,,
 20220417_162010_planta_0.jpg,,
 20220417_162010_planta_1.jpg,,
-20220417_162022_planta_1.jpg,,
+20220417_162022_planta_1.jpg,Lixo,
 20220417_162022_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_162022_planta_6.jpg,Polygonum aviculare,POLAV
 20220417_162022_planta_7.jpg,Chenopodium album,CHEAL
@@ -777,7 +777,7 @@ filename,label,eppo_code
 20220417_162050_planta_6.jpg,Ranunculus arvensis,RANAR
 20220417_162050_planta_7.jpg,Lixo,
 20220417_162050_planta_8.jpg,Polygonum aviculare,POLAV
-20220417_162050_planta_9.jpg,,
+20220417_162050_planta_9.jpg,Polygonum aviculare,POLAV
 20220417_162106_planta_0.jpg,,
 20220417_162106_planta_1.jpg,,
 20220417_162106_planta_10.jpg,Ranunculus arvensis,RANAR
@@ -838,7 +838,7 @@ filename,label,eppo_code
 20220417_162256_planta_3.jpg,Urtica urens,URTUR
 20220417_162256_planta_4.jpg,Solanum nigrum,SOLNI
 20220417_162305_planta_2.jpg,Lixo,
-20220417_162305_planta_4.jpg,,
+20220417_162305_planta_4.jpg,Polygonum aviculare,POLAV
 20220417_162305_planta_5.jpg,Polygonum aviculare,POLAV
 20220417_162310_planta_1.jpg,Conyza bonariensis,ERIBO
 20220417_162347_planta_0.jpg,Lixo,
@@ -851,12 +851,12 @@ filename,label,eppo_code
 20220417_162359_planta_0.jpg,Ranunculus arvensis,RANAR
 20220417_162405_planta_0.jpg,Chamaemelum mixtum,ANTMI
 20220417_162412_planta_1.jpg,Solanum nigrum,SOLNI
-20220417_162412_planta_2.jpg,,
+20220417_162412_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_162505_planta_0.jpg,,
 20220417_162508_planta_0.jpg,,
 20220417_162508_planta_1.jpg,,
-20220417_162512_planta_0.jpg,,
-20220417_162517_planta_0.jpg,,
+20220417_162512_planta_0.jpg,Polygonum aviculare,POLAV
+20220417_162517_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_162526_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220417_162531_planta_0.jpg,,
 20220417_162549_planta_0.jpg,Amaranthus retroflexus,AMARE
