@@ -1864,7 +1864,7 @@ filename,label,eppo_code
 20251110_152102_planta_0.jpg,,
 20251110_152102_planta_1.jpg,Veronica arvensis,VERAR
 20251110_152102_planta_2.jpg,Lixo,
-20251110_152106_planta_0.jpg,,
+20251110_152106_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_152106_planta_1.jpg,Urtica urens,URTUR
 20251110_152106_planta_2.jpg,Lixo,
 20251110_152106_planta_3.jpg,Convolvulus aravensis,CONAR
@@ -1877,12 +1877,12 @@ filename,label,eppo_code
 20251110_152116_planta_2.jpg,,
 20251110_152116_planta_3.jpg,,
 20251110_152116_planta_4.jpg,Sonchus oleraceus,SONOL
-20251110_152118_planta_0.jpg,,
+20251110_152118_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_152118_planta_1.jpg,,
 20251110_152118_planta_2.jpg,Sonchus oleraceus,SONOL
 20251110_152118_planta_3.jpg,Urtica urens,URTUR
 20251110_152123_planta_0.jpg,Veronica arvensis,VERAR
-20251110_152123_planta_1.jpg,,
+20251110_152123_planta_1.jpg,Sonchus oleraceus,SONOL
 20251110_152123_planta_2.jpg,,
 20251110_152127_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_152127_planta_1.jpg,,
@@ -1913,7 +1913,7 @@ filename,label,eppo_code
 20251110_152155_planta_2.jpg,,
 20251110_152200_planta_0.jpg,,
 20251110_152200_planta_3.jpg,Convolvulus aravensis,CONAR
-20251110_152201_planta_0.jpg,,
+20251110_152201_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_152201_planta_1.jpg,Sonchus oleraceus,SONOL
 20251110_152204_planta_0.jpg,Portulaca oleracea,POROL
 20251110_152204_planta_1.jpg,,
