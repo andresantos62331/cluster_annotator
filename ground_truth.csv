@@ -1583,7 +1583,7 @@ filename,label,eppo_code
 20251110_151622_planta_4.jpg,Lixo,
 20251110_151625_planta_0.jpg,,
 20251110_151625_planta_1.jpg,Lixo,
-20251110_151625_planta_2.jpg,,
+20251110_151625_planta_2.jpg,Lamium purpureum,LAMPU
 20251110_151625_planta_3.jpg,Erodium moschatum,EROMO
 20251110_151625_planta_4.jpg,,
 20251110_151629_planta_1.jpg,Lixo,
@@ -1640,10 +1640,10 @@ filename,label,eppo_code
 20251110_151655_planta_13.jpg,,
 20251110_151655_planta_2.jpg,,
 20251110_151655_planta_3.jpg,Erodium moschatum,EROMO
-20251110_151655_planta_4.jpg,,
+20251110_151655_planta_4.jpg,Lamium purpureum,LAMPU
 20251110_151655_planta_5.jpg,,
 20251110_151655_planta_6.jpg,,
-20251110_151655_planta_7.jpg,,
+20251110_151655_planta_7.jpg,Lamium purpureum,LAMPU
 20251110_151655_planta_8.jpg,Lixo,
 20251110_151655_planta_9.jpg,Sonchus oleraceus,SONOL
 20251110_151657_planta_0.jpg,,
@@ -1711,7 +1711,7 @@ filename,label,eppo_code
 20251110_151726_planta_2.jpg,Erodium moschatum,EROMO
 20251110_151726_planta_3.jpg,Sonchus oleraceus,SONOL
 20251110_151726_planta_4.jpg,Erodium moschatum,EROMO
-20251110_151726_planta_5.jpg,,
+20251110_151726_planta_5.jpg,Lamium purpureum,LAMPU
 20251110_151726_planta_6.jpg,Erodium moschatum,EROMO
 20251110_151728_planta_0.jpg,Urtica urens,URTUR
 20251110_151728_planta_1.jpg,Sonchus oleraceus,SONOL
@@ -1763,7 +1763,7 @@ filename,label,eppo_code
 20251110_151802_planta_1.jpg,Urtica urens,URTUR
 20251110_151802_planta_2.jpg,,
 20251110_151806_planta_0.jpg,Urtica urens,URTUR
-20251110_151806_planta_1.jpg,,
+20251110_151806_planta_1.jpg,Lamium purpureum,LAMPU
 20251110_151806_planta_2.jpg,Veronica arvensis,VERAR
 20251110_151809_planta_1.jpg,,
 20251110_151809_planta_2.jpg,Veronica arvensis,VERAR
@@ -2548,7 +2548,7 @@ filename,label,eppo_code
 20251110_153323_planta_34.jpg,Lixo,
 20251110_153323_planta_35.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_36.jpg,,
-20251110_153323_planta_37.jpg,,
+20251110_153323_planta_37.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_38.jpg,,
 20251110_153323_planta_39.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_4.jpg,,
@@ -2569,7 +2569,7 @@ filename,label,eppo_code
 20251110_153335_planta_3.jpg,Lixo,
 20251110_153335_planta_4.jpg,,
 20251110_153335_planta_5.jpg,,
-20251110_153335_planta_6.jpg,,
+20251110_153335_planta_6.jpg,Lixo,
 20251110_153335_planta_7.jpg,Erodium moschatum,EROMO
 20251110_153335_planta_8.jpg,,
 20251110_153337_planta_1.jpg,Lixo,
