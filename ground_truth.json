@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-26T22:18:46.394Z",
+  "exported_at": "2026-07-26T22:19:20.448Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -32,7 +32,8 @@
     "Conyza bonariensis",
     "Chamaemelum mixtum",
     "Sonchus asper",
-    "Raphanus raphanistrum"
+    "Raphanus raphanistrum",
+    "Poa annua"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -69,7 +70,8 @@
     "Conyza bonariensis": "ERIBO",
     "Chamaemelum mixtum": "ANTMI",
     "Sonchus asper": "SONAS",
-    "Raphanus raphanistrum": "RAPRA"
+    "Raphanus raphanistrum": "RAPRA",
+    "Poa annua": "POAAN"
   },
   "family": {
     "Cyperus rotundus": "Cyperaceae",
@@ -91,7 +93,8 @@
     "Solanum nigrum": "Solanaceae",
     "Digitaria sanguinalis": "Poaceae",
     "Amaranthus retroflexus": "Amaranthaceae",
-    "Portulaca oleracea": "Portulacaceae"
+    "Portulaca oleracea": "Portulacaceae",
+    "Poa annua": "Poaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
