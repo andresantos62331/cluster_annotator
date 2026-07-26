@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-26T18:43:09.933Z",
+  "exported_at": "2026-07-26T18:44:11.789Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -37,7 +37,8 @@
     "Stellaria media",
     "Capsella rubella",
     "Xanthium strumarium",
-    "Geraneum molle"
+    "Geraneum molle",
+    "Heliotropium europaeum"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -79,7 +80,8 @@
     "Stellaria media": "STEME",
     "Capsella rubella": "CAPRU",
     "Xanthium strumarium": "XANST",
-    "Geraneum molle": "GERMO"
+    "Geraneum molle": "GERMO",
+    "Heliotropium europaeum": "HELEU"
   },
   "family": {
     "Sonchus oleraceus": "Asteraceae",
@@ -2226,6 +2228,11 @@
     "20251110_151746_planta_19.jpg": "Urtica membranacea",
     "20251110_152009_planta_0.jpg": "Urtica membranacea",
     "20251110_152109_planta_0.jpg": "Urtica membranacea",
-    "20251110_152151_planta_1.jpg": "Urtica membranacea"
+    "20251110_152151_planta_1.jpg": "Urtica membranacea",
+    "IMG_20220501_163102_planta_0.jpg": "Heliotropium europaeum",
+    "IMG_20220501_163138_planta_0.jpg": "Heliotropium europaeum",
+    "IMG_20220501_163150_planta_0.jpg": "Heliotropium europaeum",
+    "IMG_20220501_163203_planta_0.jpg": "Heliotropium europaeum",
+    "IMG_20220501_163206_planta_0.jpg": "Heliotropium europaeum"
   }
 }
