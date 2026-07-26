@@ -1129,7 +1129,7 @@ filename,label,eppo_code
 20220425_160147_planta_1.jpg,,
 20220425_160147_planta_2.jpg,Amaranthus retroflexus,AMARE
 20220425_160207_planta_0.jpg,Urtica urens,URTUR
-20220425_160207_planta_1.jpg,,
+20220425_160207_planta_1.jpg,Cynodon dactylon,CYNDA
 20220425_160322_planta_0.jpg,Urtica urens,URTUR
 20220425_160423_planta_0.jpg,,
 20220425_160431_planta_0.jpg,Conyza bonariensis,ERIBO
@@ -1244,7 +1244,7 @@ filename,label,eppo_code
 20220425_163253_planta_2.jpg,,
 20220425_163306_planta_0.jpg,,
 20220425_163306_planta_1.jpg,Cynodon dactylon,CYNDA
-20220425_163306_planta_2.jpg,,
+20220425_163306_planta_2.jpg,Cynodon dactylon,CYNDA
 20220425_163306_planta_3.jpg,Cynodon dactylon,CYNDA
 20220425_163306_planta_4.jpg,Sonchus oleraceus,SONOL
 20220425_163330_planta_2.jpg,Amaranthus retroflexus,AMARE
@@ -3138,7 +3138,7 @@ JPEG_V2_E2_2022-04-17_15_14_224071973522240993721_planta_1.jpg,,
 JPEG_V2_E2_2022-04-17_15_14_224071973522240993721_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_14_557163148108367658012_planta_2.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_14_557163148108367658012_planta_3.jpg,,
-JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_1.jpg,,
+JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_1.jpg,Cynodon dactylon,CYNDA
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_10.jpg,,
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_3.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_4.jpg,Chenopodium album,CHEAL
