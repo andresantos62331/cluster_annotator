@@ -322,8 +322,8 @@ filename,label,eppo_code
 20220417_154446_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154446_planta_3.jpg,Lixo,
 20220417_154446_planta_4.jpg,Lixo,
-20220417_154501_planta_0.jpg,,
-20220417_154507_planta_0.jpg,,
+20220417_154501_planta_0.jpg,Polygonum aviculare,POLAV
+20220417_154507_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154512_planta_0.jpg,,
 20220417_154512_planta_1.jpg,,
 20220417_154512_planta_2.jpg,,
@@ -951,7 +951,7 @@ filename,label,eppo_code
 20220417_163218_planta_1.jpg,,
 20220417_163218_planta_5.jpg,Solanum nigrum,SOLNI
 20220417_163218_planta_6.jpg,,
-20220417_163218_planta_7.jpg,,
+20220417_163218_planta_7.jpg,Digitaria sanguinalis,DIGSA
 20220417_163223_planta_0.jpg,,
 20220417_163223_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_163223_planta_2.jpg,,
@@ -1111,7 +1111,7 @@ filename,label,eppo_code
 20220425_155541_planta_7.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_8.jpg,Chenopodium album,CHEAL
 20220425_155541_planta_9.jpg,Lixo,
-20220425_155617_planta_0.jpg,,
+20220425_155617_planta_0.jpg,Lixo,
 20220425_155617_planta_2.jpg,,
 20220425_155617_planta_3.jpg,,
 20220425_155617_planta_4.jpg,,
