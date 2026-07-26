@@ -858,7 +858,7 @@ filename,label,eppo_code
 20220417_162512_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_162517_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_162526_planta_1.jpg,Amaranthus retroflexus,AMARE
-20220417_162531_planta_0.jpg,,
+20220417_162531_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_162549_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220417_162549_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_162551_planta_0.jpg,Solanum nigrum,SOLNI
@@ -868,7 +868,7 @@ filename,label,eppo_code
 20220417_162559_planta_3.jpg,Urtica urens,URTUR
 20220417_162559_planta_4.jpg,,
 20220417_162606_planta_0.jpg,Erodium moschatum,EROMO
-20220417_162606_planta_2.jpg,,
+20220417_162606_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_162606_planta_3.jpg,,
 20220417_162606_planta_4.jpg,Polygonum aviculare,POLAV
 20220417_162628_planta_2.jpg,,
@@ -950,7 +950,7 @@ filename,label,eppo_code
 20220417_163121_planta_6.jpg,,
 20220417_163218_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220417_163218_planta_5.jpg,Solanum nigrum,SOLNI
-20220417_163218_planta_6.jpg,,
+20220417_163218_planta_6.jpg,Polygonum aviculare,POLAV
 20220417_163218_planta_7.jpg,Digitaria sanguinalis,DIGSA
 20220417_163223_planta_0.jpg,,
 20220417_163223_planta_1.jpg,Solanum nigrum,SOLNI
@@ -966,7 +966,7 @@ filename,label,eppo_code
 20220417_163323_planta_2.jpg,,
 20220417_163323_planta_3.jpg,Polygonum aviculare,POLAV
 20220417_163323_planta_5.jpg,,
-20220417_163350_planta_0.jpg,,
+20220417_163350_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_163400_planta_0.jpg,Lixo,
 20220417_163400_planta_3.jpg,Lixo,
 20220417_163400_planta_4.jpg,Lixo,
@@ -975,11 +975,11 @@ filename,label,eppo_code
 20220417_163414_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_153324_planta_0.jpg,Portulaca oleracea,POROL
 20220425_153324_planta_2.jpg,,
-20220425_153349_planta_0.jpg,,
+20220425_153349_planta_0.jpg,Polygonum aviculare,POLAV
 20220425_153445_planta_0.jpg,Chenopodium album,CHEAL
 20220425_153445_planta_1.jpg,Chenopodium album,CHEAL
-20220425_153456_planta_0.jpg,,
-20220425_153456_planta_1.jpg,,
+20220425_153456_planta_0.jpg,Polygonum aviculare,POLAV
+20220425_153456_planta_1.jpg,Polygonum aviculare,POLAV
 20220425_153510_planta_1.jpg,,
 20220425_153527_planta_0.jpg,,
 20220425_153628_planta_1.jpg,Amaranthus retroflexus,AMARE
