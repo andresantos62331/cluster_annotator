@@ -1736,7 +1736,7 @@ filename,label,eppo_code
 20251110_151746_planta_16.jpg,,
 20251110_151746_planta_17.jpg,,
 20251110_151746_planta_18.jpg,Euphorbia helioscopia,STEME
-20251110_151746_planta_19.jpg,,
+20251110_151746_planta_19.jpg,Urtica membranacea,URTDU
 20251110_151746_planta_2.jpg,,
 20251110_151746_planta_3.jpg,Lixo,
 20251110_151746_planta_4.jpg,Erodium moschatum,EROMO
@@ -1836,7 +1836,7 @@ filename,label,eppo_code
 20251110_152004_planta_0.jpg,Lamium purpureum,LAMPU
 20251110_152004_planta_1.jpg,Urtica urens,URTUR
 20251110_152004_planta_2.jpg,,
-20251110_152009_planta_0.jpg,,
+20251110_152009_planta_0.jpg,Urtica membranacea,URTDU
 20251110_152009_planta_1.jpg,,
 20251110_152009_planta_2.jpg,Sonchus oleraceus,SONOL
 20251110_152014_planta_0.jpg,Veronica arvensis,VERAR
@@ -1868,7 +1868,7 @@ filename,label,eppo_code
 20251110_152106_planta_1.jpg,Urtica urens,URTUR
 20251110_152106_planta_2.jpg,Lixo,
 20251110_152106_planta_3.jpg,Convolvulus aravensis,CONAR
-20251110_152109_planta_0.jpg,,
+20251110_152109_planta_0.jpg,Urtica membranacea,URTDU
 20251110_152109_planta_1.jpg,,
 20251110_152109_planta_2.jpg,Lamium purpureum,LAMPU
 20251110_152109_planta_3.jpg,,
@@ -1900,8 +1900,8 @@ filename,label,eppo_code
 20251110_152146_planta_7.jpg,Urtica urens,URTUR
 20251110_152146_planta_8.jpg,Urtica urens,URTUR
 20251110_152151_planta_0.jpg,,
-20251110_152151_planta_1.jpg,,
-20251110_152151_planta_2.jpg,,
+20251110_152151_planta_1.jpg,Urtica membranacea,URTDU
+20251110_152151_planta_2.jpg,Lixo,
 20251110_152151_planta_3.jpg,,
 20251110_152151_planta_4.jpg,,
 20251110_152151_planta_5.jpg,Urtica urens,URTUR
