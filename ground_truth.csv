@@ -361,7 +361,7 @@ filename,label,eppo_code
 20220417_154616_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154616_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154633_planta_0.jpg,Conyza bonariensis,ERIBO
-20220417_154633_planta_1.jpg,,
+20220417_154633_planta_1.jpg,Papaver rhoeas,PAPRH
 20220417_154644_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154644_planta_2.jpg,,
 20220417_154649_planta_1.jpg,Conyza bonariensis,ERIBO
@@ -2728,7 +2728,7 @@ filename,label,eppo_code
 20251110_153535_planta_4.jpg,Portulaca oleracea,POROL
 20251110_153547_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_153547_planta_1.jpg,Solanum nigrum,SOLNI
-20251110_153552_planta_0.jpg,,
+20251110_153552_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_153555_planta_0.jpg,Solanum nigrum,SOLNI
 20251110_153557_planta_0.jpg,Lixo,
 20251110_153557_planta_1.jpg,Convolvulus aravensis,CONAR
