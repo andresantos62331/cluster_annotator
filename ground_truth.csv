@@ -1112,9 +1112,9 @@ filename,label,eppo_code
 20220425_155541_planta_8.jpg,Chenopodium album,CHEAL
 20220425_155541_planta_9.jpg,Lixo,
 20220425_155617_planta_0.jpg,Lixo,
-20220425_155617_planta_2.jpg,,
-20220425_155617_planta_3.jpg,,
-20220425_155617_planta_4.jpg,,
+20220425_155617_planta_2.jpg,Polygonum aviculare,POLAV
+20220425_155617_planta_3.jpg,Polygonum aviculare,POLAV
+20220425_155617_planta_4.jpg,Polygonum aviculare,POLAV
 20220425_155631_planta_0.jpg,,
 20220425_155647_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_155703_planta_0.jpg,,
@@ -1299,7 +1299,7 @@ filename,label,eppo_code
 20220425_164325_planta_8.jpg,,
 20220425_164357_planta_0.jpg,Polygonum aviculare,POLAV
 20220425_164357_planta_1.jpg,Polygonum aviculare,POLAV
-20220425_164357_planta_2.jpg,,
+20220425_164357_planta_2.jpg,Polygonum aviculare,POLAV
 20220425_164357_planta_3.jpg,,
 20220425_164357_planta_4.jpg,,
 20220425_164419_planta_0.jpg,,
