@@ -1805,11 +1805,11 @@ filename,label,eppo_code
 20251110_151905_planta_3.jpg,Malva sylvestris,MALSI
 20251110_151913_planta_0.jpg,,
 20251110_151924_planta_0.jpg,Lixo,
-20251110_151930_planta_0.jpg,,
-20251110_151933_planta_0.jpg,,
+20251110_151930_planta_0.jpg,Veronica arvensis,VERAR
+20251110_151933_planta_0.jpg,Veronica arvensis,VERAR
 20251110_151933_planta_1.jpg,,
 20251110_151933_planta_2.jpg,Malva sylvestris,MALSI
-20251110_151934_planta_0.jpg,,
+20251110_151934_planta_0.jpg,Veronica arvensis,VERAR
 20251110_151941_planta_0.jpg,,
 20251110_151941_planta_1.jpg,,
 20251110_151941_planta_2.jpg,,
@@ -1881,14 +1881,14 @@ filename,label,eppo_code
 20251110_152118_planta_1.jpg,,
 20251110_152118_planta_2.jpg,Sonchus oleraceus,SONOL
 20251110_152118_planta_3.jpg,Urtica urens,URTUR
-20251110_152123_planta_0.jpg,,
+20251110_152123_planta_0.jpg,Veronica arvensis,VERAR
 20251110_152123_planta_1.jpg,,
 20251110_152123_planta_2.jpg,,
 20251110_152127_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_152127_planta_1.jpg,,
 20251110_152127_planta_2.jpg,,
-20251110_152131_planta_0.jpg,,
-20251110_152136_planta_0.jpg,,
+20251110_152131_planta_0.jpg,Veronica arvensis,VERAR
+20251110_152136_planta_0.jpg,Veronica arvensis,VERAR
 20251110_152136_planta_1.jpg,Urtica urens,URTUR
 20251110_152136_planta_2.jpg,Sonchus oleraceus,SONOL
 20251110_152146_planta_0.jpg,Urtica urens,URTUR
@@ -2010,7 +2010,7 @@ filename,label,eppo_code
 20251110_152330_planta_7.jpg,Lixo,
 20251110_152330_planta_8.jpg,,
 20251110_152330_planta_9.jpg,,
-20251110_152334_planta_1.jpg,,
+20251110_152334_planta_1.jpg,Veronica arvensis,VERAR
 20251110_152334_planta_2.jpg,Erodium moschatum,EROMO
 20251110_152334_planta_3.jpg,Lixo,
 20251110_152334_planta_4.jpg,,
@@ -2071,7 +2071,7 @@ filename,label,eppo_code
 20251110_152441_planta_4.jpg,,
 20251110_152441_planta_5.jpg,,
 20251110_152441_planta_7.jpg,,
-20251110_152441_planta_8.jpg,,
+20251110_152441_planta_8.jpg,Veronica arvensis,VERAR
 20251110_152441_planta_9.jpg,,
 20251110_152447_planta_0.jpg,,
 20251110_152447_planta_1.jpg,Veronica arvensis,VERAR
