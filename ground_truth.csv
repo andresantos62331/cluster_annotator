@@ -1508,7 +1508,7 @@ filename,label,eppo_code
 20251110_151403_planta_8.jpg,,
 20251110_151403_planta_9.jpg,Lixo,
 20251110_151408_planta_0.jpg,Erodium moschatum,EROMO
-20251110_151432_planta_0.jpg,,
+20251110_151432_planta_0.jpg,Lixo,
 20251110_151432_planta_1.jpg,Portulaca oleracea,POROL
 20251110_151432_planta_2.jpg,Portulaca oleracea,POROL
 20251110_151432_planta_3.jpg,Portulaca oleracea,POROL
@@ -1523,7 +1523,7 @@ filename,label,eppo_code
 20251110_151502_planta_2.jpg,Lixo,
 20251110_151509_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_151509_planta_1.jpg,Erodium moschatum,EROMO
-20251110_151514_planta_0.jpg,,
+20251110_151514_planta_0.jpg,Lixo,
 20251110_151514_planta_1.jpg,Veronica arvensis,VERAR
 20251110_151514_planta_3.jpg,Diplotaxis catholica,DIPCA
 20251110_151514_planta_4.jpg,Lixo,
@@ -1632,7 +1632,7 @@ filename,label,eppo_code
 20251110_151648_planta_6.jpg,Urtica urens,URTUR
 20251110_151648_planta_7.jpg,,
 20251110_151652_planta_0.jpg,Erodium moschatum,EROMO
-20251110_151652_planta_1.jpg,,
+20251110_151652_planta_1.jpg,Sonchus oleraceus,SONOL
 20251110_151652_planta_2.jpg,,
 20251110_151655_planta_1.jpg,Urtica urens,URTUR
 20251110_151655_planta_11.jpg,,
@@ -1698,7 +1698,7 @@ filename,label,eppo_code
 20251110_151718_planta_1.jpg,Urtica urens,URTUR
 20251110_151718_planta_2.jpg,,
 20251110_151718_planta_3.jpg,Lixo,
-20251110_151718_planta_4.jpg,,
+20251110_151718_planta_4.jpg,Sonchus oleraceus,SONOL
 20251110_151718_planta_5.jpg,Veronica arvensis,VERAR
 20251110_151718_planta_6.jpg,Solanum nigrum,SOLNI
 20251110_151722_planta_0.jpg,,
@@ -1706,7 +1706,7 @@ filename,label,eppo_code
 20251110_151722_planta_2.jpg,Erodium moschatum,EROMO
 20251110_151722_planta_3.jpg,,
 20251110_151722_planta_4.jpg,Erodium moschatum,EROMO
-20251110_151726_planta_0.jpg,,
+20251110_151726_planta_0.jpg,Lamium purpureum,LAMPU
 20251110_151726_planta_1.jpg,Lixo,
 20251110_151726_planta_2.jpg,Erodium moschatum,EROMO
 20251110_151726_planta_3.jpg,Sonchus oleraceus,SONOL
@@ -1719,7 +1719,7 @@ filename,label,eppo_code
 20251110_151728_planta_3.jpg,,
 20251110_151728_planta_4.jpg,Urtica urens,URTUR
 20251110_151732_planta_0.jpg,Urtica urens,URTUR
-20251110_151732_planta_1.jpg,,
+20251110_151732_planta_1.jpg,Lamium purpureum,LAMPU
 20251110_151732_planta_2.jpg,Erodium moschatum,EROMO
 20251110_151732_planta_4.jpg,Urtica urens,URTUR
 20251110_151735_planta_0.jpg,,
