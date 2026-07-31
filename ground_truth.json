@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-07-28T15:58:18.499Z",
+  "exported_at": "2026-07-31T13:04:12.390Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -73,27 +73,9 @@
     "Poa annua": "POAAN"
   },
   "family": {
-    "Cyperus rotundus": "Cyperaceae",
-    "Echinochloa crus-galli": "Poaceae",
-    "Ambrosia artemisiifolia": "Asteraceae",
-    "Malva sylvestris": "Malvaceae",
-    "Spergula arvensis": "Caryophyllaceae",
-    "Chenopodium album": "Amaranthaceae",
-    "Erodium moschatum": "Geraniaceae",
-    "Urtica urens": "Urticaceae",
-    "Oxalis pes-caprae": "Oxalidaceae",
-    "Tribulus terrestris": "Zygophyllaceae",
-    "Ranunculus arvensis": "Ranunculaceae",
-    "Galinsoga parviflora": "Asteraceae",
-    "Datura stramonium": "Solanaceae",
-    "Polygonum aviculare": "Polygonaceae",
-    "Chenopodium opulifolium": "Amaranthaceae",
-    "Papaver rhoeas": "Papaveraceae",
-    "Solanum nigrum": "Solanaceae",
     "Digitaria sanguinalis": "Poaceae",
-    "Amaranthus retroflexus": "Amaranthaceae",
-    "Portulaca oleracea": "Portulacaceae",
-    "Poa annua": "Poaceae"
+    "Malva sylvestris": "Malvaceae",
+    "Solanum nigrum": "Solanaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1824,6 +1806,12 @@
     "20251110_152116_planta_4.jpg": "Sonchus oleraceus",
     "20251110_152136_planta_2.jpg": "Sonchus oleraceus",
     "20251110_152201_planta_1.jpg": "Sonchus oleraceus",
-    "JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_5.jpg": "Sonchus oleraceus"
+    "JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_5.jpg": "Sonchus oleraceus",
+    "PHOTO-2026-05-20-09-48-42 (4)_planta_0.jpg": "Lixo",
+    "PHOTO-2026-05-20-09-48-42 (4)_planta_16.jpg": "Lixo",
+    "PHOTO-2026-05-20-09-48-42 (4)_planta_28.jpg": "Lixo",
+    "PHOTO-2026-05-20-09-48-42 (4)_planta_3.jpg": "Lixo",
+    "PHOTO-2026-05-20-09-48-42 (4)_planta_9.jpg": "Lixo",
+    "PHOTO-2026-05-20-09-48-42 (6)_planta_21.jpg": "Lixo"
   }
 }
