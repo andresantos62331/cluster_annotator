@@ -275,7 +275,7 @@ filename,label,eppo_code
 20220417_153805_planta_6.jpg,,
 20220417_153805_planta_7.jpg,,
 20220417_153805_planta_8.jpg,,
-20220417_153805_planta_9.jpg,Portulaca oleracea,POROL
+20220417_153805_planta_9.jpg,,
 20220417_153825_planta_0.jpg,,
 20220417_153825_planta_1.jpg,,
 20220417_153851_planta_2.jpg,Chenopodium album,CHEAL
@@ -1154,7 +1154,7 @@ filename,label,eppo_code
 20220425_161220_planta_0.jpg,Veronica arvensis,VERAR
 20220425_161250_planta_0.jpg,,
 20220425_161321_planta_0.jpg,Chenopodium album,CHEAL
-20220425_161339_planta_1.jpg,Portulaca oleracea,POROL
+20220425_161339_planta_1.jpg,,
 20220425_161430_planta_0.jpg,,
 20220425_161505_planta_1.jpg,Veronica arvensis,VERAR
 20220425_161505_planta_2.jpg,Lamium purpureum,LAMPU
@@ -1162,19 +1162,19 @@ filename,label,eppo_code
 20220425_161541_planta_0.jpg,Veronica arvensis,VERAR
 20220425_161541_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_161606_planta_0.jpg,Veronica arvensis,VERAR
-20220425_161636_planta_0.jpg,Portulaca oleracea,POROL
+20220425_161636_planta_0.jpg,,
 20220425_161636_planta_1.jpg,,
 20220425_161700_planta_0.jpg,,
 20220425_161719_planta_0.jpg,Chenopodium album,CHEAL
-20220425_161719_planta_1.jpg,Portulaca oleracea,POROL
-20220425_161723_planta_0.jpg,Portulaca oleracea,POROL
-20220425_161737_planta_0.jpg,Portulaca oleracea,POROL
+20220425_161719_planta_1.jpg,,
+20220425_161723_planta_0.jpg,,
+20220425_161737_planta_0.jpg,,
 20220425_161746_planta_0.jpg,Urtica urens,URTUR
 20220425_161805_planta_0.jpg,Portulaca oleracea,POROL
-20220425_161823_planta_1.jpg,Portulaca oleracea,POROL
+20220425_161823_planta_1.jpg,,
 20220425_161823_planta_2.jpg,,
 20220425_161823_planta_3.jpg,,
-20220425_161823_planta_4.jpg,Portulaca oleracea,POROL
+20220425_161823_planta_4.jpg,,
 20220425_161908_planta_0.jpg,,
 20220425_161917_planta_1.jpg,Sonchus asper,SONAS
 20220425_161956_planta_0.jpg,Urtica membranacea,URTDU
@@ -1844,7 +1844,7 @@ filename,label,eppo_code
 20251110_152019_planta_0.jpg,,
 20251110_152023_planta_0.jpg,,
 20251110_152023_planta_1.jpg,,
-20251110_152025_planta_0.jpg,Lixo,
+20251110_152025_planta_0.jpg,,
 20251110_152025_planta_1.jpg,,
 20251110_152025_planta_2.jpg,Malva sylvestris,MALSI
 20251110_152028_planta_0.jpg,,
