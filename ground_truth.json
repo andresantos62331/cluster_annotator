@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-03T08:41:01.838Z",
+  "exported_at": "2026-08-03T08:43:59.037Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -32,7 +32,8 @@
     "Conyza bonariensis",
     "Chamaemelum mixtum",
     "Sonchus asper",
-    "Raphanus raphanistrum"
+    "Raphanus raphanistrum",
+    "Xanthium spinosum"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -70,12 +71,14 @@
     "Chamaemelum mixtum": "ANTMI",
     "Sonchus asper": "SONAS",
     "Raphanus raphanistrum": "RAPRA",
-    "Poa annua": "POAAN"
+    "Poa annua": "POAAN",
+    "Xanthium spinosum": "XANSP"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
     "Malva sylvestris": "Malvaceae",
-    "Solanum nigrum": "Solanaceae"
+    "Solanum nigrum": "Solanaceae",
+    "Xanthium spinosum": "Asteraceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1857,6 +1860,9 @@
     "20220417_154420_planta_16.jpg": "Lixo",
     "20220417_155228_planta_4.jpg": "Lixo",
     "20220417_155541_planta_5.jpg": "Lixo",
-    "20220417_155548_planta_8.jpg": "Lixo"
+    "20220417_155548_planta_8.jpg": "Lixo",
+    "20220417_162628_planta_3.jpg": "Xanthium spinosum",
+    "20220417_162902_planta_2.jpg": "Xanthium spinosum",
+    "20220417_162904_planta_4.jpg": "Xanthium spinosum"
   }
 }
