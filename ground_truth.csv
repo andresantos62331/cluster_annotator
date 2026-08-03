@@ -57,7 +57,7 @@ filename,label,eppo_code
 20220417_141837_planta_6.jpg,,
 20220417_141903_planta_1.jpg,,
 20220417_141903_planta_4.jpg,,
-20220417_141903_planta_7.jpg,,
+20220417_141903_planta_7.jpg,Lixo,
 20220417_141912_planta_0.jpg,,
 20220417_152120_planta_0.jpg,,
 20220417_152120_planta_1.jpg,,
@@ -322,13 +322,13 @@ filename,label,eppo_code
 20220417_154446_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154446_planta_3.jpg,Lixo,
 20220417_154446_planta_4.jpg,Lixo,
-20220417_154501_planta_0.jpg,,
-20220417_154507_planta_0.jpg,,
+20220417_154501_planta_0.jpg,Lixo,
+20220417_154507_planta_0.jpg,Polygonum aviculare,POLAV
 20220417_154512_planta_0.jpg,,
 20220417_154512_planta_1.jpg,,
 20220417_154512_planta_2.jpg,,
 20220417_154534_planta_3.jpg,Polygonum aviculare,POLAV
-20220417_154541_planta_1.jpg,,
+20220417_154541_planta_1.jpg,Lixo,
 20220417_154541_planta_2.jpg,Lixo,
 20220417_154541_planta_5.jpg,,
 20220417_154544_planta_2.jpg,Polygonum aviculare,POLAV
@@ -951,7 +951,7 @@ filename,label,eppo_code
 20220417_163218_planta_1.jpg,,
 20220417_163218_planta_5.jpg,Solanum nigrum,SOLNI
 20220417_163218_planta_6.jpg,,
-20220417_163218_planta_7.jpg,,
+20220417_163218_planta_7.jpg,Digitaria sanguinalis,DIGSA
 20220417_163223_planta_0.jpg,,
 20220417_163223_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_163223_planta_2.jpg,,
@@ -1111,10 +1111,10 @@ filename,label,eppo_code
 20220425_155541_planta_7.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_8.jpg,Chenopodium album,CHEAL
 20220425_155541_planta_9.jpg,Lixo,
-20220425_155617_planta_0.jpg,,
-20220425_155617_planta_2.jpg,,
-20220425_155617_planta_3.jpg,,
-20220425_155617_planta_4.jpg,,
+20220425_155617_planta_0.jpg,Lixo,
+20220425_155617_planta_2.jpg,Lixo,
+20220425_155617_planta_3.jpg,Lixo,
+20220425_155617_planta_4.jpg,Lixo,
 20220425_155631_planta_0.jpg,,
 20220425_155647_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_155703_planta_0.jpg,,
@@ -1299,10 +1299,10 @@ filename,label,eppo_code
 20220425_164325_planta_8.jpg,,
 20220425_164357_planta_0.jpg,Polygonum aviculare,POLAV
 20220425_164357_planta_1.jpg,Polygonum aviculare,POLAV
-20220425_164357_planta_2.jpg,,
+20220425_164357_planta_2.jpg,Lixo,
 20220425_164357_planta_3.jpg,,
 20220425_164357_planta_4.jpg,,
-20220425_164419_planta_0.jpg,,
+20220425_164419_planta_0.jpg,Lixo,
 20220425_164454_planta_2.jpg,,
 20220425_164454_planta_3.jpg,,
 20220425_164454_planta_4.jpg,,
@@ -1828,7 +1828,7 @@ filename,label,eppo_code
 20251110_151952_planta_1.jpg,,
 20251110_151952_planta_2.jpg,,
 20251110_151952_planta_4.jpg,,
-20251110_151956_planta_0.jpg,,
+20251110_151956_planta_0.jpg,Lixo,
 20251110_151956_planta_1.jpg,Lixo,
 20251110_152002_planta_0.jpg,Urtica urens,URTUR
 20251110_152002_planta_1.jpg,,
@@ -1842,7 +1842,7 @@ filename,label,eppo_code
 20251110_152014_planta_0.jpg,,
 20251110_152014_planta_1.jpg,,
 20251110_152019_planta_0.jpg,,
-20251110_152023_planta_0.jpg,,
+20251110_152023_planta_0.jpg,Lixo,
 20251110_152023_planta_1.jpg,,
 20251110_152025_planta_0.jpg,,
 20251110_152025_planta_1.jpg,,
@@ -2018,7 +2018,7 @@ filename,label,eppo_code
 20251110_152338_planta_2.jpg,,
 20251110_152338_planta_3.jpg,,
 20251110_152338_planta_5.jpg,,
-20251110_152338_planta_6.jpg,,
+20251110_152338_planta_6.jpg,Lixo,
 20251110_152338_planta_7.jpg,,
 20251110_152344_planta_0.jpg,,
 20251110_152344_planta_1.jpg,,
@@ -2039,7 +2039,7 @@ filename,label,eppo_code
 20251110_152408_planta_0.jpg,,
 20251110_152408_planta_1.jpg,,
 20251110_152408_planta_2.jpg,,
-20251110_152408_planta_3.jpg,,
+20251110_152408_planta_3.jpg,Lixo,
 20251110_152408_planta_4.jpg,Erodium moschatum,EROMO
 20251110_152409_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152409_planta_2.jpg,,
@@ -2072,7 +2072,7 @@ filename,label,eppo_code
 20251110_152441_planta_5.jpg,,
 20251110_152441_planta_7.jpg,,
 20251110_152441_planta_8.jpg,,
-20251110_152441_planta_9.jpg,,
+20251110_152441_planta_9.jpg,Lixo,
 20251110_152447_planta_0.jpg,,
 20251110_152447_planta_1.jpg,Veronica arvensis,VERAR
 20251110_152447_planta_2.jpg,Veronica arvensis,VERAR
@@ -2424,7 +2424,7 @@ filename,label,eppo_code
 20251110_153252_planta_6.jpg,Convolvulus aravensis,CONAR
 20251110_153252_planta_7.jpg,Lixo,
 20251110_153252_planta_8.jpg,,
-20251110_153252_planta_9.jpg,,
+20251110_153252_planta_9.jpg,Lixo,
 20251110_153254_planta_0.jpg,,
 20251110_153257_planta_0.jpg,,
 20251110_153257_planta_1.jpg,,
