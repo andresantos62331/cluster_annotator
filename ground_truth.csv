@@ -47,7 +47,7 @@ filename,label,eppo_code
 20220417_141751_planta_14.jpg,,
 20220417_141751_planta_15.jpg,Oxalis pes-caprae,OXAPC
 20220417_141751_planta_2.jpg,Lixo,
-20220417_141751_planta_3.jpg,,
+20220417_141751_planta_3.jpg,Lixo,
 20220417_141751_planta_4.jpg,,
 20220417_141837_planta_0.jpg,,
 20220417_141837_planta_1.jpg,,
@@ -649,7 +649,7 @@ filename,label,eppo_code
 20220417_160536_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_160544_planta_0.jpg,,
 20220417_160544_planta_2.jpg,Urtica urens,URTUR
-20220417_160549_planta_0.jpg,,
+20220417_160549_planta_0.jpg,Lixo,
 20220417_160551_planta_0.jpg,Papaver rhoeas,PAPRH
 20220417_160614_planta_0.jpg,Chenopodium album,CHEAL
 20220417_160621_planta_0.jpg,,
@@ -1778,8 +1778,8 @@ filename,label,eppo_code
 20251110_151815_planta_4.jpg,Lixo,
 20251110_151815_planta_5.jpg,Urtica urens,URTUR
 20251110_151826_planta_0.jpg,Portulaca oleracea,POROL
-20251110_151826_planta_1.jpg,,
-20251110_151826_planta_2.jpg,,
+20251110_151826_planta_1.jpg,Lixo,
+20251110_151826_planta_2.jpg,Lixo,
 20251110_151826_planta_3.jpg,Urtica urens,URTUR
 20251110_151832_planta_0.jpg,,
 20251110_151832_planta_1.jpg,,
@@ -1872,7 +1872,7 @@ filename,label,eppo_code
 20251110_152109_planta_1.jpg,,
 20251110_152109_planta_2.jpg,,
 20251110_152109_planta_3.jpg,,
-20251110_152116_planta_0.jpg,,
+20251110_152116_planta_0.jpg,Veronica arvensis,VERAR
 20251110_152116_planta_1.jpg,Lixo,
 20251110_152116_planta_2.jpg,,
 20251110_152116_planta_3.jpg,,
@@ -2522,7 +2522,7 @@ filename,label,eppo_code
 20251110_153323_planta_10.jpg,,
 20251110_153323_planta_11.jpg,,
 20251110_153323_planta_12.jpg,,
-20251110_153323_planta_13.jpg,,
+20251110_153323_planta_13.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_14.jpg,,
 20251110_153323_planta_15.jpg,,
 20251110_153323_planta_16.jpg,,
@@ -2569,7 +2569,7 @@ filename,label,eppo_code
 20251110_153335_planta_3.jpg,Lixo,
 20251110_153335_planta_4.jpg,,
 20251110_153335_planta_5.jpg,,
-20251110_153335_planta_6.jpg,,
+20251110_153335_planta_6.jpg,Lixo,
 20251110_153335_planta_7.jpg,Erodium moschatum,EROMO
 20251110_153335_planta_8.jpg,,
 20251110_153337_planta_1.jpg,Lixo,
