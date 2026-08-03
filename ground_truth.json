@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-02T18:32:15.005Z",
+  "exported_at": "2026-08-03T08:35:36.422Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -73,27 +73,9 @@
     "Poa annua": "POAAN"
   },
   "family": {
-    "Sonchus oleraceus": "Asteraceae",
-    "amaranthus retroflexus": "Amaranthaceae",
-    "Papaver rhoeas": "Papaveraceae",
-    "Polygonum aviculare": "Polygonaceae",
-    "Datura stramonium": "Solanaceae",
-    "Urtica membranacea": "Urticaceae",
-    "Senecio vulgaris": "Asteraceae",
-    "Diplotaxis catholica": "Brassicaceae",
-    "Echinochloa crus-galli": "Poaceae",
-    "Lamium purpureum": "Lamiaceae",
-    "Veronica arvensis": "Plantaginaceae",
-    "Convolvulus aravensis": "Convolvulaceae",
-    "Conyza bonariensis": "Asteraceae",
-    "Sonchus asper": "Asteraceae",
-    "Raphanus raphanistrum": "Brassicaceae",
-    "Euphorbia helioscopia": "Caryophyllaceae",
-    "Cynodon dactylon": "Poaceae",
-    "Stellaria media": "Caryophyllaceae",
-    "Capsella rubella": "Brassicaceae",
-    "Xanthium strumarium": "Asteraceae",
-    "Geraneum molle": "Geraniaceae"
+    "Digitaria sanguinalis": "Poaceae",
+    "Malva sylvestris": "Malvaceae",
+    "Solanum nigrum": "Solanaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1850,6 +1832,8 @@
     "20251110_151502_planta_0.jpg": "Spergula arvensis",
     "20251110_151709_planta_12.jpg": "Lixo",
     "20251110_151943_planta_0.jpg": "Lixo",
-    "20251110_151950_planta_5.jpg": "Lixo"
+    "20251110_151950_planta_5.jpg": "Lixo",
+    "20220425_162912_planta_1.jpg": "Lixo",
+    "20251109_162306_planta_4.jpg": "Lixo"
   }
 }
