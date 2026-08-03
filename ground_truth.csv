@@ -1756,7 +1756,7 @@ filename,label,eppo_code
 20251110_151749_planta_6.jpg,,
 20251110_151749_planta_7.jpg,Lixo,
 20251110_151749_planta_8.jpg,Lixo,
-20251110_151755_planta_0.jpg,,
+20251110_151755_planta_0.jpg,Lixo,
 20251110_151757_planta_0.jpg,Urtica urens,URTUR
 20251110_151757_planta_2.jpg,,
 20251110_151802_planta_0.jpg,Urtica urens,URTUR
@@ -3229,7 +3229,7 @@ PHOTO-2026-05-20-09-48-42 (3)_planta_7.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (3)_planta_8.jpg,Portulaca oleracea,POROL
 PHOTO-2026-05-20-09-48-42 (4)_planta_0.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (4)_planta_1.jpg,Lixo,
-PHOTO-2026-05-20-09-48-42 (4)_planta_12.jpg,,
+PHOTO-2026-05-20-09-48-42 (4)_planta_12.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-42 (4)_planta_13.jpg,Datura stramonium,DATST
 PHOTO-2026-05-20-09-48-42 (4)_planta_14.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (4)_planta_15.jpg,,
@@ -3266,7 +3266,7 @@ PHOTO-2026-05-20-09-48-42 (6)_planta_17.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (6)_planta_18.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (6)_planta_21.jpg,Lixo,
 PHOTO-2026-05-20-09-48-42 (6)_planta_22.jpg,Urtica urens,URTUR
-PHOTO-2026-05-20-09-48-42 (6)_planta_23.jpg,,
+PHOTO-2026-05-20-09-48-42 (6)_planta_23.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-42 (6)_planta_24.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (6)_planta_25.jpg,,
 PHOTO-2026-05-20-09-48-42 (6)_planta_3.jpg,Sonchus oleraceus,SONOL
@@ -3344,7 +3344,7 @@ PHOTO-2026-05-20-09-48-43 (10)_planta_8.jpg,Datura stramonium,DATST
 PHOTO-2026-05-20-09-48-43 (10)_planta_9.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (11)_planta_0.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-43 (11)_planta_1.jpg,,
-PHOTO-2026-05-20-09-48-43 (11)_planta_10.jpg,,
+PHOTO-2026-05-20-09-48-43 (11)_planta_10.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-43 (11)_planta_11.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (11)_planta_12.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (11)_planta_13.jpg,Lixo,
@@ -3355,7 +3355,7 @@ PHOTO-2026-05-20-09-48-43 (11)_planta_18.jpg,Portulaca oleracea,POROL
 PHOTO-2026-05-20-09-48-43 (11)_planta_19.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (11)_planta_2.jpg,Portulaca oleracea,POROL
 PHOTO-2026-05-20-09-48-43 (11)_planta_20.jpg,Lixo,
-PHOTO-2026-05-20-09-48-43 (11)_planta_21.jpg,,
+PHOTO-2026-05-20-09-48-43 (11)_planta_21.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-43 (11)_planta_22.jpg,Galinsoga parviflora,GASPA
 PHOTO-2026-05-20-09-48-43 (11)_planta_23.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (11)_planta_24.jpg,,
@@ -3363,7 +3363,7 @@ PHOTO-2026-05-20-09-48-43 (11)_planta_3.jpg,,
 PHOTO-2026-05-20-09-48-43 (11)_planta_4.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (11)_planta_5.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (11)_planta_6.jpg,Galinsoga parviflora,GASPA
-PHOTO-2026-05-20-09-48-43 (11)_planta_7.jpg,,
+PHOTO-2026-05-20-09-48-43 (11)_planta_7.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-43 (11)_planta_9.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (12)_planta_0.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_1.jpg,,
@@ -3372,7 +3372,7 @@ PHOTO-2026-05-20-09-48-43 (12)_planta_11.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_12.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-43 (12)_planta_13.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-43 (12)_planta_14.jpg,Lixo,
-PHOTO-2026-05-20-09-48-43 (12)_planta_15.jpg,,
+PHOTO-2026-05-20-09-48-43 (12)_planta_15.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (12)_planta_16.jpg,,
 PHOTO-2026-05-20-09-48-43 (12)_planta_17.jpg,Galinsoga parviflora,GASPA
 PHOTO-2026-05-20-09-48-43 (12)_planta_18.jpg,Lixo,
@@ -3452,7 +3452,7 @@ PHOTO-2026-05-20-09-48-43 (7)_planta_22.jpg,,
 PHOTO-2026-05-20-09-48-43 (7)_planta_23.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (7)_planta_24.jpg,,
 PHOTO-2026-05-20-09-48-43 (7)_planta_25.jpg,Urtica urens,URTUR
-PHOTO-2026-05-20-09-48-43 (7)_planta_26.jpg,,
+PHOTO-2026-05-20-09-48-43 (7)_planta_26.jpg,Lixo,
 PHOTO-2026-05-20-09-48-43 (7)_planta_3.jpg,Galinsoga parviflora,GASPA
 PHOTO-2026-05-20-09-48-43 (7)_planta_4.jpg,Amaranthus retroflexus,AMARE
 PHOTO-2026-05-20-09-48-43 (7)_planta_5.jpg,,
