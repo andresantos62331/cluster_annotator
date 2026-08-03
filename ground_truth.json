@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-03T08:59:46.993Z",
+  "exported_at": "2026-08-03T09:00:28.603Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -33,7 +33,8 @@
     "Chamaemelum mixtum",
     "Sonchus asper",
     "Raphanus raphanistrum",
-    "Xanthium spinosum"
+    "Xanthium spinosum",
+    "Cyperus esculentus"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -72,13 +73,15 @@
     "Sonchus asper": "SONAS",
     "Raphanus raphanistrum": "RAPRA",
     "Poa annua": "POAAN",
-    "Xanthium spinosum": "XANSP"
+    "Xanthium spinosum": "XANSP",
+    "Cyperus esculentus": "CYPES"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
     "Malva sylvestris": "Malvaceae",
     "Solanum nigrum": "Solanaceae",
-    "Xanthium spinosum": "Asteraceae"
+    "Xanthium spinosum": "Asteraceae",
+    "Cyperus esculentus": "Cyperaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1922,6 +1925,7 @@
     "20251110_151952_planta_1.jpg": "Lixo",
     "20220417_152434_planta_1.jpg": "Chenopodium album",
     "20220417_152434_planta_6.jpg": "Chenopodium opulifolium",
-    "JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_9.jpg": "Chenopodium album"
+    "JPEG_V2_E2_2022-04-17_15_11_072807541089786253625_planta_9.jpg": "Chenopodium album",
+    "20220417_155133_planta_0.jpg": "Cyperus esculentus"
   }
 }
