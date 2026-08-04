@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-04T11:02:08.571Z",
+  "exported_at": "2026-08-04T11:03:53.330Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -34,7 +34,8 @@
     "Sonchus asper",
     "Raphanus raphanistrum",
     "Xanthium spinosum",
-    "Cyperus esculentus"
+    "Cyperus esculentus",
+    "Capsella rubella"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -74,14 +75,16 @@
     "Raphanus raphanistrum": "RAPRA",
     "Poa annua": "POAAN",
     "Xanthium spinosum": "XANSP",
-    "Cyperus esculentus": "CYPES"
+    "Cyperus esculentus": "CYPES",
+    "Capsella rubella": "CAPRU"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
     "Malva sylvestris": "Malvaceae",
     "Solanum nigrum": "Solanaceae",
     "Xanthium spinosum": "Asteraceae",
-    "Cyperus esculentus": "Cyperaceae"
+    "Cyperus esculentus": "Cyperaceae",
+    "Capsella rubella": "Brassicaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -2039,6 +2042,13 @@
     "20220417_162110_planta_0.jpg": "Urtica membranacea",
     "20220417_152330_planta_3.jpg": "Amaranthus retroflexus",
     "20220417_152558_planta_0.jpg": "Lixo",
-    "20220417_162807_planta_0.jpg": "Sonchus oleraceus"
+    "20220417_162807_planta_0.jpg": "Sonchus oleraceus",
+    "20220417_162853_planta_3.jpg": "Capsella rubella",
+    "20220417_162902_planta_3.jpg": "Lixo",
+    "20220417_162904_planta_2.jpg": "Lixo",
+    "20220425_162942_planta_6.jpg": "Lixo",
+    "JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_8.jpg": "Lixo",
+    "20251110_151943_planta_1.jpg": "Sonchus oleraceus",
+    "20251109_162246_planta_7.jpg": "Lixo"
   }
 }
