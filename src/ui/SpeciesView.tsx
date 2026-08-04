@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { GroundTruth } from "../types";
 import { A_CONFIRMAR, isReservada, LIXO, tint } from "../colors";
 import { Card } from "./Card";
@@ -6,6 +6,7 @@ import { Pagination } from "./bits";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { CollectionOverview } from "./CollectionOverview";
+import { useDragSelect } from "./dragSelect";
 import { EppoChip, TaxonEditor } from "./EppoInput";
 import type { EppoEntry } from "../eppo";
 import { IconChevron, IconHelp, IconTrash } from "./icons";
@@ -178,12 +179,31 @@ export function SpeciesView({
     );
   }
 
+  // arrastar sobre as grelhas das fichas seleciona em série (igual aos Clusters)
+  const paint = useCallback(
+    (files: string[], on: boolean) =>
+      setSelection((prev) => {
+        const next = new Set(prev);
+        for (const f of files) {
+          if (on) next.add(f);
+          else next.delete(f);
+        }
+        return next;
+      }),
+    [setSelection],
+  );
+  const onDragSelect = useDragSelect({ isSelected: (f) => selection.has(f), apply: paint });
+
   const den = DENSITIES[density];
   // o índice lateral e a contagem "Espécies" são só de espécies — o Lixo fica de fora
   const tocLabels = displayLabels.filter((l) => !isReservada(l));
 
   return (
-    <div className="work-body sv" style={{ ["--card-min" as string]: `${den.min}px` }}>
+    <div
+      className="work-body sv"
+      style={{ ["--card-min" as string]: `${den.min}px` }}
+      onPointerDown={onDragSelect}
+    >
       {/* resumo da Coleção — panorama antes das fichas por espécie */}
       <CollectionOverview
         labels={labels}
@@ -371,8 +391,16 @@ export function SpeciesView({
                   </span>
                 ) : (
                   <>
-                    {/* chip só-leitura; a edição está no lápis, como no painel direito */}
-                    <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
+                    {/* chip só-leitura; a edição está no lápis, como no painel direito.
+                        Numa família não há código a mostrar — no lugar dele vai a
+                        marca de nível, pela mesma razão do painel direito. */}
+                    {rankOf(lbl) === "familia" ? (
+                      <span className="fam-mark" title="Identificação ao nível da família">
+                        família
+                      </span>
+                    ) : (
+                      <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
+                    )}
                     {files.length > 0 && (
                       <span className="svb-pop" title="população desta espécie (clusters da config atual)">
                         {files.length} {files.length === 1 ? "imagem presente" : "imagens presentes"} em{" "}

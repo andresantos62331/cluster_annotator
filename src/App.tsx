@@ -327,6 +327,14 @@ export default function App() {
   const allFilenames = useMemo(() => config?.assignments.map((a) => a.filename) ?? [], [config]);
   const totalAnnotated = useMemo(() => allFilenames.filter((f) => groundTruth[f]).length, [allFilenames, groundTruth]);
 
+  // quantas imagens tem cada etiqueta — a linha de família usa a segunda linha
+  // para isto (a de espécie usa-a para o código EPPO, que a família não tem)
+  const countByLabel = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const l of Object.values(groundTruth)) m.set(l, (m.get(l) ?? 0) + 1);
+    return m;
+  }, [groundTruth]);
+
   // ficheiro -> cluster de origem (na config atual), para saltar do separador Espécies
   const fileToCluster = useMemo(() => {
     const m = new Map<string, number>();
@@ -552,6 +560,20 @@ export default function App() {
       const next = new Set(prev);
       if (next.has(filename)) next.delete(filename);
       else next.add(filename);
+      return next;
+    });
+  }, []);
+
+  // pintar a selecção em bloco (arrastamento na grelha): FORÇA o estado em vez de
+  // alternar — quem manda é o cartão de partida, senão um arrastamento sobre
+  // cartões em estados diferentes deixava-os todos trocados.
+  const paintSelect = useCallback((files: string[], on: boolean) => {
+    setSelection((prev) => {
+      const next = new Set(prev);
+      for (const f of files) {
+        if (on) next.add(f);
+        else next.delete(f);
+      }
       return next;
     });
   }, []);
@@ -818,6 +840,39 @@ export default function App() {
     pushToast("danger", <span>Etiqueta removida de <b>{n}</b> {n === 1 ? "imagem" : "imagens"}</span>, true);
   }, [speciesSelection, pushToast, snapshot]);
 
+  // última posição do rato: é o alvo da tecla S quando o viewport está fechado
+  const rato = useRef({ x: -1, y: -1 });
+  useEffect(() => {
+    const h = (e: PointerEvent) => {
+      rato.current.x = e.clientX;
+      rato.current.y = e.clientY;
+    };
+    window.addEventListener("pointermove", h, { passive: true });
+    return () => window.removeEventListener("pointermove", h);
+  }, []);
+
+  // tecla S na grelha: alterna a plântula que está DEBAIXO DO RATO, sem clicar.
+  // É o mesmo S do viewport — lá atua sobre a imagem em vista, aqui sobre a que
+  // se está a olhar. Percorrer a grelha com o rato e ir carregando em S é o
+  // caminho mais rápido para juntar uma selecção.
+  const toggleHovered = useCallback(() => {
+    const { x, y } = rato.current;
+    if (x < 0) return;
+    const el = document.elementFromPoint(x, y) as HTMLElement | null;
+    const f = el?.closest("[data-file]")?.getAttribute("data-file");
+    if (!f) return;
+    if (mode === "clusters") {
+      toggleSelect(f);
+      return;
+    }
+    setSpeciesSelection((prev) => {
+      const next = new Set(prev);
+      if (next.has(f)) next.delete(f);
+      else next.add(f);
+      return next;
+    });
+  }, [mode, toggleSelect]);
+
   // seleciona/desseleciona a plântula em vista no viewport (tecla S e a caixa de
   // seleção da ficha) — o alvo depende do separador em que estamos
   const toggleLightboxSelect = useCallback(() => {
@@ -878,6 +933,7 @@ export default function App() {
 
       if (mode === "species") {
         if (e.key === "r" || e.key === "R") removeSelectedLabels();
+        else if (e.key === "s" || e.key === "S") toggleHovered();
         return;
       }
       if (mode !== "clusters" || !config) return;
@@ -885,6 +941,7 @@ export default function App() {
       if (e.key === "ArrowLeft") setPage((p) => Math.max(0, p - 1));
       else if (e.key === "ArrowRight") setPage((p) => Math.min(totalPages - 1, p + 1));
       else if (e.key === "a" || e.key === "A") assignSpecies(activeSpecies);
+      else if (e.key === "s" || e.key === "S") toggleHovered();
       else if (e.key === "d" || e.key === "D") setSelection(new Set());
       else if (e.key === "r" || e.key === "R") retireSelection();
       else if (e.key === "j" || e.key === "J") navCluster(1);
@@ -914,7 +971,7 @@ export default function App() {
     }
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [mode, config, lightbox, lightboxList, helpOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, removeSelectedLabels, toggleLightboxSelect, undo, redo]);
+  }, [mode, config, lightbox, lightboxList, helpOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, removeSelectedLabels, toggleLightboxSelect, toggleHovered, undo, redo]);
 
   // reatribuir a selecção (vista Espécies) a outra espécie
   const reassignSpeciesSelection = useCallback(
@@ -1062,6 +1119,7 @@ export default function App() {
             eppoOf={(l) => eppoMap[l] ?? ""}
             onSetActive={setActiveSpecies}
             onToggleSelect={toggleSelect}
+            onPaintSelect={paintSelect}
             onOpenLightbox={openLightbox}
             onAssign={() => assignSpecies(activeSpecies)}
             onSelectPage={selectPage}
@@ -1111,6 +1169,7 @@ export default function App() {
         eppoOf={(l) => eppoMap[l] ?? ""}
         familyOf={familyOf}
         rankOf={rankOf}
+        countOf={(l) => countByLabel.get(l) ?? 0}
         onGoToSpecies={goToSpecies}
         onAdd={addLabel}
         onEditSpecies={editSpecies}

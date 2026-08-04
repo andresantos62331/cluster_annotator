@@ -18,10 +18,13 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
             gaveta <b>«Concluídos»</b>, no fundo dessa lista.
           </li>
           <li>
-            <b>Seleciona as plântulas</b> que são da mesma espécie (clica em cada
-            uma, ou usa o visto no cabeçalho para marcar a página inteira) e
-            atribui-as com <kbd>A</kbd>, com o botão «Atribuir» ou com a tecla da
-            espécie. Espécies novas criam-se no painel da direita.
+            <b>Seleciona as plântulas</b> que são da mesma espécie e atribui-as com{" "}
+            <kbd>A</kbd>, com o botão «Atribuir» ou com a tecla da espécie. Para
+            selecionar tens três maneiras: clicar em cada uma, <b>arrastar por cima
+            de várias</b> (arrancar numa que já esteja selecionada desmarca, como no
+            explorador de ficheiros), ou carregar em <kbd>S</kbd> com o rato pousado
+            numa imagem, sem clicar. O visto no cabeçalho marca a página inteira.
+            Espécies novas criam-se no painel da direita.
           </li>
           <li>
             <b>Confere na Coleção</b>: o separador do meio reúne, para cada
@@ -81,6 +84,8 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
             <h3>Separador Clusters</h3>
             <dl>
               <div><dt><kbd>A</kbd></dt><dd>atribuir a seleção à espécie ativa</dd></div>
+              <div><dt><kbd>S</kbd></dt><dd>selecionar a plântula que está debaixo do rato</dd></div>
+              <div><dt>arrastar</dt><dd>selecionar várias de seguida na grelha</dd></div>
               <div><dt><kbd>R</kbd></dt><dd>retirar a etiqueta às selecionadas</dd></div>
               <div><dt><kbd>D</kbd></dt><dd>limpar a seleção</dd></div>
               <div><dt><kbd>1</kbd>–<kbd>9</kbd></dt><dd>atribuir a seleção à espécie n.º N (ordem do painel direito)</dd></div>

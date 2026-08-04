@@ -4,6 +4,7 @@ import { A_CONFIRMAR, LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
+import { useDragSelect } from "./dragSelect";
 import { IconHelp, IconTrash } from "./icons";
 
 const IMAGES_PER_PAGE = 30;
@@ -27,6 +28,7 @@ export function Workspace({
   eppoOf,
   onSetActive,
   onToggleSelect,
+  onPaintSelect,
   onOpenLightbox,
   onAssign,
   onSelectPage,
@@ -55,6 +57,8 @@ export function Workspace({
   eppoOf: (l: string) => string;
   onSetActive: (l: string) => void;
   onToggleSelect: (f: string) => void;
+  // arrastamento: força o estado (não alterna) nos cartões por onde passa
+  onPaintSelect: (files: string[], on: boolean) => void;
   // segundo argumento = secção de onde se abriu; define a ordem do ←/→ no viewport
   onOpenLightbox: (f: string, scope: string[]) => void;
   onAssign: () => void;
@@ -71,6 +75,14 @@ export function Workspace({
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
   const ddRef = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
+
+  // arrastar sobre a grelha seleciona em série. Registado no corpo inteiro (e não
+  // grelha a grelha): vale para as "por classificar", para os grupos de espécie,
+  // para o "A confirmar" e para o Lixo sem repetir código.
+  const onDragSelect = useDragSelect({
+    isSelected: (f) => selection.has(f),
+    apply: onPaintSelect,
+  });
 
   // chegada via "Ir para cluster de origem": scroll até à imagem e realça-a
   // com a COR DA ESPÉCIE dessa imagem (fallback: vermelhão de acento)
@@ -151,7 +163,7 @@ export function Workspace({
   for (const f of selection) if (groundTruth[f]) labeledInSel++;
 
   return (
-    <div className="work-body" ref={bodyRef}>
+    <div className="work-body" ref={bodyRef} onPointerDown={onDragSelect}>
       <header className={`clu-header ${isNoise ? "noise" : ""}`}>
         <div className="ch-title">
           <h1>{isNoise ? "Ruído" : `Cluster ${clusterId}`}</h1>

@@ -15,6 +15,7 @@ export function SpeciesPanel({
   eppoOf,
   familyOf,
   rankOf,
+  countOf,
   onGoToSpecies,
   onAdd,
   onEditSpecies,
@@ -29,6 +30,7 @@ export function SpeciesPanel({
   eppoOf: (l: string) => string;
   familyOf: (l: string) => string;
   rankOf: (l: string) => string;
+  countOf: (l: string) => number;
   onGoToSpecies: (l: string) => void;
   onAdd: (name: string, code?: string, family?: string, rank?: string) => void;
   onEditSpecies: (oldName: string, name: string, code: string, family: string, rank: string) => void;
@@ -94,11 +96,17 @@ export function SpeciesPanel({
         )}
         {labels.map((lbl, i) => {
           const col = colorOf(lbl);
+          // uma FAMÍLIA não é uma espécie com um campo em falta: é outro nível de
+          // identificação. A linha inteira muda de registo (véu verde, barra
+          // lateral, versaletes) em vez de ganhar mais um chip — e some o "sem
+          // código", que anunciava a ausência de algo que se decidiu não ter.
+          const isFamilia = rankOf(lbl) === "familia";
+          const n = isFamilia ? countOf(lbl) : 0;
           return (
             <div
               key={lbl}
               data-species={lbl}
-              className={`sp-row ${lbl === activeSpecies ? "active" : ""} ${dragging === lbl ? "dragging" : ""} ${
+              className={`sp-row ${isFamilia ? "fam" : ""} ${lbl === activeSpecies ? "active" : ""} ${dragging === lbl ? "dragging" : ""} ${
                 dragOver === lbl && dragging && dragging !== lbl ? "drag-over" : ""
               }`}
               draggable
@@ -122,28 +130,37 @@ export function SpeciesPanel({
                 setDragOver(null);
               }}
               onClick={() => onGoToSpecies(lbl)}
-              title={expanded ? "Ver e auditar esta espécie · arrastar reordena" : lbl}
+              title={
+                expanded
+                  ? `Ver e auditar esta ${isFamilia ? "família" : "espécie"} · arrastar reordena`
+                  : lbl
+              }
             >
               <span className="sp-key">{i < 9 ? i + 1 : "·"}</span>
-              {/* minimizado: só a tecla e o código EPPO (nome só no tooltip) */}
+              {/* minimizado: só a tecla e o código EPPO (nome só no tooltip). Numa
+                  família não há código — e um "—" leria-se como lacuna; põe-se
+                  "fam.", que diz o que a etiqueta é. */}
               {!expanded ? (
-                <span className={`sp-mini-code ${eppoOf(lbl) ? "" : "none"}`}>{eppoOf(lbl) || "—"}</span>
+                isFamilia ? (
+                  <span className="sp-mini-code fam">fam.</span>
+                ) : (
+                  <span className={`sp-mini-code ${eppoOf(lbl) ? "" : "none"}`}>{eppoOf(lbl) || "—"}</span>
+                )
               ) : (
                 <>
                   <SpeciesThumb file={thumbOf(lbl)} size={30} />
                   {/* nome completo numa linha; código EPPO por baixo, mais pequeno */}
                   <div className="sp-id">
-                    <span className="sp-name">{lbl}</span>
-                    <span className="sp-tags">
-                      <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
-                      {/* marca de nível: só aparece quando NÃO é espécie, para o
-                          caso normal não ganhar ruído */}
-                      {rankOf(lbl) === "familia" && (
-                        <span className="rank-chip" title="Identificação ao nível da família">
-                          família
-                        </span>
-                      )}
-                    </span>
+                    <span className={`sp-name ${isFamilia ? "fam-name" : ""}`}>{lbl}</span>
+                    {isFamilia ? (
+                      <span className="fam-sub">
+                        família{n > 0 && <> · {n} {n === 1 ? "imagem" : "imagens"}</>}
+                      </span>
+                    ) : (
+                      <span className="sp-tags">
+                        <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
+                      </span>
+                    )}
                   </div>
                   {/* lápis = editor ÚNICO: nome + código + família + nível */}
                   <TaxonEditor
