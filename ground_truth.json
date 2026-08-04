@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-04T11:06:23.263Z",
+  "exported_at": "2026-08-04T11:07:16.720Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -28,7 +28,7 @@
     "Lamium purpureum",
     "Veronica arvensis",
     "Picris echioides",
-    "Convolvulus aravensis",
+    "Convolvulus arvensis",
     "Conyza bonariensis",
     "Chamaemelum mixtum",
     "Sonchus asper",
@@ -68,7 +68,6 @@
     "Lamium purpureum": "LAMPU",
     "Veronica arvensis": "VERAR",
     "Picris echioides": "PICEC",
-    "Convolvulus aravensis": "CONAR",
     "Conyza bonariensis": "ERIBO",
     "Chamaemelum mixtum": "ANTMI",
     "Sonchus asper": "SONAS",
@@ -76,7 +75,8 @@
     "Poa annua": "POAAN",
     "Xanthium spinosum": "XANSP",
     "Cyperus esculentus": "CYPES",
-    "Capsella rubella": "CAPRU"
+    "Capsella rubella": "CAPRU",
+    "Convolvulus arvensis": "CONAR"
   },
   "family": {
     "Digitaria sanguinalis": "Poaceae",
@@ -84,7 +84,8 @@
     "Solanum nigrum": "Solanaceae",
     "Xanthium spinosum": "Asteraceae",
     "Cyperus esculentus": "Cyperaceae",
-    "Capsella rubella": "Brassicaceae"
+    "Capsella rubella": "Brassicaceae",
+    "Convolvulus arvensis": "Convolvulaceae"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
@@ -1090,14 +1091,14 @@
     "20251110_153703_planta_5.jpg": "Sonchus oleraceus",
     "20251110_151639_planta_0.jpg": "Lamium purpureum",
     "20251110_153323_planta_20.jpg": "Lamium purpureum",
-    "20251110_151706_planta_8.jpg": "Convolvulus aravensis",
-    "20251110_152048_planta_0.jpg": "Convolvulus aravensis",
-    "20251110_152106_planta_3.jpg": "Convolvulus aravensis",
-    "20251110_152200_planta_3.jpg": "Convolvulus aravensis",
-    "20251110_152400_planta_2.jpg": "Convolvulus aravensis",
-    "20251110_152043_planta_2.jpg": "Convolvulus aravensis",
-    "20251110_152620_planta_8.jpg": "Convolvulus aravensis",
-    "20251110_153252_planta_6.jpg": "Convolvulus aravensis",
+    "20251110_151706_planta_8.jpg": "Convolvulus arvensis",
+    "20251110_152048_planta_0.jpg": "Convolvulus arvensis",
+    "20251110_152106_planta_3.jpg": "Convolvulus arvensis",
+    "20251110_152200_planta_3.jpg": "Convolvulus arvensis",
+    "20251110_152400_planta_2.jpg": "Convolvulus arvensis",
+    "20251110_152043_planta_2.jpg": "Convolvulus arvensis",
+    "20251110_152620_planta_8.jpg": "Convolvulus arvensis",
+    "20251110_153252_planta_6.jpg": "Convolvulus arvensis",
     "20251110_153333_planta_0.jpg": "Sonchus oleraceus",
     "JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_1.jpg": "Lixo",
     "20251110_151718_planta_3.jpg": "Lixo",
@@ -1171,12 +1172,12 @@
     "JPEG_V2_E2_2022-04-17_15_08_178797667229532918571_planta_0.jpg": "Lamium purpureum",
     "PHOTO-2026-05-20-09-48-42 (3)_planta_0.jpg": "Lamium purpureum",
     "20220425_153445_planta_1.jpg": "Chenopodium album",
-    "20220417_160738_planta_2.jpg": "Convolvulus aravensis",
+    "20220417_160738_planta_2.jpg": "Convolvulus arvensis",
     "20220417_160102_planta_1.jpg": "Lamium purpureum",
     "20220417_161021_planta_0.jpg": "Lamium purpureum",
     "20220417_161043_planta_1.jpg": "Lamium purpureum",
     "20220417_161054_planta_0.jpg": "Lamium purpureum",
-    "20251110_152601_planta_0.jpg": "Convolvulus aravensis",
+    "20251110_152601_planta_0.jpg": "Convolvulus arvensis",
     "20220425_164524_planta_5.jpg": "Lamium purpureum",
     "20220417_161036_planta_0.jpg": "Lamium purpureum",
     "20220417_160144_planta_2.jpg": "Lixo",
@@ -1891,10 +1892,10 @@
     "20251110_151826_planta_1.jpg": "Lixo",
     "20251110_151826_planta_2.jpg": "Lixo",
     "JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_2.jpg": "Lixo",
-    "20251110_153518_planta_2.jpg": "Convolvulus aravensis",
-    "20251110_153523_planta_1.jpg": "Convolvulus aravensis",
+    "20251110_153518_planta_2.jpg": "Convolvulus arvensis",
+    "20251110_153523_planta_1.jpg": "Convolvulus arvensis",
     "JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_8.jpg": "Lixo",
-    "JPEG_V2_E2_2022-04-17_15_14_557163148108367658012_planta_3.jpg": "Convolvulus aravensis",
+    "JPEG_V2_E2_2022-04-17_15_14_557163148108367658012_planta_3.jpg": "Convolvulus arvensis",
     "20251110_151755_planta_0.jpg": "Lixo",
     "PHOTO-2026-05-20-09-48-42 (4)_planta_12.jpg": "Amaranthus retroflexus",
     "PHOTO-2026-05-20-09-48-42 (6)_planta_23.jpg": "Amaranthus retroflexus",
@@ -2065,6 +2066,7 @@
     "20220417_152434_planta_5.jpg": "Chenopodium album",
     "20220417_152807_planta_8.jpg": "Lixo",
     "20220417_152829_planta_15.jpg": "Lixo",
-    "20220417_153622_planta_0.jpg": "Convolvulus aravensis"
+    "20220417_153622_planta_0.jpg": "Convolvulus arvensis",
+    "20220417_162003_planta_0.jpg": "Chenopodium album"
   }
 }
