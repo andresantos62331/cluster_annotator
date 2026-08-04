@@ -85,7 +85,7 @@ filename,label,eppo_code
 20220417_152315_planta_1.jpg,,
 20220417_152315_planta_10.jpg,Stellaria media,STEME
 20220417_152315_planta_11.jpg,Chenopodium album,CHEAL
-20220417_152315_planta_4.jpg,,
+20220417_152315_planta_4.jpg,Chenopodium album,CHEAL
 20220417_152315_planta_5.jpg,,
 20220417_152315_planta_9.jpg,Chenopodium album,CHEAL
 20220417_152330_planta_3.jpg,Amaranthus retroflexus,AMARE
@@ -111,7 +111,7 @@ filename,label,eppo_code
 20220417_152530_planta_1.jpg,Lixo,
 20220417_152530_planta_10.jpg,,
 20220417_152530_planta_11.jpg,Lixo,
-20220417_152530_planta_12.jpg,,
+20220417_152530_planta_12.jpg,Lixo,
 20220417_152530_planta_13.jpg,,
 20220417_152530_planta_14.jpg,Lixo,
 20220417_152530_planta_15.jpg,Lixo,
@@ -155,8 +155,8 @@ filename,label,eppo_code
 20220417_152725_planta_1.jpg,,
 20220417_152725_planta_2.jpg,,
 20220417_152744_planta_10.jpg,Lixo,
-20220417_152744_planta_11.jpg,,
-20220417_152744_planta_13.jpg,,
+20220417_152744_planta_11.jpg,Lixo,
+20220417_152744_planta_13.jpg,Lixo,
 20220417_152744_planta_3.jpg,Lixo,
 20220417_152744_planta_5.jpg,Lixo,
 20220417_152744_planta_6.jpg,Chenopodium album,CHEAL
@@ -229,7 +229,7 @@ filename,label,eppo_code
 20220417_152858_planta_5.jpg,Chenopodium album,CHEAL
 20220417_152905_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152905_planta_2.jpg,,
-20220417_152905_planta_3.jpg,,
+20220417_152905_planta_3.jpg,Lixo,
 20220417_152905_planta_4.jpg,Chenopodium album,CHEAL
 20220417_152916_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152916_planta_1.jpg,,
@@ -666,7 +666,7 @@ filename,label,eppo_code
 20220417_160716_planta_1.jpg,,
 20220417_160716_planta_2.jpg,,
 20220417_160726_planta_0.jpg,,
-20220417_160731_planta_0.jpg,,
+20220417_160731_planta_0.jpg,Urtica membranacea,URTDU
 20220417_160738_planta_0.jpg,,
 20220417_160738_planta_1.jpg,,
 20220417_160738_planta_2.jpg,Convolvulus arvensis,CONAR
@@ -763,7 +763,7 @@ filename,label,eppo_code
 20220417_162047_planta_1.jpg,Urtica urens,URTUR
 20220417_162047_planta_10.jpg,Solanum nigrum,SOLNI
 20220417_162047_planta_2.jpg,Polygonum aviculare,POLAV
-20220417_162047_planta_3.jpg,,
+20220417_162047_planta_3.jpg,Solanum nigrum,SOLNI
 20220417_162047_planta_5.jpg,Lixo,
 20220417_162047_planta_6.jpg,,
 20220417_162047_planta_7.jpg,Polygonum aviculare,POLAV
@@ -805,7 +805,7 @@ filename,label,eppo_code
 20220417_162126_planta_5.jpg,,
 20220417_162153_planta_0.jpg,,
 20220417_162153_planta_1.jpg,Urtica urens,URTUR
-20220417_162158_planta_1.jpg,,
+20220417_162158_planta_1.jpg,Chenopodium album,CHEAL
 20220417_162158_planta_2.jpg,,
 20220417_162158_planta_4.jpg,,
 20220417_162158_planta_5.jpg,,
@@ -903,7 +903,7 @@ filename,label,eppo_code
 20220417_162833_planta_3.jpg,Solanum nigrum,SOLNI
 20220417_162833_planta_5.jpg,Datura stramonium,DATST
 20220417_162833_planta_6.jpg,,
-20220417_162853_planta_0.jpg,,
+20220417_162853_planta_0.jpg,Urtica membranacea,URTDU
 20220417_162853_planta_1.jpg,Chamaemelum mixtum,ANTMI
 20220417_162853_planta_2.jpg,Datura stramonium,DATST
 20220417_162853_planta_3.jpg,Capsella rubella,CAPRU
@@ -941,8 +941,8 @@ filename,label,eppo_code
 20220417_163013_planta_0.jpg,,
 20220417_163050_planta_0.jpg,Lixo,
 20220417_163050_planta_3.jpg,,
-20220417_163057_planta_2.jpg,,
-20220417_163057_planta_3.jpg,,
+20220417_163057_planta_2.jpg,Lixo,
+20220417_163057_planta_3.jpg,Lixo,
 20220417_163057_planta_5.jpg,Lixo,
 20220417_163057_planta_6.jpg,,
 20220417_163121_planta_1.jpg,,
@@ -1007,7 +1007,7 @@ filename,label,eppo_code
 20220425_154004_planta_0.jpg,Chenopodium album,CHEAL
 20220425_154004_planta_1.jpg,,
 20220425_154004_planta_2.jpg,Chenopodium album,CHEAL
-20220425_154004_planta_3.jpg,,
+20220425_154004_planta_3.jpg,Lixo,
 20220425_154004_planta_4.jpg,,
 20220425_154037_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_154037_planta_1.jpg,Amaranthus retroflexus,AMARE
@@ -1327,7 +1327,7 @@ filename,label,eppo_code
 20220425_164542_planta_2.jpg,Chenopodium album,CHEAL
 20220425_164542_planta_3.jpg,,
 20220425_164542_planta_4.jpg,Portulaca oleracea,POROL
-20220425_164553_planta_0.jpg,,
+20220425_164553_planta_0.jpg,Lixo,
 20220425_164553_planta_1.jpg,Chenopodium album,CHEAL
 20220425_164632_planta_0.jpg,Lixo,
 20220425_164632_planta_1.jpg,,
@@ -1769,7 +1769,7 @@ filename,label,eppo_code
 20251110_151809_planta_2.jpg,Veronica arvensis,VERAR
 20251110_151809_planta_3.jpg,,
 20251110_151809_planta_4.jpg,,
-20251110_151809_planta_6.jpg,,
+20251110_151809_planta_6.jpg,Urtica membranacea,URTDU
 20251110_151809_planta_7.jpg,,
 20251110_151815_planta_0.jpg,Urtica urens,URTUR
 20251110_151815_planta_1.jpg,Urtica urens,URTUR
@@ -1781,7 +1781,7 @@ filename,label,eppo_code
 20251110_151826_planta_1.jpg,Lixo,
 20251110_151826_planta_2.jpg,Lixo,
 20251110_151826_planta_3.jpg,Urtica urens,URTUR
-20251110_151832_planta_0.jpg,,
+20251110_151832_planta_0.jpg,Urtica membranacea,URTDU
 20251110_151832_planta_1.jpg,Lamium purpureum,LAMPU
 20251110_151832_planta_2.jpg,,
 20251110_151837_planta_0.jpg,Urtica urens,URTUR
@@ -1803,7 +1803,7 @@ filename,label,eppo_code
 20251110_151905_planta_1.jpg,Urtica urens,URTUR
 20251110_151905_planta_2.jpg,,
 20251110_151905_planta_3.jpg,Malva sylvestris,MALSI
-20251110_151913_planta_0.jpg,,
+20251110_151913_planta_0.jpg,Urtica membranacea,URTDU
 20251110_151924_planta_0.jpg,Lixo,
 20251110_151930_planta_0.jpg,,
 20251110_151933_planta_0.jpg,,
@@ -1827,7 +1827,7 @@ filename,label,eppo_code
 20251110_151952_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_151952_planta_1.jpg,Lixo,
 20251110_151952_planta_2.jpg,,
-20251110_151952_planta_4.jpg,,
+20251110_151952_planta_4.jpg,Urtica membranacea,URTDU
 20251110_151956_planta_0.jpg,Lixo,
 20251110_151956_planta_1.jpg,Lixo,
 20251110_152002_planta_0.jpg,Urtica urens,URTUR
@@ -1856,7 +1856,7 @@ filename,label,eppo_code
 20251110_152043_planta_1.jpg,,
 20251110_152043_planta_2.jpg,Convolvulus arvensis,CONAR
 20251110_152043_planta_3.jpg,Lixo,
-20251110_152043_planta_5.jpg,,
+20251110_152043_planta_5.jpg,Urtica membranacea,URTDU
 20251110_152043_planta_6.jpg,,
 20251110_152048_planta_0.jpg,Convolvulus arvensis,CONAR
 20251110_152055_planta_0.jpg,Sonchus oleraceus,SONOL
@@ -1921,21 +1921,21 @@ filename,label,eppo_code
 20251110_152204_planta_3.jpg,Lixo,
 20251110_152204_planta_4.jpg,,
 20251110_152206_planta_1.jpg,Portulaca oleracea,POROL
-20251110_152210_planta_0.jpg,,
+20251110_152210_planta_0.jpg,Urtica membranacea,URTDU
 20251110_152210_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152210_planta_2.jpg,,
 20251110_152214_planta_1.jpg,Urtica urens,URTUR
 20251110_152214_planta_2.jpg,,
 20251110_152214_planta_3.jpg,Lixo,
 20251110_152214_planta_4.jpg,Lixo,
-20251110_152216_planta_0.jpg,,
+20251110_152216_planta_0.jpg,Urtica membranacea,URTDU
 20251110_152216_planta_1.jpg,Lixo,
 20251110_152216_planta_2.jpg,Erodium moschatum,EROMO
 20251110_152216_planta_3.jpg,,
 20251110_152219_planta_0.jpg,Sonchus oleraceus,SONOL
 20251110_152219_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152219_planta_2.jpg,,
-20251110_152221_planta_0.jpg,,
+20251110_152221_planta_0.jpg,Urtica membranacea,URTDU
 20251110_152221_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152221_planta_2.jpg,Erodium moschatum,EROMO
 20251110_152221_planta_3.jpg,Sonchus asper,SONAS
@@ -1954,7 +1954,7 @@ filename,label,eppo_code
 20251110_152234_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152239_planta_0.jpg,,
 20251110_152239_planta_1.jpg,Lixo,
-20251110_152239_planta_2.jpg,,
+20251110_152239_planta_2.jpg,Urtica membranacea,URTDU
 20251110_152239_planta_4.jpg,,
 20251110_152247_planta_0.jpg,Lixo,
 20251110_152247_planta_10.jpg,Lixo,
@@ -2019,7 +2019,7 @@ filename,label,eppo_code
 20251110_152338_planta_3.jpg,,
 20251110_152338_planta_5.jpg,,
 20251110_152338_planta_6.jpg,Lixo,
-20251110_152338_planta_7.jpg,,
+20251110_152338_planta_7.jpg,Urtica membranacea,URTDU
 20251110_152344_planta_0.jpg,,
 20251110_152344_planta_1.jpg,,
 20251110_152344_planta_2.jpg,,
@@ -2117,7 +2117,7 @@ filename,label,eppo_code
 20251110_152601_planta_0.jpg,Convolvulus arvensis,CONAR
 20251110_152601_planta_1.jpg,Erodium moschatum,EROMO
 20251110_152607_planta_0.jpg,Erodium moschatum,EROMO
-20251110_152607_planta_2.jpg,,
+20251110_152607_planta_2.jpg,Urtica membranacea,URTDU
 20251110_152607_planta_3.jpg,Lixo,
 20251110_152620_planta_0.jpg,,
 20251110_152620_planta_1.jpg,,
@@ -2800,7 +2800,7 @@ IMG_20220501_160433_planta_0.jpg,Chenopodium album,CHEAL
 IMG_20220501_160433_planta_2.jpg,Chenopodium album,CHEAL
 IMG_20220501_160517_planta_0.jpg,Chenopodium album,CHEAL
 IMG_20220501_160517_planta_2.jpg,Chenopodium album,CHEAL
-IMG_20220501_160525_planta_0.jpg,,
+IMG_20220501_160525_planta_0.jpg,Lixo,
 IMG_20220501_160525_planta_1.jpg,Chenopodium album,CHEAL
 IMG_20220501_160525_planta_2.jpg,Chenopodium album,CHEAL
 IMG_20220501_160525_planta_3.jpg,Chenopodium album,CHEAL
