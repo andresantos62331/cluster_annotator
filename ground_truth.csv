@@ -43,7 +43,7 @@ filename,label,eppo_code
 20220417_141751_planta_1.jpg,Spergula arvensis,SPRAR
 20220417_141751_planta_10.jpg,Lixo,
 20220417_141751_planta_12.jpg,Spergula arvensis,SPRAR
-20220417_141751_planta_13.jpg,,
+20220417_141751_planta_13.jpg,Lixo,
 20220417_141751_planta_14.jpg,,
 20220417_141751_planta_15.jpg,Oxalis pes-caprae,OXAPC
 20220417_141751_planta_2.jpg,Lixo,
@@ -1357,7 +1357,7 @@ filename,label,eppo_code
 20251109_162125_planta_2.jpg,,
 20251109_162129_planta_0.jpg,Lixo,
 20251109_162130_planta_0.jpg,Lixo,
-20251109_162130_planta_1.jpg,,
+20251109_162130_planta_1.jpg,Lixo,
 20251109_162130_planta_2.jpg,,
 20251109_162130_planta_4.jpg,,
 20251109_162130_planta_5.jpg,Lixo,
@@ -2271,7 +2271,7 @@ filename,label,eppo_code
 20251110_152932_planta_1.jpg,,
 20251110_152932_planta_2.jpg,Erodium moschatum,EROMO
 20251110_152937_planta_0.jpg,Portulaca oleracea,POROL
-20251110_152937_planta_3.jpg,,
+20251110_152937_planta_3.jpg,Lixo,
 20251110_152937_planta_4.jpg,Portulaca oleracea,POROL
 20251110_152937_planta_5.jpg,,
 20251110_152943_planta_0.jpg,,
@@ -2446,7 +2446,7 @@ filename,label,eppo_code
 20251110_153305_planta_16.jpg,,
 20251110_153305_planta_17.jpg,,
 20251110_153305_planta_18.jpg,Veronica arvensis,VERAR
-20251110_153305_planta_19.jpg,,
+20251110_153305_planta_19.jpg,Lixo,
 20251110_153305_planta_2.jpg,,
 20251110_153305_planta_21.jpg,,
 20251110_153305_planta_22.jpg,,
@@ -2534,7 +2534,7 @@ filename,label,eppo_code
 20251110_153323_planta_21.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_22.jpg,,
 20251110_153323_planta_23.jpg,Lixo,
-20251110_153323_planta_24.jpg,,
+20251110_153323_planta_24.jpg,Lixo,
 20251110_153323_planta_25.jpg,Veronica arvensis,VERAR
 20251110_153323_planta_26.jpg,,
 20251110_153323_planta_27.jpg,,
