@@ -137,7 +137,7 @@ filename,label,eppo_code
 20220417_152614_planta_5.jpg,,
 20220417_152614_planta_7.jpg,,
 20220417_152614_planta_9.jpg,Urtica urens,URTUR
-20220417_152626_planta_0.jpg,,
+20220417_152626_planta_0.jpg,Lixo,
 20220417_152626_planta_1.jpg,,
 20220417_152626_planta_2.jpg,,
 20220417_152715_planta_0.jpg,,
@@ -341,13 +341,13 @@ filename,label,eppo_code
 20220417_154547_planta_1.jpg,,
 20220417_154547_planta_2.jpg,Sonchus oleraceus,SONOL
 20220417_154547_planta_3.jpg,Polygonum aviculare,POLAV
-20220417_154547_planta_4.jpg,,
+20220417_154547_planta_4.jpg,Lamium purpureum,LAMPU
 20220417_154547_planta_5.jpg,,
 20220417_154547_planta_6.jpg,,
-20220417_154556_planta_0.jpg,,
+20220417_154556_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_154556_planta_1.jpg,Polygonum aviculare,POLAV
 20220417_154556_planta_2.jpg,Polygonum aviculare,POLAV
-20220417_154556_planta_3.jpg,,
+20220417_154556_planta_3.jpg,Lamium purpureum,LAMPU
 20220417_154556_planta_4.jpg,Polygonum aviculare,POLAV
 20220417_154556_planta_5.jpg,Lamium purpureum,LAMPU
 20220417_154556_planta_6.jpg,Papaver rhoeas,PAPRH
@@ -455,7 +455,7 @@ filename,label,eppo_code
 20220417_155200_planta_3.jpg,,
 20220417_155200_planta_4.jpg,Conyza bonariensis,ERIBO
 20220417_155209_planta_0.jpg,Lixo,
-20220417_155213_planta_0.jpg,,
+20220417_155213_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_155216_planta_0.jpg,Lixo,
 20220417_155223_planta_0.jpg,,
 20220417_155228_planta_0.jpg,Conyza bonariensis,ERIBO
@@ -618,7 +618,7 @@ filename,label,eppo_code
 20220417_160348_planta_4.jpg,,
 20220417_160348_planta_6.jpg,Conyza bonariensis,ERIBO
 20220417_160348_planta_7.jpg,,
-20220417_160351_planta_0.jpg,,
+20220417_160351_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_160359_planta_0.jpg,,
 20220417_160359_planta_1.jpg,,
 20220417_160401_planta_1.jpg,Lixo,
@@ -706,7 +706,7 @@ filename,label,eppo_code
 20220417_161032_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_161036_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_161043_planta_1.jpg,Lamium purpureum,LAMPU
-20220417_161043_planta_2.jpg,,
+20220417_161043_planta_2.jpg,Lamium purpureum,LAMPU
 20220417_161043_planta_3.jpg,Lamium purpureum,LAMPU
 20220417_161043_planta_4.jpg,,
 20220417_161048_planta_1.jpg,Solanum nigrum,SOLNI
@@ -722,7 +722,7 @@ filename,label,eppo_code
 20220417_161149_planta_0.jpg,,
 20220417_161149_planta_1.jpg,Chenopodium album,CHEAL
 20220417_161155_planta_0.jpg,,
-20220417_161155_planta_1.jpg,,
+20220417_161155_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_161204_planta_0.jpg,,
 20220417_161204_planta_1.jpg,Lamium purpureum,LAMPU
 20220417_161220_planta_0.jpg,,
@@ -755,7 +755,7 @@ filename,label,eppo_code
 20220417_162044_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_162044_planta_10.jpg,Lixo,
 20220417_162044_planta_3.jpg,Ranunculus arvensis,RANAR
-20220417_162044_planta_4.jpg,,
+20220417_162044_planta_4.jpg,Urtica membranacea,URTDU
 20220417_162044_planta_5.jpg,,
 20220417_162044_planta_6.jpg,Lixo,
 20220417_162044_planta_7.jpg,Polygonum aviculare,POLAV
@@ -1158,7 +1158,7 @@ filename,label,eppo_code
 20220425_161430_planta_0.jpg,,
 20220425_161505_planta_1.jpg,Veronica arvensis,VERAR
 20220425_161505_planta_2.jpg,Lamium purpureum,LAMPU
-20220425_161528_planta_0.jpg,,
+20220425_161528_planta_0.jpg,Urtica membranacea,URTDU
 20220425_161541_planta_0.jpg,Veronica arvensis,VERAR
 20220425_161541_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_161606_planta_0.jpg,Veronica arvensis,VERAR
@@ -1649,7 +1649,7 @@ filename,label,eppo_code
 20251110_151657_planta_0.jpg,,
 20251110_151657_planta_1.jpg,Lixo,
 20251110_151657_planta_2.jpg,,
-20251110_151657_planta_3.jpg,,
+20251110_151657_planta_3.jpg,Lamium purpureum,LAMPU
 20251110_151657_planta_4.jpg,Erodium moschatum,EROMO
 20251110_151657_planta_5.jpg,,
 20251110_151657_planta_6.jpg,Lixo,
@@ -2594,7 +2594,7 @@ filename,label,eppo_code
 20251110_153343_planta_0.jpg,Erodium moschatum,EROMO
 20251110_153343_planta_1.jpg,Lixo,
 20251110_153343_planta_2.jpg,,
-20251110_153343_planta_3.jpg,,
+20251110_153343_planta_3.jpg,Lamium purpureum,LAMPU
 20251110_153343_planta_4.jpg,Urtica urens,URTUR
 20251110_153346_planta_10.jpg,,
 20251110_153348_planta_0.jpg,Erodium moschatum,EROMO
@@ -3036,7 +3036,7 @@ JPEG_V2_E2_2022-04-17_15_03_11407436386605646383_planta_0.jpg,Sonchus oleraceus,
 JPEG_V2_E2_2022-04-17_15_03_361668909907542053532_planta_0.jpg,,
 JPEG_V2_E2_2022-04-17_15_05_142956869952048958502_planta_0.jpg,Lamium purpureum,LAMPU
 JPEG_V2_E2_2022-04-17_15_05_367381504713831249107_planta_0.jpg,Chenopodium album,CHEAL
-JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_0.jpg,,
+JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_0.jpg,Lamium purpureum,LAMPU
 JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_2.jpg,Urtica urens,URTUR
 JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_3.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_07_287454493324412044073_planta_0.jpg,Papaver rhoeas,PAPRH
