@@ -88,7 +88,7 @@ filename,label,eppo_code
 20220417_152315_planta_4.jpg,,
 20220417_152315_planta_5.jpg,,
 20220417_152315_planta_9.jpg,,
-20220417_152330_planta_3.jpg,,
+20220417_152330_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220417_152334_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152334_planta_3.jpg,Chenopodium album,CHEAL
 20220417_152334_planta_4.jpg,Chenopodium album,CHEAL
@@ -130,7 +130,7 @@ filename,label,eppo_code
 20220417_152540_planta_5.jpg,,
 20220417_152540_planta_6.jpg,Chenopodium album,CHEAL
 20220417_152540_planta_7.jpg,Stellaria media,STEME
-20220417_152558_planta_0.jpg,,
+20220417_152558_planta_0.jpg,Lixo,
 20220417_152614_planta_2.jpg,Lixo,
 20220417_152614_planta_3.jpg,,
 20220417_152614_planta_4.jpg,,
@@ -792,7 +792,7 @@ filename,label,eppo_code
 20220417_162106_planta_7.jpg,Lixo,
 20220417_162106_planta_8.jpg,,
 20220417_162106_planta_9.jpg,Lixo,
-20220417_162110_planta_0.jpg,,
+20220417_162110_planta_0.jpg,Urtica membranacea,URTDU
 20220417_162111_planta_1.jpg,Sonchus asper,SONAS
 20220417_162118_planta_0.jpg,Ranunculus arvensis,RANAR
 20220417_162118_planta_1.jpg,,
