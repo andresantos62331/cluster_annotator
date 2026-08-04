@@ -80,7 +80,7 @@ filename,label,eppo_code
 20220417_152259_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152259_planta_3.jpg,Stellaria media,STEME
 20220417_152259_planta_4.jpg,,
-20220417_152259_planta_5.jpg,,
+20220417_152259_planta_5.jpg,Urtica membranacea,URTDU
 20220417_152315_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152315_planta_1.jpg,,
 20220417_152315_planta_10.jpg,Stellaria media,STEME
@@ -502,7 +502,7 @@ filename,label,eppo_code
 20220417_155631_planta_2.jpg,Sonchus oleraceus,SONOL
 20220417_155631_planta_3.jpg,Lixo,
 20220417_155631_planta_5.jpg,Senecio vulgaris,SENVU
-20220417_155631_planta_6.jpg,,
+20220417_155631_planta_6.jpg,Urtica membranacea,URTDU
 20220417_155631_planta_7.jpg,Lamium purpureum,LAMPU
 20220417_155631_planta_8.jpg,,
 20220417_155631_planta_9.jpg,,
@@ -1107,7 +1107,7 @@ filename,label,eppo_code
 20220425_155541_planta_16.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_3.jpg,,
 20220425_155541_planta_4.jpg,Amaranthus retroflexus,AMARE
-20220425_155541_planta_6.jpg,,
+20220425_155541_planta_6.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_7.jpg,Amaranthus retroflexus,AMARE
 20220425_155541_planta_8.jpg,Chenopodium album,CHEAL
 20220425_155541_planta_9.jpg,Lixo,
@@ -1117,7 +1117,7 @@ filename,label,eppo_code
 20220425_155617_planta_4.jpg,Lixo,
 20220425_155631_planta_0.jpg,,
 20220425_155647_planta_0.jpg,Amaranthus retroflexus,AMARE
-20220425_155703_planta_0.jpg,,
+20220425_155703_planta_0.jpg,Amaranthus retroflexus,AMARE
 20220425_155854_planta_0.jpg,Lixo,
 20220425_155948_planta_0.jpg,,
 20220425_155948_planta_1.jpg,,
@@ -1905,7 +1905,7 @@ filename,label,eppo_code
 20251110_152151_planta_3.jpg,,
 20251110_152151_planta_4.jpg,,
 20251110_152151_planta_5.jpg,Urtica urens,URTUR
-20251110_152151_planta_6.jpg,,
+20251110_152151_planta_6.jpg,Urtica membranacea,URTDU
 20251110_152151_planta_7.jpg,Erodium moschatum,EROMO
 20251110_152151_planta_8.jpg,Urtica urens,URTUR
 20251110_152155_planta_0.jpg,Erodium moschatum,EROMO
@@ -3081,7 +3081,7 @@ JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_6.jpg,,
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_7.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_8.jpg,,
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_9.jpg,,
-JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_1.jpg,,
+JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_1.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_3.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_4.jpg,,
 JPEG_V2_E2_2022-04-17_15_10_287777538058179854588_planta_6.jpg,,
@@ -3194,7 +3194,7 @@ PHOTO-2026-05-20-09-48-42 (1)_planta_8.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (1)_planta_9.jpg,Urtica urens,URTUR
 PHOTO-2026-05-20-09-48-42 (10)_planta_0.jpg,Digitaria sanguinalis,DIGSA
 PHOTO-2026-05-20-09-48-42 (10)_planta_10.jpg,Amaranthus retroflexus,AMARE
-PHOTO-2026-05-20-09-48-42 (10)_planta_11.jpg,,
+PHOTO-2026-05-20-09-48-42 (10)_planta_11.jpg,Urtica membranacea,URTDU
 PHOTO-2026-05-20-09-48-42 (10)_planta_12.jpg,Galinsoga parviflora,GASPA
 PHOTO-2026-05-20-09-48-42 (10)_planta_13.jpg,Chenopodium album,CHEAL
 PHOTO-2026-05-20-09-48-42 (10)_planta_14.jpg,Lixo,
