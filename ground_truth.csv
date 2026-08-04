@@ -87,7 +87,7 @@ filename,label,eppo_code
 20220417_152315_planta_11.jpg,Chenopodium album,CHEAL
 20220417_152315_planta_4.jpg,,
 20220417_152315_planta_5.jpg,,
-20220417_152315_planta_9.jpg,,
+20220417_152315_planta_9.jpg,Chenopodium album,CHEAL
 20220417_152330_planta_3.jpg,Amaranthus retroflexus,AMARE
 20220417_152334_planta_0.jpg,Chenopodium album,CHEAL
 20220417_152334_planta_3.jpg,Chenopodium album,CHEAL
@@ -101,7 +101,7 @@ filename,label,eppo_code
 20220417_152434_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152434_planta_10.jpg,Chenopodium album,CHEAL
 20220417_152434_planta_4.jpg,Chenopodium album,CHEAL
-20220417_152434_planta_5.jpg,,
+20220417_152434_planta_5.jpg,Chenopodium album,CHEAL
 20220417_152434_planta_6.jpg,Chenopodium opulifolium,CHEOP
 20220417_152434_planta_7.jpg,Chenopodium album,CHEAL
 20220417_152434_planta_8.jpg,Chenopodium album,CHEAL
@@ -176,7 +176,7 @@ filename,label,eppo_code
 20220417_152807_planta_3.jpg,Chenopodium album,CHEAL
 20220417_152807_planta_4.jpg,Chenopodium album,CHEAL
 20220417_152807_planta_5.jpg,Chenopodium album,CHEAL
-20220417_152807_planta_8.jpg,,
+20220417_152807_planta_8.jpg,Lixo,
 20220417_152823_planta_0.jpg,,
 20220417_152823_planta_10.jpg,,
 20220417_152823_planta_11.jpg,,
@@ -191,7 +191,7 @@ filename,label,eppo_code
 20220417_152829_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152829_planta_10.jpg,Chenopodium album,CHEAL
 20220417_152829_planta_13.jpg,Chenopodium album,CHEAL
-20220417_152829_planta_15.jpg,,
+20220417_152829_planta_15.jpg,Lixo,
 20220417_152829_planta_16.jpg,,
 20220417_152829_planta_2.jpg,Chenopodium album,CHEAL
 20220417_152829_planta_3.jpg,,
@@ -263,7 +263,7 @@ filename,label,eppo_code
 20220417_153557_planta_2.jpg,Lixo,
 20220417_153559_planta_1.jpg,Stellaria media,STEME
 20220417_153614_planta_0.jpg,,
-20220417_153622_planta_0.jpg,,
+20220417_153622_planta_0.jpg,Convolvulus aravensis,CONAR
 20220417_153635_planta_1.jpg,Solanum nigrum,SOLNI
 20220417_153706_planta_0.jpg,Lamium purpureum,LAMPU
 20220417_153740_planta_1.jpg,,
