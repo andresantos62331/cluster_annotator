@@ -1623,7 +1623,7 @@ filename,label,eppo_code
 20251110_151645_planta_6.jpg,,
 20251110_151645_planta_7.jpg,,
 20251110_151645_planta_8.jpg,Lixo,
-20251110_151645_planta_9.jpg,,
+20251110_151645_planta_9.jpg,Erodium moschatum,EROMO
 20251110_151648_planta_0.jpg,,
 20251110_151648_planta_2.jpg,,
 20251110_151648_planta_3.jpg,,
@@ -1633,7 +1633,7 @@ filename,label,eppo_code
 20251110_151648_planta_7.jpg,,
 20251110_151652_planta_0.jpg,Erodium moschatum,EROMO
 20251110_151652_planta_1.jpg,,
-20251110_151652_planta_2.jpg,,
+20251110_151652_planta_2.jpg,Erodium moschatum,EROMO
 20251110_151655_planta_1.jpg,Urtica urens,URTUR
 20251110_151655_planta_11.jpg,,
 20251110_151655_planta_12.jpg,Erodium moschatum,EROMO
@@ -1659,7 +1659,7 @@ filename,label,eppo_code
 20251110_151701_planta_3.jpg,Erodium moschatum,EROMO
 20251110_151701_planta_4.jpg,Erodium moschatum,EROMO
 20251110_151701_planta_5.jpg,,
-20251110_151703_planta_0.jpg,,
+20251110_151703_planta_0.jpg,Erodium moschatum,EROMO
 20251110_151703_planta_1.jpg,Lixo,
 20251110_151703_planta_2.jpg,Urtica urens,URTUR
 20251110_151703_planta_3.jpg,,
@@ -1742,7 +1742,7 @@ filename,label,eppo_code
 20251110_151746_planta_4.jpg,Erodium moschatum,EROMO
 20251110_151746_planta_5.jpg,,
 20251110_151746_planta_6.jpg,Lixo,
-20251110_151746_planta_7.jpg,,
+20251110_151746_planta_7.jpg,Erodium moschatum,EROMO
 20251110_151746_planta_8.jpg,Veronica arvensis,VERAR
 20251110_151746_planta_9.jpg,Urtica urens,URTUR
 20251110_151749_planta_0.jpg,Sonchus oleraceus,SONOL
@@ -2206,7 +2206,7 @@ filename,label,eppo_code
 20251110_152850_planta_11.jpg,Erodium moschatum,EROMO
 20251110_152850_planta_12.jpg,Lixo,
 20251110_152850_planta_13.jpg,Erodium moschatum,EROMO
-20251110_152850_planta_14.jpg,,
+20251110_152850_planta_14.jpg,Erodium moschatum,EROMO
 20251110_152850_planta_15.jpg,Erodium moschatum,EROMO
 20251110_152850_planta_16.jpg,,
 20251110_152850_planta_17.jpg,Erodium moschatum,EROMO
@@ -2214,7 +2214,7 @@ filename,label,eppo_code
 20251110_152850_planta_3.jpg,Erodium moschatum,EROMO
 20251110_152850_planta_4.jpg,Erodium moschatum,EROMO
 20251110_152850_planta_5.jpg,Lixo,
-20251110_152850_planta_6.jpg,,
+20251110_152850_planta_6.jpg,Diplotaxis catholica,DIPCA
 20251110_152850_planta_7.jpg,Lixo,
 20251110_152850_planta_8.jpg,Erodium moschatum,EROMO
 20251110_152850_planta_9.jpg,Erodium moschatum,EROMO
@@ -2279,7 +2279,7 @@ filename,label,eppo_code
 20251110_152943_planta_2.jpg,,
 20251110_152943_planta_3.jpg,,
 20251110_152943_planta_4.jpg,,
-20251110_152959_planta_0.jpg,,
+20251110_152959_planta_0.jpg,Erodium moschatum,EROMO
 20251110_153005_planta_0.jpg,,
 20251110_153005_planta_1.jpg,Portulaca oleracea,POROL
 20251110_153005_planta_2.jpg,Portulaca oleracea,POROL
@@ -2389,10 +2389,10 @@ filename,label,eppo_code
 20251110_153235_planta_1.jpg,Erodium moschatum,EROMO
 20251110_153235_planta_2.jpg,,
 20251110_153235_planta_3.jpg,,
-20251110_153235_planta_4.jpg,,
+20251110_153235_planta_4.jpg,Erodium moschatum,EROMO
 20251110_153235_planta_5.jpg,Erodium moschatum,EROMO
 20251110_153235_planta_6.jpg,Erodium moschatum,EROMO
-20251110_153235_planta_7.jpg,,
+20251110_153235_planta_7.jpg,Erodium moschatum,EROMO
 20251110_153235_planta_8.jpg,Erodium moschatum,EROMO
 20251110_153242_planta_0.jpg,Erodium moschatum,EROMO
 20251110_153242_planta_1.jpg,Erodium moschatum,EROMO
@@ -2680,7 +2680,7 @@ filename,label,eppo_code
 20251110_153453_planta_2.jpg,Erodium moschatum,EROMO
 20251110_153453_planta_4.jpg,,
 20251110_153453_planta_5.jpg,Erodium moschatum,EROMO
-20251110_153453_planta_6.jpg,,
+20251110_153453_planta_6.jpg,Erodium moschatum,EROMO
 20251110_153457_planta_0.jpg,Erodium moschatum,EROMO
 20251110_153457_planta_2.jpg,,
 20251110_153457_planta_3.jpg,Erodium moschatum,EROMO
@@ -2709,7 +2709,7 @@ filename,label,eppo_code
 20251110_153510_planta_3.jpg,Lixo,
 20251110_153510_planta_4.jpg,Lixo,
 20251110_153510_planta_5.jpg,,
-20251110_153510_planta_6.jpg,,
+20251110_153510_planta_6.jpg,Erodium moschatum,EROMO
 20251110_153510_planta_8.jpg,Lixo,
 20251110_153513_planta_0.jpg,,
 20251110_153513_planta_1.jpg,,
