@@ -138,10 +138,10 @@ filename,label,eppo_code
 20220417_152614_planta_7.jpg,,
 20220417_152614_planta_9.jpg,Urtica urens,URTUR
 20220417_152626_planta_0.jpg,Lixo,
-20220417_152626_planta_1.jpg,,
+20220417_152626_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152626_planta_2.jpg,,
 20220417_152715_planta_0.jpg,,
-20220417_152715_planta_1.jpg,,
+20220417_152715_planta_1.jpg,Chenopodium album,CHEAL
 20220417_152715_planta_10.jpg,Lixo,
 20220417_152715_planta_11.jpg,Chenopodium album,CHEAL
 20220417_152715_planta_12.jpg,,
@@ -172,7 +172,7 @@ filename,label,eppo_code
 20220417_152807_planta_1.jpg,,
 20220417_152807_planta_11.jpg,,
 20220417_152807_planta_12.jpg,Lixo,
-20220417_152807_planta_15.jpg,,
+20220417_152807_planta_15.jpg,Lixo,
 20220417_152807_planta_3.jpg,Chenopodium album,CHEAL
 20220417_152807_planta_4.jpg,Chenopodium album,CHEAL
 20220417_152807_planta_5.jpg,Chenopodium album,CHEAL
@@ -582,7 +582,7 @@ filename,label,eppo_code
 20220417_160122_planta_0.jpg,,
 20220417_160134_planta_0.jpg,,
 20220417_160144_planta_0.jpg,,
-20220417_160144_planta_1.jpg,,
+20220417_160144_planta_1.jpg,Lixo,
 20220417_160144_planta_2.jpg,Lixo,
 20220417_160147_planta_1.jpg,,
 20220417_160147_planta_2.jpg,Papaver rhoeas,PAPRH
@@ -614,7 +614,7 @@ filename,label,eppo_code
 20220417_160338_planta_1.jpg,,
 20220417_160343_planta_0.jpg,Diplotaxis catholica,DIPCA
 20220417_160343_planta_1.jpg,,
-20220417_160348_planta_2.jpg,,
+20220417_160348_planta_2.jpg,Lixo,
 20220417_160348_planta_4.jpg,,
 20220417_160348_planta_6.jpg,Conyza bonariensis,ERIBO
 20220417_160348_planta_7.jpg,,
@@ -866,7 +866,7 @@ filename,label,eppo_code
 20220417_162557_planta_2.jpg,Polygonum aviculare,POLAV
 20220417_162559_planta_1.jpg,Urtica urens,URTUR
 20220417_162559_planta_3.jpg,Urtica urens,URTUR
-20220417_162559_planta_4.jpg,,
+20220417_162559_planta_4.jpg,Solanum nigrum,SOLNI
 20220417_162606_planta_0.jpg,,
 20220417_162606_planta_2.jpg,,
 20220417_162606_planta_3.jpg,,
@@ -1048,7 +1048,7 @@ filename,label,eppo_code
 20220425_154443_planta_2.jpg,Portulaca oleracea,POROL
 20220425_154520_planta_0.jpg,Lixo,
 20220425_154534_planta_1.jpg,Chenopodium album,CHEAL
-20220425_154534_planta_2.jpg,,
+20220425_154534_planta_2.jpg,Lixo,
 20220425_154534_planta_3.jpg,Lixo,
 20220425_154534_planta_4.jpg,Portulaca oleracea,POROL
 20220425_154534_planta_5.jpg,Portulaca oleracea,POROL
@@ -3135,7 +3135,7 @@ JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_5.jpg,Chenopodium album,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_7.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_9.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_14_224071973522240993721_planta_1.jpg,Chenopodium album,CHEAL
-JPEG_V2_E2_2022-04-17_15_14_224071973522240993721_planta_4.jpg,,
+JPEG_V2_E2_2022-04-17_15_14_224071973522240993721_planta_4.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_14_557163148108367658012_planta_2.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_14_557163148108367658012_planta_3.jpg,Convolvulus arvensis,CONAR
 JPEG_V2_E2_2022-04-17_15_15_122599809702312262922_planta_1.jpg,,
