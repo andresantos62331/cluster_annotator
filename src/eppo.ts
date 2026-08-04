@@ -50,6 +50,35 @@ export function checkEppo(entries: EppoEntry[], code: string, label: string): Ep
   return { kind: "mismatch", entry, suggestion };
 }
 
+/**
+ * Famílias botânicas presentes no vocabulário, por ordem alfabética.
+ *
+ * Derivadas do campo `family` das espécies — não há uma lista à parte a manter.
+ * Servem de sugestão ao criar uma etiqueta de família, para não se escrever o
+ * nome à mão (e à segunda tentativa, "pocacea").
+ */
+export function allFamilies(entries: EppoEntry[]): string[] {
+  const set = new Set<string>();
+  for (const e of entries) if (e.family) set.add(e.family);
+  return [...set].sort((a, b) => a.localeCompare(b, "pt"));
+}
+
+/** Procura famílias por prefixo, depois por conteúdo. */
+export function searchFamilies(entries: EppoEntry[], q: string, limit = 8): string[] {
+  const fams = allFamilies(entries);
+  const s = q.trim().toLowerCase();
+  if (!s) return fams.slice(0, limit);
+  return fams
+    .map((f) => {
+      const l = f.toLowerCase();
+      return [l.startsWith(s) ? 0 : l.includes(s) ? 1 : Infinity, f] as const;
+    })
+    .filter(([sc]) => sc !== Infinity)
+    .sort((a, b) => a[0] - b[0] || a[1].localeCompare(b[1], "pt"))
+    .slice(0, limit)
+    .map(([, f]) => f);
+}
+
 // pesquisa tolerante por código, nome científico ou nome comum (pt). Devolve as
 // melhores correspondências ordenadas (prefixo > contém), limitado a `limit`.
 export function searchEppo(entries: EppoEntry[], q: string, limit = 8): EppoEntry[] {

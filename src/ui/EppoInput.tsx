@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { checkEppo, searchEppo, type EppoEntry } from "../eppo";
+import { checkEppo, searchEppo, searchFamilies, type EppoEntry } from "../eppo";
 import { IconPencil } from "./icons";
 
 // Combobox para criar uma espécie: escreve nome científico, nome comum ou código
@@ -395,6 +395,8 @@ export function AddSpecies({
   const [showSug, setShowSug] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const matches = useMemo(() => searchEppo(vocab, name, 10), [vocab, name]);
+  // sugestoes para o caminho "+ Familia": as familias ja presentes no vocabulario
+  const famMatches = useMemo(() => searchFamilies(vocab, name, 8), [vocab, name]);
 
   const reset = () => {
     setName("");
@@ -479,17 +481,39 @@ export function AddSpecies({
       <div className="add-species" ref={ref}>
         <div className="as-field">
           <label>Nome da família</label>
-          <input
-            autoFocus
-            value={name}
-            placeholder="ex.: Poaceae"
-            spellCheck={false}
-            onChange={(e) => setName(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") submit();
-              else if (e.key === "Escape") close();
-            }}
-          />
+          <div className="as-search">
+            <input
+              autoFocus
+              value={name}
+              placeholder="ex.: Poaceae"
+              spellCheck={false}
+              onChange={(e) => {
+                setName(e.target.value);
+                setShowSug(true);
+              }}
+              onFocus={() => setShowSug(true)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") submit();
+                else if (e.key === "Escape") setShowSug(false);
+              }}
+            />
+            {showSug && famMatches.length > 0 && (
+              <div className="eppo-pop-list">
+                {famMatches.map((f) => (
+                  <button
+                    key={f}
+                    type="button"
+                    onClick={() => {
+                      setName(f);
+                      setShowSug(false);
+                    }}
+                  >
+                    <span className="eppo-name" style={{ fontStyle: "normal" }}>{f}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
         <div className="as-hint">
           Use quando a fotografia não permitir identificar a espécie. Fica registado
