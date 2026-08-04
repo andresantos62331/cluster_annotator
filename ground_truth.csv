@@ -906,13 +906,13 @@ filename,label,eppo_code
 20220417_162853_planta_0.jpg,,
 20220417_162853_planta_1.jpg,Chamaemelum mixtum,ANTMI
 20220417_162853_planta_2.jpg,Datura stramonium,DATST
-20220417_162853_planta_3.jpg,,
+20220417_162853_planta_3.jpg,Capsella rubella,CAPRU
 20220417_162902_planta_0.jpg,Lixo,
 20220417_162902_planta_2.jpg,Xanthium spinosum,XANSP
-20220417_162902_planta_3.jpg,,
+20220417_162902_planta_3.jpg,Lixo,
 20220417_162902_planta_5.jpg,Lixo,
 20220417_162902_planta_6.jpg,,
-20220417_162904_planta_2.jpg,,
+20220417_162904_planta_2.jpg,Lixo,
 20220417_162904_planta_3.jpg,,
 20220417_162904_planta_4.jpg,Xanthium spinosum,XANSP
 20220417_162913_planta_1.jpg,,
@@ -1229,7 +1229,7 @@ filename,label,eppo_code
 20220425_162942_planta_3.jpg,,
 20220425_162942_planta_4.jpg,Portulaca oleracea,POROL
 20220425_162942_planta_5.jpg,Amaranthus retroflexus,AMARE
-20220425_162942_planta_6.jpg,,
+20220425_162942_planta_6.jpg,Lixo,
 20220425_163018_planta_1.jpg,,
 20220425_163051_planta_1.jpg,Amaranthus retroflexus,AMARE
 20220425_163100_planta_0.jpg,Amaranthus retroflexus,AMARE
@@ -1407,7 +1407,7 @@ filename,label,eppo_code
 20251109_162246_planta_3.jpg,,
 20251109_162246_planta_4.jpg,,
 20251109_162246_planta_5.jpg,,
-20251109_162246_planta_7.jpg,,
+20251109_162246_planta_7.jpg,Lixo,
 20251109_162246_planta_8.jpg,Lixo,
 20251109_162246_planta_9.jpg,Lixo,
 20251109_162248_planta_0.jpg,Chenopodium album,CHEAL
@@ -1815,7 +1815,7 @@ filename,label,eppo_code
 20251110_151941_planta_2.jpg,Sonchus asper,SONAS
 20251110_151941_planta_3.jpg,Lixo,
 20251110_151943_planta_0.jpg,Lixo,
-20251110_151943_planta_1.jpg,,
+20251110_151943_planta_1.jpg,Sonchus oleraceus,SONOL
 20251110_151943_planta_2.jpg,Lixo,
 20251110_151945_planta_0.jpg,,
 20251110_151950_planta_1.jpg,Sonchus oleraceus,SONOL
@@ -3159,7 +3159,7 @@ JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_3.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_4.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_6.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_7.jpg,Polygonum aviculare,POLAV
-JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_8.jpg,,
+JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_8.jpg,Lixo,
 JPEG_V2_E2_2022-04-17_15_16_446534616847419291915_planta_1.jpg,Stellaria media,STEME
 JPEG_V2_E2_2022-04-17_15_16_565153743992895968107_planta_0.jpg,Chenopodium album,CHEAL
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_0.jpg,Stellaria media,STEME
