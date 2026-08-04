@@ -1,5 +1,5 @@
 import type { GroundTruth } from "./types";
-import { PALETTE } from "./colors";
+import { isReservada, PALETTE } from "./colors";
 
 // CONTRATO: mesmas chaves de localStorage da app original (ground truth keyed por
 // filename, partilhado entre as 4 configs). Não renomear sem migração explícita.
@@ -66,6 +66,30 @@ export function saveFamilyMap(m: Record<string, string>): void {
   localStorage.setItem(FAMILY_KEY, JSON.stringify(m));
 }
 
+// mapa etiqueta -> NÍVEL TAXONÓMICO da identificação (acordado na reunião de
+// 2026-07-22). Ausência = "especie", que é o caso normal e mantém tudo o que já
+// foi anotado válido sem migração.
+//
+// Existe porque há plântulas que a fotografia não permite identificar até à
+// espécie — as gramíneas em particular, que dependem de apêndices da folha e de
+// pelos que a imagem não capta. Em vez de forçar uma espécie incerta ou de
+// descartar a imagem, registamos honestamente o nível a que a identificação foi
+// feita. A jusante decide-se se as famílias entram como classe grosseira ou se
+// ficam de fora do treino.
+const RANK_KEY = "tese3.species_rank";
+export function loadRankMap(): Record<string, string> {
+  try {
+    const raw = localStorage.getItem(RANK_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+export function saveRankMap(m: Record<string, string>): void {
+  localStorage.setItem(RANK_KEY, JSON.stringify(m));
+}
+
 export function loadGT(): GroundTruth {
   try {
     const raw = localStorage.getItem(GT_KEY);
@@ -118,24 +142,39 @@ export function buildJSON(
   labels: string[],
   eppo: Record<string, string> = {},
   family: Record<string, string> = {},
+  rank: Record<string, string> = {},
 ): string {
   return JSON.stringify(
-    { exported_at: new Date().toISOString(), labels, eppo, family, ground_truth: gt },
+    { exported_at: new Date().toISOString(), labels, eppo, family, rank, ground_truth: gt },
     null,
     2,
   );
 }
 
+/**
+ * CSV do ground truth.
+ *
+ * Cabeçalho: filename,label,eppo_code,rank
+ * A coluna `rank` foi acrescentada em 2026-07-23 (reunião com o orientador). Vale
+ * "especie" (omissão), "familia", ou fica vazia quando não há etiqueta.
+ *
+ * As categorias reservadas (Lixo, A confirmar) aparecem em `label` como qualquer
+ * outra etiqueta, com `rank` vazio — não são identificações taxonómicas. Ficam no
+ * ficheiro de propósito: a jusante interessa saber quantas e quais foram
+ * descartadas, e quais ficaram por decidir.
+ */
 export function buildCSV(
   gt: GroundTruth,
   allFilenames: string[],
   eppo: Record<string, string> = {},
+  rank: Record<string, string> = {},
 ): string {
-  const header = "filename,label,eppo_code";
+  const header = "filename,label,eppo_code,rank";
   const rows = allFilenames.map((f) => {
     const lbl = gt[f] ?? "";
     const code = lbl ? eppo[lbl] ?? "" : "";
-    return `${f},${lbl},${code}`;
+    const r = lbl && !isReservada(lbl) ? rank[lbl] || "especie" : "";
+    return `${f},${lbl},${code},${r}`;
   });
   return [header, ...rows].join("\n");
 }
@@ -145,12 +184,18 @@ export function exportJSON(
   labels: string[],
   eppo: Record<string, string> = {},
   family: Record<string, string> = {},
+  rank: Record<string, string> = {},
 ): void {
-  download(buildJSON(gt, labels, eppo, family), "ground_truth.json", "application/json");
+  download(buildJSON(gt, labels, eppo, family, rank), "ground_truth.json", "application/json");
 }
 
-export function exportCSV(gt: GroundTruth, allFilenames: string[], eppo: Record<string, string> = {}): void {
-  download(buildCSV(gt, allFilenames, eppo), "ground_truth.csv", "text/csv");
+export function exportCSV(
+  gt: GroundTruth,
+  allFilenames: string[],
+  eppo: Record<string, string> = {},
+  rank: Record<string, string> = {},
+): void {
+  download(buildCSV(gt, allFilenames, eppo, rank), "ground_truth.csv", "text/csv");
 }
 
 // --- guardar na cloud: POST ao Worker -> commit no GitHub (branch data) ---
@@ -167,6 +212,7 @@ export async function saveToCloud(
   allFilenames: string[],
   eppo: Record<string, string> = {},
   family: Record<string, string> = {},
+  rank: Record<string, string> = {},
 ): Promise<CloudResult> {
   const count = Object.keys(gt).length;
   const key = getCloudKey();
@@ -183,8 +229,8 @@ export async function saveToCloud(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         key,
-        json: buildJSON(gt, labels, eppo, family),
-        csv: buildCSV(gt, allFilenames, eppo),
+        json: buildJSON(gt, labels, eppo, family, rank),
+        csv: buildCSV(gt, allFilenames, eppo, rank),
         count,
       }),
     });

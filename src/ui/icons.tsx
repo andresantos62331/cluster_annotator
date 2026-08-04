@@ -18,6 +18,15 @@ export const IconSearch = ({ size }: P) => (
   </svg>
 );
 
+// "A confirmar": interrogação em círculo — dúvida, não erro (o Lixo é que é erro)
+export const IconHelp = ({ size }: P) => (
+  <svg {...base(size)}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M9.4 9a2.6 2.6 0 0 1 5 1c0 1.7-2.4 2-2.4 3.4" />
+    <path d="M12 17.2h.01" />
+  </svg>
+);
+
 export const IconCloud = ({ size }: P) => (
   <svg {...base(size)}>
     <path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.2 9.5 4 4 0 0 0 7 17.5" />

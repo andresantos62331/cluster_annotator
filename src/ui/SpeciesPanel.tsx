@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import type { EppoEntry } from "../eppo";
-import { LIXO } from "../colors";
+import { A_CONFIRMAR, LIXO } from "../colors";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { AddSpecies, EppoChip, TaxonEditor } from "./EppoInput";
-import { IconTrash } from "./icons";
+import { IconHelp, IconTrash } from "./icons";
 
 export function SpeciesPanel({
   labels,
@@ -14,6 +14,7 @@ export function SpeciesPanel({
   eppoVocab,
   eppoOf,
   familyOf,
+  rankOf,
   onGoToSpecies,
   onAdd,
   onEditSpecies,
@@ -27,9 +28,10 @@ export function SpeciesPanel({
   eppoVocab: EppoEntry[];
   eppoOf: (l: string) => string;
   familyOf: (l: string) => string;
+  rankOf: (l: string) => string;
   onGoToSpecies: (l: string) => void;
-  onAdd: (name: string, code?: string, family?: string) => void;
-  onEditSpecies: (oldName: string, name: string, code: string, family: string) => void;
+  onAdd: (name: string, code?: string, family?: string, rank?: string) => void;
+  onEditSpecies: (oldName: string, name: string, code: string, family: string, rank: string) => void;
   onReorder: (label: string, target: string) => void;
   onSetColor: (l: string, hex: string) => void;
 }) {
@@ -132,15 +134,27 @@ export function SpeciesPanel({
                   {/* nome completo numa linha; código EPPO por baixo, mais pequeno */}
                   <div className="sp-id">
                     <span className="sp-name">{lbl}</span>
-                    <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
+                    <span className="sp-tags">
+                      <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
+                      {/* marca de nível: só aparece quando NÃO é espécie, para o
+                          caso normal não ganhar ruído */}
+                      {rankOf(lbl) === "familia" && (
+                        <span className="rank-chip" title="Identificação ao nível da família">
+                          família
+                        </span>
+                      )}
+                    </span>
                   </div>
-                  {/* lápis = editor ÚNICO: nome + código + família */}
+                  {/* lápis = editor ÚNICO: nome + código + família + nível */}
                   <TaxonEditor
                     label={lbl}
                     code={eppoOf(lbl)}
                     family={familyOf(lbl)}
+                    rank={rankOf(lbl)}
                     vocab={eppoVocab}
-                    onSave={(name, code, family) => onEditSpecies(lbl, name, code, family)}
+                    onSave={(name, code, family, rank) =>
+                      onEditSpecies(lbl, name, code, family, rank)
+                    }
                   />
                   {/* cor à direita (swatch alinhado na margem) */}
                   <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
@@ -151,12 +165,30 @@ export function SpeciesPanel({
         })}
       </div>
 
-      {/* categoria reservada — fixa, sem renomear/cor/remover */}
+      {/* Categorias reservadas — fixas, sem renomear/cor/remover.
+          A distinção entre as duas é o critério de exclusão do ground truth:
+          "A confirmar" = o dado é bom, a etiqueta é que falta;
+          "Lixo"        = o dado não serve. */}
+      <div
+        data-species={A_CONFIRMAR}
+        className={`sp-lixo sp-confirmar ${activeSpecies === A_CONFIRMAR ? "active" : ""}`}
+        onClick={() => onGoToSpecies(A_CONFIRMAR)}
+        title="Plântula com fotografia de qualidade suficiente mas que não permite identificar. Tecla C atribui a selecção."
+      >
+        <span className="sp-key">C</span>
+        <span className="sp-lixo-icon" style={{ color: "var(--amber)" }}>
+          <IconHelp size={15} />
+        </span>
+        {expanded && (
+          <span className="sp-name" style={{ color: "var(--amber)" }}>{A_CONFIRMAR}</span>
+        )}
+      </div>
+
       <div
         data-species={LIXO}
         className={`sp-lixo ${activeSpecies === LIXO ? "active" : ""}`}
         onClick={() => onGoToSpecies(LIXO)}
-        title="Crops inutilizáveis (desfocados, fragmentos, não-plantas). Tecla 0 atribui a selecção."
+        title="Desfocadas, com duas ou mais espécies, ou partes de planta. Tecla 0 atribui a selecção."
       >
         <span className="sp-key">0</span>
         <span className="sp-lixo-icon" style={{ color: "var(--danger)" }}>

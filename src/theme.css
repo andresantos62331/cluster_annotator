@@ -387,17 +387,6 @@ body {
 .search input::placeholder { color: var(--faint); }
 .rail-list { flex: 1; overflow-y: auto; padding: 8px 8px 30px; min-height: 0; }
 
-.gen-divider {
-  display: flex; align-items: center; gap: 9px;
-  padding: 14px 8px 7px; margin-top: 2px;
-}
-.gen-divider:first-child { padding-top: 6px; }
-.gen-divider .gd-line { flex: 1; height: 1px; background: var(--line-soft); }
-.gen-divider .gd-text {
-  font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.1px;
-  font-weight: 600; color: var(--faint); white-space: nowrap;
-}
-
 .clu {
   display: flex; align-items: center; gap: 10px;
   padding: 7px 9px; border-radius: var(--r-md); cursor: pointer;
@@ -953,6 +942,24 @@ body {
 .new-species button:hover { background: var(--accent-2); }
 
 /* criação centralizada: botão + formulário (nome / código / família) */
+/* dois caminhos de criacao lado a lado: Especie (comum) e Familia (raro) */
+.add-row { display: flex; gap: 6px; }
+.add-row .add-species-btn { flex: 1; }
+/* a Familia e' o caso raro -> mais discreta, para nao competir com a Especie */
+.add-species-btn.alt {
+  background: transparent; color: var(--muted);
+  border: 1px solid var(--line);
+}
+.add-species-btn.alt:hover {
+  background: var(--panel-hi); color: var(--ink); border-color: var(--accent-line);
+}
+/* dica dentro do formulario simplificado da familia */
+.add-species .as-hint {
+  font-size: 11px; line-height: 1.45; color: var(--muted);
+  background: var(--panel); border: 1px solid var(--line-soft);
+  border-radius: var(--r-sm); padding: 7px 9px;
+}
+
 .add-species-btn {
   width: 100%; padding: 9px 12px; border-radius: var(--r-md); cursor: pointer;
   background: var(--accent); color: #fff; border: 0;
@@ -1116,6 +1123,56 @@ body {
 .sp-lixo.active { background: var(--panel-hi); }
 .sp-lixo .sp-lixo-icon { display: grid; place-items: center; }
 .sp-lixo .sp-name { font-weight: 600; }
+
+/* --- categoria reservada "A confirmar" (ambar = pendente, nao erro) --------
+   Distinta do Lixo de proposito: o dado e' bom, so falta a etiqueta. */
+.sp-lixo.sp-confirmar { border-top: 1px dashed var(--line-soft); }
+.species-panel .sp-lixo.sp-confirmar .sp-key {
+  color: var(--amber); background: rgba(240, 180, 41, 0.14);
+  border-color: rgba(240, 180, 41, 0.5);
+}
+.species-panel .sp-lixo.sp-confirmar.active .sp-key {
+  color: #1a160f; background: var(--amber); border-color: var(--amber);
+}
+
+/* caixote do "A confirmar": mesma estrutura do Lixo, tom ambar */
+.lixo-bin.confirmar-bin {
+  border-color: rgba(240, 180, 41, 0.45);
+  background: rgba(240, 180, 41, 0.06);
+}
+.lixo-bin.confirmar-bin .lixo-mark,
+.lixo-bin.confirmar-bin .lixo-title { color: var(--amber); }
+/* ao contrario do Lixo, as miniaturas NAO sao esbatidas: sao imagens boas que
+   voltam a ser trabalhadas */
+.lixo-bin.confirmar-bin .card img { filter: none; opacity: 1; }
+
+/* bloco de "A confirmar" na Colecao: mesma estrutura do Lixo, tom ambar */
+.svb-confirmar-block { border-color: rgba(240, 180, 41, 0.4) !important; }
+.svb-confirmar-block .svb-lixo-note { color: var(--amber); }
+/* ao contrario do Lixo, as miniaturas NAO sao esbatidas: sao imagens boas */
+.svb-confirmar-block .card img { filter: none; opacity: 1; }
+
+/* --- nivel taxonomico da identificacao ------------------------------------ */
+.rank-chip {
+  flex-shrink: 0; font-size: 10px; font-weight: 700; letter-spacing: 0.03em;
+  color: var(--leaf); background: var(--leaf-soft);
+  border: 1px solid rgba(138, 171, 102, 0.45);
+  border-radius: 5px; padding: 1px 5px; line-height: 1.3;
+}
+.sp-tags { display: flex; align-items: center; gap: 5px; max-width: 100%; }
+/* seletor Especie/Familia no editor do lapis */
+.rank-seg {
+  display: flex; gap: 3px; margin-top: 2px;
+  background: var(--bg); border: 1px solid var(--line-soft);
+  border-radius: var(--r-sm); padding: 3px;
+}
+.rank-seg button {
+  flex: 1; font-family: var(--font-ui); font-size: 11.5px; font-weight: 600;
+  color: var(--muted); background: transparent; border: 0; padding: 5px;
+  border-radius: 4px; cursor: pointer; transition: all 0.13s;
+}
+.rank-seg button:hover { color: var(--ink); }
+.rank-seg button.on { color: var(--ink); background: var(--panel-hi); }
 
 /* =================== PARTÍCULAS de atribuição ========================== */
 .particle-layer { position: fixed; inset: 0; pointer-events: none; z-index: 9500; overflow: hidden; }

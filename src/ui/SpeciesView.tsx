@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import type { GroundTruth } from "../types";
-import { LIXO, tint } from "../colors";
+import { A_CONFIRMAR, isReservada, LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { Pagination } from "./bits";
 import { SpeciesColorDot } from "./ColorPicker";
@@ -8,7 +8,7 @@ import { SpeciesThumb } from "./SpeciesThumb";
 import { CollectionOverview } from "./CollectionOverview";
 import { EppoChip, TaxonEditor } from "./EppoInput";
 import type { EppoEntry } from "../eppo";
-import { IconChevron, IconTrash } from "./icons";
+import { IconChevron, IconHelp, IconTrash } from "./icons";
 
 // rótulo para espécies sem código EPPO (logo, sem família conhecida)
 const SEM_FAMILIA = "Sem família";
@@ -41,6 +41,7 @@ export function SpeciesView({
   onSetColor,
   eppoOf,
   familyOf,
+  rankOf,
   eppoVocab,
   totalAll,
   thumbOf,
@@ -60,11 +61,12 @@ export function SpeciesView({
   onRemoveLabels: () => void;
   onReassign: (label: string) => void;
   onOpenLightbox: (f: string, scope: string[]) => void;
-  onEditSpecies: (oldName: string, name: string, code: string, family: string) => void;
+  onEditSpecies: (oldName: string, name: string, code: string, family: string, rank: string) => void;
   onRemove: (l: string) => void;
   onSetColor: (l: string, hex: string) => void;
   eppoOf: (l: string) => string;
   familyOf: (l: string) => string;
+  rankOf: (l: string) => string;
   eppoVocab: EppoEntry[];
   totalAll: number;
   thumbOf: (l: string) => string | null;
@@ -124,7 +126,7 @@ export function SpeciesView({
   // e o Lixo sempre no fim de tudo.
   const famOf = (l: string) => familyOf(l) || SEM_FAMILIA;
   const displayLabels = useMemo(() => {
-    const real = labels.filter((l) => l !== LIXO);
+    const real = labels.filter((l) => !isReservada(l));
     if (sortBy === "alfabetica") real.sort((a, b) => a.localeCompare(b, "pt"));
     else real.sort((a, b) => (byLabel[b]?.length ?? 0) - (byLabel[a]?.length ?? 0));
 
@@ -146,13 +148,13 @@ export function SpeciesView({
       const rb = rank.get(familyOf(b) || SEM_FAMILIA)!;
       return ra !== rb ? ra - rb : idx.get(a)! - idx.get(b)!;
     });
-    return labels.includes(LIXO) ? [...ordered, LIXO] : ordered;
+    return [...ordered, ...labels.filter((l) => isReservada(l))];
   }, [labels, sortBy, byLabel, familyOf]);
 
   // nº de espécies por família (para o cabeçalho de cada família)
   const famSpeciesCount = useMemo(() => {
     const m = new Map<string, number>();
-    for (const l of labels) if (l !== LIXO) {
+    for (const l of labels) if (!isReservada(l)) {
       const f = familyOf(l) || SEM_FAMILIA;
       m.set(f, (m.get(f) ?? 0) + 1);
     }
@@ -161,7 +163,9 @@ export function SpeciesView({
 
   // o Lixo vem incluído em `labels` (último); só conta como conteúdo se tiver imagens
   const isEmpty =
-    labels.filter((l) => l !== LIXO).length === 0 && (byLabel[LIXO]?.length ?? 0) === 0;
+    labels.filter((l) => !isReservada(l)).length === 0 &&
+    (byLabel[LIXO]?.length ?? 0) === 0 &&
+    (byLabel[A_CONFIRMAR]?.length ?? 0) === 0;
 
   if (isEmpty) {
     return (
@@ -176,7 +180,7 @@ export function SpeciesView({
 
   const den = DENSITIES[density];
   // o índice lateral e a contagem "Espécies" são só de espécies — o Lixo fica de fora
-  const tocLabels = displayLabels.filter((l) => l !== LIXO);
+  const tocLabels = displayLabels.filter((l) => !isReservada(l));
 
   return (
     <div className="work-body sv" style={{ ["--card-min" as string]: `${den.min}px` }}>
@@ -260,11 +264,14 @@ export function SpeciesView({
 
       {displayLabels.map((lbl, i) => {
         const isLixo = lbl === LIXO;
+        // reservada = Lixo ou "A confirmar": nao sao especies, logo nao levam ficha
+        // de herbario, chip EPPO, histograma nem caixote de remocao
+        const isRes = isReservada(lbl);
         const files = byLabel[lbl] ?? [];
-        if (isLixo && files.length === 0) return null; // sem lixo, sem bloco
+        if (isRes && files.length === 0) return null; // reservada vazia, sem bloco
         // cabeçalho de família: aparece quando a família muda (espécies só)
-        const fam = isLixo ? "" : famOf(lbl);
-        const showFamHeader = !isLixo && (i === 0 || famOf(displayLabels[i - 1]) !== fam);
+        const fam = isRes ? "" : famOf(lbl);
+        const showFamHeader = !isRes && (i === 0 || famOf(displayLabels[i - 1]) !== fam);
         const isCollapsed = collapsed.has(lbl);
         const totalPages = Math.max(1, Math.ceil(files.length / den.perPage));
         const page = speciesPage[lbl] ?? 0;
@@ -272,6 +279,8 @@ export function SpeciesView({
         const pageFiles = files.slice(effPage * den.perPage, (effPage + 1) * den.perPage);
         const allSel = files.length > 0 && files.every((f) => selection.has(f));
         const col = colorOf(lbl);
+        // cor do cabeçalho: as reservadas têm cor própria (vermelho / âmbar)
+        const cor = isLixo ? "var(--danger)" : lbl === A_CONFIRMAR ? "var(--amber)" : col;
         // população por cluster de origem (config atual) -> frase + top 3
         const clusterCounts = new Map<number, number>();
         for (const f of files) {
@@ -301,7 +310,9 @@ export function SpeciesView({
               </div>
             )}
           <div
-            className={`species-view-block ${isLixo ? "svb-lixo-block" : ""}`}
+            className={`species-view-block ${isRes ? "svb-lixo-block" : ""} ${
+              lbl === A_CONFIRMAR ? "svb-confirmar-block" : ""
+            }`}
             ref={(el) => {
               blockRefs.current[lbl] = el;
             }}
@@ -310,7 +321,7 @@ export function SpeciesView({
                 expande (os controlos lá dentro travam a propagação) */}
             <div
               className="svb-head svb-head-click"
-              style={isLixo ? undefined : { background: `linear-gradient(90deg, ${tint(col, 0.13)}, rgba(0,0,0,0) 75%), var(--bg)` }}
+              style={isRes ? undefined : { background: `linear-gradient(90deg, ${tint(col, 0.13)}, rgba(0,0,0,0) 75%), var(--bg)` }}
               onClick={toggleFold}
               title={isCollapsed ? "Expandir" : "Colapsar"}
             >
@@ -336,18 +347,27 @@ export function SpeciesView({
                   </svg>
                 </button>
               )}
-              {isLixo ? (
-                <span className="svb-lixo-mark" style={{ color: "var(--danger)" }} title="Categoria reservada — não é uma espécie">
-                  <IconTrash size={17} />
+              {isRes ? (
+                <span
+                  className="svb-lixo-mark"
+                  style={{ color: cor }}
+                  title={
+                    isLixo
+                      ? "Imagens que não servem — não é uma espécie"
+                      : "Imagens boas, à espera de identificação — não é uma espécie"
+                  }
+                >
+                  {isLixo ? <IconTrash size={17} /> : <IconHelp size={17} />}
                 </span>
               ) : (
                 <SpeciesColorDot color={col} onPick={(hex) => onSetColor(lbl, hex)} />
               )}
               <h3>
-                <span className="svb-name" style={{ color: isLixo ? "var(--danger)" : col }}>{lbl}</span>
-                {isLixo ? (
+                <span className="svb-name" style={{ color: cor }}>{lbl}</span>
+                {isRes ? (
                   <span className="svb-lixo-note">
-                    categoria reservada{files.length > 0 ? ` · ${files.length}` : ""}
+                    {isLixo ? "imagens inutilizáveis" : "por identificar"}
+                    {files.length > 0 ? ` · ${files.length}` : ""}
                   </span>
                 ) : (
                   <>
@@ -363,16 +383,19 @@ export function SpeciesView({
                       label={lbl}
                       code={eppoOf(lbl)}
                       family={familyOf(lbl)}
+                      rank={rankOf(lbl)}
                       vocab={eppoVocab}
                       className="svb-edit"
                       size={15}
-                      onSave={(name, code, family) => onEditSpecies(lbl, name, code, family)}
+                      onSave={(name, code, family, rank) =>
+                        onEditSpecies(lbl, name, code, family, rank)
+                      }
                     />
                   </>
                 )}
               </h3>
               {/* histograma interativo: top 3 clusters com mais imagens desta espécie */}
-              {!isLixo && top3.length > 0 && (
+              {!isRes && top3.length > 0 && (
                 <div className="svb-hist">
                   {top3.map(([cid, n]) => (
                     <button
@@ -394,7 +417,7 @@ export function SpeciesView({
                   ))}
                 </div>
               )}
-              {!isLixo && (
+              {!isRes && (
                 <button
                   className="svb-trash"
                   onClick={(e) => {

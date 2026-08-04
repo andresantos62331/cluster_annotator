@@ -136,6 +136,7 @@ export function TaxonEditor({
   label,
   code,
   family,
+  rank = "especie",
   vocab,
   className = "sp-edit",
   size = 13,
@@ -144,15 +145,18 @@ export function TaxonEditor({
   label: string;
   code: string;
   family: string;
+  /** "especie" (omissao) ou "familia" */
+  rank?: string;
   vocab: EppoEntry[];
   className?: string;
   size?: number;
-  onSave: (name: string, code: string, family: string) => void;
+  onSave: (name: string, code: string, family: string, rank: string) => void;
 }) {
   const [open, setOpen] = useState(false);
   const [nameField, setNameField] = useState("");
   const [codeField, setCodeField] = useState("");
   const [famField, setFamField] = useState("");
+  const [rankField, setRankField] = useState("especie");
   const [showSug, setShowSug] = useState(false);
   const [showNameSug, setShowNameSug] = useState(false);
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
@@ -174,6 +178,7 @@ export function TaxonEditor({
     setNameField(label);
     setCodeField(code);
     setFamField(family);
+    setRankField(rank === "familia" ? "familia" : "especie");
     setShowSug(false);
     setShowNameSug(false);
     const el = triggerRef.current;
@@ -185,7 +190,7 @@ export function TaxonEditor({
     let top = r.bottom + gap;
     if (top + H > window.innerHeight - 8) top = Math.max(8, window.innerHeight - H - 8);
     setPos({ top, left });
-  }, [open, label, code, family]);
+  }, [open, label, code, family, rank]);
 
   useEffect(() => {
     if (!open) return;
@@ -221,11 +226,11 @@ export function TaxonEditor({
     setShowSug(false);
   };
   const save = () => {
-    onSave(nameField.trim(), codeField.trim().toUpperCase(), famField.trim());
+    onSave(nameField.trim(), codeField.trim().toUpperCase(), famField.trim(), rankField);
     setOpen(false);
   };
   const clearTaxon = () => {
-    onSave(nameField.trim(), "", "");
+    onSave(nameField.trim(), "", "", rankField);
     setOpen(false);
   };
 
@@ -324,6 +329,30 @@ export function TaxonEditor({
             onChange={(e) => setFamField(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && save()}
           />
+          {/* Nivel da identificacao. Existe porque ha plantulas — as gramineas em
+              particular — que a fotografia nao permite identificar ate a especie.
+              Registar o nivel e' mais honesto do que forcar uma especie incerta. */}
+          <div className="eppo-pop-h">nível da identificação</div>
+          <div className="rank-seg" role="group" aria-label="Nível da identificação">
+            {(["especie", "familia"] as const).map((r) => (
+              <button
+                key={r}
+                type="button"
+                className={rankField === r ? "on" : ""}
+                aria-pressed={rankField === r}
+                onClick={() => setRankField(r)}
+              >
+                {r === "especie" ? "Espécie" : "Família"}
+              </button>
+            ))}
+          </div>
+          {rankField === "familia" && (
+            <div className="eppo-note">
+              Fica registado que a identificação foi feita ao nível da família. Códigos
+              EPPO de família seguem o padrão 1XXXF (Poaceae = 1GRAF).
+            </div>
+          )}
+
           <button className="eppo-pop-save" type="button" onClick={save}>
             Guardar
           </button>
@@ -339,18 +368,27 @@ export function TaxonEditor({
   );
 }
 
-// Criação CENTRALIZADA de espécie: um botão "Adicionar espécie" abre um formulário
-// com Nome, Código EPPO e Família. Mesma lógica: pesquisa na base por nome/código
-// (escolher preenche os três), código exato autocompleta a família, e o que não
-// existir escreve-se à mão. Nome é obrigatório; código/família opcionais.
+// Criação de etiqueta, com DOIS caminhos explícitos:
+//
+//   "+ Espécie"  — o caso normal. Nome + código EPPO + família, com pesquisa na
+//                  base curada; escolher uma sugestão preenche os três.
+//   "+ Família"  — para quando a fotografia não permite chegar à espécie (as
+//                  gramíneas são o caso típico). SÓ pede o nome da família. Não
+//                  pede código EPPO de propósito: os códigos de família derivam
+//                  dos nomes antigos (Poaceae = 1GRAF, de Gramineae) e não há
+//                  como a especialista os adivinhar. O código é um extra de
+//                  padronização, não um requisito do ground truth.
+//
+// A escolha do botão define o nível da identificação, em vez de obrigar a criar
+// primeiro e corrigir o nível no lápis depois — uma operação em dois sítios.
 export function AddSpecies({
   vocab,
   onAdd,
 }: {
   vocab: EppoEntry[];
-  onAdd: (name: string, code: string, family: string) => void;
+  onAdd: (name: string, code: string, family: string, rank: string) => void;
 }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<false | "especie" | "familia">(false);
   const [name, setName] = useState("");
   const [code, setCode] = useState("");
   const [family, setFamily] = useState("");
@@ -367,6 +405,10 @@ export function AddSpecies({
   const close = () => {
     setOpen(false);
     reset();
+  };
+  const abrir = (modo: "especie" | "familia") => {
+    reset();
+    setOpen(modo);
   };
 
   useEffect(() => {
@@ -404,15 +446,62 @@ export function AddSpecies({
   const submit = () => {
     const t = name.trim();
     if (!t) return;
-    onAdd(t, code.trim().toUpperCase(), family.trim());
+    if (open === "familia") {
+      // a família É o nome: preencher `family` com ele mantém o agrupamento da
+      // Coleção correcto (senão a etiqueta cairia em "Sem família")
+      onAdd(t, "", t, "familia");
+    } else {
+      onAdd(t, code.trim().toUpperCase(), family.trim(), "especie");
+    }
     close();
   };
 
   if (!open) {
     return (
-      <button className="add-species-btn" onClick={() => setOpen(true)}>
-        + Adicionar espécie
-      </button>
+      <div className="add-row">
+        <button className="add-species-btn" onClick={() => abrir("especie")}>
+          + Espécie
+        </button>
+        <button
+          className="add-species-btn alt"
+          onClick={() => abrir("familia")}
+          title="Quando a fotografia não permite chegar à espécie (ex.: gramíneas)"
+        >
+          + Família
+        </button>
+      </div>
+    );
+  }
+
+  // ---- caminho simplificado: só o nome da família ----
+  if (open === "familia") {
+    return (
+      <div className="add-species" ref={ref}>
+        <div className="as-field">
+          <label>Nome da família</label>
+          <input
+            autoFocus
+            value={name}
+            placeholder="ex.: Poaceae"
+            spellCheck={false}
+            onChange={(e) => setName(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") submit();
+              else if (e.key === "Escape") close();
+            }}
+          />
+        </div>
+        <div className="as-hint">
+          Use quando a fotografia não permitir identificar a espécie. Fica registado
+          no ficheiro final que a identificação foi feita ao nível da família.
+        </div>
+        <div className="as-actions">
+          <button className="btn" onClick={close}>Cancelar</button>
+          <button className="btn assign" onClick={submit} disabled={!name.trim()}>
+            Adicionar
+          </button>
+        </div>
+      </div>
     );
   }
 

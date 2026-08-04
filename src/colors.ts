@@ -10,12 +10,34 @@ export const PALETTE: string[] = [
   "#90ee90", "#f0e68c", "#ff8c00", "#40e0d0", "#ee82ee", "#98fb98",
 ];
 
-// Categoria reservada para crops inutilizáveis (desfocados, fragmentos,
-// não-plantas) — fixa no fundo do painel Espécies, atalho 0. NÃO é uma espécie:
-// não entra em `labels`, não se renomeia nem muda de cor, mas ENTRA no
-// ground truth/export como etiqueta normal (transparência downstream).
+// ---------------------------------------------------------------------------
+// CATEGORIAS RESERVADAS (não são espécies: não entram em `labels`, não se
+// renomeiam nem mudam de cor, mas ENTRAM no ground truth/export como etiquetas
+// normais — transparência downstream).
+//
+// A distinção entre as duas foi fixada na reunião de 2026-07-22 e é o critério
+// de exclusão do ground truth:
+//   LIXO        -> o DADO é inutilizável
+//   A CONFIRMAR -> o dado é BOM, a ETIQUETA é que é incerta
+// ---------------------------------------------------------------------------
+
+// Desfocadas · 2+ plantas de espécies diferentes · partes de planta.
+// Fixa no fundo do painel Espécies, atalho 0.
 export const LIXO = "Lixo";
 export const LIXO_COLOR = "#8a8170"; // cinza quente, distinto da PALETTE
+
+// Plântulas que a fotografia não permite identificar MAS que têm qualidade
+// suficiente. Existe para evitar trabalho repetido: a Dra deixa de reavaliar a
+// mesma plântula duvidosa a cada passagem. Atalho C.
+export const A_CONFIRMAR = "A confirmar";
+export const A_CONFIRMAR_COLOR = "#d99518"; // âmbar = pendente, distinto da PALETTE
+
+/** Categorias reservadas, por ordem de apresentação. */
+export const RESERVADAS = [A_CONFIRMAR, LIXO] as const;
+
+export function isReservada(label: string): boolean {
+  return label === LIXO || label === A_CONFIRMAR;
+}
 
 // Cor de texto (preto/branco) com bom contraste sobre uma cor de fundo hex.
 export function textOn(hex: string): string {

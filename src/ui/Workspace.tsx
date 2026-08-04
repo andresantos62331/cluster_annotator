@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import type { ClusterMetrics, GroundTruth } from "../types";
-import { LIXO, tint } from "../colors";
+import { A_CONFIRMAR, LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
-import { IconTrash } from "./icons";
+import { IconHelp, IconTrash } from "./icons";
 
 const IMAGES_PER_PAGE = 30;
 
@@ -128,6 +128,7 @@ export function Workspace({
   // uma espécie — sai dos grupos e vai para uma secção própria (caixote) no fim.
   const groups: [string, string[]][] = [];
   let lixoFiles: string[] = [];
+  let confirmarFiles: string[] = [];
   {
     const by: Record<string, string[]> = {};
     for (const f of clusterFilenames) {
@@ -135,10 +136,14 @@ export function Workspace({
       if (lb) (by[lb] ??= []).push(f);
     }
     lixoFiles = by[LIXO] ?? [];
+    confirmarFiles = by[A_CONFIRMAR] ?? [];
     delete by[LIXO];
+    delete by[A_CONFIRMAR];
     groups.push(...Object.entries(by).sort((a, b) => b[1].length - a[1].length));
   }
   const lixoAllSel = lixoFiles.length > 0 && lixoFiles.every((f) => selection.has(f));
+  const confirmarAllSel =
+    confirmarFiles.length > 0 && confirmarFiles.every((f) => selection.has(f));
 
   const pageAllSelected = pageFiles.length > 0 && pageFiles.every((f) => selection.has(f));
   // quantas das selecionadas já têm etiqueta (alvo do "Retirar etiqueta")
@@ -206,6 +211,13 @@ export function Workspace({
                 </span>
                 <span className="as-name" style={{ color: "var(--danger)" }}>{LIXO}</span>
               </>
+            ) : activeSpecies === A_CONFIRMAR ? (
+              <>
+                <span className="sp-lixo-icon" style={{ color: "var(--amber)", display: "grid", placeItems: "center" }}>
+                  <IconHelp size={15} />
+                </span>
+                <span className="as-name" style={{ color: "var(--amber)" }}>{A_CONFIRMAR}</span>
+              </>
             ) : activeSpecies ? (
               <>
                 <SpeciesThumb file={thumbOf(activeSpecies)} size={22} />
@@ -237,8 +249,19 @@ export function Workspace({
                   <span className="sw" style={{ background: colorOf(l) }} />
                 </button>
               ))}
-              {/* categoria reservada, sempre disponível no fim */}
+              {/* categorias reservadas, sempre disponíveis no fim */}
               <div className="dd-sep" />
+              <button
+                onClick={() => {
+                  onSetActive(A_CONFIRMAR);
+                  setDdOpen(false);
+                }}
+              >
+                <span className="sp-lixo-icon" style={{ color: "var(--amber)", display: "grid", placeItems: "center" }}>
+                  <IconHelp size={15} />
+                </span>
+                <span className="dd-name" style={{ color: "var(--amber)" }}>{A_CONFIRMAR}</span>
+              </button>
               <button
                 onClick={() => {
                   onSetActive(LIXO);
@@ -406,6 +429,44 @@ export function Workspace({
           </div>
           );
         })}
+
+      {/* "A confirmar" — secção própria. Fica ANTES do Lixo porque estas imagens
+          são boas e voltam a ser trabalhadas; o Lixo não volta. */}
+      {showAnnotated && confirmarFiles.length > 0 && (
+        <div className="lixo-bin confirmar-bin">
+          <div className="lixo-head">
+            <button
+              className={`svb-check ${confirmarAllSel ? "on" : ""}`}
+              title={confirmarAllSel ? "Desselecionar" : "Selecionar tudo por confirmar"}
+              onClick={() => onToggleMany(confirmarFiles)}
+            >
+              <svg viewBox="0 0 24 24" width="13" height="13">
+                <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <span className="lixo-mark"><IconHelp size={18} /></span>
+            <span className="lixo-title">{A_CONFIRMAR}</span>
+            <span className="lixo-note">
+              {confirmarFiles.length}{" "}
+              {confirmarFiles.length === 1
+                ? "plântula por identificar"
+                : "plântulas por identificar"}
+            </span>
+          </div>
+          <div className="grid">
+            {confirmarFiles.map((f, i) => (
+              <Card
+                key={f}
+                filename={f}
+                index={i}
+                selected={selection.has(f)}
+                onToggle={() => onToggleSelect(f)}
+                onOpen={() => onOpenLightbox(f, confirmarFiles)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Lixo — secção própria, NÃO é uma espécie: caixote distinto no fim */}
       {showAnnotated && lixoFiles.length > 0 && (

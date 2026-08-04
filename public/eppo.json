@@ -87,6 +87,7 @@
   { "code": "CIRPA", "name": "Cirsium palustre", "family": "Asteraceae" },
   { "code": "MATCH", "name": "Matricaria chamomilla", "family": "Asteraceae", "common_pt": "camomila" },
   { "code": "MATMT", "name": "Matricaria discoidea", "family": "Asteraceae" },
+  { "code": "ANTMI", "name": "Cladanthus mixtus", "family": "Asteraceae", "common_pt": "pampilho-de-duas-cores" },
   { "code": "ANTAR", "name": "Anthemis arvensis", "family": "Asteraceae", "common_pt": "margaça" },
   { "code": "ANTCO", "name": "Anthemis cotula", "family": "Asteraceae" },
   { "code": "TAROF", "name": "Taraxacum officinale", "family": "Asteraceae", "common_pt": "dente-de-leão" },
@@ -153,6 +154,7 @@
 
   { "code": "POLAV", "name": "Polygonum aviculare", "family": "Polygonaceae", "common_pt": "sempre-noiva" },
   { "code": "POLAR", "name": "Polygonum arenastrum", "family": "Polygonaceae" },
+  { "code": "POLCO", "name": "Fallopia convolvulus", "family": "Polygonaceae", "common_pt": "corriola-bastarda" },
   { "code": "POLPE", "name": "Persicaria maculosa", "family": "Polygonaceae", "common_pt": "erva-pessegueira" },
   { "code": "RUMCR", "name": "Rumex crispus", "family": "Polygonaceae", "common_pt": "labaça-crespa" },
   { "code": "RUMOB", "name": "Rumex obtusifolius", "family": "Polygonaceae", "common_pt": "labaça" },

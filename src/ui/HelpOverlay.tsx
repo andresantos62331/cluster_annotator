@@ -35,7 +35,36 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
           O <b>painel das espécies</b>, à direita, está recolhido e abre quando lhe
           passas o rato por cima. Os números a laranja são as teclas de atribuição;
           arrastar uma espécie muda a ordem — e, com ela, as teclas. O lápis abre a
-          ficha da espécie: nome, código EPPO e família, com pesquisa na base.
+          ficha da espécie: nome, código EPPO, família e <b>nível da identificação</b>,
+          com pesquisa na base.
+        </div>
+
+        <h2>As duas categorias reservadas</h2>
+        <div className="help-note">
+          <b>A confirmar</b> <kbd>C</kbd> — a fotografia tem qualidade suficiente mas
+          não permite identificar a plântula. Fica guardada como decisão pendente,
+          para não voltares a avaliar a mesma imagem a cada passagem.
+          <br />
+          <b>Lixo</b> <kbd>0</kbd> — a imagem não serve: desfocada, com duas ou mais
+          espécies diferentes, ou apenas parte de uma planta.
+          <br />
+          Em resumo: no <b>Lixo</b> o problema é a imagem; em <b>A confirmar</b> a
+          imagem está boa e o que falta é a identificação.
+        </div>
+
+        <h2>Espécie ou família</h2>
+        <div className="help-note">
+          No painel da direita há dois botões de criação.
+          <br />
+          <b>+ Espécie</b> — o caso normal. Escreve o nome e escolhe da lista: o código
+          EPPO e a família ficam preenchidos sozinhos.
+          <br />
+          <b>+ Família</b> — para quando a fotografia não permite chegar à espécie. As
+          gramíneas são o caso típico, porque dependem de detalhes que a imagem não
+          capta. Só pede o <b>nome da família</b> (ex.: <i>Poaceae</i>), sem código.
+          <br />
+          Fica registado no ficheiro final o nível a que cada identificação foi feita,
+          em vez de se forçar uma espécie incerta.
         </div>
 
         <div className="help-note">
@@ -55,7 +84,8 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
               <div><dt><kbd>R</kbd></dt><dd>retirar a etiqueta às selecionadas</dd></div>
               <div><dt><kbd>D</kbd></dt><dd>limpar a seleção</dd></div>
               <div><dt><kbd>1</kbd>–<kbd>9</kbd></dt><dd>atribuir a seleção à espécie n.º N (ordem do painel direito)</dd></div>
-              <div><dt><kbd>0</kbd></dt><dd>marcar como Lixo (crop inutilizável)</dd></div>
+              <div><dt><kbd>C</kbd></dt><dd>marcar como <i>A confirmar</i> (imagem boa, espécie por identificar)</dd></div>
+              <div><dt><kbd>0</kbd></dt><dd>marcar como Lixo (imagem inutilizável)</dd></div>
               <div><dt><kbd>J</kbd> / <kbd>K</kbd></dt><dd>grupo seguinte / anterior</dd></div>
               <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>mudar de página</dd></div>
             </dl>

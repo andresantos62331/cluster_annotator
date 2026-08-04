@@ -9,12 +9,14 @@ import {
   loadEppoMap,
   loadFamilyMap,
   loadFromCloud,
+  loadRankMap,
   loadGT,
   loadLabels,
   saveColorMap,
   saveEppoMap,
   saveFamilyMap,
   saveGT,
+  saveRankMap,
   saveLabels,
   saveToCloud,
   setCloudKey,
@@ -22,7 +24,7 @@ import {
 } from "./storage";
 import { loadEppo, type EppoEntry } from "./eppo";
 import { celebrateAssign } from "./ui/particles";
-import { LIXO, LIXO_COLOR, PALETTE } from "./colors";
+import { A_CONFIRMAR, A_CONFIRMAR_COLOR, isReservada, LIXO, LIXO_COLOR, PALETTE, RESERVADAS } from "./colors";
 import type { ConfigData, CropGeometry, GroundTruth } from "./types";
 import { TopBar } from "./ui/TopBar";
 import { ClusterRail } from "./ui/ClusterRail";
@@ -45,6 +47,7 @@ type Snapshot = {
   colors: Record<string, string>;
   eppo: Record<string, string>;
   family: Record<string, string>;
+  rank: Record<string, string>;
 };
 
 // forma do ground_truth.json (export/cloud) — campos todos opcionais na leitura
@@ -52,6 +55,8 @@ type CloudPayload = {
   ground_truth?: GroundTruth;
   labels?: string[];
   eppo?: Record<string, string>;
+  family?: Record<string, string>;
+  rank?: Record<string, string>;
   exported_at?: string;
 };
 
@@ -66,6 +71,7 @@ export default function App() {
   const [colorMap, setColorMap] = useState<Record<string, string>>(() => loadColorMap());
   const [eppoMap, setEppoMap] = useState<Record<string, string>>(() => loadEppoMap());
   const [familyMap, setFamilyMap] = useState<Record<string, string>>(() => loadFamilyMap());
+  const [rankMap, setRankMap] = useState<Record<string, string>>(() => loadRankMap());
   const [eppoVocab, setEppoVocab] = useState<EppoEntry[]>([]);
 
   const [mode, setMode] = useState<"clusters" | "species">("clusters");
@@ -118,11 +124,13 @@ export default function App() {
   const colorsRef = useRef(colorMap);
   const eppoRef = useRef(eppoMap);
   const familyRef = useRef(familyMap);
+  const rankRef = useRef(rankMap);
   useEffect(() => { gtRef.current = groundTruth; }, [groundTruth]);
   useEffect(() => { labelsRef.current = labels; }, [labels]);
   useEffect(() => { colorsRef.current = colorMap; }, [colorMap]);
   useEffect(() => { eppoRef.current = eppoMap; }, [eppoMap]);
   useEffect(() => { familyRef.current = familyMap; }, [familyMap]);
+  useEffect(() => { rankRef.current = rankMap; }, [rankMap]);
 
   const captureState = useCallback(
     (): Snapshot => ({
@@ -131,6 +139,7 @@ export default function App() {
       colors: colorsRef.current,
       eppo: eppoRef.current,
       family: familyRef.current,
+      rank: rankRef.current,
     }),
     [],
   );
@@ -151,6 +160,8 @@ export default function App() {
     saveEppoMap(snap.eppo);
     setFamilyMap(snap.family);
     saveFamilyMap(snap.family);
+    setRankMap(snap.rank);
+    saveRankMap(snap.rank);
     setSelection(new Set());
     setSpeciesSelection(new Set());
   }, []);
@@ -220,6 +231,7 @@ export default function App() {
   useEffect(() => { saveLabels(labels); }, [labels]);
   useEffect(() => { saveEppoMap(eppoMap); }, [eppoMap]);
   useEffect(() => { saveFamilyMap(familyMap); }, [familyMap]);
+  useEffect(() => { saveRankMap(rankMap); }, [rankMap]);
 
   // marca alterações por enviar para a cloud (ignora o 1º render). skipDirty é
   // ligado por applyCloud: carregar da cloud NÃO conta como alteração por enviar.
@@ -285,16 +297,31 @@ export default function App() {
     }
   }, []);
 
-  // mantém activeSpecies válido (o Lixo é sempre válido, apesar de não estar em labels)
+  // mantém activeSpecies válido (as reservadas são sempre válidas, apesar de não
+  // estarem em labels)
   useEffect(() => {
-    if (activeSpecies && activeSpecies !== LIXO && !labels.includes(activeSpecies)) setActiveSpecies(labels[0] ?? "");
-    else if (!activeSpecies && labels.length > 0) setActiveSpecies(labels[0]);
+    if (activeSpecies && !isReservada(activeSpecies) && !labels.includes(activeSpecies)) {
+      setActiveSpecies(labels[0] ?? "");
+    } else if (!activeSpecies && labels.length > 0) setActiveSpecies(labels[0]);
   }, [labels, activeSpecies]);
 
   const colorOf = useCallback(
-    (label: string): string => (label === LIXO ? LIXO_COLOR : colorMap[label] ?? "#9ca3af"),
+    (label: string): string => {
+      if (label === LIXO) return LIXO_COLOR;
+      if (label === A_CONFIRMAR) return A_CONFIRMAR_COLOR;
+      return colorMap[label] ?? "#9ca3af";
+    },
     [colorMap],
   );
+
+  /** Nível taxonómico de uma etiqueta: "especie" (omissão) ou "familia". */
+  const rankOf = useCallback(
+    (label: string): string => rankMap[label] || "especie",
+    [rankMap],
+  );
+
+  // (o nível edita-se pelo lápis, via editSpecies — um só snapshot por edição,
+  // logo um só Ctrl+Z desfaz nome + código + família + nível de uma vez)
 
   // ---- derivados ----
   const allFilenames = useMemo(() => config?.assignments.map((a) => a.filename) ?? [], [config]);
@@ -372,16 +399,17 @@ export default function App() {
 
   // ---- espécies ----
   // criação centralizada: nome + código + família (todos opcionais menos o nome)
-  const addLabel = useCallback((name: string, code?: string, family?: string) => {
+  const addLabel = useCallback((name: string, code?: string, family?: string, rank?: string) => {
     const t = name.trim();
     if (!t) return;
-    if (t.toLowerCase() === LIXO.toLowerCase()) {
-      alert(`"${LIXO}" é a categoria reservada para crops inutilizáveis — já existe, fixa no fundo do painel.`);
+    if (isReservada(t) || RESERVADAS.some((r) => r.toLowerCase() === t.toLowerCase())) {
+      alert(`"${t}" é uma categoria reservada — já existe, fixa no fundo do painel.`);
       return;
     }
     setLabels((prev) => (prev.includes(t) ? prev : [...prev, t]));
     if (code) setEppoMap((prev) => ({ ...prev, [t]: code }));
     if (family) setFamilyMap((prev) => ({ ...prev, [t]: family }));
+    if (rank === "familia") setRankMap((prev) => ({ ...prev, [t]: "familia" }));
     setActiveSpecies(t);
   }, []);
 
@@ -400,7 +428,7 @@ export default function App() {
   // só vez. Um único snapshot -> um Ctrl+Z desfaz a edição toda. O nome é a chave
   // das anotações, por isso mudá-lo arrasta ground truth, cor, código e família.
   const editSpecies = useCallback(
-    (oldName: string, proposed: string, code: string, family: string) => {
+    (oldName: string, proposed: string, code: string, family: string, rank: string) => {
       const newName = proposed.trim();
       if (!newName) return;
       if (newName !== oldName) {
@@ -408,12 +436,19 @@ export default function App() {
           alert("Já existe uma espécie com esse nome.");
           return;
         }
-        if (newName.toLowerCase() === LIXO.toLowerCase()) {
-          alert(`"${LIXO}" é a categoria reservada para crops inutilizáveis.`);
+        if (RESERVADAS.some((r) => r.toLowerCase() === newName.toLowerCase())) {
+          alert(`"${newName}" é uma categoria reservada.`);
           return;
         }
       }
       snapshot();
+      setRankMap((prev) => {
+        const next = { ...prev };
+        delete next[oldName];
+        if (rank === "familia") next[newName] = "familia";
+        else delete next[newName];
+        return next;
+      });
       setEppoMap((prev) => {
         const next = { ...prev };
         delete next[oldName];
@@ -443,7 +478,7 @@ export default function App() {
         saveColorMap(next);
         return next;
       });
-      // (código EPPO e família já foram gravados no nome novo acima)
+      // (código EPPO, família e nível já foram gravados no nome novo acima)
       if (activeSpecies === oldName) setActiveSpecies(newName);
     },
     [labels, activeSpecies, snapshot],
@@ -660,7 +695,7 @@ export default function App() {
   const doCloudSave = useCallback(
     async (silent: boolean) => {
       setCloudSaving(true);
-      const r = await saveToCloud(groundTruth, labels, allFilenames, eppoMap, familyMap);
+      const r = await saveToCloud(groundTruth, labels, allFilenames, eppoMap, familyMap, rankMap);
       setCloudSaving(false);
       if (r.ok) {
         const ts = Date.now();
@@ -694,6 +729,8 @@ export default function App() {
     if (data.ground_truth && typeof data.ground_truth === "object") setGroundTruth(data.ground_truth);
     if (Array.isArray(data.labels)) setLabels(data.labels);
     if (data.eppo && typeof data.eppo === "object") setEppoMap(data.eppo);
+    if (data.family && typeof data.family === "object") setFamilyMap(data.family);
+    if (data.rank && typeof data.rank === "object") setRankMap(data.rank);
     if (at) {
       setCloudSavedAt(at);
       setCloudSavedAtState(at);
@@ -852,7 +889,14 @@ export default function App() {
       else if (e.key === "r" || e.key === "R") retireSelection();
       else if (e.key === "j" || e.key === "J") navCluster(1);
       else if (e.key === "k" || e.key === "K") navCluster(-1);
-      else if (e.key === "0") {
+      else if (e.key === "c" || e.key === "C") {
+        // "A confirmar": a imagem é boa mas não dá para identificar. Evita que a
+        // mesma plântula duvidosa seja reavaliada a cada passagem.
+        if (selection.size > 0) {
+          assignSpecies(A_CONFIRMAR);
+          setActiveSpecies(A_CONFIRMAR);
+        }
+      } else if (e.key === "0") {
         // teclas = atribuir directamente; SEM selecção não fazem nada (sem switch
         // silencioso da espécie ativa, que era abrupto e propenso a erro)
         if (selection.size > 0) {
@@ -936,8 +980,8 @@ export default function App() {
         cloudState={cloudState}
         cloudSaving={cloudSaving}
         onCloudSave={handleCloudSave}
-        onExportJSON={() => exportJSON(groundTruth, labels, eppoMap, familyMap)}
-        onExportCSV={() => exportCSV(groundTruth, allFilenames, eppoMap)}
+        onExportJSON={() => exportJSON(groundTruth, labels, eppoMap, familyMap, rankMap)}
+        onExportCSV={() => exportCSV(groundTruth, allFilenames, eppoMap, rankMap)}
         onImport={handleImport}
         onHelp={() => setHelpOpen(true)}
       />
@@ -1030,7 +1074,7 @@ export default function App() {
           />
         ) : (
           <SpeciesView
-            labels={[...labels, LIXO]}
+            labels={[...labels, A_CONFIRMAR, LIXO]}
             groundTruth={groundTruth}
             colorOf={colorOf}
             speciesPage={speciesPage}
@@ -1045,6 +1089,7 @@ export default function App() {
             onSetColor={setSpeciesColor}
             eppoOf={(l) => eppoMap[l] ?? ""}
             familyOf={familyOf}
+            rankOf={rankOf}
             eppoVocab={eppoVocab}
             totalAll={allFilenames.length}
             thumbOf={thumbOf}
@@ -1065,6 +1110,7 @@ export default function App() {
         eppoVocab={eppoVocab}
         eppoOf={(l) => eppoMap[l] ?? ""}
         familyOf={familyOf}
+        rankOf={rankOf}
         onGoToSpecies={goToSpecies}
         onAdd={addLabel}
         onEditSpecies={editSpecies}
