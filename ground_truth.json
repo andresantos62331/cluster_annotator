@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-04T11:34:11.007Z",
+  "exported_at": "2026-08-05T17:36:57.972Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -79,13 +79,31 @@
     "Convolvulus arvensis": "CONAR"
   },
   "family": {
-    "Digitaria sanguinalis": "Poaceae",
+    "Cyperus rotundus": "Cyperaceae",
+    "Echinochloa crus-galli": "Poaceae",
+    "Ambrosia artemisiifolia": "Asteraceae",
     "Malva sylvestris": "Malvaceae",
+    "Spergula arvensis": "Caryophyllaceae",
+    "Chenopodium album": "Amaranthaceae",
+    "Erodium moschatum": "Geraniaceae",
+    "Urtica urens": "Urticaceae",
+    "Oxalis pes-caprae": "Oxalidaceae",
+    "Tribulus terrestris": "Zygophyllaceae",
+    "Ranunculus arvensis": "Ranunculaceae",
+    "Galinsoga parviflora": "Asteraceae",
+    "Datura stramonium": "Solanaceae",
+    "Polygonum aviculare": "Polygonaceae",
+    "Chenopodium opulifolium": "Amaranthaceae",
+    "Papaver rhoeas": "Papaveraceae",
     "Solanum nigrum": "Solanaceae",
-    "Xanthium spinosum": "Asteraceae",
-    "Cyperus esculentus": "Cyperaceae",
-    "Capsella rubella": "Brassicaceae",
-    "Convolvulus arvensis": "Convolvulaceae"
+    "Digitaria sanguinalis": "Poaceae",
+    "Amaranthus retroflexus": "Amaranthaceae",
+    "Portulaca oleracea": "Portulacaceae",
+    "Poa annua": "Poaceae",
+    "Amaranthaceae": "Amaranthaceae"
+  },
+  "rank": {
+    "Amaranthaceae": "familia"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
