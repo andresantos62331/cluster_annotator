@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-05T17:49:12.675Z",
+  "exported_at": "2026-08-05T17:56:39.023Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -35,7 +35,8 @@
     "Raphanus raphanistrum",
     "Xanthium spinosum",
     "Cyperus esculentus",
-    "Capsella rubella"
+    "Capsella rubella",
+    "Poaceae"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
