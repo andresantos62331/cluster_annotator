@@ -51,14 +51,14 @@ export const NOVIDADES: Novidade[] = [
         titulo: "«A confirmar», para as dúvidas",
         tecla: "C",
         texto:
-          "Para plântulas cuja fotografia tem qualidade suficiente mas não permite identificar. Ficam guardadas numa secção própria, como decisão pendente — deixa de ser preciso reavaliá-las de cada vez que se passa pelo grupo. É diferente do «Lixo», que continua a ser só para imagens que não servem: desfocadas, com duas ou mais espécies diferentes, ou apenas parte de uma planta. Numa está em causa a identificação; na outra, a imagem.",
+          "Para as plântulas em que a imagem está boa e mostra o que é preciso — a espécie é identificável — mas fica a dúvida sobre qual é. Marcá-las com C guarda-as numa secção própria, à espera de uma segunda opinião, em vez de obrigar a uma decisão à pressa; e deixa de ser preciso reavaliá-las de cada vez que se passa pelo grupo. É diferente das outras duas hipóteses: no «Lixo» o problema é a imagem (desfocada, com duas ou mais espécies diferentes, ou apenas parte de uma planta); no nível família o problema é a fotografia não mostrar o que distingue a espécie. Aqui, o que falta é só a certeza.",
         video: "a-confirmar.mp4",
         alt: "Várias plântulas duvidosas são selecionadas e, com a tecla C, passam para a secção «A confirmar».",
       },
       {
         titulo: "Identificação ao nível da família",
         texto:
-          "No painel da direita há agora um botão «+ Família», a par do «+ Espécie». Cria uma etiqueta só com o nome da família (por exemplo, Poaceae), sem código, para os casos em que a fotografia não permite chegar à espécie — as gramíneas são o exemplo típico. Fica registado o nível a que cada identificação foi feita, em vez de se forçar uma espécie incerta.",
+          "No painel da direita há agora um botão «+ Família», a par do «+ Espécie». Cria uma etiqueta só com o nome da família (por exemplo, Poaceae), sem código, para os casos em que a própria fotografia não mostra o que distingue a espécie — as gramíneas são o exemplo típico, porque dependem de apêndices e pelos que a imagem não capta. Fica registado o nível a que cada identificação foi feita, em vez de se forçar uma espécie incerta. Sempre que dê para chegar à família, é preferível a «A confirmar»: guarda informação em vez de a deitar fora.",
         video: "familia.mp4",
         alt: "O botão «+ Família» cria a etiqueta Poaceae, que aparece no painel com um destaque próprio.",
       },

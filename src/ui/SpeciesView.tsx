@@ -374,7 +374,7 @@ export function SpeciesView({
                   title={
                     isLixo
                       ? "Imagens que não servem — não é uma espécie"
-                      : "Imagens boas, à espera de identificação — não é uma espécie"
+                      : "Imagens boas e identificáveis, à espera de segunda opinião — não é uma espécie"
                   }
                 >
                   {isLixo ? <IconTrash size={17} /> : <IconHelp size={17} />}
@@ -386,7 +386,7 @@ export function SpeciesView({
                 <span className="svb-name" style={{ color: cor }}>{lbl}</span>
                 {isRes ? (
                   <span className="svb-lixo-note">
-                    {isLixo ? "imagens inutilizáveis" : "por identificar"}
+                    {isLixo ? "imagens inutilizáveis" : "por confirmar"}
                     {files.length > 0 ? ` · ${files.length}` : ""}
                   </span>
                 ) : (

@@ -190,7 +190,7 @@ export function SpeciesPanel({
         data-species={A_CONFIRMAR}
         className={`sp-lixo sp-confirmar ${activeSpecies === A_CONFIRMAR ? "active" : ""}`}
         onClick={() => onGoToSpecies(A_CONFIRMAR)}
-        title="Plântula com fotografia de qualidade suficiente mas que não permite identificar. Tecla C atribui a selecção."
+        title="A imagem tem qualidade e detalhe suficientes e a espécie é identificável — falta é a certeza de qual é. Fica marcada para segunda opinião. Se a dúvida for por a foto não mostrar o que distingue a espécie, use antes o nível família. Tecla C atribui a selecção."
       >
         <span className="sp-key">C</span>
         <span className="sp-lixo-icon" style={{ color: "var(--amber)" }}>

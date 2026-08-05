@@ -26,9 +26,15 @@ export const PALETTE: string[] = [
 export const LIXO = "Lixo";
 export const LIXO_COLOR = "#8a8170"; // cinza quente, distinto da PALETTE
 
-// Plântulas que a fotografia não permite identificar MAS que têm qualidade
-// suficiente. Existe para evitar trabalho repetido: a Dra deixa de reavaliar a
-// mesma plântula duvidosa a cada passagem. Atalho C.
+// Plântulas em que a imagem TEM qualidade e TEM os detalhes precisos — a espécie
+// É identificável — mas quem anota não tem a certeza de qual é, e admite que
+// outro especialista a identificaria. É um limite do CONHECIMENTO, não do dado:
+// fica à espera de SEGUNDA OPINIÃO.
+// NÃO confundir com o nível FAMÍLIA, que é o limite do DADO (a fotografia não
+// capta os apêndices e pelos de que as gramíneas dependem). Se dá para chegar à
+// família, é família — guarda-se informação em vez de a deitar fora.
+// Serve também para evitar trabalho repetido: a mesma plântula duvidosa deixa de
+// ser reavaliada a cada passagem. Atalho C.
 export const A_CONFIRMAR = "A confirmar";
 export const A_CONFIRMAR_COLOR = "#d99518"; // âmbar = pendente, distinto da PALETTE
 

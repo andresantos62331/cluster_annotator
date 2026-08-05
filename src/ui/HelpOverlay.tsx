@@ -44,15 +44,24 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
 
         <h2>As duas categorias reservadas</h2>
         <div className="help-note">
-          <b>A confirmar</b> <kbd>C</kbd> — a fotografia tem qualidade suficiente mas
-          não permite identificar a plântula. Fica guardada como decisão pendente,
-          para não voltares a avaliar a mesma imagem a cada passagem.
+          <b>A confirmar</b> <kbd>C</kbd> — a imagem tem qualidade e mostra o que é
+          preciso, e a espécie <b>é</b> identificável: o que falta é a certeza.
+          Marca aqui as plântulas em que ficas em dúvida mas achas que outra pessoa
+          as identificaria. Ficam guardadas à espera de uma segunda opinião, em vez
+          de serem decididas à pressa — e deixas de reavaliar a mesma imagem a cada
+          passagem.
           <br />
           <b>Lixo</b> <kbd>0</kbd> — a imagem não serve: desfocada, com duas ou mais
           espécies diferentes, ou apenas parte de uma planta.
           <br />
-          Em resumo: no <b>Lixo</b> o problema é a imagem; em <b>A confirmar</b> a
-          imagem está boa e o que falta é a identificação.
+          Em resumo: no <b>Lixo</b> o problema é a <b>imagem</b>; em{" "}
+          <b>A confirmar</b> a imagem está boa e o que falta é a <b>certeza</b>.
+          <br />
+          <b>Atenção à diferença para a família:</b> se a dúvida existe porque a
+          fotografia não mostra o que distingue a espécie — as gramíneas dependem de
+          apêndices e pelos que a imagem não capta —, isso não é «A confirmar»: é
+          identificação ao nível da <b>família</b>. Num caso falta a certeza de quem
+          está a ver; no outro falta a informação na própria foto.
         </div>
 
         <h2>Espécie ou família</h2>
@@ -89,7 +98,7 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
               <div><dt><kbd>R</kbd></dt><dd>retirar a etiqueta às selecionadas</dd></div>
               <div><dt><kbd>D</kbd></dt><dd>limpar a seleção</dd></div>
               <div><dt><kbd>1</kbd>–<kbd>9</kbd></dt><dd>atribuir a seleção à espécie n.º N (ordem do painel direito)</dd></div>
-              <div><dt><kbd>C</kbd></dt><dd>marcar como <i>A confirmar</i> (imagem boa, espécie por identificar)</dd></div>
+              <div><dt><kbd>C</kbd></dt><dd>marcar como <i>A confirmar</i> (identificável, mas sem certeza — para segunda opinião)</dd></div>
               <div><dt><kbd>0</kbd></dt><dd>marcar como Lixo (imagem inutilizável)</dd></div>
               <div><dt><kbd>J</kbd> / <kbd>K</kbd></dt><dd>grupo seguinte / anterior</dd></div>
               <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>mudar de página</dd></div>

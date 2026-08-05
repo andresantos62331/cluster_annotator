@@ -461,8 +461,8 @@ export function Workspace({
             <span className="lixo-note">
               {confirmarFiles.length}{" "}
               {confirmarFiles.length === 1
-                ? "plântula por identificar"
-                : "plântulas por identificar"}
+                ? "plântula por confirmar"
+                : "plântulas por confirmar"}
             </span>
           </div>
           <div className="grid">
