@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-05T17:36:57.972Z",
+  "exported_at": "2026-08-05T17:49:12.675Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -100,10 +100,12 @@
     "Amaranthus retroflexus": "Amaranthaceae",
     "Portulaca oleracea": "Portulacaceae",
     "Poa annua": "Poaceae",
-    "Amaranthaceae": "Amaranthaceae"
+    "Amaranthaceae": "Amaranthaceae",
+    "Poaceae": "Poaceae"
   },
   "rank": {
-    "Amaranthaceae": "familia"
+    "Amaranthaceae": "familia",
+    "Poaceae": "familia"
   },
   "ground_truth": {
     "20251109_162246_planta_12.jpg": "Lixo",
