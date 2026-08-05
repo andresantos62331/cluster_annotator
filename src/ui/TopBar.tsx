@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ConfigDef } from "../types";
 import { Ring } from "./bits";
-import { IconChevron, IconCloud, IconDownload, IconJson, IconTable, IconUpload } from "./icons";
+import { IconBell, IconChevron, IconCloud, IconDownload, IconJson, IconTable, IconUpload } from "./icons";
 
 export function TopBar({
   defs,
@@ -19,6 +19,8 @@ export function TopBar({
   onExportCSV,
   onImport,
   onHelp,
+  onNovidades,
+  novidadesPorLer,
 }: {
   defs: ConfigDef[];
   configId: string;
@@ -36,6 +38,8 @@ export function TopBar({
   onExportCSV: () => void;
   onImport: (f: File) => void;
   onHelp: () => void;
+  onNovidades: () => void;
+  novidadesPorLer: boolean;
 }) {
   const [techOpen, setTechOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -189,6 +193,17 @@ export function TopBar({
             }}
           />
         </div>
+
+        {/* sino das novidades — o ponto só acende quando há entrada por ler, e
+            apaga-se ao abrir. Sem contagem: não é uma caixa de correio. */}
+        <button
+          className={`tech-btn nov-btn ${novidadesPorLer ? "tem" : ""}`}
+          onClick={onNovidades}
+          title={novidadesPorLer ? "Há novidades na ferramenta" : "Novidades da ferramenta"}
+        >
+          <IconBell size={13} />
+          {novidadesPorLer && <span className="nov-ponto" aria-hidden />}
+        </button>
 
         <button className="tech-btn help-btn" onClick={onHelp} title="Ajuda e atalhos (?)">
           ?

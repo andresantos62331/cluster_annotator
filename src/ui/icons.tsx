@@ -90,6 +90,16 @@ export const IconTrash = ({ size }: P) => (
   </svg>
 );
 
+// sino das novidades. Sem arcos `a` na campânula: com a corda igual ao diâmetro
+// o arco fica ambíguo e o desenho fechava numa bola. Curvas cúbicas, e o traço
+// todo dentro de x 5..19 / y 4..20 para respirar dentro do botão redondo de 22px.
+export const IconBell = ({ size }: P) => (
+  <svg {...base(size)}>
+    <path d="M12 4.2c-2.8 0-5 2.3-5 5.1 0 3.4-.7 4.8-1.5 5.8-.4.5 0 1.2.6 1.2h11.8c.6 0 1-.7.6-1.2-.8-1-1.5-2.4-1.5-5.8 0-2.8-2.2-5.1-5-5.1Z" />
+    <path d="M10.3 18.6c.3.6.9 1 1.7 1s1.4-.4 1.7-1" />
+  </svg>
+);
+
 export const IconLocate = ({ size }: P) => (
   <svg {...base(size)}>
     <circle cx="12" cy="12" r="3.2" />

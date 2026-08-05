@@ -13,6 +13,8 @@ const EPPO_KEY = "tese3.species_eppo";
 // extra (não-contrato): timestamp do último envio para a cloud, para o indicador
 // de estado "local vs. cloud". Só informativo; ausência é tratada com segurança.
 const CLOUD_AT_KEY = "tese3.cloud_saved_at";
+// id (data) da entrada de novidades mais recente que já foi vista neste browser
+const NOVIDADES_KEY = "tese3.novidades_vista";
 
 // Mapa persistente espécie -> cor (hex). Mantém-se entre sessões (e não se apaga ao
 // remover uma espécie) para a cor de cada espécie ser fixa. A Dra pode personalizar
@@ -132,6 +134,20 @@ export function getCloudSavedAt(): number | null {
 
 export function setCloudSavedAt(ts: number): void {
   localStorage.setItem(CLOUD_AT_KEY, String(ts));
+}
+
+// --- novidades ---
+// Guarda-se o id (data) da entrada mais recente já vista. Vazio quer dizer duas
+// coisas MUITO diferentes, e quem decide é o App (só ele sabe se há trabalho
+// feito): browser novo = primeira visita, nada a anunciar; browser com anotações
+// = quem já andava a trabalhar antes de isto existir, e é justamente a pessoa a
+// quem o aviso interessa.
+export function getNovidadeVista(): string {
+  return localStorage.getItem(NOVIDADES_KEY) ?? "";
+}
+
+export function setNovidadeVista(id: string): void {
+  localStorage.setItem(NOVIDADES_KEY, id);
 }
 
 // --- serializadores (CONTRATO de export — o investigador consome isto) ---

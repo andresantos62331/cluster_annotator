@@ -1640,6 +1640,78 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
   border-bottom-width: 2px; border-radius: 5px; padding: 1px 6px;
 }
 
+/* ========================== NOVIDADES ============================= */
+/* Registo do que muda na ferramenta. Reaproveita a moldura da ajuda; o que é
+   proprio daqui e' a linha do tempo e as demonstracoes em GIF. */
+.nov-card { width: min(720px, calc(100vw - 48px)); }
+.nov-intro { font-size: 13px; color: var(--muted); margin: -4px 0 22px; }
+
+.nov-entrada { margin-bottom: 26px; }
+.nov-head { display: flex; align-items: center; gap: 12px; margin-bottom: 9px; }
+.nov-data {
+  font-size: 11px; letter-spacing: 0.03em; color: var(--accent-2);
+  background: var(--accent-soft); border: 1px solid var(--accent-line);
+  border-radius: 5px; padding: 2px 8px; flex-shrink: 0;
+}
+.nov-linha { flex: 1; height: 1px; background: var(--line); }
+.nov-titulo {
+  font-family: var(--font-display); font-size: 16px; font-weight: 600;
+  color: var(--ink); margin: 0 0 8px;
+}
+.nov-resumo { font-size: 13px; line-height: 1.6; color: var(--ink-dim); margin: 0 0 18px; }
+
+/* numeros a contar de 1, na margem — le-se como uma lista de mudancas */
+.nov-itens { list-style: none; margin: 0; padding: 0; counter-reset: nov; display: grid; gap: 20px; }
+.nov-itens > li { counter-increment: nov; position: relative; padding-left: 30px; }
+.nov-itens > li::before {
+  content: counter(nov);
+  position: absolute; left: 0; top: 1px;
+  width: 21px; height: 21px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  color: var(--leaf); background: var(--leaf-soft);
+  border: 1px solid rgba(138, 171, 102, 0.4);
+}
+.nov-it-h { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.nov-it-t { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.nov-it-p { font-size: 13px; line-height: 1.6; color: var(--ink-dim); margin: 0; }
+
+/* a demonstracao vale mais que o texto — ganha o destaque de uma prancha */
+.nov-fig {
+  margin: 11px 0 0; padding: 0;
+  border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--bg); overflow: hidden; line-height: 0;
+}
+.nov-fig video { display: block; width: 100%; height: auto; background: #000; }
+
+.nov-rodape { margin: 4px 0 0; }
+
+/* sino na barra de cima.
+   O `display:block` no svg não é cosmético: em linha, o svg assenta na linha de
+   base e o espaço reservado ao descendente entra na caixa do item de grelha —
+   centrar essa caixa deixava o desenho visivelmente acima do meio do círculo.
+   O `padding:0` é a outra metade: um <button> traz padding lateral do browser e,
+   com box-sizing:border-box, a caixa de conteúdo de 22px fica mais estreita do
+   que o ícone — que assim assentava 2.5px à direita do centro. Nos botões «?» e
+   «ⓘ» não se notava porque são texto, e o texto centra-se por outra via. */
+.nov-btn { position: relative; display: grid; place-items: center; line-height: 0; padding: 0; }
+.nov-btn svg { display: block; }
+.nov-btn.tem { color: var(--accent-2); border-color: var(--accent-line); }
+.nov-ponto {
+  position: absolute; top: 4px; right: 4px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 2px var(--panel);
+  animation: novPulso 2.4s var(--ease) infinite;
+}
+@keyframes novPulso {
+  0%, 62%, 100% { transform: scale(1); opacity: 1; }
+  74% { transform: scale(1.45); opacity: 0.75; }
+}
+/* quem prefere o ecra quieto nao leva um ponto a pulsar o dia todo */
+@media (prefers-reduced-motion: reduce) {
+  .nov-ponto { animation: none; }
+}
+
 /* =========================== LIGHTBOX ============================= */
 
 .lightbox {

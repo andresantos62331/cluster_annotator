@@ -6,6 +6,9 @@ const LIMIAR = 6;
 // margem do contentor onde o arrastamento faz rolar sozinho, e velocidade máxima
 const BORDA = 64;
 const VEL_MAX = 22;
+// passo (px) a que se amostra o segmento entre dois pointermove — bem abaixo do
+// lado de um cartão (150px) para nenhum escapar num arrastamento rápido
+const PASSO = 24;
 
 /** Ancestral com scroll próprio (é ele que roda sozinho ao arrastar até à borda). */
 function scroller(el: HTMLElement | null): HTMLElement | null {
@@ -88,6 +91,7 @@ export function useDragSelect({
     };
 
     const mover = (ev: PointerEvent) => {
+      const anterior = ultimo;
       ultimo = { x: ev.clientX, y: ev.clientY };
       if (!activo) {
         if (Math.abs(ev.clientX - x0) < LIMIAR && Math.abs(ev.clientY - y0) < LIMIAR) return;
@@ -101,7 +105,18 @@ export function useDragSelect({
         applyRef.current([partida], modo);
         if (rolo && !raf) raf = requestAnimationFrame(autoscroll);
       }
-      pintarEm(ev.clientX, ev.clientY);
+      // Testar SÓ o ponto do evento salta cartões: o rato anda mais depressa do
+      // que os pointermove chegam, e num arrastamento rápido ficavam buracos no
+      // meio da série. Percorre-se o segmento desde o evento anterior, a passo
+      // mais curto do que o lado de um cartão, para não escapar nenhum.
+      const dx = ultimo.x - anterior.x;
+      const dy = ultimo.y - anterior.y;
+      const dist = Math.hypot(dx, dy);
+      const passos = Math.min(40, Math.ceil(dist / PASSO));
+      for (let i = 1; i < passos; i++) {
+        pintarEm(anterior.x + (dx * i) / passos, anterior.y + (dy * i) / passos);
+      }
+      pintarEm(ultimo.x, ultimo.y);
     };
 
     const largar = () => {

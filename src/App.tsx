@@ -5,6 +5,7 @@ import {
   exportJSON,
   getCloudKey,
   getCloudSavedAt,
+  getNovidadeVista,
   loadColorMap,
   loadEppoMap,
   loadFamilyMap,
@@ -21,7 +22,9 @@ import {
   saveToCloud,
   setCloudKey,
   setCloudSavedAt,
+  setNovidadeVista,
 } from "./storage";
+import { ULTIMA_NOVIDADE } from "./novidades";
 import { loadEppo, type EppoEntry } from "./eppo";
 import { celebrateAssign } from "./ui/particles";
 import { A_CONFIRMAR, A_CONFIRMAR_COLOR, isReservada, LIXO, LIXO_COLOR, PALETTE, RESERVADAS } from "./colors";
@@ -34,6 +37,7 @@ import { SpeciesView } from "./ui/SpeciesView";
 import { Lightbox } from "./ui/Lightbox";
 import { ClusterHistory } from "./ui/ClusterHistory";
 import { HelpOverlay } from "./ui/HelpOverlay";
+import { Novidades } from "./ui/Novidades";
 
 const IMAGES_PER_PAGE = 30;
 const UNDO_MAX = 30;
@@ -105,6 +109,46 @@ export default function App() {
   const [cloudAhead, setCloudAhead] = useState<{ data: CloudPayload; at: number } | null>(null);
 
   const [helpOpen, setHelpOpen] = useState(false);
+
+  // ---- novidades ----
+  // Decide-se UMA vez, no arranque, antes de o utilizador poder mexer em nada:
+  //   marcador igual ao mais recente  -> já viu, nada a anunciar
+  //   sem marcador MAS com trabalho   -> andava a anotar antes disto existir; é
+  //                                      exactamente a pessoa a quem interessa
+  //   sem marcador e sem trabalho     -> primeira visita, um alerta seria ruído
+  const [novidadesOpen, setNovidadesOpen] = useState(false);
+  const [novidadesPorLer, setNovidadesPorLer] = useState(() => {
+    const vista = getNovidadeVista();
+    if (vista) return vista < ULTIMA_NOVIDADE;
+    return Object.keys(loadGT()).length > 0 || loadLabels().length > 0;
+  });
+  // primeira visita: marcar como visto em silêncio, para não acender no arranque
+  // seguinte só porque nunca ninguém abriu a página
+  useEffect(() => {
+    if (!novidadesPorLer && !getNovidadeVista()) setNovidadeVista(ULTIMA_NOVIDADE);
+  }, [novidadesPorLer]);
+
+  const abrirNovidades = useCallback(() => {
+    setNovidadesOpen(true);
+    setNovidadesPorLer(false);
+    setNovidadeVista(ULTIMA_NOVIDADE);
+  }, []);
+
+  // #novidades no endereço abre a página directamente — é este o link que segue
+  // nos emails para quem anota.
+  // O `hashchange` NÃO é zelo a mais: se o separador já estiver aberto, clicar no
+  // link do email muda o hash sem recarregar a página, e sem isto não acontecia
+  // nada — que é precisamente o caso de quem anda a anotar todos os dias.
+  useEffect(() => {
+    const abrirSeForCaso = () => {
+      if (window.location.hash.toLowerCase() !== "#novidades") return;
+      abrirNovidades();
+      window.history.replaceState({}, "", window.location.pathname + window.location.search);
+    };
+    abrirSeForCaso();
+    window.addEventListener("hashchange", abrirSeForCaso);
+    return () => window.removeEventListener("hashchange", abrirSeForCaso);
+  }, [abrirNovidades]);
 
   const [toasts, setToasts] = useState<Toast[]>([]);
   const toastId = useRef(0);
@@ -910,6 +954,12 @@ export default function App() {
         if (e.key === "Escape" || e.key === "?") setHelpOpen(false);
         return;
       }
+      if (novidadesOpen) {
+        // engole tudo o resto: a página está aberta e por cima, atribuir uma
+        // espécie por baixo dela seria uma anotação às cegas
+        if (e.key === "Escape") setNovidadesOpen(false);
+        return;
+      }
       const t = e.target as HTMLElement;
       if (t.tagName === "INPUT" || t.tagName === "SELECT" || t.tagName === "TEXTAREA") return;
 
@@ -971,7 +1021,7 @@ export default function App() {
     }
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [mode, config, lightbox, lightboxList, helpOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, removeSelectedLabels, toggleLightboxSelect, toggleHovered, undo, redo]);
+  }, [mode, config, lightbox, lightboxList, helpOpen, novidadesOpen, totalPages, assignSpecies, activeSpecies, navCluster, labels, selection, retireSelection, removeSelectedLabels, toggleLightboxSelect, toggleHovered, undo, redo]);
 
   // reatribuir a selecção (vista Espécies) a outra espécie
   const reassignSpeciesSelection = useCallback(
@@ -1041,6 +1091,8 @@ export default function App() {
         onExportCSV={() => exportCSV(groundTruth, allFilenames, eppoMap, rankMap)}
         onImport={handleImport}
         onHelp={() => setHelpOpen(true)}
+        onNovidades={abrirNovidades}
+        novidadesPorLer={novidadesPorLer}
       />
 
       {cloudAhead && (
@@ -1193,6 +1245,7 @@ export default function App() {
       />
 
       {helpOpen && <HelpOverlay onClose={() => setHelpOpen(false)} />}
+      {novidadesOpen && <Novidades onClose={() => setNovidadesOpen(false)} />}
 
       <div className="toaster">
         {toasts.map((t) => (
