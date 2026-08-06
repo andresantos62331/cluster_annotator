@@ -73,6 +73,10 @@ export function Workspace({
   const [ddOpen, setDdOpen] = useState(false);
   // fichas de espécie colapsadas (concordante com a tab Espécies)
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  // o caixote arranca RECOLHIDO: é material de consulta ("terei exagerado a
+  // deitar fora neste grupo?"), não trabalho, e estava a fazer de muro no fim
+  // de cada cluster
+  const [lixoOpen, setLixoOpen] = useState(false);
   const ddRef = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
 
@@ -480,37 +484,55 @@ export function Workspace({
         </div>
       )}
 
-      {/* Lixo — secção própria, NÃO é uma espécie: caixote distinto no fim */}
+      {/* Lixo — NÃO é uma espécie nem uma secção como as outras. Lê-se como uma
+          cavidade na página (ver .bin-lixo): fundo escavado, miniaturas a
+          cinzento e recolhido por omissão. A cor volta ao passar o rato, que é
+          a única razão pela qual vale a pena mantê-lo à vista — dar por uma
+          imagem que não devia ter sido deitada fora. */}
       {showAnnotated && lixoFiles.length > 0 && (
-        <div className="lixo-bin">
-          <div className="lixo-head">
-            <button
-              className={`svb-check ${lixoAllSel ? "on" : ""}`}
-              title={lixoAllSel ? "Desselecionar" : "Selecionar tudo no lixo"}
-              onClick={() => onToggleMany(lixoFiles)}
-            >
-              <svg viewBox="0 0 24 24" width="13" height="13">
-                <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-            <span className="lixo-mark"><IconTrash size={18} /></span>
+        <div className={`lixo-bin bin-lixo ${lixoOpen ? "open" : ""}`}>
+          <div
+            className="lixo-head"
+            onClick={() => setLixoOpen((v) => !v)}
+            title={lixoOpen ? "Recolher o lixo" : "Ver o que foi deitado fora neste grupo"}
+          >
+            <span className="lixo-fold" aria-hidden>
+              {lixoOpen ? "▾" : "▸"}
+            </span>
+            <span className="lixo-mark"><IconTrash size={16} /></span>
             <span className="lixo-title">{LIXO}</span>
             <span className="lixo-note">
-              {lixoFiles.length} {lixoFiles.length === 1 ? "crop inutilizável" : "crops inutilizáveis"}
+              {lixoFiles.length} {lixoFiles.length === 1 ? "imagem descartada" : "imagens descartadas"}
             </span>
+            {lixoOpen && (
+              <button
+                className={`svb-check ${lixoAllSel ? "on" : ""}`}
+                title={lixoAllSel ? "Desselecionar" : "Selecionar tudo no lixo"}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onToggleMany(lixoFiles);
+                }}
+              >
+                <svg viewBox="0 0 24 24" width="13" height="13">
+                  <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            )}
           </div>
-          <div className="grid">
-            {lixoFiles.map((f, i) => (
-              <Card
-                key={f}
-                filename={f}
-                index={i}
-                selected={selection.has(f)}
-                onToggle={() => onToggleSelect(f)}
-                onOpen={() => onOpenLightbox(f, lixoFiles)}
-              />
-            ))}
-          </div>
+          {lixoOpen && (
+            <div className="grid">
+              {lixoFiles.map((f, i) => (
+                <Card
+                  key={f}
+                  filename={f}
+                  index={i}
+                  selected={selection.has(f)}
+                  onToggle={() => onToggleSelect(f)}
+                  onOpen={() => onOpenLightbox(f, lixoFiles)}
+                />
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
