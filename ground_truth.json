@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-06T09:56:25.354Z",
+  "exported_at": "2026-08-06T09:58:25.463Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -36,7 +36,8 @@
     "Xanthium spinosum",
     "Cyperus esculentus",
     "Capsella rubella",
-    "Poaceae"
+    "Poaceae",
+    "Euphorbia helioscopia"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -77,7 +78,8 @@
     "Xanthium spinosum": "XANSP",
     "Cyperus esculentus": "CYPES",
     "Capsella rubella": "CAPRU",
-    "Convolvulus arvensis": "CONAR"
+    "Convolvulus arvensis": "CONAR",
+    "Euphorbia helioscopia": "EPHHE"
   },
   "family": {
     "Cyperus rotundus": "Cyperaceae",
@@ -103,7 +105,8 @@
     "Poa annua": "Poaceae",
     "Amaranthaceae": "Amaranthaceae",
     "Poaceae": "Poaceae",
-    "Stellaria media": "Caryophyllaceae"
+    "Stellaria media": "Caryophyllaceae",
+    "Euphorbia helioscopia": "Euphorbiaceae"
   },
   "rank": {
     "Amaranthaceae": "familia",
@@ -2278,6 +2281,8 @@
     "PHOTO-2026-05-20-09-48-42 (7)_planta_16.jpg": "Lixo",
     "PHOTO-2026-05-20-09-48-43 (6)_planta_7.jpg": "Datura stramonium",
     "20220417_162050_planta_4.jpg": "Lixo",
-    "20220417_162118_planta_1.jpg": "Lixo"
+    "20220417_162118_planta_1.jpg": "Lixo",
+    "PHOTO-2026-05-20-09-48-43 (11)_planta_15.jpg": "Euphorbia helioscopia",
+    "PHOTO-2026-05-20-09-48-43 (7)_planta_5.jpg": "Lixo"
   }
 }
