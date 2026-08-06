@@ -1892,19 +1892,19 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
 .pilha-grupo-h .pg-link:hover { color: var(--accent-2); background: var(--accent-soft); }
 .pilha-grupo-h .pg-link:hover .chip-go { opacity: 1; transform: translateX(2px); }
 
-/* espécie / família / reservadas distinguem-se no dropdown de atribuir */
-.sp-dropdown .dd-fam-mark {
-  display: grid; place-items: center; width: 22px; height: 22px; flex-shrink: 0;
-  border-radius: 6px; color: var(--leaf);
-  background: var(--leaf-soft); border: 1px solid rgba(138, 171, 102, 0.35);
+/* Família no dropdown de atribuir: MESMO registo do painel direito (véu verde a
+   esbater para a direita e nome em versaletes), para o mesmo tipo de etiqueta se
+   ler igual nos dois sítios. Sem ícone e sem a palavra "família": o registo já
+   diz o que é, e repeti-lo era ruído numa lista que se percorre depressa. */
+.sp-dropdown button.dd-fam-row {
+  background: linear-gradient(90deg, var(--leaf-soft), rgba(0, 0, 0, 0) 78%);
+}
+.sp-dropdown button.dd-fam-row:hover {
+  background: linear-gradient(90deg, rgba(138, 171, 102, 0.24), rgba(0, 0, 0, 0) 78%), var(--panel-hi);
 }
 .sp-dropdown .dd-name.dd-fam {
-  font-variant: all-small-caps; letter-spacing: 0.07em; font-size: 14px;
+  font-variant: all-small-caps; letter-spacing: 0.08em; font-size: 14px;
   color: color-mix(in srgb, var(--leaf) 55%, var(--ink));
-}
-.sp-dropdown .dd-nivel {
-  flex-shrink: 0; font-size: 10.5px; letter-spacing: 0.04em;
-  color: color-mix(in srgb, var(--leaf) 75%, var(--bg));
 }
 
 /* =========================== LIGHTBOX ============================= */

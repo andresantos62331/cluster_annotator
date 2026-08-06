@@ -1299,7 +1299,6 @@ export default function App() {
         eppoOf={(l) => eppoMap[l] ?? ""}
         familyOf={familyOf}
         rankOf={rankOf}
-        countOf={(l) => countByLabel.get(l) ?? 0}
         onGoToSpecies={goToSpecies}
         onAdd={addLabel}
         onEditSpecies={editSpecies}

@@ -100,17 +100,6 @@ export const IconBell = ({ size }: P) => (
   </svg>
 );
 
-// nível taxonómico acima da espécie — ramo que se divide, não uma planta
-export const IconRank = ({ size }: P) => (
-  <svg {...base(size)}>
-    <path d="M12 20V13c0-2.2 1.8-4 4-4h2" />
-    <path d="M12 13c0-2.2-1.8-4-4-4H6" />
-    <circle cx="12" cy="21.2" r="1.6" />
-    <circle cx="19.4" cy="9" r="1.6" />
-    <circle cx="4.6" cy="9" r="1.6" />
-  </svg>
-);
-
 export const IconLocate = ({ size }: P) => (
   <svg {...base(size)}>
     <circle cx="12" cy="12" r="3.2" />

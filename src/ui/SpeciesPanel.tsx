@@ -13,7 +13,6 @@ export function SpeciesPanel({
   eppoOf,
   familyOf,
   rankOf,
-  countOf,
   onGoToSpecies,
   onAdd,
   onEditSpecies,
@@ -28,7 +27,6 @@ export function SpeciesPanel({
   eppoOf: (l: string) => string;
   familyOf: (l: string) => string;
   rankOf: (l: string) => string;
-  countOf: (l: string) => number;
   onGoToSpecies: (l: string) => void;
   onAdd: (name: string, code?: string, family?: string, rank?: string) => void;
   onEditSpecies: (oldName: string, name: string, code: string, family: string, rank: string) => void;
@@ -99,7 +97,6 @@ export function SpeciesPanel({
           // lateral, versaletes) em vez de ganhar mais um chip — e some o "sem
           // código", que anunciava a ausência de algo que se decidiu não ter.
           const isFamilia = rankOf(lbl) === "familia";
-          const n = isFamilia ? countOf(lbl) : 0;
           return (
             <div
               key={lbl}
@@ -151,9 +148,10 @@ export function SpeciesPanel({
                   <div className="sp-id">
                     <span className={`sp-name ${isFamilia ? "fam-name" : ""}`}>{lbl}</span>
                     {isFamilia ? (
-                      <span className="fam-sub">
-                        família{n > 0 && <> · {n} {n === 1 ? "plântula" : "plântulas"}</>}
-                      </span>
+                      // só o nível, sem contagem: a linha de espécie também não
+                      // conta nada, e contar só aqui fazia a família parecer outra
+                      // coisa em vez de outro nível da mesma coisa
+                      <span className="fam-sub">família</span>
                     ) : (
                       <span className="sp-tags">
                         <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />

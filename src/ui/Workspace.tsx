@@ -5,7 +5,7 @@ import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
 import { useDragSelect } from "./dragSelect";
-import { IconHelp, IconRank, IconTrash } from "./icons";
+import { IconHelp, IconTrash } from "./icons";
 
 const IMAGES_PER_PAGE = 30;
 
@@ -318,29 +318,19 @@ export function Workspace({
                 .map((l) => (
                 <button
                   key={l}
+                  // uma FAMÍLIA distingue-se pelo mesmo registo do painel direito
+                  // (véu verde e versaletes), e não por marcas próprias daqui: o
+                  // mesmo tipo de etiqueta tem de se ler igual nos dois sítios
+                  className={rankOf(l) === "familia" ? "dd-fam-row" : ""}
                   onClick={() => {
                     onSetActive(l);
                     setDdOpen(false);
                   }}
                 >
-                  {/* uma FAMÍLIA lê-se de relance como tal, aqui pelas mesmas
-                      razões do painel direito: chapa de nível em vez de
-                      miniatura, versaletes, e nenhum espaço vazio onde estaria
-                      um código que se decidiu não ter */}
-                  {rankOf(l) === "familia" ? (
-                    <>
-                      <span className="dd-fam-mark">
-                        <IconRank size={14} />
-                      </span>
-                      <span className="dd-name dd-fam">{l}</span>
-                      <span className="dd-nivel">família</span>
-                    </>
-                  ) : (
-                    <>
-                      <SpeciesThumb file={thumbOf(l)} size={22} />
-                      <span className="dd-name">{l}</span>
-                      {eppoOf(l) && <span className="eppo-chip has mono">{eppoOf(l)}</span>}
-                    </>
+                  <SpeciesThumb file={thumbOf(l)} size={22} />
+                  <span className={`dd-name ${rankOf(l) === "familia" ? "dd-fam" : ""}`}>{l}</span>
+                  {rankOf(l) !== "familia" && eppoOf(l) && (
+                    <span className="eppo-chip has mono">{eppoOf(l)}</span>
                   )}
                   <span className="sw" style={{ background: colorOf(l) }} />
                 </button>
