@@ -102,7 +102,9 @@ export default function App() {
   const [visited, setVisited] = useState<number[]>([]);
   const [geometry, setGeometry] = useState<CropGeometry>({});
   const [speciesFocus, setSpeciesFocus] = useState<string | null>(null);
-  const [cardFocus, setCardFocus] = useState<string | null>(null);
+  // imagens a enquadrar e assinalar ao chegar a um grupo (uma, vinda da Coleção;
+  // ou o bloco todo, vindo de uma pilha)
+  const [cardFocus, setCardFocus] = useState<string[] | null>(null);
 
   const [hasCloudKey, setHasCloudKey] = useState(() => !!getCloudKey());
   const [cloudSaving, setCloudSaving] = useState(false);
@@ -723,6 +725,22 @@ export default function App() {
     [config, currentClusterId],
   );
 
+  // Sair de uma pilha para o grupo de origem: além de navegar, ASSINALA lá as
+  // imagens do bloco. Sem isto, cair num grupo de 30 imagens não diz quais eram
+  // as que estavam em dúvida — que é a única razão para lá ir.
+  const goToOrigem = useCallback(
+    (cid: number, files: string[]) => {
+      setLightbox(null);
+      setShowAnnotated(true);
+      setCurrentClusterId(cid);
+      setPage(0);
+      setSelection(new Set());
+      setMode("clusters");
+      setCardFocus(files);
+    },
+    [],
+  );
+
   const selectCluster = useCallback((cid: number) => {
     setCurrentClusterId(cid);
     setPage(0);
@@ -759,7 +777,7 @@ export default function App() {
         setLightbox(null);
         setShowAnnotated(true); // a imagem anotada tem de estar visível no grupo
         selectCluster(cid);
-        setCardFocus(filename); // o Workspace faz scroll + realce
+        setCardFocus([filename]); // o Workspace faz scroll + realce
       }
     },
     [fileToCluster, selectCluster],
@@ -1211,6 +1229,7 @@ export default function App() {
             colorOf={colorOf}
             thumbOf={thumbOf}
             eppoOf={(l) => eppoMap[l] ?? ""}
+            rankOf={rankOf}
             onSetActive={setActiveSpecies}
             onToggleSelect={toggleSelect}
             onPaintSelect={paintSelect}
@@ -1221,8 +1240,9 @@ export default function App() {
             onRetire={retireSelection}
             onClear={() => setSelection(new Set())}
             onSelectCluster={selectCluster}
+            onGoToOrigem={goToOrigem}
             clusterOf={(f) => fileToCluster.get(f) ?? null}
-            focusFile={cardFocus}
+            focusFiles={cardFocus}
             onFocusHandled={() => setCardFocus(null)}
           />
         ) : (

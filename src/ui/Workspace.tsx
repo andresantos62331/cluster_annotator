@@ -5,7 +5,7 @@ import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
 import { useDragSelect } from "./dragSelect";
-import { IconHelp, IconTrash } from "./icons";
+import { IconHelp, IconRank, IconTrash } from "./icons";
 
 const IMAGES_PER_PAGE = 30;
 
@@ -26,6 +26,7 @@ export function Workspace({
   colorOf,
   thumbOf,
   eppoOf,
+  rankOf,
   onSetActive,
   onToggleSelect,
   onPaintSelect,
@@ -36,8 +37,9 @@ export function Workspace({
   onRetire,
   onClear,
   onSelectCluster,
+  onGoToOrigem,
   clusterOf,
-  focusFile,
+  focusFiles,
   onFocusHandled,
 }: {
   clusterId: number;
@@ -56,6 +58,7 @@ export function Workspace({
   colorOf: (l: string) => string;
   thumbOf: (l: string) => string | null;
   eppoOf: (l: string) => string;
+  rankOf: (l: string) => string;
   onSetActive: (l: string) => void;
   onToggleSelect: (f: string) => void;
   // arrastamento: força o estado (não alterna) nos cartões por onde passa
@@ -68,9 +71,12 @@ export function Workspace({
   onRetire: () => void;
   onClear: () => void;
   onSelectCluster: (cid: number) => void;
+  // ir para o grupo de origem A ASSINALAR estas imagens quando lá chegar
+  onGoToOrigem: (cid: number, files: string[]) => void;
   // cluster de origem de cada ficheiro — nas pilhas é o que dá a arrumação
   clusterOf: (f: string) => number | null;
-  focusFile: string | null;
+  /** imagens a enquadrar e assinalar à chegada (uma, ou o bloco todo) */
+  focusFiles: string[] | null;
   onFocusHandled: () => void;
 }) {
   const [ddOpen, setDdOpen] = useState(false);
@@ -91,39 +97,60 @@ export function Workspace({
     apply: onPaintSelect,
   });
 
-  // chegada via "Ir para cluster de origem": scroll até à imagem e realça-a
-  // com a COR DA ESPÉCIE dessa imagem (fallback: vermelhão de acento)
+  // Chegada via "ir para o grupo de origem": enquadra e faz ping nas imagens de
+  // que se vinha a falar. Pode ser UMA (vinda da Coleção) ou o BLOCO TODO (vinda
+  // de uma pilha) — sem isto, cair num grupo de 30 imagens não diz quais eram.
   useEffect(() => {
-    if (!focusFile) return;
-    const el = bodyRef.current?.querySelector(
-      `[data-file="${CSS.escape(focusFile)}"]`,
-    ) as HTMLElement | null;
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "center" });
-      const label = groundTruth[focusFile];
-      const hex = label ? colorOf(label) : "#ff6a3d";
-      const m = /^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(hex);
-      const rgb = m ? `${parseInt(m[1], 16)},${parseInt(m[2], 16)},${parseInt(m[3], 16)}` : "255,106,61";
-      const on = `0 0 0 4px rgba(${rgb},1), 0 0 20px 4px rgba(${rgb},0.8)`;
-      const dim = `0 0 0 4px rgba(${rgb},0.25), 0 0 10px 1px rgba(${rgb},0.15)`;
-      const off = `0 0 0 4px rgba(${rgb},0), 0 0 0 0 rgba(${rgb},0)`;
-      el.animate(
-        [
-          { boxShadow: off, offset: 0 },
-          { boxShadow: on, offset: 0.06 },
-          { boxShadow: dim, offset: 0.18 },
-          { boxShadow: on, offset: 0.3 },
-          { boxShadow: dim, offset: 0.42 },
-          { boxShadow: on, offset: 0.54 },
-          { boxShadow: dim, offset: 0.66 },
-          { boxShadow: on, offset: 0.78 },
-          { boxShadow: off, offset: 1 },
-        ],
-        { duration: 4400, easing: "ease-out" },
-      );
-    }
-    onFocusHandled();
-  }, [focusFile, onFocusHandled, groundTruth, colorOf]);
+    if (!focusFiles || focusFiles.length === 0) return;
+    // As imagens podem estar escondidas no sítio para onde vamos: o caixote
+    // arranca recolhido e as fichas de espécie podem estar colapsadas. Abrir
+    // primeiro, senão o ping seria num elemento que não existe no DOM.
+    if (focusFiles.some((f) => groundTruth[f] === LIXO)) setLixoOpen(true);
+    setCollapsed((prev) => {
+      if (prev.size === 0) return prev;
+      const next = new Set(prev);
+      for (const f of focusFiles) {
+        const l = groundTruth[f];
+        if (l) next.delete(l);
+      }
+      return next.size === prev.size ? prev : next;
+    });
+
+    const t = window.setTimeout(() => {
+      let primeiro: HTMLElement | null = null;
+      for (const f of focusFiles) {
+        const el = bodyRef.current?.querySelector(
+          `[data-file="${CSS.escape(f)}"]`,
+        ) as HTMLElement | null;
+        if (!el) continue;
+        if (!primeiro) primeiro = el;
+        const label = groundTruth[f];
+        const hex = label ? colorOf(label) : "#ff6a3d";
+        const m = /^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(hex);
+        const rgb = m ? `${parseInt(m[1], 16)},${parseInt(m[2], 16)},${parseInt(m[3], 16)}` : "255,106,61";
+        const on = `0 0 0 4px rgba(${rgb},1), 0 0 20px 4px rgba(${rgb},0.8)`;
+        const dim = `0 0 0 4px rgba(${rgb},0.25), 0 0 10px 1px rgba(${rgb},0.15)`;
+        const off = `0 0 0 4px rgba(${rgb},0), 0 0 0 0 rgba(${rgb},0)`;
+        el.animate(
+          [
+            { boxShadow: off, offset: 0 },
+            { boxShadow: on, offset: 0.06 },
+            { boxShadow: dim, offset: 0.18 },
+            { boxShadow: on, offset: 0.3 },
+            { boxShadow: dim, offset: 0.42 },
+            { boxShadow: on, offset: 0.54 },
+            { boxShadow: dim, offset: 0.66 },
+            { boxShadow: on, offset: 0.78 },
+            { boxShadow: off, offset: 1 },
+          ],
+          { duration: 4400, easing: "ease-out" },
+        );
+      }
+      primeiro?.scrollIntoView({ behavior: "smooth", block: "center" });
+      onFocusHandled();
+    }, 70);
+    return () => window.clearTimeout(t);
+  }, [focusFiles, onFocusHandled, groundTruth, colorOf]);
 
   useEffect(() => {
     if (!ddOpen) return;
@@ -294,9 +321,25 @@ export function Workspace({
                     setDdOpen(false);
                   }}
                 >
-                  <SpeciesThumb file={thumbOf(l)} size={22} />
-                  <span className="dd-name">{l}</span>
-                  {eppoOf(l) && <span className="eppo-chip has mono">{eppoOf(l)}</span>}
+                  {/* uma FAMÍLIA lê-se de relance como tal, aqui pelas mesmas
+                      razões do painel direito: chapa de nível em vez de
+                      miniatura, versaletes, e nenhum espaço vazio onde estaria
+                      um código que se decidiu não ter */}
+                  {rankOf(l) === "familia" ? (
+                    <>
+                      <span className="dd-fam-mark">
+                        <IconRank size={14} />
+                      </span>
+                      <span className="dd-name dd-fam">{l}</span>
+                      <span className="dd-nivel">família</span>
+                    </>
+                  ) : (
+                    <>
+                      <SpeciesThumb file={thumbOf(l)} size={22} />
+                      <span className="dd-name">{l}</span>
+                      {eppoOf(l) && <span className="eppo-chip has mono">{eppoOf(l)}</span>}
+                    </>
+                  )}
                   <span className="sw" style={{ background: colorOf(l) }} />
                 </button>
               ))}
@@ -422,17 +465,19 @@ export function Workspace({
                       <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
-                  <span className="pg-nome mono">{cid === -1 ? "ruído" : `c${cid}`}</span>
+                  {/* o NOME do grupo é o próprio link — não faz sentido um botão
+                      separado a dizer "ver o grupo" ao lado do nome do grupo */}
+                  <button
+                    className="pg-nome mono pg-link"
+                    onClick={() => onGoToOrigem(cid, files)}
+                    title="Ir para o grupo de origem — as vizinhas ajudam a desempatar"
+                  >
+                    {cid === -1 ? "ruído" : `c${cid}`}
+                    <span className="chip-go">→</span>
+                  </button>
                   <span className="pg-n">
                     {files.length} {files.length === 1 ? "imagem" : "imagens"}
                   </span>
-                  <button
-                    className="pg-ir"
-                    onClick={() => onSelectCluster(cid)}
-                    title="Ver o grupo de origem — as vizinhas ajudam a desempatar"
-                  >
-                    ver o grupo <span className="chip-go">→</span>
-                  </button>
                 </div>
                 {/* Sem localizador POR CARTÃO aqui: dentro de um bloco todos vêm
                     do mesmo grupo, por isso o botão do cartão era o mesmo destino
