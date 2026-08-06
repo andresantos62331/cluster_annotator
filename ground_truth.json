@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-06T10:16:09.485Z",
+  "exported_at": "2026-08-06T10:17:44.574Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -37,7 +37,8 @@
     "Cyperus esculentus",
     "Capsella rubella",
     "Poaceae",
-    "Euphorbia helioscopia"
+    "Euphorbia helioscopia",
+    "Amaranthus blitoides"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -79,7 +80,8 @@
     "Cyperus esculentus": "CYPES",
     "Capsella rubella": "CAPRU",
     "Convolvulus arvensis": "CONAR",
-    "Euphorbia helioscopia": "EPHHE"
+    "Euphorbia helioscopia": "EPHHE",
+    "Amaranthus blitoides": "AMABL"
   },
   "family": {
     "Cyperus rotundus": "Cyperaceae",
@@ -106,7 +108,8 @@
     "Amaranthaceae": "Amaranthaceae",
     "Poaceae": "Poaceae",
     "Stellaria media": "Caryophyllaceae",
-    "Euphorbia helioscopia": "Euphorbiaceae"
+    "Euphorbia helioscopia": "Euphorbiaceae",
+    "Amaranthus blitoides": "Amaranthaceae"
   },
   "rank": {
     "Amaranthaceae": "familia",
@@ -2309,6 +2312,8 @@
     "20220425_154108_planta_3.jpg": "Chenopodium album",
     "20220425_162733_planta_0.jpg": "Chenopodium album",
     "20220425_164700_planta_0.jpg": "Chenopodium album",
-    "20220417_162256_planta_0.jpg": "Lixo"
+    "20220417_162256_planta_0.jpg": "Lixo",
+    "PHOTO-2026-05-20-09-48-42 (2)_planta_11.jpg": "Amaranthus blitoides",
+    "PHOTO-2026-05-20-09-48-42 (7)_planta_14.jpg": "Amaranthus blitoides"
   }
 }
