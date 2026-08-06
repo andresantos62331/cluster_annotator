@@ -1793,8 +1793,16 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
    caixote ficava por baixo dele. Lê-se como BOTÃO e nunca como zona de largada:
    nesta app arrastar quer dizer seleccionar, e prometer largada criava um gesto
    em conflito com esse. */
+/* ANCORAGEM: `fixed` e encostado ao painel das espécies, não à área de trabalho.
+   Com `absolute` dentro de .work (que é `static`) resolvia contra a viewport e
+   ficava POR BAIXO do painel recolhido — as partículas iam para o sítio certo,
+   mas o sítio estava escondido atrás do painel, o que dava a impressão de estarem
+   a voar para o painel.
+   O `right` é calculado a partir das MESMAS variáveis que dão a largura ao
+   painel, por isso os dois deslocam-se em conjunto e a folga mantém-se; a
+   transição usa a duração e a curva do painel para o movimento ser um só. */
 .bin-flutuante {
-  position: absolute; right: 22px; bottom: 22px; z-index: 40;
+  position: fixed; right: calc(var(--species-w-min) + 14px); bottom: 22px; z-index: 40;
   width: 56px; height: 56px; border-radius: 50%;
   display: grid; place-items: center; padding: 0;
   color: var(--danger);
@@ -1802,7 +1810,11 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
   border: 1px solid color-mix(in srgb, var(--danger) 35%, var(--line));
   box-shadow: var(--shadow-2);
   cursor: pointer;
-  transition: color 0.14s, border-color 0.14s, background 0.14s, transform 0.14s;
+  transition: right 0.16s var(--ease), color 0.14s, border-color 0.14s,
+              background 0.14s, transform 0.14s;
+}
+.app:has(.species-panel:not(.collapsed)) .bin-flutuante {
+  right: calc(var(--species-w) + 14px);
 }
 .bin-flutuante:hover { background: var(--panel-hi); border-color: var(--danger); transform: translateY(-2px); }
 .bin-flutuante.on { background: color-mix(in srgb, var(--danger) 18%, var(--panel-2)); border-color: var(--danger); }
@@ -1815,18 +1827,34 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
   font-size: 10.5px; font-weight: 700; color: #fff;
   background: var(--danger); box-shadow: 0 0 0 2px var(--bg);
 }
-/* chegada de imagens: abanão curto. A classe é a mesma que particles.ts usa nas
-   linhas de espécie (species-arrived) — aqui traduz-se num abanão em vez de um
-   pulso, porque deitar fora não é para celebrar. */
-.bin-flutuante.species-arrived { animation: binAbana 0.42s var(--ease); }
-@keyframes binAbana {
-  0%, 100% { transform: rotate(0) translateY(0); }
-  20% { transform: rotate(-9deg) translateY(-2px); }
-  45% { transform: rotate(7deg); }
-  70% { transform: rotate(-4deg); }
+/* CHEGADA: peso a cair lá dentro. A classe é a mesma que particles.ts usa nas
+   linhas de espécie (species-arrived), mas aqui não pode ser o mesmo gesto: nas
+   espécies é um halo que acende — uma celebração, "ganhaste mais uma" — e deitar
+   fora não se celebra. Escolheu-se IMPACTO: o caixote encaixa para baixo, esmaga
+   ligeiramente, oscila e assenta. Lê-se como massa a entrar, não como prémio.
+   A duração é fixa e sobrepõe-se à que o particles.ts injecta em linha (que
+   cresce com o número de imagens): um impacto não demora mais porque caíram mais
+   coisas — o que cresce é o rasto das partículas, não o solavanco. */
+.bin-flutuante.species-arrived {
+  animation: binRecebe 0.44s var(--ease) !important;
+}
+@keyframes binRecebe {
+  0%   { transform: translateY(0) scale(1, 1) rotate(0deg); }
+  16%  { transform: translateY(4px) scale(1.07, 0.93) rotate(0deg); }
+  40%  { transform: translateY(-2px) scale(0.98, 1.02) rotate(-6deg); }
+  62%  { transform: translateY(0) scale(1.01, 0.99) rotate(4deg); }
+  82%  { transform: translateY(0) scale(1, 1) rotate(-2deg); }
+  100% { transform: translateY(0) scale(1, 1) rotate(0deg); }
+}
+/* o contador salta com o impacto, senão o número muda sem se dar por isso */
+.bin-flutuante.species-arrived .bin-n { animation: binConta 0.44s var(--ease); }
+@keyframes binConta {
+  0%, 100% { transform: scale(1); }
+  30% { transform: scale(1.3); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .bin-flutuante.species-arrived { animation: none; }
+  .bin-flutuante.species-arrived,
+  .bin-flutuante.species-arrived .bin-n { animation: none !important; }
 }
 
 /* cabeçalhos das duas pilhas */
