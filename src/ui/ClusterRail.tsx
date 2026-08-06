@@ -193,7 +193,7 @@ export function ClusterRail({
           data-species={A_CONFIRMAR}
           className={`clu clu-pilha ${currentClusterId === CID_CONFIRMAR ? "active" : ""}`}
           onClick={() => onSelect(CID_CONFIRMAR)}
-          title="Plântulas que ficaram por decidir — voltar a elas quando quiseres"
+          title="Plântulas que ficaram por decidir. Volta a elas quando quiseres"
         >
           <div className="clu-thumb pilha-mark">
             <IconHelp size={17} />

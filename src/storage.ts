@@ -236,7 +236,7 @@ export async function saveToCloud(
     return {
       ok: false,
       count,
-      error: "sem chave de acesso — abre o link que recebeste (com ?k=...)",
+      error: "sem chave de acesso. Abre o link que recebeste (com ?k=...)",
     };
   }
   try {

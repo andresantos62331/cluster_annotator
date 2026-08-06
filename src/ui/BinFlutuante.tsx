@@ -31,8 +31,8 @@ export function BinFlutuante({
       onClick={onAbrir}
       title={
         n === 0
-          ? "Lixo — ainda não há nada aqui. Tecla 0 descarta a selecção."
-          : `Ver o lixo — ${n} ${n === 1 ? "imagem descartada" : "imagens descartadas"}`
+          ? "Lixo: ainda não há nada aqui. Tecla 0 descarta a selecção."
+          : `Ver o lixo: ${n} ${n === 1 ? "imagem descartada" : "imagens descartadas"}`
       }
       aria-label={`Lixo, ${n} ${n === 1 ? "imagem" : "imagens"}`}
     >

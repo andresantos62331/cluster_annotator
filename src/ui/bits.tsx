@@ -6,7 +6,7 @@ export function GenBadge({ gen }: { gen: number }) {
   const c = genColor(gen);
   return (
     <span
-      title={`grupo recuperado do ruído — geração ${gen}`}
+      title={`grupo recuperado do ruído, geração ${gen}`}
       style={{
         display: "inline-block",
         padding: "0 5px",

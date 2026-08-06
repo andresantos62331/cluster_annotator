@@ -480,7 +480,7 @@ export default function App() {
     const t = name.trim();
     if (!t) return;
     if (isReservada(t) || RESERVADAS.some((r) => r.toLowerCase() === t.toLowerCase())) {
-      alert(`"${t}" é uma categoria reservada — já existe, fixa no fundo do painel.`);
+      alert(`"${t}" é uma categoria reservada: já existe, fixa no painel.`);
       return;
     }
     setLabels((prev) => (prev.includes(t) ? prev : [...prev, t]));
@@ -575,7 +575,7 @@ export default function App() {
           <>
             <span className="t-icon">⦸</span>
             <span>
-              Ação impossível — já {selection.size === 1 ? "está" : "estão"} em <b>{label}</b>.
+              Ação impossível: já {selection.size === 1 ? "está" : "estão"} em <b>{label}</b>.
             </span>
           </>,
         );
@@ -616,7 +616,7 @@ export default function App() {
         <>
           <span className="t-sw" style={{ background: colorOf(label) }} />
           <span>
-            <b>{n}</b> {n === 1 ? "imagem" : "imagens"} → <b>{label}</b>
+            <b>{n}</b> {n === 1 ? "plântula" : "plântulas"} → <b>{label}</b>
           </span>
         </>,
         true,
@@ -705,7 +705,7 @@ export default function App() {
       <>
         <span className="t-icon">⌫</span>
         <span>
-          Etiqueta retirada de <b>{labeled.length}</b> {labeled.length === 1 ? "imagem" : "imagens"}
+          Etiqueta retirada de <b>{labeled.length}</b> {labeled.length === 1 ? "plântula" : "plântulas"}
         </span>
       </>,
       true,
@@ -940,7 +940,7 @@ export default function App() {
       return next;
     });
     setSpeciesSelection(new Set());
-    pushToast("danger", <span>Etiqueta removida de <b>{n}</b> {n === 1 ? "imagem" : "imagens"}</span>, true);
+    pushToast("danger", <span>Etiqueta retirada de <b>{n}</b> {n === 1 ? "plântula" : "plântulas"}</span>, true);
   }, [speciesSelection, pushToast, snapshot]);
 
   // última posição do rato: é o alvo da tecla S quando o viewport está fechado
@@ -1193,7 +1193,7 @@ export default function App() {
         <div className="work-top">
           <div className="mode-switch">
             <button className={mode === "clusters" ? "on" : ""} onClick={() => setMode("clusters")}>
-              Clusters
+              Grupos
             </button>
             <button className={mode === "species" ? "on" : ""} onClick={() => setMode("species")}>
               Coleção
@@ -1247,9 +1247,11 @@ export default function App() {
           />
         ) : (
           <SpeciesView
-            // O Lixo saiu daqui: a Coleção é uma colecção de ESPÉCIES, e imagens
-            // deitadas fora não são uma espécie. Vivem agora no caixote flutuante.
-            labels={[...labels, A_CONFIRMAR]}
+            // As duas reservadas saíram daqui: a Coleção é uma colecção de
+            // ESPÉCIES, e nem o Lixo nem o "A confirmar" são uma espécie. Cada
+            // uma tem agora o seu sítio — o topo do rail e o caixote flutuante —
+            // e tê-las também aqui era o mesmo conteúdo em dois sítios.
+            labels={labels}
             groundTruth={groundTruth}
             colorOf={colorOf}
             speciesPage={speciesPage}

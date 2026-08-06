@@ -53,7 +53,7 @@ export function EppoCombobox({
     <div className="new-species eppo-combo" ref={ref}>
       <input
         value={q}
-        placeholder="nova espécie — nome ou código EPPO"
+        placeholder="nova espécie: nome ou código EPPO"
         spellCheck={false}
         onChange={(e) => {
           setQ(e.target.value);
@@ -118,7 +118,7 @@ export function EppoChip({
       className={`eppo-chip has ${check?.kind === "mismatch" ? "warn" : ""} mono`}
       title={
         check?.kind === "mismatch"
-          ? `${code} é o código de ${check.entry.name}, não de ${label} — corrigir no lápis`
+          ? `${code} é o código de ${check.entry.name}, não de ${label}. Corrige no lápis`
           : `Código EPPO ${code}`
       }
     >
@@ -241,7 +241,7 @@ export function TaxonEditor({
         type="button"
         className={className}
         onClick={() => setOpen((o) => !o)}
-        title="Editar espécie — nome, código EPPO e família"
+        title="Editar espécie: nome, código EPPO e família"
       >
         <IconPencil size={size} />
       </button>

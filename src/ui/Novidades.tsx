@@ -69,7 +69,7 @@ export function Novidades({ onClose }: { onClose: () => void }) {
 
         <div className="help-note nov-rodape">
           Esta página fica sempre acessível pelo sino na barra de cima. Se alguma
-          coisa não estiver a funcionar como aqui se descreve, diz — é erro meu, não
+          coisa não estiver a funcionar como aqui se descreve, diz. É erro meu, não
           teu.
         </div>
       </div>

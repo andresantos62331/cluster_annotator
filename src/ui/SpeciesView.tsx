@@ -228,8 +228,8 @@ export function SpeciesView({
         <div className="action-bar">
           <div className="sel-count has">{selection.size} selecionada(s)</div>
           <ReassignMenu labels={labels} thumbOf={thumbOf} onPick={onReassign} />
-          <button className="btn warn" onClick={onRemoveLabels} title="As imagens voltam a 'por classificar'">
-            Remover etiqueta <span className="kbd">R</span>
+          <button className="btn warn" onClick={onRemoveLabels} title="As plântulas voltam a 'por anotar'">
+            Retirar etiqueta <span className="kbd">R</span>
           </button>
           <div className="spacer" />
           <button className="btn" onClick={() => setSelection(new Set())}>
@@ -373,8 +373,8 @@ export function SpeciesView({
                   style={{ color: cor }}
                   title={
                     isLixo
-                      ? "Imagens que não servem — não é uma espécie"
-                      : "Imagens boas e identificáveis, à espera de segunda opinião — não é uma espécie"
+                      ? "Imagens que não servem. Não é uma espécie"
+                      : "Imagens boas e identificáveis, à espera de segunda opinião. Não é uma espécie"
                   }
                 >
                   {isLixo ? <IconTrash size={17} /> : <IconHelp size={17} />}
@@ -402,9 +402,9 @@ export function SpeciesView({
                       <EppoChip code={eppoOf(lbl)} label={lbl} vocab={eppoVocab} />
                     )}
                     {files.length > 0 && (
-                      <span className="svb-pop" title="população desta espécie (clusters da config atual)">
-                        {files.length} {files.length === 1 ? "imagem presente" : "imagens presentes"} em{" "}
-                        {nClusters} {nClusters === 1 ? "cluster" : "clusters"}
+                      <span className="svb-pop" title="população desta espécie (grupos da configuração atual)">
+                        {files.length} {files.length === 1 ? "plântula presente" : "plântulas presentes"} em{" "}
+                        {nClusters} {nClusters === 1 ? "grupo" : "grupos"}
                       </span>
                     )}
                     <TaxonEditor
@@ -434,7 +434,7 @@ export function SpeciesView({
                       }}
                       onMouseEnter={() => setHistHover({ lbl, cid })}
                       onMouseLeave={() => setHistHover(null)}
-                      title={`Ir para ${cid === -1 ? "o ruído" : `c${cid}`} (${n} ${n === 1 ? "imagem" : "imagens"})`}
+                      title={`Ir para ${cid === -1 ? "o ruído" : `c${cid}`} (${n} ${n === 1 ? "plântula" : "plântulas"})`}
                     >
                       <span className="h-label">{cid === -1 ? "✦" : `c${cid}`}</span>
                       <span className="h-bar">

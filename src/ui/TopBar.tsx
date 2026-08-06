@@ -72,7 +72,7 @@ export function TopBar({
         </svg>
         <div className="wm-text">
           <span className="wm-title">Herbário</span>
-          <span className="wm-sub">anotador de clusters</span>
+          <span className="wm-sub">anotador de plântulas</span>
         </div>
       </div>
 
@@ -114,7 +114,7 @@ export function TopBar({
             <div className="tc-h">{def?.label} · parâmetros</div>
             <div className="tc-v">{def?.tech}</div>
             <div className="tc-note">
-              UMAP + HDBSCAN. Detalhe técnico — não afeta a anotação.
+              UMAP + HDBSCAN. Detalhe técnico, não afeta a anotação.
             </div>
           </div>
         )}

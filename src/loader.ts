@@ -8,7 +8,7 @@ import type { Assignment, ClusterMetrics, ConfigData, ConfigDef } from "./types"
 export const CONFIG_DEFS: ConfigDef[] = [
   {
     id: "A_microscopio",
-    label: "A — Microscópio",
+    label: "A: Microscópio",
     short: "Microscópio",
     tech: "leaf · mcs=5 ms=3 · nn=10 nc=10",
     assignmentsUrl: "configs/A_microscopio.csv",
@@ -17,7 +17,7 @@ export const CONFIG_DEFS: ConfigDef[] = [
   },
   {
     id: "C_padrao",
-    label: "B — Padrão",
+    label: "B: Padrão",
     short: "Padrão",
     tech: "leaf · mcs=8 ms=5 · nn=15 nc=20",
     assignmentsUrl: "configs/C_padrao.csv",

@@ -61,8 +61,8 @@ export function ClusterHistory({
               onClick={() => onSelect(cid)}
               title={
                 isNoise
-                  ? `ruído — ${annotated}/${files.length} anotadas (${Math.round(pct)}%)`
-                  : `c${cid} — ${annotated}/${files.length} anotadas (${Math.round(pct)}%)`
+                  ? `ruído: ${annotated}/${files.length} anotadas (${Math.round(pct)}%)`
+                  : `c${cid}: ${annotated}/${files.length} anotadas (${Math.round(pct)}%)`
               }
             >
               {isNoise ? "✦" : `c${cid}`}

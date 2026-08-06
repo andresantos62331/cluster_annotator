@@ -142,7 +142,7 @@ export function SpeciesPanel({
                 isFamilia ? (
                   <span className="sp-mini-code fam">fam.</span>
                 ) : (
-                  <span className={`sp-mini-code ${eppoOf(lbl) ? "" : "none"}`}>{eppoOf(lbl) || "—"}</span>
+                  <span className={`sp-mini-code ${eppoOf(lbl) ? "" : "none"}`}>{eppoOf(lbl) || "·"}</span>
                 )
               ) : (
                 <>
@@ -152,7 +152,7 @@ export function SpeciesPanel({
                     <span className={`sp-name ${isFamilia ? "fam-name" : ""}`}>{lbl}</span>
                     {isFamilia ? (
                       <span className="fam-sub">
-                        família{n > 0 && <> · {n} {n === 1 ? "imagem" : "imagens"}</>}
+                        família{n > 0 && <> · {n} {n === 1 ? "plântula" : "plântulas"}</>}
                       </span>
                     ) : (
                       <span className="sp-tags">

@@ -67,8 +67,8 @@ export function CollectionOverview({
         <div>
           <h2 className="co-title">Coleção</h2>
           <p className="co-empty-sub">
-            Ainda sem anotações. Começa a etiquetar no separador <b>Clusters</b> e o
-            panorama da coleção aparece aqui — distribuição por espécie e por família.
+            Ainda sem anotações. Começa a anotar no separador <b>Grupos</b> e o
+            panorama da coleção aparece aqui: distribuição por espécie e por família.
           </p>
         </div>
       </div>
@@ -85,7 +85,7 @@ export function CollectionOverview({
         <div className="co-stats">
           <div className="co-stat">
             <span className="co-stat-n mono">{annotated.toLocaleString("pt-PT")}</span>
-            <span className="co-stat-l">de {totalAll.toLocaleString("pt-PT")} imagens anotadas</span>
+            <span className="co-stat-l">de {totalAll.toLocaleString("pt-PT")} plântulas anotadas</span>
           </div>
           <div className="co-stat">
             <span className="co-stat-n mono">{withImages.length}</span>

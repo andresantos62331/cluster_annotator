@@ -219,7 +219,7 @@ export function Workspace({
     <div className={`work-body ${pilha ? "work-pilha" : ""}`} ref={bodyRef} onPointerDown={onDragSelect}>
       <header className={`clu-header ${isNoise ? "noise" : ""} ${pilha ? (ehLixo ? "hd-lixo" : "hd-confirmar") : ""}`}>
         <div className="ch-title">
-          <h1>{pilha ? (ehLixo ? LIXO : A_CONFIRMAR) : isNoise ? "Ruído" : `Cluster ${clusterId}`}</h1>
+          <h1>{pilha ? (ehLixo ? LIXO : A_CONFIRMAR) : isNoise ? "Ruído" : `Grupo ${clusterId}`}</h1>
           {!isNoise && !pilha && <GenBadge gen={metrics?.origem ?? 0} />}
           {!pilha && (
             <div className="ch-ring">
@@ -232,7 +232,9 @@ export function Workspace({
             // uma frase, não três chips: aqui não há métricas a comparar, há uma
             // contagem — e uma contagem lê-se de uma vez
             <span className="chip k-size pilha-conta">
-              <b>{total}</b> {total === 1 ? "imagem" : "imagens"} de <b>{nOrigens}</b>{" "}
+              <b>{total}</b>{" "}
+              {ehLixo ? (total === 1 ? "imagem" : "imagens") : total === 1 ? "plântula" : "plântulas"}{" "}
+              de <b>{nOrigens}</b>{" "}
               {nOrigens === 1 ? "grupo" : "grupos"}
             </span>
           ) : (
@@ -248,20 +250,20 @@ export function Workspace({
           </span>
           {metrics && metrics.cohesion_mean != null && (
             <>
-              <span className="chip k-metric" title="coesão média — quão apertado é o grupo">
+              <span className="chip k-metric" title="coesão média: quão apertado é o grupo">
                 <span className="chip-k">coesão</span> <b>{metrics.cohesion_mean.toFixed(3)}</b>
               </span>
-              <span className="chip k-metric" title="separação — distância ao grupo vizinho">
-                <span className="chip-k">separação</span> <b>{metrics.separation?.toFixed(3) ?? "—"}</b>
+              <span className="chip k-metric" title="separação: distância ao grupo vizinho">
+                <span className="chip-k">separação</span> <b>{metrics.separation?.toFixed(3) ?? "·"}</b>
               </span>
               <span className="chip k-metric" title="persistência (estabilidade HDBSCAN)">
-                <span className="chip-k">persist.</span> <b>{metrics.persistence?.toFixed(3) ?? "—"}</b>
+                <span className="chip-k">persist.</span> <b>{metrics.persistence?.toFixed(3) ?? "·"}</b>
               </span>
               {metrics.nearest_cluster != null && (
                 <button
                   type="button"
                   className="chip k-metric chip-link"
-                  title={`ir para o grupo mais parecido — c${metrics.nearest_cluster}`}
+                  title={`ir para o grupo mais parecido: c${metrics.nearest_cluster}`}
                   onClick={() => onSelectCluster(metrics.nearest_cluster!)}
                 >
                   <span className="chip-k">vizinho</span> <b>c{metrics.nearest_cluster}</b>
@@ -302,7 +304,7 @@ export function Workspace({
                 <span className="as-name">{activeSpecies}</span>
               </>
             ) : (
-              <span className="as-name">— escolher espécie —</span>
+              <span className="as-name">escolher espécie…</span>
             )}
             <span className="as-caret">▾</span>
           </div>
@@ -413,7 +415,7 @@ export function Workspace({
       <div className="section-head">
         <span className="sh-bar" />
         <span className="sh-title">
-          {pilha ? (ehLixo ? "Descartadas" : "Por confirmar") : "Por classificar"}
+          {pilha ? (ehLixo ? "Descartadas" : "Por confirmar") : "Por anotar"}
         </span>
         <span className="sh-count mono">{unannotated.length}</span>
         {pageFiles.length > 0 && (
@@ -445,8 +447,8 @@ export function Workspace({
             {pilha
               ? "Volta a um grupo pela lista da esquerda."
               : total === 0
-                ? "Não há imagens aqui."
-                : "Bom trabalho — salta para o próximo com J."}
+                ? "Não há plântulas aqui."
+                : "Bom trabalho! Salta para o próximo com J."}
           </div>
         </div>
       ) : pilha ? (
@@ -455,7 +457,24 @@ export function Workspace({
             const todasSel = files.every((f) => selection.has(f));
             return (
               <div className="pilha-grupo" key={cid}>
+                {/* nome à esquerda (é o que se procura ao percorrer a lista);
+                    contagem e visto à direita, alinhados com o visto da secção */}
                 <div className="pilha-grupo-h">
+                  <button
+                    className="pg-nome mono pg-link"
+                    onClick={() => onGoToOrigem(cid, files)}
+                    title="Ir para o grupo de origem: as vizinhas ajudam a desempatar"
+                  >
+                    {cid === -1 ? "ruído" : `c${cid}`}
+                    <span className="chip-go">→</span>
+                  </button>
+                  <span className="pg-espaco" />
+                  <span className="pg-n">
+                    {files.length}{" "}
+                    {ehLixo
+                      ? files.length === 1 ? "imagem" : "imagens"
+                      : files.length === 1 ? "plântula" : "plântulas"}
+                  </span>
                   <button
                     className={`svb-check ${todasSel ? "on" : ""}`}
                     title={todasSel ? "Desselecionar estas" : "Selecionar as deste grupo"}
@@ -465,19 +484,6 @@ export function Workspace({
                       <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
-                  {/* o NOME do grupo é o próprio link — não faz sentido um botão
-                      separado a dizer "ver o grupo" ao lado do nome do grupo */}
-                  <button
-                    className="pg-nome mono pg-link"
-                    onClick={() => onGoToOrigem(cid, files)}
-                    title="Ir para o grupo de origem — as vizinhas ajudam a desempatar"
-                  >
-                    {cid === -1 ? "ruído" : `c${cid}`}
-                    <span className="chip-go">→</span>
-                  </button>
-                  <span className="pg-n">
-                    {files.length} {files.length === 1 ? "imagem" : "imagens"}
-                  </span>
                 </div>
                 {/* Sem localizador POR CARTÃO aqui: dentro de um bloco todos vêm
                     do mesmo grupo, por isso o botão do cartão era o mesmo destino
@@ -576,7 +582,7 @@ export function Workspace({
                   </span>
                 )}
                 <span className="svb-pop">
-                  {files.length} {files.length === 1 ? "imagem" : "imagens"}
+                  {files.length} {files.length === 1 ? "plântula" : "plântulas"}
                 </span>
               </h3>
             </div>

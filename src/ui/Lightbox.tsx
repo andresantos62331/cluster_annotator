@@ -396,7 +396,7 @@ export function Lightbox({
               {eppoCode && <span className="li-eppo mono">{eppoCode}</span>}
             </>
           ) : (
-            <span className="li-todo">Por classificar</span>
+            <span className="li-todo">Por anotar</span>
           )}
         </div>
         <div className="li-line2 mono">

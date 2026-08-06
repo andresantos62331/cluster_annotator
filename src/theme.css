@@ -1874,6 +1874,7 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
   display: flex; align-items: center; gap: 9px;
   padding: 6px 2px 9px; border-bottom: 1px solid var(--line-soft); margin-bottom: 11px;
 }
+.pilha-grupo-h .pg-espaco { flex: 1; }
 .pilha-grupo-h .pg-n { font-size: 11.5px; color: var(--faint); }
 /* o nome do grupo É o link — não há botão separado a dizer "ver o grupo" ao lado
    do nome do grupo */
