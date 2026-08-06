@@ -469,12 +469,10 @@ export function Workspace({
                     <span className="chip-go">→</span>
                   </button>
                   <span className="pg-espaco" />
-                  <span className="pg-n">
-                    {files.length}{" "}
-                    {ehLixo
-                      ? files.length === 1 ? "imagem" : "imagens"
-                      : files.length === 1 ? "plântula" : "plântulas"}
-                  </span>
+                  {/* só o número, como no cabeçalho de secção de um grupo: o
+                      substantivo já está no cabeçalho da pilha, e repeti-lo em
+                      cada bloco era ruído */}
+                  <span className="pg-n mono">{files.length}</span>
                   <button
                     className={`svb-check ${todasSel ? "on" : ""}`}
                     title={todasSel ? "Desselecionar estas" : "Selecionar as deste grupo"}

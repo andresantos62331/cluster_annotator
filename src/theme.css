@@ -1875,7 +1875,11 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
   padding: 6px 2px 9px; border-bottom: 1px solid var(--line-soft); margin-bottom: 11px;
 }
 .pilha-grupo-h .pg-espaco { flex: 1; }
-.pilha-grupo-h .pg-n { font-size: 11.5px; color: var(--faint); }
+/* mesma pastilha do contador das secções, para os dois níveis se lerem igual */
+.pilha-grupo-h .pg-n {
+  font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+  padding: 3px 9px; background: var(--panel); border-radius: 20px;
+}
 /* o nome do grupo É o link — não há botão separado a dizer "ver o grupo" ao lado
    do nome do grupo */
 .pilha-grupo-h .pg-link {
