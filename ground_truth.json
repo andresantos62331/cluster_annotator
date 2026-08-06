@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-06T09:43:51.966Z",
+  "exported_at": "2026-08-06T09:51:25.377Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -102,7 +102,8 @@
     "Portulaca oleracea": "Portulacaceae",
     "Poa annua": "Poaceae",
     "Amaranthaceae": "Amaranthaceae",
-    "Poaceae": "Poaceae"
+    "Poaceae": "Poaceae",
+    "Stellaria media": "Caryophyllaceae"
   },
   "rank": {
     "Amaranthaceae": "familia",
@@ -2269,6 +2270,7 @@
     "IMG_20220501_160420_planta_1.jpg": "Chenopodium album",
     "IMG_20220501_155604_planta_0.jpg": "Chenopodium album",
     "IMG_20220501_155559_planta_2.jpg": "Chenopodium album",
-    "JPEG_V2_E2_2022-04-17_14_58_217419482026510393858_planta_0.jpg": "Convolvulus arvensis"
+    "JPEG_V2_E2_2022-04-17_14_58_217419482026510393858_planta_0.jpg": "Convolvulus arvensis",
+    "20251109_162455_planta_1.jpg": "Stellaria media"
   }
 }
