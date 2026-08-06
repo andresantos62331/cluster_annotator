@@ -1,0 +1,11 @@
+# Fins de linha LF em todo o código-fonte, independentemente de quem edita.
+# Existe porque um passe de edição automática corrido a partir do Windows gravou
+# 18 ficheiros em CRLF e transformou uma troca de texto num diff de 5000 linhas.
+# Com isto, o git normaliza no índice e o problema deixa de poder acontecer.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.mp4 binary
+*.svg text eol=lf
