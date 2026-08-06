@@ -13,7 +13,7 @@ filename,label,eppo_code,rank
 20220417_141441_planta_3.jpg,,,
 20220417_141441_planta_4.jpg,Lixo,,
 20220417_141452_planta_1.jpg,,,
-20220417_141459_planta_0.jpg,,,
+20220417_141459_planta_0.jpg,Lixo,,
 20220417_141459_planta_1.jpg,Oxalis pes-caprae,OXAPC,especie
 20220417_141459_planta_2.jpg,Oxalis pes-caprae,OXAPC,especie
 20220417_141542_planta_0.jpg,Lixo,,
@@ -194,7 +194,7 @@ filename,label,eppo_code,rank
 20220417_152829_planta_15.jpg,Lixo,,
 20220417_152829_planta_16.jpg,,,
 20220417_152829_planta_2.jpg,Chenopodium album,CHEAL,especie
-20220417_152829_planta_3.jpg,,,
+20220417_152829_planta_3.jpg,Lixo,,
 20220417_152829_planta_4.jpg,Chenopodium album,CHEAL,especie
 20220417_152829_planta_8.jpg,Chenopodium album,CHEAL,especie
 20220417_152840_planta_11.jpg,,,
@@ -424,7 +424,7 @@ filename,label,eppo_code,rank
 20220417_154957_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_154957_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155015_planta_0.jpg,Polygonum aviculare,POLAV,especie
-20220417_155015_planta_1.jpg,,,
+20220417_155015_planta_1.jpg,Convolvulus arvensis,CONAR,especie
 20220417_155015_planta_2.jpg,,,
 20220417_155019_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155023_planta_0.jpg,Conyza bonariensis,ERIBO,especie
@@ -658,7 +658,7 @@ filename,label,eppo_code,rank
 20220417_160641_planta_0.jpg,,,
 20220417_160647_planta_0.jpg,Lixo,,
 20220417_160650_planta_1.jpg,,,
-20220417_160659_planta_0.jpg,,,
+20220417_160659_planta_0.jpg,Convolvulus arvensis,CONAR,especie
 20220417_160704_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160708_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160713_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
