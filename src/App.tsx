@@ -563,6 +563,22 @@ export default function App() {
   const assignSpecies = useCallback(
     (label: string) => {
       if (!label || selection.size === 0) return;
+      // Dentro de uma pilha, atribuir-lhe a própria categoria é uma não-acção. O
+      // dropdown já não a oferece, mas os atalhos C e 0 continuam a disparar —
+      // e falhar em silêncio é pior do que recusar: quem carrega fica sem saber
+      // se a tecla não funcionou ou se não aconteceu nada.
+      if (isPilha(currentClusterId) && label === pilhaLabel(currentClusterId)) {
+        pushToast(
+          "danger",
+          <>
+            <span className="t-icon">⦸</span>
+            <span>
+              Ação impossível — já {selection.size === 1 ? "está" : "estão"} em <b>{label}</b>.
+            </span>
+          </>,
+        );
+        return;
+      }
       snapshot();
       const sel = new Set(selection);
       const n = sel.size;

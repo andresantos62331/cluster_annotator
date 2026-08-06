@@ -1,5 +1,7 @@
 import type { CSSProperties } from "react";
 import type { ConfigData, GroundTruth } from "../types";
+import { A_CONFIRMAR, CID_LIXO, isPilha, LIXO } from "../colors";
+import { IconHelp, IconTrash } from "./icons";
 
 // Pilha horizontal dos grupos visitados (mais recente à esquerda). Todos clicáveis
 // — atalho para saltar de volta a um grupo já visto sem o procurar na lista.
@@ -24,6 +26,26 @@ export function ClusterHistory({
       <div className="hist-track">
         {visited.map((cid) => {
           const isNoise = cid === -1;
+          // As pilhas também são visitáveis, mas não são grupos: "c-2" e "c-3"
+          // eram ids internos a escapar para a interface. Aqui valem pelo símbolo.
+          if (isPilha(cid)) {
+            const ehLixo = cid === CID_LIXO;
+            const nome = ehLixo ? LIXO : A_CONFIRMAR;
+            return (
+              <button
+                key={cid}
+                type="button"
+                className={`hist-chip hist-pilha ${ehLixo ? "hp-lixo" : "hp-confirmar"} ${
+                  cid === currentClusterId ? "active" : ""
+                }`}
+                onClick={() => onSelect(cid)}
+                title={nome}
+                aria-label={nome}
+              >
+                {ehLixo ? <IconTrash size={13} /> : <IconHelp size={13} />}
+              </button>
+            );
+          }
           const files = config.byCluster.get(cid) ?? [];
           const annotated = files.filter((f) => groundTruth[f]).length;
           const done = files.length > 0 && annotated === files.length;

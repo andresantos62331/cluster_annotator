@@ -1860,7 +1860,13 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
 /* cabeçalhos das duas pilhas */
 .clu-header.hd-confirmar h1 { color: var(--amber); }
 .clu-header.hd-lixo h1 { color: var(--danger); }
-.chip.pilha-dica { color: var(--muted); font-style: italic; }
+.chip.pilha-conta { color: var(--ink-dim); }
+.chip.pilha-conta b { color: var(--ink); }
+
+/* pilhas no histórico de visitados: valem pelo símbolo, não pelo id interno */
+.hist-chip.hist-pilha { display: grid; place-items: center; padding: 0; width: 26px; }
+.hist-chip.hp-confirmar { color: var(--amber); border-color: rgba(240, 180, 41, 0.4); }
+.hist-chip.hp-lixo { color: var(--danger); border-color: rgba(231, 93, 116, 0.4); }
 
 /* dentro de uma pilha, as imagens são arrumadas pelo grupo de origem */
 .pilha-grupo { margin-bottom: 20px; }

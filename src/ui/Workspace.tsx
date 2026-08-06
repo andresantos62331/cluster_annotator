@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { ClusterMetrics, GroundTruth } from "../types";
-import { A_CONFIRMAR, CID_LIXO, isPilha, LIXO, tint } from "../colors";
+import { A_CONFIRMAR, CID_CONFIRMAR, CID_LIXO, isPilha, LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
@@ -202,20 +202,12 @@ export function Workspace({
         </div>
         <div className="metric-chips">
           {pilha ? (
-            <>
-              <span className="chip k-size">
-                <span className="chip-k">imagens</span> <b>{total}</b>
-              </span>
-              <span className="chip k-done">
-                <span className="chip-k">de</span> <b>{nOrigens}</b>{" "}
-                <span className="chip-k">{nOrigens === 1 ? "grupo" : "grupos"}</span>
-              </span>
-              <span className="chip k-metric pilha-dica">
-                {ehLixo
-                  ? "atribuir uma espécie tira a imagem do lixo"
-                  : "atribuir uma espécie resolve a dúvida"}
-              </span>
-            </>
+            // uma frase, não três chips: aqui não há métricas a comparar, há uma
+            // contagem — e uma contagem lê-se de uma vez
+            <span className="chip k-size pilha-conta">
+              <b>{total}</b> {total === 1 ? "imagem" : "imagens"} de <b>{nOrigens}</b>{" "}
+              {nOrigens === 1 ? "grupo" : "grupos"}
+            </span>
           ) : (
           <>
           <span className="chip k-size">
@@ -308,30 +300,36 @@ export function Workspace({
                   <span className="sw" style={{ background: colorOf(l) }} />
                 </button>
               ))}
-              {/* categorias reservadas, sempre disponíveis no fim */}
+              {/* Categorias reservadas no fim — MENOS a da pilha em que estamos:
+                  dentro do Lixo, "Lixo" não é um destino, é o sítio onde já se
+                  está. Oferecê-la seria oferecer uma acção sem efeito. */}
               <div className="dd-sep" />
-              <button
-                onClick={() => {
-                  onSetActive(A_CONFIRMAR);
-                  setDdOpen(false);
-                }}
-              >
-                <span className="sp-lixo-icon" style={{ color: "var(--amber)", display: "grid", placeItems: "center" }}>
-                  <IconHelp size={15} />
-                </span>
-                <span className="dd-name" style={{ color: "var(--amber)" }}>{A_CONFIRMAR}</span>
-              </button>
-              <button
-                onClick={() => {
-                  onSetActive(LIXO);
-                  setDdOpen(false);
-                }}
-              >
-                <span className="sp-lixo-icon" style={{ color: "var(--danger)", display: "grid", placeItems: "center" }}>
-                  <IconTrash size={15} />
-                </span>
-                <span className="dd-name" style={{ color: "var(--danger)" }}>{LIXO}</span>
-              </button>
+              {clusterId !== CID_CONFIRMAR && (
+                <button
+                  onClick={() => {
+                    onSetActive(A_CONFIRMAR);
+                    setDdOpen(false);
+                  }}
+                >
+                  <span className="sp-lixo-icon" style={{ color: "var(--amber)", display: "grid", placeItems: "center" }}>
+                    <IconHelp size={15} />
+                  </span>
+                  <span className="dd-name" style={{ color: "var(--amber)" }}>{A_CONFIRMAR}</span>
+                </button>
+              )}
+              {clusterId !== CID_LIXO && (
+                <button
+                  onClick={() => {
+                    onSetActive(LIXO);
+                    setDdOpen(false);
+                  }}
+                >
+                  <span className="sp-lixo-icon" style={{ color: "var(--danger)", display: "grid", placeItems: "center" }}>
+                    <IconTrash size={15} />
+                  </span>
+                  <span className="dd-name" style={{ color: "var(--danger)" }}>{LIXO}</span>
+                </button>
+              )}
             </div>
           )}
         </div>
@@ -358,11 +356,14 @@ export function Workspace({
         )}
 
         <div className="spacer" />
-        <label className="toggle">
-          <input type="checkbox" checked={showAnnotated} onChange={(e) => onToggleShowAnnotated(e.target.checked)} />
-          <span className="tk" />
-          Mostrar anotadas
-        </label>
+        {/* nas pilhas não há secções de anotadas para mostrar ou esconder */}
+        {!pilha && (
+          <label className="toggle">
+            <input type="checkbox" checked={showAnnotated} onChange={(e) => onToggleShowAnnotated(e.target.checked)} />
+            <span className="tk" />
+            Mostrar anotadas
+          </label>
+        )}
       </div>
 
       {/* Por classificar (numa pilha: por confirmar / descartadas) */}
@@ -433,6 +434,11 @@ export function Workspace({
                     ver o grupo <span className="chip-go">→</span>
                   </button>
                 </div>
+                {/* Sem localizador POR CARTÃO aqui: dentro de um bloco todos vêm
+                    do mesmo grupo, por isso o botão do cartão era o mesmo destino
+                    repetido tantas vezes quantas as imagens. O controlo pertence
+                    ao bloco, que é o nível a que a informação se aplica — e o
+                    hover do cartão fica livre para o que é dele (examinar). */}
                 <div className="grid">
                   {files.map((f, i) => (
                     <Card
@@ -441,8 +447,6 @@ export function Workspace({
                       index={i}
                       selected={selection.has(f)}
                       hidden={flying.has(f)}
-                      sourceClusterId={cid}
-                      onGoToCluster={() => onSelectCluster(cid)}
                       onToggle={() => onToggleSelect(f)}
                       onOpen={() => onOpenLightbox(f, unannotated)}
                     />
