@@ -314,7 +314,7 @@ filename,label,eppo_code,rank
 20220417_154420_planta_2.jpg,,,
 20220417_154420_planta_3.jpg,Urtica urens,URTUR,especie
 20220417_154420_planta_4.jpg,Urtica urens,URTUR,especie
-20220417_154420_planta_5.jpg,,,
+20220417_154420_planta_5.jpg,Convolvulus arvensis,CONAR,especie
 20220417_154420_planta_6.jpg,,,
 20220417_154420_planta_8.jpg,Lixo,,
 20220417_154427_planta_0.jpg,Conyza bonariensis,ERIBO,especie
@@ -1552,7 +1552,7 @@ filename,label,eppo_code,rank
 20251110_151544_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_151544_planta_1.jpg,,,
 20251110_151544_planta_2.jpg,Lixo,,
-20251110_151544_planta_3.jpg,,,
+20251110_151544_planta_3.jpg,Erodium moschatum,EROMO,especie
 20251110_151544_planta_4.jpg,,,
 20251110_151544_planta_5.jpg,,,
 20251110_151544_planta_6.jpg,Lixo,,
@@ -2194,8 +2194,8 @@ filename,label,eppo_code,rank
 20251110_152834_planta_4.jpg,Erodium moschatum,EROMO,especie
 20251110_152834_planta_5.jpg,Erodium moschatum,EROMO,especie
 20251110_152834_planta_6.jpg,,,
-20251110_152834_planta_7.jpg,,,
-20251110_152834_planta_8.jpg,,,
+20251110_152834_planta_7.jpg,Erodium moschatum,EROMO,especie
+20251110_152834_planta_8.jpg,Erodium moschatum,EROMO,especie
 20251110_152836_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_152836_planta_1.jpg,Portulaca oleracea,POROL,especie
 20251110_152836_planta_2.jpg,,,
@@ -2385,7 +2385,7 @@ filename,label,eppo_code,rank
 20251110_153227_planta_3.jpg,,,
 20251110_153227_planta_4.jpg,,,
 20251110_153227_planta_5.jpg,Erodium moschatum,EROMO,especie
-20251110_153235_planta_0.jpg,,,
+20251110_153235_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_153235_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_153235_planta_2.jpg,,,
 20251110_153235_planta_3.jpg,,,
@@ -2648,9 +2648,9 @@ filename,label,eppo_code,rank
 20251110_153419_planta_4.jpg,,,
 20251110_153419_planta_5.jpg,,,
 20251110_153419_planta_6.jpg,Lixo,,
-20251110_153422_planta_0.jpg,,,
+20251110_153422_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_153422_planta_1.jpg,Lixo,,
-20251110_153422_planta_2.jpg,,,
+20251110_153422_planta_2.jpg,Erodium moschatum,EROMO,especie
 20251110_153422_planta_3.jpg,,,
 20251110_153422_planta_4.jpg,,,
 20251110_153422_planta_5.jpg,Erodium moschatum,EROMO,especie
@@ -2671,7 +2671,7 @@ filename,label,eppo_code,rank
 20251110_153435_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_153435_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_153435_planta_2.jpg,Erodium moschatum,EROMO,especie
-20251110_153435_planta_3.jpg,,,
+20251110_153435_planta_3.jpg,Erodium moschatum,EROMO,especie
 20251110_153435_planta_4.jpg,Erodium moschatum,EROMO,especie
 20251110_153443_planta_0.jpg,,,
 20251110_153443_planta_1.jpg,,,
