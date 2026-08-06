@@ -434,7 +434,7 @@ filename,label,eppo_code,rank
 20220417_155035_planta_1.jpg,,,
 20220417_155052_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_155052_planta_1.jpg,Lixo,,
-20220417_155052_planta_2.jpg,,,
+20220417_155052_planta_2.jpg,Convolvulus arvensis,CONAR,especie
 20220417_155052_planta_3.jpg,,,
 20220417_155059_planta_1.jpg,Urtica urens,URTUR,especie
 20220417_155059_planta_2.jpg,Polygonum aviculare,POLAV,especie
@@ -586,9 +586,9 @@ filename,label,eppo_code,rank
 20220417_160144_planta_2.jpg,Lixo,,
 20220417_160147_planta_1.jpg,,,
 20220417_160147_planta_2.jpg,Papaver rhoeas,PAPRH,especie
-20220417_160153_planta_0.jpg,,,
-20220417_160153_planta_1.jpg,,,
-20220417_160153_planta_2.jpg,,,
+20220417_160153_planta_0.jpg,Convolvulus arvensis,CONAR,especie
+20220417_160153_planta_1.jpg,Convolvulus arvensis,CONAR,especie
+20220417_160153_planta_2.jpg,Convolvulus arvensis,CONAR,especie
 20220417_160201_planta_1.jpg,,,
 20220417_160201_planta_3.jpg,,,
 20220417_160201_planta_4.jpg,Lamium purpureum,LAMPU,especie
@@ -687,7 +687,7 @@ filename,label,eppo_code,rank
 20220417_160835_planta_3.jpg,,,
 20220417_160855_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160855_planta_1.jpg,,,
-20220417_160858_planta_0.jpg,,,
+20220417_160858_planta_0.jpg,Convolvulus arvensis,CONAR,especie
 20220417_160906_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_160916_planta_0.jpg,,,
 20220417_160918_planta_0.jpg,,,
@@ -965,7 +965,7 @@ filename,label,eppo_code,rank
 20220417_163323_planta_1.jpg,Solanum nigrum,SOLNI,especie
 20220417_163323_planta_2.jpg,,,
 20220417_163323_planta_3.jpg,Polygonum aviculare,POLAV,especie
-20220417_163323_planta_5.jpg,,,
+20220417_163323_planta_5.jpg,Convolvulus arvensis,CONAR,especie
 20220417_163350_planta_0.jpg,,,
 20220417_163400_planta_0.jpg,Lixo,,
 20220417_163400_planta_3.jpg,Lixo,,
@@ -1840,7 +1840,7 @@ filename,label,eppo_code,rank
 20251110_152009_planta_1.jpg,,,
 20251110_152009_planta_2.jpg,Sonchus oleraceus,SONOL,especie
 20251110_152014_planta_0.jpg,,,
-20251110_152014_planta_1.jpg,,,
+20251110_152014_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_152019_planta_0.jpg,,,
 20251110_152023_planta_0.jpg,Lixo,,
 20251110_152023_planta_1.jpg,,,
@@ -1910,7 +1910,7 @@ filename,label,eppo_code,rank
 20251110_152151_planta_8.jpg,Urtica urens,URTUR,especie
 20251110_152155_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_152155_planta_1.jpg,Erodium moschatum,EROMO,especie
-20251110_152155_planta_2.jpg,,,
+20251110_152155_planta_2.jpg,Erodium moschatum,EROMO,especie
 20251110_152200_planta_0.jpg,,,
 20251110_152200_planta_3.jpg,Convolvulus arvensis,CONAR,especie
 20251110_152201_planta_0.jpg,,,
@@ -2174,9 +2174,9 @@ filename,label,eppo_code,rank
 20251110_152807_planta_0.jpg,Portulaca oleracea,POROL,especie
 20251110_152807_planta_1.jpg,Portulaca oleracea,POROL,especie
 20251110_152817_planta_0.jpg,Erodium moschatum,EROMO,especie
-20251110_152817_planta_3.jpg,,,
+20251110_152817_planta_3.jpg,Erodium moschatum,EROMO,especie
 20251110_152821_planta_0.jpg,,,
-20251110_152821_planta_1.jpg,,,
+20251110_152821_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_152822_planta_0.jpg,,,
 20251110_152822_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_152822_planta_2.jpg,,,
@@ -2264,11 +2264,11 @@ filename,label,eppo_code,rank
 20251110_152926_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_152926_planta_2.jpg,Lixo,,
 20251110_152926_planta_6.jpg,Erodium moschatum,EROMO,especie
-20251110_152926_planta_8.jpg,,,
+20251110_152926_planta_8.jpg,Erodium moschatum,EROMO,especie
 20251110_152926_planta_9.jpg,,,
 20251110_152928_planta_2.jpg,Erodium moschatum,EROMO,especie
 20251110_152932_planta_0.jpg,Lixo,,
-20251110_152932_planta_1.jpg,,,
+20251110_152932_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_152932_planta_2.jpg,Erodium moschatum,EROMO,especie
 20251110_152937_planta_0.jpg,Portulaca oleracea,POROL,especie
 20251110_152937_planta_3.jpg,Lixo,,
