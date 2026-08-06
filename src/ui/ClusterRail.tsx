@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ConfigData, GroundTruth } from "../types";
+import { A_CONFIRMAR, CID_CONFIRMAR } from "../colors";
 import { GenBadge } from "./bits";
-import { IconSearch } from "./icons";
+import { IconHelp, IconSearch } from "./icons";
 
 const baseUrl = import.meta.env.BASE_URL || "/";
 const PREVIEW = 168; // lado do popover de pré-visualização (como no SpeciesThumb)
@@ -48,11 +49,14 @@ export function ClusterRail({
   config,
   groundTruth,
   currentClusterId,
+  nConfirmar,
   onSelect,
 }: {
   config: ConfigData;
   groundTruth: GroundTruth;
   currentClusterId: number | null;
+  /** quantas estão "A confirmar" em todo o dataset (0 esconde a entrada) */
+  nConfirmar: number;
   onSelect: (cid: number) => void;
 }) {
   const [query, setQuery] = useState("");
@@ -180,6 +184,29 @@ export function ClusterRail({
           />
         </div>
       </div>
+
+      {/* "A confirmar" é uma pilha de trabalho adiado, não um grupo: fica FIXA no
+          topo, fora da lista e fora da ordenação, para ter sempre o mesmo sítio.
+          O data-species é o que faz as partículas voarem para cá ao carregar em C. */}
+      {nConfirmar > 0 && (
+        <div
+          data-species={A_CONFIRMAR}
+          className={`clu clu-pilha ${currentClusterId === CID_CONFIRMAR ? "active" : ""}`}
+          onClick={() => onSelect(CID_CONFIRMAR)}
+          title="Plântulas que ficaram por decidir — voltar a elas quando quiseres"
+        >
+          <div className="clu-thumb pilha-mark">
+            <IconHelp size={17} />
+          </div>
+          <div className="clu-body">
+            <div className="clu-line1">
+              <span className="clu-name">{A_CONFIRMAR}</span>
+              <span className="clu-count">{nConfirmar}</span>
+            </div>
+            <div className="pilha-sub">por decidir</div>
+          </div>
+        </div>
+      )}
 
       <div className="rail-list">
         {items.length === 0 && <div className="rail-empty">Nenhum grupo corresponde.</div>}

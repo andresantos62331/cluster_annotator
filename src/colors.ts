@@ -41,6 +41,17 @@ export const A_CONFIRMAR_COLOR = "#d99518"; // âmbar = pendente, distinto da PA
 /** Categorias reservadas, por ordem de apresentação. */
 export const RESERVADAS = [A_CONFIRMAR, LIXO] as const;
 
+// As duas categorias reservadas sao tambem DESTINOS: sitios onde se entra para
+// trabalhar o que la' esta'. Sao tratadas como clusters especiais, a exemplo do
+// ruido (-1) que ja' existia, para reaproveitarem o Workspace inteiro — seleccao,
+// arrastar, tecla S, atribuir, viewport — sem duplicar nada.
+export const CID_CONFIRMAR = -2;
+export const CID_LIXO = -3;
+export const isPilha = (cid: number | null): boolean =>
+  cid === CID_CONFIRMAR || cid === CID_LIXO;
+export const pilhaLabel = (cid: number | null): string =>
+  cid === CID_CONFIRMAR ? A_CONFIRMAR : cid === CID_LIXO ? LIXO : "";
+
 export function isReservada(label: string): boolean {
   return label === LIXO || label === A_CONFIRMAR;
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { ClusterMetrics, GroundTruth } from "../types";
-import { A_CONFIRMAR, LIXO, tint } from "../colors";
+import { A_CONFIRMAR, CID_LIXO, isPilha, LIXO, tint } from "../colors";
 import { Card } from "./Card";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { GenBadge, Pagination, Ring } from "./bits";
@@ -36,6 +36,7 @@ export function Workspace({
   onRetire,
   onClear,
   onSelectCluster,
+  clusterOf,
   focusFile,
   onFocusHandled,
 }: {
@@ -67,6 +68,8 @@ export function Workspace({
   onRetire: () => void;
   onClear: () => void;
   onSelectCluster: (cid: number) => void;
+  // cluster de origem de cada ficheiro — nas pilhas é o que dá a arrumação
+  clusterOf: (f: string) => number | null;
   focusFile: string | null;
   onFocusHandled: () => void;
 }) {
@@ -131,6 +134,7 @@ export function Workspace({
     return () => window.removeEventListener("click", h);
   }, [ddOpen]);
 
+  const pilha = isPilha(clusterId);
   const isNoise = clusterId === -1;
   const total = clusterFilenames.length;
   const annotated = total - unannotated.length;
@@ -166,17 +170,54 @@ export function Workspace({
   let labeledInSel = 0;
   for (const f of selection) if (groundTruth[f]) labeledInSel++;
 
+  // Nas pilhas a grelha é arrumada pelo CLUSTER DE ORIGEM. Não é organização por
+  // organização: plântulas que vieram do mesmo grupo são provavelmente a mesma
+  // espécie, por isso resolver uma resolve o bloco todo — o clustering continua a
+  // trabalhar mesmo dentro da pilha de dúvidas.
+  const porOrigem: [number, string[]][] = [];
+  if (pilha) {
+    const by = new Map<number, string[]>();
+    for (const f of pageFiles) {
+      const c = clusterOf(f) ?? -1;
+      const arr = by.get(c);
+      if (arr) arr.push(f);
+      else by.set(c, [f]);
+    }
+    porOrigem.push(...[...by.entries()].sort((a, b) => b[1].length - a[1].length || a[0] - b[0]));
+  }
+  const nOrigens = pilha ? new Set(clusterFilenames.map((f) => clusterOf(f) ?? -1)).size : 0;
+  const ehLixo = clusterId === CID_LIXO;
+
   return (
-    <div className="work-body" ref={bodyRef} onPointerDown={onDragSelect}>
-      <header className={`clu-header ${isNoise ? "noise" : ""}`}>
+    <div className={`work-body ${pilha ? "work-pilha" : ""}`} ref={bodyRef} onPointerDown={onDragSelect}>
+      <header className={`clu-header ${isNoise ? "noise" : ""} ${pilha ? (ehLixo ? "hd-lixo" : "hd-confirmar") : ""}`}>
         <div className="ch-title">
-          <h1>{isNoise ? "Ruído" : `Cluster ${clusterId}`}</h1>
-          {!isNoise && <GenBadge gen={metrics?.origem ?? 0} />}
-          <div className="ch-ring">
-            <Ring pct={pct} size={52} stroke={5} />
-          </div>
+          <h1>{pilha ? (ehLixo ? LIXO : A_CONFIRMAR) : isNoise ? "Ruído" : `Cluster ${clusterId}`}</h1>
+          {!isNoise && !pilha && <GenBadge gen={metrics?.origem ?? 0} />}
+          {!pilha && (
+            <div className="ch-ring">
+              <Ring pct={pct} size={52} stroke={5} />
+            </div>
+          )}
         </div>
         <div className="metric-chips">
+          {pilha ? (
+            <>
+              <span className="chip k-size">
+                <span className="chip-k">imagens</span> <b>{total}</b>
+              </span>
+              <span className="chip k-done">
+                <span className="chip-k">de</span> <b>{nOrigens}</b>{" "}
+                <span className="chip-k">{nOrigens === 1 ? "grupo" : "grupos"}</span>
+              </span>
+              <span className="chip k-metric pilha-dica">
+                {ehLixo
+                  ? "atribuir uma espécie tira a imagem do lixo"
+                  : "atribuir uma espécie resolve a dúvida"}
+              </span>
+            </>
+          ) : (
+          <>
           <span className="chip k-size">
             <span className="chip-k">tamanho</span> <b>{total}</b>
           </span>
@@ -209,6 +250,8 @@ export function Workspace({
                 </button>
               )}
             </>
+          )}
+          </>
           )}
         </div>
       </header>
@@ -322,10 +365,12 @@ export function Workspace({
         </label>
       </div>
 
-      {/* Por classificar */}
+      {/* Por classificar (numa pilha: por confirmar / descartadas) */}
       <div className="section-head">
         <span className="sh-bar" />
-        <span className="sh-title">Por classificar</span>
+        <span className="sh-title">
+          {pilha ? (ehLixo ? "Descartadas" : "Por confirmar") : "Por classificar"}
+        </span>
         <span className="sh-count mono">{unannotated.length}</span>
         {pageFiles.length > 0 && (
           <button
@@ -343,11 +388,71 @@ export function Workspace({
       {unannotated.length === 0 ? (
         <div className={`empty-state done`}>
           <div className="es-icon">{total === 0 ? "○" : "✓"}</div>
-          <div className="es-title">{total === 0 ? "Grupo vazio" : "Tudo anotado neste grupo"}</div>
+          <div className="es-title">
+            {pilha
+              ? ehLixo
+                ? "Não há nada no lixo"
+                : "Não há nada por confirmar"
+              : total === 0
+                ? "Grupo vazio"
+                : "Tudo anotado neste grupo"}
+          </div>
           <div className="es-sub">
-            {total === 0 ? "Não há imagens aqui." : "Bom trabalho — salta para o próximo com J."}
+            {pilha
+              ? "Volta a um grupo pela lista da esquerda."
+              : total === 0
+                ? "Não há imagens aqui."
+                : "Bom trabalho — salta para o próximo com J."}
           </div>
         </div>
+      ) : pilha ? (
+        <>
+          {porOrigem.map(([cid, files]) => {
+            const todasSel = files.every((f) => selection.has(f));
+            return (
+              <div className="pilha-grupo" key={cid}>
+                <div className="pilha-grupo-h">
+                  <button
+                    className={`svb-check ${todasSel ? "on" : ""}`}
+                    title={todasSel ? "Desselecionar estas" : "Selecionar as deste grupo"}
+                    onClick={() => onToggleMany(files)}
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13">
+                      <path d="M5 12.5l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                  <span className="pg-nome mono">{cid === -1 ? "ruído" : `c${cid}`}</span>
+                  <span className="pg-n">
+                    {files.length} {files.length === 1 ? "imagem" : "imagens"}
+                  </span>
+                  <button
+                    className="pg-ir"
+                    onClick={() => onSelectCluster(cid)}
+                    title="Ver o grupo de origem — as vizinhas ajudam a desempatar"
+                  >
+                    ver o grupo <span className="chip-go">→</span>
+                  </button>
+                </div>
+                <div className="grid">
+                  {files.map((f, i) => (
+                    <Card
+                      key={f}
+                      filename={f}
+                      index={i}
+                      selected={selection.has(f)}
+                      hidden={flying.has(f)}
+                      sourceClusterId={cid}
+                      onGoToCluster={() => onSelectCluster(cid)}
+                      onToggle={() => onToggleSelect(f)}
+                      onOpen={() => onOpenLightbox(f, unannotated)}
+                    />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+          {totalPages > 1 && <Pagination page={effPage} total={totalPages} onPage={onPage} />}
+        </>
       ) : (
         <>
           <div className="grid">
@@ -371,14 +476,14 @@ export function Workspace({
       {/* Anotadas por espécie — ficha "de herbário" sticky, concordante com a tab
           Espécies (faixa de cor, colapsar ao clicar). Sem histograma: dentro de um
           só cluster os "clusters de origem" não fazem sentido. */}
-      {showAnnotated && groups.length > 0 && (
+      {!pilha && showAnnotated && groups.length > 0 && (
         <div className="section-head">
           <span className="sh-bar" />
           <span className="sh-title">Espécies presentes neste cluster</span>
           <span className="sh-count mono">{groups.length}</span>
         </div>
       )}
-      {showAnnotated &&
+      {!pilha && showAnnotated &&
         groups.map(([sp, files]) => {
           const groupAllSel = files.length > 0 && files.every((f) => selection.has(f));
           const isCollapsed = collapsed.has(sp);
@@ -448,7 +553,7 @@ export function Workspace({
 
       {/* "A confirmar" — secção própria. Fica ANTES do Lixo porque estas imagens
           são boas e voltam a ser trabalhadas; o Lixo não volta. */}
-      {showAnnotated && confirmarFiles.length > 0 && (
+      {!pilha && showAnnotated && confirmarFiles.length > 0 && (
         <div className="lixo-bin confirmar-bin">
           <div className="lixo-head">
             <button
@@ -489,7 +594,7 @@ export function Workspace({
           cinzento e recolhido por omissão. A cor volta ao passar o rato, que é
           a única razão pela qual vale a pena mantê-lo à vista — dar por uma
           imagem que não devia ter sido deitada fora. */}
-      {showAnnotated && lixoFiles.length > 0 && (
+      {!pilha && showAnnotated && lixoFiles.length > 0 && (
         <div className={`lixo-bin bin-lixo ${lixoOpen ? "open" : ""}`}>
           <div
             className="lixo-head"

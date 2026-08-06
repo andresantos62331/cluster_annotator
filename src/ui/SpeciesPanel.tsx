@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { EppoEntry } from "../eppo";
-import { A_CONFIRMAR, LIXO } from "../colors";
 import { SpeciesColorDot } from "./ColorPicker";
 import { SpeciesThumb } from "./SpeciesThumb";
 import { AddSpecies, EppoChip, TaxonEditor } from "./EppoInput";
-import { IconHelp, IconTrash } from "./icons";
 
 export function SpeciesPanel({
   labels,
@@ -182,38 +180,12 @@ export function SpeciesPanel({
         })}
       </div>
 
-      {/* Categorias reservadas — fixas, sem renomear/cor/remover.
-          A distinção entre as duas é o critério de exclusão do ground truth:
-          "A confirmar" = o dado é bom, a etiqueta é que falta;
-          "Lixo"        = o dado não serve. */}
-      <div
-        data-species={A_CONFIRMAR}
-        className={`sp-lixo sp-confirmar ${activeSpecies === A_CONFIRMAR ? "active" : ""}`}
-        onClick={() => onGoToSpecies(A_CONFIRMAR)}
-        title="A imagem tem qualidade e detalhe suficientes e a espécie é identificável — falta é a certeza de qual é. Fica marcada para segunda opinião. Se a dúvida for por a foto não mostrar o que distingue a espécie, use antes o nível família. Tecla C atribui a selecção."
-      >
-        <span className="sp-key">C</span>
-        <span className="sp-lixo-icon" style={{ color: "var(--amber)" }}>
-          <IconHelp size={15} />
-        </span>
-        {expanded && (
-          <span className="sp-name" style={{ color: "var(--amber)" }}>{A_CONFIRMAR}</span>
-        )}
-      </div>
-
-      <div
-        data-species={LIXO}
-        className={`sp-lixo ${activeSpecies === LIXO ? "active" : ""}`}
-        onClick={() => onGoToSpecies(LIXO)}
-        title="Desfocadas, com duas ou mais espécies, ou partes de planta. Tecla 0 atribui a selecção."
-      >
-        <span className="sp-key">0</span>
-        <span className="sp-lixo-icon" style={{ color: "var(--danger)" }}>
-          <IconTrash size={15} />
-        </span>
-        {expanded && <span className="sp-name" style={{ color: "var(--danger)" }}>{LIXO}</span>}
-      </div>
-
+      {/* As duas categorias reservadas SAÍRAM daqui (2026-08-06). Este painel é a
+          lista de IDENTIFICAÇÕES — o que a plântula é — e nem "A confirmar" nem
+          "Lixo" são identificações. Passaram a viver onde se vai trabalhá-las:
+          "A confirmar" fixa no topo do rail, "Lixo" no caixote flutuante.
+          As teclas C e 0 continuam a funcionar, e ambas continuam no dropdown de
+          "atribuir a", que é o controlo de "atribuir o quê". */}
     </aside>
   );
 }

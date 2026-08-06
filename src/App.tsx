@@ -27,7 +27,10 @@ import {
 import { ULTIMA_NOVIDADE } from "./novidades";
 import { loadEppo, type EppoEntry } from "./eppo";
 import { celebrateAssign } from "./ui/particles";
-import { A_CONFIRMAR, A_CONFIRMAR_COLOR, isReservada, LIXO, LIXO_COLOR, PALETTE, RESERVADAS } from "./colors";
+import {
+  A_CONFIRMAR, A_CONFIRMAR_COLOR, CID_LIXO, isPilha, isReservada,
+  LIXO, LIXO_COLOR, PALETTE, pilhaLabel, RESERVADAS,
+} from "./colors";
 import type { ConfigData, CropGeometry, GroundTruth } from "./types";
 import { TopBar } from "./ui/TopBar";
 import { ClusterRail } from "./ui/ClusterRail";
@@ -38,6 +41,7 @@ import { Lightbox } from "./ui/Lightbox";
 import { ClusterHistory } from "./ui/ClusterHistory";
 import { HelpOverlay } from "./ui/HelpOverlay";
 import { Novidades } from "./ui/Novidades";
+import { BinFlutuante } from "./ui/BinFlutuante";
 
 const IMAGES_PER_PAGE = 30;
 const UNDO_MAX = 30;
@@ -378,6 +382,9 @@ export default function App() {
     for (const l of Object.values(groundTruth)) m.set(l, (m.get(l) ?? 0) + 1);
     return m;
   }, [groundTruth]);
+  // tamanho das duas pilhas — o rail e o caixote flutuante mostram-nos
+  const nConfirmar = countByLabel.get(A_CONFIRMAR) ?? 0;
+  const nLixo = countByLabel.get(LIXO) ?? 0;
 
   // ficheiro -> cluster de origem (na config atual), para saltar do separador Espécies
   const fileToCluster = useMemo(() => {
@@ -419,10 +426,20 @@ export default function App() {
     [familyMap, eppoMap, eppoByCode],
   );
 
+  // Numa pilha ("A confirmar" / "Lixo") o conjunto de trabalho não vem do
+  // clustering: são todas as imagens com aquela etiqueta, venham do grupo que
+  // vierem. Ordenadas pelo cluster de origem, porque plântulas do mesmo grupo
+  // são provavelmente a mesma espécie — resolver uma resolve várias.
   const clusterFilenames = useMemo(() => {
     if (!config || currentClusterId == null) return [] as string[];
+    if (isPilha(currentClusterId)) {
+      const alvo = pilhaLabel(currentClusterId);
+      return Object.keys(groundTruth)
+        .filter((f) => groundTruth[f] === alvo)
+        .sort((a, b) => (fileToCluster.get(a) ?? 1e9) - (fileToCluster.get(b) ?? 1e9) || a.localeCompare(b));
+    }
     return config.byCluster.get(currentClusterId) ?? [];
-  }, [config, currentClusterId]);
+  }, [config, currentClusterId, groundTruth, fileToCluster]);
 
   // lista em que o lightbox navega com ←/→: a secção de onde foi aberto. Sem
   // secção (aberturas antigas/indirectas) cai no cluster atual ou nas imagens da
@@ -442,9 +459,15 @@ export default function App() {
     setLightbox(f);
   }, []);
 
+  // O que está "por trabalhar" na vista actual. Num cluster são as que ainda não
+  // têm etiqueta; numa pilha são TODAS — já têm etiqueta, mas é precisamente essa
+  // que se vem cá substituir.
   const unannotatedInCluster = useMemo(
-    () => clusterFilenames.filter((f) => !groundTruth[f]),
-    [clusterFilenames, groundTruth],
+    () =>
+      isPilha(currentClusterId)
+        ? clusterFilenames
+        : clusterFilenames.filter((f) => !groundTruth[f]),
+    [clusterFilenames, groundTruth, currentClusterId],
   );
 
   const totalPages = Math.max(1, Math.ceil(unannotatedInCluster.length / IMAGES_PER_PAGE));
@@ -580,7 +603,9 @@ export default function App() {
         </>,
         true,
       );
-      if (remaining === 0 && currentClusterId !== -1) {
+      // numa pilha isto dispararia sempre (todas as imagens contam como "por
+      // trabalhar"), e "grupo concluído" ali não quer dizer nada
+      if (remaining === 0 && currentClusterId !== -1 && !isPilha(currentClusterId)) {
         setTimeout(
           () =>
             pushToast(
@@ -1126,6 +1151,7 @@ export default function App() {
         config={config}
         groundTruth={groundTruth}
         currentClusterId={currentClusterId}
+        nConfirmar={nConfirmar}
         onSelect={selectCluster}
       />
 
@@ -1179,12 +1205,15 @@ export default function App() {
             onRetire={retireSelection}
             onClear={() => setSelection(new Set())}
             onSelectCluster={selectCluster}
+            clusterOf={(f) => fileToCluster.get(f) ?? null}
             focusFile={cardFocus}
             onFocusHandled={() => setCardFocus(null)}
           />
         ) : (
           <SpeciesView
-            labels={[...labels, A_CONFIRMAR, LIXO]}
+            // O Lixo saiu daqui: a Coleção é uma colecção de ESPÉCIES, e imagens
+            // deitadas fora não são uma espécie. Vivem agora no caixote flutuante.
+            labels={[...labels, A_CONFIRMAR]}
             groundTruth={groundTruth}
             colorOf={colorOf}
             speciesPage={speciesPage}
@@ -1208,6 +1237,17 @@ export default function App() {
             onOpenCluster={selectCluster}
             focus={speciesFocus}
             onFocusHandled={() => setSpeciesFocus(null)}
+          />
+        )}
+
+        {/* caixote sempre presente no separador Clusters, mesmo vazio: é assim
+            que se percebe que o Lixo é um sítio onde se entra e não um botão de
+            apagar definitivo */}
+        {mode === "clusters" && (
+          <BinFlutuante
+            n={nLixo}
+            activo={currentClusterId === CID_LIXO}
+            onAbrir={() => selectCluster(CID_LIXO)}
           />
         )}
       </main>
