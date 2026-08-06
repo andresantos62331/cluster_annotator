@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-06T10:22:06.873Z",
+  "exported_at": "2026-08-06T10:25:06.377Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -38,7 +38,8 @@
     "Capsella rubella",
     "Poaceae",
     "Euphorbia helioscopia",
-    "Amaranthus blitoides"
+    "Amaranthus blitoides",
+    "Cyperus rotundus"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -2324,6 +2325,7 @@
     "20220417_160713_planta_0.jpg": "Diplotaxis catholica",
     "20251109_162446_planta_0.jpg": "Lixo",
     "PHOTO-2026-05-20-09-48-42 (10)_planta_8.jpg": "Lixo",
-    "PHOTO-2026-05-20-09-48-42 (2)_planta_9.jpg": "Lixo"
+    "PHOTO-2026-05-20-09-48-42 (2)_planta_9.jpg": "Lixo",
+    "20251110_153129_planta_1.jpg": "Cyperus rotundus"
   }
 }
