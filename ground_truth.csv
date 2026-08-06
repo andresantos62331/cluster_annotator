@@ -132,7 +132,7 @@ filename,label,eppo_code,rank
 20220417_152540_planta_7.jpg,Stellaria media,STEME,especie
 20220417_152558_planta_0.jpg,Lixo,,
 20220417_152614_planta_2.jpg,Lixo,,
-20220417_152614_planta_3.jpg,,,
+20220417_152614_planta_3.jpg,Chenopodium album,CHEAL,especie
 20220417_152614_planta_4.jpg,Lixo,,
 20220417_152614_planta_5.jpg,,,
 20220417_152614_planta_7.jpg,,,
@@ -974,7 +974,7 @@ filename,label,eppo_code,rank
 20220417_163400_planta_6.jpg,,,
 20220417_163414_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_153324_planta_0.jpg,Portulaca oleracea,POROL,especie
-20220425_153324_planta_2.jpg,,,
+20220425_153324_planta_2.jpg,Chenopodium album,CHEAL,especie
 20220425_153349_planta_0.jpg,,,
 20220425_153445_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220425_153445_planta_1.jpg,Chenopodium album,CHEAL,especie
@@ -3064,7 +3064,7 @@ JPEG_V2_E2_2022-04-17_15_09_213153740461693207130_planta_4.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_09_213153740461693207130_planta_6.jpg,,,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_0.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_2.jpg,Chenopodium album,CHEAL,especie
-JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_3.jpg,,,
+JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_3.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_5.jpg,,,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_6.jpg,Urtica urens,URTUR,especie
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_7.jpg,,,
@@ -3106,10 +3106,10 @@ JPEG_V2_E2_2022-04-17_15_11_258335272712890131690_planta_1.jpg,A confirmar,,
 JPEG_V2_E2_2022-04-17_15_11_258335272712890131690_planta_2.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_11_258335272712890131690_planta_3.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_1.jpg,Chenopodium album,CHEAL,especie
-JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_10.jpg,,,
+JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_10.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_12.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_13.jpg,Chenopodium album,CHEAL,especie
-JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_15.jpg,,,
+JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_15.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_17.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_18.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_11_414489342397012355711_planta_19.jpg,Chenopodium album,CHEAL,especie
@@ -3127,7 +3127,7 @@ JPEG_V2_E2_2022-04-17_15_13_142969242649330384593_planta_5.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_0.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_10.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_11.jpg,Stellaria media,STEME,especie
-JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_12.jpg,,,
+JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_12.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_2.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_3.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_13_44834417056546759781_planta_4.jpg,Chenopodium album,CHEAL,especie
