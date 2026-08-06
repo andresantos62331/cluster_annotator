@@ -299,7 +299,7 @@ filename,label,eppo_code,rank
 20220417_154415_planta_12.jpg,,,
 20220417_154415_planta_13.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154415_planta_3.jpg,Lixo,,
-20220417_154415_planta_4.jpg,,,
+20220417_154415_planta_4.jpg,Urtica membranacea,URTDU,especie
 20220417_154415_planta_5.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154415_planta_6.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154415_planta_7.jpg,Conyza bonariensis,ERIBO,especie
@@ -485,7 +485,7 @@ filename,label,eppo_code,rank
 20220417_155548_planta_7.jpg,Lixo,,
 20220417_155548_planta_8.jpg,Lixo,,
 20220417_155556_planta_0.jpg,Lixo,,
-20220417_155556_planta_1.jpg,,,
+20220417_155556_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_155602_planta_0.jpg,Lixo,,
 20220417_155602_planta_1.jpg,,,
 20220417_155604_planta_0.jpg,Lixo,,
@@ -675,7 +675,7 @@ filename,label,eppo_code,rank
 20220417_160746_planta_0.jpg,Stellaria media,STEME,especie
 20220417_160749_planta_0.jpg,,,
 20220417_160757_planta_0.jpg,Lixo,,
-20220417_160802_planta_1.jpg,,,
+20220417_160802_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_160807_planta_0.jpg,Lixo,,
 20220417_160807_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_160817_planta_0.jpg,,,
@@ -684,12 +684,12 @@ filename,label,eppo_code,rank
 20220417_160828_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220417_160835_planta_0.jpg,,,
 20220417_160835_planta_1.jpg,,,
-20220417_160835_planta_3.jpg,,,
+20220417_160835_planta_3.jpg,Lamium purpureum,LAMPU,especie
 20220417_160855_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160855_planta_1.jpg,,,
 20220417_160858_planta_0.jpg,Convolvulus arvensis,CONAR,especie
 20220417_160906_planta_1.jpg,Lamium purpureum,LAMPU,especie
-20220417_160916_planta_0.jpg,,,
+20220417_160916_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160918_planta_0.jpg,,,
 20220417_160922_planta_0.jpg,Stellaria media,STEME,especie
 20220417_160922_planta_2.jpg,Stellaria media,STEME,especie
@@ -702,7 +702,7 @@ filename,label,eppo_code,rank
 20220417_161015_planta_0.jpg,,,
 20220417_161018_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_161021_planta_0.jpg,Lamium purpureum,LAMPU,especie
-20220417_161027_planta_0.jpg,,,
+20220417_161027_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_161032_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_161036_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_161043_planta_1.jpg,Lamium purpureum,LAMPU,especie
@@ -1450,7 +1450,7 @@ filename,label,eppo_code,rank
 20251109_162448_planta_6.jpg,Lixo,,
 20251109_162448_planta_7.jpg,,,
 20251109_162448_planta_8.jpg,,,
-20251109_162448_planta_9.jpg,,,
+20251109_162448_planta_9.jpg,Lixo,,
 20251109_162452_planta_0.jpg,Lixo,,
 20251109_162452_planta_10.jpg,Lixo,,
 20251109_162452_planta_11.jpg,Lixo,,
@@ -1476,7 +1476,7 @@ filename,label,eppo_code,rank
 20251109_162455_planta_18.jpg,Lixo,,
 20251109_162455_planta_19.jpg,Lixo,,
 20251109_162455_planta_2.jpg,,,
-20251109_162455_planta_20.jpg,,,
+20251109_162455_planta_20.jpg,Lixo,,
 20251109_162455_planta_21.jpg,,,
 20251109_162455_planta_22.jpg,,,
 20251109_162455_planta_23.jpg,,,
@@ -1598,7 +1598,7 @@ filename,label,eppo_code,rank
 20251110_151633_planta_2.jpg,Lixo,,
 20251110_151636_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20251110_151636_planta_1.jpg,Erodium moschatum,EROMO,especie
-20251110_151636_planta_2.jpg,,,
+20251110_151636_planta_2.jpg,Urtica membranacea,URTDU,especie
 20251110_151636_planta_3.jpg,,,
 20251110_151639_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20251110_151639_planta_1.jpg,Erodium moschatum,EROMO,especie
@@ -1607,7 +1607,7 @@ filename,label,eppo_code,rank
 20251110_151639_planta_4.jpg,Sonchus oleraceus,SONOL,especie
 20251110_151641_planta_0.jpg,Sonchus oleraceus,SONOL,especie
 20251110_151641_planta_1.jpg,,,
-20251110_151641_planta_2.jpg,,,
+20251110_151641_planta_2.jpg,Urtica membranacea,URTDU,especie
 20251110_151641_planta_3.jpg,Erodium moschatum,EROMO,especie
 20251110_151641_planta_4.jpg,Erodium moschatum,EROMO,especie
 20251110_151641_planta_5.jpg,Erodium moschatum,EROMO,especie
@@ -1902,7 +1902,7 @@ filename,label,eppo_code,rank
 20251110_152151_planta_0.jpg,,,
 20251110_152151_planta_1.jpg,Urtica membranacea,URTDU,especie
 20251110_152151_planta_2.jpg,Urtica membranacea,URTDU,especie
-20251110_152151_planta_3.jpg,,,
+20251110_152151_planta_3.jpg,Lixo,,
 20251110_152151_planta_4.jpg,,,
 20251110_152151_planta_5.jpg,Urtica urens,URTUR,especie
 20251110_152151_planta_6.jpg,Urtica membranacea,URTDU,especie
@@ -2914,7 +2914,7 @@ IMG_20220501_164900_planta_0.jpg,Lamium purpureum,LAMPU,especie
 IMG_20220501_164910_planta_1.jpg,Lamium purpureum,LAMPU,especie
 IMG_20220501_164917_planta_0.jpg,Lamium purpureum,LAMPU,especie
 IMG_20220501_164922_planta_0.jpg,Portulaca oleracea,POROL,especie
-IMG_20220501_164922_planta_1.jpg,,,
+IMG_20220501_164922_planta_1.jpg,Lamium purpureum,LAMPU,especie
 IMG_20220501_165115_planta_0.jpg,Lamium purpureum,LAMPU,especie
 IMG_20220501_165116_planta_0.jpg,Lamium purpureum,LAMPU,especie
 IMG_20220501_165120_planta_0.jpg,Lamium purpureum,LAMPU,especie
