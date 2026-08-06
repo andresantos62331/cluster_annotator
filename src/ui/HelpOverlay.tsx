@@ -1,6 +1,7 @@
 // Ajuda integrada (botão "?" na barra superior ou tecla ?): fluxo de anotação
-// em 3 passos + tabela de atalhos. Pensada para a anotadora usar a ferramenta
-// sem ninguém ao lado. Fecha com Esc (gerido no App), X ou clique fora.
+// em 3 passos + onde estão as coisas + tabela de atalhos. Pensada para a
+// anotadora usar a ferramenta sem ninguém ao lado. Fecha com Esc (gerido no
+// App), X ou clique fora.
 export function HelpOverlay({ onClose }: { onClose: () => void }) {
   return (
     <div className="help-overlay" onClick={onClose}>
@@ -13,9 +14,9 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
         <ol className="help-steps">
           <li>
             <b>Escolhe um grupo</b> na lista da esquerda. As plântulas de cada grupo
-            são parecidas entre si, em regra, a mesma espécie. A lista mostra
-            apenas o que falta fazer; os grupos já concluídos ficam recolhidos na
-            gaveta <b>«Concluídos»</b>, no fundo dessa lista.
+            são parecidas entre si, em regra a mesma espécie. A lista mostra primeiro
+            os grupos com mais por fazer; os já concluídos ficam recolhidos na gaveta{" "}
+            <b>«Concluídos»</b>, no fundo.
           </li>
           <li>
             <b>Seleciona as plântulas</b> que são da mesma espécie e atribui-as com{" "}
@@ -27,54 +28,60 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
             Espécies novas criam-se no painel da direita.
           </li>
           <li>
-            <b>Confere na Coleção</b>: o separador do meio reúne, para cada
-            espécie, todas as plântulas que lhe atribuíste, venham do grupo que
-            vierem. É aqui que se apanham enganos: corrige-os com «Mover para»
-            ou «Retirar etiqueta».
+            <b>Confere na Coleção</b>: o separador do meio reúne, para cada espécie,
+            todas as plântulas que lhe atribuíste, venham do grupo que vierem. É aqui
+            que se apanham enganos: corrige-os com «Mover para» ou «Retirar etiqueta».
           </li>
         </ol>
 
+        <h2>Onde está cada coisa</h2>
         <div className="help-note">
-          O <b>painel das espécies</b>, à direita, está recolhido e abre quando lhe
-          passas o rato por cima. Os números a laranja são as teclas de atribuição;
-          arrastar uma espécie muda a ordem e, com ela, as teclas. O lápis abre a
-          ficha da espécie: nome, código EPPO, família e <b>nível da identificação</b>,
-          com pesquisa na base.
+          <b>À esquerda</b>, os sítios para onde ir: os grupos por fazer e, no topo,
+          a lista <b>«A confirmar»</b> com as plântulas que deixaste para depois.
+          <br />
+          <b>À direita</b>, as identificações, ou seja o que a plântula é: espécies e
+          famílias. O painel está recolhido e abre quando lhe passas o rato por cima.
+          Os números a laranja são as teclas de atribuição, e arrastar uma espécie
+          muda a ordem e, com ela, as teclas. O lápis abre a ficha: nome, código EPPO,
+          família e nível da identificação.
+          <br />
+          <b>No canto inferior direito</b>, o caixote do lixo, com a contagem do que
+          lá está. Clica para ver o que foi descartado e, se for preciso, recuperar.
         </div>
 
-        <h2>As duas categorias reservadas</h2>
+        <h2>Quando não se consegue identificar</h2>
         <div className="help-note">
-          <b>A confirmar</b> <kbd>C</kbd>: a imagem tem qualidade e mostra o que é
-          preciso, e a espécie <b>é</b> identificável: o que falta é a certeza.
-          Marca aqui as plântulas em que ficas em dúvida mas achas que outra pessoa
-          as identificaria. Ficam guardadas à espera de uma segunda opinião, em vez
-          de serem decididas à pressa, e deixas de reavaliar a mesma plântula a cada
-          passagem.
+          Há três situações diferentes, e a distinção entre elas é o que dá valor ao
+          ficheiro final. O que muda é <b>onde está o problema</b>.
           <br />
-          <b>Lixo</b> <kbd>0</kbd>: a imagem não serve: desfocada, com duas ou mais
-          espécies diferentes, ou apenas parte de uma planta.
           <br />
-          Em resumo: no <b>Lixo</b> o problema é a <b>imagem</b>; em{" "}
-          <b>A confirmar</b> a imagem está boa e o que falta é a <b>certeza</b>.
+          <b>A confirmar</b> <kbd>C</kbd>: a imagem está boa e mostra o que é preciso,
+          a espécie <b>é</b> identificável, e o que falta é a <b>certeza</b>. Marca
+          aqui as plântulas em que ficas em dúvida, para decidires mais tarde em vez
+          de decidires à pressa. Ficam guardadas na lista do topo da esquerda, e
+          deixas de reavaliar a mesma plântula de cada vez que passas pelo grupo.
           <br />
-          <b>Atenção à diferença para a família:</b> se a dúvida existe porque a
-          fotografia não mostra o que distingue a espécie (as gramíneas dependem de
-          apêndices e pelos que a imagem não capta), isso não é «A confirmar»: é
-          identificação ao nível da <b>família</b>. Num caso falta a certeza de quem
-          está a ver; no outro falta a informação na própria foto.
+          <br />
+          <b>Família</b>: a dúvida existe porque a <b>fotografia</b> não mostra o que
+          distingue a espécie (as gramíneas dependem de apêndices e pelos que a imagem
+          não capta). Aqui não há certeza a ganhar, por mais que se olhe, por isso
+          regista-se a família. Sempre que dê para chegar à família, é preferível a
+          «A confirmar»: guarda informação em vez de a deitar fora.
+          <br />
+          <br />
+          <b>Lixo</b> <kbd>0</kbd>: o problema é a <b>imagem</b>, que não serve.
+          Desfocada, com duas ou mais espécies diferentes, ou apenas parte de uma
+          planta.
         </div>
 
-        <h2>Espécie ou família</h2>
+        <h2>Criar uma espécie ou uma família</h2>
         <div className="help-note">
           No painel da direita há dois botões de criação.
           <br />
-          <b>+ Espécie</b>: o caso normal. Escreve o nome e escolhe da lista: o código
-          EPPO e a família ficam preenchidos sozinhos.
+          <b>+ Espécie</b>: o caso normal. Escreve o nome e escolhe da lista, e o
+          código EPPO e a família ficam preenchidos sozinhos.
           <br />
-          <b>+ Família</b>: para quando a fotografia não permite chegar à espécie. As
-          gramíneas são o caso típico, porque dependem de detalhes que a imagem não
-          capta. Só pede o <b>nome da família</b> (ex.: <i>Poaceae</i>), sem código.
-          <br />
+          <b>+ Família</b>: só pede o nome (por exemplo, <i>Poaceae</i>), sem código.
           Fica registado no ficheiro final o nível a que cada identificação foi feita,
           em vez de se forçar uma espécie incerta.
         </div>
@@ -83,8 +90,8 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
           Em caso de dúvida numa plântula, abre-a em detalhe (⤢). Com{" "}
           <kbd>↑</kbd>/<kbd>↓</kbd> alternas entre a foto original, a caixa e o
           recorte em alta definição; com <kbd>←</kbd>/<kbd>→</kbd> percorres as
-          plântulas <b>da secção onde estavas</b>. Se abriste em «Por anotar»,
-          só passas pelas que faltam.
+          plântulas <b>da secção onde estavas</b>. Se abriste em «Por anotar», só
+          passas pelas que faltam.
         </div>
 
         <h2>Atalhos</h2>
@@ -98,8 +105,8 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
               <div><dt><kbd>R</kbd></dt><dd>retirar a etiqueta às selecionadas</dd></div>
               <div><dt><kbd>D</kbd></dt><dd>limpar a seleção</dd></div>
               <div><dt><kbd>1</kbd>–<kbd>9</kbd></dt><dd>atribuir a seleção à espécie n.º N (ordem do painel direito)</dd></div>
-              <div><dt><kbd>C</kbd></dt><dd>marcar como <i>A confirmar</i> (identificável, mas sem certeza, para segunda opinião)</dd></div>
-              <div><dt><kbd>0</kbd></dt><dd>marcar como Lixo (imagem inutilizável)</dd></div>
+              <div><dt><kbd>C</kbd></dt><dd>pôr de lado como <i>A confirmar</i></dd></div>
+              <div><dt><kbd>0</kbd></dt><dd>descartar para o Lixo</dd></div>
               <div><dt><kbd>J</kbd> / <kbd>K</kbd></dt><dd>grupo seguinte / anterior</dd></div>
               <div><dt><kbd>←</kbd> / <kbd>→</kbd></dt><dd>mudar de página</dd></div>
             </dl>
