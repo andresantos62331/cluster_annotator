@@ -70,13 +70,13 @@ filename,label,eppo_code,rank
 20220417_152204_planta_0.jpg,Poaceae,,familia
 20220417_152204_planta_1.jpg,Fumaria officinalis,FUMMU,especie
 20220417_152204_planta_2.jpg,Chenopodium album,CHEAL,especie
-20220417_152217_planta_1.jpg,,,
+20220417_152217_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220417_152227_planta_2.jpg,Chenopodium album,CHEAL,especie
 20220417_152241_planta_1.jpg,Poaceae,,familia
 20220417_152241_planta_2.jpg,Chenopodium album,CHEAL,especie
 20220417_152241_planta_3.jpg,Chenopodium album,CHEAL,especie
 20220417_152241_planta_4.jpg,A confirmar,,
-20220417_152259_planta_1.jpg,,,
+20220417_152259_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220417_152259_planta_2.jpg,Chenopodium album,CHEAL,especie
 20220417_152259_planta_3.jpg,Stellaria media,STEME,especie
 20220417_152259_planta_4.jpg,Lixo,,
@@ -620,7 +620,7 @@ filename,label,eppo_code,rank
 20220417_160348_planta_7.jpg,Lixo,,
 20220417_160351_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160359_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
-20220417_160359_planta_1.jpg,,,
+20220417_160359_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220417_160401_planta_1.jpg,Lixo,,
 20220417_160403_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160406_planta_0.jpg,Conyza bonariensis,ERIBO,especie
@@ -645,7 +645,7 @@ filename,label,eppo_code,rank
 20220417_160454_planta_1.jpg,Papaver rhoeas,PAPRH,especie
 20220417_160456_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160459_planta_0.jpg,Lixo,,
-20220417_160501_planta_0.jpg,,,
+20220417_160501_planta_0.jpg,Lixo,,
 20220417_160536_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160544_planta_0.jpg,Lixo,,
 20220417_160544_planta_2.jpg,Urtica urens,URTUR,especie
@@ -682,7 +682,7 @@ filename,label,eppo_code,rank
 20220417_160824_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220417_160826_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160828_planta_1.jpg,Chenopodium album,CHEAL,especie
-20220417_160835_planta_0.jpg,,,
+20220417_160835_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220417_160835_planta_1.jpg,Lixo,,
 20220417_160835_planta_3.jpg,Lamium purpureum,LAMPU,especie
 20220417_160855_planta_0.jpg,Lamium purpureum,LAMPU,especie
@@ -744,7 +744,7 @@ filename,label,eppo_code,rank
 20220417_161850_planta_0.jpg,,,
 20220417_161850_planta_2.jpg,Lamium purpureum,LAMPU,especie
 20220417_162003_planta_0.jpg,Chenopodium album,CHEAL,especie
-20220417_162010_planta_0.jpg,,,
+20220417_162010_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220417_162010_planta_1.jpg,,,
 20220417_162022_planta_1.jpg,A confirmar,,
 20220417_162022_planta_2.jpg,Polygonum aviculare,POLAV,especie
@@ -803,17 +803,17 @@ filename,label,eppo_code,rank
 20220417_162126_planta_2.jpg,Lixo,,
 20220417_162126_planta_3.jpg,Lixo,,
 20220417_162126_planta_5.jpg,Euphorbia helioscopia,EPHHE,especie
-20220417_162153_planta_0.jpg,,,
+20220417_162153_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220417_162153_planta_1.jpg,Urtica urens,URTUR,especie
 20220417_162158_planta_1.jpg,Chenopodium album,CHEAL,especie
-20220417_162158_planta_2.jpg,,,
-20220417_162158_planta_4.jpg,,,
-20220417_162158_planta_5.jpg,,,
+20220417_162158_planta_2.jpg,Chenopodium album,CHEAL,especie
+20220417_162158_planta_4.jpg,Chenopodium album,CHEAL,especie
+20220417_162158_planta_5.jpg,Chenopodium album,CHEAL,especie
 20220417_162158_planta_7.jpg,Chenopodium album,CHEAL,especie
 20220417_162213_planta_1.jpg,Sonchus asper,SONAS,especie
 20220417_162215_planta_1.jpg,Sonchus asper,SONAS,especie
 20220417_162215_planta_2.jpg,Chenopodium album,CHEAL,especie
-20220417_162218_planta_1.jpg,,,
+20220417_162218_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220417_162218_planta_2.jpg,,,
 20220417_162218_planta_3.jpg,,,
 20220417_162218_planta_4.jpg,Lixo,,
@@ -1034,7 +1034,7 @@ filename,label,eppo_code,rank
 20220425_154200_planta_2.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154200_planta_3.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154200_planta_4.jpg,Amaranthus retroflexus,AMARE,especie
-20220425_154228_planta_0.jpg,,,
+20220425_154228_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220425_154249_planta_0.jpg,,,
 20220425_154249_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220425_154341_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
@@ -2755,7 +2755,7 @@ IMG_20220501_154519_planta_2.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154526_planta_0.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154548_planta_0.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154548_planta_1.jpg,Chenopodium album,CHEAL,especie
-IMG_20220501_154548_planta_2.jpg,,,
+IMG_20220501_154548_planta_2.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154557_planta_0.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154557_planta_1.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154558_planta_0.jpg,Chenopodium album,CHEAL,especie
@@ -2765,7 +2765,7 @@ IMG_20220501_154559_planta_2.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154628_planta_0.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154632_planta_0.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154655_planta_0.jpg,Chenopodium album,CHEAL,especie
-IMG_20220501_155241_planta_1.jpg,,,
+IMG_20220501_155241_planta_1.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_155519_planta_1.jpg,Digitaria sanguinalis,DIGSA,especie
 IMG_20220501_155523_planta_2.jpg,Digitaria sanguinalis,DIGSA,especie
 IMG_20220501_155559_planta_0.jpg,Digitaria sanguinalis,DIGSA,especie
@@ -3067,7 +3067,7 @@ JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_2.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_3.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_5.jpg,,,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_6.jpg,Urtica urens,URTUR,especie
-JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_7.jpg,,,
+JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_7.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_8.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_09_485777440515145901161_planta_9.jpg,Chenopodium opulifolium,CHEOP,especie
 JPEG_V2_E2_2022-04-17_15_10_159211851527285708499_planta_0.jpg,Lixo,,
@@ -3174,7 +3174,7 @@ JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_7.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_8.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_9.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_17_498652234443729005809_planta_1.jpg,,,
-JPEG_V2_E2_2022-04-17_15_18_092397818907613741481_planta_0.jpg,,,
+JPEG_V2_E2_2022-04-17_15_18_092397818907613741481_planta_0.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_18_451416949858663056674_planta_0.jpg,Sonchus oleraceus,SONOL,especie
 PHOTO-2026-05-20-09-48-42 (1)_planta_0.jpg,Urtica urens,URTUR,especie
 PHOTO-2026-05-20-09-48-42 (1)_planta_1.jpg,Urtica urens,URTUR,especie
