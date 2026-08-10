@@ -235,7 +235,7 @@ filename,label,eppo_code,rank
 20220417_152916_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220417_153024_planta_0.jpg,,,
 20220417_153024_planta_1.jpg,,,
-20220417_153035_planta_0.jpg,,,
+20220417_153035_planta_0.jpg,Poaceae,,familia
 20220417_153105_planta_0.jpg,Urtica urens,URTUR,especie
 20220417_153105_planta_1.jpg,Poaceae,,familia
 20220417_153105_planta_5.jpg,,,
@@ -287,7 +287,7 @@ filename,label,eppo_code,rank
 20220417_153853_planta_5.jpg,Chamaemelum mixtum,ANTMI,especie
 20220417_153944_planta_0.jpg,,,
 20220417_153944_planta_1.jpg,,,
-20220417_154002_planta_0.jpg,,,
+20220417_154002_planta_0.jpg,Poaceae,,familia
 20220417_154018_planta_0.jpg,,,
 20220417_154018_planta_1.jpg,,,
 20220417_154018_planta_2.jpg,,,
@@ -448,7 +448,7 @@ filename,label,eppo_code,rank
 20220417_155137_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_155137_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 20220417_155147_planta_0.jpg,Lamium purpureum,LAMPU,especie
-20220417_155152_planta_0.jpg,,,
+20220417_155152_planta_0.jpg,Poaceae,,familia
 20220417_155157_planta_0.jpg,,,
 20220417_155200_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155200_planta_1.jpg,Conyza bonariensis,ERIBO,especie
@@ -627,7 +627,7 @@ filename,label,eppo_code,rank
 20220417_160410_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160410_planta_1.jpg,,,
 20220417_160414_planta_0.jpg,Conyza bonariensis,ERIBO,especie
-20220417_160414_planta_1.jpg,,,
+20220417_160414_planta_1.jpg,Poaceae,,familia
 20220417_160420_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_160420_planta_1.jpg,,,
 20220417_160422_planta_0.jpg,,,
@@ -698,7 +698,7 @@ filename,label,eppo_code,rank
 20220417_160954_planta_1.jpg,Stellaria media,STEME,especie
 20220417_161000_planta_0.jpg,,,
 20220417_161000_planta_1.jpg,Lixo,,
-20220417_161013_planta_1.jpg,,,
+20220417_161013_planta_1.jpg,Poaceae,,familia
 20220417_161015_planta_0.jpg,,,
 20220417_161018_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_161021_planta_0.jpg,Lamium purpureum,LAMPU,especie
@@ -994,7 +994,7 @@ filename,label,eppo_code,rank
 20220425_153743_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_153831_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_153831_planta_1.jpg,,,
-20220425_153843_planta_0.jpg,,,
+20220425_153843_planta_0.jpg,Poaceae,,familia
 20220425_153858_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_153858_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_153925_planta_0.jpg,Chenopodium album,CHEAL,especie
@@ -1254,7 +1254,7 @@ filename,label,eppo_code,rank
 20220425_164218_planta_1.jpg,,,
 20220425_164218_planta_3.jpg,Datura stramonium,DATST,especie
 20220425_164218_planta_5.jpg,,,
-20220425_164218_planta_6.jpg,,,
+20220425_164218_planta_6.jpg,Poaceae,,familia
 20220425_164222_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_164222_planta_1.jpg,Datura stramonium,DATST,especie
 20220425_164222_planta_2.jpg,,,
@@ -1375,7 +1375,7 @@ filename,label,eppo_code,rank
 20251109_162233_planta_12.jpg,Lixo,,
 20251109_162233_planta_13.jpg,Lixo,,
 20251109_162233_planta_14.jpg,,,
-20251109_162233_planta_15.jpg,,,
+20251109_162233_planta_15.jpg,Poaceae,,familia
 20251109_162233_planta_16.jpg,Digitaria sanguinalis,DIGSA,especie
 20251109_162233_planta_17.jpg,Digitaria sanguinalis,DIGSA,especie
 20251109_162233_planta_18.jpg,,,
@@ -1554,7 +1554,7 @@ filename,label,eppo_code,rank
 20251110_151544_planta_2.jpg,Lixo,,
 20251110_151544_planta_3.jpg,Erodium moschatum,EROMO,especie
 20251110_151544_planta_4.jpg,,,
-20251110_151544_planta_5.jpg,,,
+20251110_151544_planta_5.jpg,Poaceae,,familia
 20251110_151544_planta_6.jpg,Lixo,,
 20251110_151546_planta_0.jpg,,,
 20251110_151549_planta_0.jpg,Lixo,,
@@ -1575,7 +1575,7 @@ filename,label,eppo_code,rank
 20251110_151617_planta_1.jpg,,,
 20251110_151617_planta_2.jpg,Erodium moschatum,EROMO,especie
 20251110_151617_planta_3.jpg,,,
-20251110_151617_planta_4.jpg,,,
+20251110_151617_planta_4.jpg,Poaceae,,familia
 20251110_151617_planta_5.jpg,Lixo,,
 20251110_151622_planta_0.jpg,,,
 20251110_151622_planta_1.jpg,Lixo,,
@@ -1845,7 +1845,7 @@ filename,label,eppo_code,rank
 20251110_152023_planta_0.jpg,Lixo,,
 20251110_152023_planta_1.jpg,,,
 20251110_152025_planta_0.jpg,,,
-20251110_152025_planta_1.jpg,,,
+20251110_152025_planta_1.jpg,Poaceae,,familia
 20251110_152025_planta_2.jpg,Malva sylvestris,MALSI,especie
 20251110_152028_planta_0.jpg,Lixo,,
 20251110_152032_planta_0.jpg,Urtica urens,URTUR,especie
@@ -1911,7 +1911,7 @@ filename,label,eppo_code,rank
 20251110_152155_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_152155_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_152155_planta_2.jpg,Erodium moschatum,EROMO,especie
-20251110_152200_planta_0.jpg,,,
+20251110_152200_planta_0.jpg,Poaceae,,familia
 20251110_152200_planta_3.jpg,Convolvulus arvensis,CONAR,especie
 20251110_152201_planta_0.jpg,Sonchus oleraceus,SONOL,especie
 20251110_152201_planta_1.jpg,Sonchus oleraceus,SONOL,especie
@@ -1955,7 +1955,7 @@ filename,label,eppo_code,rank
 20251110_152239_planta_0.jpg,,,
 20251110_152239_planta_1.jpg,Lixo,,
 20251110_152239_planta_2.jpg,Urtica membranacea,URTDU,especie
-20251110_152239_planta_4.jpg,,,
+20251110_152239_planta_4.jpg,Poaceae,,familia
 20251110_152247_planta_0.jpg,Lixo,,
 20251110_152247_planta_10.jpg,Lixo,,
 20251110_152247_planta_11.jpg,Lixo,,
@@ -2087,7 +2087,7 @@ filename,label,eppo_code,rank
 20251110_152500_planta_4.jpg,,,
 20251110_152508_planta_0.jpg,Lixo,,
 20251110_152508_planta_1.jpg,Erodium moschatum,EROMO,especie
-20251110_152508_planta_2.jpg,,,
+20251110_152508_planta_2.jpg,Poaceae,,familia
 20251110_152508_planta_3.jpg,,,
 20251110_152508_planta_5.jpg,Erodium moschatum,EROMO,especie
 20251110_152508_planta_6.jpg,,,
@@ -2674,7 +2674,7 @@ filename,label,eppo_code,rank
 20251110_153435_planta_3.jpg,Erodium moschatum,EROMO,especie
 20251110_153435_planta_4.jpg,Erodium moschatum,EROMO,especie
 20251110_153443_planta_0.jpg,,,
-20251110_153443_planta_1.jpg,,,
+20251110_153443_planta_1.jpg,Poaceae,,familia
 20251110_153453_planta_0.jpg,,,
 20251110_153453_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_153453_planta_2.jpg,Erodium moschatum,EROMO,especie
@@ -3046,7 +3046,7 @@ JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_2.jpg,,,
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_3.jpg,Sonchus oleraceus,SONOL,especie
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_5.jpg,Lamium purpureum,LAMPU,especie
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_6.jpg,Lamium purpureum,LAMPU,especie
-JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_7.jpg,,,
+JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_7.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_08_046097104392369712483_planta_8.jpg,,,
 JPEG_V2_E2_2022-04-17_15_08_178797667229532918571_planta_0.jpg,Lamium purpureum,LAMPU,especie
 JPEG_V2_E2_2022-04-17_15_08_498833155224928447055_planta_0.jpg,Conyza bonariensis,ERIBO,especie
