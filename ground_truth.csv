@@ -606,7 +606,7 @@ filename,label,eppo_code,rank
 20220417_160251_planta_1.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160251_planta_3.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160257_planta_1.jpg,,,
-20220417_160257_planta_2.jpg,,,
+20220417_160257_planta_2.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160257_planta_3.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160257_planta_4.jpg,Lixo,,
 20220417_160257_planta_5.jpg,Diplotaxis catholica,DIPCA,especie
@@ -1195,7 +1195,7 @@ filename,label,eppo_code,rank
 20220425_162512_planta_1.jpg,Lixo,,
 20220425_162532_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220425_162623_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
-20220425_162630_planta_0.jpg,,,
+20220425_162630_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220425_162706_planta_0.jpg,Lixo,,
 20220425_162733_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220425_162743_planta_0.jpg,Lixo,,
@@ -1497,7 +1497,7 @@ filename,label,eppo_code,rank
 20251110_151403_planta_0.jpg,Portulaca oleracea,POROL,especie
 20251110_151403_planta_1.jpg,Poaceae,,familia
 20251110_151403_planta_10.jpg,Lixo,,
-20251110_151403_planta_11.jpg,,,
+20251110_151403_planta_11.jpg,Diplotaxis catholica,DIPCA,especie
 20251110_151403_planta_12.jpg,Poaceae,,familia
 20251110_151403_planta_13.jpg,Digitaria sanguinalis,DIGSA,especie
 20251110_151403_planta_2.jpg,Lixo,,
@@ -2852,7 +2852,7 @@ IMG_20220501_162414_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 IMG_20220501_162451_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 IMG_20220501_162514_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 IMG_20220501_162526_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
-IMG_20220501_162553_planta_0.jpg,,,
+IMG_20220501_162553_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 IMG_20220501_162604_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 IMG_20220501_162631_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 IMG_20220501_162739_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
@@ -2973,7 +2973,7 @@ IMG_20220501_170556_planta_1.jpg,Lixo,,
 IMG_20220501_170614_planta_0.jpg,A confirmar,,
 IMG_20220501_170625_planta_0.jpg,A confirmar,,
 IMG_20220501_170629_planta_1.jpg,A confirmar,,
-IMG_20220501_170629_planta_2.jpg,,,
+IMG_20220501_170629_planta_2.jpg,Lixo,,
 IMG_20220501_170630_planta_0.jpg,A confirmar,,
 IMG_20220501_170655_planta_0.jpg,A confirmar,,
 IMG_20220501_170657_planta_0.jpg,A confirmar,,
