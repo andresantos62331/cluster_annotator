@@ -315,7 +315,7 @@ filename,label,eppo_code,rank
 20220417_154420_planta_3.jpg,Urtica urens,URTUR,especie
 20220417_154420_planta_4.jpg,Urtica urens,URTUR,especie
 20220417_154420_planta_5.jpg,Convolvulus arvensis,CONAR,especie
-20220417_154420_planta_6.jpg,,,
+20220417_154420_planta_6.jpg,Lixo,,
 20220417_154420_planta_8.jpg,Lixo,,
 20220417_154427_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154446_planta_0.jpg,Polygonum aviculare,POLAV,especie
@@ -609,8 +609,8 @@ filename,label,eppo_code,rank
 20220417_160257_planta_2.jpg,,,
 20220417_160257_planta_3.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160257_planta_4.jpg,Lixo,,
-20220417_160257_planta_5.jpg,,,
-20220417_160338_planta_0.jpg,,,
+20220417_160257_planta_5.jpg,Diplotaxis catholica,DIPCA,especie
+20220417_160338_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160338_planta_1.jpg,,,
 20220417_160343_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160343_planta_1.jpg,,,
@@ -619,7 +619,7 @@ filename,label,eppo_code,rank
 20220417_160348_planta_6.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160348_planta_7.jpg,Lixo,,
 20220417_160351_planta_0.jpg,Lamium purpureum,LAMPU,especie
-20220417_160359_planta_0.jpg,,,
+20220417_160359_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160359_planta_1.jpg,,,
 20220417_160401_planta_1.jpg,Lixo,,
 20220417_160403_planta_0.jpg,Conyza bonariensis,ERIBO,especie
@@ -636,7 +636,7 @@ filename,label,eppo_code,rank
 20220417_160439_planta_3.jpg,,,
 20220417_160439_planta_4.jpg,Lamium purpureum,LAMPU,especie
 20220417_160441_planta_1.jpg,,,
-20220417_160441_planta_2.jpg,,,
+20220417_160441_planta_2.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160441_planta_3.jpg,,,
 20220417_160443_planta_0.jpg,,,
 20220417_160443_planta_1.jpg,,,
@@ -712,7 +712,7 @@ filename,label,eppo_code,rank
 20220417_161048_planta_1.jpg,Solanum nigrum,SOLNI,especie
 20220417_161054_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_161101_planta_0.jpg,,,
-20220417_161105_planta_0.jpg,,,
+20220417_161105_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_161115_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_161115_planta_1.jpg,Urtica urens,URTUR,especie
 20220417_161125_planta_0.jpg,Stellaria media,STEME,especie
@@ -726,7 +726,7 @@ filename,label,eppo_code,rank
 20220417_161204_planta_0.jpg,,,
 20220417_161204_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_161220_planta_0.jpg,,,
-20220417_161254_planta_0.jpg,,,
+20220417_161254_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_161256_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_161302_planta_0.jpg,Lixo,,
 20220417_161307_planta_0.jpg,,,
@@ -847,7 +847,7 @@ filename,label,eppo_code,rank
 20220417_162347_planta_6.jpg,,,
 20220417_162347_planta_9.jpg,Lixo,,
 20220417_162355_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
-20220417_162355_planta_1.jpg,,,
+20220417_162355_planta_1.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_162359_planta_0.jpg,Ranunculus arvensis,RANAR,especie
 20220417_162405_planta_0.jpg,Chamaemelum mixtum,ANTMI,especie
 20220417_162412_planta_1.jpg,Solanum nigrum,SOLNI,especie
@@ -1119,7 +1119,7 @@ filename,label,eppo_code,rank
 20220425_155647_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_155703_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_155854_planta_0.jpg,Lixo,,
-20220425_155948_planta_0.jpg,,,
+20220425_155948_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220425_155948_planta_1.jpg,Poaceae,,familia
 20220425_155959_planta_0.jpg,A confirmar,,
 20220425_160027_planta_1.jpg,Poaceae,,familia
@@ -1131,7 +1131,7 @@ filename,label,eppo_code,rank
 20220425_160207_planta_0.jpg,Urtica urens,URTUR,especie
 20220425_160207_planta_1.jpg,Poaceae,,familia
 20220425_160322_planta_0.jpg,Urtica urens,URTUR,especie
-20220425_160423_planta_0.jpg,,,
+20220425_160423_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220425_160431_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220425_160446_planta_0.jpg,,,
 20220425_160506_planta_3.jpg,Poaceae,,familia
