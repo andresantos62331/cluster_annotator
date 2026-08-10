@@ -408,7 +408,7 @@ filename,label,eppo_code,rank
 20220417_154923_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_154923_planta_1.jpg,Polygonum aviculare,POLAV,especie
 20220417_154923_planta_2.jpg,Polygonum aviculare,POLAV,especie
-20220417_154923_planta_3.jpg,,,
+20220417_154923_planta_3.jpg,Lamium purpureum,LAMPU,especie
 20220417_154934_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154934_planta_2.jpg,,,
 20220417_154934_planta_3.jpg,,,
@@ -440,7 +440,7 @@ filename,label,eppo_code,rank
 20220417_155059_planta_2.jpg,Polygonum aviculare,POLAV,especie
 20220417_155103_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155103_planta_1.jpg,,,
-20220417_155112_planta_0.jpg,,,
+20220417_155112_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_155129_planta_0.jpg,,,
 20220417_155133_planta_0.jpg,Cyperus esculentus,CYPES,especie
 20220417_155133_planta_2.jpg,,,
@@ -487,7 +487,7 @@ filename,label,eppo_code,rank
 20220417_155556_planta_0.jpg,Lixo,,
 20220417_155556_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_155602_planta_0.jpg,Lixo,,
-20220417_155602_planta_1.jpg,,,
+20220417_155602_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_155604_planta_0.jpg,Lixo,,
 20220417_155604_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_155604_planta_3.jpg,Lamium purpureum,LAMPU,especie
@@ -510,9 +510,9 @@ filename,label,eppo_code,rank
 20220417_155637_planta_1.jpg,Polygonum aviculare,POLAV,especie
 20220417_155637_planta_2.jpg,,,
 20220417_155637_planta_3.jpg,Polygonum aviculare,POLAV,especie
-20220417_155652_planta_1.jpg,,,
+20220417_155652_planta_1.jpg,Lixo,,
 20220417_155657_planta_1.jpg,Conyza bonariensis,ERIBO,especie
-20220417_155659_planta_0.jpg,,,
+20220417_155659_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_155659_planta_1.jpg,Lixo,,
 20220417_155706_planta_0.jpg,Lixo,,
 20220417_155706_planta_1.jpg,,,
@@ -542,7 +542,7 @@ filename,label,eppo_code,rank
 20220417_155834_planta_3.jpg,Stellaria media,STEME,especie
 20220417_155840_planta_0.jpg,Stellaria media,STEME,especie
 20220417_155840_planta_1.jpg,Conyza bonariensis,ERIBO,especie
-20220417_155847_planta_0.jpg,,,
+20220417_155847_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_155901_planta_1.jpg,A confirmar,,
 20220417_155901_planta_2.jpg,Lixo,,
 20220417_155927_planta_0.jpg,Polygonum aviculare,POLAV,especie
@@ -693,7 +693,7 @@ filename,label,eppo_code,rank
 20220417_160918_planta_0.jpg,,,
 20220417_160922_planta_0.jpg,Stellaria media,STEME,especie
 20220417_160922_planta_2.jpg,Stellaria media,STEME,especie
-20220417_160932_planta_0.jpg,,,
+20220417_160932_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160949_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160954_planta_1.jpg,Stellaria media,STEME,especie
 20220417_161000_planta_0.jpg,,,
@@ -3033,7 +3033,7 @@ JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_3.jpg,A confirmar,,
 JPEG_V2_E2_2022-04-17_15_01_153151686551423867765_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_15_01_449115713110950570601_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_15_03_11407436386605646383_planta_0.jpg,Sonchus oleraceus,SONOL,especie
-JPEG_V2_E2_2022-04-17_15_03_361668909907542053532_planta_0.jpg,,,
+JPEG_V2_E2_2022-04-17_15_03_361668909907542053532_planta_0.jpg,Lamium purpureum,LAMPU,especie
 JPEG_V2_E2_2022-04-17_15_05_142956869952048958502_planta_0.jpg,Lamium purpureum,LAMPU,especie
 JPEG_V2_E2_2022-04-17_15_05_367381504713831249107_planta_0.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_06_52873986592533283372_planta_0.jpg,Lamium purpureum,LAMPU,especie
