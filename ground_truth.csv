@@ -237,7 +237,7 @@ filename,label,eppo_code,rank
 20220417_153024_planta_1.jpg,,,
 20220417_153035_planta_0.jpg,,,
 20220417_153105_planta_0.jpg,Urtica urens,URTUR,especie
-20220417_153105_planta_1.jpg,,,
+20220417_153105_planta_1.jpg,Poaceae,,familia
 20220417_153105_planta_5.jpg,,,
 20220417_153105_planta_6.jpg,Raphanus raphanistrum,RAPRA,especie
 20220417_153123_planta_0.jpg,Chamaemelum mixtum,ANTMI,especie
@@ -271,8 +271,8 @@ filename,label,eppo_code,rank
 20220417_153805_planta_1.jpg,Lixo,,
 20220417_153805_planta_10.jpg,,,
 20220417_153805_planta_4.jpg,Urtica urens,URTUR,especie
-20220417_153805_planta_5.jpg,,,
-20220417_153805_planta_6.jpg,,,
+20220417_153805_planta_5.jpg,Poaceae,,familia
+20220417_153805_planta_6.jpg,Poaceae,,familia
 20220417_153805_planta_7.jpg,,,
 20220417_153805_planta_8.jpg,,,
 20220417_153805_planta_9.jpg,,,
@@ -879,7 +879,7 @@ filename,label,eppo_code,rank
 20220417_162643_planta_3.jpg,Papaver rhoeas,PAPRH,especie
 20220417_162643_planta_4.jpg,,,
 20220417_162713_planta_2.jpg,,,
-20220417_162719_planta_1.jpg,,,
+20220417_162719_planta_1.jpg,Poaceae,,familia
 20220417_162719_planta_5.jpg,Amaranthus retroflexus,AMARE,especie
 20220417_162730_planta_0.jpg,,,
 20220417_162730_planta_1.jpg,Urtica urens,URTUR,especie
@@ -924,9 +924,9 @@ filename,label,eppo_code,rank
 20220417_162934_planta_1.jpg,,,
 20220417_162934_planta_3.jpg,Urtica urens,URTUR,especie
 20220417_162934_planta_4.jpg,Urtica urens,URTUR,especie
-20220417_162934_planta_5.jpg,,,
+20220417_162934_planta_5.jpg,Poaceae,,familia
 20220417_162934_planta_6.jpg,Veronica arvensis,VERAR,especie
-20220417_162943_planta_0.jpg,,,
+20220417_162943_planta_0.jpg,Poaceae,,familia
 20220417_162946_planta_1.jpg,Veronica arvensis,VERAR,especie
 20220417_163000_planta_1.jpg,,,
 20220417_163000_planta_2.jpg,Stellaria media,STEME,especie
@@ -938,7 +938,7 @@ filename,label,eppo_code,rank
 20220417_163001_planta_3.jpg,,,
 20220417_163005_planta_0.jpg,Veronica arvensis,VERAR,especie
 20220417_163005_planta_1.jpg,Chenopodium opulifolium,CHEOP,especie
-20220417_163013_planta_0.jpg,,,
+20220417_163013_planta_0.jpg,Poaceae,,familia
 20220417_163050_planta_0.jpg,Lixo,,
 20220417_163050_planta_3.jpg,,,
 20220417_163057_planta_2.jpg,Lixo,,
@@ -1083,18 +1083,18 @@ filename,label,eppo_code,rank
 20220425_155027_planta_4.jpg,,,
 20220425_155043_planta_10.jpg,Urtica urens,URTUR,especie
 20220425_155043_planta_2.jpg,,,
-20220425_155043_planta_3.jpg,,,
+20220425_155043_planta_3.jpg,Poaceae,,familia
 20220425_155043_planta_6.jpg,Veronica arvensis,VERAR,especie
 20220425_155043_planta_7.jpg,,,
-20220425_155043_planta_8.jpg,,,
+20220425_155043_planta_8.jpg,Poaceae,,familia
 20220425_155046_planta_11.jpg,Urtica urens,URTUR,especie
 20220425_155046_planta_4.jpg,,,
-20220425_155046_planta_6.jpg,,,
+20220425_155046_planta_6.jpg,Poaceae,,familia
 20220425_155046_planta_8.jpg,Veronica arvensis,VERAR,especie
-20220425_155046_planta_9.jpg,,,
+20220425_155046_planta_9.jpg,Poaceae,,familia
 20220425_155116_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_155116_planta_1.jpg,,,
-20220425_155116_planta_2.jpg,,,
+20220425_155116_planta_2.jpg,Poaceae,,familia
 20220425_155151_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_155151_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_155151_planta_2.jpg,Amaranthus retroflexus,AMARE,especie
@@ -1120,9 +1120,9 @@ filename,label,eppo_code,rank
 20220425_155703_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_155854_planta_0.jpg,Lixo,,
 20220425_155948_planta_0.jpg,,,
-20220425_155948_planta_1.jpg,,,
+20220425_155948_planta_1.jpg,Poaceae,,familia
 20220425_155959_planta_0.jpg,,,
-20220425_160027_planta_1.jpg,,,
+20220425_160027_planta_1.jpg,Poaceae,,familia
 20220425_160121_planta_0.jpg,Lixo,,
 20220425_160121_planta_1.jpg,,,
 20220425_160121_planta_2.jpg,Lixo,,
@@ -1134,8 +1134,8 @@ filename,label,eppo_code,rank
 20220425_160423_planta_0.jpg,,,
 20220425_160431_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220425_160446_planta_0.jpg,,,
-20220425_160506_planta_3.jpg,,,
-20220425_160514_planta_1.jpg,,,
+20220425_160506_planta_3.jpg,Poaceae,,familia
+20220425_160514_planta_1.jpg,Poaceae,,familia
 20220425_160528_planta_0.jpg,Urtica urens,URTUR,especie
 20220425_160528_planta_2.jpg,,,
 20220425_160549_planta_0.jpg,,,
@@ -1143,13 +1143,13 @@ filename,label,eppo_code,rank
 20220425_160741_planta_0.jpg,,,
 20220425_160757_planta_0.jpg,Lixo,,
 20220425_160812_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
-20220425_161041_planta_0.jpg,,,
+20220425_161041_planta_0.jpg,Poaceae,,familia
 20220425_161041_planta_2.jpg,Diplotaxis catholica,DIPCA,especie
 20220425_161041_planta_4.jpg,Amaranthus retroflexus,AMARE,especie
-20220425_161050_planta_1.jpg,,,
+20220425_161050_planta_1.jpg,Poaceae,,familia
 20220425_161050_planta_3.jpg,Diplotaxis catholica,DIPCA,especie
 20220425_161050_planta_5.jpg,Amaranthus retroflexus,AMARE,especie
-20220425_161155_planta_0.jpg,,,
+20220425_161155_planta_0.jpg,Poaceae,,familia
 20220425_161155_planta_1.jpg,Veronica arvensis,VERAR,especie
 20220425_161220_planta_0.jpg,Veronica arvensis,VERAR,especie
 20220425_161250_planta_0.jpg,,,
@@ -1182,7 +1182,7 @@ filename,label,eppo_code,rank
 20220425_162041_planta_0.jpg,A confirmar,,
 20220425_162104_planta_0.jpg,Veronica arvensis,VERAR,especie
 20220425_162130_planta_0.jpg,Veronica arvensis,VERAR,especie
-20220425_162130_planta_2.jpg,,,
+20220425_162130_planta_2.jpg,Poaceae,,familia
 20220425_162137_planta_0.jpg,Veronica arvensis,VERAR,especie
 20220425_162144_planta_1.jpg,Veronica arvensis,VERAR,especie
 20220425_162220_planta_0.jpg,,,
@@ -1226,7 +1226,7 @@ filename,label,eppo_code,rank
 20220425_162912_planta_4.jpg,Portulaca oleracea,POROL,especie
 20220425_162912_planta_6.jpg,Portulaca oleracea,POROL,especie
 20220425_162942_planta_1.jpg,Urtica urens,URTUR,especie
-20220425_162942_planta_3.jpg,,,
+20220425_162942_planta_3.jpg,Poaceae,,familia
 20220425_162942_planta_4.jpg,Portulaca oleracea,POROL,especie
 20220425_162942_planta_5.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_162942_planta_6.jpg,Lixo,,
@@ -1240,12 +1240,12 @@ filename,label,eppo_code,rank
 20220425_163143_planta_2.jpg,Portulaca oleracea,POROL,especie
 20220425_163143_planta_3.jpg,Portulaca oleracea,POROL,especie
 20220425_163143_planta_6.jpg,Lixo,,
-20220425_163253_planta_0.jpg,,,
+20220425_163253_planta_0.jpg,Poaceae,,familia
 20220425_163253_planta_2.jpg,,,
 20220425_163306_planta_0.jpg,Lixo,,
-20220425_163306_planta_1.jpg,,,
+20220425_163306_planta_1.jpg,Poaceae,,familia
 20220425_163306_planta_2.jpg,Lixo,,
-20220425_163306_planta_3.jpg,,,
+20220425_163306_planta_3.jpg,Poaceae,,familia
 20220425_163306_planta_4.jpg,Sonchus oleraceus,SONOL,especie
 20220425_163330_planta_2.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_163330_planta_3.jpg,Lixo,,
@@ -1284,7 +1284,7 @@ filename,label,eppo_code,rank
 20220425_164314_planta_1.jpg,,,
 20220425_164314_planta_2.jpg,Datura stramonium,DATST,especie
 20220425_164314_planta_3.jpg,,,
-20220425_164314_planta_4.jpg,,,
+20220425_164314_planta_4.jpg,Poaceae,,familia
 20220425_164314_planta_5.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_164314_planta_6.jpg,Chenopodium album,CHEAL,especie
 20220425_164325_planta_0.jpg,,,
@@ -1431,7 +1431,7 @@ filename,label,eppo_code,rank
 20251109_162310_planta_3.jpg,Lixo,,
 20251109_162310_planta_4.jpg,Sonchus oleraceus,SONOL,especie
 20251109_162310_planta_5.jpg,Lixo,,
-20251109_162443_planta_0.jpg,,,
+20251109_162443_planta_0.jpg,Stellaria media,STEME,especie
 20251109_162443_planta_1.jpg,,,
 20251109_162443_planta_2.jpg,,,
 20251109_162443_planta_3.jpg,,,
@@ -1578,7 +1578,7 @@ filename,label,eppo_code,rank
 20251110_151617_planta_4.jpg,,,
 20251110_151617_planta_5.jpg,Lixo,,
 20251110_151622_planta_0.jpg,,,
-20251110_151622_planta_1.jpg,,,
+20251110_151622_planta_1.jpg,Lixo,,
 20251110_151622_planta_3.jpg,,,
 20251110_151622_planta_4.jpg,Lixo,,
 20251110_151625_planta_0.jpg,,,
@@ -3012,7 +3012,7 @@ JPEG_V2_E2_2022-04-17_14_53_442066300861893419035_planta_1.jpg,Lamium purpureum,
 JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_0.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_0.jpg,,,
-JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_1.jpg,,,
+JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_1.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_1.jpg,,,
 JPEG_V2_E2_2022-04-17_14_58_217419482026510393858_planta_0.jpg,Convolvulus arvensis,CONAR,especie
@@ -3025,7 +3025,7 @@ JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_1.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_0.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_1.jpg,,,
-JPEG_V2_E2_2022-04-17_15_00_184172506183479493585_planta_0.jpg,,,
+JPEG_V2_E2_2022-04-17_15_00_184172506183479493585_planta_0.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_1.jpg,,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_2.jpg,Lixo,,
