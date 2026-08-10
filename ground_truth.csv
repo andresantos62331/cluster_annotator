@@ -49,7 +49,7 @@ filename,label,eppo_code,rank
 20220417_141751_planta_2.jpg,Lixo,,
 20220417_141751_planta_3.jpg,Lixo,,
 20220417_141751_planta_4.jpg,Lixo,,
-20220417_141837_planta_0.jpg,,,
+20220417_141837_planta_0.jpg,Lixo,,
 20220417_141837_planta_1.jpg,,,
 20220417_141837_planta_3.jpg,Spergula arvensis,SPRAR,especie
 20220417_141837_planta_4.jpg,Lixo,,
@@ -266,7 +266,7 @@ filename,label,eppo_code,rank
 20220417_153622_planta_0.jpg,Convolvulus arvensis,CONAR,especie
 20220417_153635_planta_1.jpg,Solanum nigrum,SOLNI,especie
 20220417_153706_planta_0.jpg,Lamium purpureum,LAMPU,especie
-20220417_153740_planta_1.jpg,,,
+20220417_153740_planta_1.jpg,Euphorbia helioscopia,EPHHE,especie
 20220417_153805_planta_0.jpg,Urtica urens,URTUR,especie
 20220417_153805_planta_1.jpg,Lixo,,
 20220417_153805_planta_10.jpg,,,
@@ -548,7 +548,7 @@ filename,label,eppo_code,rank
 20220417_155927_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_155933_planta_0.jpg,,,
 20220417_155936_planta_0.jpg,Lamium purpureum,LAMPU,especie
-20220417_155943_planta_0.jpg,,,
+20220417_155943_planta_0.jpg,Euphorbia helioscopia,EPHHE,especie
 20220417_155943_planta_1.jpg,Lixo,,
 20220417_155943_planta_2.jpg,Stellaria media,STEME,especie
 20220417_155950_planta_0.jpg,,,
@@ -673,7 +673,7 @@ filename,label,eppo_code,rank
 20220417_160738_planta_3.jpg,Stellaria media,STEME,especie
 20220417_160744_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160746_planta_0.jpg,Stellaria media,STEME,especie
-20220417_160749_planta_0.jpg,,,
+20220417_160749_planta_0.jpg,Euphorbia helioscopia,EPHHE,especie
 20220417_160757_planta_0.jpg,Lixo,,
 20220417_160802_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_160807_planta_0.jpg,Lixo,,
@@ -3030,7 +3030,7 @@ JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_0.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_1.jpg,,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_2.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_3.jpg,A confirmar,,
-JPEG_V2_E2_2022-04-17_15_01_153151686551423867765_planta_0.jpg,,,
+JPEG_V2_E2_2022-04-17_15_01_153151686551423867765_planta_0.jpg,Euphorbia helioscopia,EPHHE,especie
 JPEG_V2_E2_2022-04-17_15_01_449115713110950570601_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_15_03_11407436386605646383_planta_0.jpg,Sonchus oleraceus,SONOL,especie
 JPEG_V2_E2_2022-04-17_15_03_361668909907542053532_planta_0.jpg,Lamium purpureum,LAMPU,especie
