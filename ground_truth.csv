@@ -54,8 +54,8 @@ filename,label,eppo_code,rank
 20220417_141837_planta_3.jpg,Spergula arvensis,SPRAR,especie
 20220417_141837_planta_4.jpg,Lixo,,
 20220417_141837_planta_5.jpg,Oxalis pes-caprae,OXAPC,especie
-20220417_141837_planta_6.jpg,,,
-20220417_141903_planta_1.jpg,,,
+20220417_141837_planta_6.jpg,A confirmar,,
+20220417_141903_planta_1.jpg,Poaceae,,familia
 20220417_141903_planta_4.jpg,,,
 20220417_141903_planta_7.jpg,Lixo,,
 20220417_141912_planta_0.jpg,,,
@@ -273,7 +273,7 @@ filename,label,eppo_code,rank
 20220417_153805_planta_4.jpg,Urtica urens,URTUR,especie
 20220417_153805_planta_5.jpg,Poaceae,,familia
 20220417_153805_planta_6.jpg,Poaceae,,familia
-20220417_153805_planta_7.jpg,,,
+20220417_153805_planta_7.jpg,Poaceae,,familia
 20220417_153805_planta_8.jpg,Poaceae,,familia
 20220417_153805_planta_9.jpg,,,
 20220417_153825_planta_0.jpg,,,
@@ -869,7 +869,7 @@ filename,label,eppo_code,rank
 20220417_162559_planta_4.jpg,Solanum nigrum,SOLNI,especie
 20220417_162606_planta_0.jpg,,,
 20220417_162606_planta_2.jpg,Polygonum aviculare,POLAV,especie
-20220417_162606_planta_3.jpg,,,
+20220417_162606_planta_3.jpg,Poaceae,,familia
 20220417_162606_planta_4.jpg,Polygonum aviculare,POLAV,especie
 20220417_162628_planta_2.jpg,,,
 20220417_162628_planta_3.jpg,Xanthium spinosum,XANSP,especie
@@ -1219,7 +1219,7 @@ filename,label,eppo_code,rank
 20220425_162905_planta_5.jpg,Portulaca oleracea,POROL,especie
 20220425_162905_planta_6.jpg,Portulaca oleracea,POROL,especie
 20220425_162905_planta_8.jpg,Portulaca oleracea,POROL,especie
-20220425_162905_planta_9.jpg,,,
+20220425_162905_planta_9.jpg,Poaceae,,familia
 20220425_162912_planta_0.jpg,Portulaca oleracea,POROL,especie
 20220425_162912_planta_1.jpg,Lixo,,
 20220425_162912_planta_2.jpg,Portulaca oleracea,POROL,especie
@@ -1399,7 +1399,7 @@ filename,label,eppo_code,rank
 20251109_162246_planta_13.jpg,Lixo,,
 20251109_162246_planta_14.jpg,,,
 20251109_162246_planta_15.jpg,,,
-20251109_162246_planta_16.jpg,,,
+20251109_162246_planta_16.jpg,Poaceae,,familia
 20251109_162246_planta_17.jpg,Lixo,,
 20251109_162246_planta_18.jpg,Lixo,,
 20251109_162246_planta_19.jpg,Lixo,,
@@ -1811,7 +1811,7 @@ filename,label,eppo_code,rank
 20251110_151933_planta_2.jpg,Malva sylvestris,MALSI,especie
 20251110_151934_planta_0.jpg,,,
 20251110_151941_planta_0.jpg,Poaceae,,familia
-20251110_151941_planta_1.jpg,,,
+20251110_151941_planta_1.jpg,Poaceae,,familia
 20251110_151941_planta_2.jpg,Sonchus asper,SONAS,especie
 20251110_151941_planta_3.jpg,Lixo,,
 20251110_151943_planta_0.jpg,Lixo,,
@@ -1990,7 +1990,7 @@ filename,label,eppo_code,rank
 20251110_152316_planta_5.jpg,,,
 20251110_152316_planta_6.jpg,,,
 20251110_152316_planta_7.jpg,,,
-20251110_152316_planta_8.jpg,,,
+20251110_152316_planta_8.jpg,Poaceae,,familia
 20251110_152316_planta_9.jpg,,,
 20251110_152318_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_152318_planta_2.jpg,Lixo,,
@@ -2361,7 +2361,7 @@ filename,label,eppo_code,rank
 20251110_153153_planta_8.jpg,Lixo,,
 20251110_153153_planta_9.jpg,Lixo,,
 20251110_153204_planta_1.jpg,,,
-20251110_153204_planta_10.jpg,,,
+20251110_153204_planta_10.jpg,Poaceae,,familia
 20251110_153204_planta_11.jpg,,,
 20251110_153204_planta_12.jpg,,,
 20251110_153204_planta_13.jpg,Lixo,,
@@ -3172,7 +3172,7 @@ JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_5.jpg,Sonchus oleraceus
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_6.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_7.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_8.jpg,Chenopodium album,CHEAL,especie
-JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_9.jpg,,,
+JPEG_V2_E2_2022-04-17_15_17_254799503967430688207_planta_9.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_17_498652234443729005809_planta_1.jpg,,,
 JPEG_V2_E2_2022-04-17_15_18_092397818907613741481_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_15_18_451416949858663056674_planta_0.jpg,Sonchus oleraceus,SONOL,especie
