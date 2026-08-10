@@ -26,7 +26,7 @@ filename,label,eppo_code,rank
 20220417_141610_planta_14.jpg,,,
 20220417_141610_planta_15.jpg,Lixo,,
 20220417_141610_planta_16.jpg,Lixo,,
-20220417_141610_planta_2.jpg,,,
+20220417_141610_planta_2.jpg,Poaceae,,familia
 20220417_141610_planta_3.jpg,Lixo,,
 20220417_141610_planta_4.jpg,Lixo,,
 20220417_141610_planta_6.jpg,Lixo,,
@@ -86,7 +86,7 @@ filename,label,eppo_code,rank
 20220417_152315_planta_10.jpg,Stellaria media,STEME,especie
 20220417_152315_planta_11.jpg,Chenopodium album,CHEAL,especie
 20220417_152315_planta_4.jpg,Chenopodium album,CHEAL,especie
-20220417_152315_planta_5.jpg,,,
+20220417_152315_planta_5.jpg,Poaceae,,familia
 20220417_152315_planta_9.jpg,Chenopodium album,CHEAL,especie
 20220417_152330_planta_3.jpg,Amaranthus retroflexus,AMARE,especie
 20220417_152334_planta_0.jpg,Chenopodium album,CHEAL,especie
@@ -274,7 +274,7 @@ filename,label,eppo_code,rank
 20220417_153805_planta_5.jpg,Poaceae,,familia
 20220417_153805_planta_6.jpg,Poaceae,,familia
 20220417_153805_planta_7.jpg,,,
-20220417_153805_planta_8.jpg,,,
+20220417_153805_planta_8.jpg,Poaceae,,familia
 20220417_153805_planta_9.jpg,,,
 20220417_153825_planta_0.jpg,,,
 20220417_153825_planta_1.jpg,Lixo,,
@@ -290,7 +290,7 @@ filename,label,eppo_code,rank
 20220417_154002_planta_0.jpg,Poaceae,,familia
 20220417_154018_planta_0.jpg,,,
 20220417_154018_planta_1.jpg,,,
-20220417_154018_planta_2.jpg,,,
+20220417_154018_planta_2.jpg,Poaceae,,familia
 20220417_154018_planta_4.jpg,Chamaemelum mixtum,ANTMI,especie
 20220417_154018_planta_5.jpg,,,
 20220417_154415_planta_0.jpg,Urtica urens,URTUR,especie
@@ -597,7 +597,7 @@ filename,label,eppo_code,rank
 20220417_160208_planta_1.jpg,Stellaria media,STEME,especie
 20220417_160208_planta_2.jpg,Chenopodium album,CHEAL,especie
 20220417_160214_planta_0.jpg,Sonchus oleraceus,SONOL,especie
-20220417_160223_planta_1.jpg,,,
+20220417_160223_planta_1.jpg,Poaceae,,familia
 20220417_160228_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160235_planta_0.jpg,Stellaria media,STEME,especie
 20220417_160243_planta_0.jpg,,,
@@ -918,7 +918,7 @@ filename,label,eppo_code,rank
 20220417_162913_planta_1.jpg,,,
 20220417_162925_planta_0.jpg,Veronica arvensis,VERAR,especie
 20220417_162925_planta_4.jpg,Veronica arvensis,VERAR,especie
-20220417_162925_planta_5.jpg,,,
+20220417_162925_planta_5.jpg,Poaceae,,familia
 20220417_162925_planta_6.jpg,,,
 20220417_162925_planta_7.jpg,,,
 20220417_162934_planta_1.jpg,,,
@@ -1085,10 +1085,10 @@ filename,label,eppo_code,rank
 20220425_155043_planta_2.jpg,,,
 20220425_155043_planta_3.jpg,Poaceae,,familia
 20220425_155043_planta_6.jpg,Veronica arvensis,VERAR,especie
-20220425_155043_planta_7.jpg,,,
+20220425_155043_planta_7.jpg,Poaceae,,familia
 20220425_155043_planta_8.jpg,Poaceae,,familia
 20220425_155046_planta_11.jpg,Urtica urens,URTUR,especie
-20220425_155046_planta_4.jpg,,,
+20220425_155046_planta_4.jpg,Poaceae,,familia
 20220425_155046_planta_6.jpg,Poaceae,,familia
 20220425_155046_planta_8.jpg,Veronica arvensis,VERAR,especie
 20220425_155046_planta_9.jpg,Poaceae,,familia
@@ -1369,7 +1369,7 @@ filename,label,eppo_code,rank
 20251109_162207_planta_0.jpg,Lixo,,
 20251109_162207_planta_1.jpg,,,
 20251109_162207_planta_2.jpg,,,
-20251109_162233_planta_0.jpg,,,
+20251109_162233_planta_0.jpg,Poaceae,,familia
 20251109_162233_planta_1.jpg,Digitaria sanguinalis,DIGSA,especie
 20251109_162233_planta_10.jpg,Digitaria sanguinalis,DIGSA,especie
 20251109_162233_planta_12.jpg,Lixo,,
@@ -1498,7 +1498,7 @@ filename,label,eppo_code,rank
 20251110_151403_planta_1.jpg,,,
 20251110_151403_planta_10.jpg,Lixo,,
 20251110_151403_planta_11.jpg,,,
-20251110_151403_planta_12.jpg,,,
+20251110_151403_planta_12.jpg,Poaceae,,familia
 20251110_151403_planta_13.jpg,Digitaria sanguinalis,DIGSA,especie
 20251110_151403_planta_2.jpg,Lixo,,
 20251110_151403_planta_4.jpg,,,
@@ -1553,7 +1553,7 @@ filename,label,eppo_code,rank
 20251110_151544_planta_1.jpg,,,
 20251110_151544_planta_2.jpg,Lixo,,
 20251110_151544_planta_3.jpg,Erodium moschatum,EROMO,especie
-20251110_151544_planta_4.jpg,,,
+20251110_151544_planta_4.jpg,Poaceae,,familia
 20251110_151544_planta_5.jpg,Poaceae,,familia
 20251110_151544_planta_6.jpg,Lixo,,
 20251110_151546_planta_0.jpg,,,
@@ -1767,10 +1767,10 @@ filename,label,eppo_code,rank
 20251110_151806_planta_2.jpg,,,
 20251110_151809_planta_1.jpg,,,
 20251110_151809_planta_2.jpg,Veronica arvensis,VERAR,especie
-20251110_151809_planta_3.jpg,,,
+20251110_151809_planta_3.jpg,Poaceae,,familia
 20251110_151809_planta_4.jpg,Lixo,,
 20251110_151809_planta_6.jpg,Urtica membranacea,URTDU,especie
-20251110_151809_planta_7.jpg,,,
+20251110_151809_planta_7.jpg,Poaceae,,familia
 20251110_151815_planta_0.jpg,Urtica urens,URTUR,especie
 20251110_151815_planta_1.jpg,Urtica urens,URTUR,especie
 20251110_151815_planta_2.jpg,Urtica urens,URTUR,especie
@@ -1801,7 +1801,7 @@ filename,label,eppo_code,rank
 20251110_151900_planta_0.jpg,,,
 20251110_151905_planta_0.jpg,Urtica urens,URTUR,especie
 20251110_151905_planta_1.jpg,Urtica urens,URTUR,especie
-20251110_151905_planta_2.jpg,,,
+20251110_151905_planta_2.jpg,Poaceae,,familia
 20251110_151905_planta_3.jpg,Malva sylvestris,MALSI,especie
 20251110_151913_planta_0.jpg,Urtica membranacea,URTDU,especie
 20251110_151924_planta_0.jpg,Lixo,,
@@ -1852,8 +1852,8 @@ filename,label,eppo_code,rank
 20251110_152032_planta_1.jpg,,,
 20251110_152032_planta_2.jpg,Lixo,,
 20251110_152032_planta_3.jpg,Malva sylvestris,MALSI,especie
-20251110_152043_planta_0.jpg,,,
-20251110_152043_planta_1.jpg,,,
+20251110_152043_planta_0.jpg,Poaceae,,familia
+20251110_152043_planta_1.jpg,Poaceae,,familia
 20251110_152043_planta_2.jpg,Convolvulus arvensis,CONAR,especie
 20251110_152043_planta_3.jpg,Lixo,,
 20251110_152043_planta_5.jpg,Urtica membranacea,URTDU,especie
@@ -1959,7 +1959,7 @@ filename,label,eppo_code,rank
 20251110_152247_planta_0.jpg,Lixo,,
 20251110_152247_planta_10.jpg,Lixo,,
 20251110_152247_planta_11.jpg,Lixo,,
-20251110_152247_planta_12.jpg,,,
+20251110_152247_planta_12.jpg,Poaceae,,familia
 20251110_152247_planta_2.jpg,Poaceae,,familia
 20251110_152247_planta_3.jpg,,,
 20251110_152247_planta_4.jpg,Poaceae,,familia
@@ -1970,7 +1970,7 @@ filename,label,eppo_code,rank
 20251110_152247_planta_9.jpg,Lixo,,
 20251110_152254_planta_0.jpg,Lixo,,
 20251110_152254_planta_1.jpg,Lixo,,
-20251110_152254_planta_2.jpg,,,
+20251110_152254_planta_2.jpg,Poaceae,,familia
 20251110_152254_planta_3.jpg,Lixo,,
 20251110_152254_planta_4.jpg,,,
 20251110_152254_planta_5.jpg,,,
@@ -2009,7 +2009,7 @@ filename,label,eppo_code,rank
 20251110_152330_planta_6.jpg,,,
 20251110_152330_planta_7.jpg,Lixo,,
 20251110_152330_planta_8.jpg,,,
-20251110_152330_planta_9.jpg,,,
+20251110_152330_planta_9.jpg,Poaceae,,familia
 20251110_152334_planta_1.jpg,,,
 20251110_152334_planta_2.jpg,Erodium moschatum,EROMO,especie
 20251110_152334_planta_3.jpg,Lixo,,
@@ -2034,7 +2034,7 @@ filename,label,eppo_code,rank
 20251110_152350_planta_7.jpg,,,
 20251110_152359_planta_0.jpg,,,
 20251110_152400_planta_0.jpg,Lixo,,
-20251110_152400_planta_1.jpg,,,
+20251110_152400_planta_1.jpg,Poaceae,,familia
 20251110_152400_planta_2.jpg,Convolvulus arvensis,CONAR,especie
 20251110_152408_planta_0.jpg,,,
 20251110_152408_planta_1.jpg,,,
@@ -2368,20 +2368,20 @@ filename,label,eppo_code,rank
 20251110_153204_planta_14.jpg,Erodium moschatum,EROMO,especie
 20251110_153204_planta_15.jpg,A confirmar,,
 20251110_153204_planta_16.jpg,A confirmar,,
-20251110_153204_planta_2.jpg,,,
+20251110_153204_planta_2.jpg,Poaceae,,familia
 20251110_153204_planta_4.jpg,,,
 20251110_153204_planta_5.jpg,,,
 20251110_153204_planta_6.jpg,A confirmar,,
 20251110_153204_planta_7.jpg,,,
 20251110_153204_planta_8.jpg,,,
-20251110_153204_planta_9.jpg,,,
+20251110_153204_planta_9.jpg,Poaceae,,familia
 20251110_153208_planta_1.jpg,Malva sylvestris,MALSI,especie
 20251110_153208_planta_2.jpg,Convolvulus arvensis,CONAR,especie
 20251110_153218_planta_0.jpg,,,
 20251110_153218_planta_2.jpg,Erodium moschatum,EROMO,especie
 20251110_153218_planta_3.jpg,Lixo,,
 20251110_153227_planta_0.jpg,,,
-20251110_153227_planta_2.jpg,,,
+20251110_153227_planta_2.jpg,Poaceae,,familia
 20251110_153227_planta_3.jpg,,,
 20251110_153227_planta_4.jpg,,,
 20251110_153227_planta_5.jpg,Erodium moschatum,EROMO,especie
@@ -2420,7 +2420,7 @@ filename,label,eppo_code,rank
 20251110_153252_planta_2.jpg,Lixo,,
 20251110_153252_planta_3.jpg,Poaceae,,familia
 20251110_153252_planta_4.jpg,Poaceae,,familia
-20251110_153252_planta_5.jpg,,,
+20251110_153252_planta_5.jpg,Poaceae,,familia
 20251110_153252_planta_6.jpg,Convolvulus arvensis,CONAR,especie
 20251110_153252_planta_7.jpg,Lixo,,
 20251110_153252_planta_8.jpg,,,
@@ -2615,7 +2615,7 @@ filename,label,eppo_code,rank
 20251110_153353_planta_9.jpg,Lixo,,
 20251110_153400_planta_0.jpg,,,
 20251110_153400_planta_1.jpg,Lixo,,
-20251110_153400_planta_2.jpg,,,
+20251110_153400_planta_2.jpg,Poaceae,,familia
 20251110_153400_planta_3.jpg,,,
 20251110_153400_planta_4.jpg,,,
 20251110_153400_planta_5.jpg,Lixo,,
@@ -2736,7 +2736,7 @@ filename,label,eppo_code,rank
 20251110_153612_planta_1.jpg,Convolvulus arvensis,CONAR,especie
 20251110_153636_planta_0.jpg,,,
 20251110_153636_planta_1.jpg,Portulaca oleracea,POROL,especie
-20251110_153644_planta_0.jpg,,,
+20251110_153644_planta_0.jpg,Poaceae,,familia
 20251110_153703_planta_0.jpg,,,
 20251110_153703_planta_1.jpg,Urtica urens,URTUR,especie
 20251110_153703_planta_2.jpg,,,
@@ -3026,7 +3026,7 @@ JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_1.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_0.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_1.jpg,,,
 JPEG_V2_E2_2022-04-17_15_00_184172506183479493585_planta_0.jpg,Poaceae,,familia
-JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_0.jpg,,,
+JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_0.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_1.jpg,,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_2.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_3.jpg,,,
@@ -3154,7 +3154,7 @@ JPEG_V2_E2_2022-04-17_15_16_172937527891404556517_planta_2.jpg,Chenopodium album
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_0.jpg,Stellaria media,STEME,especie
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_10.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_11.jpg,Chenopodium album,CHEAL,especie
-JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_2.jpg,,,
+JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_2.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_3.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_4.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_15_16_345675206327727857047_planta_6.jpg,Lixo,,
@@ -3304,7 +3304,7 @@ PHOTO-2026-05-20-09-48-42 (8)_planta_2.jpg,Urtica urens,URTUR,especie
 PHOTO-2026-05-20-09-48-42 (8)_planta_20.jpg,Digitaria sanguinalis,DIGSA,especie
 PHOTO-2026-05-20-09-48-42 (8)_planta_21.jpg,Urtica urens,URTUR,especie
 PHOTO-2026-05-20-09-48-42 (8)_planta_23.jpg,Urtica urens,URTUR,especie
-PHOTO-2026-05-20-09-48-42 (8)_planta_24.jpg,,,
+PHOTO-2026-05-20-09-48-42 (8)_planta_24.jpg,Poaceae,,familia
 PHOTO-2026-05-20-09-48-42 (8)_planta_3.jpg,Lixo,,
 PHOTO-2026-05-20-09-48-42 (8)_planta_4.jpg,Urtica urens,URTUR,especie
 PHOTO-2026-05-20-09-48-42 (8)_planta_6.jpg,Urtica urens,URTUR,especie
