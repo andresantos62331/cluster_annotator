@@ -1394,7 +1394,7 @@ filename,label,eppo_code,rank
 20251109_162241_planta_1.jpg,Lixo,,
 20251109_162246_planta_0.jpg,Lixo,,
 20251109_162246_planta_10.jpg,Lixo,,
-20251109_162246_planta_11.jpg,,,
+20251109_162246_planta_11.jpg,Poaceae,,familia
 20251109_162246_planta_12.jpg,Lixo,,
 20251109_162246_planta_13.jpg,Lixo,,
 20251109_162246_planta_14.jpg,Lixo,,
@@ -1403,7 +1403,7 @@ filename,label,eppo_code,rank
 20251109_162246_planta_17.jpg,Lixo,,
 20251109_162246_planta_18.jpg,Lixo,,
 20251109_162246_planta_19.jpg,Lixo,,
-20251109_162246_planta_2.jpg,,,
+20251109_162246_planta_2.jpg,Poaceae,,familia
 20251109_162246_planta_3.jpg,Lixo,,
 20251109_162246_planta_4.jpg,,,
 20251109_162246_planta_5.jpg,,,
@@ -1998,7 +1998,7 @@ filename,label,eppo_code,rank
 20251110_152318_planta_5.jpg,Portulaca oleracea,POROL,especie
 20251110_152318_planta_6.jpg,Erodium moschatum,EROMO,especie
 20251110_152327_planta_1.jpg,Poaceae,,familia
-20251110_152327_planta_2.jpg,,,
+20251110_152327_planta_2.jpg,Poaceae,,familia
 20251110_152327_planta_4.jpg,Lixo,,
 20251110_152327_planta_5.jpg,Sonchus asper,SONAS,especie
 20251110_152330_planta_0.jpg,,,
@@ -2066,11 +2066,11 @@ filename,label,eppo_code,rank
 20251110_152432_planta_8.jpg,Erodium moschatum,EROMO,especie
 20251110_152432_planta_9.jpg,,,
 20251110_152441_planta_0.jpg,,,
-20251110_152441_planta_1.jpg,,,
+20251110_152441_planta_1.jpg,Poaceae,,familia
 20251110_152441_planta_3.jpg,Lixo,,
 20251110_152441_planta_4.jpg,Poaceae,,familia
 20251110_152441_planta_5.jpg,,,
-20251110_152441_planta_7.jpg,,,
+20251110_152441_planta_7.jpg,Poaceae,,familia
 20251110_152441_planta_8.jpg,,,
 20251110_152441_planta_9.jpg,Lixo,,
 20251110_152447_planta_0.jpg,,,
@@ -2088,7 +2088,7 @@ filename,label,eppo_code,rank
 20251110_152508_planta_0.jpg,Lixo,,
 20251110_152508_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_152508_planta_2.jpg,Poaceae,,familia
-20251110_152508_planta_3.jpg,,,
+20251110_152508_planta_3.jpg,Poaceae,,familia
 20251110_152508_planta_5.jpg,Erodium moschatum,EROMO,especie
 20251110_152508_planta_6.jpg,,,
 20251110_152508_planta_7.jpg,Lixo,,
@@ -2120,7 +2120,7 @@ filename,label,eppo_code,rank
 20251110_152607_planta_2.jpg,Urtica membranacea,URTDU,especie
 20251110_152607_planta_3.jpg,Lixo,,
 20251110_152620_planta_0.jpg,,,
-20251110_152620_planta_1.jpg,,,
+20251110_152620_planta_1.jpg,Poaceae,,familia
 20251110_152620_planta_2.jpg,Poaceae,,familia
 20251110_152620_planta_4.jpg,Poaceae,,familia
 20251110_152620_planta_5.jpg,Erodium moschatum,EROMO,especie
@@ -2277,8 +2277,8 @@ filename,label,eppo_code,rank
 20251110_152943_planta_0.jpg,Convolvulus arvensis,CONAR,especie
 20251110_152943_planta_1.jpg,Lixo,,
 20251110_152943_planta_2.jpg,,,
-20251110_152943_planta_3.jpg,,,
-20251110_152943_planta_4.jpg,,,
+20251110_152943_planta_3.jpg,Poaceae,,familia
+20251110_152943_planta_4.jpg,Poaceae,,familia
 20251110_152959_planta_0.jpg,Erodium moschatum,EROMO,especie
 20251110_153005_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20251110_153005_planta_1.jpg,Portulaca oleracea,POROL,especie
@@ -2373,7 +2373,7 @@ filename,label,eppo_code,rank
 20251110_153204_planta_5.jpg,Poaceae,,familia
 20251110_153204_planta_6.jpg,A confirmar,,
 20251110_153204_planta_7.jpg,Poaceae,,familia
-20251110_153204_planta_8.jpg,,,
+20251110_153204_planta_8.jpg,Poaceae,,familia
 20251110_153204_planta_9.jpg,Poaceae,,familia
 20251110_153208_planta_1.jpg,Malva sylvestris,MALSI,especie
 20251110_153208_planta_2.jpg,Convolvulus arvensis,CONAR,especie
@@ -2416,7 +2416,7 @@ filename,label,eppo_code,rank
 20251110_153249_planta_8.jpg,,,
 20251110_153249_planta_9.jpg,Veronica arvensis,VERAR,especie
 20251110_153252_planta_1.jpg,Veronica arvensis,VERAR,especie
-20251110_153252_planta_10.jpg,,,
+20251110_153252_planta_10.jpg,Poaceae,,familia
 20251110_153252_planta_2.jpg,Lixo,,
 20251110_153252_planta_3.jpg,Poaceae,,familia
 20251110_153252_planta_4.jpg,Poaceae,,familia
@@ -2613,11 +2613,11 @@ filename,label,eppo_code,rank
 20251110_153353_planta_7.jpg,,,
 20251110_153353_planta_8.jpg,,,
 20251110_153353_planta_9.jpg,Lixo,,
-20251110_153400_planta_0.jpg,,,
+20251110_153400_planta_0.jpg,Poaceae,,familia
 20251110_153400_planta_1.jpg,Lixo,,
 20251110_153400_planta_2.jpg,Poaceae,,familia
-20251110_153400_planta_3.jpg,,,
-20251110_153400_planta_4.jpg,,,
+20251110_153400_planta_3.jpg,Poaceae,,familia
+20251110_153400_planta_4.jpg,Poaceae,,familia
 20251110_153400_planta_5.jpg,Lixo,,
 20251110_153400_planta_6.jpg,Erodium moschatum,EROMO,especie
 20251110_153404_planta_0.jpg,Lixo,,
