@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-16T19:29:56.013Z",
+  "exported_at": "2026-08-16T19:34:02.628Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -39,7 +39,8 @@
     "Poaceae",
     "Euphorbia helioscopia",
     "Amaranthus blitoides",
-    "Cyperus rotundus"
+    "Cyperus rotundus",
+    "Polycarpon tetraphyllum"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -82,7 +83,8 @@
     "Capsella rubella": "CAPRU",
     "Convolvulus arvensis": "CONAR",
     "Euphorbia helioscopia": "EPHHE",
-    "Amaranthus blitoides": "AMABL"
+    "Amaranthus blitoides": "AMABL",
+    "Polycarpon tetraphyllum": "POYTE"
   },
   "family": {
     "Cyperus rotundus": "Cyperaceae",
@@ -3030,6 +3032,7 @@
     "20251110_153041_planta_2.jpg": "Portulaca oleracea",
     "20251110_153054_planta_4.jpg": "Portulaca oleracea",
     "20251110_153054_planta_5.jpg": "Portulaca oleracea",
-    "20251110_153123_planta_7.jpg": "Portulaca oleracea"
+    "20251110_153123_planta_7.jpg": "Portulaca oleracea",
+    "JPEG_V2_E2_2022-04-17_15_09_213153740461693207130_planta_6.jpg": "Polycarpon tetraphyllum"
   }
 }
