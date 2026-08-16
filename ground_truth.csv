@@ -1008,7 +1008,7 @@ filename,label,eppo_code,rank
 20220425_154004_planta_1.jpg,,,
 20220425_154004_planta_2.jpg,Chenopodium album,CHEAL,especie
 20220425_154004_planta_3.jpg,Lixo,,
-20220425_154004_planta_4.jpg,,,
+20220425_154004_planta_4.jpg,A confirmar,,
 20220425_154037_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154037_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154037_planta_2.jpg,Amaranthus retroflexus,AMARE,especie
@@ -1023,8 +1023,8 @@ filename,label,eppo_code,rank
 20220425_154108_planta_2.jpg,Chenopodium album,CHEAL,especie
 20220425_154108_planta_3.jpg,Chenopodium album,CHEAL,especie
 20220425_154108_planta_4.jpg,,,
-20220425_154108_planta_5.jpg,,,
-20220425_154108_planta_6.jpg,,,
+20220425_154108_planta_5.jpg,Amaranthus retroflexus,AMARE,especie
+20220425_154108_planta_6.jpg,A confirmar,,
 20220425_154127_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154127_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154151_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
@@ -1035,15 +1035,15 @@ filename,label,eppo_code,rank
 20220425_154200_planta_3.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154200_planta_4.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154228_planta_0.jpg,Chenopodium album,CHEAL,especie
-20220425_154249_planta_0.jpg,,,
+20220425_154249_planta_0.jpg,Lixo,,
 20220425_154249_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220425_154341_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154349_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220425_154349_planta_1.jpg,,,
-20220425_154349_planta_3.jpg,,,
-20220425_154349_planta_5.jpg,,,
+20220425_154349_planta_3.jpg,Lixo,,
+20220425_154349_planta_5.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154349_planta_6.jpg,Lixo,,
-20220425_154443_planta_0.jpg,,,
+20220425_154443_planta_0.jpg,Lixo,,
 20220425_154443_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154443_planta_2.jpg,Portulaca oleracea,POROL,especie
 20220425_154520_planta_0.jpg,Lixo,,
@@ -1063,7 +1063,7 @@ filename,label,eppo_code,rank
 20220425_154653_planta_17.jpg,,,
 20220425_154653_planta_18.jpg,Chenopodium album,CHEAL,especie
 20220425_154653_planta_19.jpg,Lixo,,
-20220425_154653_planta_2.jpg,,,
+20220425_154653_planta_2.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154653_planta_20.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154653_planta_21.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_154653_planta_3.jpg,Amaranthus retroflexus,AMARE,especie
@@ -1080,7 +1080,7 @@ filename,label,eppo_code,rank
 20220425_155014_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_155027_planta_0.jpg,,,
 20220425_155027_planta_3.jpg,Amaranthus retroflexus,AMARE,especie
-20220425_155027_planta_4.jpg,,,
+20220425_155027_planta_4.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_155043_planta_10.jpg,Urtica urens,URTUR,especie
 20220425_155043_planta_2.jpg,Poaceae,,familia
 20220425_155043_planta_3.jpg,Poaceae,,familia
@@ -1137,7 +1137,7 @@ filename,label,eppo_code,rank
 20220425_160506_planta_3.jpg,Poaceae,,familia
 20220425_160514_planta_1.jpg,Poaceae,,familia
 20220425_160528_planta_0.jpg,Urtica urens,URTUR,especie
-20220425_160528_planta_2.jpg,,,
+20220425_160528_planta_2.jpg,A confirmar,,
 20220425_160549_planta_0.jpg,,,
 20220425_160716_planta_0.jpg,Urtica urens,URTUR,especie
 20220425_160741_planta_0.jpg,Urtica membranacea,URTDU,especie
