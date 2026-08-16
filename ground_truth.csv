@@ -1419,7 +1419,7 @@ filename,label,eppo_code,rank
 20251109_162304_planta_3.jpg,Lixo,,
 20251109_162304_planta_4.jpg,Lixo,,
 20251109_162306_planta_0.jpg,Lixo,,
-20251109_162306_planta_1.jpg,,,
+20251109_162306_planta_1.jpg,Lixo,,
 20251109_162306_planta_2.jpg,,,
 20251109_162306_planta_3.jpg,Lixo,,
 20251109_162306_planta_4.jpg,Lixo,,
@@ -1477,7 +1477,7 @@ filename,label,eppo_code,rank
 20251109_162455_planta_19.jpg,Lixo,,
 20251109_162455_planta_2.jpg,,,
 20251109_162455_planta_20.jpg,Lixo,,
-20251109_162455_planta_21.jpg,,,
+20251109_162455_planta_21.jpg,Sonchus oleraceus,SONOL,especie
 20251109_162455_planta_22.jpg,,,
 20251109_162455_planta_23.jpg,,,
 20251109_162455_planta_24.jpg,Lixo,,
@@ -1521,7 +1521,7 @@ filename,label,eppo_code,rank
 20251110_151502_planta_0.jpg,Spergula arvensis,SPRAR,especie
 20251110_151502_planta_1.jpg,Diplotaxis catholica,DIPCA,especie
 20251110_151502_planta_2.jpg,Lixo,,
-20251110_151509_planta_0.jpg,,,
+20251110_151509_planta_0.jpg,Lixo,,
 20251110_151509_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_151514_planta_0.jpg,Sonchus oleraceus,SONOL,especie
 20251110_151514_planta_1.jpg,,,
