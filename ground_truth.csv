@@ -253,7 +253,7 @@ filename,label,eppo_code,rank
 20220417_153523_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220417_153526_planta_1.jpg,Urtica urens,URTUR,especie
 20220417_153533_planta_1.jpg,Chenopodium album,CHEAL,especie
-20220417_153533_planta_2.jpg,,,
+20220417_153533_planta_2.jpg,Urtica membranacea,URTDU,especie
 20220417_153533_planta_3.jpg,Lixo,,
 20220417_153533_planta_4.jpg,Lixo,,
 20220417_153533_planta_5.jpg,Poaceae,,familia
@@ -535,7 +535,7 @@ filename,label,eppo_code,rank
 20220417_155818_planta_2.jpg,,,
 20220417_155818_planta_3.jpg,Lixo,,
 20220417_155818_planta_4.jpg,Lixo,,
-20220417_155823_planta_0.jpg,,,
+20220417_155823_planta_0.jpg,Urtica membranacea,URTDU,especie
 20220417_155827_planta_0.jpg,,,
 20220417_155834_planta_1.jpg,,,
 20220417_155834_planta_2.jpg,Stellaria media,STEME,especie
@@ -615,7 +615,7 @@ filename,label,eppo_code,rank
 20220417_160343_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160343_planta_1.jpg,,,
 20220417_160348_planta_2.jpg,Lixo,,
-20220417_160348_planta_4.jpg,,,
+20220417_160348_planta_4.jpg,Urtica membranacea,URTDU,especie
 20220417_160348_planta_6.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160348_planta_7.jpg,Lixo,,
 20220417_160351_planta_0.jpg,Lamium purpureum,LAMPU,especie
@@ -740,7 +740,7 @@ filename,label,eppo_code,rank
 20220417_161445_planta_0.jpg,Papaver rhoeas,PAPRH,especie
 20220417_161658_planta_0.jpg,,,
 20220417_161702_planta_0.jpg,,,
-20220417_161716_planta_0.jpg,,,
+20220417_161716_planta_0.jpg,Urtica membranacea,URTDU,especie
 20220417_161850_planta_0.jpg,,,
 20220417_161850_planta_2.jpg,Lamium purpureum,LAMPU,especie
 20220417_162003_planta_0.jpg,Chenopodium album,CHEAL,especie
@@ -873,7 +873,7 @@ filename,label,eppo_code,rank
 20220417_162606_planta_4.jpg,Polygonum aviculare,POLAV,especie
 20220417_162628_planta_2.jpg,,,
 20220417_162628_planta_3.jpg,Xanthium spinosum,XANSP,especie
-20220417_162628_planta_4.jpg,,,
+20220417_162628_planta_4.jpg,Urtica membranacea,URTDU,especie
 20220417_162643_planta_0.jpg,Datura stramonium,DATST,especie
 20220417_162643_planta_1.jpg,Lixo,,
 20220417_162643_planta_3.jpg,Papaver rhoeas,PAPRH,especie
@@ -1133,14 +1133,14 @@ filename,label,eppo_code,rank
 20220425_160322_planta_0.jpg,Urtica urens,URTUR,especie
 20220425_160423_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220425_160431_planta_0.jpg,Conyza bonariensis,ERIBO,especie
-20220425_160446_planta_0.jpg,,,
+20220425_160446_planta_0.jpg,Urtica membranacea,URTDU,especie
 20220425_160506_planta_3.jpg,Poaceae,,familia
 20220425_160514_planta_1.jpg,Poaceae,,familia
 20220425_160528_planta_0.jpg,Urtica urens,URTUR,especie
 20220425_160528_planta_2.jpg,,,
 20220425_160549_planta_0.jpg,,,
 20220425_160716_planta_0.jpg,Urtica urens,URTUR,especie
-20220425_160741_planta_0.jpg,,,
+20220425_160741_planta_0.jpg,Urtica membranacea,URTDU,especie
 20220425_160757_planta_0.jpg,Lixo,,
 20220425_160812_planta_0.jpg,Amaranthus retroflexus,AMARE,especie
 20220425_161041_planta_0.jpg,Poaceae,,familia
@@ -1175,10 +1175,10 @@ filename,label,eppo_code,rank
 20220425_161823_planta_2.jpg,,,
 20220425_161823_planta_3.jpg,Portulaca oleracea,POROL,especie
 20220425_161823_planta_4.jpg,,,
-20220425_161908_planta_0.jpg,,,
+20220425_161908_planta_0.jpg,Urtica membranacea,URTDU,especie
 20220425_161917_planta_1.jpg,Sonchus asper,SONAS,especie
 20220425_161956_planta_0.jpg,Urtica membranacea,URTDU,especie
-20220425_161956_planta_1.jpg,,,
+20220425_161956_planta_1.jpg,Urtica membranacea,URTDU,especie
 20220425_162041_planta_0.jpg,A confirmar,,
 20220425_162104_planta_0.jpg,Veronica arvensis,VERAR,especie
 20220425_162130_planta_0.jpg,Veronica arvensis,VERAR,especie
@@ -2817,7 +2817,7 @@ IMG_20220501_160736_planta_0.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_160742_planta_0.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_161238_planta_1.jpg,Urtica urens,URTUR,especie
 IMG_20220501_161238_planta_2.jpg,Urtica urens,URTUR,especie
-IMG_20220501_161243_planta_1.jpg,,,
+IMG_20220501_161243_planta_1.jpg,Urtica membranacea,URTDU,especie
 IMG_20220501_161257_planta_1.jpg,Urtica urens,URTUR,especie
 IMG_20220501_161316_planta_0.jpg,,,
 IMG_20220501_161316_planta_1.jpg,Urtica urens,URTUR,especie
@@ -3016,7 +3016,7 @@ JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_1.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_1.jpg,,,
 JPEG_V2_E2_2022-04-17_14_58_217419482026510393858_planta_0.jpg,Convolvulus arvensis,CONAR,especie
-JPEG_V2_E2_2022-04-17_14_58_371128508627594800854_planta_3.jpg,,,
+JPEG_V2_E2_2022-04-17_14_58_371128508627594800854_planta_3.jpg,Urtica membranacea,URTDU,especie
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_0.jpg,Stellaria media,STEME,especie
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_1.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_2.jpg,Urtica urens,URTUR,especie
@@ -3024,7 +3024,7 @@ JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_3.jpg,Chenopodium album,
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_0.jpg,,,
 JPEG_V2_E2_2022-04-17_14_59_248280313348291651727_planta_1.jpg,Chenopodium album,CHEAL,especie
 JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_0.jpg,Lixo,,
-JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_1.jpg,,,
+JPEG_V2_E2_2022-04-17_15_00_023123740532413580757_planta_1.jpg,A confirmar,,
 JPEG_V2_E2_2022-04-17_15_00_184172506183479493585_planta_0.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_0.jpg,Poaceae,,familia
 JPEG_V2_E2_2022-04-17_15_00_483181527461604584241_planta_1.jpg,,,
