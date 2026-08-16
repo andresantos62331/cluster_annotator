@@ -1173,7 +1173,7 @@ filename,label,eppo_code,rank
 20220425_161805_planta_0.jpg,Portulaca oleracea,POROL,especie
 20220425_161823_planta_1.jpg,,,
 20220425_161823_planta_2.jpg,,,
-20220425_161823_planta_3.jpg,,,
+20220425_161823_planta_3.jpg,Portulaca oleracea,POROL,especie
 20220425_161823_planta_4.jpg,,,
 20220425_161908_planta_0.jpg,,,
 20220425_161917_planta_1.jpg,Sonchus asper,SONAS,especie
@@ -1344,7 +1344,7 @@ filename,label,eppo_code,rank
 20251109_160704_planta_1.jpg,Poaceae,,familia
 20251109_160950_planta_0.jpg,Lixo,,
 20251109_160958_planta_0.jpg,Stellaria media,STEME,especie
-20251109_161024_planta_0.jpg,,,
+20251109_161024_planta_0.jpg,Lixo,,
 20251109_161912_planta_0.jpg,Lixo,,
 20251109_161933_planta_0.jpg,,,
 20251109_161938_planta_0.jpg,,,
@@ -2276,7 +2276,7 @@ filename,label,eppo_code,rank
 20251110_152937_planta_5.jpg,,,
 20251110_152943_planta_0.jpg,Convolvulus arvensis,CONAR,especie
 20251110_152943_planta_1.jpg,Lixo,,
-20251110_152943_planta_2.jpg,,,
+20251110_152943_planta_2.jpg,Lixo,,
 20251110_152943_planta_3.jpg,Poaceae,,familia
 20251110_152943_planta_4.jpg,Poaceae,,familia
 20251110_152959_planta_0.jpg,Erodium moschatum,EROMO,especie
@@ -2344,7 +2344,7 @@ filename,label,eppo_code,rank
 20251110_153136_planta_0.jpg,,,
 20251110_153136_planta_1.jpg,Erodium moschatum,EROMO,especie
 20251110_153146_planta_0.jpg,Portulaca oleracea,POROL,especie
-20251110_153146_planta_1.jpg,,,
+20251110_153146_planta_1.jpg,Portulaca oleracea,POROL,especie
 20251110_153148_planta_0.jpg,Portulaca oleracea,POROL,especie
 20251110_153148_planta_1.jpg,Portulaca oleracea,POROL,especie
 20251110_153148_planta_2.jpg,Portulaca oleracea,POROL,especie
