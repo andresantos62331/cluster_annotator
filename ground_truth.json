@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-21T16:31:40.197Z",
+  "exported_at": "2026-08-21T16:32:37.875Z",
   "labels": [
     "Portulaca oleracea",
     "Urtica urens",
@@ -40,7 +40,8 @@
     "Euphorbia helioscopia",
     "Amaranthus blitoides",
     "Cyperus rotundus",
-    "Polycarpon tetraphyllum"
+    "Polycarpon tetraphyllum",
+    "Geranium molle"
   ],
   "eppo": {
     "Cyperus rotundus": "CYPRO",
@@ -84,7 +85,8 @@
     "Convolvulus arvensis": "CONAR",
     "Euphorbia helioscopia": "EPHHE",
     "Amaranthus blitoides": "AMABL",
-    "Polycarpon tetraphyllum": "POYTE"
+    "Polycarpon tetraphyllum": "POYTE",
+    "Geranium molle": "GERMO"
   },
   "family": {
     "Cyperus rotundus": "Cyperaceae",
@@ -112,7 +114,8 @@
     "Poaceae": "Poaceae",
     "Stellaria media": "Caryophyllaceae",
     "Euphorbia helioscopia": "Euphorbiaceae",
-    "Amaranthus blitoides": "Amaranthaceae"
+    "Amaranthus blitoides": "Amaranthaceae",
+    "Geranium molle": "Geraniaceae"
   },
   "rank": {
     "Amaranthaceae": "familia",
@@ -3148,6 +3151,7 @@
     "20251110_152025_planta_0.jpg": "Poaceae",
     "20251110_152508_planta_6.jpg": "Poaceae",
     "20251110_152247_planta_6.jpg": "Cyperus rotundus",
-    "20251110_153323_planta_37.jpg": "Veronica arvensis"
+    "20251110_153323_planta_37.jpg": "Veronica arvensis",
+    "20251110_153513_planta_0.jpg": "Geranium molle"
   }
 }
