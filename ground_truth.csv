@@ -480,7 +480,7 @@ filename,label,eppo_code,rank
 20220417_155548_planta_1.jpg,Lixo,,
 20220417_155548_planta_2.jpg,Lixo,,
 20220417_155548_planta_4.jpg,,,
-20220417_155548_planta_5.jpg,,,
+20220417_155548_planta_5.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155548_planta_6.jpg,,,
 20220417_155548_planta_7.jpg,Lixo,,
 20220417_155548_planta_8.jpg,Lixo,,
@@ -551,12 +551,12 @@ filename,label,eppo_code,rank
 20220417_155943_planta_0.jpg,Euphorbia helioscopia,EPHHE,especie
 20220417_155943_planta_1.jpg,Lixo,,
 20220417_155943_planta_2.jpg,Stellaria media,STEME,especie
-20220417_155950_planta_0.jpg,,,
+20220417_155950_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155955_planta_0.jpg,,,
 20220417_155955_planta_1.jpg,Lixo,,
 20220417_155956_planta_0.jpg,,,
 20220417_155956_planta_1.jpg,Lixo,,
-20220417_155959_planta_0.jpg,,,
+20220417_155959_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160002_planta_0.jpg,,,
 20220417_160012_planta_0.jpg,Lixo,,
 20220417_160018_planta_0.jpg,Papaver rhoeas,PAPRH,especie
@@ -575,7 +575,7 @@ filename,label,eppo_code,rank
 20220417_160105_planta_3.jpg,Lamium purpureum,LAMPU,especie
 20220417_160105_planta_4.jpg,Lixo,,
 20220417_160110_planta_0.jpg,Conyza bonariensis,ERIBO,especie
-20220417_160113_planta_0.jpg,,,
+20220417_160113_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160118_planta_0.jpg,,,
 20220417_160118_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160118_planta_2.jpg,Conyza bonariensis,ERIBO,especie
