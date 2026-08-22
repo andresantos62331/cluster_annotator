@@ -29,3 +29,6 @@ dist-ssr
 
 # cache do vite
 .vite
+
+# config local do editor
+.claude/
