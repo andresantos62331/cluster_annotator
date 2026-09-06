@@ -17,6 +17,12 @@ export interface ClusterMetrics {
   persistence: number | null;
   // geracao que criou este cluster (0 = inicial). Alimenta o badge G1/G2/...
   origem?: number;
+  // lote de proveniencia do GRUPO (nao do recorte). Vazio = conjunto original.
+  // "estudio" = veio da corrida de 2026-09-04 sobre as fotografias de estudio
+  // de 2022-05-01 (plantula arrancada, fotografada isolada). Marca o grupo
+  // porque ha' recortes de estudio espalhados pelos clusters antigos: marcar o
+  // recorte seria falso, marcar o grupo e' verdade.
+  lote?: string;
 }
 
 export interface ConfigDef {

@@ -2041,3 +2041,31 @@ body.a-arrastar .card:hover .card-locate { opacity: 0; }
 
 /* foco acessível */
 :focus-visible { outline: 2px solid var(--accent-line); outline-offset: 2px; }
+
+/* ── Lote de estudio ──────────────────────────────────────────────────────
+   Bloco proprio na barra lateral, por baixo da pilha "A confirmar". Nao usa
+   cor nova: a paleta das especies e o ambar das geracoes ja' estao tomados.
+   Distingue-se pelo ENQUADRAMENTO (uma caixa com cabecalho), nao por hue. */
+.lote-bloco {
+  margin: 6px 6px 2px;
+  border: 1px solid var(--linha, #2a3a2a);
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+.lote-head {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  padding: 7px 9px; border: 0; cursor: pointer;
+  background: color-mix(in srgb, var(--leaf, #86efac) 8%, transparent);
+  color: inherit; font: inherit; text-align: left;
+}
+.lote-head:hover { background: color-mix(in srgb, var(--leaf, #86efac) 14%, transparent); }
+.lo-fold { opacity: .6; font-size: 11px; }
+.lo-title { font-weight: 600; }
+.lo-sub { opacity: .55; font-size: 11px; }
+.lo-n { margin-left: auto; opacity: .75; font-size: 12px; }
+.lote-list { max-height: 42vh; overflow-y: auto; }
+.lote-nota {
+  padding: 5px 10px 6px; font-size: 11px; opacity: .5;
+  border-bottom: 1px solid var(--linha, #2a3a2a);
+}

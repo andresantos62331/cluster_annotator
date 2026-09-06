@@ -15,15 +15,11 @@ export const CONFIG_DEFS: ConfigDef[] = [
     metricsUrl: "configs/A_microscopio_metrics.csv",
     repsUrl: "configs/A_microscopio_reps.json",
   },
-  {
-    id: "C_padrao",
-    label: "B: Padrão",
-    short: "Padrão",
-    tech: "leaf · mcs=8 ms=5 · nn=15 nc=20",
-    assignmentsUrl: "configs/C_padrao.csv",
-    metricsUrl: "configs/C_padrao_metrics.csv",
-    repsUrl: "configs/C_padrao_reps.json",
-  },
+  // O "B: Padrao" (C_padrao) saiu do selector a 2026-09-04: ninguem lhe mexia e
+  // e' mediveis vezes pior — 191 grupos contra 321, pureza 0,871 contra 0,929,
+  // 49% de grupos mono-especie contra 70% (HANDOFF 10.2). Ter um so' metodo
+  // significa tambem que os lotes novos entram sempre agrupados da mesma forma.
+  // Os CSV ficam no disco; basta repor esta entrada para voltar atras.
 ];
 
 export async function loadConfig(def: ConfigDef): Promise<ConfigData> {
@@ -58,6 +54,7 @@ export async function loadConfig(def: ConfigDef): Promise<ConfigData> {
       nearest_cluster: r.nearest_cluster ? parseInt(r.nearest_cluster, 10) : null,
       persistence: r.persistence ? parseFloat(r.persistence) : null,
       origem: r.origem != null && r.origem !== "" ? parseInt(r.origem, 10) : undefined,
+      lote: r.lote != null && r.lote !== "" ? r.lote : undefined,
     });
   }
 

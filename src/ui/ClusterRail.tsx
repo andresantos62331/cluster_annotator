@@ -62,6 +62,8 @@ export function ClusterRail({
   const [query, setQuery] = useState("");
   // gaveta dos concluídos — fixa no fundo do rail, fechada por omissão
   const [doneOpen, setDoneOpen] = useState(false);
+  // o lote novo abre aberto: e' trabalho por fazer que acabou de chegar
+  const [loteOpen, setLoteOpen] = useState(true);
   const activeRef = useRef<HTMLDivElement>(null);
 
   const items = useMemo(() => {
@@ -72,7 +74,9 @@ export function ClusterRail({
         const annotated = files.filter((f) => groundTruth[f]).length;
         const total = files.length;
         const gen = cid === -1 ? -1 : config.metrics.get(cid)?.origem ?? 0;
-        return { cid, files, annotated, total, gen, done: total > 0 && annotated === total };
+        const lote = cid === -1 ? "" : config.metrics.get(cid)?.lote ?? "";
+        return { cid, files, annotated, total, gen, lote,
+                 done: total > 0 && annotated === total };
       })
       .filter((it) => {
         if (q && !(it.cid === -1 ? "ruido -1 ruído" : `c${it.cid} ${it.cid}`).includes(q)) return false;
@@ -103,10 +107,19 @@ export function ClusterRail({
   // Deixou de haver separadores de geração aqui: com esta ordenação as gerações
   // intercalam-se e os separadores repetir-se-iam. A geração continua legível no
   // badge G1/G2 de cada item, por isso não se perde informação.
-  const pending = items
-    .filter((it) => !it.done)
+  // Os grupos de um LOTE saem da lista principal e vao para a sua propria
+  // seccao, logo abaixo de "A confirmar". Nao se misturam com os 321 do
+  // conjunto original: sao poucos, chegaram juntos, e trabalham-se de seguida.
+  const loteItems = items
+    .filter((it) => it.lote)
     .sort((a, b) => b.total - b.annotated - (a.total - a.annotated) || a.cid - b.cid);
-  const doneItems = items.filter((it) => it.done);
+  const loteFeitos = loteItems.filter((it) => it.done).length;
+  const loteRecortes = loteItems.reduce((s, it) => s + it.total, 0);
+
+  const pending = items
+    .filter((it) => !it.done && !it.lote)
+    .sort((a, b) => b.total - b.annotated - (a.total - a.annotated) || a.cid - b.cid);
+  const doneItems = items.filter((it) => it.done && !it.lote);
 
   // NAVEGAR para um grupo já concluído (chip "vizinho", J/K, histograma) abre a
   // gaveta. Só a partir da segunda vez: no arranque a app selecciona um cluster
@@ -205,6 +218,24 @@ export function ClusterRail({
             </div>
             <div className="pilha-sub">por decidir</div>
           </div>
+        </div>
+      )}
+
+      {loteItems.length > 0 && (
+        <div className={`lote-bloco ${loteOpen ? "open" : ""}`}>
+          <button className="lote-head" onClick={() => setLoteOpen((v) => !v)}
+            title="Fotografias de estúdio de 1 de maio de 2022: plântula arrancada, fotografada isolada contra o céu ou sobre cartão. Entraram a 4 de setembro de 2026.">
+            <span className="lo-fold" aria-hidden>{loteOpen ? "▾" : "▸"}</span>
+            <span className="lo-title">Lote estúdio</span>
+            <span className="lo-sub">1 mai 2022</span>
+            <span className="lo-n mono">{loteFeitos}/{loteItems.length}</span>
+          </button>
+          {loteOpen && (
+            <div className="lote-list">
+              <div className="lote-nota">{loteItems.length} grupos · {loteRecortes} plântulas</div>
+              {loteItems.map((it) => renderItem(it))}
+            </div>
+          )}
         </div>
       )}
 
