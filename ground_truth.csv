@@ -398,7 +398,7 @@ filename,label,eppo_code,rank
 20220417_154846_planta_0.jpg,Lixo,,
 20220417_154849_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_154849_planta_1.jpg,Lamium purpureum,LAMPU,especie
-20220417_154858_planta_0.jpg,Poaceae,,familia
+20220417_154858_planta_0.jpg,Lixo,,
 20220417_154911_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_154911_planta_1.jpg,Poaceae,,familia
 20220417_154911_planta_2.jpg,Polygonum aviculare,POLAV,especie
@@ -560,7 +560,7 @@ filename,label,eppo_code,rank
 20220417_160002_planta_0.jpg,,,
 20220417_160012_planta_0.jpg,Lixo,,
 20220417_160018_planta_0.jpg,Papaver rhoeas,PAPRH,especie
-20220417_160025_planta_0.jpg,,,
+20220417_160025_planta_0.jpg,Lixo,,
 20220417_160029_planta_0.jpg,Senecio vulgaris,SENVU,especie
 20220417_160032_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160043_planta_0.jpg,Papaver rhoeas,PAPRH,especie
@@ -663,7 +663,7 @@ filename,label,eppo_code,rank
 20220417_160708_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160713_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160716_planta_0.jpg,Conyza bonariensis,ERIBO,especie
-20220417_160716_planta_1.jpg,,,
+20220417_160716_planta_1.jpg,Lixo,,
 20220417_160716_planta_2.jpg,,,
 20220417_160726_planta_0.jpg,,,
 20220417_160731_planta_0.jpg,Urtica membranacea,URTDU,especie
@@ -711,7 +711,7 @@ filename,label,eppo_code,rank
 20220417_161043_planta_4.jpg,,,
 20220417_161048_planta_1.jpg,Solanum nigrum,SOLNI,especie
 20220417_161054_planta_0.jpg,Lamium purpureum,LAMPU,especie
-20220417_161101_planta_0.jpg,,,
+20220417_161101_planta_0.jpg,A confirmar,,
 20220417_161105_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_161115_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_161115_planta_1.jpg,Urtica urens,URTUR,especie
@@ -1301,7 +1301,7 @@ filename,label,eppo_code,rank
 20220425_164357_planta_1.jpg,Polygonum aviculare,POLAV,especie
 20220425_164357_planta_2.jpg,Lixo,,
 20220425_164357_planta_3.jpg,A confirmar,,
-20220425_164357_planta_4.jpg,,,
+20220425_164357_planta_4.jpg,Lixo,,
 20220425_164419_planta_0.jpg,Lixo,,
 20220425_164454_planta_2.jpg,A confirmar,,
 20220425_164454_planta_3.jpg,A confirmar,,
@@ -1737,7 +1737,7 @@ filename,label,eppo_code,rank
 20251110_151746_planta_17.jpg,,,
 20251110_151746_planta_18.jpg,Stellaria media,STEME,especie
 20251110_151746_planta_19.jpg,Urtica membranacea,URTDU,especie
-20251110_151746_planta_2.jpg,,,
+20251110_151746_planta_2.jpg,Lixo,,
 20251110_151746_planta_3.jpg,Lixo,,
 20251110_151746_planta_4.jpg,Erodium cicutarium,EROCI,especie
 20251110_151746_planta_5.jpg,Lixo,,
@@ -3004,7 +3004,7 @@ IMG_20220501_172423_planta_0.jpg,Papaver rhoeas,PAPRH,especie
 IMG_20220501_172435_planta_0.jpg,Papaver rhoeas,PAPRH,especie
 IMG_20220501_172442_planta_0.jpg,Papaver rhoeas,PAPRH,especie
 JPEG_V2_E2_2022-04-17_14_50_122504638103110864191_planta_0.jpg,Veronica arvensis,VERAR,especie
-JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_1.jpg,,,
+JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_1.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_3.jpg,A confirmar,,
 JPEG_V2_E2_2022-04-17_14_51_532727016667016113170_planta_4.jpg,Urtica membranacea,URTDU,especie
 JPEG_V2_E2_2022-04-17_14_52_396757956528889991251_planta_0.jpg,Chenopodium album,CHEAL,especie
