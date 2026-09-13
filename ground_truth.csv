@@ -523,7 +523,7 @@ filename,label,eppo_code,rank
 20220417_155706_planta_6.jpg,,,
 20220417_155723_planta_0.jpg,Lixo,,
 20220417_155723_planta_1.jpg,Solanum nigrum,SOLNI,especie
-20220417_155730_planta_0.jpg,,,
+20220417_155730_planta_0.jpg,Euphorbia helioscopia,EPHHE,especie
 20220417_155735_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_155742_planta_0.jpg,Euphorbia helioscopia,EPHHE,especie
 20220417_155801_planta_0.jpg,Conyza bonariensis,ERIBO,especie
@@ -536,8 +536,8 @@ filename,label,eppo_code,rank
 20220417_155818_planta_3.jpg,Lixo,,
 20220417_155818_planta_4.jpg,Lixo,,
 20220417_155823_planta_0.jpg,Urtica membranacea,URTDU,especie
-20220417_155827_planta_0.jpg,,,
-20220417_155834_planta_1.jpg,,,
+20220417_155827_planta_0.jpg,Euphorbia helioscopia,EPHHE,especie
+20220417_155834_planta_1.jpg,Euphorbia helioscopia,EPHHE,especie
 20220417_155834_planta_2.jpg,Stellaria media,STEME,especie
 20220417_155834_planta_3.jpg,Stellaria media,STEME,especie
 20220417_155840_planta_0.jpg,Stellaria media,STEME,especie
@@ -678,7 +678,7 @@ filename,label,eppo_code,rank
 20220417_160802_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_160807_planta_0.jpg,Lixo,,
 20220417_160807_planta_1.jpg,Lamium purpureum,LAMPU,especie
-20220417_160817_planta_0.jpg,,,
+20220417_160817_planta_0.jpg,Euphorbia helioscopia,EPHHE,especie
 20220417_160824_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220417_160826_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160828_planta_1.jpg,Chenopodium album,CHEAL,especie
@@ -2405,7 +2405,7 @@ filename,label,eppo_code,rank
 20251110_153242_planta_8.jpg,Erodium cicutarium,EROCI,especie
 20251110_153249_planta_0.jpg,Veronica arvensis,VERAR,especie
 20251110_153249_planta_10.jpg,Veronica arvensis,VERAR,especie
-20251110_153249_planta_11.jpg,,,
+20251110_153249_planta_11.jpg,A confirmar,,
 20251110_153249_planta_12.jpg,Lixo,,
 20251110_153249_planta_2.jpg,Lixo,,
 20251110_153249_planta_3.jpg,Veronica arvensis,VERAR,especie
@@ -2449,7 +2449,7 @@ filename,label,eppo_code,rank
 20251110_153305_planta_19.jpg,Lixo,,
 20251110_153305_planta_2.jpg,Veronica arvensis,VERAR,especie
 20251110_153305_planta_21.jpg,Lixo,,
-20251110_153305_planta_22.jpg,,,
+20251110_153305_planta_22.jpg,A confirmar,,
 20251110_153305_planta_23.jpg,Lixo,,
 20251110_153305_planta_24.jpg,Lixo,,
 20251110_153305_planta_25.jpg,Lixo,,
@@ -2473,8 +2473,8 @@ filename,label,eppo_code,rank
 20251110_153311_planta_9.jpg,Lixo,,
 20251110_153313_planta_0.jpg,Veronica arvensis,VERAR,especie
 20251110_153313_planta_1.jpg,Veronica arvensis,VERAR,especie
-20251110_153313_planta_2.jpg,,,
-20251110_153313_planta_3.jpg,,,
+20251110_153313_planta_2.jpg,A confirmar,,
+20251110_153313_planta_3.jpg,A confirmar,,
 20251110_153313_planta_4.jpg,Veronica arvensis,VERAR,especie
 20251110_153313_planta_5.jpg,Veronica arvensis,VERAR,especie
 20251110_153313_planta_6.jpg,Veronica arvensis,VERAR,especie
@@ -2501,7 +2501,7 @@ filename,label,eppo_code,rank
 20251110_153322_planta_17.jpg,Veronica arvensis,VERAR,especie
 20251110_153322_planta_18.jpg,Lixo,,
 20251110_153322_planta_19.jpg,Lixo,,
-20251110_153322_planta_2.jpg,,,
+20251110_153322_planta_2.jpg,A confirmar,,
 20251110_153322_planta_20.jpg,,,
 20251110_153322_planta_21.jpg,Lixo,,
 20251110_153322_planta_22.jpg,Lixo,,
