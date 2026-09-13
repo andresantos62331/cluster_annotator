@@ -324,7 +324,7 @@ filename,label,eppo_code,rank
 20220417_154446_planta_4.jpg,Lixo,,
 20220417_154501_planta_0.jpg,Lixo,,
 20220417_154507_planta_0.jpg,Polygonum aviculare,POLAV,especie
-20220417_154512_planta_0.jpg,,,
+20220417_154512_planta_0.jpg,A confirmar,,
 20220417_154512_planta_1.jpg,,,
 20220417_154512_planta_2.jpg,,,
 20220417_154534_planta_3.jpg,Polygonum aviculare,POLAV,especie
@@ -393,7 +393,7 @@ filename,label,eppo_code,rank
 20220417_154841_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154841_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154843_planta_0.jpg,Lixo,,
-20220417_154843_planta_1.jpg,,,
+20220417_154843_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154843_planta_2.jpg,,,
 20220417_154846_planta_0.jpg,Lixo,,
 20220417_154849_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
@@ -425,7 +425,7 @@ filename,label,eppo_code,rank
 20220417_154957_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155015_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_155015_planta_1.jpg,Convolvulus arvensis,CONAR,especie
-20220417_155015_planta_2.jpg,,,
+20220417_155015_planta_2.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155019_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155023_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155028_planta_0.jpg,Lamium purpureum,LAMPU,especie
@@ -466,10 +466,10 @@ filename,label,eppo_code,rank
 20220417_155541_planta_1.jpg,,,
 20220417_155541_planta_2.jpg,,,
 20220417_155541_planta_3.jpg,Conyza bonariensis,ERIBO,especie
-20220417_155541_planta_4.jpg,,,
+20220417_155541_planta_4.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155541_planta_5.jpg,Lixo,,
 20220417_155541_planta_6.jpg,Conyza bonariensis,ERIBO,especie
-20220417_155541_planta_7.jpg,,,
+20220417_155541_planta_7.jpg,Conyza bonariensis,ERIBO,especie
 20220417_155543_planta_1.jpg,,,
 20220417_155543_planta_3.jpg,,,
 20220417_155543_planta_4.jpg,Lixo,,
@@ -611,7 +611,7 @@ filename,label,eppo_code,rank
 20220417_160257_planta_4.jpg,Lixo,,
 20220417_160257_planta_5.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160338_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
-20220417_160338_planta_1.jpg,,,
+20220417_160338_planta_1.jpg,A confirmar,,
 20220417_160343_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160343_planta_1.jpg,,,
 20220417_160348_planta_2.jpg,Lixo,,
@@ -633,7 +633,7 @@ filename,label,eppo_code,rank
 20220417_160422_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160434_planta_0.jpg,Lixo,,
 20220417_160439_planta_0.jpg,Conyza bonariensis,ERIBO,especie
-20220417_160439_planta_3.jpg,,,
+20220417_160439_planta_3.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160439_planta_4.jpg,Lamium purpureum,LAMPU,especie
 20220417_160441_planta_1.jpg,,,
 20220417_160441_planta_2.jpg,Diplotaxis catholica,DIPCA,especie
@@ -653,11 +653,11 @@ filename,label,eppo_code,rank
 20220417_160551_planta_0.jpg,Papaver rhoeas,PAPRH,especie
 20220417_160614_planta_0.jpg,Chenopodium album,CHEAL,especie
 20220417_160621_planta_0.jpg,,,
-20220417_160621_planta_1.jpg,,,
-20220417_160640_planta_0.jpg,,,
-20220417_160641_planta_0.jpg,,,
+20220417_160621_planta_1.jpg,Conyza bonariensis,ERIBO,especie
+20220417_160640_planta_0.jpg,Conyza bonariensis,ERIBO,especie
+20220417_160641_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160647_planta_0.jpg,Lixo,,
-20220417_160650_planta_1.jpg,,,
+20220417_160650_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_160659_planta_0.jpg,Convolvulus arvensis,CONAR,especie
 20220417_160704_planta_0.jpg,Lamium purpureum,LAMPU,especie
 20220417_160708_planta_0.jpg,Lamium purpureum,LAMPU,especie
@@ -723,7 +723,7 @@ filename,label,eppo_code,rank
 20220417_161149_planta_1.jpg,Chenopodium album,CHEAL,especie
 20220417_161155_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_161155_planta_1.jpg,Lamium purpureum,LAMPU,especie
-20220417_161204_planta_0.jpg,,,
+20220417_161204_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_161204_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_161220_planta_0.jpg,,,
 20220417_161254_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
