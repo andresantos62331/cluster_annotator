@@ -1405,7 +1405,7 @@ filename,label,eppo_code,rank
 20251109_162246_planta_19.jpg,Lixo,,
 20251109_162246_planta_2.jpg,Poaceae,,familia
 20251109_162246_planta_3.jpg,Lixo,,
-20251109_162246_planta_4.jpg,,,
+20251109_162246_planta_4.jpg,Lixo,,
 20251109_162246_planta_5.jpg,,,
 20251109_162246_planta_7.jpg,Lixo,,
 20251109_162246_planta_8.jpg,Lixo,,
@@ -1534,7 +1534,7 @@ filename,label,eppo_code,rank
 20251110_151528_planta_0.jpg,,,
 20251110_151528_planta_1.jpg,Solanum nigrum,SOLNI,especie
 20251110_151528_planta_2.jpg,Lixo,,
-20251110_151528_planta_3.jpg,,,
+20251110_151528_planta_3.jpg,Lixo,,
 20251110_151528_planta_4.jpg,Urtica urens,URTUR,especie
 20251110_151532_planta_0.jpg,Portulaca oleracea,POROL,especie
 20251110_151532_planta_1.jpg,Urtica urens,URTUR,especie
@@ -2433,7 +2433,7 @@ filename,label,eppo_code,rank
 20251110_153257_planta_4.jpg,Lixo,,
 20251110_153302_planta_0.jpg,Lixo,,
 20251110_153302_planta_1.jpg,,,
-20251110_153302_planta_2.jpg,,,
+20251110_153302_planta_2.jpg,Lixo,,
 20251110_153302_planta_3.jpg,Lixo,,
 20251110_153305_planta_0.jpg,Veronica arvensis,VERAR,especie
 20251110_153305_planta_1.jpg,Veronica arvensis,VERAR,especie
@@ -2727,9 +2727,9 @@ filename,label,eppo_code,rank
 20251110_153535_planta_3.jpg,Portulaca oleracea,POROL,especie
 20251110_153535_planta_4.jpg,Portulaca oleracea,POROL,especie
 20251110_153547_planta_0.jpg,Sonchus oleraceus,SONOL,especie
-20251110_153547_planta_1.jpg,,,
+20251110_153547_planta_1.jpg,Solanum nigrum,SOLNI,especie
 20251110_153552_planta_0.jpg,Sonchus oleraceus,SONOL,especie
-20251110_153555_planta_0.jpg,,,
+20251110_153555_planta_0.jpg,Solanum nigrum,SOLNI,especie
 20251110_153557_planta_0.jpg,Lixo,,
 20251110_153557_planta_1.jpg,Convolvulus arvensis,CONAR,especie
 20251110_153612_planta_0.jpg,Lixo,,
@@ -2748,7 +2748,7 @@ filename,label,eppo_code,rank
 20251110_154029_planta_0.jpg,Picris echioides,PICEC,especie
 20251110_154029_planta_1.jpg,Picris echioides,PICEC,especie
 20251110_154029_planta_2.jpg,Picris echioides,PICEC,especie
-20251110_154040_planta_0.jpg,,,
+20251110_154040_planta_0.jpg,Lixo,,
 IMG_20220501_154431_planta_1.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154431_planta_2.jpg,Chenopodium album,CHEAL,especie
 IMG_20220501_154519_planta_2.jpg,Chenopodium album,CHEAL,especie
