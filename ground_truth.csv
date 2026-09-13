@@ -410,9 +410,9 @@ filename,label,eppo_code,rank
 20220417_154923_planta_2.jpg,Polygonum aviculare,POLAV,especie
 20220417_154923_planta_3.jpg,Lamium purpureum,LAMPU,especie
 20220417_154934_planta_0.jpg,Conyza bonariensis,ERIBO,especie
-20220417_154934_planta_2.jpg,,,
+20220417_154934_planta_2.jpg,Lixo,,
 20220417_154934_planta_3.jpg,Lamium purpureum,LAMPU,especie
-20220417_154940_planta_0.jpg,,,
+20220417_154940_planta_0.jpg,Lixo,,
 20220417_154940_planta_1.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154940_planta_2.jpg,Polygonum aviculare,POLAV,especie
 20220417_154940_planta_3.jpg,Lamium purpureum,LAMPU,especie
@@ -854,7 +854,7 @@ filename,label,eppo_code,rank
 20220417_162412_planta_2.jpg,A confirmar,,
 20220417_162505_planta_0.jpg,,,
 20220417_162508_planta_0.jpg,,,
-20220417_162508_planta_1.jpg,,,
+20220417_162508_planta_1.jpg,Lixo,,
 20220417_162512_planta_0.jpg,A confirmar,,
 20220417_162517_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_162526_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
@@ -931,11 +931,11 @@ filename,label,eppo_code,rank
 20220417_163000_planta_1.jpg,,,
 20220417_163000_planta_2.jpg,Stellaria media,STEME,especie
 20220417_163000_planta_3.jpg,Lixo,,
-20220417_163000_planta_4.jpg,,,
+20220417_163000_planta_4.jpg,A confirmar,,
 20220417_163001_planta_0.jpg,,,
 20220417_163001_planta_1.jpg,Stellaria media,STEME,especie
 20220417_163001_planta_2.jpg,Lixo,,
-20220417_163001_planta_3.jpg,,,
+20220417_163001_planta_3.jpg,A confirmar,,
 20220417_163005_planta_0.jpg,Veronica arvensis,VERAR,especie
 20220417_163005_planta_1.jpg,Chenopodium opulifolium,CHEOP,especie
 20220417_163013_planta_0.jpg,Poaceae,,familia
