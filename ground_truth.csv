@@ -285,7 +285,7 @@ filename,label,eppo_code,rank
 20220417_153853_planta_3.jpg,Portulaca oleracea,POROL,especie
 20220417_153853_planta_4.jpg,Chamaemelum mixtum,ANTMI,especie
 20220417_153853_planta_5.jpg,Chamaemelum mixtum,ANTMI,especie
-20220417_153944_planta_0.jpg,,,
+20220417_153944_planta_0.jpg,Lixo,,
 20220417_153944_planta_1.jpg,A confirmar,,
 20220417_154002_planta_0.jpg,Poaceae,,familia
 20220417_154018_planta_0.jpg,A confirmar,,
@@ -358,7 +358,7 @@ filename,label,eppo_code,rank
 20220417_154614_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_154614_planta_1.jpg,Polygonum aviculare,POLAV,especie
 20220417_154614_planta_2.jpg,Diplotaxis catholica,DIPCA,especie
-20220417_154616_planta_0.jpg,,,
+20220417_154616_planta_0.jpg,A confirmar,,
 20220417_154616_planta_1.jpg,Polygonum aviculare,POLAV,especie
 20220417_154633_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_154633_planta_1.jpg,Capsella rubella,CAPRU,especie
@@ -508,7 +508,7 @@ filename,label,eppo_code,rank
 20220417_155631_planta_9.jpg,Senecio vulgaris,SENVU,especie
 20220417_155637_planta_0.jpg,Polygonum aviculare,POLAV,especie
 20220417_155637_planta_1.jpg,Polygonum aviculare,POLAV,especie
-20220417_155637_planta_2.jpg,,,
+20220417_155637_planta_2.jpg,Lixo,,
 20220417_155637_planta_3.jpg,Polygonum aviculare,POLAV,especie
 20220417_155652_planta_1.jpg,Lixo,,
 20220417_155657_planta_1.jpg,Conyza bonariensis,ERIBO,especie
@@ -640,7 +640,7 @@ filename,label,eppo_code,rank
 20220417_160441_planta_3.jpg,,,
 20220417_160443_planta_0.jpg,,,
 20220417_160443_planta_1.jpg,,,
-20220417_160453_planta_0.jpg,,,
+20220417_160453_planta_0.jpg,A confirmar,,
 20220417_160453_planta_1.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_160454_planta_1.jpg,Papaver rhoeas,PAPRH,especie
 20220417_160456_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
@@ -778,7 +778,7 @@ filename,label,eppo_code,rank
 20220417_162050_planta_7.jpg,Lixo,,
 20220417_162050_planta_8.jpg,Polygonum aviculare,POLAV,especie
 20220417_162050_planta_9.jpg,Polygonum aviculare,POLAV,especie
-20220417_162106_planta_0.jpg,,,
+20220417_162106_planta_0.jpg,Lixo,,
 20220417_162106_planta_1.jpg,,,
 20220417_162106_planta_10.jpg,Ranunculus arvensis,RANAR,especie
 20220417_162106_planta_11.jpg,Chenopodium album,CHEAL,especie
@@ -878,7 +878,7 @@ filename,label,eppo_code,rank
 20220417_162643_planta_1.jpg,Lixo,,
 20220417_162643_planta_3.jpg,Papaver rhoeas,PAPRH,especie
 20220417_162643_planta_4.jpg,,,
-20220417_162713_planta_2.jpg,,,
+20220417_162713_planta_2.jpg,A confirmar,,
 20220417_162719_planta_1.jpg,Poaceae,,familia
 20220417_162719_planta_5.jpg,Amaranthus retroflexus,AMARE,especie
 20220417_162730_planta_0.jpg,,,
@@ -1626,7 +1626,7 @@ filename,label,eppo_code,rank
 20251110_151645_planta_9.jpg,Erodium cicutarium,EROCI,especie
 20251110_151648_planta_0.jpg,,,
 20251110_151648_planta_2.jpg,Erodium cicutarium,EROCI,especie
-20251110_151648_planta_3.jpg,,,
+20251110_151648_planta_3.jpg,Veronica arvensis,VERAR,especie
 20251110_151648_planta_4.jpg,Lixo,,
 20251110_151648_planta_5.jpg,Lixo,,
 20251110_151648_planta_6.jpg,Urtica urens,URTUR,especie
@@ -2500,7 +2500,7 @@ filename,label,eppo_code,rank
 20251110_153322_planta_16.jpg,Lixo,,
 20251110_153322_planta_17.jpg,Veronica arvensis,VERAR,especie
 20251110_153322_planta_18.jpg,Lixo,,
-20251110_153322_planta_19.jpg,,,
+20251110_153322_planta_19.jpg,Lixo,,
 20251110_153322_planta_2.jpg,,,
 20251110_153322_planta_20.jpg,,,
 20251110_153322_planta_21.jpg,Lixo,,
@@ -2537,7 +2537,7 @@ filename,label,eppo_code,rank
 20251110_153323_planta_24.jpg,Lixo,,
 20251110_153323_planta_25.jpg,Veronica arvensis,VERAR,especie
 20251110_153323_planta_26.jpg,,,
-20251110_153323_planta_27.jpg,,,
+20251110_153323_planta_27.jpg,Veronica arvensis,VERAR,especie
 20251110_153323_planta_28.jpg,Lixo,,
 20251110_153323_planta_29.jpg,Urtica urens,URTUR,especie
 20251110_153323_planta_3.jpg,Lixo,,
@@ -2945,7 +2945,7 @@ IMG_20220501_165713_planta_0.jpg,Tribulus terrestris,TRBTE,especie
 IMG_20220501_165717_planta_0.jpg,Tribulus terrestris,TRBTE,especie
 IMG_20220501_165727_planta_0.jpg,Tribulus terrestris,TRBTE,especie
 IMG_20220501_165749_planta_0.jpg,Tribulus terrestris,TRBTE,especie
-IMG_20220501_165756_planta_0.jpg,,,
+IMG_20220501_165756_planta_0.jpg,Lixo,,
 IMG_20220501_165800_planta_0.jpg,Tribulus terrestris,TRBTE,especie
 IMG_20220501_165804_planta_0.jpg,Tribulus terrestris,TRBTE,especie
 IMG_20220501_165807_planta_0.jpg,Tribulus terrestris,TRBTE,especie
@@ -3425,7 +3425,7 @@ PHOTO-2026-05-20-09-48-43 (6)_planta_11.jpg,Lixo,,
 PHOTO-2026-05-20-09-48-43 (6)_planta_12.jpg,Lixo,,
 PHOTO-2026-05-20-09-48-43 (6)_planta_13.jpg,Urtica urens,URTUR,especie
 PHOTO-2026-05-20-09-48-43 (6)_planta_14.jpg,Lixo,,
-PHOTO-2026-05-20-09-48-43 (6)_planta_15.jpg,,,
+PHOTO-2026-05-20-09-48-43 (6)_planta_15.jpg,Lixo,,
 PHOTO-2026-05-20-09-48-43 (6)_planta_2.jpg,Amaranthus retroflexus,AMARE,especie
 PHOTO-2026-05-20-09-48-43 (6)_planta_3.jpg,Galinsoga parviflora,GASPA,especie
 PHOTO-2026-05-20-09-48-43 (6)_planta_4.jpg,Lixo,,
