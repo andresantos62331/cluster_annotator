@@ -725,17 +725,17 @@ filename,label,eppo_code,rank
 20220417_161155_planta_1.jpg,Lamium purpureum,LAMPU,especie
 20220417_161204_planta_0.jpg,Conyza bonariensis,ERIBO,especie
 20220417_161204_planta_1.jpg,Lamium purpureum,LAMPU,especie
-20220417_161220_planta_0.jpg,,,
+20220417_161220_planta_0.jpg,Stellaria media,STEME,especie
 20220417_161254_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_161256_planta_0.jpg,Diplotaxis catholica,DIPCA,especie
 20220417_161302_planta_0.jpg,Lixo,,
-20220417_161307_planta_0.jpg,,,
+20220417_161307_planta_0.jpg,Stellaria media,STEME,especie
 20220417_161307_planta_1.jpg,Stellaria media,STEME,especie
 20220417_161307_planta_2.jpg,Lixo,,
 20220417_161307_planta_3.jpg,Stellaria media,STEME,especie
 20220417_161307_planta_4.jpg,Convolvulus arvensis,CONAR,especie
-20220417_161307_planta_5.jpg,,,
-20220417_161307_planta_6.jpg,,,
+20220417_161307_planta_5.jpg,Stellaria media,STEME,especie
+20220417_161307_planta_6.jpg,Stellaria media,STEME,especie
 20220417_161417_planta_0.jpg,,,
 20220417_161445_planta_0.jpg,Papaver rhoeas,PAPRH,especie
 20220417_161658_planta_0.jpg,,,
@@ -3013,8 +3013,8 @@ JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_0.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_14_54_524148887116884340353_planta_1.jpg,Amaranthus retroflexus,AMARE,especie
 JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_0.jpg,Lixo,,
 JPEG_V2_E2_2022-04-17_14_55_075948286936742264257_planta_1.jpg,Poaceae,,familia
-JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_0.jpg,,,
-JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_1.jpg,,,
+JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_0.jpg,Stellaria media,STEME,especie
+JPEG_V2_E2_2022-04-17_14_58_091841365299830718650_planta_1.jpg,Stellaria media,STEME,especie
 JPEG_V2_E2_2022-04-17_14_58_217419482026510393858_planta_0.jpg,Convolvulus arvensis,CONAR,especie
 JPEG_V2_E2_2022-04-17_14_58_371128508627594800854_planta_3.jpg,Urtica membranacea,URTDU,especie
 JPEG_V2_E2_2022-04-17_14_58_59458190088532133750_planta_0.jpg,Stellaria media,STEME,especie
